@@ -470,6 +470,7 @@ libADM_UIQT4.so avidemux-qt #MINVER#
  _ZN22diaElemMenuDynamicBaseD2Ev@Base 1:2.5.6
  _ZN4QMapI7QStringiE13detach_helperEv@Base 1:2.5.6
  _ZN5QListI7QStringE13detach_helperEi@Base 1:2.5.6
+ _ZN5QListI7QStringE18detach_helper_growEii@Base 1:2.5.6
  _ZN5QListI7QStringE6appendERKS0_@Base 1:2.5.6
  _ZN5QListI7QStringED1Ev@Base 1:2.5.6
  _ZN5QListI7QStringED2Ev@Base 1:2.5.6
@@ -671,6 +672,8 @@ libADM_render_qt4.so avidemux-qt #MINVER#
  _Z17renderUpdateImagePh10renderZoom@Base 1:2.5.6
  _Z18renderHasAccelZoomv@Base 1:2.5.6
  _Z18renderStartPlayingv@Base 1:2.5.6
+ _ZN10QByteArrayD1Ev@Base 1:2.5.6
+ _ZN10QByteArrayD2Ev@Base 1:2.5.6
  _ZN11AccelRender9hasHwZoomEv@Base 1:2.5.6
  _ZN13XvAccelRender3endEv@Base 1:2.5.6
  _ZN13XvAccelRender4initEP14GUI_WindowInfojj@Base 1:2.5.6
@@ -692,6 +695,8 @@ libADM_render_qt4.so avidemux-qt #MINVER#
  _ZN15QtGlAccelWidgetD0Ev@Base 1:2.5.6
  _ZN15QtGlAccelWidgetD1Ev@Base 1:2.5.6
  _ZN15QtGlAccelWidgetD2Ev@Base 1:2.5.6
+ _ZN7QStringD1Ev@Base 1:2.5.6
+ _ZN7QStringD2Ev@Base 1:2.5.6
  _ZN9ColYuvRgbD1Ev@Base 1:2.5.6
  _ZN9ColYuvRgbD2Ev@Base 1:2.5.6
  _ZTI11AccelRender@Base 1:2.5.6

@@ -1,2 +1,0 @@
-?package(minitube):needs="X11" section="Applications/Video"\
-  title="minitube" command="/usr/bin/minitube"

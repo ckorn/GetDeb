@@ -8,7 +8,7 @@ CROSS= --build $(DEB_BUILD_GNU_TYPE)
 endif
 
 %:
-	dh $@ --parallel --with python2
+	dh $@ --with python2,autoreconf
 
 override_dh_auto_configure:
 	# Add here commands to configure the package.

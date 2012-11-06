@@ -1,4 +1,4 @@
-freefilesync (5.9-1~getdeb1) precise; urgency=low
+freefilesync (5.9-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
     Scroll grid directly under mouse cursor
@@ -18,7 +18,13 @@ freefilesync (5.9-1~getdeb1) precise; urgency=low
     Remember save config and folder picker dialog positions separately
     Fixed sync completion sound not playing (Ubuntu)
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 04 Nov 2012 12:27:15 +0100
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 04 Nov 2012 12:27:34 +0100
+
+freefilesync (5.8-1~getdeb2) quantal; urgency=low
+
+  * Rebuild for quantal
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Oct 2012 20:34:10 +0200
 
 freefilesync (5.8-1~getdeb1) precise; urgency=low
 

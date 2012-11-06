@@ -1,0 +1,3 @@
+BaShare/BaShare.gambas		usr/bin
+BaShare/images/bashare.png	usr/share/pixmaps
+debian/bashare.desktop		usr/share/applications

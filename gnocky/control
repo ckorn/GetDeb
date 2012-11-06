@@ -3,14 +3,19 @@ Section: utils
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 XSBC-Original-Maintainer: Matthias Mailänder <matthias@mailaender.name>
-Build-Depends: debhelper (>= 7), autotools-dev,
- libgtk2.0-dev (>= 2.4.0), libglib2.0-dev (>= 2.0.0), libglade2-dev (>= 2.0),
- libgnokii-dev (>= 0.6.13), libusb-dev
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libgtk2.0-dev (>= 2.4.0),
+               libglib2.0-dev (>= 2.0.0),
+               libglade2-dev (>= 2.0),
+               libgnokii-dev (>= 0.6.13),
+               libusb-dev
+Standards-Version: 3.9.3
 
 Package: gnocky
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Recommends: gnome-bluetooth
 Description: mobile phone manager
   Gnocky is a mobile phone manager that let's you edit

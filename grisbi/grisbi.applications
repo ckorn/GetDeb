@@ -1,7 +1,0 @@
-grisbi
-	command=grisbi
-	name=Grisbi
-	can_open_multiple_files=false
-	expects_uris=false
-	requires_terminal=false
-	mime_types=application/x-grisbi

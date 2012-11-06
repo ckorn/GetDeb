@@ -1,3 +1,9 @@
+lyx (2.0.4-1~getdeb2) quantal; urgency=low
+
+  * Rebuild for quantal
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Oct 2012 20:53:20 +0200
+
 lyx (2.0.4-1~getdeb1) precise; urgency=low
 
   * New upstream version

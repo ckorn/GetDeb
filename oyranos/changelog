@@ -1,3 +1,9 @@
+oyranos (0.4.0-1~getdeb2) quantal; urgency=low
+
+  * Rebuild for quantal
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Oct 2012 21:54:13 +0200
+
 oyranos (0.4.0-1~getdeb1) oneiric; urgency=low
 
   * New upstream version

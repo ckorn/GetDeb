@@ -1,5 +1,0 @@
-*.pl *.pm favicon.ico index.html				usr/share/ledgersmb
-bin LedgerSMB sql utils locale drivers				usr/share/ledgersmb
-contrib images scripts tools UI					usr/share/ledgersmb
-css/*								var/lib/ledgersmb/css
-templates/*							var/lib/ledgersmb/templates

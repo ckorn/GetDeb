@@ -4,20 +4,21 @@ Priority: optional
 Maintainer: Christoph Korn <c_korn@gmx.de>
 Build-Depends: debhelper (>= 9),
                libgtkmm-3.0-dev,
-               libboost-filesystem1.46-dev,
+               libboost-filesystem-dev,
                libglibmm-2.4-dev,
                libxml2-dev,
-               libboost-date-time1.46-dev,
-               libboost1.46-dev,
+               libboost-date-time-dev,
+               libboost-dev,
                libnotify-dev,
                libglib2.0-dev,
-               libboost-program-options1.46-dev,
-               libboost-regex1.46-dev,
-               libboost-signals1.46-dev,
-               libboost-thread1.46-dev,
+               libboost-program-options-dev,
+               libboost-regex-dev,
+               libboost-signals-dev,
+               libboost-thread-dev,
                libtorrent-rasterbar-dev,
                libgeoip-dev,
-               python | python-all | python-dev | python-all-dev
+               python | python-all | python-dev | python-all-dev,
+               dh-autoreconf
 Standards-Version: 3.9.3
 Homepage: http://lincetorrent.sourceforge.net
 

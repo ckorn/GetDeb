@@ -1,4 +1,0 @@
-?package(controlaula):needs="X11" section "Apps/Networking/File transfer"\
-title="BaShare"\
-command="/usr/bin/bashare.gambas"\
-icon="/usr/share/pixmaps/bashare.png"

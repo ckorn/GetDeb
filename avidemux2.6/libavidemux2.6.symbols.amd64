@@ -950,7 +950,6 @@ libADM_coreDemuxerMpeg6.so libavidemux2.6 #MINVER#
  _ZN21psPacketLinearTrackerD0Ev@Base 1:2.6.0
  _ZN21psPacketLinearTrackerD1Ev@Base 1:2.6.0
  _ZN21psPacketLinearTrackerD2Ev@Base 1:2.6.0
- _ZN7BVectorI4fdIoE11setCapacityEi@Base 1:2.6.0
  _ZN7BVectorI4fdIoE6appendERKS0_@Base 1:2.6.0
  _ZN7BVectorI4fdIoE6appendERKS1_@Base 1:2.6.0
  _ZN7BVectorI4fdIoED0Ev@Base 1:2.6.0
@@ -1175,7 +1174,6 @@ libADM_coreScript.so libavidemux2.6 #MINVER#
  _ZN29ADM_scriptDialogFactoryHelperC2EPKc@Base 1:2.6.0
  _ZN29ADM_scriptDialogFactoryHelperD1Ev@Base 1:2.6.0
  _ZN29ADM_scriptDialogFactoryHelperD2Ev@Base 1:2.6.0
- _ZNSt6vectorIP22ADM_scriptDFBaseHelperSaIS1_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS1_S3_EERKS1_@Base 1:2.6.0
  _ZNSt6vectorIPcSaIS0_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS0_S2_EERKS0_@Base 1:2.6.0
  _ZTI22ADM_ScriptEngineLoader@Base 1:2.6.0
  _ZTI22ADM_scriptDFMenuHelper@Base 1:2.6.0
@@ -1296,6 +1294,11 @@ libADM_coreSqlLight3.so libavidemux2.6 #MINVER#
  _ZN8DatabaseD1Ev@Base 1:2.6.0
  _ZN8DatabaseD2Ev@Base 1:2.6.0
  _ZNK5Query11GetDatabaseEv@Base 1:2.6.0
+ _ZNSt4pairIKSsiED1Ev@Base 1:2.6.0
+ _ZNSt4pairIKSsiED2Ev@Base 1:2.6.0
+ _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_@Base 1:2.6.0
+ _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE16_M_insert_uniqueERKS2_@Base 1:2.6.0
+ _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_@Base 1:2.6.0
  _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E@Base 1:2.6.0
  _ZTI8Database@Base 1:2.6.0
  _ZTS8Database@Base 1:2.6.0
@@ -1653,6 +1656,7 @@ libADM_coreUtils6.so libavidemux2.6 #MINVER#
  _Z8qfprintfP8_IO_FILEPKcz@Base 1:2.6.0
  _Z9initPrefsv@Base 1:2.6.0
  _Z9quotaInitv@Base 1:2.6.0
+ _Z9toCStringRKSs@Base 1:2.6.0
  _ZN10CONFcouple10lookupNameEPKc@Base 1:2.6.0
  _ZN10CONFcouple10readAsBoolEPKcPb@Base 1:2.6.0
  _ZN10CONFcouple11readAsFloatEPKcPf@Base 1:2.6.0
@@ -1858,7 +1862,15 @@ libADM_coreUtils6.so libavidemux2.6 #MINVER#
  _ZNK8JSONNode8as_arrayEv@Base 1:2.6.0
  _ZNK8JSONNode9duplicateEv@Base 1:2.6.0
  _ZNK8JSONNodeixEj@Base 1:2.6.0
+ _ZNSt12_Destroy_auxILb0EE9__destroyIPN15admJsonToCouple6keyValEEEvT_S5_@Base 1:2.6.0
+ _ZNSt12_Destroy_auxILb0EE9__destroyIPSsEEvT_S3_@Base 1:2.6.0
+ _ZNSt6vectorIN15admJsonToCouple6keyValESaIS1_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS1_S3_EERKS1_@Base 1:2.6.0
+ _ZNSt6vectorIN15admJsonToCouple6keyValESaIS1_EED1Ev@Base 1:2.6.0
+ _ZNSt6vectorIN15admJsonToCouple6keyValESaIS1_EED2Ev@Base 1:2.6.0
  _ZNSt6vectorIPvSaIS0_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS0_S2_EERKS0_@Base 1:2.6.0
+ _ZNSt6vectorIPvSaIS0_EED1Ev@Base 1:2.6.0
+ _ZNSt6vectorIPvSaIS0_EED2Ev@Base 1:2.6.0
+ _ZNSt6vectorISsSaISsEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPSsS1_EERKSs@Base 1:2.6.0
  _ZNSt6vectorISsSaISsEED1Ev@Base 1:2.6.0
  _ZNSt6vectorISsSaISsEED2Ev@Base 1:2.6.0
  _ZTI15ADM_threadQueue@Base 1:2.6.0
@@ -2010,7 +2022,8 @@ libADM_coreVideoEncoder6.so libavidemux2.6 #MINVER#
  _ZN26ADM_coreVideoEncoderFFmpegD0Ev@Base 1:2.6.0
  _ZN26ADM_coreVideoEncoderFFmpegD1Ev@Base 1:2.6.0
  _ZN26ADM_coreVideoEncoderFFmpegD2Ev@Base 1:2.6.0
- _ZNSt6vectorI15ADM_timeMappingSaIS0_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS0_S2_EERKS0_@Base 1:2.6.0
+ _ZNSt12_Destroy_auxILb0EE9__destroyIPSsEEvT_S3_@Base 1:2.6.0
+ _ZNSt6vectorISsSaISsEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPSsS1_EERKSs@Base 1:2.6.0
  _ZNSt6vectorImSaImEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPmS1_EERKm@Base 1:2.6.0
  _ZTI20ADM_coreVideoEncoder@Base 1:2.6.0
  _ZTI26ADM_coreVideoEncoderFFmpeg@Base 1:2.6.0

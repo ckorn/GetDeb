@@ -1,3 +1,9 @@
+avidemux2.6 (1:2.6.0-1~getdeb2~quantal) quantal; urgency=low
+
+  * Rebuild against new libx264-123 version.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 30 Oct 2012 18:37:29 +0100
+
 avidemux2.6 (1:2.6.0-1~getdeb1) precise; urgency=low
 
   * New upstream version

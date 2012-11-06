@@ -1,3 +1,0 @@
-?package(bleachbit):needs="X11" section="Applications/System/Administration"\
-  title="bleachbit" command="/usr/bin/bleachbit"\
-  icon="/usr/share/pixmaps/bleachbit.xpm"

@@ -1,7 +1,0 @@
-bleachbit.py			usr/share/bleachbit
-bleachbit.desktop		usr/share/applications
-cleaners/*.xml			usr/share/bleachbit/cleaners
-bleachbit.png			usr/share/pixmaps
-debian/bleachbit.xpm		usr/share/pixmaps
-
-

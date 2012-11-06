@@ -1,3 +1,9 @@
+gnocky (0.0.7-1~getdeb4) quantal; urgency=low
+
+  * Rebuild for quantal
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Oct 2012 20:39:58 +0200
+
 gnocky (0.0.7-1~getdeb3) maverick; urgency=low
 
   * Rebuild for maverick

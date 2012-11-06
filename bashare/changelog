@@ -1,3 +1,9 @@
+bashare (0.5.0-1~getdeb3) quantal; urgency=low
+
+  * Rebuild for quantal
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Oct 2012 18:24:55 +0200
+
 bashare (0.5.0-1~getdeb2) karmic; urgency=low
 
   * Added debian/watch file

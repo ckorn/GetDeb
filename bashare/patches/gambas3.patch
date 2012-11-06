@@ -1,0 +1,81 @@
+Transition: gambas2 --> gambas3
+Index: bashare-0.5.0/acinclude.m4
+===================================================================
+--- bashare-0.5.0.orig/acinclude.m4	2009-11-12 13:54:11.000000000 +0100
++++ bashare-0.5.0/acinclude.m4	2012-10-07 19:45:17.213468205 +0200
+@@ -1,6 +1,6 @@
+ #######################################################################################
+ ##
+-##   GB_FIND() macro is part of gambas2 project
++##   GB_FIND() macro is part of gambas3 project
+ ##   by Benoit Minisini
+ ##   others are from me (Laurent Carlier)
+ ##
+@@ -10,7 +10,7 @@
+ ## GB_INIT_PROJECT
+ ## Initialization and checking for gambas things
+ ##
+-##   $1 = gambas2 project to build 
++##   $1 = gambas3 project to build 
+ ## ---------------------------------------------------------------------------
+ 
+ AC_DEFUN([GB_INIT_PROJECT],
+@@ -29,34 +29,34 @@
+   COMPONENT_build=`cat $1/.project | grep "MakeComponent=" | sed s/"MakeComponent="//g`
+   AC_SUBST(COMPONENT_build)
+ 
+-  AC_MSG_CHECKING(for gambas2 binaries)
+-  GAMBAS_path=`gbx2 -e system.path`/bin
++  AC_MSG_CHECKING(for gambas3 binaries)
++  GAMBAS_path=`gbx3 -e system.path`/bin
+   if test "$?" != "0"; then
+     AC_MSG_RESULT(No)
+-    AC_MSG_ERROR(Failed to find gambas2 utilities, check your gambas2 installation !)
++    AC_MSG_ERROR(Failed to find gambas2 utilities, check your gambas3 installation !)
+   else
+     AC_MSG_RESULT(Ok)
+     AC_SUBST(GAMBAS_path)
+   fi
+ 
+   ## Find component components path
+-  AC_MSG_CHECKING(for gambas2 components path)
+-  GBLIBRARY_path=`gbx2 -e component.path`
++  AC_MSG_CHECKING(for gambas3 components path)
++  GBLIBRARY_path=`gbx3 -e component.path`
+   if test "$?" != "0"; then
+     AC_MSG_RESULT(No)
+-    AC_MSG_ERROR(Failed to find gambas2 library path !)
++    AC_MSG_ERROR(Failed to find gambas3 library path !)
+   else
+     AC_MSG_RESULT(Ok)
+     AC_SUBST(GBLIBRARY_path)
+   fi
+ 
+-  GBINFO_path=`echo $GBLIBRARY_path | sed s/"\/lib\/gambas2"/"\/share\/gambas2\/info"/`
++  GBINFO_path=`echo $GBLIBRARY_path | sed s/"\/lib\/gambas3"/"\/share\/gambas3\/info"/`
+   AC_SUBST(GBINFO_path)
+ 
+-  GBCONTROL_path=`echo $GBLIBRARY_path | sed s/"\/lib\/gambas2"/"\/share\/gambas2\/control"/`
++  GBCONTROL_path=`echo $GBLIBRARY_path | sed s/"\/lib\/gambas3"/"\/share\/gambas3\/control"/`
+   AC_SUBST(GBCONTROL_path)
+ 
+-  GBHOME_path=`gbx2 -e user.home`/.local/lib/gambas2
++  GBHOME_path=`gbx3 -e user.home`/.local/lib/gambas3
+ 
+   for comp in $COMPONENTS; do
+     if test "$comp" = "$1"; then continue; fi
+Index: bashare-0.5.0/Makefile.am
+===================================================================
+--- bashare-0.5.0.orig/Makefile.am	2009-11-12 13:54:11.000000000 +0100
++++ bashare-0.5.0/Makefile.am	2012-10-07 19:46:20.001466337 +0200
+@@ -7,8 +7,8 @@
+ 	 echo "Compiling $(PACKAGE) project..."; \
+ 	fi)
+ 	@(cd $(srcdir)/$(PACKAGE); \
+-	$(GAMBAS_path)/gbc2 -a -t -p -m ; \
+-	$(GAMBAS_path)/gba2)
++	$(GAMBAS_path)/gbc3 -a -t -p -m ; \
++	$(GAMBAS_path)/gba3)
+ 
+ install-exec-local:
+ 	@(cd $(srcdir)/$(PACKAGE); \

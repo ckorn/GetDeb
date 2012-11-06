@@ -1,3 +1,9 @@
+lince (1.3-1~getdeb2~quantal) quantal; urgency=low
+
+  * Rebuild for quantal.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 02 Nov 2012 18:36:27 +0100
+
 lince (1.3-1~getdeb1) precise; urgency=low
 
   * New upstream version

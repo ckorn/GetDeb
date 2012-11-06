@@ -1,3 +1,9 @@
+hashmonster (0.2.7-1~getdeb2) quantal; urgency=low
+
+  * Rebuild for quantal
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Oct 2012 20:43:18 +0200
+
 hashmonster (0.2.7-1~getdeb1) lucid; urgency=low
 
   * New upstream version
