@@ -1,0 +1,13 @@
+idea-ic (9.0.1-1~getdeb2) karmic; urgency=low
+
+  * debian/scripts/idea-ic:
+    Check for /usr/lib/jvm/java-6-sun instead of
+    /usr/lib/jvm/java-6-sun-1.6.0.15. (LP: #510126)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 24 Jan 2010 11:05:09 +0100
+
+idea-ic (9.0.1-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #510126)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 23 Jan 2010 21:05:02 +0100

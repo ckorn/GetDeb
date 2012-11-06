@@ -1,0 +1,3 @@
+version=3
+https://github.com/matiasdelellis/pragha/downloads \
+    (?:.*/)?pragha-([\d\.]+)\.tar\.(?:gz|bz2)

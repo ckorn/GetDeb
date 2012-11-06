@@ -1,0 +1,23 @@
+synergy for Debian
+------------------
+
+Synergy works with non-Debian machines; for more information, see the
+project website.  At the time of writing packages/installers for
+synergy were available for:
+
+  * Windows
+  * MacOS X
+  * RPM-Systems.
+
+Synergy should work on all systems that use the X Window System, but
+you may have to compile it yourself. The source code is also available
+at the above address.
+
+synergy-plus
+------------
+
+There was a relatively short-lived fork of synergy called
+"synergy-plus" that formed when upstream development slowed.  As of
+this moment, the two projects have re-merged; essentially, the
+synergy-plus team has taken over development.  This package contains
+synergy as distributed by the merged project.

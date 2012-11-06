@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf oneteam
+
+override_dh_auto_build:
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	tar xjf oneteam64.tar.bz2
+	rm -rf oneteam/platform/Linux_x86-gcc3
+else
+	tar xjf oneteam.tar.bz2
+	rm -rf oneteam/platform/Linux_x86_64-gcc3
+endif
+
+	# Depends on libnotify1
+	rm oneteam/xulrunner/components/libmozgnome.so

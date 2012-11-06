@@ -1,0 +1,106 @@
+From: Adrian Perez <adrianperez.deb@gmail.com>
+Subject: [PATCH] fixes/platform
+
+Fixes the FTBFS caused by the use of Win32 and MacOS-X 
+platforms imports and logic.
+
+Signed-off-by: Adrian Perez <adrianperez.deb@gmail.com>
+
+---
+ .../core/update/impl/AzureusRestarterImpl.java     |    6 +++++-
+ .../ui/swt/views/skin/TorrentListViewsUtils.java   |    8 +++++++-
+ .../azureus2/platform/PlatformManagerFactory.java  |    4 ++--
+ .../platform/PlatformManagerPluginDelegate.java    |   15 ++++++++++++---
+ 4 files changed, 26 insertions(+), 7 deletions(-)
+
+Index: azureus-4.7.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
+===================================================================
+--- azureus-4.7.0.0.orig/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2011-09-21 21:26:06.000000000 +0200
++++ azureus-4.7.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2011-10-22 15:11:43.908986113 +0200
+@@ -30,8 +30,10 @@
+ import org.gudy.azureus2.platform.PlatformManager;
+ import org.gudy.azureus2.platform.PlatformManagerFactory;
+ import org.gudy.azureus2.platform.unix.ScriptAfterShutdown;
++/*  --- Adrian Perez: Don't import this when building for Linux.
+ import org.gudy.azureus2.platform.win32.access.AEWin32Access;
+ import org.gudy.azureus2.platform.win32.access.AEWin32Manager;
++*/
+ import org.gudy.azureus2.plugins.PluginInterface;
+ import org.gudy.azureus2.plugins.platform.PlatformManagerException;
+ import org.gudy.azureus2.pluginsimpl.local.PluginInitializer;
+@@ -315,7 +317,8 @@
+ 		}
+ 
+ 		try {
+-			int result;
++			int result = -123; // Adrian Perez: Evade Win32 logic, key: "nowin32"
++/*
+ 			AEWin32Access accessor = AEWin32Manager.getAccessor(true);
+ 			if (accessor == null) {
+ 				result = -123;
+@@ -370,6 +373,7 @@
+ 							SystemProperties.getApplicationPath(), AEWin32Access.SW_NORMAL);
+ 				}
+ 			}
++*/
+ 
+ 			/*
+ 			 * Some results:
+Index: azureus-4.7.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java
+===================================================================
+--- azureus-4.7.0.0.orig/org/gudy/azureus2/platform/PlatformManagerFactory.java	2011-09-21 21:16:26.000000000 +0200
++++ azureus-4.7.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java	2011-10-22 15:11:43.912986113 +0200
+@@ -51,11 +51,11 @@
+ 					if ( getPlatformType() == PlatformManager.PT_WINDOWS ){
+ 						
+ 						platform_manager = org.gudy.azureus2.platform.win32.PlatformManagerImpl.getSingleton();
+-						
++/* --- Adrian Perez: Don't use MacOS-X's PlatformManagerImpl
+ 					}else if( getPlatformType() == PlatformManager.PT_MACOSX ){
+ 						
+ 	                    platform_manager = org.gudy.azureus2.platform.macosx.PlatformManagerImpl.getSingleton();
+-	                    
++*/
+ 					}else if( getPlatformType() == PlatformManager.PT_UNIX ){
+ 						
+ 						platform_manager = org.gudy.azureus2.platform.unix.PlatformManagerImpl.getSingleton();
+Index: azureus-4.7.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
+===================================================================
+--- azureus-4.7.0.0.orig/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2011-09-21 21:16:26.000000000 +0200
++++ azureus-4.7.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2011-10-22 15:11:43.912986113 +0200
+@@ -24,6 +24,10 @@
+ 
+ import org.gudy.azureus2.platform.unix.PlatformManagerUnixPlugin;
+ 
++/* --- Adrian Perez: Don't use Win32 UpdateChecker in Linux.
++import org.gudy.azureus2.platform.win32.PlatformManagerUpdateChecker;
++*/
++
+ import org.gudy.azureus2.plugins.Plugin;
+ import org.gudy.azureus2.plugins.PluginException;
+ import org.gudy.azureus2.plugins.PluginInterface;
+@@ -54,16 +58,21 @@
+ 		PlatformManager platform = PlatformManagerFactory.getPlatformManager();
+ 
+ 		int platformType = platform.getPlatformType();
+-		if ( platformType == PlatformManager.PT_WINDOWS ){
++
++                  /* Adrian Perez: 
++                   * We're not in Windows or MacOS
++                   *
++                if ( platformType == PlatformManager.PT_WINDOWS ){
+ 			org.gudy.azureus2.platform.win32.PlatformManagerUpdateChecker plugin = new org.gudy.azureus2.platform.win32.PlatformManagerUpdateChecker();
+ 			plugin.initialize(pluginInterface);
+ 		}else if ( platformType == PlatformManager.PT_MACOSX ){
+ 			org.gudy.azureus2.platform.macosx.PlatformManagerUpdateChecker plugin = new org.gudy.azureus2.platform.macosx.PlatformManagerUpdateChecker();
+ 			plugin.initialize(pluginInterface);
+-		}else if ( platformType == PlatformManager.PT_UNIX ){
++                  */
++		if ( platformType == PlatformManager.PT_UNIX ){
+ 			PlatformManagerUnixPlugin plugin = new PlatformManagerUnixPlugin();
+ 			plugin.initialize(pluginInterface);
+-		}else{
++		} else {
+ 			Properties pluginProperties = pluginInterface.getPluginProperties();
+ 			pluginProperties.setProperty("plugin.name", "Platform-Specific Support");
+ 			pluginProperties.setProperty("plugin.version", "1.0");

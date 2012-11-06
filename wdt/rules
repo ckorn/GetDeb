@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh  $@
+
+override_dh_auto_install:
+	dh_auto_install
+
+	./install.sh -p ./debian/wdt
+	chmod -x debian/wdt/usr/share/wdt/cssprojects/view.html

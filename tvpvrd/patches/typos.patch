@@ -1,0 +1,168 @@
+Fix some typos.
+Index: tvpvrd-4.4.0/README
+===================================================================
+--- tvpvrd-4.4.0.orig/README	2012-09-25 18:38:07.965721007 +0200
++++ tvpvrd-4.4.0/README	2012-09-25 18:38:13.857720831 +0200
+@@ -107,7 +107,7 @@
+   build will most likely be different)
+ 
+ - The next user entered line gives the 'add' command to schedule a new recording.
+-  A recording is specifed by the station name, date, time and name.
++  A recording is specified by the station name, date, time and name.
+   Since each recording can also be transcoded (from the original MP2 format to
+   a more efficient MP4 formst using ffmpeg) the profile to use for this
+   transcoding is by default the 'normal' profile. This profile determines the
+Index: tvpvrd-4.4.0/docs/manpages/tvpvrd.1
+===================================================================
+--- tvpvrd-4.4.0.orig/docs/manpages/tvpvrd.1	2012-09-25 18:38:07.993721006 +0200
++++ tvpvrd-4.4.0/docs/manpages/tvpvrd.1	2012-09-25 18:38:48.597719797 +0200
+@@ -2635,7 +2635,7 @@
+ .nf
+ 0 = Add date, e\&.g\&. "myrec_2012\-11\-22"
+ 1 = Number and total number of recordings, e\&.g\&. "myrec_02\-12"
+-2 = Add episode number \*(AqEnn\*(Aq to the end of the name usefull for "SxxEyy" style naming, e\&.g\&. "myrec_S11E12"
++2 = Add episode number \*(AqEnn\*(Aq to the end of the name usefulf for "SxxEyy" style naming, e\&.g\&. "myrec_S11E12"
+ .fi
+ .if n \{\
+ .RE
+@@ -2928,7 +2928,7 @@
+ .PP
+ \*(Aq\fBwt\fR\*(Aq \- \fBList all transcoding waiting to start\fR
+ .RS 4
+-A transcoding is not started until the server load is below the specified treshold in the ini\-file\&. By default this treshold is 4\&. This command will generate a list of all transcoding that are waiting\&.\&.
++A transcoding is not started until the server load is below the specified threshold in the ini\-file\&. By default this threshold is 4\&. This command will generate a list of all transcoding that are waiting\&.\&.
+ .sp
+ The listing uses the same format as the
+ \fBot\fR
+Index: tvpvrd-4.4.0/docs/manpages/tvpvrd.1.html
+===================================================================
+--- tvpvrd-4.4.0.orig/docs/manpages/tvpvrd.1.html	2012-09-25 18:38:07.981721007 +0200
++++ tvpvrd-4.4.0/docs/manpages/tvpvrd.1.html	2012-09-25 18:38:13.857720831 +0200
+@@ -1130,7 +1130,7 @@
+                                 card number is specified. The information shown is the name of the
+                                 card, driver and driver version.</p><p><span class="bold"><strong>Output example:</strong></span></p><pre class="screen">Card 00: Hauppauge WinTV PVR-350, driver=ivtv v1.4.1
+ Card 01: Hauppauge WinTV PVR-150, driver=ivtv v1.4.1</pre></dd><dt><span class="term">'<span class="command"><strong>wt</strong></span>' - <span class="bold"><strong>List all transcoding waiting to start</strong></span></span></dt><dd><p>A transcoding is not started until the server load is below the
+-                                specified treshold in the ini-file. By default this treshold is 4.
++                                specified threshold in the ini-file. By default this threshold is 4.
+                                 This command will generate a list of all transcoding that are
+                                 waiting..</p><p>The listing uses the same format as the <span class="command"><strong>ot</strong></span>
+                             command and contains (in order from left to right)</p><p>1. Sequence number</p><p>2. Time when item was enqueued</p><p>3. How long (hh:mm) the item has been waiting to be
+Index: tvpvrd-4.4.0/docs/manpages/tvpvrd.1.xml
+===================================================================
+--- tvpvrd-4.4.0.orig/docs/manpages/tvpvrd.1.xml	2012-09-25 18:38:08.005721006 +0200
++++ tvpvrd-4.4.0/docs/manpages/tvpvrd.1.xml	2012-09-25 18:38:13.861720830 +0200
+@@ -2446,7 +2446,7 @@
+                                 role="bold">List all transcoding waiting to start</emphasis></term>
+                         <listitem>
+                             <para>A transcoding is not started until the server load is below the
+-                                specified treshold in the ini-file. By default this treshold is 4.
++                                specified threshold in the ini-file. By default this threshold is 4.
+                                 This command will generate a list of all transcoding that are
+                                 waiting..</para>
+                             <para>The listing uses the same format as the <command>ot</command>
+Index: tvpvrd-4.4.0/src/libsmtpmail/mailclientlib.c
+===================================================================
+--- tvpvrd-4.4.0.orig/src/libsmtpmail/mailclientlib.c	2012-09-25 18:38:08.065721004 +0200
++++ tvpvrd-4.4.0/src/libsmtpmail/mailclientlib.c	2012-09-25 18:38:13.861720830 +0200
+@@ -353,7 +353,7 @@
+ }
+ 
+ /**
+- * Send a specifed command to the SMTP server and record the servers possible multiline reply
++ * Send a specified command to the SMTP server and record the servers possible multiline reply
+  * in the supplied reply list
+  * @param handle
+  * @param cmd Command
+Index: tvpvrd-4.4.0/src/transc.c
+===================================================================
+--- tvpvrd-4.4.0.orig/src/transc.c	2012-09-25 18:38:08.021721005 +0200
++++ tvpvrd-4.4.0/src/transc.c	2012-09-25 18:38:13.861720830 +0200
+@@ -113,7 +113,7 @@
+ 
+ /**
+  * Forget the specified transcoding. This is called when a transcoding have finished
+- * either sucessfully or with an error
++ * either successfully or with an error
+  * @param idx The index of the transcoding to remove from the watch list
+  */
+ void
+@@ -239,7 +239,7 @@
+ 
+ /*
+  * Remember each transcoding that are waiting to start when the server load is
+- * below the treshold
++ * below the threshold
+  */
+ int
+ remember_waiting_transcoding(char *short_filename,char *profile_name) {
+@@ -1163,7 +1163,7 @@
+  * @param dirpath Optional path that will be prepended to file names in the list
+  * @param filelist A NULL terminated array of string pointers to the file names to be
+  *        encoded
+- * @return 0 on sucess, -1 on failure
++ * @return 0 on success, -1 on failure
+  */
+ int
+ transcode_filelist(char *dirpath,char *filelist[],char *profilename) {
+@@ -1298,7 +1298,7 @@
+  * Read video files to transcode from the list stored in the specified file
+  * @param filename Name of file with list of all videos to transcode
+  * @param profilename Profile to use for the transcoding. All videos will use the same transcoding
+- * @return 0 on sucess, -1 on failure
++ * @return 0 on success, -1 on failure
+  */
+ int
+ read_transcode_filelist(char *filename, char *profilename) {
+@@ -1441,7 +1441,7 @@
+         pthread_mutex_unlock(&recs_mutex);
+ 
+         if (0 == wait_to_transcode(short_filename)) {
+-            // The system load is below the treshold to start a new transcoding
++            // The system load is below the threshold to start a new transcoding
+ 
+             pthread_mutex_lock(&recs_mutex);
+             forget_waiting_transcoding(rid);
+Index: tvpvrd-4.4.0/src/tvpowerd/tvpowerd.c
+===================================================================
+--- tvpvrd-4.4.0.orig/src/tvpowerd/tvpowerd.c	2012-09-25 18:38:08.033721005 +0200
++++ tvpvrd-4.4.0/src/tvpowerd/tvpowerd.c	2012-09-25 18:38:13.861720830 +0200
+@@ -4,7 +4,7 @@
+  *              from the tvpvrd. This watcher daemon communicates with
+  *              the tvpvrd and if the server running tvpvrd has nothing
+  *              to do and the next recording is not due to start until a
+- *              a specified treshold time in the future it will shut
++ *              a specified threshold time in the future it will shut
+  *              down the server. Since this watcher knows when the next
+  *              recording starts it will then wake up the server at an
+  *              appropriate time.
+Index: tvpvrd-4.4.0/src/tvpowerd/tvpowerd.h
+===================================================================
+--- tvpvrd-4.4.0.orig/src/tvpowerd/tvpowerd.h	2012-09-25 18:38:08.049721005 +0200
++++ tvpvrd-4.4.0/src/tvpowerd/tvpowerd.h	2012-09-25 18:38:13.861720830 +0200
+@@ -4,7 +4,7 @@
+  *              from the tvpvrd. This watcher daemon communicates with
+  *              the tvpvrd and if the server running tvpvrd has nothing
+  *              to do and the next recording is not due to start until a
+- *              a specified treshold time in the future it will shut
++ *              a specified threshold time in the future it will shut
+  *              down the server. Since this watcher knows when the next
+  *              recording starts it will then wake up the server at an
+  *              appropriate time.
+Index: tvpvrd-4.4.0/src/vctrl.c
+===================================================================
+--- tvpvrd-4.4.0.orig/src/vctrl.c	2012-09-25 18:38:08.013721005 +0200
++++ tvpvrd-4.4.0/src/vctrl.c	2012-09-25 18:38:13.861720830 +0200
+@@ -925,11 +925,11 @@
+ 
+     // First some sanity check on the parameters
+     if (bitrate < 500000 || peak_bitrate < 500000) {
+-        logmsg(LOG_ERR, "Video bitrate or peak bitrate specifed is out of range < 500,000. values=(%d,%d)",bitrate,peak_bitrate);
++        logmsg(LOG_ERR, "Video bitrate or peak bitrate specified is out of range < 500,000. values=(%d,%d)",bitrate,peak_bitrate);
+         return -1;
+     }
+     if (bitrate > 8000000 || peak_bitrate > 8000000) {
+-        logmsg(LOG_ERR, "Video bitrate or peak bitrate specifed is out of range > 8,000,000. values=(%d,%d)",bitrate,peak_bitrate);
++        logmsg(LOG_ERR, "Video bitrate or peak bitrate specified is out of range > 8,000,000. values=(%d,%d)",bitrate,peak_bitrate);
+         return -1;
+     }
+ 

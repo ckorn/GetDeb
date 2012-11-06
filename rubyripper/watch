@@ -1,0 +1,5 @@
+version=3
+opts=\
+downloadurlmangle=s|.*[?]name=(.*?)&.*|http://rubyripper.googlecode.com/files/$1|,\
+filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
+http://code.google.com/p/rubyripper/downloads/detail[?]name=rubyripper-([\d\.]+).tar.bz2&.*

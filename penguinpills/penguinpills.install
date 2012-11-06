@@ -1,0 +1,4 @@
+penguinpills.desktop				usr/share/applications
+penguinpills					usr/lib/penguinpills
+debian/penguinpills.png				usr/share/pixmaps
+debian/scripts/penguinpills			usr/bin

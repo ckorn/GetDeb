@@ -1,0 +1,84 @@
+yydecode (0.2.10-1~getdeb1) oneiric; urgency=low
+
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 17:43:20 +0100
+
+yydecode (0.2.10-5) unstable; urgency=low
+
+  * QA upload, orphaning this package.
+
+ -- Bart Martens <bartm@debian.org>  Sat, 27 Dec 2008 15:08:53 +0100
+
+yydecode (0.2.10-4) unstable; urgency=low
+
+  * debian/control: Changed my e-mail address.
+  * debian/control, debian/compat, debian/rules: Debhelper version.
+  * debian/copyright: Updated.
+  * debian/watch: Updated.
+  * debian/control: Standards version.
+
+ -- Bart Martens <bartm@knars.be>  Sun, 18 Jun 2006 11:10:15 +0200
+
+yydecode (0.2.10-3) unstable; urgency=low
+
+  * New maintainer (Closes: #203896)
+  * debian/control: added homepage to description
+
+ -- Bart Martens <bart.martens@advalvas.be>  Thu,  5 Jan 2006 22:45:46 +0100
+
+yydecode (0.2.10-2) unstable; urgency=low
+
+  * QA upload.
+  * New upstream release (0.2.10 and 0.2.10-1 were unofficial releases
+    by the upstream author).  Closes: #262755.
+  * debian/rules:
+    - Use distclean rather than maintainer-clean to avoid regenerating
+      configure etc.
+    - Add support for DEB_BUILD_OPTIONS=noopt.
+    - Remove support for DEB_BUILD_OPTIONS=debug.
+    - Let dh_strip handle DEB_BUILD_OPTIONS=nostrip.
+  * debian/watch: Add.
+  * Conforms to Standards version 3.6.2.
+
+ -- Matej Vela <vela@debian.org>  Tue,  1 Nov 2005 18:02:20 +0100
+
+yydecode (0.2.10-1) unstable; urgency=low
+
+  * It's probably better staying a non-native package...
+  * Compile with large file support. (Closes: #177370)
+
+ -- Liyang HU <liyang@nerv.cx>  Tue, 15 Apr 2003 15:21:42 +0100
+
+yydecode (0.2.10) unstable; urgency=medium
+
+  * New maintainer! (me!)
+  * New upstream, now a Debian native package.
+
+ -- Liyang HU <liyang@nerv.cx>  Mon, 17 Mar 2003 18:17:34 +0000
+
+yydecode (0.2.7-2) unstable; urgency=low
+
+  * QA Group upload orphaning this package
+
+ -- Andrew Pollock <apollock@debian.org>  Thu, 28 Oct 2004 10:39:57 +1000
+
+yydecode (0.2.7-1) unstable; urgency=low
+
+  * New upstream.
+
+ -- Itai Zukerman <zukerman@math-hat.com>  Wed, 13 Mar 2002 12:01:03 -0500
+
+yydecode (0.2.6-2) unstable; urgency=low
+
+  * Initial release (closes: Bug#135979).
+  * Fix broken --overwrite.
+
+ -- Itai Zukerman <zukerman@math-hat.com>  Sun,  3 Mar 2002 08:29:41 +0000
+
+yydecode (0.2.6-1) unstable; urgency=low
+
+  * Initial packaging.
+
+ -- Itai Zukerman <zukerman@math-hat.com>  Fri,  1 Mar 2002 08:51:59 +0000
+

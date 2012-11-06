@@ -1,0 +1,15 @@
+Install the executable in the current directory. Do not copy
+it outside the source directory.
+Index: conkywizard-0.0.0svn37/ConkyWizard.pro
+===================================================================
+--- conkywizard-0.0.0svn37.orig/ConkyWizard.pro	2012-09-16 15:47:18.597104753 +0200
++++ conkywizard-0.0.0svn37/ConkyWizard.pro	2012-09-16 16:02:11.953078178 +0200
+@@ -1,7 +1,7 @@
+ TARGET = ConkyWizard
+ TRANSLATIONS = translations/ConkyWizard_es.ts
+ TEMPLATE = app
+-DESTDIR = ../Application
++DESTDIR = .
+ SOURCES += src/main.cpp \
+ 	src/Wizard.cpp \
+ 	src/ImageBackground.cpp \

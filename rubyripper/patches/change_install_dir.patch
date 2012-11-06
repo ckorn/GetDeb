@@ -1,0 +1,51 @@
+Change the install directory accordingly.
+Index: rubyripper-0.6.2/rr_lib.rb
+===================================================================
+--- rubyripper-0.6.2.orig/rr_lib.rb	2011-12-14 20:06:03.000000000 +0100
++++ rubyripper-0.6.2/rr_lib.rb	2011-12-17 15:08:32.716278902 +0100
+@@ -16,7 +16,7 @@
+ #    along with this program.  If not, see <http://www.gnu.org/licenses/>
+ 
+ #ensure translation is working before actually installing
+-LOCALE=[ENV['PWD'] + "/locale", "/usr/local/share/locale"]
++LOCALE=[ENV['PWD'] + "/locale", "/usr/share/locale"]
+ LOCALE.each{|dir| if File.directory?(dir) ; ENV['GETTEXT_PATH'] = dir ; break end}
+ 
+ $rr_version = '0.6.2' #application wide setting
+Index: rubyripper-0.6.2/configure
+===================================================================
+--- rubyripper-0.6.2.orig/configure	2011-12-14 20:06:03.000000000 +0100
++++ rubyripper-0.6.2/configure	2011-12-17 15:08:32.720278903 +0100
+@@ -108,14 +108,6 @@
+ 	
+ 	puts "\nChecking the OPTIONAL dependencies..."
+ 	
+-	puts "Testing support for the graphical frontend..."
+-	begin
+-		require 'gtk2'
+-		puts "ruby-gtk2 bindings found"
+-	rescue LoadError
+-		puts "ruby-gtk2 is not found. The graphical frontend won't work!"
+-	end
+-	
+ 	puts "\nTesting support for freedb metadata fetching..."
+ 	(installed('cd-discid') || installed('discid')) ? puts("cd-discid or discid found...") : puts("Neither cd-discid or discid could be found.")
+ 	
+@@ -147,7 +139,7 @@
+ 			elsif line =~ /ICONDIR=/
+ 				file[index] = "ICONDIR=[ENV['PWD'], \"#{$PREFIX + $ICONDIR}\"]"
+ 			elsif line =~ /RUBYDIR=/
+-				file[index] = "RUBYDIR=[ENV['PWD'], File.dirname(__FILE__), \"#{$PREFIX + $RUBYDIR}\"]"
++				file[index] = "RUBYDIR=[ENV['PWD'], File.dirname(__FILE__), \"#{$RUBYDIR}\"]"
+ 				break
+ 			end
+ 			index += 1
+@@ -203,7 +195,7 @@
+ makefile.puts "LOCALE=#{$PREFIX}#{$LOCALE}"
+ makefile.puts "ICONDIR=#{$PREFIX}#{$ICONDIR}"
+ makefile.puts "DESKTOP=#{$PREFIX}#{$DESKTOP}"
+-makefile.puts "RUBYDIR=#{$PREFIX}#{$RUBYDIR}"
++makefile.puts "RUBYDIR=#{$RUBYDIR}"
+ makefile.puts ""
+ makefile.puts "all:"
+ makefile.puts "\truby configure --update-lang #update the locale files"

@@ -1,0 +1,2 @@
+?package(umplayer): needs="X11" section="Applications/Video" \
+	title="UMPlayer" longtitle="UMPlayer media player" icon="/usr/share/pixmaps/umplayer.xpm" command="umplayer"

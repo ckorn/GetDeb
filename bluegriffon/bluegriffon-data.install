@@ -1,0 +1,15 @@
+BlueGriffon/chrome			usr/share/bluegriffon
+BlueGriffon/components			usr/share/bluegriffon
+BlueGriffon/defaults			usr/share/bluegriffon
+BlueGriffon/dictionaries		usr/share/bluegriffon
+BlueGriffon/distribution		usr/share/bluegriffon
+BlueGriffon/hyphenation			usr/share/bluegriffon
+BlueGriffon/icons			usr/share/bluegriffon
+BlueGriffon/modules			usr/share/bluegriffon
+BlueGriffon/res				usr/share/bluegriffon
+BlueGriffon/application.ini		usr/share/bluegriffon
+BlueGriffon/chrome.manifest		usr/share/bluegriffon
+BlueGriffon/dependentlibs.list		usr/share/bluegriffon
+BlueGriffon/greprefs.js			usr/share/bluegriffon
+BlueGriffon/platform.ini		usr/share/bluegriffon
+BlueGriffon/update.locale		usr/share/bluegriffon

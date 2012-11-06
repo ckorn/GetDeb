@@ -1,0 +1,96 @@
+Update Google Videos.
+Index: xvst-2.4.1/resources/services/googlevideo/googlevideo.js
+===================================================================
+--- xvst-2.4.1.orig/resources/services/googlevideo/googlevideo.js	2010-09-04 15:48:06.000000000 +0200
++++ xvst-2.4.1/resources/services/googlevideo/googlevideo.js	2011-02-05 00:45:46.000000000 +0100
+@@ -25,7 +25,7 @@
+ 
+ function RegistVideoService()
+ {
+-	this.version = "2.0.3";
++	this.version = "2.0.4";
+ 	this.minVersion = "2.0.0a";
+ 	this.author = "Xesc & Technology 2009";
+ 	this.website = "http://video.google.com/";
+@@ -62,10 +62,13 @@
+ 
+ function searchVideos(keyWord, pageIndex)
+ {
+-	const URL_SEARCH = "http://video.google.com/videosearch?q=%1&start=%2&hl=%3";
+-	const HTML_SEARCH_START = '<div class=tv-res id=search-results>';
+-	const HTML_SEARCH_FINISH = "<div style=clear:both;></div>";
+-	const HTML_SEARCH_SEPARATOR = "<div class=rl-item>";
++	const URL_SEARCH = "http://www.google.com/search?q=%1&start=%2&hl=%3&tbs=vid:1";	
++	const HTML_SEARCH_START = '<ol>';
++	const HTML_SEARCH_FINISH = "</ol>";
++	const HTML_SEARCH_ITEM_START = "<table ";
++	const HTML_SEARCH_ITEM_END = "</table>";
++	const HTML_SEARCH_SUMMARY_START = '<div id=resultStats>';
++	const HTML_SEARCH_SUMMARY_END = "</div>";
+ 	// replace all spaces for "+"
+ 	keyWord = strReplace(keyWord, " ", "+");
+ 	pageIndex = (pageIndex - 1) * 10;
+@@ -75,7 +78,7 @@
+ 	var http = new Http();
+ 	var html = http.downloadWebpage(strFormat(URL_SEARCH, keyWord, pageIndex, searchResults.getUserLanguage()), false);
+ 	// get the search summary
+-	searchResults.setSummary(copyBetween(html, "<span class=results_summary id=summary>", "</span>"));
++	searchResults.setSummary(copyBetween(html, HTML_SEARCH_SUMMARY_START, HTML_SEARCH_SUMMARY_END));
+ 	// get results html block
+ 	var htmlResults = copyBetween(html, HTML_SEARCH_START, HTML_SEARCH_FINISH);
+ 	// if we found some results then...
+@@ -83,7 +86,7 @@
+ 	{
+ 		var block = "";
+ 		// iterate over results
+-		while ((block = copyBetween(htmlResults, HTML_SEARCH_SEPARATOR, HTML_SEARCH_SEPARATOR)) != "")
++		while ((block = copyBetween(htmlResults, HTML_SEARCH_ITEM_START, HTML_SEARCH_ITEM_END)) != "")
+ 		{
+ 			parseResultItem(searchResults, block);
+ 			htmlResults = strRemove(htmlResults, 0, block.toString().length);
+@@ -98,16 +101,35 @@
+ function parseResultItem(searchResults, html)
+ {
+ 	var videoUrl, imageUrl, title, description, duration, rating;
+-	// get info from html block
+-	videoUrl = copyBetween(html, "srcurl=", ">");
+-	imageUrl = copyBetween(copyBetween(html, "img class=thumbnail-img", "</a>"), "src=", ">");
+-	title = copyBetween(html, "<div class=rl-title>", "</div>");
+-	title = copyBetween(title, "target=_top>", "</a>");
+-	description = copyBetween(html, "<div class=rl-snippet>", "</div>");
+-	duration = copyBetween(html, "duration=", " ");
+-	rating = copyBetween(html, "<span class=rl-stars ratings=", ">");
+-	// add to results list
+-	searchResults.addSearchResult(videoUrl, imageUrl, title, description, duration, rating);
++	// get url and title block info
++	var tmp = copyBetween(html, "<h3 class=r>", "</h3>");
++	videoUrl = copyBetween(tmp, '<a href="', '"');
++	title = em2b(copyBetween(tmp, ">", "</a>"));
++	// get description and duration
++	tmp = copyBetween(html, "<div>", "</div>");
++	description = em2b(copyBetween(tmp, "<br>", "<br>"));
++	duration = duration2Sec(copyBetween(tmp, '<span style="nobr">', '</span>'));
++	// unaviable info
++	imageUrl = "";
++	rating = 0;
++	// add to results list (if has info)
++	if (title != "") searchResults.addSearchResult(videoUrl, imageUrl, title, description, duration, rating);
++}
++
++function em2b(html)
++{
++	return strReplace(strReplace(html, "</em>", "</b>"), "<em>", "<b>");
++}
++
++function duration2Sec(duration)
++{
++	var num = getToken(duration, " ", 0);
++	var unit = getToken(duration, " ", 1);
++	// convert to seconds
++	if (unit == "min") return num * 60;
++	else if (unit == "sec") return num;
++	// impossible detect it
++	return 0;
+ }
+ 
+ function getVideoServiceIcon()

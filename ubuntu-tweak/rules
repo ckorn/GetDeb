@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with=python2,translations
+
+override_dh_auto_clean:
+	rm -rf $(CURDIR)/debian/python-module-stampdir
+	rm -rf $(CURDIR)/debian/stamp-patched
+	rm -rf $(CURDIR)/build
+	rm -rf $(CURDIR)/dist
+	rm -rf build *.egg-info po/ubuntu-tweak.pot
+	find . -name "*.pyc" -delete
+
+override_dh_install:
+	dh_install
+	chmod +x debian/ubuntu-tweak/usr/share/ubuntu-tweak/templates/shell-script.sh
+	chmod -x debian/ubuntu-tweak/usr/share/ubuntu-tweak/pixmaps/love-wallpaper.png

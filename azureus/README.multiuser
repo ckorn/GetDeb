@@ -1,0 +1,87 @@
+Multi-user patch
+================
+
+This package contains a patch to fix Launchpad bug 222630,
+"Azureus always listens on local port without authentication".
+
+
+Rationale
+---------
+
+Azureus uses tcp port 6880 bound to localhost for instance detection and 
+command-line parameter passing.
+
+This implementation has the following drawbacks:
+
+  - It is not possible to run more than one instance per machine. Port 6880 is 
+    hard coded.
+
+  - Any local user can control another user's instance by passing command line 
+    arguments. This is a security vulnerability.
+     
+A single-user system seems to be assumed. This patch restores user's environment 
+isolation.
+
+
+Design
+------
+
+Listen port 6880 is substituted by a random port allocated in the ephemeral 
+range 49152-65535, as per IANA specification. The listener also chooses a random 
+key that must be sent by connecting clients as authentication. The port number 
+and the key are then saved in the localport.lock file in the Azureus 
+configuration directory, which is in the user's home and thus private.
+
+A new instance checks for the presence of the lock file. If it is found the port 
+and the key are used to connect to the running instance.
+
+
+Implementation
+--------------
+
+The patch is designed to have minimum impact on the codebase to facilitate 
+merging of future upstream versions.
+
+It is to be noted that there is a certain amount of code duplication in Azureus: 
+most different UIs have their own code for managing port 6880.
+
+A new class, org.gudy.azureus2.core3.util.LocalSocketHelper, is introduced. This 
+class, with its connect() and listen() methods, is a drop-in replacement for any 
+call to "new Socket(...)" and new "ServerSocket(...)" involving port 6880. Port 
+selection and authentication are handled automatically.
+
+The rest of the modifications are mostly one line changes implementing the 
+substitution described above. In addition, references to port 6880 are removed 
+from all code involving port selection. Port validation logic that used to 
+exclude port 6880 has been updated to respect the ephemeral range instead.
+
+
+Possible issues
+---------------
+
+The call to SystemProperties.getUserPath() in LocalSocketHelper() can cause 
+PlatformManager to be initialized sooner than it should. It seems to work, but 
+upstream says this is not advisable. As a workaround -Dazureus.config.path is 
+passed on the command line, avoiding the invocation of the platform-specific 
+code that discovers the user's home directory.
+
+
+Note for mergers
+----------------
+
+When merging a new upstream version, the merger should search for "6880" and 
+apply the correct substitution. Also, any port selection in the range x-65535 
+should be done in the range x-49151 instead.
+
+
+Further development
+-------------------
+
+This patch is a quick fix, a proper rewrite is desirable. Any efforts should 
+start with reducing code duplication. That would increase the chances of this 
+being accepted upstream.
+
+
+--
+Stefano Maioli
+<maio@naoweb.it>

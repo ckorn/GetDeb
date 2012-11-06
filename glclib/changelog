@@ -1,0 +1,60 @@
+glclib (2.2.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    New Features :
+    Add the possibility to create multi OpenGL context application.
+    Add the possibility to handle touchs inputs : GLC_UserInput.
+
+    Enhancements and Bug Fix :
+    Fix include files problems.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Jul 2011 18:57:43 +0200
+
+glclib (2.1.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+  New Features : 
+   * Add the possibility to set the visibility of a GLC_3DWidget
+   * Add GLC_StructOccurence selection management from GLC_World
+   * Add the possibility to use plug-in to load GLC_World from file
+   * Add the class GLC_PointCloud to display cloud of points
+   * Add multi threading file loading capability
+     (Thanks to … Jerôme Forrissier)
+   * Add the possibility to change the size of a GLC_Point
+   * Use QGLShaderProgram to enhance shading capabilities
+   * Add the possibility to check if a GLC_StructOccurence can
+     be added as a child of another GLC_StructOccurence. (Cycle detection)
+   * Add the possibility to export a single GLC_3DRep into a 3DXML 3DRep.
+   * Store the matrix type (like Qt do) to enhance matrix calculation speed
+   * Add error and trace log capabilities
+  
+   Enhancements and Bug Fix : 
+   * Fix OpenGL compilations warning under Windows with Qt4.7
+   * Fix potential crash when trying to load binary 3DXML
+   * Fix loading abort when trying to load 3DXML with application data
+   * Fix a bug when loading 3DXML with reference containing several 3DRep
+   * Fix a bug in faces, vertices and materials count when an assembly
+     node as a representation
+   * GLC_PointSprite can be render with selection material
+   * Add the possibility to support selective GLC_StructOccurence loading
+   * Fix a bug in GLC_BoundingBox transformation
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Mar 2011 16:47:32 +0100
+
+glclib (2.0.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 20:32:05 +0200
+
+glclib (1.2.0-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 14:32:50 +0100
+
+glclib (1.2.0-1~getdeb1) karmic; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 27 Nov 2009 23:54:58 +0100

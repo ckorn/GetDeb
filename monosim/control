@@ -1,0 +1,24 @@
+Source: monosim
+Section: utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 5), autotools-dev,
+ mono-runtime, mono-gmcs, libglade2-0, libglib2.0-cil-dev,
+ libglade2.0-cil-dev, libglade2-dev, gtk-sharp2,
+ libmono-system-runtime2.0-cil, pkg-config,
+ mono-devel, libcomex-base-cil-dev (>= 0.1.8.5),
+ cli-common-dev (>= 0.8~), liblog4net-cil-dev,
+ libgtk2.0-cil-dev
+Homepage: http://www.integrazioneweb.com/monosim/
+Standards-Version: 3.9.2
+
+Package: monosim
+Architecture: all
+Depends: ${cli:Depends}, ${misc:Depends}
+Description: Manage your sim card contacts with pcsc readers
+ Is a simple application that can be used to read, write,
+ update, delete and backup your sim card contacts. It open
+ and save also some format files to manage your contacts
+ also in a text files. To connect monosim to your smartcard
+ you need use a standard PCSC smartcard reader as towitoko,
+ acs, athena, blutronics, etc.

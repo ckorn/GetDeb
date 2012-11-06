@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Flash for Linux
+Exec=f4l
+Icon=f4l
+Terminal=false
+Type=Application
+Categories=Application;Development;

@@ -1,0 +1,21 @@
+Source: webcamstudio
+Section: video
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.2
+Homepage: http://ws4gl.org
+
+Package: webcamstudio
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre,
+ gstreamer0.10-plugins-good, gstreamer0.10-plugins-bad,
+ gstreamer0.10-plugins-bad-multiverse,
+ gstreamer0.10-plugins-ugly,
+ build-essential
+Description: Creates a virtual webcam
+ WebcamStudio helps you create a virtual webcam that can show:
+  - Your webcam that won't work with Flash site
+  - Your desktop with your webcam in overlay
+  - Your desktop/webcam with several video effects
+  - You in all your glory! Compatible with Flash sites!

@@ -1,0 +1,8 @@
+version=3
+#http://argouml-downloads.tigris.org/argouml-([\d\.]+) \
+#    ArgoUML-([\d\.]+)\.tar\.gz
+#http://argouml-downloads.tigris.org/nonav/argouml-([\d\.+])/ArgoUML-([\d\.]+).tar.gz
+#http://argouml-downloads.tigris.org \
+#    (?:.*/)?argouml-([\d\.]+)    ArgoUML-([\d\.]+)\.tar\.gz
+opts="downloadurlmangle=s/.*-(.*)/http:\/\/argouml-downloads\.tigris\.org\/nonav\/argouml-$1\/ArgoUML-$1\.tar\.gz/" \
+http://argouml-downloads.tigris.org/argouml-([\d\.]+)

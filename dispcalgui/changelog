@@ -1,0 +1,5 @@
+dispcalgui (0.9.9.1-1~getdeb1) precise; urgency=low
+
+  * Initial release (LP: #992524)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 May 2012 10:56:24 +0200

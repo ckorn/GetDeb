@@ -1,0 +1,18 @@
+Source: songbird
+Section: sound 
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net> 
+Build-Depends: cdbs,
+               debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.songbirdnest.com
+
+Package: songbird
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         firefox,
+         ia32-libs [amd64]
+Description: Songbird is a desktop Web player, a digital jukebox and Web browser mash-up
+ It supports extensions and skins feathers. Like Firefox,
+ it is built from Mozilla, cross-platform and open source.

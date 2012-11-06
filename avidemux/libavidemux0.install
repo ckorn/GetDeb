@@ -1,0 +1,10 @@
+usr/lib/libADM_core.so
+usr/lib/libADM_smjs.so
+usr/lib/libADM_coreAudio.so
+usr/lib/libADM5avformat.so.53
+usr/lib/libADM_coreImage.so
+usr/lib/libADM5postproc.so.51
+usr/lib/libADM_coreUI.so
+usr/lib/libADM5avutil.so.51
+usr/lib/libADM5swscale.so.2
+usr/lib/libADM5avcodec.so.53

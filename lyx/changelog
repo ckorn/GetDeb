@@ -1,0 +1,1433 @@
+lyx (2.0.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Jun 2012 17:16:44 +0200
+
+lyx (2.0.3-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 21:03:06 +0200
+
+lyx (2.0.2-1ubuntu2) precise; urgency=low
+
+  * Use maintscript support in dh_installdeb rather than writing out
+    dpkg-maintscript-helper commands by hand.  We now simply Pre-Depend on a
+    new enough version of dpkg rather than using 'dpkg-maintscript-helper
+    supports' guards, leading to more predictable behaviour on upgrades.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 13 Feb 2012 12:51:30 +0000
+
+lyx (2.0.2-1ubuntu1) precise; urgency=low
+
+  * Merge from Debian testing.  Remaining changes:
+    - Pre-Depends: dpkg (>= 1.15.6) for xz compression support.  Needed until
+      after Ubuntu 12.04 LTS. 
+
+ -- Micah Gersten <micahg@ubuntu.com>  Fri, 23 Dec 2011 00:36:36 -0600
+
+lyx (2.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update debian/watch to point to 2.0.x series ftp directory.
+    Closes: #650583.
+  * Remove menu from Suggests. Closes: #647373.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 11 Dec 2011 14:36:17 +0100
+
+lyx (2.0.1-1ubuntu1) precise; urgency=low
+
+  * Pre-Depends: dpkg (>= 1.15.6) for xz compression support.  Needed until
+    after Ubuntu 12.04 LTS. 
+
+ -- Micah Gersten <micahg@ubuntu.com>  Mon, 17 Oct 2011 23:05:33 -0500
+
+lyx (2.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+    + Remove debian/patches/path_max_hurd - included upstream.
+    + Refresh debian/patches/prefer-xdg-open.
+  * Update Vcs-* to the new anonscm.d.o structure.
+  * Add texlive-xetex, etoolbox to the suggests lists and description of
+    the lyx binary package. (Closes: #629153)
+  * Change the compression used inside the binary package from bzip2 to xz.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 10 Sep 2011 13:32:02 +0200
+
+lyx (2.0.0-1) unstable; urgency=low
+
+  * New upstream release - 2.0.0 final
+    + Remove patches/fix-assertion-618687, included upstream.
+  * According to dev-ref 6.2.2 the short description is no sentence so
+    we should start in lowercase letters.
+
+ -- Sven Hoexter <hoexter@debian.org>  Fri, 29 Apr 2011 12:12:01 +0200
+
+lyx (2.0.0~rc3-2) unstable; urgency=low
+
+  * Add debian/patches/path_max_hurd to fix another PATH_MAX problem in LyX.
+    Patch provided by Pino Toscano. (Closes: #623164)
+  * Add debian/patches/fix-assertion-618687 to fix an assertion during the
+    startup in LyX. (Closes: #618687)
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 18 Apr 2011 13:44:51 +0200
+
+lyx (2.0.0~rc3-1) unstable; urgency=low
+
+  * New upstream release
+  * Update to Standards-Version: 3.9.2 - no changes required.
+  * Add 'mythes-*' to the list of nice to have packages in the long
+    description of the lyx binary package.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 11 Apr 2011 21:37:30 +0200
+
+lyx (2.0.0~rc2-1) unstable; urgency=low
+
+  * New upstream release
+  * Add ttf-lyx.post(inst|rm) and use dpkg-maint-script-helper rm_conffile
+    as designed.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 02 Apr 2011 11:55:07 +0200
+
+lyx (2.0.0~rc1-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Use dh_python2 instead of dh_pysupport.
+  * Use debhelper sequence 'tex'.
+
+  [ Rene Engelhard ]
+  * Add a symlink so that LyX can access the mythes thesaurus files.
+  * Build-depend on libmythes-dev.
+
+  [ Sven Hoexter ]
+  * New upstream release
+  * Stop using defoma: Drop build-dep and dependency for ttf-lyx, remove
+    dh_installdefoma from rules and subsequently no longer override_dh_install.
+  * Add ttf-lyx.preinst to call dpkg-maintscript-helper rm_conffile
+    to remove the old defoma hints file.
+  * Build --without-included-mythes (Closes: #612327)
+    Kudos to Rene Engelhard and Georg Baum for implementing it right away.
+  * Refresh debian/patches/prefer-xdg-open.
+
+ -- Sven Hoexter <hoexter@debian.org>  Tue, 08 Mar 2011 17:06:27 +0100
+
+lyx (2.0.0~beta4-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release.
+    + Drop the permission fix for lyxsweave.R and include_bib.py.
+  * Add texlive-generic-extra to the list of recommends, it's now required
+    to build the math manual.
+  * Remove build-dependency on libaiksaurus-dev. LyX now supports
+    OpenOffice.org mythes-* thesauruses.
+  * Update debian/copyright to include the MyThes license.
+  * Build explicitly --without-aspell and --without-hunspell. Drop
+    --without-pspell since it's no longer supported.
+  * Remove debian/patches/fix-manpage-errors, applied upstream.
+    Thanks Georg.
+  * Remove the latex-xft-fonts dummy package.
+  * Remove lyx-common.postinst, lyx-common.preinst, lyx.preinst. All
+    migrations supported within those scripts should be finished by now.
+  * Remove README.source - no longer needed with source format 3.0.
+  * Don't mention texlive-latex-extra in the long description for lyx. It's
+    already recommended and thus part of the default installation.
+  * Add a note about librsvg2-bin and inkscape to the long description.
+  * Move HTML converters from suggests to recommends. (Closes: #611862)
+
+  [ Per Olofsson ]
+  * Add debian/source/local-options with option unapply-patches.
+  * Remove dependency on mime-support. xdg-utils picks whatever
+    mechanism is available.
+  * Switch source format to 3.0 (quilt) and remove quilt references in
+    rules and control.
+  * Use "dh --with autotools_dev" instead of replacing
+    config.{sub,guess} manually.
+  * Use debhelper v8 compat mode.
+  * Use dh_auto_* for building and cleaning.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 07 Feb 2011 14:29:55 +0100
+
+lyx (2.0.0~beta3-1) experimental; urgency=low
+
+  * New upstream release. (Closes: #606118)
+    + Includes the proposed fix for the PATH_MAX issue on GNU/Hurd.
+      (Closes: #597279)
+  * Refresh debian/patches/prefer-xdg-open.
+  * Disable debian/patches/fix-manpage-errors for the moment.
+  * Update to Standards-Version: 3.9.1 - no changes required.
+  * Recommend evince-gtk instead of evince. (Closes: #597623)
+  * Move 'librsvg2-bin | inkscape' down from recommends to suggests.
+  * Drop our own bash_completion file and instead install the one
+    provided by upstream in the correct location.
+  * Remove exec permissions on scripts installed in /usr/share/lyx/scripts/
+    where we've no shebang line. Currently that's lyxsweave.R and
+    included_bib.py.
+
+ -- Sven Hoexter <hoexter@debian.org>  Wed, 02 Feb 2011 21:21:57 +0100
+
+lyx (1.6.7-1) unstable; urgency=low
+
+  * New upstream release.
+   + Remove debian/patches/spellcheckfix - applied upstream.
+  * Update to Standards-Version: 3.9.0 - no changes required.
+  * Remove build-dep on libaspell-dev and --with-aspell configure flag.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 17 Jul 2010 18:02:22 +0200
+
+lyx (1.6.6-2) unstable; urgency=low
+
+  * Add --with-enchant to the configure flags and add build-depend on
+    libenchant-dev.
+  * Add librsvg2-bin | inkscape to the Recommends to support SVG image
+    handling (new in LyX 1.6.6).
+  * Set elyxer to the first position in the list of HTML converters.
+  * Add debian/patches/spellcheckfix which reverts upstream commit
+    r33567 to fix the broken spellchecker in LyX 1.6.6.
+    Upstream bugreport: http://www.lyx.org/trac/ticket/6708
+
+ -- Sven Hoexter <hoexter@debian.org>  Fri, 28 May 2010 14:30:19 +0200
+
+lyx (1.6.6-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Add texlive-science to Recommends. It's not big, and it's required
+    for compiling the LyX math manual. Closes: #508939
+
+  [ Sven Hoexter ]
+  * New upstream release.
+    + Should no longer crash when inserting floats. Closes: #579630
+    + Refresh debian/patches/prefer-xdg-open.
+  * Bump Standards-Version to 3.8.4 - no changes required.
+  * Add debian/source/format to state that this is still a package in
+    1.0 format.
+
+ -- Sven Hoexter <hoexter@debian.org>  Thu, 20 May 2010 13:34:14 +0200
+
+lyx (1.6.5-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Modify build-dep on quilt so it accepts backported quilt as well.
+  * Remove "obvious" Suggests (lpr, www-browser).
+  * Remove conflicts and replaces, as they were only needed pre-lenny.
+  * Only unregister latex-xft-fonts from defoma if we're upgrading, not
+    on new installations. Otherwise installation might fail.
+    Closes: #548119.
+
+  [ Sven Hoexter ]
+  * New upstream release.
+    + Fixes a crash after editing formulars. Closes: #548519
+  * Refresh patches/prefer-xdg-open.
+  * Add elyxer to the list of HTML converters.
+  * Switch to my @d.o e-mail address in the Uploaders control field.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 07 Dec 2009 20:16:27 +0100
+
+lyx (1.6.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - Drop patches detect-elyxer, boost-mt (applied upstream).
+  * Bump Standards-Version to 3.8.3. No changes.
+  * Un-versioned build-dep on boost.
+  * Un-versioned build-dep on python-support.
+
+ -- Per Olofsson <pelle@debian.org>  Thu, 27 Aug 2009 14:58:40 +0200
+
+lyx (1.6.3-5) unstable; urgency=low
+
+  * Check if latex-xft-fonts.hints exists before purging it with defoma.
+  * Add debian/gbp.conf making git-buildpackage use pristine-tar.
+
+ -- Per Olofsson <pelle@debian.org>  Sat, 01 Aug 2009 12:29:35 +0200
+
+lyx (1.6.3-4) unstable; urgency=low
+
+  * Make latex-xft-fonts priority extra, correcting override disparity.
+  * Create all dirs with mkdir in debian/rules, so that they always
+    exist even if we build arch-only. Closes: #537691.
+
+ -- Per Olofsson <pelle@debian.org>  Thu, 23 Jul 2009 10:00:40 +0200
+
+lyx (1.6.3-3) unstable; urgency=low
+
+  * Add Section: fonts to ttf-lyx.
+  * Add latex-xft-fonts transitional package.
+    - Delete old conffile /etc/defoma/hints/latex-xft-fonts.hints from
+      preinst and unregister from defoma.
+  * Add patch fix-manpage-errors which fixes errors in tex2lyx(1).
+  * Simplify debian/rules even more by using the new dh override
+    feature. Also use dh for quilt. Build-deps accordingly.
+  * Improve ttf-lyx's long description, add subject to the first
+    sentence. Closes: #537565.
+  * Describe the fonts included in ttf-lyx in its long description.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 19 Jul 2009 22:35:35 +0200
+
+lyx (1.6.3-2) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * Add a ttf-lyx package as replacement for the latex-xft-package.
+  * Update detect-elyxer. Now all images are included in the output
+    directory.
+
+  [ Per Olofsson ]
+  * Update Vcs-* fields to the new Git repository.
+  * Update ttf-lyx description.
+  * Move fonts in debian/rules instead of deleting them and installing
+    manually.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 05 Jul 2009 18:10:23 +0200
+
+lyx (1.6.3-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release
+   + URLs in footnotes containing '#' or '%23' work again. Closes: #529937
+  * Add patches/boost-mt. Starting with boost 1.38.0 the -mt suffix in the
+    soname is back so we've to modify some makefiles to let it link again.
+    Closes: #530469, #533427
+  * Lift Build-Depends on libboost-dev up to 1.38.0 - otherwise the
+    boost-mt patch will be harmful.
+  * Add debian/patches/detect-elyxer. Modifies configure.py to search
+    for 'elyxer' and 'elyxer.py'.
+  * Update Standards-Version to 3.8.2 - no changes required.
+
+  [ Per Olofsson ]
+  * Update debian/watch URL.
+
+ -- Per Olofsson <pelle@debian.org>  Wed, 24 Jun 2009 00:26:38 +0200
+
+lyx (1.6.2-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Add ghostscript and poppler-utils to Recommends. Closes: #515914
+
+  [ Sven Hoexter ]
+  * New upstream release Closes: #519936
+  * Update Standards-Version to 3.8.1 without any changes.
+  * Move the -e flag in the (post|pre)inst scripts from the shebang
+    line to a separate 'set -e'. This is useful if you run the scripts
+    with a different shell for debugging purpose.
+
+ -- Per Olofsson <pelle@debian.org>  Mon, 30 Mar 2009 23:32:31 +0200
+
+lyx (1.6.1-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Don't recommend postscript-viewer. Those who need one know how to get
+    it, and a PDF reader is enough for most people.
+
+  [ Sven Hoexter ]
+  * New upstream release
+    + Add missing includes for cstdio as it won't be included indirectly
+      in gcc 4.4. Thanks to Martin Michlmayr. Closes: #505958
+  * Add ${misc:Depends} to the Depends field for the lyx binary package.
+    This seems to be a required thing nowdays (according to lintian).
+  * Move texlive-latex-extra from Suggests to Recommends. Closes: #499629
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 14 Dec 2008 17:31:32 +0100
+
+lyx (1.6.0-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release
+    + Fix for 'word-delete' deletes following non-word items. Closes: #492841
+    + URL export works again. Closes: #344677
+    + Fix for tables stopped working in g-brief-de. Closes: #379747
+  * Change the name of the license file on Debian system from GPL to GPL-2.
+  * Refresh /patches/prefer-xdg-open.
+  * Replace the old LyX logo with the new one. Converted from the
+    lib/images/lyx.png file to 32x32 XPM file.
+  * Remove empty /usr/share/lyx/images/commands directory from lyx-common. 
+  
+  [ Per Olofsson ]
+  * Remove texlive-latex-base dependency from lyx-common, as it already
+    depends on tex-common via ${misc:Depends}, and that's all that's
+    really necessary.
+  * Remove debian/lyx-common.postrm. It was only deleting /etc/lyxrc,
+    which is not necessary since the file is deleted in preinst.
+  * Don't remove profiling.py, there's no reason.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 09 Nov 2008 23:14:51 +0100
+
+lyx (1.6.0~beta4-1) experimental; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release resolves the following bugs:
+    + lyx invokes xdvi without landscape options for landscape docs
+      Closes: #269968
+  * Don't try to install the top-level ChangeLog as changelog.gz.
+  
+  [ Per Olofsson ]
+  * Use new features in debhelper v7 to shorten debian/rules.
+  * Misc improvements to debian/rules.
+  * Point to new lyx icon in png format from /usr/share/icons.
+  * Use dh_installtex to update ls-R files from maintainer scripts. Will do
+    it faster than plain texhash.
+  * Remove now-useless versioned build-deps.
+  * Suggest cups-client instead of cupsys-client.
+  * Add debian/README.source.
+  * Bump Standards-Version to 3.8.0.
+  * Remove the -ffunction-sections workaround on hppa and let's hope it
+    works. I can't test because there are no DD-accessible hppa machines
+    at the moment.
+
+ -- Per Olofsson <pelle@debian.org>  Thu, 24 Jul 2008 00:37:14 +0200
+
+lyx (1.5.5-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release
+    + Removed patches/qt_44_crash_fix. 
+
+ -- Per Olofsson <pelle@debian.org>  Wed, 14 May 2008 10:48:56 +0200
+
+lyx (1.5.4-2) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Add writer2latex and latex2rtf to Suggests (found in configure.py).
+  * Only assign CXXFLAGS if it's empty, as dpkg-buildpackage now defines
+    the variable for us. Don't bother with checking for noopt in
+    DEB_BUILD_OPTIONS, as it's deprecated.
+
+  [ Sven Hoexter ]
+  * Add bash_completion and install it as /etc/bash_completion.d/lyx.
+    Thanks to Cengiz Gunay <cgunay@emory.edu>.
+  * Add pkg-config as a build-dependency. Needed after the libqt4-dev
+    build-dep resorting.
+  * Add patches/qt_44_crash_fix from Abdelrazak Younes <younes@lyx.org>
+    to get LyX working with Qt 4.4. Closes: #475523
+
+ -- Per Olofsson <pelle@debian.org>  Sat, 19 Apr 2008 14:13:15 +0200
+
+lyx (1.5.4-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * New upstream release.
+
+  [ Sven Hoexter ]
+  * Add patches/prefer-xdg-open. Sadly there are still issue with xdg-open
+    in other Linux distributions forcing upstream to rewoke the patch added
+    with LyX 1.5.3 again in LyX 1.5.4.
+    http://www.mail-archive.com/lyx-devel@lists.lyx.org/msg133878.html
+  * Remove the -1 from the libboost-dev and quilt dependency to make lintian
+    and backporters happy.
+
+ -- Per Olofsson <pelle@debian.org>  Thu, 13 Mar 2008 15:17:19 +0100
+
+lyx (1.5.3-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release should resolve the following problems:
+    + Document class "article (AMS)" no longer works properly. Closes: #448260
+    + lyx-qt ignores "screen DPI" setting in Preferences. Closes: #316535
+    + Lyx 1.5.2-1 crashes at startup on LANG=pt_BR.utf8. Closes: #453520
+  * Dropping patches lyxclient-man-nonascii-char and
+    05.configure.py_prog_prefer. Thanks to Andre' Poenitz and
+    Juergen Spitzmueller both are now included upstream.
+  * Added the Homepage field in control.
+  * Added a note to the NEWS.Debian file about the removal of the old
+    -qt and -xforms frontend packages. Closes: #452888
+  * Standards-Version: 3.7.3 - no changes required.
+  * Added lyx-common.preinst script. Remove /etc/lyxrc (if existing)
+    which is left from the LyX 1.4.x packages and would be otherwise
+    left on the system even if you purge the latest package.
+    Closes: #454713
+  * Added "-- -Z bzip2" to dh_builddeb so that we use bzip2 compression
+    for the binary packages instead of gzip.
+  * Removed the explicit "Encoding=UTF-8" from lyx.desktop because it's
+    deprecated now.
+
+  [ Per Olofsson ]
+  * Disable assertions per upstream advice. More specifically, don't pass
+    --enable-assertions but let configure select whatever is the default
+    (only enables assertions for prereleases and devel versions).
+    Closes: #410175
+  * Add -Wl,-z,defs to make sure there are no undefined symbols.
+  * Remove old NEWS entry about /etc/lyxrc and lyxrc.dist, since they
+    are both gone now.
+  * Reformat NEWS.Debian to comply with Dev Ref.
+  * Change Vcs-Browser. viewsvn is a lot nicer than WebSVN.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 23 Dec 2007 15:41:45 +0100
+
+lyx (1.5.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Vcs-* fields instead of X-Vcs-* as they are now official.
+  * Added new debian/watch file (somehow got lost).
+  * Call dh_icons so icon cache is updated. Build-dep on debhelper 5.0.51.
+  * Recommend evince as PS/PDF viewer. It's quite good, and KDE users
+    will already have alternatives installed.
+  * CFLAGS -> CXXFLAGS in debian/rules.
+  * Don't replace config.guess (not needed), and clean up debian/rules a
+    bit.
+  * Check if texhash exists before running it in postinst.
+  * Simplify file removal code in lyx-common.postinst.
+
+ -- Per Olofsson <pelle@debian.org>  Fri, 26 Oct 2007 12:45:30 +0200
+
+lyx (1.5.1-2) unstable; urgency=low
+
+  * Update debian/copyright. Add BaKoMa font license.
+  * Remove fonts from lyx-common.
+  * Remove boost-mt patch and bump boost version build-dep. We don't
+    need -mt according to configure.ac, and there are now symlinks in
+    place.
+  * Move around Depends/Recommends/Suggests so that they mean what
+    they're supposed to mean.
+  * Update description.
+  * Recommend more "standard" applications as alternatives.
+  * lyx.desktop:
+    - Remove Application category, as it's not in the spec.
+    - Add Qt category.
+    - Update description.
+    - Add StartupWMClass.
+  * Change Debian menu section to Applications/Office.
+  * Substitute non-ASCII character in lyxclient.1 man page.
+  * Add note about UTF-8 support to NEWS.Debian.
+
+ -- Per Olofsson <pelle@debian.org>  Sat, 15 Sep 2007 22:43:29 +0200
+
+lyx (1.5.1-1) experimental; urgency=low
+
+  * New upstream release. Closes: #436717
+  * Tighten boost dependency to >> 1.34, thanks to Tom Parker. Closes:
+    #438160
+  * Wrap build-deps to separate lines.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 19 Aug 2007 15:27:30 +0200
+
+lyx (1.5.0~rc2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Loosen up qt4 dependency, as 4.3 is now in unstable and it is not
+    really necessary.
+  * Reenable -g option, binutils should work now.
+  * Build-depend on python-support >= 0.6.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 15 Jul 2007 18:03:00 +0200
+
+lyx (1.5.0~rc1-2) experimental; urgency=low
+
+  [ Per Olofsson ]
+  * Remove boost_ia64 patch, integrated upstream.
+
+  [ Sven Hoexter ]
+  * Introducing patches/boost-mt. This patch changes
+    all -lboost_* to -lboost_*-mt. The rationale behind
+    this change is documented in the BTS #424038.
+    Now we're able to link against the external libboost 1.34
+    packages in the Debian archive.
+  * Reintroducing Per's changes to rules and control so
+    that we can build --without-included-boost.
+
+  [ Per Olofsson ]
+  * Only provide a small description of lyx-common, the real description
+    should be in the lyx package.
+
+ -- Per Olofsson <pelle@debian.org>  Sat, 23 Jun 2007 20:19:46 +0100
+
+lyx (1.5.0~rc1-1) experimental; urgency=low
+
+  [ Per Olofsson ]
+  * Suggest texlive-latex-extra.
+
+  [ Sven Hoexter ]
+  * New upstream pre-release
+  * Refreshed patch 05.configure.py_prog_prefer
+  * Added the new XS-Vcs-Browser field to control
+
+  [ Per Olofsson ]
+  * Force building with Qt 4.3 so that it gets proper testing.
+  * Temporary hack to remove *.pyc files from lib/lyx2lyx
+  * Remove compiled Python modules from /usr/share/lyx.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 17 Jun 2007 19:01:29 +0100
+
+lyx (1.5.0~beta1-3) experimental; urgency=low
+
+  * Added conflict with latex-beamer (<= 3.06.dfsg.1-0.1) to lyx-common,
+    because both distribute beamer.layout.
+  * Replace lyx-common (<< 1.5.0~beta1), some man pages have moved to
+    the lyx package. Closes: #418363.
+  * Remove alternative dependencies on tetex.
+  * Depend on latex-xft-fonts, instead of merely recommending it.
+  * Move icons to the lyx package to avoid lintian warnings. Adjust
+    Replaces accordingly.
+
+ -- Per Olofsson <pelle@debian.org>  Wed, 11 Apr 2007 22:21:48 +0200
+
+lyx (1.5.0~beta1-2) experimental; urgency=low
+
+  * Add patch boost_ia64 from upstream r17506 to add ia64 support to the
+    included boost library. Closes: #415636.
+
+ -- Per Olofsson <pelle@debian.org>  Fri, 23 Mar 2007 11:48:02 +0100
+
+lyx (1.5.0~beta1-1) experimental; urgency=low
+
+  * Checked out upstream development snapshot.
+    - TeX is not a build-dep anymore.
+    - Supports UTF-8. Closes: #291186, #372809, #412044.
+  * Remove support for multiple frontends. Only build the qt4 frontend,
+    and place it in the lyx package.
+  * Temporarily disable debug symbols (-g) because of a bug in binutils.
+  * Simplify dependencies.
+  * Depend on TeXlive instead of teTeX by default.
+  * Remove X[BS]-Python-Version fields, not needed anymore.
+  * Remove build-dep on python-dev, not needed.
+  * Versioned depends on lyx-common. Closes: #399799.
+
+ -- Per Olofsson <pelle@debian.org>  Fri, 16 Mar 2007 22:48:35 +0100
+
+lyx (1.4.5.1-1) unstable; urgency=low
+
+  * New upstream release, the last one in the 1.4.x series.
+
+ -- Sven Hoexter <sven@timegate.de>  Wed, 08 Aug 2007 19:08:54 +0200
+
+lyx (1.4.4-2) unstable; urgency=low
+
+  * The patch 06.insetassertions was removed in the previous version, as
+    it has been integrated upstream. Forgot to note this in the changelog.
+  * Suggest texlive-latex-extra. Closes: #419555
+  * Remove redundant dependencies.
+  * Remove redundant Recommends and Suggests from lyx-common.
+  * Move sgmltools-lite and linuxdoc-tools from Recommends to Suggests.
+  * Made lyx-qt and lyx-xforms Recommend: lyx. Closes: #426027
+
+ -- Per Olofsson <pelle@debian.org>  Mon, 18 Jun 2007 15:00:22 +0100
+
+lyx (1.4.4-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Include the quilt package's quilt.make instead of running quilt on our
+    own. Simplifies debian/rules.
+  * Don't depend on tetex anymore since it's obsolete.
+  * Depend on latex-xft-fonts instead of only recommending it.
+
+  [ Sven Hoexter ]
+  * Adding a Conflicts: latex-beamer (<=3.06.dfsg.1-0.1) for lyx-common since
+    we ship the beamer.layout file now.
+  * Added the new XS-Vcs-Browser field to control and control.in.
+  * New upstream release (closes: #414700)
+
+  [ Per Olofsson ]
+  * Remove X[SB]-Python-Version: from debian/control.
+
+ -- Per Olofsson <pelle@debian.org>  Wed, 11 Apr 2007 20:33:38 +0200
+
+lyx (1.4.3-3) unstable; urgency=low
+
+  * Adding patch 06.insetassertions (r16831 from upstream svn)
+    This is a fix for assertions reported by several people.
+    Closes: #411043
+
+ -- Sven Hoexter <sven@timegate.de>  Thu, 22 Feb 2007 16:09:16 +0100
+
+lyx (1.4.3-2) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * Use CFLAGS as CXXFLAGS because LyX is C++ code.
+  * Adding -ffunctions-sections as a workaround for builds on hppa.
+  * Adding texlive-latex-base as an alternative Build-Dep
+    (wished by Gudjon I. Gudjonsson)
+  * Added the 'Boost Software License' to debian/copyright.
+
+  [ Per Olofsson ]
+  * Added -Wl,--as-needed to LDFLAGS.
+  * Only give both --build and --host to ./configure if cross-compiling.
+  * Unify LyX desktop files. Only include a .desktop file in the lyx
+    package. It will use the frontend selected using the alternatives
+    system.
+  * Also unify Debian menu files.
+  * Don't do make distclean - we have a separate build-tree which we
+    remove anyway.
+  * Use the name "LyX Document Processor" as the menu title for lyx.
+  * Added --disable-rpath configure option.
+
+ -- Per Olofsson <pelle@debian.org>  Wed,  8 Nov 2006 20:47:35 +0100
+
+lyx (1.4.3-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * New upstream release - Closes: #392088
+    - Should fix lyx-qt crashes on figure updates Closes: #377399
+  * Removed the following patches integrated in the new upstream release
+    - 06.qt_frontend_metabutton
+    - 07.reconfigure_in_batch_mode
+  * Updated patch 05.configure.py_prog_prefer
+  * Add a mime file and call dh_installmime -a
+  * Another try to comply with the current python policy
+    - Build-Depend on python-support (>= 0.5.3)
+    - Add "XS-P-V: all" to control
+    - Remove pycompat file and don't run dh_python
+    - Kill /usr/share/lyx2lyx/profiling.py including the .py(o|c)
+      Closes: #392486
+  * Added XS-X-Vcs-Svn to control
+  
+  [ Per Olofsson ]
+  * Made lyx-common Recommend: lyx. Closes: #382674.
+  
+ -- Per Olofsson <pelle@debian.org>  Wed, 18 Oct 2006 09:44:59 +0200
+
+lyx (1.4.2-4) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Add ${shlibs:Depends} to lyx Depends now that it's a arch package.
+  * Removed call to gtk-update-icon-cache from lyx-common.postinst.
+    Closes: #381976
+  * Remove old configure-generated stuff from /usr/share/lyx.
+  * Added patch 07.reconfigure_in_batch_mode which makes LyX automatically
+    reconfigure ~/.lyx even if running non-interactively.
+    Closes: #381622.
+  
+  [ Sven Hoexter ]
+  * Build-Depend on python-dev instead of python.
+
+ -- Per Olofsson <pelle@debian.org>  Fri, 11 Aug 2006 12:11:26 +0200
+
+lyx (1.4.2-3) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * Make use of the Meta key in the QT frontend.
+    Thanks to Stelios Bounanos. Closes: #344147
+  * lyx-qt now recommends latex-xft-fonts instead of depending on it.
+    According to Policy Section 2.5 packages must not depend on other
+    packages with a lower priority.
+  * Updated the FSF postal address in the copyright file.
+  * Python transition:
+     - Added XB-Python-Version to debian/control(.in) (lyx-common)
+     - Now we build-dep on debhelper (>=5.0.37.2)
+     - Replaced the lyx-common depend on python with ${python:Depends}
+     - Added debian/pycompat file with version 2
+     - Added dh_pysupport and dh_python calls to debian/rules
+     Closes: #380860
+  
+  [ Per Olofsson ]
+  * Made binary-indep and binary-arch separate.
+  * Use dh_pysupport.
+  
+ -- Per Olofsson <pelle@debian.org>  Thu,  3 Aug 2006 21:12:07 +0200
+
+lyx (1.4.2-2) unstable; urgency=low
+
+  * Made lyx Replace: lyx-common (<< 1.4.2-1) because it includes new
+    binaries which used to be in lyx-common. Closes: #380024.
+  * Only call gtk-update-icon-cache if there's a index.theme.
+    Closes: #380072.
+
+ -- Per Olofsson <pelle@debian.org>  Thu, 27 Jul 2006 13:55:33 +0200
+
+lyx (1.4.2-1) unstable; urgency=low
+
+  [ Sven Hoexter ]
+  * Lyx 1.4.2 no longer uses an autogenerated global lyxrc file
+    Added a note to NEWS.Debian.
+  * Removed 02.htlatex_documentation.dpatch - included upstream
+  * Removed 03.latex8_counters.dpatch - no longer needed
+  * Removed 04.fix_manpages.dpatch - included upstream
+  * Added dvipng in control(.in) to Suggests Closes: #297635
+  * Added debian/patches/05.configure.py_prog_prefer.dpatch
+    We now prefer sensible-(browser|editor) and xdg-open over other listed
+    alternatives.
+  * lyx-common now depends on xdg-utils.
+  * Removed old and now unused scripts: dviprint, lyxview.sh, lyxprint.sh,
+    lyxpdflatex.sh, update-lyxrc
+  
+  [ Per Olofsson ]
+  * Version field in lyx-qt.desktop set to 1.0.
+  * Added Office and Application categories to desktop file.
+    Closes: #375307
+  * Cleanup maintainer scripts:
+    - Catch errors (use -e).
+    - Don't use absolute paths.
+    - Avoid bashisms.
+    - Only run texhash when needed (i.e. not twice).
+    - Remove unnecessary conditionals.
+  * Removed debian/MANIFEST.lyx-common (what was its purpose?).
+  * Add lyx-xforms.desktop and lyx-gtk.desktop and add the toolkit to the
+    name field.
+  * Allow lyx-gtk as an alternative in the dependencies.
+  * Removed debian/lyx-doc.*.
+  * Substitute kpdf for kghostview where applicable.
+  * Really make all scripts in /usr/share/lyx/scripts/ executable.
+    Closes: #374033
+  * Use dh_desktop.
+  * Use debhelper v5.
+  * Fix indentation in debian/rules
+  * Put the icons in /usr/share/icons and also link to upstream's 48x48
+    size icon.
+  * Added debian/watch
+  * Update debian/copyright
+  * Cleanup debian/rules
+  * Update config.{sub,guess} handling and build-depend on autotools-dev.
+  * Switch from dpatch to quilt.
+  * Updated build-deps.
+  * Generate build-deps depending on which frontends to build.
+  * Made the lyx package arch: any and put shared binaries in it.
+  * Symlink /usr/share/doc/lyx to lyx-common.
+  * Made /usr/share/lyx/lyx2lyx/lyx2lyx executable.
+
+ -- Sven Hoexter <sven@timegate.de>  Wed, 26 Jul 2006 15:19:47 +0200
+
+lyx (1.4.1-2) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * Allow TeX Live as a substitute for teTeX. Closes: #349664, #349665.
+  * Don't require python version to be lower than 2.4. Closes: #286555.
+  * Update build-deps.
+  * Provide lyx binary using alternatives. Closes: #330124
+  * Added desktop file for lyx-qt so it shows up in menus etc. Closes:
+    #284624
+  * Made lyx-common recommend psutils. Closes: #252077
+  * Applied Georg Baum's patch to get faster builds and optional GTK
+    frontend.
+  * Use libaspell. Closes: #135149
+  * Be binNMU-safe by using source:Version instead of Source-Version.
+  * Don't conflict with older versions because it only makes life
+    difficult for package managers.
+
+ -- Per Olofsson <pelle@debian.org>  Tue, 13 Jun 2006 23:01:39 +0200
+
+lyx (1.4.1-1) unstable; urgency=low
+
+  [ Per Olofsson ]
+  * New upstream release.
+    - Should build with g++ 4.1. Closes: #357119.
+  * Removed --enable-shared because we don't build any libraries anyway
+    and apparently it causes everything to be built twice.
+  * Added myself and Sven to Uploaders. Removed Rob Weir since he is
+    apparently MIA.
+  * Updated Standards-Version to 3.7.2.
+  * List lyx-qt as the first dependency alternative instead of lyx-
+    xforms.
+  * Break dependency loop by moving dependency on lyx-qt | lyx-xforms to
+    Recommends in lyx-common. Closes: #341848.
+  * Don't depend on g++-4.0, use the default g++ (with versioned
+    dependency).
+
+  [ Sven Hoexter ]
+  * Added dvipost to the recommended/suggested packages
+
+  [ Per Olofsson ]
+  * Removed manpage for noweb2lyx since the program in question is not
+    included anymore.
+  * Make all files in /usr/share/lyx/scripts/ executable. Closes:
+    #348731.
+  * Suppress error message from /usr/share/lyx/configure.
+
+ -- Per Olofsson <pelle@debian.org>  Sun, 28 May 2006 21:42:57 +0200
+
+lyx (1.3.6-1.1) unstable; urgency=medium
+
+  * NMU.
+  * Medium urgency for RC bugfix.
+  * Removed build-dep on xlibs-dev which doesn't exist anymore. It seems
+    that the other build-dep'd packages depend on individual X -dev
+    packages in turn.
+  * Rebuild against libaiksaurus-1.2-0c2a (libstdc++ allocator change).
+    Closes: #342538.
+
+ -- Per Olofsson <pelle@debian.org>  Sat, 14 Jan 2006 18:34:09 +0100
+
+lyx (1.3.6-1) unstable; urgency=low
+
+  * New upstream release (Closes: #275325).
+    + It compiles fine with modern gcc, too (Closes: #261364).
+    + And that weird "Mutex destroy failure: Device or resource busy" 
+      message (Closes: #193645).
+    + Builds on sid again now (Closes: #323439).
+    + Build against new Qt (Closes: #327988).
+    + Fix to not crash on autosave in Russian locales (Closes: #275008).
+  * Converted packaging to use debhelper, with a surprisingly small gain in
+    comprehensibility.  Thanks to Peter Samuelson, Daniel Stone, Adam Conrad,
+    Tollef Fog Heen, Pascal Hakim and Erinn Clark for help along the way.
+  * Use dpatch to apply patches to the upstream source.
+  * Build against C++-transitioned Aiksaurus (Closes: #321308).
+  * Use new texmf.cnf location in lyx-common postinst (Closes: #279130).
+    Thanks to Antonio Biasio, Javier Fernández-Sanguino Peña, Alban 
+    Browaeys and Peter Samuelson. 
+  * Remove debconf note about the lyx-qt/lyx-xforms split; thanks again for
+    the translation work, especially: Basilius (ru), Clytie Siddall (vi),
+    Hideki Yamane (ja) and Jan Outrata (cs).
+  * Make lyx-common Depend on tetex-bin (Closes: #255368).
+  * Include patch from Joe Pfeiffer to add counters for the latex8 article
+    class (Closes: #315459).  Thanks, Joe!
+  * Update lyx manpage to use the correct minus character.
+  * Include convert'd 32x32 icon for use in menus.
+  * Add versioned build-dep on g++-4.0 to avoid hitting #328684.
+
+ -- Rob Weir <rweir@ertius.org>  Thu,  1 Sep 2005 18:11:31 +1000
+
+lyx (1.3.4-2) unstable; urgency=low
+
+  * Rob Weir
+    * New maintainers: Erinn Clark and Rob Weir.
+    * Add German debconf translation, thanks to Erik Schanze. (closes: #250242)
+    * Add dependency on preview-latex-style for lyx, so that "instant
+      preview" mode works.  Thanks to Luke Simon (closes: #241108).
+    * Add dependency for latex-xft-fonts package to lyx-qt, so math mode
+      shows little symbols instead of words.  Again thanks to Luke
+      Simon. (closes: #142175)
+    * Lintian fixes:
+      + Remove superfluous Origin field in debian/packages.
+      + Remove .cvsignore files from source tree.
+      + Use \- when necessary in the man pages.
+    * Freshen config.guess and config.sub (they're from 2001!).
+    * Added build-dep for libforms-bin. (closes: #251674)
+  * Erinn Clark
+    * Add dependency for lyx-qt | lyx-xforms to lyx-common so that it's
+    installable. (closes: #255368)
+
+ -- Erinn Clark <erinn@double-helix.org>  Sat, 24 Jul 2004 11:39:38 -0400 
+
+lyx (1.3.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Danish debconf translation, closes: #233871.
+  * Depends on new yada, so the *.pyc files will be removed from binary
+    package, closes: #232587.
+  * New command update-lyxrc called in postinst.
+  * Quote strings in menu items to make lintian happy.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed,  3 Mar 2004 19:09:48 +0100
+
+lyx (1.3.3-6) unstable; urgency=low
+
+  * Tweaked dependencies for lyx package, closes: #227224.
+  * Higher priority for lyx-qt frontend.
+  * Added French translation of Debconf, closes: #227198.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Fri, 13 Feb 2004 11:30:01 +0100
+
+lyx (1.3.3-5) unstable; urgency=low
+
+  * Fixed strong dependencies. No more needs lpr.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Mon,  9 Feb 2004 19:21:30 +0100
+
+lyx (1.3.3-4) unstable; urgency=low
+
+  * Slightly modified debian/package. It is now more easier to make a backport.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed,  7 Jan 2004 22:20:39 +0100
+
+lyx (1.3.3-3) unstable; urgency=low
+
+  * lyxprint.sh would fail if kprinter was not exists, closes: #225579.
+  * The same for lyxview.sh script and kfmclient.
+  * lyx-qt package recommends latex-xft-fonts package.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue,  6 Jan 2004 23:47:25 +0100
+
+lyx (1.3.3-2) unstable; urgency=low
+
+  * Fix HTML->LaTeX import, add argument to gnuhtml2latex command.
+  * Compile with Aiksaurus support.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Mon, 22 Dec 2003 16:14:00 +0100
+
+lyx (1.3.3-1) unstable; urgency=low
+
+  * New unstable release, closes: #213778, #212887
+  * Closes unreproducible bugs. The modern versions of LyX should have
+    these problems resolved:
+    + bad /var/spool/texmf configuration: closes: #135809
+    + shouldn't get stopped, when pressing Ctrl-Z, closes: #148749
+    + no counters, closes: #214425
+    + doesn't refresh on maximizing: closes: #86730
+    + old /etc/lyxrc not saved on upgrade from 1.1.4-7, closes: #93033
+    + crashes randomly when pasting text from another window, closes: #103715
+    + errors handling 'Paragraph' type paragraphs, closes: #120688
+    + can't determine system directory, closes: #130588
+    + loses section headings, closes: #142897
+    + does not always respond to window size changes, closes: #143618
+    + segfault on startup, closes: #146304
+    + exits when opening a file if it is run on any other screen than 0,
+      closes: #163956
+    + hangs up if a big text is pasted with middle mouse click,
+      closes: #177562
+    + menu panels are displaied shifted away when resizing main window,
+      closes: #183651
+    + hangs when trying to open Help's Table of contents, closes: #189376
+    + exporting to postscript loses text, closes: #195874
+    + crashes when opening Reference Manual or User Guide, closes: #87822
+  * Math fonts with Qt frontend should be available with latex-xfs-fonts
+    package, closes: #188518, #209322, #211666, #215064, #220283, #222015.
+  * This release resolves many program crash problems, closes: #204440,
+    #72425, #133986.
+  * Improved backward compatibility for document format, closes: #207968.
+  * Tweaked package dependecies, closes: #187714, #216439, #188008, #196032.
+  * Recommends gs as ps-viewer and pdf-viewer.
+  * Suggests kghostview.
+  * Fixed problems related to GUI dialogs, closes: #191655.
+  * Splash screen disapears after action is taken, closes: #141421.
+  * German splash document is correct, closes: #141421.
+  * Better support for pdflatex, closes: #40572.
+  * Suggests chktex, closes: #135294.
+  * Build depends on python.
+  * Use $CONCURRENCY_LEVEL to set the concurrency level of make.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Fri, 19 Dec 2003 11:07:30 +0100
+
+lyx (1.3.3-0.3) experimental; urgency=low
+
+  * New experimental release.
+  * Tweaked dependencies: add tex4ht and hevea.
+  * Rewritten configure script, support for htlatex
+    (thanks to Michael K. Edwards).
+  * Manual for dviprint and noweb2lyx (again Michael).
+
+ -- Piotr Roszatycki <dexter@debian.org>  Fri, 12 Dec 2003 22:49:15 +0100
+
+lyx (1.3.3-0.2) experimental; urgency=low
+
+  * New experimental release.
+  * Tweaked dependencies.
+  * Fixed typos in control and templates files.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed, 19 Nov 2003 16:17:14 +0100
+
+lyx (1.3.3-0.1) experimental; urgency=low
+
+  * New upstream release.
+  * Tweaked dependencies.
+  * lyx package depends on latex-xft-fonts which is not in distribution, yet.
+  * Better integration with KDE environment.
+  * Uses mime-tools if KDE is not present.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue, 28 Oct 2003 16:01:33 +0100
+
+lyx (1.3.2-1) unstable; urgency=low
+
+  * New upstream release, closes: #193663
+  * Changes in build process.
+  * New packages in recommends and suggests field, closes: #195781
+
+ -- Piotr Roszatycki <dexter@debian.org>  Mon,  2 Jun 2003 21:42:14 +0200
+
+lyx (1.3.1-5) unstable; urgency=low
+
+  * Recompiled with automake-1.7.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Thu,  3 Apr 2003 09:41:41 +0200
+
+lyx (1.3.1-4) unstable; urgency=low
+
+  * lyx package's Architecture: all
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed,  2 Apr 2003 21:47:43 +0200
+
+lyx (1.3.1-3) unstable; urgency=low
+
+  * Changed Build-Depends and Build-Conflicts.
+  * Recompiled with automake, autoconf, libtool.
+  * libboost supports unsupported CPUs.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed,  2 Apr 2003 16:33:13 +0200
+
+lyx (1.3.1-2) unstable; urgency=low
+
+  * Changed 'Maintainer' field. I've forgotten last time.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue,  1 Apr 2003 16:12:03 +0200
+
+lyx (1.3.1-1) unstable; urgency=low
+
+  * New maintainer.
+  * New upstream release, closes: #178367, #185954, #180392
+  * Clean up for Build-Depends, closes: #157921
+  * Clear copyright info, closes: #111605
+  * Compiled with -O2, closes: #175441
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue,  1 Apr 2003 15:47:31 +0200
+
+lyx (1.2.2-1) unstable; urgency=low
+
+  * New upstream version
+  * Compiling against (GPL) xforms v1.0 --> move to main
+
+ -- Jules Bean <jules@debian.org>  Sun, 22 Dec 2002 16:59:41 +0000
+
+lyx (1.1.6fix4-2) unstable; urgency=low
+
+  * Update config.{guess,sub}, which will hopefully allow 
+    s390 compilation
+
+ -- Jules Bean <jules@debian.org>  Wed, 23 Jan 2002 21:13:32 +0000
+
+lyx (1.1.6fix4-1) unstable; urgency=low
+
+  * Added s390 to the architecture field (closes:#126265)
+  * New upstream version (closes:#130001)
+  * Add aspell to recommends (closes:#128776)
+
+ -- Jules Bean <jules@debian.org>  Tue, 22 Jan 2002 08:53:14 +0000
+
+lyx (1.1.6fix3-3) unstable; urgency=low
+
+  * Made Build-Depends on nowebm only where nowebm is available -
+    [i386,sparc,alpha], I believe.
+  * Add ia64 to Architecture, since that seems to be supported by xforms
+    now.
+
+ -- Jules Bean <jules@debian.org>  Thu, 22 Nov 2001 21:21:43 +0000
+
+lyx (1.1.6fix3-2) unstable; urgency=low
+
+  * Debian menu pointed to old binary (Closes:#107456,#107760,#109788)
+  * Added the .mo files to the package (Closes:#111244)
+  * Changed recommends: lpr to suggests: lpr (Closes:#108343)
+  * Remove symlink /usr/share/texmf/tex/latex/lyx (Closes:#107396)
+    This is done in preinst, preinst should be removed in a later version.
+  * Moved the /usr/share/lyx/tex to /usr/share/texmf/tex/latex/lyx where it is
+    more appropriate, instead of symlinking.
+  * Adds recommends: ispell
+
+ -- Baruch Even <baruch@debian.org>  Wed, 12 Sep 2001 21:04:04 +0300
+
+lyx (1.1.6fix3-1) unstable; urgency=low
+
+  * New upstream version. Many new features, but some new bugs in table
+    handling. A few people may prefer to stay on
+    1.1.5fix2. (Closes:#85190,#86409,#91957,#92974).
+  * Section: editors (Closes:#74302).
+  * Added recommends:lpr,gv (Closes:#96377,#96378).
+  * Moved from /usr/X11R6 to /usr
+
+ -- Jules Bean <jules@debian.org>  Thu, 14 Jun 2001 21:40:04 +0100
+
+lyx (1.1.5fix2-1) unstable; urgency=low
+
+  * New upstream version. Apologies for delay!
+
+ -- Jules Bean <jules@debian.org>  Thu,  9 Nov 2000 20:32:57 +0000
+
+lyx (1.1.5fix1-1) unstable; urgency=low
+
+  * Long overdue new upstream version
+  * New maintainer
+  * Never actually uploaded.
+
+ -- Jules Bean <jules@debian.org>  Sat, 12 Aug 2000 19:59:36 +0100
+
+lyx (1.1.4-7) frozen unstable; urgency=low
+
+  * NMU requested by Michael Meskes <meskes@debian.org>
+  * Applied patch-1.1.4fix3:
+    This patch fixes the following problems in LyX 1.1.4fix2 (these are in
+    fact bugs of LyX 1.1.4 which were not fixed by the 1.1.4fix[12] patches):
+   
+    * LyX often crashed after repeated use of the backspace key. This problem
+      actually existed since long ago in the program, but did not strike very
+      often before version 1.1.4. This is probably the main reason why
+      you will want to apply this patch.
+    * error insets were not removed correctly, which caused the removal or
+      nearby characters in the documents. This is a serious problem too.
+    * filenames for images in docbook mode were truncated
+    * font tags for SGML output were wrong.
+    * -lintl was not added on the link list when compiling on system
+      which have gettext installed, but not in libc. 
+    * one header file contained C++ comments, whereas it is compiled with a
+      C compiler. 
+
+ -- Peter S Galbraith <psg@debian.org>  Thu, 13 Apr 2000 09:34:53 -0400
+
+lyx (1.1.4-3) frozen unstable; urgency=low
+
+  * Applied patch-1.1.4fix2:
+  * This patch fixes the following problems in LyX 1.1.4fix1 (these are in
+  * fact bugs of LyX 1.1.4 which were not fixed by the 1.1.4fix1 patch):
+  * - fix build problems on some architectures ('fl_gc' symbol not found)
+  * - fix warnings about missing return type in X headers for some
+      gcc/egcs versions.
+  * - fix parsing of LaTeX log files, where some errors got unnoticed.
+  * - add support for textclasses with more than 128 layouts (yes some
+      people do that!)
+  * - fix bug with filenames containing more that one "." (for example,
+      a.b.lyx was exported to a.ps).
+  * - fix partly bug with bibtex files located in the directory of the
+      document (now using an absolute path works).
+  * - fix bug in math editor, where greek letters (and some other
+      symbols) had too much spacing around them.
+  * - remove function buffer-previous from binding files, since it is not
+      implemented.
+  * Added icon to menu (closes:Bug#58739).
+  * Made lintian clean.
+
+ -- Michael Meskes <meskes@debian.org>  Sat, 11 Mar 2000 12:56:32 +0100
+
+lyx (1.1.4-2) frozen unstable; urgency=low
+
+  * Applied patch-1.1.4fix1:
+  *	The purpose of this patch is to provide some simple fixes to LyX
+  *	1.1.4 to ease the wait until the next stable release. It should
+  *	probably be applied to binary distributions of LyX 1.1.4, since it
+  *	offers better stability.
+  *
+  *	This patch fixes the following problems in LyX 1.1.4:
+  *
+  *	- fix character \"{e} in latin1 encoding
+  *	- fix problem when running latex on files which have accented
+  *	   characters in their names  
+  *	- add support for dvi previewers which do not support the -paper
+  *	   option (like yap on NT)
+  *	- fix oneside/twoside options in Layout->Document
+  *	- fix crash when trying to select a layout which does not exist
+
+ -- Michael Meskes <meskes@debian.org>  Sun, 20 Feb 2000 14:56:53 -0500
+
+lyx (1.1.4-1) frozen unstable; urgency=low
+
+  * New and final upstream version that fixes LOTS of memory bugs.
+  * Really fixed file locations.
+  
+ -- Michael Meskes <meskes@debian.org>  Fri,  4 Feb 2000 14:24:21 +0100
+
+lyx (1.1.4-0pre1) unstable; urgency=low
+
+  * New upstream version.
+  * Changed rules file. (closes:Bug#52899)
+  * Fixed file locations.
+  
+ -- Michael Meskes <meskes@debian.org>  Tue, 11 Jan 2000 13:07:18 +0100
+
+lyx (1.1.2-2) unstable; urgency=low
+
+  * Added upstream string patch (closes:Bug#50469).
+  * Enabled XOpenIM.
+  
+ -- Michael Meskes <meskes@debian.org>  Tue, 23 Nov 1999 17:32:56 +0100
+
+lyx (1.1.2-1) unstable; urgency=low
+
+  * New upstream version (closes:Bug#46994,#48187).
+  * Now suggests rcs (closes: Bug#48032).
+  * Updated dviprint copyright.
+  * Do not install configure.cmd.
+  * Minor changes to debian/rules.
+  * Removed debian/lyxrc. Use lib/lyxrc-example instead.
+  * Install lyx.xpm.
+  
+ -- Michael Meskes <meskes@debian.org>  Mon, 15 Nov 1999 20:25:50 +0100
+
+lyx (1.0.4-3) unstable; urgency=low
+
+  * NMU approved by Michael Meskes <meskes@debian.org>
+  * manpage.3pm changed to Text::TeX.3pm
+  * i386 upload compiled against libforms0.89
+  
+ -- Peter S Galbraith <psg@debian.org>  Mon, 18 Oct 1999 23:07:21 -0400
+
+lyx (1.0.4-2) unstable; urgency=low
+
+  * change the suggest from 'noweb' to 'nowebm'
+
+  by Michael Meskes <meskes@debian.org>  Thu,  7 Oct 1999 09:50:19 -0400
+
+  * Non maintainer upload in collaboration with Michael Meskes.
+
+ -- Peter S Galbraith <psg@debian.org>  Thu,  7 Oct 1999 09:50:19 -0400
+
+lyx (1.0.4-1) unstable; urgency=low
+
+  * New upstream version (closes:Bug#46334).
+
+ -- Michael Meskes <meskes@debian.org>  Fri,  1 Oct 1999 15:19:07 +0200
+
+lyx (1.0.3-2) unstable; urgency=low
+
+  * Recommends perl5 (closes:Bug#41400, Bug#41270).
+  * Recommends tetex-extra.
+
+  by Michael Meskes <meskes@debian.org>  Mon, 26 Jul 1999 14:43:06 +0200
+
+  * Non maintainer upload in collaboration with Michael Meskes.
+
+ -- Fredrik Hallenberg <hallon@debian.org>  Thu,  5 Aug 1999 21:14:08 +0200
+
+lyx (1.0.3-1) unstable; urgency=low
+
+  * New upstream version (closes:Bug#34687, Bug#38929).
+  * Suggest noweb and sgml-tools (closes:Bug#18747).
+  * Fix incorrect link (closes:Bug#37270).
+
+  by Michael Meskes <meskes@debian.org>  Fri,  4 Jun 1999 22:51:55 +0200
+
+  * Non maintainer upload in collaboration with Michael Meskes.
+
+ -- Paul Seelig <pseelig@debian.org>  Fri,  7 May 1999 08:16:04 +0200
+
+lyx (1.0.1-1) unstable; urgency=low
+
+  * Do not install CHANGES twice.
+  * Some digging revealed that lyx works well with RCS now. Fixes #12407
+  * Link /usr/lib/texmf/tex/latex/lyx to /usr/X11R6/share/lyx/lib/tex and
+    call /usr/bin/texhash in postinst and postrm to make sure classes
+    provided by lyx are correctly installed into the LaTeX system.
+  * New upstream version including all our bugfixes from 1.0.0-1.
+
+  by Michael Meskes <meskes@debian.org>  Fri,  5 Mar 1999 12:35:43 +0100
+
+  * Non maintainer upload in collaboration with Michael Meskes.
+
+ -- Paul Seelig <pseelig@debian.org>  Fri,  5 Mar 1999 12:35:50 +0100
+
+lyx (1.0.0-1) unstable; urgency=low
+
+  * It appears 1.0.0 works fine with icewm-gnome. Fixes #30880
+  * Also it does not appear to suffer from any '#' problem. Fixes #4690
+  * And it asks before overwriting a .tex file during export. Fixes #21854
+  * Spellchecking now accepts apostrophes. Fixes #14978
+  * Corrected french keyboard mapping. Fixes #27800
+  * Added new copyright notice. Fixes #32299
+  * Compiled with latest g++ package. Fixes #29085
+  * Do not dump core when started from console. Fixes #15077
+  * No longer include old utility textolyx. Fixes #29224
+  * Switched from debmake to debhelper.
+  * Made lintian-clean.
+  * Synced debian/lyxrc with upstream default.
+
+  by Michael Meskes <meskes@debian.org>  Thu, 18 Feb 1999 08:04:17 +0100
+
+  * Non maintainer upload in collaboration with Michael Meskes.
+  * Deleted unnecessary debian/*.ex files, but no further changes.
+  * Fixed small error in debian/postrm which resulted in a 
+    nonfunctional post-removal.
+
+ -- Paul Seelig <pseelig@debian.org>  Thu, 18 Feb 1999 2:03:12 +1100
+
+lyx (1.0.0-0.2) unstable; urgency=low
+
+  * Fixed locale problem due to insanely set PREFIX settings in debian/rules
+
+ -- Paul Seelig <pseelig@goofy.zdv.uni-mainz.de>  Tue, 02 Feb 1999 22:39:12 +1100
+
+lyx (1.0.0-0.1) unstable; urgency=low
+
+  * Finally release of a new stable version! :-)
+  * Unofficial non-maintainer package.
+
+ -- Paul Seelig <pseelig@goofy.zdv.uni-mainz.de>  Tue, 02 Feb 1999 03:04:11 +1100
+
+lyx (1.0.0pre6-0.1) unstable; urgency=low
+
+  * New patch level to prerelease of stable version
+
+ -- Paul Seelig <pseelig@goofy.zdv.uni-mainz.de>  Thu, 24 Dec 1998 18:06:11 +1100
+
+lyx (1.0.0pre2-0.1) unstable; urgency=low
+
+  * New patch level to prerelease of stable version
+
+ -- Paul Seelig <pseelig@goofy.zdv.uni-mainz.de>  Tue, 20 Oct 1998 01:14:10 +1100
+
+lyx (0.12.1pre8-0.1) unstable; urgency=low
+
+  * New patch level to prerelease of stable version
+  * Cleaned up debian/rules
+  * Changed debian/menu entry title="lyx" to title="LyX"
+
+ -- Paul Seelig <pseelig@goofy.zdv.uni-mainz.de>  Tue, 06 Oct 1998 18:46:51 +1100
+
+lyx (0.12.0.final-0.1) unstable; urgency=low
+
+  * renamed file to get it installed
+
+ -- Michael Meskes <meskes@debian.org>  Thu, 19 Feb 1998 13:20:45 +0100
+
+lyx (0.12.0-0.1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Michael Meskes <meskes@debian.org>  Wed,  4 Feb 1998 09:09:53 +0100
+
+lyx (0.12.0pre8-0.1) unstable; urgency=low
+
+  * new upstream version
+  * put latex2lyx back in from pre7, I don't know why it was deleted
+    upstream
+
+ -- Michael Meskes <meskes@debian.org>  Fri, 30 Jan 1998 11:03:01 +0100
+
+lyx (0.12.0pre7-0.2) unstable; urgency=low
+
+  * recompiled to get rid of debstd bug
+
+ -- Michael Meskes <meskes@debian.org>  Thu, 22 Jan 1998 10:51:10 +0100
+
+lyx (0.12.0pre7-0.1) unstable; urgency=low
+
+  * new upstream version
+  * do not compress copyright (#14425)
+
+ -- Michael Meskes <meskes@debian.org>  Fri, 16 Jan 1998 11:01:40 +0100
+
+lyx (0.12.0pre6-0.2) unstable; urgency=low
+
+  * completed postinst
+
+ -- Michael Meskes <meskes@debian.org>  Thu,  8 Jan 1998 08:33:31 +0100
+
+lyx (0.12.0pre6-0.1) unstable; urgency=low
+
+  * new upstream version fixing:
+    (#11428)
+    (#11458)
+    (#11571)
+    (#12912)
+    (#16663)
+  * removed /etc/lyx/ since I don't like to have a subdir for just one file,
+    lyxrc is now in /etc
+  * changed dviprint to be a /bin/sh script (#13350)
+  * register with menu (#14840)
+
+ -- Michael Meskes <meskes@topsystem.de>  Wed,  7 Jan 1998 10:23:26 +0100
+
+lyx (0.10.7-3) unstable; urgency=low
+
+  * Modified dependancies to recommend dvips (used to be dvipsk) and
+    tetex-base|ltxgraph (used to be just ltxgraph.) (bugs #7875, #8116)
+  * Re-linked against the new xforms0 package (bugs #8922, #9120, #9200)
+  * Linked with the teTeX kpathsea (bug #7709)
+  * NOTE: Although I am still listed as maintainer for this package, I _do not_
+    have the time to be a full-time maintainer for the project. I will do what
+    I can to fix small bugs, but no guarantees are made.
+
+ -- Stuart Lamble <lamble@yoyo.cc.monash.edu.au>  Wed, 30 Apr 1997 19:03:00 +1000
+
+lyx (0.10.7-2) unstable; urgency=low
+
+  * Corrected several typos and other errors in the control file
+  * Removed superfluous dependancies (now covered by shlibs),
+    and added a Suggests: ltxgraph
+  * Cleaned up debian/rules some more
+
+ -- Stuart Lamble <lamble@yoyo.cc.monash.edu.au>  Wed, 5 Feb 1997 20:20:00 +1100
+
+lyx (0.10.7-1) unstable; urgency=low
+
+  * New upstream version
+  * New maintainer
+  * Modified "clean" rule to remove debian/tmp, as well as other
+    extraneous files.
+  * Modified "binary" rule to ensure permissions are world readable/
+    executable (as applicable.)
+
+ -- Stuart Lamble <lamble@yoyo.cc.monash.edu.au>  Sat, 19 Oct 1996 19:14:24 +1000
+
+lyx (0.10.3-1) unstable; urgency=MEDIUM
+
+  * New upstream version 
+  * Moved directory /usr/X11R6/lib/lyx to /usr/X11R6/lib/X11/lyx 
+  * Added latex2lax binary
+  * New packaging format
+  * Requires xforms-dev_0.81-* to compile
+  * Section is now contrib (Bug#4362)
+  * Only do `make distclean' if there is a Makefile
+  * Install sampleclient.tcl in /usr/doc/lyx
+
+ -- Michael Meskes <meskes@debian.org>  Tue, 3 Sep 1996 12:38:38 +0200
+

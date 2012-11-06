@@ -1,0 +1,3 @@
+version=3
+https://launchpad.net/ubuntu-tweak/+download \
+    (?:.*/)?ubuntu-tweak(?:-|_)([\d\.]+)(?:\.orig)?\.tar\.gz

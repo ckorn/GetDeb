@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with python2
+
+# i18n rules
+PREFIX = /usr
+DATADIR = $(PREFIX)/share
+LOCALEDIR = $(DATADIR)/locale
+PO = $(shell find ./po -name *.po -print | sed -e 's!.po!!g' -e 's!./!!g')
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	rm -rf mo
+	rm -rf build
+	rm -f org.gnome.wiican.service wiican/defs.py
+	rm -f data/org.gnome.wiican.service
+
+override_dh_auto_install:
+	dh_auto_install
+	
+	for lang in $(PO); do mkdir -p mo/$$lang/LC_MESSAGES; msgfmt po/$$lang.po -o mo/$$lang/LC_MESSAGES/wiican.mo; dh_install mo/$$lang/LC_MESSAGES/wiican.mo $(DESTDIR)$(LOCALEDIR)/$$lang/LC_MESSAGES/; done
+	mkdir -p debian/wiican/usr/share/gconf
+	mv debian/wiican/etc/gconf/schemas debian/wiican/usr/share/gconf/
+	rmdir debian/wiican/etc/gconf
+	rmdir debian/wiican/etc
+

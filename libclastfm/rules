@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	chmod +x ./configure
+	dh_auto_configure
+
+override_dh_install:
+	dh_install --fail-missing
+	sed -i "/dependency_libs/ s/'.*'/''/" `find debian -name '*.la'`

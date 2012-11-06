@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Flock
+GenericName=Flock
+Comment=The social web browser
+Exec=flock-browser
+Terminal=false
+Type=Application
+Categories=GNOME;Application;Network;
+Icon=flock

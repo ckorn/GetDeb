@@ -1,0 +1,2 @@
+*.py *.css extensions icons lib WikidPad.xrc WikidPadHelp	usr/share/wikidpad
+debian/addons/*							usr

@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+%:
+	dh -Bglc_lib --parallel $@
+
+override_dh_auto_configure:
+	cd glc_lib && qmake-qt4
+	# There was 3rdparty/zlib in the include path
+	# and there are relative path like "../quazip" in
+	# the files. After removing 3rdparty/zlib those did not
+	# work any longer. Instead of fixing the files just create a
+	# dummy directory to make it work again.
+	mkdir -p glc_lib/3rdparty/dummy
+
+override_dh_auto_install:
+	cd glc_lib && $(MAKE) DESTDIR=$(CURDIR)/debian/tmp INSTALL_ROOT=$(CURDIR)/debian/tmp install
+
+override_dh_auto_clean:
+	[ ! -f glc_lib/Makefile ] || ( cd glc_lib && $(MAKE) distclean )
+
+	rm -rf Build glc_lib/Build
+	rm -rf glc_lib/3rdparty/dummy

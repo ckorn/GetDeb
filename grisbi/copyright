@@ -1,0 +1,50 @@
+Packaged-By: Benjamin Drieu <benj@debian.org>
+Packaged-Date: Tue, 20 Aug 2002 20:52:28 +0200
+Original-Source-Location: http://www.grisbi.org/
+Upstream-Author:
+  Cédric Auger <cedric@grisbi.org>,
+  Daniel Cartron <doc@grisbi.org>,
+  André Pascual <andre@linuxgraphic.org>,
+  Benjamin Drieu <benj@debian.org>
+
+Files: *
+Copyright: © 1989-2006 Free Software Foundation
+           © 2000-2006 Cédric Auger, Benjamin Drieu
+           © 1989 The Regents of the University of California
+           © 2004 François Terrot
+           © 2009 Pierre Biava
+           © 2009 Mickaël Remars
+License: GPL-2+-OpenSSL
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+  02110-1301, USA.
+
+  In addition, as a special exception, you have permission to link the
+  code of its release of Grisbi with the OpenSSL project's "OpenSSL"
+  library (or with modified versions of it that use the same license
+  as the "OpenSSL" library), and distribute the linked executables.
+  You must obey the GNU General Public License in all respects for all
+  of the code used other than "OpenSSL".  If you modify this file, you
+  may extend this exception to your version of the file, but you are
+  not obligated to do so.  If you do not wish to do so, delete this
+  exception statement from your version.
+
+  On Debian systems, the complete text of the GNU General Public
+  License can be found in /usr/share/common-licenses/GPL-2.
+
+Files: debian/*
+Copyright: © 2002-2006 Benjamin Drieu <benj@debian.org>
+           © 2009      Stéphane Glondu <steph@glondu.net>
+License: GPL-2+-OpenSSL

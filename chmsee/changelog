@@ -1,0 +1,407 @@
+chmsee (1.3.1.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #993597)
+    * Update Vietnamese po
+    * Fix a bug cause of opening an unextracted chm with subpage failure
+    * Change Gecko version to support xulrunner 2.0.1
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 May 2012 14:13:49 +0200
+
+chmsee (1.3.0-2ubuntu2) oneiric; urgency=low
+
+  * Apply patch from the webkit branch of chmsee to add webkit support and
+    drop gtkmozembed
+    - add debian/patches/chmsee-1.3.0-webkit.patch
+    - update debian/patches/series
+    - remove debian/patches/01_fix_gecko_version.patch
+    - update debian/control
+    - update debian/rules
+
+ -- Chris Coulson <chris.coulson@canonical.com>  Fri, 10 Jun 2011 23:48:07 +0100
+
+chmsee (1.3.0-2ubuntu1) natty; urgency=low
+
+  * Fix LP: #761715 - chmsee will stop working with the Firefox 4.0.1
+    release
+    - add debian/patches/series
+    - add debian/patches/01_fix_gecko_version.patch
+
+ -- Chris Coulson <chris.coulson@canonical.com>  Fri, 15 Apr 2011 13:52:05 +0100
+
+chmsee (1.3.0-2) unstable; urgency=low
+
+  * Fix "Please add libnspr4-dev to build-deps"(Closes: #610889)
+    - debian/control: add build depends on libnspr4-dev
+
+ -- LI Daobing <lidaobing@debian.org>  Sun, 20 Feb 2011 16:51:23 +0800
+
+chmsee (1.3.0-1) unstable; urgency=low
+
+  * new upstream release.
+
+ -- LI Daobing <lidaobing@debian.org>  Sun, 23 Jan 2011 15:27:29 +0800
+
+chmsee (1.2.0-1) unstable; urgency=low
+
+  * new upstream release (closes: #592194).
+  * debian/watch: updated. 
+  * debian/control: bump standards version to 3.9.1. 
+
+ -- LI Daobing <lidaobing@debian.org>  Sat, 14 Aug 2010 16:24:07 +0800
+
+chmsee (1.1.0-1) unstable; urgency=low
+
+  * new upstream release.
+  * debian/source/format: 3.0. 
+  * debian/rules: ChangeLog.old no longer exist. 
+  * debian/control: bump standards version to 3.8.4. 
+  * debian/patches/debian-changes-1.1.0-1: fix crash when compile under
+    xulrunner 1.9.2.
+
+ -- LI Daobing <lidaobing@debian.org>  Mon, 12 Apr 2010 20:00:24 +0800
+
+chmsee (1.0.7-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTFBS on GNU/kFreeBSD (Closes: #557159):
+     - Remove FreeBSD detection from CMakeLists.txt, so that -lmd doesn't
+       get added for GNU/kFreeBSD. That's not meant to be a final
+       solution, just a temporary band-aid until a CMake master drives by.
+     - Tweak src/models/chmfile.c to check for __GLIBC__ in addition to
+       checking for __linux__.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 21 Dec 2009 08:21:07 +0100
+
+chmsee (1.0.7-1.1) unstable; urgency=low
+
+  * Non-maintainer upload for transition to xulrunner 1.9.1.
+    (Closes: #548671)
+  * debian/rules: Use dh_xulrunner
+  * debian/control:
+    - Build-depend on a xulrunner-dev that provides dh_xulrunner.
+    - Let dh_xulrunner fill shlibs:Depends with the proper xulrunner
+      dependency.
+
+ -- Mike Hommey <glandium@debian.org>  Sat, 10 Oct 2009 11:32:05 +0200
+
+chmsee (1.0.7-1) unstable; urgency=low
+
+  * new upstream release.
+    - Fix "should honor GTK toolbar settings" (Closes: #536691)
+  * debian/control: bump standards version to 3.8.3.
+
+ -- LI Daobing <lidaobing@debian.org>  Mon, 14 Sep 2009 22:24:01 +0800
+
+chmsee (1.0.6-1) unstable; urgency=low
+
+  * New Upstream Version
+    - Fix "Possible breakage with xulrunner 1.9.1" (Closes: #536621)
+  * debian/control:
+    - build depends: cmake >= 2.6.2
+    - bump standards version to 3.8.2.
+  * debian/rules:
+    - remove dh_desktop
+
+ -- LI Daobing <lidaobing@debian.org>  Sun, 12 Jul 2009 11:28:18 +0800
+
+chmsee (1.0.5-1) unstable; urgency=low
+
+  * new upstream release.
+  * debian/control:
+    - build depends: remove autotools-dev, add cmake.
+    - change maintainer's email. 
+    - bump standards version to 3.8.1.
+  * debian/rules:
+    - switch to cmake.
+    - install ChangeLog and ChangeLog.old.
+
+ -- LI Daobing <lidaobing@debian.org>  Sun, 17 May 2009 15:42:38 +0800
+
+chmsee (1.0.4-1) unstable; urgency=low
+
+  * new upstream release.
+  * cs2w removed by upstream:
+    - debian/control: update depends and description.
+    - debian/chmsee.manpages: remove cs2w.1.
+    - debian/rules: remove cs2w install code.
+  * all patches merged by upstream:
+    - debian/control: no longer build depends on dpatch.
+    - debian/patches/: removed.
+    - debian/rules: remove dpatch.mk.
+  * debian/chmsee.docs: remove README.zh and NEWS.zh.
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat, 14 Mar 2009 21:06:44 +0800
+
+chmsee (1.0.3-2) unstable; urgency=low
+
+  * debian/patches/06_bug512713.dpatch: added, fix segfaults with some files
+    (Closes: #512713)
+  * debian/patches/00list: updated
+
+ -- LI Daobing <lidaobing@gmail.com>  Sun, 01 Feb 2009 21:44:39 +0800
+
+chmsee (1.0.3-1) unstable; urgency=low
+
+  * new upstream release.
+  * new homepage:
+    - debian/control: update homepage field.
+    - debian/watch: updated.
+  * debian/copyright: add new copyright holder. 
+  * debian/control: add ${misc:Depends} to depends. 
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat, 10 Jan 2009 22:01:58 +0800
+
+chmsee (1.0.2-1) unstable; urgency=low
+
+  * new upstream release.
+  * debian/control: also build depends on xulrunner-1.9-dev (Closes: #488153)
+  * debian/patches/04_manpage.dpatch: merged by upstream, deleted.
+  * debian/patches/05_desktop.dpatch: merged by upstream, deleted.
+  * debian/patches/00list: updated.
+
+ -- LI Daobing <lidaobing@gmail.com>  Thu, 04 Dec 2008 13:24:10 +0800
+
+chmsee (1.0.1-1) unstable; urgency=low
+
+  * new upstream release.
+  * debian/control: 
+    - VCS and Homepage transition.
+    - does not build depends on libssl-dev, use libgcrypt11-dev
+    - bump standards version to 3.8.0, nothing changed.
+    - fix typo in description, GTK -> GTK+
+    - add DM-Upload-Allowed field.
+  * debian/watch: added.
+  * debian/copyright: (C) -> Copyright 
+  * debian/rules: add "-Wl,--as-needed" to LDFLAGS. 
+  * Don't build depend on libxul-dev (Closes: #480791)
+  * debian/patches/04_manpage.dpatch: new, fix hyphen-used-as-minus-sign
+  * debian/patches/05_desktop.dpatch: new, fix
+    desktop-entry-contains-encoding-key
+  * debian/patches/00list: updated.
+
+ -- LI Daobing <lidaobing@gmail.com>  Wed, 18 Jun 2008 22:31:47 +0800
+
+chmsee (1.0.0-1) unstable; urgency=low
+
+  * new upstream release.
+    - new script `cs2w'.
+  * patches/02_cs2w.dpatch: give a default template directory.
+  * chmsee.manpages: add cs2w.1
+  * control:
+    - add build depends on autotools-dev.
+    - add depends on python and python-chm.
+    - update description.
+  * control.in: deleted.
+  * copyright: add new copyright holder and reformat it.
+  * rules: install cs2w.
+  * chmsee.menu: new section.
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat, 01 Sep 2007 03:12:22 +0000
+
+chmsee (1.0.0~beta2-1) unstable; urgency=low
+
+  * Initial upload to debian. (Closes: #288703)
+  * new upstream release.
+  * upstream ship chmsee.1:
+    chmsee.1: deleted
+    chmsee.manpages: update
+  * upstream have patched desktop file:
+    patches/01_desktop.dpatch: deleted
+  * chmsee.docs: add README.zh and NEWS.zh
+
+ -- LI Daobing <lidaobing@gmail.com>  Wed, 01 Aug 2007 12:27:09 +0800
+
+chmsee (1.0.0~beta-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- LI Daobing <lidaobing@gmail.com>  Mon, 19 Mar 2007 03:46:39 +0800
+
+chmsee (1.0.0~alpha-1) unstable; urgency=low
+
+  * New upstream release
+  * provide control and control.in
+  * chmsee-16x16.xpm, chmsee-32x32.xpm: new icon for menu
+  * control.in: depends on libxul instead of libgtkhtml
+  * rules: clean intltool
+
+ -- LI Daobing <lidaobing@gmail.com>  Thu, 26 Oct 2006 22:22:38 +0800
+
+chmsee (0.9.6-3) unstable; urgency=low
+
+  * rules: use cdbs to install manpage.
+
+ -- LI Daobing <lidaobing@gmail.com>  Tue,  1 Aug 2006 20:34:57 +0800
+
+chmsee (0.9.6-2) unstable; urgency=low
+
+  * debian/control: add depends on libssl-dev, intltool
+  * change debhelper compat level to 5
+  * switch to cdbs
+  * ship chmsee.1 directly
+  * call dh_desktop
+  * add "--as-needed" to ldflags
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat, 29 Jul 2006 20:16:53 +0800
+
+chmsee (0.9.6-1) unstable; urgency=low
+
+  * New upstream release
+  * update Standards-Version to 3.7.2
+  * remove all patches, remove depends on dpatch
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat,  1 Jul 2006 04:36:30 +0800
+
+chmsee (0.9.5-9) unstable; urgency=low
+
+  * rebuild depends on libchm-dev. 
+
+ -- LI Daobing <lidaobing@gmail.com>  Tue,  8 Nov 2005 19:12:38 +0800
+
+chmsee (0.9.5-8) unstable; urgency=low
+
+  * rebuild depends on chmlib(0.36-3). 
+
+ -- LI Daobing <lidaobing@gmail.com>  Mon, 24 Oct 2005 01:49:27 +0800
+
+chmsee (0.9.5-7ubuntu1) breezy; urgency=low
+
+  * first time to upload to ubuntu.
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat,  8 Oct 2005 15:10:03 +0800
+
+chmsee (0.9.5-7) unstable; urgency=low
+
+  * rebuild depends on chmlib(0.36-1).
+
+ -- LI Daobing <lidaobing@gmail.com>  Sat,  8 Oct 2005 15:02:53 +0800
+
+chmsee (0.9.5-6) unstable; urgency=low
+
+  * Rebuild with libgtkhtml3.8-dev 
+
+ -- LI Daobing <lidaobing@gmail.com>  Fri,  7 Oct 2005 06:25:21 +0800
+
+chmsee (0.9.5-5) unstable; urgency=low
+
+  * Rebuild with libgtkhtml3.6-dev.
+  * update Standards-Version to 3.6.2
+
+ -- LI Daobing <lidaobing@gmail.com>  Mon,  8 Aug 2005 14:19:10 +0800
+
+chmsee (0.9.5-4) unstable; urgency=low
+
+  * try use Bugs instead of bts 
+
+ -- Li Daobing <lidaobing@gmail.com>  Wed,  9 Mar 2005 19:46:25 +0800
+
+chmsee (0.9.5-3) unstable; urgency=low
+
+  * add chmlib to Build-Depends (pbuilder clean)
+
+ -- Li Daobing <lidaobing@gmail.com>  Mon,  7 Mar 2005 01:24:39 +0800
+
+chmsee (0.9.5-2) unstable; urgency=low
+
+  * Fix bug: now upstream use chmsee as the binary name(not chmsee-gtkhtml)
+
+ -- Li Daobing <lidaobing@gmail.com>  Thu,  3 Mar 2005 22:22:57 +0800
+
+chmsee (0.9.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Li Daobing <lidaobing@gmail.com>  Tue,  1 Mar 2005 23:40:45 +0800
+
+chmsee (0.9.0p1-2) unstable; urgency=low
+
+  * use external chmlib library
+
+ -- Li Daobing <lidaobing@gmail.com>  Mon, 15 Nov 2004 07:49:14 +0800
+
+chmsee (0.9.0p1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Li Daobing <lidaobing@gmail.com>  Thu, 14 Oct 2004 19:21:02 +0800
+
+chmsee (0.9.0-1) unstable; urgency=low
+
+  * New Maintainer: Li Daobing<lidaobing@gmail.com>
+  * New upstream release
+
+ -- Li Daobing <lidaobing@gmail.com>  Mon, 13 Sep 2004 10:03:58 +0800
+
+chmsee (0.8.0-1.2) unstable; urgency=low
+
+  * add a link from /usr/bin/chmsee-gtkhtml to /usr/bin/chmsee
+
+ -- Li Daobing <lidaobing@gmail.com>  Mon, 13 Sep 2004 09:24:45 +0800
+
+chmsee (0.8.0-1.1) unstable; urgency=low
+
+  * NMU
+  * Rebuild with libgtkhtml3.2-11 
+
+ -- Li Daobing <lidaobing@gmail.com>  Sun,  5 Sep 2004 09:27:46 +0800
+
+chmsee (0.8.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Rebuild with libgtkhtml3.1-11
+  * Add `/usr/share/bug/chmsee/control' (Thanks yoyosu@ustc.edu.cn)
+
+ -- Li Daobing <nichloas@sohu.com>  Mon, 26 Jul 2004 19:27:38 +0800
+
+chmsee (0.7.13-3) unstable; urgency=low
+
+  * Rebuild with libgtkhtml3.1-9
+
+ -- Li Daobing <nichloas@sohu.com>  Sat,  5 Jun 2004 17:58:28 +0800
+
+chmsee (0.7.13-2) unstable; urgency=low
+
+  * Rebuild with libgtkhtml3.1-7
+
+ -- Li Daobing <nichloas@sohu.com>  Fri, 23 Apr 2004 17:05:19 +0800
+
+chmsee (0.7.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Li Daobing <nichloas@sohu.com>  Sun,  4 Apr 2004 18:01:23 +0800
+
+chmsee (0.7.10-2) unstable; urgency=low
+
+  * Rebuild with libgtkhtml3.1-6
+
+ -- Li Daobing <nichloas@sohu.com>  Fri, 26 Mar 2004 00:37:52 +0800
+
+chmsee (0.7.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Li Daobing <nichloas@sohu.com>  Tue, 16 Mar 2004 00:02:01 +0800
+
+chmsee (0.7-1) unstable; urgency=low
+
+  * New upstream release
+  * Use gtkhtml3 instead of mozilla
+
+ -- Li Daobing <nichloas@sohu.com>  Tue,  9 Mar 2004 19:38:22 +0800
+
+chmsee (0.5.10-1) unstable; urgency=low
+
+  * New upstream release
+  * fix one little bug.
+
+ -- Li Daobing <nichloas@sohu.com>  Thu,  4 Mar 2004 11:50:57 +0800
+
+chmsee (0.5-1) unstable; urgency=low
+
+  * Initial Release.
+  * add Makefile.
+  * modify chmsee to use with mozilla, mozilla-firefox, mozilla-firebird
+
+ -- Li Daobing <nichloas@sohu.com>  Tue,  2 Mar 2004 13:05:06 +0800
+

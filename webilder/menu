@@ -1,0 +1,1 @@
+?package(webilder):needs="X11" section="Applications/Graphics" title="webilder" command="/usr/bin/webilder_desktop" icon="/usr/share/pyshared/webilder/ui/camera16.xpm"

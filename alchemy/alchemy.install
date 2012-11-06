@@ -1,0 +1,3 @@
+modules shapes *.jar			usr/share/alchemy
+debian/scripts/*			usr/bin
+debian/*.desktop			usr/share/applications

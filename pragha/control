@@ -1,0 +1,49 @@
+Source: pragha
+Section: sound
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libmad0-dev,
+               libcdio-cdda-dev,
+               libcdio-dev,
+               libtagc0-dev,
+               libglib2.0-dev,
+               libdbus-1-dev,
+               libdbus-glib-1-dev,
+               libnotify-dev,
+               libgtk2.0-dev,
+               libsqlite3-dev,
+               libao-dev,
+               libcurl4-openssl-dev,
+               x11proto-core-dev,
+               libcddb2-dev,
+               libflac-dev,
+               libmodplug-dev,
+               libasound2-dev,
+               linux-libc-dev,
+               libvorbis-dev,
+               libsndfile1-dev,
+               libcdio-paranoia-dev,
+               libgstreamer0.10-dev, 
+               libkeybinder-dev,
+               libgstreamer-plugins-base0.10-dev,
+               libclastfm0-dev (>= 0.5~0.4),
+               libglyr-dev,
+               libtotem-plparser-dev
+Standards-Version: 3.9.3
+Homepage: http://code.google.com/p/dissonance/
+
+Package: pragha
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Reproducer and administrator of music
+ A reproducer and administrator of music for GNU/Linux,
+ based on Gtk, sqlite, and completely written in C, constructed
+ to be fast, light, and simultaneously complete without
+ obstructing the daily work.
+ .
+ Pragha was originally derived of Consonance Music Manager
+ (http://sites.google.com/site/consonancemanager/), discontinued
+ by the original author.

@@ -1,0 +1,2 @@
+version=3
+http://download.rockbox.org/rbutil/source/RockboxUtility-v([\d\.]+)-src\.tar\.(?:bz2|xz|gz)

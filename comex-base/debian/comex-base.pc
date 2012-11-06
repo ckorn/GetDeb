@@ -1,0 +1,6 @@
+Name: comex-base
+Description: base component for comex project
+Version: 0.1.8.5
+
+Requires: 
+Libs: -r:/usr/lib/cli/comex-base-0.1/comex-base.dll

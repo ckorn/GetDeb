@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=REDUCE Algebra
+Type=Application
+Exec=/usr/bin/reduce
+StartupNotify=false
+Terminal=true
+Categories=Application;Science;

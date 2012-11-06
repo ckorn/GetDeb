@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+version=$(shell dpkg-parsechangelog | grep ^Version: | sed 's/Version: \(.*\)-.*/\1/')
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf frostwire
+
+override_dh_auto_build:
+	tar xvf frostwire-$(version).noarch.tar.gz	
+	mv frostwire-$(version).noarch frostwire
+	find frostwire -type f -name "*.jar" -exec chmod -x {} \;
+	rm frostwire/COPYING
+
+override_dh_installchangelogs:
+	dh_installchangelogs frostwire/changelog
+
+override_dh_shlibdeps:
+	dh_shlibdeps -X frostwire

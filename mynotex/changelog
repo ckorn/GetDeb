@@ -1,0 +1,5 @@
+mynotex (1.2.1-1~getdeb1) precise; urgency=low
+
+  * Initial release (LP: #1004823)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 26 May 2012 14:20:20 +0200

@@ -1,0 +1,4 @@
+cslbuild/built/csl/reduce.fonts/*.ttf			usr/share/reduce-algebra/reduce.fonts
+cslbuild/built/csl/reduce.fonts/*.pfa			usr/share/reduce-algebra/reduce.fonts
+cslbuild/built/csl/reduce.fonts/*.pfb			usr/share/reduce-algebra/reduce.fonts
+cslbuild/built/csl/reduce.fonts/pfmfiles		usr/share/reduce-algebra/reduce.fonts

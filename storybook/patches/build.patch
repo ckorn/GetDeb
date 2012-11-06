@@ -1,0 +1,269 @@
+Remove jarbuilder.
+Index: storybook-3.2.0/build.xml
+===================================================================
+--- storybook-3.2.0.orig/build.xml	2011-12-05 18:45:48.000000000 +0100
++++ storybook-3.2.0/build.xml	2012-08-15 18:10:11.646344519 +0200
+@@ -4,24 +4,24 @@
+      build the Storybook application
+                    
+      martin                                                                
+-     ====================================================================== -->
++     ====================================================================== -->
+ 
+ <project name="Storybook" default="default">
+ 
+-	<description>Build the Storybook Application</description>
+-
+-	<property name="sb.version" value="2.1.15" />
++	<description>Build the Storybook Application</description>
++
++	<property name="sb.version" value="2.1.15" />
+ 	<property name="sb.release.dir" value="${basedir}/release" />
+-	<property name="sb.build.dir" value="${sb.release.dir}/build" />
+-	<property name="sb.src.dir" value="${basedir}/src" />
+-	<property name="sb.lib.dir" value="${basedir}/lib" />
+-	<property name="sb.resource.dir" value="ch/intertec/storybook/resources" />
+-	<property name="sb.file.name" value="storybook" />
+-	<property name="sb.jar.name" value="${sb.file.name}.jar" />
+-
+-	<property name="sb.tar.name" value="${sb.file.name}_${sb.version}_linux.tar.gz" />
+-	<property name="sb.src.zip.name" value="${sb.file.name}_${sb.version}_src.zip" />
+-	<property name="sb.bin.zip.name" value="${sb.file.name}_${sb.version}_bin.zip" />
++	<property name="sb.build.dir" value="${sb.release.dir}/build" />
++	<property name="sb.src.dir" value="${basedir}/src" />
++	<property name="sb.lib.dir" value="${basedir}/lib" />
++	<property name="sb.resource.dir" value="ch/intertec/storybook/resources" />
++	<property name="sb.file.name" value="storybook" />
++	<property name="sb.jar.name" value="${sb.file.name}.jar" />
++
++	<property name="sb.tar.name" value="${sb.file.name}_${sb.version}_linux.tar.gz" />
++	<property name="sb.src.zip.name" value="${sb.file.name}_${sb.version}_src.zip" />
++	<property name="sb.bin.zip.name" value="${sb.file.name}_${sb.version}_bin.zip" />
+ 	<property name="sb.batch.file.name" value="${sb.file.name}.bat" />
+ 
+ 	<property name="sb.dict.dir" value="${basedir}/dict" />
+@@ -54,21 +54,18 @@
+ 	<property name="jarbundler.apple.awt.showGrowBox" value="true"/>
+ 	<property name="jarbundler.apple.awt.textantialiasing" value="true"/>
+ 
+-	<taskdef name="jarbundler" 
+-	         classname="net.sourceforge.jarbundler.JarBundler" />
+-
+ 	<path id="classpath">
+ 		<fileset dir="${sb.lib.dir}">
+ 			<include name="**/*.jar" />
+ 		</fileset>
+ 	</path>
+-
+-	<path id="jasperClasspath">
+-		<fileset dir="C:/PROGRA~1/JasperSoft/jasperreports-3.0.1/lib">
+-			<include name="**/*.jar" />
+-		</fileset>
+-	</path>
+-
++
++	<path id="jasperClasspath">
++		<fileset dir="C:/PROGRA~1/JasperSoft/jasperreports-3.0.1/lib">
++			<include name="**/*.jar" />
++		</fileset>
++	</path>
++
+ 	<target name="default" depends="compile" description="build the Storybook application">
+ 	</target>
+ 
+@@ -117,59 +114,59 @@
+ 			<fileset dir="${sb.lib.dir}" includes="${sb.jar.name}" />
+ 		</delete>
+ 	</target>
+-
+-	<target name="compile" description="compile">
++
++	<target name="compile" description="compile">
+ 		<echo>compiling ...</echo>
+-		<mkdir dir="${sb.build.dir}" />
++		<mkdir dir="${sb.build.dir}" />
+ 		<javac destdir="${sb.build.dir}"
+ 			debug="off"
+ 			deprecation="on"
+ 			optimize="on"
+-			classpathref="classpath">
+-			<src path="${sb.src.dir}" />
+-			<include name="**/*.java"/>
+-			<exclude name="ch/intertec/storybook/playground/**"/>
+-			<exclude name="ch/intertec/storybook/testng/**"/>
+-		</javac>
++			classpathref="classpath">
++			<src path="${sb.src.dir}" />
++			<include name="**/*.java"/>
++			<exclude name="ch/intertec/storybook/playground/**"/>
++			<exclude name="ch/intertec/storybook/testng/**"/>
++		</javac>
+ 	</target>
+-
++
+ 	<target name="run" depends="jar" description="run application">
+ 		<echo level="error">not supported anymore</echo>
+-		<!--
+-		<echo>running...</echo>
+-		<exec executable="cmd">
+-			<arg value="/c" />
+-			<arg value="${sb.batch.file.name}" />
+-			<arg value="-p" />
++		<!--
++		<echo>running...</echo>
++		<exec executable="cmd">
++			<arg value="/c" />
++			<arg value="${sb.batch.file.name}" />
++			<arg value="-p" />
+ 		</exec>
+-		-->
+-	</target>
+-
+-	<target name="jar" depends="prepare,compile" description="build jar file">
+-		<echo>make the jar file...</echo>
+-		<copy todir="${sb.build.dir}/${sb.resource.dir}">
+-			<fileset dir="${sb.src.dir}/${sb.resource.dir}"/>
++		-->
++	</target>
++
++	<target name="jar" depends="prepare,compile" description="build jar file">
++		<echo>make the jar file...</echo>
++		<copy todir="${sb.build.dir}/${sb.resource.dir}">
++			<fileset dir="${sb.src.dir}/${sb.resource.dir}"/>
+ 		</copy>
+ 		<pathconvert property="classpath2" pathsep=" ">
+ 			<path refid="classpath">
+ 			</path>
+-			<map from="/home/martin/workspace_java/storybook/lib/" to=""/>
+-		</pathconvert>
+-		<jar jarfile="${sb.lib.dir}/${sb.jar.name}" basedir="${sb.build.dir}">
+-			<manifest>
++			<mapper type="regexp" from=".*/lib/(.*)" to="\1"/>
++		</pathconvert>
++		<jar jarfile="${sb.lib.dir}/${sb.jar.name}" basedir="${sb.build.dir}">
++			<manifest>
+ 				<attribute name="Main-Class" value="ch.intertec.storybook.StorybookApp" />
+ 				<attribute name="Class-Path" value="${classpath2} .."/>
+ 				<attribute name="SplashScreen-Image" value="splash.png"/>
+ 			</manifest>
+-		</jar>
+-	</target>
+-
+-	<target name="tar" depends="jar" description="build tar file">
+-		<echo>make the tar file...</echo>
+-		<tar tarfile="${sb.tar.name}" compression="gzip">
+-			<tarfileset dir="${basedir}" mode="755" prefix="storybook">
+-				<include name="storybook.sh" />
+-				<include name="install.sh" />
++		</jar>
++	</target>
++
++	<target name="tar" depends="jar" description="build tar file">
++		<echo>make the tar file...</echo>
++		<tar tarfile="${sb.tar.name}" compression="gzip">
++			<tarfileset dir="${basedir}" mode="755" prefix="storybook">
++				<include name="storybook.sh" />
++				<include name="install.sh" />
+ 			</tarfileset>
+ 			<tarfileset dir="${basedir}" prefix="storybook">
+ 				<include name="configuration.xml" />
+@@ -181,11 +178,11 @@
+ 				<include name="icon.ico" />
+ 				<include name="icon.png" />
+ 				<include name="Demo.h2.db" />
+-			</tarfileset>
+-			<tarfileset dir="${basedir}" prefix="storybook">
+-				<include name="${sb.jar.name}" />
++			</tarfileset>
++			<tarfileset dir="${basedir}" prefix="storybook">
++				<include name="${sb.jar.name}" />
+ 				<include name="lib/**" />
+-				<include name="dict/**" />
++				<include name="dict/**" />
+ 			</tarfileset>
+ 			<tarfileset dir="${sb.report.dir}"
+ 				prefix="storybook/reports">
+@@ -194,47 +191,47 @@
+ 			<tarfileset dir="${sb.i18n.dir}"
+ 		    	prefix="storybook/resources">
+ 				<include name="**" />
+-			</tarfileset>
+-		</tar>
+-	</target>
+-
+-	<target name="binZip" depends="jar" description="build bin zip file">
+-		<echo>make the bin zip file...</echo>
+-		<zip zipfile="${sb.bin.zip.name}">
+-			<zipfileset dir="${basedir}">
+-				<include name="INSTALL.txt" />
+-				<include name="LICENSE.txt" />
+-				<include name="README.txt" />
+-				<include name="icon.ico" />
+-				<include name="${sb.jar.name}" />
+-				<include name="lib/**" />
++			</tarfileset>
++		</tar>
++	</target>
++
++	<target name="binZip" depends="jar" description="build bin zip file">
++		<echo>make the bin zip file...</echo>
++		<zip zipfile="${sb.bin.zip.name}">
++			<zipfileset dir="${basedir}">
++				<include name="INSTALL.txt" />
++				<include name="LICENSE.txt" />
++				<include name="README.txt" />
++				<include name="icon.ico" />
++				<include name="${sb.jar.name}" />
++				<include name="lib/**" />
+ 				<include name="reports/**" />
+ 				<include name="dict/**" />
+ 				<include name="resources/**" />
+-				<include name="Demo.h2.db" />
+-			</zipfileset>
+-		</zip>
+-	</target>
+-
+-	<target name="srcZip" description="build src zip file">
+-		<echo>make the src zip file...</echo>
+-		<zip zipfile="${sb.src.zip.name}">
+-			<zipfileset dir="${basedir}">
+-				<include name="src/**" />
+-				<include name="lib/**" />
++				<include name="Demo.h2.db" />
++			</zipfileset>
++		</zip>
++	</target>
++
++	<target name="srcZip" description="build src zip file">
++		<echo>make the src zip file...</echo>
++		<zip zipfile="${sb.src.zip.name}">
++			<zipfileset dir="${basedir}">
++				<include name="src/**" />
++				<include name="lib/**" />
+ 				<include name="reports/**" />
+ 				<include name="dict/**" />
+-				<include name="resources/**" />
+-				<include name="build.xml" />
+-				<include name="LICENSE.txt" />
+-				<include name="README.txt" />
+-				<include name="INSTALL.txt" />
+-			</zipfileset>
+-		</zip>
+-	</target>
+-
+-	<target name="release" depends="jar,tar,srcZip" description="release">
+-	</target>
++				<include name="resources/**" />
++				<include name="build.xml" />
++				<include name="LICENSE.txt" />
++				<include name="README.txt" />
++				<include name="INSTALL.txt" />
++			</zipfileset>
++		</zip>
++	</target>
++
++	<target name="release" depends="jar,tar,srcZip" description="release">
++	</target>
+ 
+ 	<target name="mac-app" depends="jar">
+ 		<jarbundler dir="${sb.release.dir}"

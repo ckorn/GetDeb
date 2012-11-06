@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+  <!-- Fill in your name for FIRSTNAME and SURNAME. -->
+  <!ENTITY dhfirstname "<firstname>Michael</firstname>">
+  <!ENTITY dhsurname   "<surname>Stilkerich</surname>">
+  <!-- Please adjust the date whenever revising the manpage. -->
+  <!ENTITY dhdate      "<date>January 26, 2006</date>">
+  <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
+       allowed: see man(7), man(1). -->
+  <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
+  <!ENTITY dhemail     "<email>ms@mike2k.de</email>">
+  <!ENTITY dhusername  "Michael Stilkerich">
+  <!ENTITY dhucpackage "<refentrytitle>GNORMALIZE</refentrytitle>">
+  <!ENTITY dhpackage   "gnormalize">
+
+  <!ENTITY debian      "<productname>Debian</productname>">
+  <!ENTITY gnu         "<acronym>GNU</acronym>">
+  <!ENTITY gpl         "&gnu; <acronym>GPL</acronym>">
+]>
+
+<refentry>
+  <refentryinfo>
+    <address>
+      &dhemail;
+    </address>
+    <author>
+      &dhfirstname;
+      &dhsurname;
+    </author>
+    <copyright>
+      <year>2006</year>
+      <holder>&dhusername;</holder>
+    </copyright>
+    &dhdate;
+  </refentryinfo>
+  <refmeta>
+    &dhucpackage;
+
+    &dhsection;
+  </refmeta>
+  <refnamediv>
+    <refname>&dhpackage;</refname>
+
+    <refpurpose>audio file normalizer and converter</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <arg><option><replaceable>inputfile</replaceable></option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>
+    <title>DESCRIPTION</title>
+    <para>
+      <command>&dhpackage;</command> is a GTK2 frontend to various
+      commandline utilities that can be used
+      for normalization and format conversion of audio files. It can
+      furthermore be used to rip audio cds to any of the supported formats.
+      Which formats are supported depends on the available audio encoders and
+      decoders that are available on your system. With the necessary programs
+      installed, &dhpackage; supports MP3, MP4 (M4A or AAC), MPC (MPP or
+      MP+ - Musepack), OGG Vorbis, APE (Monkey's Audio), FLAC and WAV both
+      as input and output formats. Additionally, the input can also come
+      from an audio-cd. Meta-information like ID3 tags are preserved/converted
+      during the file conversion.
+    </para>
+    <para>
+      &dhpackage; is also capable of playing audio-cd and fetching meta
+      information via CDDB if the CDDB_get perl module is installed.
+    </para>
+
+    <para>This manual page was written for the Debian distribution
+      because the original program does not have a manual page.
+    </para>
+  </refsect1>
+  <refsect1>
+    <title>AUTHOR</title>
+    <para>This manual page was written by &dhusername; &dhemail; for
+    the Debian system (but may be used by others).  Permission is
+    granted to copy, distribute and/or modify this document under
+    the terms of the &gnu; General Public License, Version 2 any 
+    later version published by the Free Software Foundation.
+    </para>
+    <para>
+    On Debian systems, the complete text of the GNU General Public
+    License can be found in /usr/share/common-licenses/GPL.
+    </para>
+  </refsect1>
+</refentry>
+

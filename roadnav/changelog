@@ -1,0 +1,401 @@
+roadnav (0.19-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 14:49:06 +0100
+
+roadnav (0.19-1~getdeb1) karmic; urgency=low
+
+  * Rebuild for karmic (LP: #237087)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Nov 2009 21:47:55 +0100
+
+roadnav (0.19-0~getdeb1) hardy; urgency=low
+
+  * Initial release.
+
+ -- Christoph Korn <c_korn@gmx.de>  Sat, 06 Sep 2008 22:11:23 +0200
+
+roadnav (0.19-1) unstable; urgency=low
+
+  * Bug Fixes:
+  * Fixes i18n issue in OSM code.
+  * Fixes crash that would occur when right clicking the map with debugging enabled.
+
+  * Misc:
+  * Adds test for wx/wx.h to configure script.
+  * Adds 57.6kbps and 115.2kbps baud rates.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Fri, 19 Oct 2007 15:00:00 -0500
+
+roadnav (0.18-1) unstable; urgency=low
+
+  * Enhancements:
+  * Adds option to Preferences to enable gpsd buffering (reduces jitter).
+  * Adds experimental GPX import support.
+  * Disk usage reduced by ~30%.
+  * Adds GPS serial initialization string option to Preferences.
+  * Adds preference to override default map directory.
+  * Adds option for username/password proxy authentication.
+  * Adds "Use System Proxy Settings" preference, which reads proxy settings from the HTTP_PROXY environmental variable.
+
+  * Bug Fixes:
+  * Fixes Delete button in Waypoints dialog when no waypoints exist.
+  * Workaround for buggy serial implementations.
+  * Fixes Windows 2000 compatibility.
+  * Fixes i18n issue in OSM code.
+  * Improved address look up.
+  * Eliminates IPP error messages when printer is not configured.
+  * Improved compatibility with DeLorme Tripmate and Earthmate GPS units.
+  * Win32 floating point model changed from fast to precise. Should resolve problems calculating routes.
+  * Fixes focusing issue in keyboard dialog.
+
+  * Developer Visible Changes:
+  * MapControlData_Tiles index files eliminated.
+  * Direct access to Point::m_fLong and Point::m_fLat eliminated. Use the Point::Set* and Point::Get* functions instead.
+
+  * Misc:
+  * Compiled maps now organized in a more human readable format.
+  * Eliminates TIGER/Line 2006 First Edition from search path.
+  * Proxy settings now on their own preferences page.
+  * When maps have to be upgraded, adds option to not upgrade map files and immediately terminate Roadnav instead.
+  * Small map labels now have a solid background instead of a cross hatch.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Sat, 30 Jun 2007 15:00:00 -0500
+
+roadnav (0.17-1) unstable; urgency=low
+
+  * Enhancements:
+  * Adds support for Festival Lite (flite) text to speech engine.
+  * Adds support for Apple's built in text to speech engine.
+  * Adds support for calling a command on exit (e.g. shutdown computer command).
+  * Adds "Visible Size" option to Save As settings dialog.
+  * Save As settings dialog now remembers the custom size entered.
+  * Adds -c command line option, which relays the supplied scripting command to Roadnav's TCP server.
+  * Adds "exit" scripting command.
+  * Adds mainwindow skin element.
+  * Adds turn penalty to routing algorithm.
+  * Adds scale icon checkbox to Waypoints dialog. If checked, icon will scale according to zoom level.
+  * If a street name can fit inside the street's line, then it is now drawn inside the line.
+  * Road line color and text color can now be set independently.
+  * Adds autocomplete button to keyboard dialog. To use, fill in the state, then city, then street address.
+  * Improved performance when there are lots of markers.
+  * System font antialiasing used whenever possible.
+  * Adds alternate, more user friendly way of entering an address.
+  * Disk usage reduced by 50%.
+
+  * Bug Fixes:
+  * Fixes preferences dialog glitch related to invalid GPS type in configuration settings.
+  * Fixes dragging the map in 3D mode.
+  * Selecting only counties that have already been downloaded in the TIGER/Line download dialog no longer causes a crash.
+  * Directions frame now adheres to global color scheme.
+  * The first and last Preferences page tabs are no longer obscured under OS X.
+  * Fixes add/update buttons in Waypoint dialog.
+  * Turning off Automatically Download Maps in Preferences now affects aerial photos as well.
+  * Reduces rate at which serial ports are reinitialized if no GPS data is detected.
+  * Misc bug fixes to OSM parser.
+  * Fixes OSM character encoding problem.
+  * Fixes bug that would prevent OSM data from being downloaded in certain situations.
+  * Fixes compatibility with wxWidgets 2.8 series.
+  * Fixes MapControl initialization bug that would cause problem in debug builds.
+  * Fixes date in debug log.
+  * Fixes infinite loop that would occur when getting directions more than 0.1 miles from a road.
+  * Fixes spurious map refresh that would occur about one minute after Roadnav was started at night.
+  * Map markers now remember if their icon should be scaled or not.
+  * Fixes problem with waypoint icon filenames containing dollar signs ($).
+  * Fixes bug that would prevent FindAddress from being able to find rare certain addresses.
+  * Eliminates potential race condition that might occur when simultaneously loading and saving map data.
+
+  * Developer Visible Changes:
+  * TTS code reorganized.
+  * Eliminates IMapControlDataEntry::m_pParent.
+  * MapControl::AutoScale() fix.
+  * Adds country code to each MapControlDataEntry.
+  * Adds EncodeCanadianZip/DecodeCanadianZip to MapSupport.cpp
+  * Adds AutoComplete classes, used to autocomplete a state, city, or street address.
+  * Feature names/types and smart names in IMapControlDataEntry now point to a global string table rather than individually allocated memory from the heap.
+  * LibRoadnav samples upgraded to MSVC8 and switched to wxWidgets 2.8, MFC sample removed.
+
+  * Misc:
+  * Adds TTS tab to Preferences.
+  * Eliminates MSVC6 project, upgrades MSVC7 project to MSVC8 (Visual C++ 2005) and switches to wxWidgets 2.8.
+  * Adds "Generate Debug Log" option to General page of Preferences in debug versions of Roadnav.
+  * Routing code tweaks.
+  * Performance tweaks.
+  * Recent performance improvements require changes to Roadnav's internal file formats. As such, all maps must be downloaded again and recompiled.
+  * Better handling of invalid coordinates in Set Address.
+  * GPS heading is now ignored (again) when the reported speed is less than 5 mph.
+  * Fixes compatibility with GPS units that only output $GPRMC sentences.
+  * Adds copyright and licensing information to "roadnav -h" output.
+  * Adds licensing information to About box.
+  * Eliminates an assertion failure that would occur when entering an address whose maps weren't available and when auto-download of maps was disabled.
+  * Settings now flushed to disk once per minute.
+  * Adds AutoComplete classes, used to autocomplete a state, city, or street address.
+  * Street labels now bold weight.
+  * Map labels no longer drawn unless they can be drawn right next to/inside of the road.
+  * Improved default appearance settings.
+  * TIGER/Line 2005 Second Edition removed from URL list.
+  * Roadnav now autodetects if TIGER/Line filenames are upper case or lower case.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Sat, 24 Feb 2007 15:00:00 -0500
+
+roadnav (0.16-1) unstable; urgency=low
+
+  * Enhancements:
+  * Improves appearance of railroad tracks.
+  * Improved appearance at higher detail levels (if upgrading, requires configuration wipe).
+  * Adds preliminary OpenStreetMap support.
+  * There's now an option in Preferences to prevent Roadnav from testing if the gpsd server is compatible with Roadnav.
+  * Misc performance improvements.
+  * Adds basic GPS auto detection feature.
+  * Better serial port error handling.
+  * Adds IOKit based serial port enumeration for OS X.
+  * Map now redrawn in idle thread - should improve GPS marker performance.
+  * Download progress dialog now shows the size of the file being downloaded.
+  * Basic scripting support added.
+  * Adds export and export all button to waypoints dialog, allowing waypoints to be exported into a script that can be loaded into other copies of Roadnav.
+  * Adds File->Run Script command.
+  * Trying to look up an invalid address should take less time to fail now.
+  * Faster map redraws.
+  * If an invalid street name, city, or state is given, Roadnav now suggests the closest sounding street, city, or state.
+  * Adds keep GPS centered option to the GPS page of Preferences.
+  * Zooming can now be controlled by the current road type. Each road type will have a zoom level, and as you drive from one type of road to another, the zoom level will automatically switch to the level for the type of road you're now on. Prior to switching zoom levels, Roadnav will save the zoom level for the type of road you were on.
+  * The map can now be moved by left clicking and dragging the mouse.
+  * Adds buttons to zoom directly to a specific zoom level to the right side of the main window.
+  * Adds Cache Downloads options to the General page of Preferences to enable/disable caching downloaded (raw) files. Disabling caching will save space, but should Roadnav's internal file format change, it will be necessary to download the raw map data again.
+  * Theme editing dialog box redone to be a bit easier to use.
+  * On screen keyboard now grows to take up the entire screen.
+
+  * Bug Fixes:
+  * Fixes bug that would cause map labels to be drawn, even if there was no space.
+  * A lack of altitude information from gpsd no longer causes Roadnav to report no GPS lock.
+  * Fixes GPS window background in night mode on OS X.
+  * Progress bar periodically refreshes itself now, even if the progress bar isn't moving.
+  * Fixes some artifacts that would appear near the edge of the screen, on the edge of a thick line.
+  * Fixes spurious refresh of the UI that would occur about 30 seconds after Roadnav was started.
+  * Eliminates error message that would appear if RemoveDirectoryAndContents was called on a non-existent directory.
+  * Fixes theme management bugs related to adding, renaming, and deleting themes.
+  * Negative street number no longer reported when FindCoordinates is called far from a street.
+  * The Windows installer now removes all map and cache files on uninstall.
+  * The Windows installer no longer creates a registry key in HKLM.
+  * The Windows installer now removes the Roadnav.ini on uninstall.
+  * The color of the cursor (cross hair) is now determined by the map color scheme rather than the system color/cursor scheme.
+  * Fixes race condition in directions window related to uninitialized variables.
+  * Fixes behavior of arrow keys when 3D mode is active.
+
+  * Developer Visible Changes:
+  * The GPS interface has been split into classes, one for each type (simulated, gpsd, serial, disabled).
+  * Improved FindCoordinates performance.
+  * MapControl now sends its MapUpdated notification after the map has been redrawn.
+  * Overhauled serial I/O state machine. Should be more responsive.
+  * FormatFileSize function added.
+  * New FindAddress function that accepts the street number, street name, and street type in one string.
+  * Adds IntersectsRect to MapControlDataEntry
+  * Adds RotatePoint for Point.
+  * Adds SolveLinearEquationSet to solve 2 equation, 2 unknown linear equations.
+  * Adds m_eRecordType to Address class.
+  * Adds activeimage and activekey XML attributes to buttons in the skins.
+  * Adds zoom0 through zoom14 activekeys to buttons in the skins.
+  * Skin minsize now specified in client coordinates instead of window coordinates.
+  * const bool * are now used instead of vector<bool> to indicate layer visibility.
+
+  * Misc:
+  * Settings are saved more frequently now, rather than only right before Roadnav is closed.
+  * If 3D mode is off, GPS position now stays in the center of the window instead of moving around.
+  * Map projection changed.
+  * North always points up moved from General page to GPS page of Preferences and renamed to Rotate map to match heading.
+  * Antialiasing now disabled by default.
+  * Replaces "Set Address" button with more useful "Map Tracks GPS" button.
+  * Named text (GPS heading, GPS address, etc.) in the skin is now drawn with a transparent background instead of an opaque one.
+  * When the GPS page of the Preferences dialog is opened for the first time, the first detected serial port is now selected.
+  * "Serial" renamed to "Serial/USB" in GPS page of Preferences.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Sat, 4 Nov 2006 15:00:00 -0500
+
+roadnav (0.15-1) unstable; urgency=low
+
+  * Bug Fixes:
+  * Adds support for new GNIS data.
+  * When two counties have the same name but different FIPS code, one of the counties is now automatically renamed.
+  * Fixes GPS window hang under GTK.
+  * Updated to use TIGER/Line 2005 Second Edition.
+  * Switched from libgps to a custom gpsd interface. Should improve stability.
+  * Specifying the city and state, but not the street name in the location dialog now results in the middle of the city being selected.
+
+  * Developer Visible Changes:
+  * FindAddress now takes a vector<bool> to indicate which layers to search.
+  * FindCoordinates now takes an extra argument to indicate if the search coordinates should be returned, or the actual coordinates of the closest record.
+
+  * Misc:
+  * /dev/ttyUSB* now listed as a serial port.
+  * Control-Shift-F is now the keyboard shortcut for full screen mode under OS X. It used to be F11, which conflicted with an OS X system function.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Fri, 18 Aug 2006 15:00:00 -0500
+
+roadnav (0.14-1) unstable; urgency=low
+
+  * Enhancements:
+  * It's now possible to configure whether Roadnav prefers small roads, large roads, or highways when finding the shortest path using the new Routing page of Preferences.
+
+  * Bug Fixes:
+  * Commas and periods are now ignored when looking up street names.
+  * Fixes bug that caused some address look ups to take an extremely long time.
+  * Fixes some routing bugs that would cause Roadnav to crash or hang.
+
+  * Misc:
+  * Roadnav now requires wxWidgets 2.6.2 or higher.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Sat, 15 Jul 2006 15:00:00 -0500
+
+roadnav (0.13-1) unstable; urgency=low
+
+  * Enhancements:
+  * Calculating routes should now be faster (switched to A-Star shortest path algorithm).
+  * Map data between the starting and ending point of a route is now automatically downloaded.
+  * Waypoints can now be added by right clicking on the map, or left clicking for 2 seconds.
+  * Waypoints can now be hidden by right clicking on the waypoint.
+  * Multiple street labels/markers are now shown when a road covers more than 1/6th of the screen.
+  * GPS window redone to show more information.
+  * Address lookups should be much faster now.
+  * Smarter handling of the "(Alt)" suffix.
+
+  * Bug Fixes:
+  * Fixes potential shortest path hang.
+  * Compass in GPS window no longer flickers when redrawn.
+  * Fixes some print scaling problems.
+  * GPS window should be resizable again under GTK and other platforms that don't let miniframes be resized.
+  * GPS and What's Nearby window now adhere to active theme.
+  * Switches from deprecated http://geonames.usgs.gov/geonames/stategaz/ files to http://geonames.usgs.gov/docs/stategaz/ GNIS files.
+  * Misc waypoints dialog usability fixes.
+  * Fixes 16bpp compatibility problem under Linux.
+
+  * Developer Visible Changes:
+  * LIBROADNAV_CHECK_VERSION(x,y) macro now checks to ensure the correct version of LibRoadnav is present.
+  * Adds LibRoadnavDebug logging functions.
+
+  * Misc:
+  * Roadnav now checks during compiling if the correct version of LibRoadnav is present.
+  * If a map download partially fails, only one error message box should be generated per county now.
+  * Adds m_bVisible element to MapMarker, which can completely hide a marker.
+  * The location dialog now differentiates between addresses not being available due to maps not being downloaded, invalid city/state combinations, and invalid street addresses.
+  * Recent performance improvements require changes to Roadnav's internal file formats. As such, all maps must be downloaded again and recompiled. This process can now optionally occur automatically - on the first run after upgrading, users will be asked if they wish to automatically download the maps they previously had again or if they wish to start fresh.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Thu, 1 Jun 2006 15:00:00 -0500
+
+roadnav (0.12-1) unstable; urgency=low
+
+  * Enhancements:
+  * Adds support for speed controlled zooming - as the GPS speed increases, the map is zoomed out. Cutoff speeds can be adjusted from the General Page of Preferences.
+
+  * Bug Fixes:
+  * 16bpp color depth incompatibility resolved.
+  * Roadnav now automatically reconnects to the gpsd server if the connection is lost.
+  * Sleep/standby/hibernation should be handled properly now.
+  * Address parser now automatically abbreviates North/South/East/West/Northeast/Southeast/Southwest/Northwest.
+  * Fixes compass orientation.
+
+  * Misc:
+  * GPS heading is now ignored when the reported speed is less than 5 mph.
+  * TIGER/Line search path updated to:
+  * http://www2.census.gov/geo/tiger/tiger2005fe/
+  * http://www2.census.gov/geo/tiger/tiger2005se/
+  * http://www2.census.gov/geo/tiger/tiger2006fe/
+  * http://www2.census.gov/geo/tiger/tiger2006se/
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Mon, 2 Jan 2006 15:00:00 -0500
+
+roadnav (0.11-1) unstable; urgency=low
+
+  * Bug Fixes:
+  * The North/South/East/West prefix/suffix on streets is now parsed from the TIGER/Line data.
+  * Fixes serious bug in coordinate look up function.
+  * Fixes bug that would cause gpsd errors to crash Roadnav.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Thu, 1 Dec 2005 15:00:00 -0500
+
+roadnav (0.10-1) unstable; urgency=low
+
+  * Enhancements:
+  * Adds LCDproc support as secondary output device.
+  * FreeBSD serial support
+  * Sun OSes serial support
+  * Holding the left mouse button down for more than two seconds over the map control is now equivalent to right clicking.
+  * Waypoint icons are now reduced in size when zoomed out.
+  * Counties that have already been downloaded are now shown in a different color in the Download Maps dialog.
+  * Roadnav's core functionality has been moved to a separate LGPL'ed library, LibRoadnav.
+  * The screen is now recentered when the GPS position approaches the edge of the screen rather than when it actually goes off the screen. It also takes the heading into account when repositioning the screen.
+  * Compass appearance redone, reenabled in default skins.
+  * GPS marker style can now be changed from the GPS page of Preferences.
+  * Edit theme dialog now lets users change font sizes, when features are visible, line widths, etc.
+  * Adds "Clear Cache" and "Clear Map Data" buttons to preferences.
+
+  * Bug Fixes:
+  * Fixes bug that would cause Roadnav to crash under OS X once the GPS coordinates started changing.
+  * Roadnav now correctly identifies the serial ports under OS X.
+  * Fixes sunrise/sunset calculation incompatibility with wxWidgets 2.6.2.
+  * Fixes Preferences GPS page incompatibility with wxWidgets 2.6.2.
+  * Fixes arrow key behavior when north is not pointing up.
+  * Fixes What's Nearby sorting under wxMac.
+  * Double clicking an item in the What's Nearby dialog now centers the map on that landmark.
+  * Adds Freedesktop compatible menu entry.
+  * Fixes menu layout under OS X.
+  * Fixes a bug that would sometimes cause Roadnav to hang the first time it was started under Win32.
+
+  * Developer Visible Changes:
+  * Adds simulated GPS support. Not compiled in by default.
+  * Theme class merged with MapDetailSettings to produce MapAppearanceSettings class.
+  * ThemeColorsDialog renamed to more accurate EditThemeDialog.
+
+  * Misc:
+  * TIGER/Line root updated to http://www2.census.gov/geo/tiger/tiger2004se/
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Thu, 1 Dec 2005 15:00:00 -0500
+
+roadnav (0.9-1) unstable; urgency=low
+
+  * Enhancements:
+  * Adds Unicode support.
+  * Adds 3D view.
+  * Adds .deb, .rpm, and .dmg packaging.
+  * Assorted performance tweaks.
+  * Adds gpsd support (requires gpsd library).
+  * It's now possible to download a county by right clicking on the county
+    on the map.
+  * Adds Preferences button to default skins.
+
+  * Bug Fixes:
+  * Downloading multiple counties of data now only results in one progress
+    dialog.
+  * Disallows invalid combinations of 3D mode, aerial overlay, and rotated
+    maps.
+  * Fixes to make Roadnav wxMac compatible.
+  * Progress dialogs are no longer closeable.
+  * Map is now automatically redrawn after downloading map data.
+  * Roadnav no longer hangs if live directions are on and the GPS 
+    coordinates are greater than 0.1 miles from a road.
+  * What's Nearby now shows POIs even if they aren't currently visible 
+    on the map.
+  * Fixes address look up bug.
+  * Fixes bug that would allow the map to be recentered during the drawing 
+    process, resulting in misaligned text and lines.
+  * Directions are now represented correctly in the "Heading" box.
+  * No longer necessary to ./autogen.sh on certain platforms (e.g. Fedora
+    Core). 
+    ./configure should work everywhere now.
+  * Text typed on the on-screen keyboard no longer overwrites the existing
+    text (only happened on a few platforms).
+  * The What's Nearby and Directions window can now be resized under GTK.
+  * Autoconf/automake fixes.
+  * Assorted other bug fixes.
+
+  * Misc:
+  * Roadnav now requires wxWidgets 2.6.1 or higher.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Sat, 20 Aug 2005 15:00:00 -0400
+
+roadnav (0.8-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Richard L. Lynch <rllynch@users.sourceforge.net>  Sat, 25 Jun 2005 23:23:01 -0400
+

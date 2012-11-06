@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Gnome Connection Manager
+Comment=A simple ssh connection manager for gnome
+GenericName=Connection Manager
+Exec=gnome-connection-manager
+Terminal=false
+Type=Application
+Icon=gnome-connection-manager
+Categories=GTK;GNOME;Network;

@@ -1,0 +1,14 @@
+Source: davexplorer
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.8.3
+Homepage: http://www.davexplorer.org
+
+Package: davexplorer
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common
+Description: WebDAV client
+ DAV Explorer is a WebDAV, DeltaV and ACL client application
+ that uses the WebDAV, DeltaV and ACL protocols.

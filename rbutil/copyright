@@ -1,0 +1,55 @@
+This work was packaged for Debian by
+
+    Loïc Minier <lool@dooz.org> on Sat, 05 Jun 2010 14:57:00 +0200
+
+It was downloaded from:
+
+    http://download.rockbox.org/rbutil/source/
+
+Copyright:
+    Copyright 2007-2008 Angius Fabrizio
+    Copyright 2001-2003 Christophe Devine
+    Copyright 2006-2009 Dave Chapman
+    Copyright 2007-2010 Dominik Riebeling
+    Copyright 2007-2010 Dominik Wenger
+    Copyright 1996 Eugene Roshal
+    Copyright 2000 Far Group
+    Copyright 2003 Jan Kiszka
+    Copyright 2007 Joe Roback
+    Copyright 2007 Jun Yamishiro
+    Copyright 2005 Linus Nielsen Feltzing
+    Copyright 2010 Marcin Bukat
+    Copyright 2009 Maurus Cuelenaere
+    Copyright 2007 Pavel Kriz
+    Copyright 2002-2007 PeerSec Networks
+    Copyright 2005 Tom Thornhill
+    Copyright 2009 Tomer Shalev
+
+For a full list of contributors, see docs/CREDITS.
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>
+
+On Debian systems, the complete text of the GNU General
+Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Loïc Minier <lool@dooz.org>
+
+you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.

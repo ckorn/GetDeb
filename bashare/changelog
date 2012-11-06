@@ -1,0 +1,250 @@
+bashare (0.5.0-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 11:16:12 +0100
+
+bashare (0.5.0-1~getdeb1) karmic; urgency=low
+
+  * Upload to getdeb (LP: #370386)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 Nov 2009 23:03:18 +0100
+
+bashare (0.5.0-1) karmic; urgency=low
+
+  * new stable release
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sat, 16 Nov 2009 14:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * translation updated
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sat, 14 Nov 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * other minor gui modification to fit translations
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Tue, 10 Nov 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * minor gui modification to fit translations
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Tue, 10 Nov 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * Release Candidate
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Mon, 09 Nov 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * -
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sat, 31 Oct 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * -
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sat, 31 Oct 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * -
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Fri, 30 Oct 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * Fixed UPNP dialog
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Mon, 28 Sep 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * reverted changements of 0.4.972
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Wed, 26 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * only a test, I disabled FRic showing to check an issue on gambas 2.0.0 and hardy.
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Wed, 26 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * a nicer FRic, pretty similar to a notification
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Wed, 26 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * a Gambas bug workaround added
+  * corrected a crash issue when opening ports with upnp
+  * About form updated
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 23 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + some GUI improvement for receiving
+  * + now UPNP open port for receiving
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 23 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * some security other controls
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 23 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * THIS IS A 0.5.0-BETA VERSION
+  * more controls on file receiving
+  * a popup when you receive file
+  * new translations:
+  * ES and GL aabilio - http://linfox.es
+  * DE Christoph Zeiler
+  * English is the default language
+  * solved a bug on band preference when in LAN
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 23 Aug 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * THIS IS A 0.5.0-ALPHA VERSION!
+  * honour band setting if >1000
+  * preliminary support to file receiving
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 12 Jul 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * * gtk/qt indipendent
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Fri, 03 Jul 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * a nicer icon, thanks to sentinella86
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Mon, 01 Jun 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * some correction to avoid problems on non-http request
+  * statusbar for log messages
+  * if miniupnp is not installed, sugget to install it in Setting Form
+  * detect if there is a new version
+  * buttons for visit BaShare website and bug tracker in about form
+  * band limit is 2MB/s now
+  * corrected a typo
+  * Initial Spanish and BR Port. translation
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Thu, 21 May 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * New release version
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Fri, 01 May 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + now it works with upnpc instead upnpc-static
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Thu, 30 Apr 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + now you can insert IP manually if an error occurs
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Thu, 30 Apr 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + Now you can use BaShare in LAN
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Wed, 29 Apr 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + now settings are retrieved correctly
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Fri, 06 Mar 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + save settings
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Fri, 06 Mar 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + solved bug #4: no "%20" in client file name
+  * + solved bug #5: always correcty dispay "%20" in url textbox
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Fri, 20 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + now the program can be closed :)
+  * + 1 left click on trayicon open Main Form
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Wed, 18 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + splash (retrive ip in splash form) feat #9
+  * + trayicon and menu feat #4
+  * + windows centered in screen
+  * + spaces in file name replaced by "%20" bug #3
+  * + revisited Main Form menu
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Wed, 18 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + open Main Form first, then retrive IP (via Timer sub)
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Tue, 17 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + click on URL box or on copy-to-clipboard button selects URL string
+  * + the icon is correctly in Applications/Net now
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Tue, 17 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + change FileChooser --> OpenDialog for better interaction with the user: feat #1
+  * drop related dependence
+  * + copy into clipboard button: feat #8
+  * + progressbar to 0 when upload stopped: feat #2
+  * + message and icon when upload ends with success
+  * + URL textbox ReadOnly: feat #7
+  * + disable controls when unused
+  * BUG fix
+  * #1 upload stops with error after changing Net settings
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Tue, 17 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * + depends from gb.gtk gb.gtk.ext
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 15 Feb 2009 12:00:00 +0000
+
+bashare (0.4.996-1) unstable; urgency=low
+
+  * initial release
+
+ -- Guido Iodice (guiodic) <guido.iodice@gmail.com>  Sun, 15 Feb 2009 12:00:00 +0000
+

@@ -1,0 +1,3 @@
+version=3
+http://www.webilder.org/download.html \
+    (?:.*/)?downloads/Webilder-([\d.]+)\.tar\.gz

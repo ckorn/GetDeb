@@ -1,0 +1,132 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+
+CFLAGS = -Wall -g
+LDFLAGS = -Wl,-z,defs
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+CXXFLAGS = $(CFLAGS)
+
+builddir:
+	mkdir builddir
+
+config.h: CMakeLists.txt builddir
+	dh_testdir
+	(cd builddir && cmake ..)
+	cd src/gui ; CONFIG="-debug +release" qmake
+
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+build-stamp: builddir config.h
+	dh_testdir
+
+	(cd builddir && $(MAKE))
+
+	$(MAKE) -C src/gui
+
+	# Upstream provides nearly-useless man pages.  If
+	# you want to use them, uncomment these and comment
+	# the docbook-to-man lines out.
+	#cp doc/synergys.man synergys.1
+	#cp doc/synergyc.man synergyc.1
+
+	# Use the man pages provided by a Debian user.
+	docbook-to-man debian/synergys.sgml > synergys.1
+	docbook-to-man debian/synergyc.sgml > synergyc.1
+
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+
+	rm -f build-stamp 
+	rm -rf builddir bin lib
+	rm -f synergys.1 synergyc.1 config.h
+
+	find . -name \*.pyc -delete
+
+	[ ! -f Makefile ] || $(MAKE) clean
+
+	rm -f CMakeCache.txt Makefile cmake_install.cmake config.h bin/synergy src/gui/ui_*
+	rm -rf src/gui/tmp
+	find . -name cmake_install.cmake -type f -delete
+	find . -name Makefile -type f -delete
+	find . -name "*.o" -type f -delete
+	find . -name CMakeFiles -type d -exec rm -rf {} \; || true
+
+	dh_clean 
+
+test: build-stamp
+	bin/unittests --gtest_color=no
+	# Disabled; seems to segfault often.
+	#bin/integtests --gtest_color=no
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	cp bin/synergyc bin/synergys bin/synergy $(CURDIR)/debian/synergy/usr/bin
+	cp res/synergy.desktop $(CURDIR)/debian/synergy/usr/share/applications
+	cp debian/synergy.xpm $(CURDIR)/debian/synergy/usr/share/pixmaps
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install test
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs ChangeLog
+	dh_installdocs
+	dh_installexamples
+#	dh_install
+#	dh_installmenu
+#	dh_installdebconf	
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+#	dh_installinfo
+	dh_installman synergys.1 synergyc.1
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_perl
+#	dh_python
+#	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install 

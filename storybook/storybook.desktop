@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Storybook 4
+GenericName=Novel Writing Software
+Comment=Open Source Novel Writing Software for Novelists, Authors and Creative Writers.
+Exec=storybook
+Terminal=false
+MultipleArgs=false
+Type=Application
+Icon=storybook.png
+Categories=Office;Education;TextTools;Java
+MimeType=application/vnd.storybook

@@ -1,0 +1,5 @@
+davexplorer (0.91-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #486849)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 23 Nov 2009 00:07:09 +0100

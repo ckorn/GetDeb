@@ -1,0 +1,11 @@
+libiniparse-ruby (1.1.5-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 20:20:21 +0100
+
+libiniparse-ruby (1.1.4-1~getdeb1) lucid; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 22 Jun 2011 21:25:47 +0200

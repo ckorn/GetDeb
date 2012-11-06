@@ -1,0 +1,9 @@
+usr/lib/ADM_plugins6/videoFilters/*qt4.so
+usr/lib/ADM_plugins6/videoFilters/*Qt4.so
+usr/lib/ADM_plugins6/videoEncoders/libADM_ve_x264_qt4.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_glResize.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_glBenchmark.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_rotateGlFrag2.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_sampleGlVertex.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_sampleGlFrag2.so
+usr/lib/ADM_plugins6/scriptEngines/libADM_script_qt.so

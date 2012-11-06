@@ -1,0 +1,24 @@
+Use qmake to build a shared library.
+Thanks to kavulix.
+Bug: LP: #800919
+Index: sphlib-2.1/c/sph.pro
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ sphlib-2.1/c/sph.pro	2011-06-23 12:25:47.921619370 +0200
+@@ -0,0 +1,16 @@
++TEMPLATE = lib
++TARGET = sph
++QMAKE_LFLAGS="-Wl,--as-needed"
++CONFIG += debug_and_release
++HEADERS += sph_blake.h sph_bmw.h sph_cubehash.h sph_echo.h \
++           sph_fugue.h sph_groestl.h sph_hamsi.h sph_haval.h \
++           sph_jh.h sph_keccak.h sph_luffa.h sph_md2.h sph_md4.h \
++           sph_md5.h sph_panama.h sph_radiogatun.h sph_ripemd.h \
++           sph_sha0.h sph_sha1.h sph_sha2.h sph_sha3.h sph_shabal.h \
++           sph_shavite.h sph_simd.h sph_skein.h sph_tiger.h \
++           sph_types.h sph_whirlpool.h
++SOURCES += blake.c bmw.c cubehash.c echo.c fugue.c \
++           groestl.c hamsi.c haval.c jh.c keccak.c \
++           luffa.c md2.c md4.c md5.c panama.c radiogatun.c \
++           ripemd.c sha0.c sha1.c sha2.c sha2big.c shabal.c \
++           shavite.c simd.c skein.c tiger.c whirlpool.c

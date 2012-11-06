@@ -1,0 +1,28 @@
+Source: transmission-remote-gtk
+Section: net
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libcurl4-openssl-dev,
+               libgtk2.0-dev (>= 2.16~),
+               libglib2.0-dev (>= 2.22~),
+               libproxy-dev,
+               libnotify-dev,
+               libunique-dev,
+               libjson-glib-dev,
+               libgeoip-dev,
+               intltool,
+               libappindicator-dev
+Standards-Version: 3.9.3
+Homepage: http://code.google.com/p/transmission-remote-gtk/
+Vcs-Svn: http://transmission-remote-gtk.googlecode.com/svn/trunk/
+Vcs-Browser: http://code.google.com/p/transmission-remote-gtk/source/browse/
+
+Package: transmission-remote-gtk
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Remotely manage the Transmission BitTorrent client
+ transmission-remote-gtk is a GTK+ client for remote management of
+ the Transmission BitTorrent client using its HTTP RPC protocol.

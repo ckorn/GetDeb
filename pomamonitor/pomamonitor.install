@@ -1,0 +1,2 @@
+*.sh				usr/share/pomamonitor
+debian/scripts/pomamonitor	usr/bin

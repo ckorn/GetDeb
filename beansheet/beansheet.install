@@ -1,0 +1,3 @@
+*.jar module				usr/share/beansheet
+debian/scripts/beansheet		usr/bin
+debian/beansheet.desktop		usr/share/applications

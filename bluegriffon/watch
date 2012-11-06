@@ -1,0 +1,3 @@
+version=3
+http://bluegriffon.org/pages/Download \
+    (?:.*/)?BlueGriffon-([\d\.]+)-(?:.*)\.tar\.(?:bz2|gz|xz)

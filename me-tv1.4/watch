@@ -1,0 +1,3 @@
+version=3
+https://launchpad.net/me-tv/+download \
+    (?:.*/)?me-tv-([\d\.]+)\.tar\.gz

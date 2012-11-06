@@ -1,0 +1,559 @@
+tvpvrd (4.4.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - Added config scripts to allow ivtv driver to work well with
+      suspend/hibernate function.
+      The ivtv kernel module is not power aware and hence must be
+      unloaded before a power event.
+      This change adds pm-util config scripts which will
+      load/unload the driver properly as well as having the daemon
+      reinitialize the HW when the system is woken up again.
+
+    - Added 'ic' command to allow the adjusting the image parameters
+      (saturation, contrast, hue and brightness) in the video stream.
+      Each card can be individually tuned.
+
+    - Added 'ac' command to allow adjusting of audio controls (bass and
+      treble)
+
+    - Added 'va' command to allow volume adjusting
+
+    - Added settings in config file to adjust image and audio user controls
+      default value (contrast,sat,hue,brightness,treble,bass,volume) The same
+      settings are applied to all installed cards.
+
+    Bugs fixed:
+    - None (no bugs reported or detected)
+
+    Internal changes:
+    - Some spell checking in code comments
+
+    - Updated build environment to use automake 1.12.1 and autoconfig 2.69
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 25 Sep 2012 18:16:10 +0200
+
+tvpvrd (3.3.5-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - The history XML DB now includes human readable version of the start and
+      end times. This makes it easier to use a XSL stylesheets to display the
+      DB directly in browser. Otherwise a timestamp conversion must be
+      carried out in XSL which requires EXSL to be within reason.
+      Unfortunately very few browsers implement EXSL directly so the
+      timestamp would force conversion to HTML via for example 'xsltproc'
+      first.
+    - Added XSL stylesheet to view history directly in editor
+    - Added nice HTML formatting when sending history in mail
+
+    Bugs fixed:
+    - Problem with timeout in the 'rhm' (Mail history command) command due to
+      missing newline.
+
+    Internal changes:
+    - Refactored CSS handling of tables to its own module (listhtml.c/.h)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Mar 2012 15:39:58 +0100
+
+tvpvrd (3.3.4-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - Added check at startup that all specified channels in the
+      station/channel alias file (e.g. xawtv) really exists in the frequency
+      map used. Give a fatal error in case of error.
+    - "List all" now uses the same format for the listing as as "List single"
+      and "List repeat" commands. (This has bother my esthetic side for a
+      long time!)
+
+    Bugs fixed:
+    - None.
+
+    Internal changes:
+    - None.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 20:58:55 +0100
+
+tvpvrd (3.3.3-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - Accept both "exit" and "quit" to quit from shell.
+    - Added list header for 'lh' command, improved list layout.
+    - Adjusted profile settings for tnormal and thigh profiles.
+
+    Bugs fixed:
+    - Fixed a wrong "No recordings" text at end of listing
+      of single recordings in one circumstance
+      (when only one recording exists). 
+
+    Internal changes:
+    - Read startup script before XML database is read.
+    - Adjusted some modules startup order to be able to get
+      log printout even earlier in startup phase.
+    - Add a longer delay (sleep) in startup if the daemon detect
+      it is started at the same time as the server is powered on
+      to allow all fs remote mounts to finish safely before the
+      daemon tries to access the file system.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 13 Nov 2011 13:27:43 +0100
+
+tvpvrd (3.3.2-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+    User visible changes:
+        - Added vpre1 setting in profile to control the preset used in the
+          first pass of a two pass encoding.
+        - Changed drop down in Web-GUI for specifying day from "Today" to
+          "Auto" which better reflects how it actually works. 
+
+    Bugs fixed:
+        - None.
+
+    Internal changes:
+        - None.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 29 Aug 2011 18:58:18 +0200
+
+tvpvrd (3.3.1-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - None 
+
+    Bugs fixed:
+    - AMD64 build issue with warning in printf() format string
+
+    Internal changes:
+    - Added "svntag" utility script to tag releases in build process
+      to avoid typing the long repository name every time
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 13 Aug 2011 12:35:43 +0200
+
+tvpvrd (3.3.0-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - Added "today" as option in dropdown instead of blank
+    - Improved history formatting
+    - To finish the command line both "quit" and "exit" can be used
+    - Web interface empty weekday (meaning today) changed to "today"
+    - Upgraded handling of ffmpeg to a newer version. This means changes
+      in the profile handling of max video rate as well as the h264 naming
+      of the preset files. By default to make it more compatible with various
+      ffmpeg versions the default preset is now empty.
+      This also removes support for older versions of ffmpeg. Stick with
+      v3.2.1 if you are using older versions of ffmpeg.
+
+    Bugs fixed:
+    - None 
+
+    Internal changes:
+    - Added additional error check to catch the case when a remote file server
+      where we store recordings and database is not responding properly
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Aug 2011 18:05:20 +0200
+
+tvpvrd (3.2.1-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+    v3.2.1
+    ------
+    User visible changes:
+        - None 
+
+    Bugs fixed:
+        - Fixed critical segfault crash in shutdown check when
+          the recording queue happened to be empty.
+
+    Internal changes:
+        - None
+
+
+    v3.2.0
+    ------
+    User visible changes:
+        - Added history keeping for last N recordings with
+          commands to view. 
+          Command 'rh' (recorded history)  
+
+    Bugs fixed:
+        - A harmless but un-necessary '/' in filepaths was removed
+
+    Internal changes:
+        - Some minor code cleanup
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Jun 2011 19:03:42 +0200
+
+tvpvrd (3.1.3-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+    v3.1.3
+    ------
+    User visible changes:
+        - None. 
+    
+    Bugs fixed:
+        - None.
+    
+    Internal changes:
+        - Code cleanup to pass cleanly with new gcc 4.6.0 maximum warnings settings.
+          gcc 4.6.0 adds a new warning flag -Wunused-but-set-variable that gave some
+          warnings that needed handling.
+    
+    v3.1.2
+    ------
+    User visible changes:
+        - tvpsh now checks that the server is reachable at
+          startup and quits with error if not.
+        - Added "external_tuner_station" setting in the config file.
+          This will set the tuner input station when external channel
+          switching is used and the input is specified as the tuner
+          input. Used to connect a cable box with a set
+          frequency/channel to the TV-card and changing channels with
+          an IR sender on the cable box instead of the tuner in the TV-card.
+        - Improved the manual page on how to handle an
+          external cable box with IR-sender using the external
+          channel switching.
+    
+    Bugs fixed:
+        None.
+    
+    Internal changes:
+        - Fixed compiler warning about set but not used variable
+        - Code security review. Make sure all string concatenation
+          is explicitely limited.
+        - Add full path for killproc/startproc in the SysV init.d scripts 
+        - Updated OpenSuSE RPM Spec file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 30 May 2011 21:58:17 +0200
+
+tvpvrd (3.1.1-1~getdeb1) maverick; urgency=low
+
+  * New upstream version
+    v3.1.1
+    ------
+    User visible changes:
+        None.
+
+    Bugs fixed:
+        - Build without warning on amd64 architecture
+          (complaints about "%03d" format when "%03zu" should be used)
+        - Gracefully handle running tvpsh when no tvpvrd.conf can be found
+
+    Internal changes:
+        None.
+    v3.1.0
+    ------
+    User visible changes:
+    - Added a real client shell 'tvpsh' program to interact with the
+      daemon.
+      This have features like full command line editing and  history
+      (using GNU readline).
+      By allowing the shell to be used as an interactive login shell
+      (adding it to /etc/shells) it is possible to create a user that
+      will use this shell as the login shell.
+      It is then possible to login to the server, for example using ssh,
+      as this user to interact with the daemon.
+    - Don't give an error on empty command. Just ignore it.
+    - Remove the prompt from the pure TCP/IP command since it causes all
+      kinds of issues with the real client added to 3.1.0
+    - 'lr' command was split into 'lr' and 'lu' command to make the
+      commands orthogonal
+
+    Bugs fixed:
+    - Don't write the prompt after each timeout in the client interface
+    - Added documentation for "mlg" (mail log) command
+    - Fixed a bug introduced in 3.0.6 whereby a cancelling request for an
+      ongoing recording via the Web interface was not recognized
+
+    Internal changes:
+    - Refactored logging routines to it's own source file
+    - Each command output now ends with a "\r\n" sequence to indicated
+      end of command output
+    - Make code compile clean even with -Wshadow flag added. The code now
+      compiles clean with gcc flags:
+      -pedantic -Wall -Werror -Wpointer-arith -Wstrict-prototypes
+      -Wextra -Wshadow -Wformat=2
+
+    v3.0.6
+    ------
+    User visible changes:
+    - Added use_mobile flag in the config file to allow user
+      to determine if the modified phone WEB-UI should be used
+      or not when connection from a phone is detected.
+    - Added string "(tvpvrd) " as prompt for the TCP/IP interface
+    - If a transcoding is forced to stop by user then keep the
+      original MP2 file and directory in the vtmp directory.
+    - Add "mlg - mail log file" command which will send the
+      entire logfile in a mail to the predefined system
+      mail address. The logfile is sent as an attachment.
+
+    Bugs fixed:
+    - Fixed CSS issue that caused the link in the last two
+      menu items not to be active
+    - Fixed bug where the wrong min shutdown time was
+      read from the config file (copy&paste error)
+
+    Internal changes:
+    - Changed command format in URL string
+    - Logger now eliminates repeated messages and just prints
+      how many of the same message
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 26 Mar 2011 21:47:42 +0100
+
+tvpvrd (3.0.5-1~getdeb1) maverick; urgency=low
+
+  * New upstream version
+    User visible changes:
+    - Optimized Web-GUI minute list to better match start
+      and end times often used
+    - Added 'lm' command. Will mail the list of recordings
+      (in both plain and HTML format) to the email address
+      specified to receive mails.
+      The format of the HTML mail is controlled by CSS
+      styles and adjustable in the config file in the "format" section
+    - Added hyper-linked transcoding profiles in the Web-interface to
+      allow easy viewing of profile details
+    - Added 'lmr' command - Send repeat and single recordings in
+      HTML format in a mail
+    - Added 'lr' command list repeating and single recordings
+      in text format
+    - Updated menu structure in Web-interface to include the
+      mailing commands 'lm' and 'lmr'
+
+    Bugs fixed:
+    - Fixed a bug whereby if a recurring recording had the new
+      type Tue-Fri (7) it gave an error when the server was restarted
+      and claimed it was an unrecognized recurring type. This was a 
+      false alarm since the range check had not been updated to
+      reflect this new type.
+
+    Internal changes:
+    - None.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Mar 2011 14:41:50 +0100
+
+tvpvrd (3.0.4-1~getdeb1) maverick; urgency=low
+
+  * New upstream version
+    User visible changes:
+       - Minor change in menu for WEB-interface (Added "Disk space")
+       - Some minor tweaks in the layout for mobile phone
+         version of the web interface
+       - Added repeat type: n=Tue-Fri
+
+    Internal changes:
+       - Updated file headers.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Mar 2011 11:08:31 +0100
+
+tvpvrd (3.0.3-1~getdeb1) maverick; urgency=low
+
+  * New upstream version
+    v3.0.3
+    ------
+    User visible changes:
+        - Added 'df' = 'Display used and total disk space' command
+        - Added information on disk usage in transcoding notification mail
+        (updated mail templates)
+
+    Internal changes:
+        - None.
+
+
+    v3.0.2
+    ------
+    User visible changes:
+        - Fix an issue introduced in the last minute for 3.0.0 which could
+        wrongly find colliding
+          recordings even when multiple video cards where available. Lessons
+          learned: Never ,never
+          do a "simple" change before a release ...
+
+    Internal changes:
+        - Added some more verbose debug output with time stamp translation.
+        - Added a sanity check when reading the database to detect errors in
+        time specification.
+
+
+    v3.0.1
+    ------
+    User visible changes:
+        - Fix some minor build issues specific to a x86_64 platform
+
+    Internal changes:
+        - None.
+
+    v3.0.0
+    ------
+    User visible changes:
+        - Update XML DB format.
+            -- Removed the specific "video" field. This is not necessary.
+            Better to assign new
+               video cards when the DB file is read at startup. This will
+               also make it possible
+               to dynamically add and remove video cards while still
+               maintaining an optimal
+               recording schedule (as far as permitted).
+            -- Bumped DB version to "2". Any existing version "1" DBs will be
+            automatically updated.
+
+        - Added new flag for configure "--enable-stacktrace"
+          This will help with remote end user debugging (if ever needed) when
+          they cannot create
+          a core dump.  If enabled a stacktrace will be stored in a file,
+          '/tmp/tvpvrd_stack.crash'
+          (hardcoded name), when the daemon receives a SIGSEGV or SIGBUS
+          signal. Added "-rdynamic"
+          as a compiler switch to force better stack traces. This is not as
+          complete as a full
+          gdb trace (with all threads) but better than nothing if this is
+          ever needed (knock on
+          wood...)
+
+        - Update of the CSS for mobile browsing for better readability
+
+        - Added "af - Add recordings from file" command to make it possible
+        to prepare a list
+          of recordings offline
+
+        - Added configuration option "use_repeat_rec_basedir" to have all
+        repeated
+          recordings for the same show stored under a subdirectory named
+          after the
+          base-name of the recording (i.e. without all the date and repeat
+          information).
+
+        - Don't ship a 'tvpvrd.conf' file directly. Instead ship two template
+        files for the config
+          'tvpvrd.conf.simplified.template' and 'tvpvrd.conf.full.template'
+          which will force the user
+          to at least once check them and rename them to 'tvpvrd.conf'. The
+          two template files
+          corresponds to a simplified config file relying mostly on the
+          default values and one
+          template file with all the settings spelled out. This has been done
+          as a feeble try to
+          simplify the setup.
+
+        - Added template based mail setup for shutdown and transcoding mails
+
+        - Added a basic SMTP mail sending library to allow for more advanced
+        formatting of mails
+
+        - Updated INSTALL file with some information on extra steps needed
+          if building directly from the repository
+
+        - Added --with-libpcre-prefix option to "configure" to allow user to
+        specify
+          alternative locations for PCRE library
+
+        - Added possibility to run a user supplied startup script and added a
+          suitable template for such a script.
+
+        - Added option to send HTML formatted mail notifications. The 
+        templates
+          for the mails are stored in the configuration directory.
+
+        - Added option to use specified SMTP server directly to send mail
+
+        - Updated template for hook scripts
+
+        - Added post transcoding script hook and associated template in
+        config
+
+        - Changed structure of config file so that all mail related settings
+        are in
+          its own section.
+
+        - Fixed a memory leak when CSS file was not modified when using the
+        WEB-interface
+
+    Internal changes:
+        - The login cookie used now restricts itself to only use characters
+        from
+          0-9A-Xa-z_ to allow the cookies to pass through some over
+          restricting
+          WebProxys which filters out cookies with character outside this
+          range.
+          In addition the cookie header no longer adds the "Version"
+          attribute
+          since, again, some proxys will filter out the cookie if this
+          attribute
+          is included. (This is most likely user visible as well)
+
+        - Fix a possible buffer overwrite when converting cookies to URL
+        character
+          escaped encoding
+
+        - Some further code refactoring to reduce size of 'tvpvrsrv.c'
+
+        - Improved the usability of the key/val replacement routines
+
+        - Cleaned up header inclusions
+
+        - Some internal code restructuring to reduce the size of the main
+        tpvrsrv.c
+          file by creating vcard.c/vcard.h and some other move of code to
+          more appropriate
+          places.
+
+        - Some include header streamlining
+
+        - Update network code to use the more modern getaddrinfo() system
+        call
+
+        - Reworked he build system so that iniparser is now an archive
+        library
+
+        - Added base64 and quoted-printable functionality since that is
+        needed for mails
+
+        - Added SIGABRT handler to get some notifications when using glibs
+        memory
+          checking routines MALLOC_CHECK
+
+        - Changed configuration so ininparser is built as a proper library.
+        Makes the
+          build scripts slightly cleaner.
+
+        - Refactored all xstr* routines to there own source module
+
+
+    v2.3.0 [r377]
+    -------------
+    User visible changes:
+        - Added automatic shutdown in the server itself by making use of the
+        BIOS
+          real time clock. This will power off the daemon until its time for
+          next
+          recording.
+
+        - Give WEB user the login page instead of not found if he/she is not
+        logged
+          in and gives an invalid command.
+
+        - Slightly increase the quality in the default profiles with
+        increased bitrate.
+          (disk space i cheap)
+
+        - Add some missing information in the list settings command
+
+        - Updated documentation (man pages) to reflect changes
+
+    Internal changes:
+        - Internal code restructuring and refactoring in preparation for more
+        advanced
+          mail processing as well as easier maintenance
+        - Increase allowed bps range for video ffmpeg encoding
+        - Reduce complexity of the utils module
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 16:05:16 +0100
+
+tvpvrd (2.2.0-1~getdeb1) maverick; urgency=low
+
+  * Initial release (LP: #670825)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 20 Dec 2010 18:29:01 +0100

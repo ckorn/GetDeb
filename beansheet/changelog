@@ -1,0 +1,5 @@
+beansheet (1.0.5-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #486538)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Nov 2009 14:30:33 +0100

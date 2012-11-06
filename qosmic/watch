@@ -1,0 +1,5 @@
+version=3
+opts=\
+downloadurlmangle=s|.*[?]name=(.*?)&.*|http://qosmic.googlecode.com/files/$1|,\
+filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
+http://code.google.com/p/qosmic/downloads/detail[?]name=qosmic-([\d\.]+).tar.bz2&.*

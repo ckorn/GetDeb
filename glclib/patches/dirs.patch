@@ -1,0 +1,16 @@
+Change default directories for packaging.
+Index: glclib-2.1.0/glc_lib/GLC_lib.pro
+===================================================================
+--- glclib-2.1.0.orig/glc_lib/GLC_lib.pro	2011-03-12 17:18:18.034130002 +0100
++++ glclib-2.1.0/glc_lib/GLC_lib.pro	2011-03-12 17:18:27.164129993 +0100
+@@ -419,8 +419,8 @@
+ # Linux and macx install configuration
+ unix {
+     # Location of HEADERS and library
+-    LIB_DIR = /usr/local/lib
+-    INCLUDE_DIR = /usr/local/include
++    LIB_DIR = /usr/lib
++    INCLUDE_DIR = /usr/include
+     # Adds a -P to preserve link
+ 	QMAKE_COPY_FILE = $${QMAKE_COPY_FILE} -P
+ 	include.path = $${INCLUDE_DIR}/GLC_lib

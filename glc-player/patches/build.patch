@@ -1,0 +1,23 @@
+Set library name and include path properly.
+Index: glc-player-2.3.0/glc_player.pro
+===================================================================
+--- glc-player-2.3.0.orig/glc_player.pro	2011-07-01 19:57:53.223565341 +0200
++++ glc-player-2.3.0/glc_player.pro	2011-07-01 19:59:50.453565347 +0200
+@@ -22,8 +22,8 @@
+ }
+ 
+ unix { 
+-    LIBS += -lGLC_lib
+-    INCLUDEPATH += "/usr/local/include/GLC_lib"
++    LIBS += -lglc
++    INCLUDEPATH += "/usr/include/GLC_lib"
+ }
+ 
+ TRANSLATIONS = ressources/glc_player_fr.ts
+@@ -139,4 +139,4 @@
+     QMAKE_INFO_PLIST = ressources/Info_mac.plist
+     TARGET = glc_player
+ }
+-    
+\ No newline at end of file
++    

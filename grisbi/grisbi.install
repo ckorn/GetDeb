@@ -1,0 +1,6 @@
+debian/grisbi.applications       usr/share/application-registry
+debian/grisbi.xpm                usr/share/pixmaps/grisbi
+usr/bin/grisbi
+usr/share/applications
+usr/share/man
+usr/lib/grisbi/*.so

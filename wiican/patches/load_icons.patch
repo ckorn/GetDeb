@@ -1,0 +1,68 @@
+Do not fail if icons cannot be loaded.
+Index: wiican-0.3.4/wiican/defs.py.in
+===================================================================
+--- wiican-0.3.4.orig/wiican/defs.py.in	2012-08-17 16:55:50.000000000 +0200
++++ wiican-0.3.4/wiican/defs.py.in	2012-08-17 17:18:28.813143183 +0200
+@@ -25,8 +25,6 @@
+ from xdg.IconTheme import getIconPath
+ 
+ BASE_DATA_DIR = '@PREFIX@/share/wiican/'
+-if not os.path.exists(BASE_DATA_DIR):
+-    BASE_DATA_DIR='.'
+ 
+ MAPPINGS_BASE_DIR = os.path.join(BASE_DATA_DIR, 'mappings_base')
+ MAPPINGS_HOME_DIR = os.path.join(xdg_data_home, 'wiican')
+Index: wiican-0.3.4/wiican/ui/editordlg.py
+===================================================================
+--- wiican-0.3.4.orig/wiican/ui/editordlg.py	2012-08-17 16:55:50.000000000 +0200
++++ wiican-0.3.4/wiican/ui/editordlg.py	2012-08-17 17:18:28.813143183 +0200
+@@ -40,9 +40,16 @@
+ # Load icons
+ theme = gtk.icon_theme_get_default()
+ 
+-wiican_on_icon = theme.load_icon('wiican-on', 24, 0)
+-wiican_off_icon = theme.load_icon('wiican-off', 24, 0)
+-wiican_disc3_icon = theme.load_icon('wiican-discover3', 24, 0)
++wiican_on_icon = None
++wiican_off_icon = None
++wiican_disc3_icon = None
++
++try:
++    wiican_on_icon = theme.load_icon('wiican-on', 24, 0)
++    wiican_off_icon = theme.load_icon('wiican-off', 24, 0)
++    wiican_disc3_icon = theme.load_icon('wiican-discover3', 24, 0)
++except:
++    print "Error loading icons"
+ 
+ pref_store = UIPrefStore()
+ 
+Index: wiican-0.3.4/setup.py
+===================================================================
+--- wiican-0.3.4.orig/setup.py	2012-08-17 16:55:50.000000000 +0200
++++ wiican-0.3.4/setup.py	2012-08-17 17:18:28.813143183 +0200
+@@ -20,7 +20,7 @@
+ # Check our python is version 2.6 or higher
+ if python_version[0] >= 2 and python_version[1] >= 6:
+     ## Set file location prefix accordingly
+-    prefix = '/usr/local'
++    prefix = '/usr'
+ 
+ # Get the install prefix if one is specified from the command line
+ for arg in sys.argv:
+Index: wiican-0.3.4/wiican/ui/managerdlg.py
+===================================================================
+--- wiican-0.3.4.orig/wiican/ui/managerdlg.py	2012-08-17 00:10:46.000000000 +0200
++++ wiican-0.3.4/wiican/ui/managerdlg.py	2012-08-17 17:19:26.305141472 +0200
+@@ -36,7 +36,11 @@
+ 
+ # Load icons
+ theme = gtk.icon_theme_get_default()
+-autostart_icon = theme.load_icon('emblem-favorite', 24, 0)
++autostart_icon = None
++try:
++    autostart_icon = theme.load_icon('emblem-favorite', 24, 0)
++except:
++    print "Error loading icons"
+ 
+ class MappingManagerDialog(object):
+     mapping_filter = gtk.FileFilter()

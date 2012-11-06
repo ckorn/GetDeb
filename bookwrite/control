@@ -1,0 +1,16 @@
+Source: bookwrite
+Section: editors
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.2
+Homepage: http://code.google.com/p/bookwrite/
+
+Package: bookwrite
+Architecture: all
+Depends: ${misc:Depends}, ruby, libiconv-ruby, libyaml-ruby, ruby-gnome2
+Description: Software designed to help authors to write their books
+ Bookwrite is a software designed to help authors to write their books. 
+ It provides a full screen editor without any nuisances, that allow 
+ authors to focus completely on their texts. It also provides a few other 
+ features, that will be added for each new version.

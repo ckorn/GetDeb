@@ -1,0 +1,16 @@
+Source: mtac
+Section: math
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 6)
+Standards-Version: 3.8.3
+Homepage: http://mtac.sourceforge.net
+
+Package: mtac
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common
+Description: More than a Calculator
+ MTAC is a powerful, yet small and easy-to-use symbolic math
+ program written in Java. It supports complex numbers,
+ symbolic differentiation, numerical integration, plotting
+ and more.

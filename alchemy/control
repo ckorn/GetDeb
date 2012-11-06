@@ -1,0 +1,20 @@
+Source: alchemy
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), libxi6
+Standards-Version: 3.8.3
+Homepage: http://al.chemy.org/
+
+Package: alchemy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common,
+ fontconfig
+Description: An open drawing project
+ Alchemy is an open drawing project aimed at exploring how we
+ can sketch, draw, and create on computers in new ways. Alchemy
+ isn't software for creating finished artwork, but rather a
+ sketching environment that focuses on the absolute initial
+ stage of the creation process. Experimental in nature, Alchemy
+ lets you brainstorm visually to explore an expanded range of
+ ideas and possibilities in a serendipitous way.

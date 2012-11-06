@@ -1,0 +1,17 @@
+libqtwit (0r69-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 26 Feb 2010 00:06:28 +0100
+
+libqtwit (0r67-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 26 Feb 2010 00:00:42 +0100
+
+libqtwit (0r67-1~getdeb1) jaunty; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 29 Sep 2009 22:51:06 +0200

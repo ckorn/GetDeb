@@ -1,0 +1,15 @@
+Description: Adjust .desktop file to be Freedesktop compliant.
+Origin: Debian
+Forwarded: not-needed
+
+Index: bleachbit-0.7.4/bleachbit.desktop
+===================================================================
+--- bleachbit-0.7.4.orig/bleachbit.desktop	2009-11-10 22:39:33.581078600 +0100
++++ bleachbit-0.7.4/bleachbit.desktop	2009-11-10 22:42:57.329068306 +0100
+@@ -90,6 +90,5 @@
+ Exec=bleachbit
+ Icon=bleachbit
+ Categories=GTK;System;
+-Encoding=UTF-8
+ StartupNotify=true
+ 

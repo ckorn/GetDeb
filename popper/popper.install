@@ -1,0 +1,3 @@
+popper/*				usr/share/popper
+locale/de/LC_MESSAGES/*.mo		usr/share/locale/de/LC_MESSAGES
+applications/popper_config.desktop	usr/share/applications

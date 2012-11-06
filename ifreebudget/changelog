@@ -1,0 +1,123 @@
+ifreebudget (2.0.33-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Create default accounts list
+    Date selector widget update
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 02 Nov 2010 20:59:53 +0100
+
+ifreebudget (2.0.32-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    New transaction dialog
+    Date selector widget
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 12 Sep 2010 00:39:46 +0200
+
+ifreebudget (2.0.31-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Minor ui fixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Aug 2010 19:48:29 +0200
+
+ifreebudget (2.0.30-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    New login dialog
+    password change feature
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 06 Aug 2010 22:15:59 +0200
+
+ifreebudget (2.0.29-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    May 22, 2010 - Release [R2.0.28]
+        Re-work of ofx file import system.
+        Bug fixes
+
+    Jun 12, 2010 - Release [R2.0.29]
+        Configurable icons for categories.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 19:55:31 +0200
+
+ifreebudget (2.0.27-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    - Bug fixes
+    - Rich text editor
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 19 Apr 2010 22:37:23 +0200
+
+ifreebudget (2.0.26-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Mar 2010 23:52:21 +0100
+
+ifreebudget (2.0.25-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 13:01:27 +0100
+
+ifreebudget (2.0.21-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 12:57:35 +0100
+
+ifreebudget (2.0.21-1~getdeb1) karmic; urgency=low
+
+  * New upstream version (LP: #502520)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 03 Jan 2010 16:35:57 +0100
+
+ifreebudget (2.0.20-1~getdeb1) karmic; urgency=low
+
+  * New upstream version (LP: #498392)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Dec 2009 14:05:53 +0100
+
+ifreebudget (2.0.19-1~getdeb1) karmic; urgency=low
+
+  * New upstream version (LP: #493026)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 15 Dec 2009 23:08:14 +0100
+
+ifreebudget (2.0.14-1~getdeb1) jaunty; urgency=low
+
+  * New upstream version.
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 18 Aug 2009 15:50:10 +0200
+
+ifreebudget (2.0.12-1~getdeb1) jaunty; urgency=low
+
+  * New upstream version.
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 06 Aug 2009 21:30:14 +0200
+
+ifreebudget (2.0.5-1~getdeb2) intrepid; urgency=low
+
+  * Dependency problem
+
+ -- Peter van der Does <peter.does@getdeb.net>  Thu, 02 Apr 2009 07:37:10 -0400
+
+ifreebudget (2.0.5-1~getdeb1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Peter van der Does <peter.does@getdeb.net>  Tue, 31 Mar 2009 16:02:16 +0000
+
+ifreebudget (2.0.4-1~getdeb1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Peter van der Does <peter.does@getdeb.net>  Mon, 09 Mar 2009 08:30:14 +0000
+
+ifreebudget (2.0.3-1~getdeb1) intrepid; urgency=low
+
+  * New release
+
+ -- Peter van der Does <peter.does@getdeb.net>  Wed, 21 Jan 2009 19:17:50 -0500
+

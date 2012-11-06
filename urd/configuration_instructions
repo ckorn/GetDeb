@@ -1,0 +1,21 @@
+1. Open this address in a browser: http://127.0.0.1/urd
+2. Click 'Start Installation Wizard'.
+3. All checks here should succeed.
+4. This check should fail: PHP date.timezone set
+	a ) Open /etc/php5/cli/php.ini and /etc/php5/apache2/php.ini  with root privileges (sudo).
+	b ) Change the line ';date.timezone =' to 'date.timezone = "Europe/Berlin"' (or whatever your timezone is)
+        c ) Restart the apache server: sudo service apache2 restart
+	d ) Reload the page.
+5. The main tests on the second page should succeed.
+   If you want the additional features you can install the packages as said on the page.
+6. The default values should be fine here. Only enter the root user and password.
+   (You should have set it when mysql-server has been installed)
+7. Everything should be fine here so go on.
+8. Just fill out the formular on this page.
+    NOTE: The password has to be secure in order to get accepted on the next page.
+    - You can use /usr/share/urd/download/ as download directory.
+9. Go to the sixth page were all tests should pass if you filed out the formular correctly.
+10. Click 'Continue to the usenet server configuration'
+11. Log in with your user information from page five.
+12. There are some settings missing in the configuration:
+13. You have to enable some servers in Admin->Usenet servers first before you can start URDD.

@@ -1,0 +1,13 @@
+Do not exit just because of an unknown option.
+Index: xautoclick-0.30/configure
+===================================================================
+--- xautoclick-0.30.orig/configure	2011-08-30 15:25:57.318506781 +0200
++++ xautoclick-0.30/configure	2011-08-30 15:26:15.508506788 +0200
+@@ -229,7 +229,6 @@
+         ;;
+     *)
+         echo "unknown option: $ac_option"
+-        exit 1
+         ;;
+     esac
+ done

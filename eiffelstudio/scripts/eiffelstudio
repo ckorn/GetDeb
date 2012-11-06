@@ -1,0 +1,10 @@
+#!/bin/sh
+export ISE_EIFFEL=/usr/lib/eiffelstudio
+if [ "$(uname -m)" = "x86_64" ] ; then
+	export ISE_PLATFORM=linux-x86-64
+else
+	export ISE_PLATFORM=linux-x86
+fi
+export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
+
+estudio

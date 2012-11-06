@@ -1,0 +1,3 @@
+version=3
+opts="dversionmangle=s/.*\+([\d]+)/$1/" \
+http://sf.net/blurayauthor/mkudfiso-svn-checkout-([\d]+)\.tar\.gz

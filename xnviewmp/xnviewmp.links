@@ -1,0 +1,7 @@
+usr/share/xnviewmp/AddOn		usr/lib/xnviewmp/AddOn
+usr/share/xnviewmp/language		usr/lib/xnviewmp/language
+usr/share/xnviewmp/UI			usr/lib/xnviewmp/UI
+usr/share/xnviewmp/country.txt		usr/lib/xnviewmp/country.txt
+usr/share/xnviewmp/qt.conf		usr/lib/xnviewmp/qt.conf
+usr/share/xnviewmp/xnview.png		usr/lib/xnviewmp/xnview.png
+usr/share/xnviewmp/xnview_2.png		usr/lib/xnviewmp/xnview_2.png

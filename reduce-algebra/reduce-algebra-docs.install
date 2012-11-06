@@ -1,0 +1,4 @@
+doc/misc/sl.pdf					usr/share/reduce-algebra/reduce.doc
+doc/util/r38.pdf				usr/share/reduce-algebra/reduce.doc
+cslbuild/built/csl/reduce.doc/*.html		usr/share/reduce-algebra/reduce.doc
+cslbuild/built/csl/reduce.doc/*.gif		usr/share/reduce-algebra/reduce.doc

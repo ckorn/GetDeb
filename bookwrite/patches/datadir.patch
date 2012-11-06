@@ -1,0 +1,14 @@
+Set the installation directory correctly.
+Index: bookwrite-0.9.1/bookwrite.rb
+===================================================================
+--- bookwrite-0.9.1.orig/bookwrite.rb	2009-09-27 12:55:24.661470026 +0200
++++ bookwrite-0.9.1/bookwrite.rb	2009-09-27 12:55:31.188470027 +0200
+@@ -50,7 +50,7 @@
+ 	DIR = '.'
+ 	HOME = ENV['HOME'] || ENV['HOMEDRIVE'] + ENV['HOMEPATH'] || ENV['USERPROFILE'] 
+ else
+-	DIR = '/usr/local/share/bookwrite'
++	DIR = '/usr/share/bookwrite'
+ 	HOME = ENV['HOME']
+ end
+ 

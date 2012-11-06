@@ -1,0 +1,41 @@
+debian/init.d/ncid2ncid		etc/init.d
+debian/init.d/ncidd		etc/init.d
+debian/init.d/ncidsip		etc/init.d
+debian/init.d/sip2ncid		etc/init.d
+debian/init.d/yac2ncid		etc/init.d
+etc/logrotate.d
+etc/ncid/ncid2ncid.conf
+etc/ncid/ncidd.alias
+etc/ncid/ncidd.blacklist
+etc/ncid/ncidd.conf
+etc/ncid/ncidrotate.conf
+etc/ncid/ncidsip.conf
+etc/ncid/sip2ncid.conf
+etc/ncid/yac2ncid.conf
+usr/bin/cidalias
+usr/bin/cidcall
+usr/bin/cidupdate
+usr/bin/ncid2ncid
+usr/bin/yac2ncid
+usr/sbin/ncidd
+usr/sbin/ncidsip
+usr/sbin/sip2ncid
+usr/share/man/man1/cidalias.1
+usr/share/man/man1/cidcall.1
+usr/share/man/man1/cidupdate.1
+usr/share/man/man1/ncid2ncid.1
+usr/share/man/man1/ncidrotate.1
+usr/share/man/man1/ncidtools.1
+usr/share/man/man1/yac2ncid.1
+usr/share/man/man5/ncid2ncid.conf.5
+usr/share/man/man5/ncidd.alias.5
+usr/share/man/man5/ncidd.blacklist.5
+usr/share/man/man5/ncidd.conf.5
+usr/share/man/man5/ncidrotate.conf.5
+usr/share/man/man5/ncidsip.conf.5
+usr/share/man/man5/sip2ncid.conf.5
+usr/share/man/man5/yac2ncid.conf.5
+usr/share/man/man8/ncidd.8
+usr/share/man/man8/ncidsip.8
+usr/share/man/man8/sip2ncid.8
+usr/share/ncid/ncidrotate

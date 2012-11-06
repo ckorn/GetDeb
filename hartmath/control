@@ -1,0 +1,14 @@
+Source: hartmath
+Section: math
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.8.3
+Homepage: http://sourceforge.net/projects/hartmath/
+
+Package: hartmath
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common,
+ fontconfig
+Description: Symbolic math Java applet
+ HartMath is a cross platform experimental computer algebra system.

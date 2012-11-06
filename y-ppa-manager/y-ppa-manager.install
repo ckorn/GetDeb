@@ -1,0 +1,13 @@
+fix_gpg_badsig				usr/bin
+install_package.py			usr/bin
+list_search_ppas			usr/bin
+ppastats.py				usr/bin
+ppa-upgrade				usr/bin
+update-ppa				usr/bin
+y-ppa-cmd				usr/bin
+y-ppa-indicator				usr/bin
+y-ppa-manager				usr/bin
+y-sudo					usr/bin
+debian/y-ppa-manager.desktop		usr/share/applications
+share/icons				usr/share/y-ppa-manager
+share/desktopfiles			usr/share/y-ppa-manager

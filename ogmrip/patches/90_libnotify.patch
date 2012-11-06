@@ -1,0 +1,17 @@
+http://ogmrip.svn.sourceforge.net/viewvc/ogmrip?view=revision
+Index: ogmrip-0.13.8/configure.in
+===================================================================
+--- ogmrip-0.13.8.orig/configure.in	2012-06-14 13:12:11.000000000 +0200
++++ ogmrip-0.13.8/configure.in	2012-06-14 13:51:31.405791711 +0200
+@@ -398,6 +398,11 @@
+ 
+ if test x"$have_libnotify_support" = x"yes"; then
+   AC_DEFINE(HAVE_LIBNOTIFY_SUPPORT, 1, [Define to 1 if libnotify is supported.])
++
++  PKG_CHECK_MODULES(GCONF, [libnotify >= 0.7], [have_libnotify_0_7=yes], [have_libnotify_0_7=no])
++  if test x"$have_libnotify_0_7" = x"yes"; then
++    AC_DEFINE(HAVE_LIBNOTIFY_0_7, 1, [Define to 1 if libnotify 0.7  is supported.])
++  fi
+ fi
+ 
+ AC_SUBST(LIBNOTIFY_CFLAGS)

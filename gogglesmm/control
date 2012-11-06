@@ -1,0 +1,21 @@
+Source: gogglesmm
+Section: sound
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Homepage: http://code.google.com/p/gogglesmm/
+Build-Depends: debhelper (>= 7), libdbus-1-dev, libtag1-dev,
+    libfox-1.6-dev, libxrandr-dev, libxine-dev,
+    libsqlite3-dev (>= 3.4), libbz2-dev,
+    libdbus-glib-1-dev, libcurl4-openssl-dev,
+    imagemagick
+Standards-Version: 3.9.3
+
+Package: gogglesmm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Goggles Music Manager
+ Goggles Music Manager is a music collection manager and player that 
+ automatically categorizes your music files based on genre, artist, 
+ album, and song. It supports gapless playback and features easy tag 
+ editing.
+

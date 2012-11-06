@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=gnormalize
+Comment=A ripper, an encoder and an audio converter
+GenericName=Normalizer and CD ripping utility
+Exec=gnormalize
+Icon=gnormalize
+Terminal=false
+Type=Application
+Categories=Application;Audio;AudioVideo;AudioVideoEditing;

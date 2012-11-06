@@ -1,0 +1,28 @@
+Source: luminance
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               libqt4-dev,
+               libtiff4-dev,
+               libopenexr-dev,
+               libexiv2-dev,
+               libgsl0-dev,
+               libfftw3-dev,
+               qt4-dev-tools,
+               libqt4-core,
+               libqtwebkit-dev,
+               libraw-dev,
+               libpng12-dev
+Standards-Version: 3.9.3
+Homepage: http://qtpfsgui.sourceforge.net/
+
+Package: luminance
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Tool for HDR imaging
+ Luminance is a graphical user interface
+ (based on trolltech's Qt4) that provides a
+ workflow for HDR imaging.

@@ -1,0 +1,23 @@
+libclastfm (0.5-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 May 2012 18:30:43 +0200
+
+libclastfm (0.5~0.4+git20120317-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Mar 2012 11:45:15 +0100
+
+libclastfm (0.4-1~getdeb2~oneiric) oneiric; urgency=low
+
+  * Rebuild for oneiric.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Oct 2011 21:11:04 +0200
+
+libclastfm (0.4-1~getdeb1) lucid; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Mar 2011 19:08:02 +0100

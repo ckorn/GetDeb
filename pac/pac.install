@@ -1,0 +1,4 @@
+lib res pac			usr/share/pac
+debian/scripts/pac		usr/bin
+res/pac.desktop			usr/share/applications
+debian/pac.png			usr/share/pixmaps

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=DAV Explorer
+Exec=/usr/bin/davexplorer
+Terminal=false
+Type=Application
+Categories=Application;Network;

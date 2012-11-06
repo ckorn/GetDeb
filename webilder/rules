@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+  
+DEB_TAR_SRCDIR			:= webilder-0.7.1
+#DEB_AUTO_CLEANUP_RCS		:= yes
+DEB_PYTHON_SYSTEM 		:= pysupport
+
+#include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+#include /usr/share/cdbs/1/class/gnome.mk
+#include /usr/share/cdbs/1/class/kde.mk
+include /usr/share/cdbs/1/class/python-distutils.mk
+#include /usr/share/cdbs/1/rules/tarball.mk
+
+# DEB_PYTHON_BUILD_ARGS = --build-base="$(DEB_BUILDDIR)/specific-build-dir"
+#DEB_PYTHON_INSTALL_ARGS_ALL += --with-kde
+
+build/webilder::
+	cp ChangeLog changelog
+
+clean::
+	rm -f servers/GNOME_WebilderApplet.server changelog src/Webilder.egg-info/SOURCES.txt \
+	 src/Webilder.egg-info/dependency_links.txt src/Webilder.egg-info/PKG-INFO \
+	 src/Webilder.egg-info/top_level.txt src/Webilder.egg-info/entry_points.txt

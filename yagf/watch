@@ -1,0 +1,3 @@
+version=3
+http://symmetrica.net/cuneiform-linux/yagf-en.html \
+  (?:.*/)?yagf-([\d.]+)(?:-Source)?\.tar\.gz

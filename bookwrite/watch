@@ -1,0 +1,5 @@
+version=3
+opts=\
+downloadurlmangle=s|.*[?]name=(.*?)&.*|http://bookwrite.googlecode.com/files/$1|,\
+filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
+http://code.google.com/p/bookwrite/downloads/detail[?]name=bookwrite-(.*)\.tar\.gz&.*

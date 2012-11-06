@@ -1,0 +1,58 @@
+New version.
+Index: xvst-2.4.1/resources/services/tv3/tv3.js
+===================================================================
+--- xvst-2.4.1.orig/resources/services/tv3/tv3.js	2011-08-28 18:21:14.093422280 +0200
++++ xvst-2.4.1/resources/services/tv3/tv3.js	2011-08-28 18:21:33.673207287 +0200
+@@ -3,7 +3,7 @@
+ * This file is part of xVideoServiceThief,
+ * an open-source cross-platform Video service download
+ *
+-* Copyright (C) 2007 - 2009 Xesc & Technology
++* Copyright (C) 2007 - 2011 Xesc & Technology
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+@@ -25,9 +25,9 @@
+ 
+ function RegistVideoService()
+ {
+-	this.version = "1.0.0";
++	this.version = "1.1.0";
+ 	this.minVersion = "2.2.0";
+-	this.author = "Xesc & Technology 2009";
++	this.author = "Xesc & Technology 2011";
+ 	this.website = "http://www.tv3.cat/";
+ 	this.ID = "tv3.cat";
+ 	this.caption = "TV3 a la Carta";
+@@ -37,19 +37,23 @@
+ 
+ function getVideoInformation(url)
+ {
+-	const URL_XML = "http://www.tv3.cat/su/tvc/tvcConditionalAccess.jsp?ID=%1&QUALITY=H&FORMAT=FLV&RP=www.tv3.cat";
++	const URL_INFO_XML  = "http://www.tv3.cat/pvideo/FLV_bbd_dadesItem.jsp?idint=%1";
++	const URL_VIDEO_XML = "http://www.tv3.cat/su/tvc/tvcConditionalAccess.jsp?ID=%1&QUALITY=H&FORMAT=%2";
+ 	// init result
+ 	var result = new VideoDefinition();
+ 	// get the video id
+-	var videoId = copyBetween(url, "videos/", "/");
++	var videoId = copyBetween(url + "/", "videos/", "/");
+ 	// create http class
+ 	var http = new Http();
+-	// download xml
+-	var ll = strFormat(URL_XML, videoId);
+-	var xml = http.downloadWebpage(strFormat(URL_XML, videoId));
+-	// get the video information
+-	result.title = copyBetween(xml, '<media videoname="', '/');
+-	result.URL = "rtmp:" + copyBetween(xml, "rtmp:", "?");
++	// download info xml
++	var xml_info = http.downloadWebpage(strFormat(URL_INFO_XML, videoId), false);
++	// set video information
++	var format = copyBetween(xml_info, "<format>", "</format>");
++	result.title = copyBetween(xml_info, "<title>", "</title>") + " - " + copyBetween(xml_info, "<promo>", "</promo>");
++	// download video xml
++	var xml_url = http.downloadWebpage(strFormat(URL_VIDEO_XML, videoId, format));
++	// set video url
++	result.URL = "rtmp:" + copyBetween(xml_url, "rtmp:", "</media>");
+ 	// return the video information
+ 	return result;
+ }

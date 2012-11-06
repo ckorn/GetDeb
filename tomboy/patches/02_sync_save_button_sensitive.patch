@@ -1,0 +1,24 @@
+Description: Ensure the save button is sensitive when setting up WebSync. 
+This is a work around, but gets us back to where we were in Natty.  Upstream 
+relies on the entries changing to set the button sensitive, however we 
+pre-populate the fields with ubuntuone settings.  If these don't get changed 
+the user can not save the settings even after successful auth.  Ideally it
+should become sensitive when Auth.IsAccessToken becomes true.  
+Author: Ken VanDine <ken.vandine@ubuntu.com>
+Bug-Ubuntu: https://launchpad.net/bugs/845321
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=473332
+Forwarded: not-needed
+
+=== modified file 'Tomboy/PreferencesDialog.cs'
+--- old/Tomboy/PreferencesDialog.cs	2011-10-14 14:18:09 +0000
++++ new/Tomboy/PreferencesDialog.cs	2011-10-14 14:18:45 +0000
+@@ -1113,7 +1113,7 @@
+ 					syncAddinPrefsContainer.PackStart (syncAddinPrefsWidget, false, false, 0);
+ 
+ 					resetSyncAddinButton.Sensitive = false;
+-					saveSyncAddinButton.Sensitive = false;
++					saveSyncAddinButton.Sensitive = true;
+ 				}
+ 			} else {
+ 				selectedSyncAddin = null;
+

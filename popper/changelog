@@ -1,0 +1,72 @@
+popper (0.31.3-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    - same code than 0.30
+    - build for Ubuntu 12.04
+    - icon renewed
+    - dependency for 'python-indicate' added to Debian control file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Apr 2012 18:54:25 +0200
+
+popper (0.30.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 10 Nov 2011 19:07:43 +0100
+
+popper (0.29.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Jun 2011 19:28:49 +0200
+
+popper (0.28.6-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #780018)
+    - Bug 752387: Popper doesn't show provider ... -> fixed
+    - Bug 735071: no new mails leads to error
+      (Fix 2: Folderstatus 'OK'? EACH DATA in Folderdata not None?)
+    - PPA created
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 May 2011 20:26:44 +0200
+
+popper (0.27-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    - continue if server does not deliver
+      a message or msg
+    - Bug 735071: no new mails leads to error
+                 (Fix: Folderstatus 'OK'? Folderdata not None?)
+    - remove desktop display on headline click in message menu
+    - context menu on right-click in desktop display with
+      internal (clear, exit, list, check) or user commands
+      (same as configured by user for message menu)
+    - replace newline ('\n') by space (' ') in subjects and real_sender
+    - internal command 'clear' destroys desktop display
+    - another correction of degenerated email headers ( ?==? to ?= =? )
+    - changed default charset for decoding to 'latin-1' instead of 'utf-8'
+    - set user_path/user_folder to os.path.expanduser(...
+    - re-added missing popper_message.glade
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 06 Apr 2011 18:52:56 +0200
+
+popper (0.26-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    - multiple accounts
+    - correct degenerated email headers
+    - delete obsolete entries in Keyring when
+      Configurator is closed
+    - desktop display
+    - don't show removed emails again when 'remove_single_email' clicked
+    - accept email header keys (From, Date, Subject) also in lower case
+    - format_header for Subject rewritten (to solve the ä-Problem)
+    - bubble, sound, speach are now independent from each other
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Mar 2011 12:01:48 +0100
+
+popper (0.25-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #713833)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Feb 2011 01:13:34 +0100

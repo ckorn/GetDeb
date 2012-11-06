@@ -1,0 +1,47 @@
+symon (2.85-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+   - lib/diskname rewrite -- return possible disknames for Linux and FreeBSD
+     based on a number of predefined path patterns
+
+   - platform/Linux allow /dev/mapper disknames (Edho Arief)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Apr 2012 22:13:33 +0200
+
+symon (2.84-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+       - platform/Linux/disk probes now handles '/' in arguments (Bostjan
+       Skufca)
+
+       - platform/FreeBSD/disk probes now allow args not in '/dev' (Edho
+       Arief), and support diskname by ufs name, ufs id, gpt id.
+
+       - platform/FreeBSD/sm_mem.c: sysctl call could overwrite swap count
+       (Edho Arief)
+
+       - platform/NetBSD/Makefile.inc: update linker flags for finding librrd
+       in /usr/pkg
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 20:51:15 +0100
+
+symon (2.83-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+   - Added flukso probe
+
+   - platform/OpenBSD/sm_io.c updated to support uids (Stuart Henderson)
+
+   - platform/Linux/sm_df.c checks if /etc/mtab could be openend
+     (Lars Kotthoff)
+
+   - platform/Linux: Support diskname by id, label, path or uuid for smart,
+     io and df probes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 May 2011 21:45:54 +0200
+
+symon (2.82-1~getdeb1) maverick; urgency=low
+
+  * Initial release (LP: #625814)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 24 Dec 2010 01:00:22 +0100

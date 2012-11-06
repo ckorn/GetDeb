@@ -1,0 +1,19 @@
+Source: pomamonitor
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), quilt
+Standards-Version: 3.8.3
+Homepage: http://code.google.com/p/pomamonitor/
+
+Package: pomamonitor
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, fping,
+ libnotify-bin, bind9-host, zenity, dash (>= 0.5)
+Description: A simple host downtime alert for GNOME/KDE desktop
+ pomamonitor (Poor's Man Monitor) is a shell script that rely's on
+ notify-send command to send alerts to Gnome/KDE/XFCE desktop user
+ when a host or several hosts that was previously set to be monitored
+ are offline. Pretty useful for small system administrators that
+ doesn't need Nagios/Zabbix for monitoring such a small environment.
+ Obviously, it supports IPv6: we are in 2009!

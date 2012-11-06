@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Include java-wrappers
+. /usr/lib/java-wrappers/java-wrappers.sh
+
+JAVA_CLASSPATH="/usr/lib/jni:/usr/lib/java"
+VUZE_BIN="/usr/bin/vuze"
+
+find_java_runtime openjdk sunmin5
+
+find_jars Azureus2 log4j-1.2 commons-cli swt
+
+if [ ! -x $VUZE_BIN ]; then
+	UI=-Dforce.ui=az2
+fi
+
+run_java -Dazureus.install.path="$HOME/.azureus" $UI \
+    org.gudy.azureus2.ui.common.Main "$@"

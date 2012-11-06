@@ -1,0 +1,5 @@
+enrollix (0.1.0-1~getdeb1) precise; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Jul 2012 18:19:27 +0200

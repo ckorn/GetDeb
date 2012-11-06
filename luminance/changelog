@@ -1,0 +1,138 @@
+luminance (2.3.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 06 Jul 2012 19:16:01 +0200
+
+luminance (2.2.1-1~getdeb2~precise) precise; urgency=low
+
+  * Rebuild for precise.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 12 Apr 2012 20:32:47 +0200
+
+luminance (2.2.1-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    * NEW: splitted executable luminance-hdr-cli for commandline mode
+    * NEW: Windows Installer optionally registers file associations
+    * Aborting Batch HDR creation and batch tonemapping is now possible
+    * Speed improvements in Reinhard05
+    * Language change without restarting application
+    * Corrected detection of exif rotation
+    * Windows: TIFF support now works correctly (at all)
+    * Windows: fixed some align_image_stack and temp dir problems
+    * Development: new module system 
+    * Development: fixed help install and i18n path under Linux 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Mar 2012 12:34:32 +0100
+
+luminance (2.2.0-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version (LP: #886976)
+    Changes 2.2.0
+    * NEW: BatchHDR tool
+    * NEW: LDRs can be saved as 16 bit Tiffs
+    * NEW: Samsung(s) RAW file support
+    * NEW: Speed improvement due to OpenMP 
+    * More speed improvements: tone-mapping (Mantiuk 06/08, Fattal, Reinhard)
+    * NEW: image viewers with improved crop/selection tool
+    * Improvement and optimized level and gamma control (new histogram)
+    * Improved UI: Tonemapping Panel, Preference Dialog and Mainwindow
+    * Revert HDR merge algorithms to Qtpfsgui 1.8.12
+    * Supporting better portrait HDRs
+    * Windows: fix for file name and temp directory problems
+    * Better support for filesystem character encoding
+    * Library updates: Qt, LibRaw 0.14.5, exiv2
+    * Updated translations (Italian, German, Romanian)
+    * Development: changing build system from qmake to cmake
+    * Development: update Windows building scripts
+    * Development: migration from SVN to Git
+    * Development: support for FreeBSD9
+
+    TODO: redesign UI of Preview Panel and HdrWizard (possibly using QWizard)
+    TODO: improve preset store/load (maybe use XML files?)
+
+    Changes 2.1.0
+    * Merge MainWindow and TonemappingWindow
+    * MainWindow works using the SDI concept, instead then MDI (multiple
+    MainWindow can be open at the same time and work in parallel)
+    * Tabbed images (HDR or LDR) inside the MainWindow
+    * New preview widget (PreviewPanel)
+    * Improved HDR creation Wizard (images can be removed and added)
+    * Improved Batch Tonemapping: the final size of the tonemapping is read
+    from file, allowing custom output size
+    * New I/O engine (runs in a separated thread and shows the status during
+    the operation)
+    * Improved RAW conversion
+    * Improved Help
+
+    Changes 2.0.2
+    * New BatchTM Processing engine
+    * Sorted leaks in freeing memory from pfs::Channel
+
+    Changes 2.0.2-pre1
+    * Smaller memory footprint during the TM process
+    * [Windows only] improved responsiveness of the UI during the Mantiuk TMO
+    * [Windows only] update of the library in the package with the latest
+    release (not yet completed)
+    * LibRAW is now in charge to convert RAW files, removing the dependency
+    from dcraw as an external tool (Thanks to Franco Comida)
+    * [Mac only] Luminance HDR 2.0.2 works on Mac OS X 10.5.X (64 bits
+    version for Snow Leopard also planned, but not yet released)
+    * [Mac only] Better UI in Mac OS X (looks cleaner and closer to the Mac
+    style)
+    * Huge memory leak during the HDR creation process has been sorted out.
+    The overall procedure is now much faster and uses less memory (much less
+    memory)
+    * Huge clean of compilation errors and wrong memory allocation/release
+    (Thanks to Elizabeth Oldham)
+    * [Linux only] Multithread support is active again and improved
+    * [FreeBSD] Cleaner compilation (Thanks to Joao Rocha Braga Filho,
+    Maintainer of Luminance HDR for FreeBSD)
+
+    TODO: Redesign of the UI
+
+    Changes 2.0.1
+    * Proper colorspace conversion in Mantiuk06
+    * OpenMP support disabled
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 26 Feb 2012 14:02:37 +0100
+
+luminance (2.0.0-1~getdeb2~natty) natty; urgency=low
+
+  * Rebuild for natty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 17 Apr 2011 10:49:46 +0200
+
+luminance (2.0.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Changes 2.0.0
+    * Project renamed from 'Qtpfsgui' to 'LuminanceHDR'
+    * Cropping of HDR images
+    * Tonemapping selections
+    * Threads manager
+    * Added mantiuk08
+    * New help browser and new help content
+    TODO: Check Flickr (and other external links) (actually mapped to 'luminance')
+    TODO: Repaint Icons in TMO dialog
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 22:39:47 +0200
+
+luminance (2.0~svn691-1~getdeb4) lucid; urgency=low
+
+  * Rebuild for lucid.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 07 Apr 2010 14:02:17 +0200
+
+luminance (2.0~svn691-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 14:01:48 +0100
+
+luminance (2.0~svn691-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #505467)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 10 Jan 2010 14:07:46 +0100

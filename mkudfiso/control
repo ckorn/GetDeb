@@ -1,0 +1,24 @@
+Source: mkudfiso
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev
+Standards-Version: 3.9.1
+Homepage: http://blurayauthor.sourceforge.net
+Vcs-Browser: http://git.debian.org/?p=collab-maint/mkudfiso.git;a=summary
+
+Package: mkudfiso
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Blu-ray video authoring tools
+ mkudfiso (Blu-ray authoring tool set), a utility to
+ create ISO images containing a pure UDF filesystem,
+ intended primarily for Blu-ray authoring but can be
+ used for any purpose (including CD-R and DVD-R).
+ This tool can be used to author individual files
+ larger than 4GB, which is a requirement for Blu-ray
+ and other high-definition formats.
+ .
+ THIS TOOL DOES NOT GENERATE ISO 9660 STRUCTURES.
+ Use "mkisofs" if you want ISO 9660, Joliet, Rock Ridge,
+ etc. in the structure. This is a pure UDF generator.

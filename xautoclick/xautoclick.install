@@ -1,0 +1,6 @@
+gautoclick2			usr/bin
+aautoclick			usr/bin
+cautoclick			usr/bin
+fltkautoclick			usr/bin
+qt4autoclick			usr/bin
+debian/xautoclick.desktop	usr/share/applications

@@ -1,0 +1,34 @@
+Source: upp
+Section: devel
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), quilt, libsdl1.2-dev, libssl-dev,
+ libicu-dev, tcl8.5-dev, libpng12-dev, libgtk2.0-dev, zlib1g-dev,
+ libx11-dev, x11proto-core-dev, libxft-dev, libxrender-dev,
+ mesa-common-dev, libglu1-mesa-dev, libfontconfig1-dev, libpq-dev,
+ libmysqlclient-dev, libfreetype6-dev, libcups2-dev
+Standards-Version: 3.8.3
+Homepage: http://www.ultimatepp.org
+
+Package: upp
+Architecture: any
+Suggests: gdb
+Depends: ${shlibs:Depends}, ${misc:Depends}, upp-data (= ${source:Version}), g++
+Description: C++ library for cross-platform development with IDE
+ Ultimate++ is a radical and innovative GUI toolkit whose number one priority
+ is programmer productivity. C++ is a great programming language but
+ C++ programmers are sometimes hampered by the lack of effective libraries.
+ U++ libraries enable genuine productivity gains with shorter development
+ times and greatly reduced application source code size.
+
+Package: upp-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: C++ library for cross-platform development with IDE (data files)
+ Ultimate++ is a radical and innovative GUI toolkit whose number one priority
+ is programmer productivity. C++ is a great programming language but
+ C++ programmers are sometimes hampered by the lack of effective libraries.
+ U++ libraries enable genuine productivity gains with shorter development
+ times and greatly reduced application source code size.
+ .
+ (This package contains the data files)

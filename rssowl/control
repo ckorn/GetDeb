@@ -1,0 +1,40 @@
+Source: rssowl
+Section: news
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 9),
+               unzip,
+               libxrender1,
+               libxext6,
+               libfontconfig1,
+               libnss3-1d,
+               libgconf2-4,
+               libgnomevfs2-0,
+               libnotify4,
+               chrpath,
+               libhunspell-1.3-0,
+               libstartup-notification0,
+               libasound2,
+               liborbit2,
+               libgtk2.0-0,
+               libatk1.0-0,
+               libpango1.0-0,
+               libcairo2,
+               libxt6
+Standards-Version: 3.9.3
+Homepage: http://www.rssowl.org/
+
+Package: rssowl
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${perl:Depends},
+         openjdk-6-jre | sun-java6-jre | java-common | java2-common,
+         fontconfig,
+         libhunspell-1.3-0,
+         libgnome2-0,
+         libgnomeui-0
+Description: Newsreader for RSS, RDF and Atom Newsfeeds
+ RSSOwl is a newsreader for RSS, RDF and
+ Atom Newsfeeds written in Java using GTK+
+ through SWT as its graphic library.

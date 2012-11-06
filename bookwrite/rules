@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean bookwrite bookwrite.png
+
+override_dh_auto_install:
+	cp bookwrite.rb bookwrite
+	cp src/icon_24.png bookwrite.png

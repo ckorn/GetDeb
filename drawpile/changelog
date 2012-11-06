@@ -1,0 +1,24 @@
+drawpile (0.6.0-1~getdeb4) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 14:58:48 +0100
+
+drawpile (0.6.0-1~getdeb3) karmic; urgency=low
+
+  * Upload to karmic.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 15 Dec 2009 21:24:55 +0100
+
+drawpile (0.6.0-1~getdeb2) jaunty; urgency=low
+
+  * Added a menu icon.
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 21 Apr 2009 18:26:33 +0200
+
+drawpile (0.6.0-1~getdeb1) jaunty; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <c_korn@gmx.de>  Mon, 20 Apr 2009 23:40:12 +0200
+

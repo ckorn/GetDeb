@@ -1,0 +1,15 @@
+This package was debianized by João Pinto <joao.pinto@getdeb.net> on
+Sun, 13 May 2007 13:41:10 +0000.
+
+It was downloaded from http://www.flock.com/download/
+
+Upstream Author: Flock.com
+
+Copyright: Flock.com
+
+License:
+Files that are original or modified versions of Mozilla source code are distributed under the MPL.
+
+For files that are original creations of and for Flock Inc., Flock Inc. is the sole copyright holder, and these files are distributed to the public under the GPL (GNU Public License) (http://www.gnu.org/copyleft/gpl.html) version 2. 
+
+The Flock browser binaries are distributed with an End User License similar to the one that covers Firefox.

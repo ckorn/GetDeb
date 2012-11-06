@@ -1,0 +1,12 @@
+#!/usr/bin/python
+import sys, os, wx
+sys.path.append(os.path.join('/', 'usr', 'share', 'gitso'))
+
+from Gitso import ConnectionWindow, ArgsParser
+
+if __name__ == "__main__":
+	app = wx.PySimpleApp()
+	args = ArgsParser.ArgsParser()
+	ConnectionWindow.ConnectionWindow(None, -1, "Gitso", args.GetPaths())
+	app.MainLoop()
+	del app

@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/pooka
+LANG=C java -jar pooka_080505.jar

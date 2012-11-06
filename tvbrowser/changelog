@@ -1,0 +1,25 @@
+tvbrowser (3.2.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 01 Nov 2012 21:08:21 +0100
+
+tvbrowser (3.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 14 Sep 2012 18:39:41 +0200
+
+tvbrowser (3.1-1~getdeb1) precise; urgency=low
+
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Jul 2012 19:58:13 +0200
+
+tvbrowser (3.1-1~precise) precise; urgency=low
+
+  * New upstream
+
+ -- Goran Vidovic (gogo) <trebelnik2@gmail.com>  Fri, 15 Apr 2012 10:48:51 +0200
+
+

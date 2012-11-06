@@ -1,0 +1,80 @@
+.\" This manpage is copyright (C) 2005-2009 Christine Spang.
+.\" This manpage is copyright (C) 2011 Alice Ferrazzi.
+.\"
+.\" This is free software; you may redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2,
+.\" or (at your option) any later version.
+.\"
+.\" This is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with the Debian GNU/Linux system; if not, write to the Free
+.\" Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+.\" 02111-1307 USA
+.\"
+.TH nautilus-actions-config-tool 1 "2011-11-05" "Debian GNU/Linux"
+.SH NAME
+nautilus-actions-config-tool \- configure programs to launch from the nautilus file manager
+.SH SYNOPSIS
+nautilus-actions-config-tool
+.SH OPTIONS
+.SS Help Options
+.TP
+\-?, \fB\-\-help\fR
+Show help options
+.TP
+\-?, \fB\-\-help\-all\fR
+Show all help options
+.TP
+\-?, \fB\-\-help\-misc\fR
+.SS Application Options
+.TP
+\-?, \fB\-\-non\-unique\fR
+Set it to run multiple instances of the program [unique]
+.TP
+\-?, \fB\-\-version\fR
+Output the version number, and exit gracefully [no]
+.TP
+\-?, \fB\-\-display=DISPLAY\fR
+X display to use
+
+.SH DESCRIPTION
+.B nautilus-actions
+is an extension for the nautilus file manager which allows
+arbitrary programs to be launched through the nautilus context menu.
+.PP
+Each time you right-click on one or more files in nautilus, or
+any part of the background of the currently opened folder,
+.B nautilus-actions
+will look at its configured actions to see if a program has been
+setup for this selection. If so, it will add an item to the menu
+that allows you to execute the program on the selected files.
+.PP
+Configurations are stored in GConf for speed and integration with
+other GNOME programs. Configs can be easily shared using the
+"Import/Export assistant" menu items in the Tools menu of
+.B nautilus-actions-config-tool
+/.
+.SH BUGS
+Please report bugs in
+.B nautilus-actions
+to <submit@bugs.debian.org>. The current bug list may be viewed at
+<http://bugs.debian.org/nautilus-actions>.
+.SH AUTHOR
+.B nautilus-actions
+was written by Rodrigo Moya <rodrigo@novell.com>, Frederic Ruaudel
+<grumz@grumz.net>, Pierre Wieser <pwieser@trychlos.org>, and contributors.
+.PP
+This manual page was written by Christine Spang <christine@debian.org> and Alice Ferrazzi <aliceinwire@gnumerica.org>,
+for the Debian project (but may be used by others).
+.SH LICENSING
+Both the
+.B nautilus-actions
+source code and this man page are licensed under the GNU General Public
+License.
+.SH SEE ALSO
+.IR  nautilus(1), nautilus-actions-new(1), nautilus-actions-print(1)

@@ -1,0 +1,23 @@
+Source: nautilus-flickr-uploader
+Section: perl
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.usebox.net/jjm/nautilus-flickr-uploader/
+
+Package: nautilus-flickr-uploader
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libyaml-perl,
+         libgtk2-perl,
+         libgtk2-gladexml-perl,
+         perlmagick,
+         libxml-simple-perl,
+         libgtk2-ex-simple-list-perl,
+         libnet-dbus-glib-perl,
+         libnet-oauth-perl
+Description: Nautilus Flickr Uploader
+ This is a simple GUI to upload pics to Flickr from
+ Nautilus file browser (should work with KDE though).

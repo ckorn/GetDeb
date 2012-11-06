@@ -1,0 +1,3 @@
+debian/init.d/ncid-speak		etc/init.d
+usr/share/man/man1/ncid-speak.1
+usr/share/ncid/ncid-speak

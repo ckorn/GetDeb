@@ -1,0 +1,318 @@
+unetbootin (581-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Aug 2012 16:32:08 +0200
+
+unetbootin (578-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Jul 2012 19:35:49 +0200
+
+unetbootin (577-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 11 Jul 2012 19:56:38 +0200
+
+unetbootin (575-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 02 May 2012 18:50:15 +0200
+
+unetbootin (568-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 21:46:40 +0200
+
+unetbootin (565-3) unstable; urgency=low
+
+  * Reverted to debhelper 7.
+
+ -- Muneeb Shaikh <iammuneeb@gmail.com>  Sun, 11 Dec 2011 04:56:56 +0530
+
+unetbootin (565-2) unstable; urgency=low
+
+  * debian/control
+    - Bumped debhelper version to 8 which should be required in future.
+    - Removed version from libqt4-dev as it doesn't need a version
+      to be specified.
+ 
+
+ -- Muneeb Shaikh <iammuneeb@gmail.com>  Sat, 10 Dec 2011 11:57:36 +0530
+
+unetbootin (565-1) unstable; urgency=low
+
+  * New upstream release.
+  * Menu entry with icon. (Closes: 635013)
+  * Only build for architectures where syslinux is available. (Closes: 649102)
+  * debian/copyright
+    - Updated headers to machine readable format and updated license.
+  
+ -- Muneeb Shaikh <iammuneeb@gmail.com>  Wed, 07 Dec 2011 22:57:36 +0530
+
+unetbootin (563-2) unstable; urgency=low
+
+  * debian/source/format
+    - Switched to 3.0 (quilt) source format
+
+ -- Muneeb Shaikh <iammuneeb@gmail.com>  Sun, 20 Nov 2011 03:34:50 +0530
+
+unetbootin (563-1) unstable; urgency=low
+
+  * New upstream release.
+  * New Maintainer. (Closes: #621132)  
+
+ -- Muneeb Shaikh <iammuneeb@gmail.com>  Thu, 17 Nov 2011 18:57:02 +0530
+
+unetbootin (555-1) unstable; urgency=low
+
+  * Orphaned the package.
+  * New upstream release.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Sat, 10 Sep 2011 13:16:45 +0300
+
+unetbootin (549-2) unstable; urgency=low
+
+  * debian/control:
+    - Added 'extlinux' to Recommends. (Closes: #635012)
+    - Bumped Standards-Version to 3.9.2, no changes needed.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Fri, 22 Jul 2011 20:01:10 +0300
+
+unetbootin (549-1) unstable; urgency=low
+
+  * New upstream release.
+    - A .desktop file has an icon now. (Closes: #573729)
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Wed, 06 Apr 2011 21:21:13 +0300
+
+unetbootin (502-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Bumped Standards-Version to 3.9.1, no changes needed.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Sun, 13 Feb 2011 11:52:04 +0200
+
+unetbootin (471-2) unstable; urgency=medium
+
+  * debian/control:
+    - Added 'mtools' to Depends of unetbootin. (Closes: #602193)
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Wed, 03 Nov 2010 18:56:22 +0200
+
+unetbootin (490-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Wed, 29 Sep 2010 18:52:33 +0300
+
+unetbootin (471-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Sun, 13 Jun 2010 21:30:22 +0300
+
+unetbootin (442-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Thu, 13 May 2010 10:55:58 +0300
+
+unetbootin (429-1) unstable; urgency=low
+
+  * New upstream release. 
+  * debian/control:
+    - Bumped Standards-Version to 3.8.4, no changes needed.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Thu, 15 Apr 2010 20:13:52 +0300
+
+unetbootin (408-1) unstable; urgency=low
+
+  * New upstream release.
+    - Added an option to download Debian hd-media kernel and initrd.
+      (Closes: #563738)
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Sun, 14 Feb 2010 09:16:41 +0200
+
+unetbootin (377-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Tue, 10 Nov 2009 08:51:36 +0200
+
+unetbootin (372-1) unstable; urgency=low
+
+  * New upstream release, includes:
+    - Force sync before reboot. (Closes: #533832)
+  * debian/control:
+    - Bumped Standards-Version to 3.8.3, no changes needed.
+    - Updated my mail address.
+    - Removed 'DM-Upload-Allowed' field, it's not needed anymore.
+
+ -- Eugene V. Lyubimkin <jackyf@debian.org>  Sun, 27 Sep 2009 14:48:46 +0300
+
+unetbootin (356-1) unstable; urgency=low
+
+  * New upstream release, some changes:
+    - Added a graceful check for out of space errors (Closes: #531574).
+    - Added translations:
+      - Arabic
+      - pt_BR
+      - Czech
+      - Greek
+      - Chinese (traditional)
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sat, 20 Jun 2009 11:16:16 +0300
+
+unetbootin (344-1) unstable; urgency=low
+
+  * New upstream release:
+    - Added distributions:
+      - Kiwi Linux
+      - xPUD
+      - SystemRescueCD
+    - Added support for anti-virus software:
+      - Dr.Web AntiVirus
+      - F-Secure Rescue CD
+      - Kaspersky Rescue Disk
+    - Added one more mirror for Parted Magic distribution.
+    - Added translations:
+      - Romanian
+      - Turkish
+      - Spanish
+      - Vietnamese
+      - Catalan
+      - Norwegian Bokmål
+      - Dutch
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Fri, 05 Jun 2009 19:56:59 +0300
+
+unetbootin (323-1) unstable; urgency=low
+
+  * New upstream release:
+    - Added *Ubuntu Jaunty distributions.
+    - Updated German translation.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sat, 02 May 2009 13:53:51 +0300
+
+unetbootin (319-2) unstable; urgency=low
+
+  * debian/control:
+    - Added syslinux to build-depends, set arch to 'any'. (Closes: #519214)
+    - Bump 'Standards-Version' to 3.8.1, no changes needed.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sat, 21 Mar 2009 13:57:58 +0200
+
+unetbootin (319-1) unstable; urgency=low
+
+  * New upstream release:
+    - Added gNewSense, Super Ubuntu and MEPIS to list of supported distros.
+    - Added new download location for Parted Magic utility.
+    - Use right-to-left window layout for right-to-left languages.
+    - Added he_IL (Hebrew) translation.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sun, 08 Mar 2009 10:27:48 +0200
+
+unetbootin (312-2) unstable; urgency=low
+
+  * debian/control:
+    - UNetbootin is useful and installable only on i386 and amd64 architectures.
+  * debian/copyright:
+    - Added word 'Copyright' to the copyright entry of Debian packaging, as
+      suggested by lintian.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Wed, 18 Feb 2009 20:43:29 +0200
+
+unetbootin (312-1) unstable; urgency=low
+
+  * New upstream release:
+    - Use also 'df' command to determine all drives in system.
+    - Handle mount point paths with spaces correctly. (Closes: #513948)
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Thu, 05 Feb 2009 20:29:20 +0200
+
+unetbootin (308-1) unstable; urgency=low
+
+  * New upstream release, some changes:
+    - Sabayon Linux support.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Thu, 29 Jan 2009 10:12:01 +0200
+
+unetbootin (304-2) unstable; urgency=low
+
+  * Upload as requested by ftpmaster to test a DM code change. 
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Fri, 02 Jan 2009 23:24:58 +0200
+
+unetbootin (304-1) unstable; urgency=low
+
+  * New upstream version:
+    - Added download URL for Fedora 10.
+    - Updated download URL for Linux Mint.
+    - Updated Kubuntu, Ubuntu, XUbuntu, Fedora, Linux Mint, OpenSUSE entries.
+    - Added Norwegian Bokmal translation.
+  * debian/watch:
+    - Corrected to not accept non-digit symbols in version.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sat, 20 Dec 2008 15:06:40 +0200
+
+unetbootin (301-2) unstable; urgency=low
+
+  * debian/rules:
+    - Don't try to deal with binary-independent files in binary-arch rule.
+      Fixes FTBFS. (Closes: #508639)
+  * debian/control:
+    - Added '{misc:Depends}' to 'Depends' fields, fixes lintian warning.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sat, 13 Dec 2008 23:10:40 +0200
+
+unetbootin (301-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/unetbootin.install:
+    - Switched to new source patch for .desktop file.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Tue, 11 Nov 2008 23:55:50 +0200
+
+unetbootin (299-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright:
+    - Updated copyright year.
+  * debian/rules:
+    - Added passing dpkg-buildpackage-provided CFLAGS to qmake. This enables
+      handling of 'noopt' in DEB_BUILD_OPTIONS.
+  * debian/dirs:
+    - Split into debian/unetbootin.dirs and debian/unetbootin-translations.dirs.
+  * debian/watch:
+    - Upstream now provides tarballs with version string.
+  * debian/rules:
+    - Stopped passing now unneeded option to qmake. 
+  * debian/unetbootin.{dirs,install}:
+    - Modified to include desktop file.
+  * debian/control:
+    - Project is now maintained at git.debian.org, add Vcs-Git and Vcs-Browser
+      fields.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Tue, 11 Nov 2008 23:22:40 +0200
+
+unetbootin (298.dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+    - Detects USB drives by id, not by filesystem.
+  * debian/rules:
+    - Stop doing 'lupdate-qt4', this produces unneded changes to diff.gz.
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Tue, 04 Nov 2008 00:35:35 +0200
+
+unetbootin (295.dfsg-1) unstable; urgency=low
+
+  * Initial release. (Closes: #500842)
+
+ -- Eugene V. Lyubimkin <jackyf.devel@gmail.com>  Sun, 02 Nov 2008 20:51:49 +0200
+

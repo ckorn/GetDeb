@@ -1,0 +1,6 @@
+Grisbi for Debian
+=================
+
+The openssl plugin is not distributed because of license problems.
+
+ -- Stephane Glondu <steph@glondu.net>  Mon, 24 Aug 2009 02:09:43 +0200

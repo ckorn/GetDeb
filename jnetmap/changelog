@@ -1,0 +1,23 @@
+jnetmap (0.5.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Nov 2011 19:18:18 +0100
+
+jnetmap (0.5.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 08 Aug 2011 17:56:16 +0200
+
+jnetmap (0.5-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #792943)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 05 Jun 2011 17:28:01 +0200
+
+jnetmap (0.3.3.5-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #486885)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 May 2010 18:20:16 +0200

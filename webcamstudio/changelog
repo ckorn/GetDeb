@@ -1,0 +1,37 @@
+webcamstudio (0.56-1~getdeb2) oneiric; urgency=low
+
+  * Remove dependency on
+    gstreamer0.10-plugins-ugly-multiverse
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 Oct 2011 20:05:15 +0200
+
+webcamstudio (0.56-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Aug 2010 21:57:01 +0200
+
+webcamstudio (0.54-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 30 Apr 2010 11:29:45 +0200
+
+webcamstudio (0.42b-1~getdeb1) intrepid; urgency=low
+
+  * New upstream version (LP: #339490)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sun, 08 Mar 2009 12:26:39 +0100
+
+webcamstudio (0.42-1~getdeb1) intrepid; urgency=low
+
+  * New upstream version (LP: #339215)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sat, 07 Mar 2009 16:37:51 +0100
+
+webcamstudio (0.38a-0~getdeb1) intrepid; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <c_korn@gmx.de>  Fri, 19 Dec 2008 20:55:13 +0100
+

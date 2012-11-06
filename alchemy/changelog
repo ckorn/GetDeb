@@ -1,0 +1,5 @@
+alchemy (0.0.beta~008-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #504753)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 10 Jan 2010 21:46:15 +0100

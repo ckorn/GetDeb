@@ -1,0 +1,53 @@
+bluegriffon (1.5.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 23 May 2012 18:21:29 +0200
+
+bluegriffon (1.5.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 May 2012 12:05:44 +0200
+
+bluegriffon (1.4.1-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 03 Mar 2012 16:19:50 +0100
+
+bluegriffon (1.4-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version (LP: #935785)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 24 Feb 2012 20:10:30 +0100
+
+bluegriffon (1.3.1-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 27 Nov 2011 14:13:16 +0100
+
+bluegriffon (1.2.1-1~getdeb2~oneiric) oneiric; urgency=low
+
+  * Rebuild for oneiric
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Oct 2011 17:47:55 +0200
+
+bluegriffon (1.2.1-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Oct 2011 13:13:39 +0200
+
+bluegriffon (1.2-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 29 Sep 2011 22:07:28 +0200
+
+bluegriffon (1.1.1-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #820730)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 04 Aug 2011 12:47:03 +0200

@@ -1,0 +1,47 @@
+# There was 3rdparty/zlib in the include path
+# and there are relative path like "../quazip" in
+# the files. After removing 3rdparty/zlib those did not
+# work any longer. Instead of fixing the files just create a
+# dummy directory to make it work again.
+# Also rename the library.
+Index: glclib-2.2.0/glc_lib/GLC_lib.pro
+===================================================================
+--- glclib-2.2.0.orig/glc_lib/GLC_lib.pro	2011-07-01 19:19:33.003565225 +0200
++++ glclib-2.2.0/glc_lib/GLC_lib.pro	2011-07-01 19:40:28.323565287 +0200
+@@ -6,7 +6,7 @@
+ 
+ CONFIG += exceptions \
+     warn_on
+-TARGET = GLC_lib
++TARGET = glc
+ VERSION = 2.2.0
+ 
+ DEFINES += CREATE_GLC_LIB_DLL
+@@ -20,7 +20,7 @@
+ 
+ DEPENDPATH += .
+ INCLUDEPATH += .
+-INCLUDEPATH += ./3rdparty/zlib
++INCLUDEPATH += ./3rdparty/dummy
+ 
+ # Input					
+ HEADERS_QUAZIP +=	3rdparty/quazip/crypt.h \
+@@ -174,18 +174,6 @@
+ HEADERS += $${HEADERS_QUAZIP} $${HEADERS_LIB3DS} $${HEADERS_GLC_MATHS} $${HEADERS_GLC_IO}
+ HEADERS += $${HEADERS_GLC} $${HEADERS_GLEXT} $${HEADERS_GLC_SCENEGRAPH} $${HEADERS_GLC_GEOMETRY}
+ HEADERS += $${HEADERS_GLC_SHADING} $${HEADERS_GLC_VIEWPORT} $${HEADERS_GLC_3DWIDGET}
+-		   
+-SOURCES += 3rdparty/zlib/adler32.c \
+-           3rdparty/zlib/compress.c \
+-           3rdparty/zlib/crc32.c \
+-           3rdparty/zlib/deflate.c \
+-           3rdparty/zlib/gzio.c \
+-           3rdparty/zlib/inffast.c \
+-           3rdparty/zlib/inflate.c \
+-           3rdparty/zlib/inftrees.c \
+-           3rdparty/zlib/trees.c \
+-           3rdparty/zlib/uncompr.c \
+-           3rdparty/zlib/zutil.c
+ 
+ SOURCES += 3rdparty/quazip/ioapi.c \
+            3rdparty/quazip/quazip.cpp \

@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/beansheet
+java -jar bsheet_bundle.jar

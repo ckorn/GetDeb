@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Avidemux 2.6 (GTK+)
+GenericName=GTK+ Video Editor
+Comment=Edit your Videos
+Comment[de]=Videos bearbeiten
+TryExec=avidemux3_gtk
+Exec=avidemux3_gtk
+Icon=avidemux2.6-gtk
+Terminal=false
+Type=Application
+Categories=GTK;AudioVideo
+MimeType=video/mpeg;video/x-mpeg;video/x-avi;application/x-flash-video;application/x-shockwave-flash;video/flv

@@ -1,0 +1,16 @@
+Source: xvst
+Section: video
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), libqt4-dev,
+ qt4-qmake, qt4-dev-tools, libqtwebkit-dev
+Standards-Version: 3.9.3
+Homepage: http://xviservicethief.sourceforge.net
+
+Package: xvst
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ffmpeg
+Description: Download tool for video clips
+ xVideoServiceThief (a.k.a xVST) is a tool for downloading
+ your favourite video clips from a lot of video websites
+ (currently supports 76 websites and increasing!).

@@ -1,0 +1,41 @@
+libpagoda-ruby (0.6.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 23 Aug 2012 14:51:06 +0200
+
+libpagoda-ruby (0.6.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 21 Aug 2012 21:53:47 +0200
+
+libpagoda-ruby (0.6.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 17 Aug 2012 19:45:27 +0200
+
+libpagoda-ruby (0.5.0-1~getdeb2) oneiric; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Nov 2011 19:01:36 +0100
+
+libpagoda-ruby (0.5.0-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 02 Nov 2011 19:29:17 +0100
+
+libpagoda-ruby (0.3.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Sep 2011 21:17:09 +0200
+
+libpagoda-ruby (0.3.0-1~getdeb1) lucid; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 22 Jun 2011 20:50:51 +0200

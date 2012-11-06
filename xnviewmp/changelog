@@ -1,0 +1,11 @@
+xnviewmp (0.51-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #1017412)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 06 Jul 2012 22:33:35 +0200
+
+xnviewmp (0.39-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #880983)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Feb 2012 19:43:21 +0100

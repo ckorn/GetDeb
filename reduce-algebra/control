@@ -1,0 +1,45 @@
+Source: reduce-algebra
+Section: math
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev,
+ libncurses5-dev, libx11-dev, libxft-dev, libfox-1.6-dev,
+ mesa-common-dev, libglu1-mesa-dev, x11proto-core-dev,
+ libxext-dev, libxcursor-dev, libxrandr-dev, libbz2-dev,
+ libtiff4-dev, linux-libc-dev, libcups2-dev, libedit-dev,
+ libreadline6-dev, python2.6-dev
+Standards-Version: 3.9.1
+Homepage: http://reduce-algebra.sourceforge.net
+
+Package: reduce-algebra
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, reduce-algebra-fonts (= ${source:Version})
+Recommends: reduce-algebra-docs
+Description: Graphical Computer Algebra System
+ OpenReduce is a graphical Computer Algebra System.
+ It allows for solving differential equations, integration,
+ matrix manipulation and 3D plotting.
+ It also contains a large number of additional packages.
+
+Package: reduce-algebra-fonts
+Architecture: all
+Depends: ${misc:Depends}
+Description: Graphical Computer Algebra System (fonts)
+ OpenReduce is a graphical Computer Algebra System.
+ It allows for solving differential equations, integration,
+ matrix manipulation and 3D plotting.
+ It also contains a large number of additional packages.
+ .
+ (This package contains the fonts files)
+
+Package: reduce-algebra-docs
+Architecture: all
+Depends: ${misc:Depends}
+Section: doc
+Description: Graphical Computer Algebra System (documentation)
+ OpenReduce is a graphical Computer Algebra System.
+ It allows for solving differential equations, integration,
+ matrix manipulation and 3D plotting.
+ It also contains a large number of additional packages.
+ .
+ (This package contains the documentation)

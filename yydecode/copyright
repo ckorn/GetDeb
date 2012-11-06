@@ -1,0 +1,34 @@
+This package was debianized by Itai Zukerman <zukerman@math-hat.com> on
+Tue, 26 Feb 2002 20:53:01 +0000.
+
+Downloaded from: http://yydecode.sourceforge.net/
+
+Copyright 2002-2003, Liyang Hu <yydecode@nerv.cx>
+
+License:
+
+   This package is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This package is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this package; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.
+
+The Debian packaging is
+Copyright 2002, Itai Zukerman <zukerman@math-hat.com>
+Copyright 2003, Liyang HU <liyang@nerv.cx>
+Copyright 2004, Andrew Pollock <apollock@debian.org>
+Copyright 2005, Matej Vela <vela@debian.org>
+Copyright 2006, Bart Martens <bartm@knars.be>
+and is licensed under the GPL, see above.
+

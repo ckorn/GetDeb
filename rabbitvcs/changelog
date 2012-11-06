@@ -1,0 +1,39 @@
+rabbitvcs (0.15.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 26 Sep 2012 19:25:31 +0200
+
+rabbitvcs (0.15.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 26 Aug 2012 12:35:40 +0200
+
+rabbitvcs (0.15.0.5-1~getdeb2) lucid; urgency=low
+
+  * debian/control: Fix nautilus dependency.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 23 Nov 2011 20:52:08 +0100
+
+rabbitvcs (0.15.0.5-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 13 Nov 2011 13:36:38 +0100
+
+rabbitvcs (0.13.1-2) unstable; urgency=low
+
+  * Team upload
+  * debian/control
+    - added python-gnome2 to Depends of rabbitvcs-nautilus; Closes: #610473
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Thu, 20 Jan 2011 00:50:44 +0100
+
+rabbitvcs (0.13.1-1) unstable; urgency=low
+
+  * Replaced multiple tarballs with single tarball plus split-out binary
+    packages.
+  * Again closes: #469181.
+
+ -- Jason Heeris <jason.heeris@gmail.com>  Fri, 02 Apr 2010 17:03:15 +0800

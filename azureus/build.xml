@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<!--
+   build.xml - Vuze/Azureus Project Builder
+   Copyright (C) 2009 - Adrian Perez <adrianperez.deb@gmail.com>
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+-->
+
+<!--
+  ==============================================
+   Build file to compile Azureus2.jar and Vuze.
+  ==============================================
+-->
+
+<project name="azureus" default="package" basedir="..">
+  <description>
+    This build file will compile the Azureus and Vuze files
+    from the Vuze source distribution.
+    Vuze is a Multimedia BitTorrent Client.
+  </description>
+
+        <property file="debian/build.properties" />
+
+        <!-- The debian classpath. This is the default way of building. -->
+        <!-- TODO Make generic and use condition properties. -->
+
+        <path id="debian.classpath">
+          <fileset dir="/usr/share/java/">
+            <include name="swt.jar" />
+            <include name="commons-cli.jar" />
+            <include name="log4j-1.2.jar" />
+            <include name="junit.jar" />
+          </fileset>
+        </path>
+
+        <!-- The bundled classpath. This was the default way of building. -->
+        <path id="bundled.classpath">
+          <fileset dir="${src.dir}/${lib.dir}" includes="**/*.jar" />
+        </path>
+
+        <target name="init">
+          <!-- Create a build timestamp -->
+          <tstamp />
+          <!-- Create the build directory -->
+          <mkdir dir="${build.dir}" />
+        </target>
+
+        <target name="compile" depends="init" description="compile all files">
+          <javac srcdir="${src.dir}" destdir="${build.dir}" source="1.5" target="1.5"
+                 includeAntRuntime="no" nowarn="yes" debug="true" excludes="${compile.excludes}">
+            <classpath>
+              <path refid="debian.classpath" />
+            </classpath>
+          </javac>
+        </target>
+
+        <target name="package" depends="compile,buildcopy" description="package Azureus2.jar">
+          <!-- Create the "dist" directory. -->
+          <mkdir dir="${dist.dir}" />
+          <copy todir="${build.dir}" file="${src.dir}/ChangeLog.txt"/>
+
+          <!-- Create the jar file and use exclusions -->
+          <jar destfile="${dist.dir}/Azureus2.jar" basedir="${build.dir}" excludes="${jar.excludes}">
+            <manifest>
+              <attribute name="Main-Class" value="${jar.mainclass}" />
+              <attribute name="Class-Path" value="${jar.classpath}" />
+            </manifest>
+          </jar>
+
+        </target>
+
+        <target name="clean" description="clean the build environment">
+          <!-- Delete the build and dist directories -->
+          <delete dir="${build.dir}" />
+          <delete dir="${dist.dir}" />
+        </target>
+
+        <target name="run" description="run the application">
+          <java jar="${dist.dir}/Azureus2.jar" fork="true" />
+        </target>
+
+        <target name="buildcopy" description="copy the build files">
+          <!-- Copy all non-source files to the JAR. -->
+          <copy todir="${build.dir}" includeEmptyDirs="false">
+            <fileset dir="${src.dir}" excludes="${jar.excludes}"/>
+          </copy>
+        </target>
+
+        <target name="echo" description="echo">
+          <echo message="${compile.excludes}"/>
+        </target>
+
+</project>
+
+

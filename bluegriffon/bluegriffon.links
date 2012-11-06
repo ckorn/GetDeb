@@ -1,0 +1,15 @@
+usr/share/bluegriffon/chrome			usr/lib/bluegriffon/chrome
+usr/share/bluegriffon/components		usr/lib/bluegriffon/components
+usr/share/bluegriffon/defaults			usr/lib/bluegriffon/defaults
+usr/share/bluegriffon/dictionaries		usr/lib/bluegriffon/dictionaries
+usr/share/bluegriffon/distribution		usr/lib/bluegriffon/distribution
+usr/share/bluegriffon/hyphenation		usr/lib/bluegriffon/hyphenation
+usr/share/bluegriffon/icons			usr/lib/bluegriffon/icons
+usr/share/bluegriffon/modules			usr/lib/bluegriffon/modules
+usr/share/bluegriffon/res			usr/lib/bluegriffon/res
+usr/share/bluegriffon/application.ini		usr/lib/bluegriffon/application.ini
+usr/share/bluegriffon/chrome.manifest		usr/lib/bluegriffon/chrome.manifest
+usr/share/bluegriffon/dependentlibs.list	usr/lib/bluegriffon/dependentlibs.list
+usr/share/bluegriffon/greprefs.js		usr/lib/bluegriffon/greprefs.js
+usr/share/bluegriffon/platform.ini		usr/lib/bluegriffon/platform.ini
+usr/share/bluegriffon/update.locale		usr/lib/bluegriffon/update.locale

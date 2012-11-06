@@ -1,0 +1,1247 @@
+A manpage has a wrong section.
+Hyphens were used as minus signs.
+Index: ncid-0.84/man/ncid2ncid.1
+===================================================================
+--- ncid-0.84.orig/man/ncid2ncid.1	2012-06-30 20:59:31.000000000 +0200
++++ ncid-0.84/man/ncid2ncid.1	2012-07-17 18:39:33.033176220 +0200
+@@ -1,5 +1,5 @@
+ .\" %W% %G%
+-.TH NCID2NCID 8
++.TH NCID2NCID 1
+ .SH NAME
+ .B ncid2ncid
+ - Connect multiple NCID servers to a single NCID server gateway
+@@ -10,17 +10,17 @@
+ .I Options:
+ .PP
+ .nf
+-[-C <filename>      | --config <filename>]
+-[-D                 | --debug]
+-[-f <[host][:port]> | --fromhost <[host][:port>]
+-[-h                 | --help]
+-[-L <filename>      | --logfile <filename>]
+-[-t <[host][:port]> | --tohost <[host][:port>]
+-[-P <filename>      | --pidfile <filename>]
+-[-u                 | --usage]
+-[-V                 | --version]
+-[-v <1-9>           | --verbose <1-9>]
+-[-W <1/0>           | --warn <1/0>]
++[\-C <filename>      | \-\-config <filename>]
++[\-D                 | \-\-debug]
++[\-f <[host][:port]> | \-\-fromhost <[host][:port>]
++[\-h                 | \-\-help]
++[\-L <filename>      | \-\-logfile <filename>]
++[\-t <[host][:port]> | \-\-tohost <[host][:port>]
++[\-P <filename>      | \-\-pidfile <filename>]
++[\-u                 | \-\-usage]
++[\-V                 | \-\-version]
++[\-v <1\-9>           | \-\-verbose <1\-9>]
++[\-W <1/0>           | \-\-warn <1/0>]
+ .fi
+ .SH DESCRIPTION
+ This gateway obtains the current Caller ID or message from  one or more
+@@ -47,16 +47,16 @@
+ The configuration file for \fIncid2ncid\fR is /etc/ncid/ncid2ncid.conf.
+ .SH "OPTIONS"
+ .TP
+-.B -C <filename> | --config <filename>
++.B \-C <filename> | \-\-config <filename>
+ Configuration file.
+ .br
+ Default: /etc/ncid/ncid2ncid.conf
+ .TP
+-.B -D | --debug
++.B \-D | \-\-debug
+ Debug mode, \fIncid2ncid\fR stays attached to the terminal and displays
+ all messages that go into the log file.
+ .TP
+-.B -f <fromhost[:fromport]>
++.B \-f <fromhost[:fromport]>
+ Specifies the first sending NCID server.
+ It sends the Caller ID and messages to another NCID server.
+ Port may be specified by suffixing the hostname with :<port>.
+@@ -64,34 +64,34 @@
+ .br
+ Default: :3333
+ .TP
+-.B -h | --help
++.B \-h | \-\-help
+ Prints this help
+ .TP
+-.B -L <filename> | --logfile=<filename>
++.B \-L <filename> | \-\-logfile=<filename>
+ Specifies the logfile name to use.  The logfile must exist before it is used.
+ .br
+ Default: /var/log/ncid2ncid.log
+ .TP
+-.B -t <[host][:port]> | --ncid=<[host][:port]>
++.B \-t <[host][:port]> | \-\-ncid=<[host][:port]>
+ Specifies the receiving NCID server.  It receives Caller ID and messages
+ from another NCID server.  Port may be specified by suffixing the
+ hostname with :<port>.  Input can be <host> or <:port> or <host:port>
+ .br
+ Default: localhost:3333
+ .TP
+-.B -P <filename> | --pidfile=<filename>
++.B \-P <filename> | \-\-pidfile=<filename>
+ Specifies the pidfile name to write.
+ Set to \fI/var/run/ncidd.pid\fR in a rc or init script when used as a service.
+ The program will still run if it does not have permission to write a pidfile.
+ There is no default.  If pidfile is not set, no pid file will be used.
+ Prints this help
+ .TP
+-.B -V | --version
++.B \-V | \-\-version
+ Displays the version
+ .TP
+-.B -v <1-9> | --verbose <1-9>
++.B \-v <1\-9> | \-\-verbose <1\-9>
+ Verbose mode. Send information into the logfile and display information
+-for the -D  option.  Set a higher number for more information.
++for the \-D  option.  Set a higher number for more information.
+ LEVEL2 will give a warning every time it fails to connect with a NCID server.
+ LEVEL8 will print the logfiles from every server, and
+ LEVEL9 will add the socket of the received logfile.
+@@ -100,26 +100,26 @@
+ .br
+ Default: verbose = 1
+ .TP
+-.B -W <0/1> | --warn <0/1>
++.B \-W <0/1> | \-\-warn <0/1>
+ Send server disconnected or server reconnected messages to clients.
+ .br
+ Default: warn = 0
+ .SH EXAMPLES
+ Forward Caller ID information or message from localhost:3334 to localhost:3333
+ .RS 0
+-    ncid2ncid --fromhost localhost:3334
++    ncid2ncid \-\-fromhost localhost:3334
+ .RE
+ .PP
+ Forward Caller ID information or message from localhost:3334 to localhost:3333
+ in debug mode using verbose level 1.
+ .RS 0
+-    ncid2ncid -D -f localhost:3334
++    ncid2ncid \-D \-f localhost:3334
+ .RE
+ .PP
+ Forward Caller ID information or message from localhost:3334 to localhost:3333
+ in debug mode and display all logfiles.
+ .RS 0
+-    ncid2ncid -Dv8 -f localhost:3334
++    ncid2ncid \-Dv8 \-f localhost:3334
+ .RE
+ .SH FILES
+ /etc/ncid/ncid2ncid.conf
+@@ -131,15 +131,15 @@
+ .SH DIAGNOSTICS
+ .nf
+     Return Code    Meaning
+-    -----------    -------
++    \-\-\-\-\-\-\-\-\-\-\-    \-\-\-\-\-\-\-
+          0         Successful
+-      -100         Usage
+-      -101         Invalid port number
+-      -104         Configuration file error
+-      -107         Invalid number
+-      -108         Missing sending host 1
+-      -110         PID file already exists
+-        -?         System error
++      \-100         Usage
++      \-101         Invalid port number
++      \-104         Configuration file error
++      \-107         Invalid number
++      \-108         Missing sending host 1
++      \-110         PID file already exists
++        \-?         System error
+ .fi
+ .SH SEE ALSO
+ ncid2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5, ncidd.blacklist
+Index: ncid-0.84/man/ncidd.8
+===================================================================
+--- ncid-0.84.orig/man/ncidd.8	2012-07-09 07:00:32.000000000 +0200
++++ ncid-0.84/man/ncidd.8	2012-07-17 18:44:57.001166581 +0200
+@@ -10,40 +10,40 @@
+ .I Options:
+ .PP
+ .nf
+-[-A <file>       | --alias <aliasfile>]
+-[-B <file>       | --blacklist <file>]
+-[-C <file>       | --config <configfile>]
+-[-c <file>       | --cidlog <logfile>]
+-[-D              | --debug]
+-[-d <file>       | --datalog <logfile>]
+-[-e <identifier> | --lineid <identifier>]
+-[-g <0|1>        | --gencid <0|1>]
+-[-H <0|1>        | --hangup <0|1>]
+-[-h              | --help]
+-[-I <modemstr>   | --initstr <modemstr>]
+-[-i <cidstr>     | --initcid <cidstr>]
+-[-L <file>       | --logfile <logfile>]
+-[-l <file>       | --lockfile <lockfile>]
+-[-M <MaxBytes>   | --cidlogmax <MaxBytes>]
+-[-N <0|1>        | --noserial <0|1>]
+-[-n <0|1>        | --nomodem <0|1>]
+-[-P <pidfile>    | --pidfile <pidfile>]
+-[-p <portnumber> | --port <portnumber>]
+-[-S <0|1>        | --ttyclocal <0|1]
+-[-s <datatype>   | --send <datatype>]
+-[-T <ttyspeed>   | --ttyspeed <ttyspeed>]
+-[-t <ttyport>    | --ttyport <ttyport>]
+-[-V              | --version]
+-[-v <1-9>        | --verbose <1-9>]
++[\-A <file>       | \-\-alias <aliasfile>]
++[\-B <file>       | \-\-blacklist <file>]
++[\-C <file>       | \-\-config <configfile>]
++[\-c <file>       | \-\-cidlog <logfile>]
++[\-D              | \-\-debug]
++[\-d <file>       | \-\-datalog <logfile>]
++[\-e <identifier> | \-\-lineid <identifier>]
++[\-g <0|1>        | \-\-gencid <0|1>]
++[\-H <0|1>        | \-\-hangup <0|1>]
++[\-h              | \-\-help]
++[\-I <modemstr>   | \-\-initstr <modemstr>]
++[\-i <cidstr>     | \-\-initcid <cidstr>]
++[\-L <file>       | \-\-logfile <logfile>]
++[\-l <file>       | \-\-lockfile <lockfile>]
++[\-M <MaxBytes>   | \-\-cidlogmax <MaxBytes>]
++[\-N <0|1>        | \-\-noserial <0|1>]
++[\-n <0|1>        | \-\-nomodem <0|1>]
++[\-P <pidfile>    | \-\-pidfile <pidfile>]
++[\-p <portnumber> | \-\-port <portnumber>]
++[\-S <0|1>        | \-\-ttyclocal <0|1]
++[\-s <datatype>   | \-\-send <datatype>]
++[\-T <ttyspeed>   | \-\-ttyspeed <ttyspeed>]
++[\-t <ttyport>    | \-\-ttyport <ttyport>]
++[\-V              | \-\-version]
++[\-v <1\-9>        | \-\-verbose <1\-9>]
+ .fi
+ .SH DESCRIPTION
+ .B NCIDD
+ collects Caller ID data from:
+ .PP
+ .nf
+-    - a modem or CID device on a telephone line
+-    - a CID gateway on the network
+-    - or both
++    \- a modem or CID device on a telephone line
++    \- a CID gateway on the network
++    \- or both
+ .fi
+ .PP
+ It formats the data on a single text line, and then sends it
+@@ -103,7 +103,7 @@
+ .B NCIDD
+ will accept a CALLINFO line from a gateway.  A SIP gateway will send
+ a CALLINFO line when it receives a CANCEL  or BYE command.  The server
+-will then send a ring count of -1 to its clients to indicate a hangup with
++will then send a ring count of \-1 to its clients to indicate a hangup with
+ no answer.
+ .PP
+ .B NCIDD
+@@ -119,48 +119,48 @@
+ .SH "OPTIONS"
+ .PD 0
+ .TP
+-.B -A <file> | --alias <file>
++.B \-A <file> | \-\-alias <file>
+ Alias file.
+ .br
+ Default: /etc/ncid/ncidd.alias
+ .TP
+-.B -B <file> | --blacklist <file>
++.B \-B <file> | \-\-blacklist <file>
+ Blacklist file.
+ .br
+ Default: /etc/ncid/ncidd.blacklist
+ .TP
+-.B -C <file> | --config <file>
++.B \-C <file> | \-\-config <file>
+ Config file.
+ .br
+ Default: /etc/ncid/ncidd.conf
+ .TP
+-.B -c <file> | --cidlog <file>
++.B \-c <file> | \-\-cidlog <file>
+ Call log data file.
+ .br
+ Default: /var/log/cidcall.log
+ .TP
+-.B -D | --debug
++.B \-D | \-\-debug
+ Debug mode, \fIncidd\fR stays attached to the terminal and displays
+ all messages that go into the log file.
+ .TP
+-.B -d <file> | --datalog <file>
++.B \-d <file> | \-\-datalog <file>
+ Data log data file, usually from a modem.
+ .br
+ Default: /var/log/datalog.log
+ .TP
+-.B -e <identifier> | --lineid <identifier>
++.B \-e <identifier> | \-\-lineid <identifier>
+ The telephone line identifier is for a modem.  It is normally 1 to 4
+ characters.  The default indicator is not displayed, but for one POTS
+ line, you could change it to
+ .IR POTS .
+ For multiple lines you should use a identifier.
+ You could change it to the 4 digit extension for an exchange.
+-For example, if the telephone number is 321-555-1212 the identifier
++For example, if the telephone number is 321\-555\-1212 the identifier
+ would be 1212.
+ .br
+ Default: -
+ .TP
+-.B -g <0|1> | --gencid <0|1>
++.B \-g <0|1> | \-\-gencid <0|1>
+ Generate a generic Caller ID at ring 2 if one is not received
+ from the modem either because the telco is not sending it or
+ because the modem does not support it.
+@@ -169,71 +169,71 @@
+ .br
+ Default: gencid = 1
+ .TP
+-.B -H <0|1> | --hangup <0|1>
++.B \-H <0|1> | \-\-hangup <0|1>
+ Automatically hangup up a telephone if the caller name or number is in
+ the ncidd.blacklist file.  A hangup text line is sent to the clients.
+ .br
+ Default: hangup = 0
+ .TP
+-.B -h | --help
++.B \-h | \-\-help
+ Display a help message.
+ .TP
+-.B -I "string" | --initstr "string"
++.B \-I "string" | \-\-initstr "string"
+ Modem initialization string
+ .br
+ Default: ATE1V1Q0
+ .TP
+-.B -i "string" | --initcid "string"
++.B \-i "string" | \-\-initcid "string"
+ CID initialization string
+ .br
+ Default: AT+VCID=1
+ .br
+ if it fails: AT#CID=1
+ .TP
+-.B -L <file> | --logfile <file>
++.B \-L <file> | \-\-logfile <file>
+ Server logfile.
+ .br
+ Default: /var/log/ncidd.log
+ .TP
+-.B -l <file> | --lockfile <file>
++.B \-l <file> | \-\-lockfile <file>
+ Modem lockfile.
+ .br
+ Default: /var/lock/LCK..modem
+ .TP
+-.B -M <MaxBytes> | --cidlogmax <MaxBytes>
++.B \-M <MaxBytes> | \-\-cidlogmax <MaxBytes>
+ Set the maximum CID call log file size in bytes.
+ .br
+ Maximum size is 100000000
+ .br
+ Default: cidlogmax = 110000
+ .TP
+-.B -N <0|1> | --noserial <0|1>
++.B \-N <0|1> | \-\-noserial <0|1>
+ serial device (0) or no serial device (1)
+ .br
+ Default: noserial = 0
+ .TP
+-.B -n <0|1> | --nomodem <0|1>
++.B \-n <0|1> | \-\-nomodem <0|1>
+ modem (0) or no modem (1)
+ .br
+ Default: nomodem = 0
+ .TP
+-.B -P <pidfile> | --pidfile <pidfile>
++.B \-P <pidfile> | \-\-pidfile <pidfile>
+ Server PID file.
+ Set to \fI/var/run/ncidd.pid\fR in a rc or init script when used as a service.
+ The program will still run if it does not have permission to write a pidfile.
+ There is no default.  If pidfile is not set, no pid file will be used.
+ .TP
+-.B -p <port> | --port <port>
++.B \-p <port> | \-\-port <port>
+ Server port.
+ .br
+ Default: 3333
+ .TP
+-.B -S <0|1> | --ttyclocal <0|1>
++.B \-S <0|1> | \-\-ttyclocal <0|1>
+ Enable (0) or disable (1) modem control signals.
+ .br
+ Default: modem control signals disabled
+ .TP
+-.B -s <datatype> | --send <datatype>
++.B \-s <datatype> | \-\-send <datatype>
+ Send optional CID data to a client.
+ Where \fIdatatype\fR is:
+ .br
+@@ -247,22 +247,22 @@
+ .br
+ Default: Optional CID DATA is not sent
+ .TP
+-.B -T <ttyspeed> | --ttyspeed <ttyspeed>
++.B \-T <ttyspeed> | \-\-ttyspeed <ttyspeed>
+ Set the tty port speed to one of: 19200, 9600, 4800
+ .br
+ Default: ttyspeed = 19200
+ .TP
+-.B -t <ttyport> | --ttyport <ttyport>
++.B \-t <ttyport> | \-\-ttyport <ttyport>
+ Modem device file, or serial port that provides Caller ID information.
+ .br
+ Default: /dev/modem
+ .TP
+-.B -V | --version
++.B \-V | \-\-version
+ Display the version number.
+ .TP
+-.B -v <1-9> | --verbose <1-9>
++.B \-v <1\-9> | \-\-verbose <1\-9>
+ Verbose mode. Send information into the logfile and display information
+-for the -D  option.  Set a higher number for more information.
++for the \-D  option.  Set a higher number for more information.
+ Do not use level 9 unless there is a problem in poll().  It grows the
+ logfile very fast.
+ .br
+@@ -339,24 +339,24 @@
+ .SH DIAGNOSTICS
+ .nf
+     Return Code    Meaning
+-    -----------    -------
++    \-\-\-\-\-\-\-\-\-\-\-    \-\-\-\-\-\-\-
+          0         Successful
+-      -100         Usage
+-      -101         Invalid port number
+-      -102         TTY lockfile exists
+-      -103         Unable to set modem for Caller ID
+-      -104         Configuration file error
+-      -105         No modem found
+-      -106         Invalid data type.
+-      -107         Invalid number
+-      -108         Invalid tty port speed [set in config file]
+-      -109         Alias file error
+-      -110         PID file already exists
+-      -111         Cannot init TTY
+-      -112         Serial device error
+-      -113         string too long
+-      -114         Blacklist file error
+-        -?         System error
++      \-100         Usage
++      \-101         Invalid port number
++      \-102         TTY lockfile exists
++      \-103         Unable to set modem for Caller ID
++      \-104         Configuration file error
++      \-105         No modem found
++      \-106         Invalid data type.
++      \-107         Invalid number
++      \-108         Invalid tty port speed [set in config file]
++      \-109         Alias file error
++      \-110         PID file already exists
++      \-111         Cannot init TTY
++      \-112         Serial device error
++      \-113         string too long
++      \-114         Blacklist file error
++        \-?         System error
+ .fi
+ .SH SEE ALSO
+ sip2ncid.8, ncidsip.8, ncid2ncid.1, ncidrotate.1, yac2ncid.1
+Index: ncid-0.84/man/ncidmodules.1
+===================================================================
+--- ncid-0.84.orig/man/ncidmodules.1	2011-02-28 03:51:12.000000000 +0100
++++ ncid-0.84/man/ncidmodules.1	2012-07-17 18:39:33.037176219 +0200
+@@ -1,59 +1,59 @@
+ .\" %W% %G%
+ .TH NCIDMODULES 1
+ .SH NAME
+-.B ncid-initmodem
++.B ncid\-initmodem
+ - use ncidd to reinitialize modem to Caller ID mode
+ .PP
+-.B ncid-kpopup
++.B ncid\-kpopup
+ - popup Caller ID using KDE
+ .PP
+-.B ncid-page
++.B ncid\-page
+ - send Caller ID to a pager or cell phone using mail
+ .PP
+-.B ncid-samba
++.B ncid\-samba
+ - send Caller ID to samba to create a popup
+ .PP
+-.B ncid-speak
+-- send Caller ID to a text-to-speech program
++.B ncid\-speak
++- send Caller ID to a text\-to\-speech program
+ .PP
+-.B ncid-mythtv
++.B ncid\-mythtv
+ - display Caller ID on MythTV using mythtvosd
+ .PP
+-.B ncid-skel
++.B ncid\-skel
+ - display Caller ID on stdout in a terminal window
+ .PP
+-.B ncid-tivo
++.B ncid\-tivo
+ - display Caller ID on TiVo using text2osd
+ .PP
+-.B ncid-yac
++.B ncid\-yac
+ - Send Caller ID to YAC listeners
+ .SH SYNOPSIS
+-ncid --no-gui --program
+-.B ncid-initmodem
++ncid \-\-no\-gui \-\-program
++.B ncid\-initmodem
+ .PP
+-ncid --no-gui --program
+-.B ncid-kpopup
++ncid \-\-no\-gui \-\-program
++.B ncid\-kpopup
+ .PP
+-ncid --no-gui [--message] [--ring #] --program
+-.B ncid-page
++ncid \-\-no\-gui [\-\-message] [\-\-ring #] \-\-program
++.B ncid\-page
+ .PP
+-ncid --no-gui [--message] --program
+-.B ncid-samba
++ncid \-\-no\-gui [\-\-message] \-\-program
++.B ncid\-samba
+ .PP
+-ncid --no-gui --program
+-.B ncid-speak
++ncid \-\-no\-gui \-\-program
++.B ncid\-speak
+ .PP
+-ncid --no-gui [--message] --program
+-.B ncid-mythtv
++ncid \-\-no\-gui [\-\-message] \-\-program
++.B ncid\-mythtv
+ .PP
+-ncid --no-gui [--message] --program
+-.B ncid-skel
++ncid \-\-no\-gui [\-\-message] \-\-program
++.B ncid\-skel
+ .PP
+-ncid --no-gui [--message] --program
+-.B ncid-tivo
++ncid \-\-no\-gui [\-\-message] \-\-program
++.B ncid\-tivo
+ .PP
+-ncid --no-gui [--message] --program
+-.B ncid-yac
++ncid \-\-no\-gui [\-\-message] \-\-program
++.B ncid\-yac
+ .SH DESCRIPTION
+ These are ncid output modules and are normally located in the
+ .BR /usr/share/ncid
+@@ -65,27 +65,27 @@
+ but multiple clients can be used, each calling a different output module.
+ .PP
+ The
+-.B ncid-initmodem
+-output module re-initializes the modem obtaining the Caller ID
++.B ncid\-initmodem
++output module re\-initializes the modem obtaining the Caller ID
+ for the server.  It can only be used if the modem supports Caller ID and
+-sends "RING" at each ringing signal.  If the server indicates a non-CID
+-call, ncid-initmodem will cause ncidd to re-initialize the modem for CID.
++sends "RING" at each ringing signal.  If the server indicates a non\-CID
++call, ncid\-initmodem will cause ncidd to re\-initialize the modem for CID.
+ Never use this module with a modem that does not support Caller ID.  The
+ module can be used with TiVo modems that drop out of Caller ID mode.
+ .PP
+ The
+-.B ncid-kpopup
++.B ncid\-kpopup
+ output module is a KDE GUI application.  When a telephone call is
+ received, it pops up a window.  It can be configured to also speak
+ the Caller ID using kmix and festival.
+ .PP
+ The
+-.B ncid-mythtv
++.B ncid\-mythtv
+ output module is a MythTV display program.  It displays the Caller ID and
+ can be configured to display messages.
+ .PP
+ The
+-.B ncid-page
++.B ncid\-page
+ output module is used to send a call message to a cell phone, pager,
+ or email address.  It normally sends the message as soon as the Caller ID
+ is received.  It can be configured to wait until a specific number of rings
+@@ -96,27 +96,27 @@
+ carrier.
+ .PP
+ The
+-.B ncid-samba
++.B ncid\-samba
+ output module is used to send the Caller ID to Windows.  It can also
+ be configured to send messages.
+ .PP
+ The
+-.B ncid-skel
++.B ncid\-skel
+ output module is used as a template for writing
+ a shell script output module.  All it does is send the Caller ID
+ data to standard output.  This makes it useful for troubleshooting.
+ .PP
+ The
+-.B ncid-speak
++.B ncid\-speak
+ output module is used speak the Caller ID using festival.
+ .PP
+ The
+-.B ncid-tivo
++.B ncid\-tivo
+ output module is used to display the Called ID on a TiVo.  It can also
+ be configured to display messages.
+ .PP
+ The
+-.B ncid-yac
++.B ncid\-yac
+ output module is used to send the Called ID and messages to YAC listeners.
+ .PP
+ Each output module can be independently configured using the module
+@@ -125,17 +125,17 @@
+ .PD
+ .SH EXAMPLES
+ Before using a module, review \fIncidmodules.conf\fR to see if the
+-module has a variable that must be configured.  The \fIncid-page\fR
++module has a variable that must be configured.  The \fIncid\-page\fR
+ modules requires the \fIPageTo\fR variable to be set.
+ .PP
+-ncid command line options to call ncid-page at ring number 4
++ncid command line options to call ncid\-page at ring number 4
+ .RS 0
+-    ncid --no-gui --program ncid-page --ring 4
++    ncid \-\-no\-gui \-\-program ncid\-page \-\-ring 4
+ .RE
+ .PP
+ Messages are normally excluded, to include messages:
+ .RS 0
+-    ncid --no-gui --message --program ncid-page --ring 4
++    ncid \-\-no\-gui \-\-message \-\-program ncid\-page \-\-ring 4
+ .RE
+ .SH FILES
+ /etc/ncid/ncidmodules.conf
+Index: ncid-0.84/man/ncidsip.8
+===================================================================
+--- ncid-0.84.orig/man/ncidsip.8	2011-02-28 03:51:31.000000000 +0100
++++ ncid-0.84/man/ncidsip.8	2012-07-17 18:39:33.037176219 +0200
+@@ -10,18 +10,18 @@
+ .I Options:
+ .PP
+ .nf
+-[-D                 | --debug]
+-[-d <filename>      | --dumpfile <filename>]
+-[-i <interface>     | --interface <interface>]
+-[-h                 | --help]
+-[-l                 | --list]
+-[-n <host[:port]>   | --ncid <host[:port]>]
+-[-s <[host][:port]> | --sip <[host][:port]>]
+-[-p <filename>      | --pidfile <filename>]
+-[-t                 | --test]
+-[-u                 | --usage]
+-[-V                 | --version]
+-[-v                 | --verbose]
++[\-D                 | \-\-debug]
++[\-d <filename>      | \-\-dumpfile <filename>]
++[\-i <interface>     | \-\-interface <interface>]
++[\-h                 | \-\-help]
++[\-l                 | \-\-list]
++[\-n <host[:port]>   | \-\-ncid <host[:port]>]
++[\-s <[host][:port]> | \-\-sip <[host][:port]>]
++[\-p <filename>      | \-\-pidfile <filename>]
++[\-t                 | \-\-test]
++[\-u                 | \-\-usage]
++[\-V                 | \-\-version]
++[\-v                 | \-\-verbose]
+ .fi
+ .SH DESCRIPTION
+ Snoops SIP Invites via libpcap and injects the caller id information
+@@ -32,7 +32,7 @@
+ The configuration file for \fIncidsip\fR is /etc/ncid/ncidsip.conf.
+ .SH "OPTIONS"
+ .TP
+-.B -s <[host][:port]> | --sip=<[host][:port]>
++.B \-s <[host][:port]> | \-\-sip=<[host][:port]>
+ Specifies the hostname of the SIP device to snoop.  You may also specify
+ the UDP port by suffixing the hostname with :<port>, or if no hostname
+ is wanted, just :<port>.  If you do not specify a host, it defaults to
+@@ -40,45 +40,45 @@
+ <5061> (Vonage default).  Other Vonage ports are 5060 and 10000.  The
+ new Vonage default appears to be <10000>.
+ .TP
+-.B -n <host[:port]> | --ncid=<host[:port]>
++.B \-n <host[:port]> | \-\-ncid=<host[:port]>
+ Specifies the NCID server to connect to.  Port may be specified by
+ suffixing the hostname with :<port>.  By default it will connect to
+ port 3333 on "localhost".
+ .TP
+-.B -i <interface> | --interface=<interface>
++.B \-i <interface> | \-\-interface=<interface>
+ Specifies the network interface to snoop on.  If this is not specified
+ then libpcap will pick a network interface.  This will generally be
+ the first Ethernet interface found.
+ .TP
+-.B -p <filename> | --pidfile=<filename>
++.B \-p <filename> | \-\-pidfile=<filename>
+ Specifies the pidfile name to write.
+ Set to \fI/var/run/ncidsip.pid\fR in a rc or init script when used as a service.
+ The program will still run if it does not have permission to write a pidfile.
+ There is no default, if pidfile is not set, no pid file will be used.
+ .TP
+-.B -h | --help
++.B \-h | \-\-help
+ Prints this help
+ .TP
+-.B -D | --debug
++.B \-D | \-\-debug
+ Display the payload of all packets that matched the libpcap filter.
+ .TP
+-.B -d <filename> | --dumpfile <filename>
++.B \-d <filename> | \-\-dumpfile <filename>
+ Read packets from a libpcap capture file instead of the network.
+ Mostly only useful for development purposes.
+ .TP
+-.B -u | --usage
++.B \-u | \-\-usage
+ Prints this help
+ .TP
+-.B -V | --version
++.B \-V | \-\-version
+ Displays the version
+ .TP
+-.B -v | --verbose
++.B \-v | \-\-verbose
+ Displays status.  Use this option to run interactive.
+ .TP
+-.B -l | --listdevs
++.B \-l | \-\-listdevs
+ Returns a list of all network device names that can be used.
+ .TP
+-.B -t | --test
++.B \-t | \-\-test
+ Test for SIP packets.  This option is used to check if SIP packets
+ exist without starting the NCID server.  It will display the Caller
+ ID line generated when a call comes in, and a CANCEL line if cancel
+@@ -96,13 +96,13 @@
+ .SH EXAMPLES
+ .nf
+ # run ncidsip as root and view status:
+-ncidsip -v
++ncidsip \-v
+ 
+ # run ncidsip as root and list all network device names:
+-ncidsip --listdevs
++ncidsip \-\-listdevs
+ 
+ # run ncidsip as root and view SIP packets:
+-ncidsip --debug
++ncidsip \-\-debug
+ 
+ # run sip from the init file at boot:
+ ncidsip
+Index: ncid-0.84/man/ncidtools.1
+===================================================================
+--- ncid-0.84.orig/man/ncidtools.1	2011-06-12 02:07:34.000000000 +0200
++++ ncid-0.84/man/ncidtools.1	2012-07-17 18:39:33.037176219 +0200
+@@ -11,13 +11,13 @@
+ - update aliases in the NCID call file
+ .SH SYNOPSIS
+ .B cidcall
+-[-r | -chmo] [callfile]
++[\-r | \-chmo] [callfile]
+ .PP
+ .B cidalias
+-[-r] [aliasfile]
++[\-r] [aliasfile]
+ .PP
+ .B cidupdate
+-[-A aliasfile] [-C callfile] [newcallfile]
++[\-A aliasfile] [\-C callfile] [newcallfile]
+ .SH DESCRIPTION
+ The script,
+ .BR cidcall ,
+@@ -33,29 +33,29 @@
+ .SH "OPTIONS"
+ .PD 0
+ .TP 14
+-.B -r
++.B \-r
+ Display the raw call file or alias definition.
+ .br
+ Default: format the call file or alias definition.
+ .TP
+-.B -c
++.B \-c
+ Display CID lines (incoming calls) in the call file.
+ .TP
+-.B -h
++.B \-h
+ Display HUP lines (terminated calls) in the call file.
+ .TP
+-.B -m
++.B \-m
+ Display MSG lines (messages) in the call file.
+ .TP
+-.B -o
++.B \-o
+ Display OUT lines (outgoing calls) in the call file.
+ .TP
+-.B -A aliasfile
++.B \-A aliasfile
+ Set the alias file to \fIaliasfile\fR
+ .br
+ Default: /etc/ncid/ncidd.alias
+ .TP
+-.B -C callfile
++.B \-C callfile
+ Set the call file to \fIcallfile\fR
+ .br
+ Default: /var/log/cidcall.log
+Index: ncid-0.84/man/sip2ncid.8
+===================================================================
+--- ncid-0.84.orig/man/sip2ncid.8	2012-06-30 21:00:15.000000000 +0200
++++ ncid-0.84/man/sip2ncid.8	2012-07-17 18:39:33.037176219 +0200
+@@ -10,23 +10,23 @@
+ .I Options:
+ .PP
+ .nf
+-[-C <filename>      | --config <filename>]
+-[-D                 | --debug]
+-[-h                 | --help]
+-[-i <interface>     | --interface <interface>]
+-[-l                 | --list]
+-[-L <filename>      | --logfile <filename>]
+-[-n <[host][:port]> | --ncid <[host][:port>]
+-[-P <filename>      | --pidfile <filename>]
+-[-r <dumpfile>      | --readfile <dumpfile>]
+-[-s <[host][:port]> | --sip <[host][:port]>]
+-[-T                 | --testall]
+-[-t                 | --testudp]
+-[-u                 | --usage]
+-[-V                 | --version]
+-[-v <1-9>           | --verbose <1-9>]
+-[-W <1/0>           | --warn <1/0>]
+-[-w <dumpfile>      | --writefile <dumpfile>]
++[\-C <filename>      | \-\-config <filename>]
++[\-D                 | \-\-debug]
++[\-h                 | \-\-help]
++[\-i <interface>     | \-\-interface <interface>]
++[\-l                 | \-\-list]
++[\-L <filename>      | \-\-logfile <filename>]
++[\-n <[host][:port]> | \-\-ncid <[host][:port>]
++[\-P <filename>      | \-\-pidfile <filename>]
++[\-r <dumpfile>      | \-\-readfile <dumpfile>]
++[\-s <[host][:port]> | \-\-sip <[host][:port]>]
++[\-T                 | \-\-testall]
++[\-t                 | \-\-testudp]
++[\-u                 | \-\-usage]
++[\-V                 | \-\-version]
++[\-v <1\-9>           | \-\-verbose <1\-9>]
++[\-W <1/0>           | \-\-warn <1/0>]
++[\-w <dumpfile>      | \-\-writefile <dumpfile>]
+ .fi
+ .SH DESCRIPTION
+ Snoops SIP Invites via libpcap and injects the caller id information
+@@ -41,48 +41,48 @@
+ The configuration file for \fIsip2ncid\fR is /etc/ncid/sip2ncid.conf.
+ .SH "OPTIONS"
+ .TP
+-.B -C <filename> | --config <filename>
++.B \-C <filename> | \-\-config <filename>
+ Configuration file.
+ .br
+ Default: /etc/ncid/sip2ncid.conf
+ .TP
+-.B -D | --debug
++.B \-D | \-\-debug
+ Debug mode, \fIsip2ncid\fR stays attached to the terminal.
+ .TP
+-.B -h | --help
++.B \-h | \-\-help
+ Prints this help
+ .TP
+-.B -i <interface> | --interface=<interface>
++.B \-i <interface> | \-\-interface=<interface>
+ Specifies the network interface to snoop on.  If this is not specified
+ then libpcap will pick a network interface.  This will generally be
+ the first Ethernet interface found.
+ .TP
+-.B -l | --listdevs
++.B \-l | \-\-listdevs
+ Returns a list of all network device names that can be used.
+ .TP
+-.B -L <filename> | --logfile=<filename>
++.B \-L <filename> | \-\-logfile=<filename>
+ Specifies the logfile name to use.  The logfile must exist before it is used.
+ .br
+ Default log filename: /var/log/sip2ncid.log
+ .TP
+-.B -n <[host][:port]> | --ncid=<[host][:port]>
++.B \-n <[host][:port]> | \-\-ncid=<[host][:port]>
+ Specifies the NCID server to connect to.  Port may be specified by
+ suffixing the hostname with <:port>, or if you only want to change the
+ port, just <:port>.  By default it will connect to port 3333 on
+ "127.0.0.1".
+ .TP
+-.B -P <filename> | --pidfile=<filename>
++.B \-P <filename> | \-\-pidfile=<filename>
+ Specifies the pidfile name to write.
+ Set to \fI/var/run/ncidd.pid\fR in a rc or init script when used as a service.
+ The program will still run if it does not have permission to write a pidfile.
+ There is no default.  If pidfile is not set, no pid file will be used.
+ .TP
+-.B -r <dumpfile> | --readfile <dumpfile>
++.B \-r <dumpfile> | \-\-readfile <dumpfile>
+ Read packets from a libpcap capture file instead of the network.
+ This also sets the testudp option, verbose to level 3, and no filter
+ is applied.  Mostly only useful for development and debug purposes.
+ .TP
+-.B -s <[host][:port]> | --sip=<[host][:port]>
++.B \-s <[host][:port]> | \-\-sip=<[host][:port]>
+ Specifies the hostname of the SIP device to snoop.  You may also specify
+ the UDP port by suffixing the hostname with :<port>, or if no hostname
+ is wanted, just <:port>.  If you do not specify a host, it defaults to
+@@ -90,39 +90,39 @@
+ <5061> (Vonage default).  Other Vonage ports are 5060 and 10000.  The
+ new Vonage default appears to be <10000>.
+ .TP
+-.B -T | --testall
++.B \-T | \-\-testall
+ Test for all packets.  This option is used to check for IP packets
+ without starting the NCID server.  It will display a packet count
+ and the packet type.  It will not send any CID data to NCID.
+ It also sets the debug option.
+ .TP
+-.B -t | --testudp
++.B \-t | \-\-testudp
+ Test for SIP packets.  This option is used to check if SIP packets
+ exist without starting the NCID server.  It will display the Caller
+ ID line generated when a call comes in, and a CANCEL line if cancel
+ was generated.  It will not send any CID data to NCID.
+ It also sets the debug option.
+-.B -u | --usage
++.B \-u | \-\-usage
+ Prints this help
+ .TP
+-.B -V | --version
++.B \-V | \-\-version
+ Displays the version
+ .TP
+-.B -v <1-9> | --verbose <1-9>
++.B \-v <1\-9> | \-\-verbose <1\-9>
+ Verbose mode. Send information into the logfile and display information
+-for the -D  option.  Set a higher number for more information.
++for the \-D  option.  Set a higher number for more information.
+ Try LEVEL3 when having a problem.
+ .br
+ To debug, try: verbose = 3
+ .br
+ Default: verbose = 1
+ .TP
+-.B -W <0/1> | --warn <0/1>
++.B \-W <0/1> | \-\-warn <0/1>
+ Send 'No SIP packets' or 'SIP packets returned' messages to clients
+ .br
+ Default: warn = 0
+ .TP
+-.B -w <dumpfile> | --writefile <dumpfile>
++.B \-w <dumpfile> | \-\-writefile <dumpfile>
+ Write packets to a libpcap capture file.
+ This also sets the debug option, verbose to level 3, and no filter
+ is applied.  Mostly only useful for development and debug purposes.
+@@ -145,28 +145,28 @@
+ .SH EXAMPLES
+ .nf
+ # run sip2ncid as root and view status and SIP packets:
+-sip2ncid -Dv3
++sip2ncid \-Dv3
+ 
+ # run sip2ncid as root and list all network device names:
+-sip2ncid --listdevs
++sip2ncid \-\-listdevs
+ 
+ # run sip2ncid as root in test mode to look for SIP packets.
+-sip2ncid --testudp
++sip2ncid \-\-testudp
+ 
+ # run sip2ncid as root in test mode to look for any packets.
+-sip2ncid --testall
++sip2ncid \-\-testall
+ .fi
+ .SH DIAGNOSTICS
+ .nf
+     Return Code    Meaning
+-    -----------    -------
++    \-\-\-\-\-\-\-\-\-\-\-    \-\-\-\-\-\-\-
+          0         Successful
+-      -100         Usage
+-      -101         Invalid port number
+-      -104         Configuration file error
+-      -107         Invalid number
+-      -110         PID file already exists
+-        -?         System error
++      \-100         Usage
++      \-101         Invalid port number
++      \-104         Configuration file error
++      \-107         Invalid number
++      \-110         PID file already exists
++        \-?         System error
+ .fi
+ .SH SEE ALSO
+ sip2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5
+Index: ncid-0.84/man/yac2ncid.1
+===================================================================
+--- ncid-0.84.orig/man/yac2ncid.1	2011-02-28 03:51:51.000000000 +0100
++++ ncid-0.84/man/yac2ncid.1	2012-07-17 18:39:33.037176219 +0200
+@@ -5,7 +5,7 @@
+ - YAC server to NCID server gateway
+ .SH SYNOPSIS
+ .B yac2ncid
+-[-v]
++[\-v]
+ .SH DESCRIPTION
+ .B YAC2NCID
+ acts as a YAC client, listens to the CID information from a YAC server
+@@ -35,13 +35,13 @@
+ NETCAT_TYPE to CUSTOM in the config file and set custom parameters to
+ match your version.
+ .PP
+-There is also a client output module called \fIncid-yac\fR.  It sends
++There is also a client output module called \fIncid\-yac\fR.  It sends
+ the NCID CID information to YAC clients.
+ .PD
+ .SH "OPTIONS"
+ .PD 0
+ .TP 10
+-.B -v
++.B \-v
+ Verbose mode.
+ .PD
+ .PD
+Index: ncid-0.84/man/ncid2ncid.conf.5
+===================================================================
+--- ncid-0.84.orig/man/ncid2ncid.conf.5	2011-02-28 03:49:28.000000000 +0100
++++ ncid-0.84/man/ncid2ncid.conf.5	2012-07-17 18:39:33.037176219 +0200
+@@ -10,7 +10,7 @@
+ The \fIncid2ncid.conf\fR file is used to set options.
+ Options are set on a command line.
+ A line is broken up into words.
+-A word is either a string of non-blank characters, everything
++A word is either a string of non\-blank characters, everything
+ between double quotes, or an equal sign.
+ .PP
+ The \fIncid2ncid.conf\fR file understands 3 types of lines:
+Index: ncid-0.84/man/ncidsip.conf.5
+===================================================================
+--- ncid-0.84.orig/man/ncidsip.conf.5	2011-02-28 03:51:32.000000000 +0100
++++ ncid-0.84/man/ncidsip.conf.5	2012-07-17 18:39:33.037176219 +0200
+@@ -19,17 +19,17 @@
+ .PP
+ There is only one variable to set: args.
+ Args is expected to contain the command line options.  You should not set
+-the "-v|--verbose", "-V|--version", "--debug", or the "-h|--help"  options
++the "\-v|\-\-verbose", "\-V|\-\-version", "\-\-debug", or the "\-h|\-\-help"  options
+ See ncidsip.8 for a complete list of variables to set and
+ what the default values are.
+ .SH EXAMPLES
+ Set the SIP port to 5061
+ .RS 0
+-	args="--sip=:5061"
++	args="\-\-sip=:5061"
+ .RE
+ Set PID file
+ .RS 0
+-	args="--pidfile=/var/run/ncidsip.pid"
++	args="\-\-pidfile=/var/run/ncidsip.pid"
+ .RE
+ .SH SEE ALSO
+ ncidd.8, ncidsip.8, sip2ncid.8
+Index: ncid-0.84/man/ncid.1
+===================================================================
+--- ncid-0.84.orig/man/ncid.1	2011-08-01 02:44:30.000000000 +0200
++++ ncid-0.84/man/ncid.1	2012-07-17 18:39:33.037176219 +0200
+@@ -16,18 +16,18 @@
+ .I Options:\^
+ .PP
+ .nf
+-[--no-gui]
+-[--classic-display        | -C]
+-[--delay <seconds>        | -D <seconds>]
+-[--message                | -M]
+-[--noexit                 | -X]
+-[--program <program name> | -P <program name>]
+-[--pidfile <file name>    | -p <file name>]
+-[--raw                    | -R]
+-[--ring <count>           | -r <count>]
+-[--tivo                   | -T]
+-[--PopupTime <seconds>    | -t <seconds>]
+-[--verbose                | -V]
++[\-\-no-gui]
++[\-\-classic-display        | \-C]
++[\-\-delay <seconds>        | \-D <seconds>]
++[\-\-message                | \-M]
++[\-\-noexit                 | \-X]
++[\-\-program <program name> | \-P <program name>]
++[\-\-pidfile <file name>    | \-p <file name>]
++[\-\-raw                    | \-R]
++[\-\-ring <count>           | \-r <count>]
++[\-\-tivo                   | \-T]
++[\-\-PopupTime <seconds>    | \-t <seconds>]
++[\-\-verbose                | \-V]
+ .fi
+ .PP
+ .I Arguments:\^
+@@ -71,16 +71,16 @@
+ runs on Linux and Windows 98, ME, XP, 2000, NT.  In the GUI mode, it
+ will pop up, and go on top whenever a call comes in.  In addition,
+ it will display itself on whatever desktop is active in Linux.
+-If \fIncid\fR is given the --no-gui option, it will either output
++If \fIncid\fR is given the \-\-no-gui option, it will either output
+ to a external program, output module, or use the verbose mode to
+ display the CID information in a terminal window.
+ .PP
+-If \fIncid\fR is named \fItivocid\fR, it will start in a no-gui mode
++If \fIncid\fR is named \fItivocid\fR, it will start in a no\-gui mode
+ and output to a external program called \fIout2osd\fR which displays
+ the Caller ID on a TV using a TiVo.
+ .PP
+-If \fIncid\fR is named \fItivoncid\fR, it will start in a no-gui mode
+-and output to a module called \fIncid-tivo\fR which displays
++If \fIncid\fR is named \fItivoncid\fR, it will start in a no\-gui mode
++and output to a module called \fIncid\-tivo\fR which displays
+ the Caller ID on a TV using a TiVo.  This option uses the TiVo
+ program, \fItext2osd\fR, instead of \fIout2osd\fR.
+ .PP
+@@ -117,78 +117,78 @@
+ .SH "OPTIONS"
+ .PD 0
+ .TP
+-.B --no-gui
++.B \-\-no-gui
+ Do not display CID information using a GUI
+ .br
+ Default: display CID using a GUI, except if called tivocid
+ .TP
+-.B --classic-display | -C
++.B \-\-classic-display | \-C
+ Ingores all call types except incoming calls (CID:).
+ Displays only incoming calls and messages in the
+ history window.  Ignores outgoing calls and hungup calls.
+ .br
+ Default: Do not display all call types
+ .TP
+-.B --delay SECONDS | -D SECONDS
++.B \-\-delay SECONDS | \-D SECONDS
+ Delay SECONDS between server connection attempts if SECONDS > 0.
+ .br
+ Only one attempt to connect to server if SECONDS = 0.
+ .br
+ Default: 60 seconds
+ .TP
+-.B --message | -M
++.B \-\-message | \-M
+ Send messages to the output modules
+-.B --noexit | -X
++.B \-\-noexit | \-X
+ Configure ncid to to ignore the close window button.
+ .TP
+-.B --pidfile | -p
++.B \-\-pidfile | \-p
+ Name of PID file to create.
+ Set to \fI/var/run/ncid.pid\fR in a rc or init script when used as a service.
+ Set to \fI/var/run/OUTPUTMODULE.pid\fR in a rc or init script when used as
+ a service and when using a output module.
+ There is no default.  If pidfile is not set, no pid file will be used.
+ .TP
+-.B --program PROGRAM | -P PROGRAM
++.B \-\-program PROGRAM | \-P PROGRAM
+ Output the Caller ID information to the external program or output module.
+ PROGRAM is the name of the output module (program) to use.
+ The selected module is sent the Caller ID information.
+-Outgoing call information is also sent if the call-out option is enabled.
++Outgoing call information is also sent if the call\-out option is enabled.
+ A message is also sent, if the message option is enabled.
+ .br
+ Default module PATH: /usr/share/ncid
+ .TP
+-.B --raw | -R
++.B \-\-raw | \-R
+ display data received from the CID Server
+ .br
+ Default: raw data not displayed
+ .TP
+-.B --ring count | -r count
++.B \-\-ring count | \-r count
+ Call output module on specific ring count.
+ .br
+ For modems that indicate RING, count can be: 0 2 3 4 5 6 7 8 9
+ .br
+-For VoIP, using a SIP gateway, count can be: -2 -1
++For VoIP, using a SIP gateway, count can be: \-2 \-1
+ .br
+-A count of -1 indicates a hangup before answer.
++A count of \-1 indicates a hangup before answer.
+ .br
+-A count of -2 indicates a hangup after answer.
++A count of \-2 indicates a hangup after answer.
+ .br
+ Default: output module called as soon as CID received
+ .TP
+-.B --Tivo | -T
++.B \-\-Tivo | \-T
+ This option is for a TiVo using out2osd or text2osd
+ .br
+ Changes output to 2 lines: name number line
+ .br
+ Default output is 5 lines: date time number name line
+ .TP
+-.B --PopupTime seconds | -t seconds
++.B \-\-PopupTime seconds | \-t seconds
+ Time for the popup to stay on top of all windows.
+ Range is 1 second to 99 seconds
+ .br
+ Default popup time os 5 seconds
+ .TP
+-.B --verbose | -V
++.B \-\-verbose | \-V
+ display formatted CID information, including CID log file
+ .br
+ Default: silent
+@@ -213,19 +213,19 @@
+ .SH EXAMPLES
+ .nf
+ # run ncid in a terminal window, server on remote host
+-ncid --no-gui tardis.drwho.home
++ncid \-\-no\-gui tardis.drwho.home
+ 
+ # only speak Caller ID
+-ncid --no-gui --program ncid-speak
++ncid \-\-no\-gui \-\-program ncid\-speak
+ 
+ # send CID output to GUI and speak it
+-ncid --program /usr/local/bin/ncid-speak
++ncid \-\-program /usr/local/bin/ncid\-speak
+ 
+ # send CID output to a cell phone after third ring
+-ncid --no-gui --program ncid-page --ring 3
++ncid \-\-no\-gui \-\-program ncid\-page \-\-ring 3
+ 
+ # send CID output to a cell phone on hangup before answer
+-ncid --no-gui --program ncid-page --ring -1
++ncid \-\-no\-gui \-\-program ncid\-page \-\-ring \-1
+ 
+ # run ncid on a TiVo using out2osd, server on remote host
+ tivocid 192.168.0.1

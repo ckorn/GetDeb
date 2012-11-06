@@ -1,0 +1,57 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## fix_datadir.patch by  Matthias Klumpp <matthias@nlinux.org>
+##
+## DP: Correct the algoscore-driver path
+
+@DPATCH@
+--- ./src/algoscore.c		2008-11-06 14:22:28.000000000 +0100
++++ ./src/algoscore.c		2009-10-29 18:30:56.088655554 +0100
+@@ -220,7 +220,7 @@
+ {
+     FILE* f;
+     struct stat fdat;
+-    char *buf, *script="lib/algoscore-driver.nas";
++    char *buf, *script="/usr/share/algoscore/lib/algoscore-driver.nas";
+     naContext ctx;
+     naRef code, namespace, *args;
+     int errLine, i;
+--- ./lib/algoscore.nas		2008-11-12 19:30:28.000000000 +0100
++++ ./lib/algoscore.nas		2009-10-29 18:38:16.638652634 +0100
+@@ -44,7 +44,7 @@
+     else add_module_path(usr_lib,usr_dir_index);
+ });
+ 
+-var core_class_dir = app_dir~"/classes";
++var core_class_dir = "/usr/share/algoscore/classes";
+ add_module_path(core_class_dir);
+ 
+ #var curr_filename = nil;
+--- ./lib/top_ui.nas		2008-11-06 14:23:09.000000000 +0100
++++ ./lib/top_ui.nas		2009-10-29 18:49:50.000000000 +0100
+@@ -26,7 +26,7 @@
+     if(path!=nil) gtk.rc_parse_string(io.readfile(path));
+ });
+ 
+-gtk.set_default_icon_from_file(app_dir~"/as_icon.png");
++gtk.set_default_icon_from_file("/usr/share/pixmaps/as_icon.png");
+ 
+ import("logwin");
+ import("utils");
+@@ -104,7 +104,7 @@
+ actiongroup.add_action(gtk.Action("name", "HelpMenu", "label", "_Help"));
+ 
+ var open_help = func(fn) {
+-    var uri = "file://"~app_dir~"/Help/"~fn;
++    var uri = "file:///usr/share/doc/algoscore/Help/"~fn;
+     browser.open_uri(uri);
+ }
+ 
+@@ -116,7 +116,7 @@
+ "Public License version 3 or any later version. "
+ "See <tt>COPYING</tt> for details.";
+     var close = func { w.hide(); w.destroy(); }
+-    var img = gtk.Image("file",app_dir~"/as_icon.png");
++    var img = gtk.Image("file","/usr/share/pixmaps/as_icon.png");
+     var w = gtk.Window("title","About AlgoScore","border-width",10);
+     w.connect("delete-event",close);
+     var box = gtk.VBox("spacing",10);

@@ -1,0 +1,27 @@
+Fix DESTDIR support.
+Index: nautilus-flickr-uploader-0.14.2/Makefile
+===================================================================
+--- nautilus-flickr-uploader-0.14.2.orig/Makefile	2012-06-17 21:50:55.000000000 +0200
++++ nautilus-flickr-uploader-0.14.2/Makefile	2012-06-19 12:50:30.006153484 +0200
+@@ -1,4 +1,4 @@
+-DESTDIR=/usr/local
++DESTDIR:=`pwd`/debian/nautilus-flickr-uploader/usr
+ NAME=nautilus-flickr-uploader
+ PERL=`which perl`
+ VERSION=0.14.2
+@@ -7,11 +7,11 @@
+ 	echo Try reading INSTALL file
+ 
+ install: pure_install
+-	sed -i -e "s|-I./lib|-I$(DESTDIR)/share/$(NAME)/lib|g" $(DESTDIR)/bin/$(NAME)
++	sed -i -e "s|-I./lib|-I/usr/share/$(NAME)/lib|g" $(DESTDIR)/bin/$(NAME)
+ 	sed -i -e "s|/usr/bin/perl|$(PERL)|g" $(DESTDIR)/bin/$(NAME)
+-	sed -i -e "s|./UI|$(DESTDIR)/share/$(NAME)/UI|g" $(DESTDIR)/share/$(NAME)/lib/Upload.pm
+-	sed -i -e "s|./UI|$(DESTDIR)/share/$(NAME)/UI|g" $(DESTDIR)/share/$(NAME)/lib/Account.pm
+-	sed -i -e "s|./bin|${DESTDIR}/bin|g" $(DESTDIR)/share/applications/$(NAME).desktop
++	sed -i -e "s|./UI|/usr/share/$(NAME)/UI|g" $(DESTDIR)/share/$(NAME)/lib/Upload.pm
++	sed -i -e "s|./UI|/usr/share/$(NAME)/UI|g" $(DESTDIR)/share/$(NAME)/lib/Account.pm
++	sed -i -e "s|./bin|/usr/bin|g" $(DESTDIR)/share/applications/$(NAME).desktop
+ 
+ pure_install:
+ 	mkdir -p $(DESTDIR)/bin

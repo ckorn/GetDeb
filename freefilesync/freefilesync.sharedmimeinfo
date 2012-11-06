@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+	<mime-type type="application/x-freefilesync-ffs">
+		<comment>FreeFileSync configuration file</comment>
+		<comment xml:lang="fr">Fichier de configuration FreeFileSync</comment>
+		<glob pattern="*.ffs_gui"/>
+	</mime-type>
+	<mime-type type="application/x-freefilesync-real">
+		<comment>RealTimeSync configuration file</comment>
+		<comment xml:lang="fr">Fichier de configuration RealTimeSync</comment>
+		<glob pattern="*.ffs_real"/>
+	</mime-type>
+	<mime-type type="application/x-freefilesync-batch">
+		<comment>FreeFileSync batch file</comment>
+		<comment xml:lang="fr">Fichier de batch FreeFileSync</comment>
+		<glob pattern="*.ffs_batch"/>
+	</mime-type>
+</mime-info>

@@ -1,0 +1,13 @@
+BlueGriffon/bluegriffon-bin		usr/lib/bluegriffon
+BlueGriffon/js				usr/lib/bluegriffon
+BlueGriffon/*.so			usr/lib/bluegriffon
+BlueGriffon/mangle			usr/lib/bluegriffon
+BlueGriffon/mozilla-xremote-client	usr/lib/bluegriffon
+BlueGriffon/nsinstall			usr/lib/bluegriffon
+BlueGriffon/plugin-container		usr/lib/bluegriffon
+BlueGriffon/shlibsign			usr/lib/bluegriffon
+BlueGriffon/updater			usr/lib/bluegriffon
+BlueGriffon/xpcshell			usr/lib/bluegriffon
+debian/scripts/bluegriffon		usr/bin
+debian/bluegriffon.png			usr/share/pixmaps
+debian/bluegriffon.desktop		usr/share/applications

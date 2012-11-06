@@ -1,0 +1,4 @@
+oneteam							usr/share
+oneteam/chrome/icons/default/oneteam.png		usr/share/pixmaps
+debian/oneteam.desktop					usr/share/applications
+debian/scripts/oneteam					usr/bin

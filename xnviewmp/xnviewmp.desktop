@@ -1,0 +1,10 @@
+[Desktop Entry]
+Terminal=false
+Exec=/usr/bin/xnviewmp
+Icon=xnview
+Type=Application
+Categories=Graphics;
+StartupNotify=true
+Name=XnView Multi Platform
+GenericName=XnViewMP
+

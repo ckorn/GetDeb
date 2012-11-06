@@ -1,0 +1,82 @@
+gnaural (1.0.20110606-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Jun 2011 18:57:51 +0200
+
+gnaural (1.0.20110215-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 15:17:25 +0100
+
+gnaural (1.0.20101122-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 11 Dec 2010 17:03:08 +0100
+
+gnaural (1.0.20101115-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 02 Nov 2010 20:54:54 +0100
+
+gnaural (1.0.20100707-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 29 Aug 2010 15:07:11 +0200
+
+gnaural (1.0.20100606-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+  2010-06-02: 
+  (released as version 1.0.20100528)
+  -Added both read and write OGG support (the opensource MP3 equivalent)
+  -Added ability for Linux distros to provide library download, see:
+  https://sourceforge.net/tracker/?func=detail&aid=3002560&group_id=149086&atid=773669
+  -updated the libsnd library for Windows
+  -Added Mono output button
+  -Fixed the About link so it now opens browsers on most platforms
+  -Cleaned up a lot of the audio format handling code
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 22:34:44 +0200
+
+gnaural (1.0.20100408-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    - Changed portaudio buffer sizes so there is no more
+      stuttering in Vista and it also happily compiles to
+      Mac's tiny buffer size
+    - Added "Isochronic Pulses" as a pure patch provided by a
+      user, did no more tinkering to it as it a) worked and b)
+      was remarkably uninvasive in the overall Gnaural concept
+      (which is Binaural Beat).
+    - Added a couple Tools menu items.
+    - Fixed the Anjuta project file to work with newer Anjuta
+      versions, even though i seem to be a die-hard Geany user now.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 19 Apr 2010 22:33:49 +0200
+
+gnaural (1.0.20090808-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+  * Switch to dpkg-source 3.0 (quilt) format
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Sun, 04 Apr 2010 12:23:25 +0000
+
+gnaural (0.4.20070301-1) unstable; urgency=low
+
+  * New upstream release (debian/ directory removed upstream).
+  * debian/patches/01_gcc4-includes-fix.patch: dropped, included upstream.
+
+ -- Lionel Le Folgoc (mr_pouit) <mrpouit@gmail.com>  Fri,  6 Apr 2007 13:31:33 +0200
+
+gnaural (0.3.20060421.debian-1) unstable; urgency=low
+
+  * Initial release (Closes: #409549)
+  * Rebuild upstream tarball to delete debian/ directory.
+  * debian/patches/01_gcc4-includes-fix.patch: fix compilation error.
+
+ -- Lionel Le Folgoc (mr_pouit) <mrpouit@gmail.com>  Thu, 18 Feb 2007 12:57:17 +0100

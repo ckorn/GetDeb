@@ -1,0 +1,39 @@
+Source: ledgersmb
+Section: web
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.ledgersmb.org
+
+Package: ledgersmb
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libdata-dumper-simple-perl,
+         perl-modules,
+         liblocale-maketext-lexicon-perl,
+         libdbi-perl,
+         libdbd-pg-perl,
+         libconfig-any-perl,
+         libmime-lite-perl,
+         libhtml-linkextractor-perl,
+         libnet-tclink-perl,
+         libparse-recdescent-perl,
+         apache2,
+         postgresql,
+         libconfig-std-perl,
+         libclass-std-perl,
+         postgresql-contrib,
+         liberror-perl,
+         liblog-log4perl-perl,
+         libcgi-simple-perl,
+         libtemplate-perl,
+         libfile-mimeinfo-perl
+Description: Financial accounting program
+ LedgerSMB is an open source financial accounting program.
+ As of 1.2, it offers fairly solid AR, AP,
+ and GL tracking as well as inventory control.
+ .
+ For configuration read
+ /usr/share/doc/ledgersmb/README.configuration

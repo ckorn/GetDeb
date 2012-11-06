@@ -1,0 +1,11 @@
+tbo (0.98-1~getdeb2) lucid; urgency=low
+
+  * Remove debian/watch file. Project is dead.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 13 Nov 2011 13:23:22 +0100
+
+tbo (0.98-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #731215)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Mar 2011 19:44:20 +0100

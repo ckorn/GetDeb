@@ -1,0 +1,121 @@
+wiican (0.3.4.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 20 Aug 2012 16:47:38 +0200
+
+wiican (0.3.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 17 Aug 2012 16:48:10 +0200
+
+wiican (0.3.3-1~getdeb2) natty; urgency=low
+
+  * debian/control: Remove hal from runtime depends
+    (LP: #824096)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 10 Aug 2011 20:04:49 +0200
+
+wiican (0.3.3-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Aug 2011 18:38:39 +0200
+
+wiican (0.3.3-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Aug 2011 18:16:49 +0200
+
+wiican (0.3.2-1~getdeb3~natty) natty; urgency=low
+
+  * Rebuild for natty.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 17 Apr 2011 11:01:53 +0200
+
+wiican (0.3.2-1~getdeb2) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 16:20:10 +0100
+
+wiican (0.3.1-1~getdeb2) lucid; urgency=low
+
+  * debian/control: Remove dependeny on python-yaml and add hal.
+  * debian/patches/172_171.diff: Backport changes from upstream (LP: #501342)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 01 Nov 2010 18:07:10 +0100
+
+wiican (0.3.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 27 Oct 2010 18:32:12 +0200
+
+wiican (0.3.0-1~getdeb3) lucid; urgency=low
+
+  * Place wiican.svg in /usr/share/wiican (LP: #501342)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 17 Sep 2010 23:24:12 +0200
+
+wiican (0.3.0-1~getdeb2) lucid; urgency=low
+
+  * debian/control: Depend on python-ply
+  * debian/patches/load_icons.patch:
+    Set the prefix to /usr (LP: #501342)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 14 Sep 2010 18:13:17 +0200
+
+wiican (0.3.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 29 Aug 2010 16:07:27 +0200
+
+wiican (0.2.1-1~getdeb1) lucid; urgency=low
+
+  * Upload to getdeb (LP: #501342)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 22 Apr 2010 11:39:27 +0200
+
+wiican (0.2.1-0ubuntu1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Sat, 02 Jan 2010 09:15:32 +0000
+
+wiican (0.2-0ubuntu3) karmic; urgency=low
+
+  * Initial realese for Ubuntu (LP: #501567)
+  * Separate the upstream code from the packaging stuff
+  * Some lintian clean ups
+
+ -- Juanje Ojeda Croissier <jojeda@emergya.es>  Wed, 30 Dec 2009 07:32:11 +0000
+
+wiican (0.2-0ubuntu2) karmic; urgency=low
+
+  * Bugfix on upstart job config file
+
+ -- J. Félix Ontañón <felixonta@gmail.com>  Mon, 28 Dec 2009 23:46:52 +0100
+
+wiican (0.2-0ubuntu1) karmic; urgency=low
+
+  * Packaged new version
+
+ -- J. Félix Ontañón <felixonta@gmail.com>  Mon, 28 Dec 2009 22:52:34 +0100
+
+wiican (0.1.1-2) karmic; urgency=low
+
+  * Ported to karmic
+  * Added upstart job for loading uinput with right perms
+
+ -- J. Félix Ontañón <felixonta@gmail.com>  Mon, 28 Dec 2009 13:01:11 +0100
+
+wiican (0.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #5)
+
+ -- J. Félix Ontañón <felixonta@gmail.com>  Sat, 28 Mar 2009 14:00:45 +0100
+

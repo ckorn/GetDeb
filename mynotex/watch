@@ -1,0 +1,3 @@
+version=3
+https://sites.google.com/site/mynotex/files \
+    (?:.*/)?executable_mynotex-amd64_([\d\.]+)\.tar\.gz(?:\?.*)?

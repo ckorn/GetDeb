@@ -1,0 +1,43 @@
+Source: sphlib
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), qt4-qmake,
+ libqt4-dev
+Standards-Version: 3.9.1
+Section: libs
+Homepage: http://www.saphir2.com/sphlib/
+
+Package: libsph-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libsph1 (= ${binary:Version})
+Description: Set of implementations of various hash functions (header files)
+ Sphlib is a set of implementations of various hash functions.
+ The C code is meant to be easily imported into other projects,
+ in particular embedded systems.
+ .
+ (This package contains the development files).
+
+Package: libsph1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Set of implementations of various hash functions (shared library)
+ Sphlib is a set of implementations of various hash functions.
+ The C code is meant to be easily imported into other projects,
+ in particular embedded systems.
+ .
+ (This package contains the shared library).
+
+
+Package: sph
+Section: utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Set of implementations of various hash functions
+ Sphlib is a set of implementations of various hash functions.
+ The C code is meant to be easily imported into other projects,
+ in particular embedded systems.
+ The C source code also provides two standalone tools:
+ .
+  - sphspeed performs speed tests on various hash functions
+  - sphsum computes and verifies checksums over files

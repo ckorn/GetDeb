@@ -1,0 +1,16 @@
+There should be code under an if.
+Index: tvpvrd-4.4.0/src/etc/templates/startup.sh.template
+===================================================================
+--- tvpvrd-4.4.0.orig/src/etc/templates/startup.sh.template	2012-03-18 23:01:16.000000000 +0100
++++ tvpvrd-4.4.0/src/etc/templates/startup.sh.template	2012-09-25 18:35:23.525725898 +0200
+@@ -47,8 +47,9 @@
+ # in the base directory as an indication. After the daemon has run
+ # the startup script any such file will be deleted
+ #-------------------------------------------------------------------
+-if test "$autoshutdown" = "yes"; then
++if test "$autoshutdown" = "yes" ; then
+     # Actions only done when the daemon was automatically shutdown
++    echo "autoshutdown=yes"
+ fi
+ 
+ # Normal exit from the script. In case of error use "exit 1"

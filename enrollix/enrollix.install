@@ -1,0 +1,3 @@
+enrollix		usr/bin
+debian/enrollix.desktop	usr/share/applications
+debian/enrollix.png	usr/share/pixmaps

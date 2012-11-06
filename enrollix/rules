@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+ifeq ($(DEB_BUILD_ARCH),amd64)
+ARCH:=x86_64-linux
+else
+ARCH:=i386-linux
+endif
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf sqlite lazreport
+	rm -f *.or *.o *.ppu enrollix
+
+override_dh_auto_build:
+	cp -a /usr/lib/lazarus/0.9.30.2/components/lazreport/source/ lazreport
+	cp -a /usr/lib/lazarus/0.9.30.2/components/sqlite .
+	fpc -MObjFPC -Scghi -O1 -gl -vewnhi -l -Fu./sqlite/ -Fu./lazreport/ -Fu/usr/lib/lazarus/0.9.30.2/components/sqlite/lib/$(ARCH)/gtk2 \
+	 -Fu/usr/lib/lazarus/0.9.30.2/components/lazreport/source/lib/$(ARCH) -Fu/usr/lib/lazarus/0.9.30.2/components/printers/lib/$(ARCH)/gtk2 \
+	 -Fu/usr/lib/lazarus/0.9.30.2/components/synedit/units/$(ARCH) -Fu/usr/lib/lazarus/0.9.30.2/ideintf/units/$(ARCH) \
+	 -Fu/usr/lib/lazarus/0.9.30.2/lcl/units/$(ARCH) -Fu/usr/lib/lazarus/0.9.30.2/lcl/units/$(ARCH)/gtk2 \
+	 -Fu/usr/lib/lazarus/0.9.30.2/packager/units/$(ARCH) -Fu. -oenrollix -dLCL -dLCLgtk2 enrollix.lpr

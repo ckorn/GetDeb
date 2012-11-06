@@ -1,0 +1,14 @@
+Fix a typo.
+Index: chmsee-1.3.1.1/src/chmsee.c
+===================================================================
+--- chmsee-1.3.1.1.orig/src/chmsee.c	2012-05-05 14:16:19.795033219 +0200
++++ chmsee-1.3.1.1/src/chmsee.c	2012-05-05 14:25:03.075017652 +0200
+@@ -424,7 +424,7 @@
+ static void
+ book_html_changed_cb(Chmsee *self, CsBook *book)
+ {
+-        g_debug("Chmsee >>> recieve html_changed signal");
++        g_debug("Chmsee >>> receive html_changed signal");
+ 
+         ChmseePrivate *priv = CHMSEE_GET_PRIVATE (self);
+ 

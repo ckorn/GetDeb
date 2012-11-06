@@ -1,0 +1,19 @@
+Use correct directory.
+Index: storybook-4.0.8/storybook
+===================================================================
+--- storybook-4.0.8.orig/storybook	2012-09-15 13:05:45.030774034 +0200
++++ storybook-4.0.8/storybook	2012-09-15 13:17:19.850768102 +0200
+@@ -1,11 +1,10 @@
+-
+ #!/bin/sh
+ 
+ echo "Java VM version:"
+ java -version
+ 
+ echo "starting Storybook 4 ..."
+-cd /home/korn/opt/storybook4
++cd /usr/share/storybook
+ java -Dfile.encoding=UTF-8 -splash:splash.png -XX:MaxPermSize=256m -Xmx400m -jar lib/storybook.jar $*
+-echo "done."
++[ $? != 0 ] || echo "done."
+ 

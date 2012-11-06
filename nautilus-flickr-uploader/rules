@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	$(MAKE) install
+
+override_dh_installchangelogs:
+	dh_installchangelogs Changes

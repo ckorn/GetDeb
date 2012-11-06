@@ -1,0 +1,5 @@
+bin/xvst				usr/lib/xvst
+debian/scripts/xvst			usr/bin
+debian/xvst.desktop			usr/share/applications
+debian/xvst.xpm				usr/share/pixmaps
+resources/services/*/*.js		usr/share/xvst/plugins

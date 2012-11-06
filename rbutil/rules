@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+export DH_OPTIONS := -O--sourcedirectory=rbutil
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean
+	rm -rf rbutil/rbutilqt/build
+	$(MAKE) -C rbutil/mkamsboot clean
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p debian/rbutil/usr/bin
+	mv -f debian/tmp/usr/local/bin/RockboxUtility debian/rbutil/usr/bin
+
+override_dh_strip:
+	dh_strip --dbg-package=rbutil-dbg

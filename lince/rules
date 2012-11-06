@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+ifneq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
+CROSS= --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
+else
+CROSS= --build $(DEB_BUILD_GNU_TYPE)
+endif
+
+%:
+	dh $@ --parallel --with python2
+
+override_dh_auto_configure:
+	# Add here commands to configure the package.
+ifneq "$(wildcard /usr/share/misc/config.sub)" ""
+	cp -f /usr/share/misc/config.sub config.sub
+endif
+ifneq "$(wildcard /usr/share/misc/config.guess)" ""
+	cp -f /usr/share/misc/config.guess config.guess
+endif
+	dh_auto_configure -- $(CROSS) LDFLAGS="-Wl,-z,--as-needed"
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog
+
+override_dh_install:
+	dh_install --list-missing
+
+	rm -f debian/lince/usr/share/doc/lince/COPYING
+	rm -f debian/lince/usr/share/doc/lince/INSTALL
+	rm -f debian/lince/usr/share/doc/lince/NEWS
+
+override_dh_strip:
+	dh_strip --dbg-package=lince-dbg

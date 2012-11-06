@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=RealtimeSync
+_Comment=Start synchronization in real time
+Exec=RealtimeSync %f
+Terminal=false
+Type=Application
+Icon=realtimesync
+Categories=Utility;FileTools;GTK;
+MimeType=application/x-freefilesync-real
+StartupNotify=true

@@ -1,0 +1,14 @@
+Source: jdiskreport
+Section: utils
+Priority: optional
+Maintainer: Joao Pinto <joao.pinto@getdeb.net>
+Build-Depends: cdbs, debhelper (>= 7.0.50~), unzip
+Standards-Version: 3.8.4
+Homepage: http://www.jgoodies.com/freeware/jdiskreport/
+
+Package: jdiskreport
+Architecture: all
+Depends: ${misc:Depends}, openjdk-6-jre | java-runtime
+Description: Disk space usage reporting tool
+ JDiskReport enables you to understand how much space the files and directories
+ consume on your disk drives, and it helps you find obsolete files and folders.

@@ -1,0 +1,15 @@
+Source: sqlrunner
+Section: database
+Priority: optional
+Maintainer: Joao Pinto <joao.pinto@getdeb.net>
+Build-Depends: cdbs, debhelper (>= 7.0.50~), unzip
+Standards-Version: 3.9.1
+
+Package: sqlrunner
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | java-runtime
+Description: Java developer's oriented JDBC client
+ You can build, test and run select, update and DML statements 
+ (also callable statements with out put parameters) and export or import data 
+ in/from csv-files or XML.
+

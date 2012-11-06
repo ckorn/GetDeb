@@ -1,0 +1,5 @@
+skunkdav (1.0.2.4-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #486840)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Nov 2009 23:56:09 +0100

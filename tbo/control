@@ -1,0 +1,17 @@
+Source: tbo
+Section: gnome
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev,
+ libgtk2.0-dev, libglib2.0-dev, librsvg2-dev, libcairo2-dev
+Standards-Version: 3.9.1
+Homepage: http://trac.danigm.net/tbo/
+Vcs-Git: git://git.gnome.org/tbo
+Vcs-Browser: http://git.gnome.org/browse/tbo
+
+Package: tbo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Gnome comic creator
+ Easy and fun program to draw comic
+ and make your presentations funnier.

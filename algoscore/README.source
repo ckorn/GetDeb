@@ -1,0 +1,7 @@
+The Debian Package algoscore
+----------------------------
+
+ Some patches apply to make Algoscore load the right files from /usr/share/algoscore
+ The C code and NAS code is patched.
+
+ -- Matthias Klumpp <matthias@nlinux.org>  Tue, 29 Okt 2009 19:14:20 +0100

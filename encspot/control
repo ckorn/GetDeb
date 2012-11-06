@@ -1,0 +1,16 @@
+Source: encspot
+Section: sound
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 5), quilt
+Standards-Version: 3.8.3
+
+Package: encspot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: MPEG analyzer to determine sound file quality
+ An MPEG analyzer to determine sound file quality.
+ .
+ well, not EXACTLY quality, more like "determine codec used
+ to generate sound file" which usually results in determining
+ quality indirectly.

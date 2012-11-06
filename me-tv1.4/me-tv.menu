@@ -1,0 +1,7 @@
+?package(me-tv):\
+	needs="x11"\
+	hints="Video"\
+	icon="me-tv.xpm"\
+	section="Applications/Viewers"\
+	title="Me TV"\
+	command="/usr/bin/me-tv-client"

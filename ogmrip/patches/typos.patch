@@ -1,0 +1,14 @@
+Fix typos.
+Index: ogmrip-0.13.8/avibox/avilib.c
+===================================================================
+--- ogmrip-0.13.8.orig/avibox/avilib.c	2010-08-22 12:38:28.000000000 +0200
++++ ogmrip-0.13.8/avibox/avilib.c	2012-06-14 14:41:06.917703199 +0200
+@@ -3198,7 +3198,7 @@
+   /* 12 */ "avilib - AVI file has no video data",
+   /* 13 */ "avilib - operation needs an index",
+   /* 14 */ "avilib - destination buffer is too small",
+-  /* 15 */ "avilib - Unkown Error"
++  /* 15 */ "avilib - Unknown Error"
+ };
+ static int num_avi_errors = sizeof(avi_errors)/sizeof(char*);
+ 

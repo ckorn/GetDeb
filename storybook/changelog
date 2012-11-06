@@ -1,0 +1,29 @@
+storybook (4.0.9-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 04 Oct 2012 21:28:36 +0200
+
+storybook (4.0.8-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Sep 2012 13:09:56 +0200
+
+storybook (4.0.7-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #1037310)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 16 Aug 2012 14:24:11 +0200
+
+storybook (3.2.0-1~getdeb2) precise; urgency=low
+
+  * Correct manifest file.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 15 Aug 2012 17:51:22 +0200
+
+storybook (3.2.0-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #869009)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 05 Dec 2011 19:32:44 +0100

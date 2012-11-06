@@ -1,0 +1,13 @@
+Makefile.in
+aclocal.m4
+client/Makefile.in
+common/Makefile.in
+config.h.in
+configure
+console/Makefile.in
+depcomp
+install-sh
+missing
+mkinstalldirs
+po/Makefile.in.in
+server/Makefile.in

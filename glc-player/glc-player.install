@@ -1,0 +1,3 @@
+glc_player				usr/bin
+debian/glc-player.xpm			usr/share/pixmaps
+debian/glc-player.desktop		usr/share/applications

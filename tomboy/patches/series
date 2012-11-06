@@ -1,0 +1,10 @@
+01_dllmaps.patch
+02_sync_save_button_sensitive.patch
+03_u1_as_default_sync.patch
+04_app_indicator.patch
+05_add_start_u1_note.patch
+#06_use_ubuntu_sso.patch
+20_remove_pcfile_requires
+30_fix_manpage_syntax
+31_prevent_inadvertent_deletion_of_notes.patch
+40_use_gmime_2.6.patch

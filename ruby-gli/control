@@ -1,0 +1,22 @@
+Source: ruby-gli
+Section: ruby
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Christoph Korn <christoph.korn@getdeb.net>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 9),
+               gem2deb (>= 0.2.6~)
+Standards-Version: 3.9.3
+Homepage: http://davetron5000.github.com/gli
+XS-Ruby-Versions: all
+
+Package: ruby-gli
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ruby | ruby-interpreter
+Description: Git Like Interface for building command line apps
+ Application and API for describing command line interfaces that can
+ be used to quickly create a shell for executing command-line tasks.
+ The command line user interface is similar to Gits, in that it takes
+ global options, a command, command-specific options, and arguments

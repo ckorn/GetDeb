@@ -1,0 +1,23 @@
+xautoclick (0.31-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    * fix compiler check
+    * fix missing include (qt4 gui)
+    * fix linking of fltk version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 05 Apr 2012 20:28:07 +0200
+
+xautoclick (0.30-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #836971)
+    * source code cleaned up
+    * added Qt 4 GUI
+    * added FLTK GUI
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 30 Aug 2011 15:22:27 +0200
+
+xautoclick (0.20-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #569746)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 25 Apr 2010 18:39:19 +0200

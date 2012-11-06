@@ -1,0 +1,178 @@
+Update plugin.
+Index: xvst-2.4.1/resources/services/clipfish/clipfish.js
+===================================================================
+--- xvst-2.4.1.orig/resources/services/clipfish/clipfish.js	2012-01-16 21:05:00.685971294 +0100
++++ xvst-2.4.1/resources/services/clipfish/clipfish.js	2012-01-16 21:05:23.517972163 +0100
+@@ -3,7 +3,7 @@
+ * This file is part of xVideoServiceThief,
+ * an open-source cross-platform Video service download
+ *
+-* Copyright (C) 2007 - 2009 Xesc & Technology
++* Copyright (C) 2007 - 2012 Xesc & Technology
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+@@ -25,9 +25,9 @@
+ 
+ function RegistVideoService()
+ {
+-	this.version = "2.0.1";
++	this.version = "2.0.2";
+ 	this.minVersion = "2.0.0a";
+-	this.author = "Xesc & Technology 2009";
++	this.author = "Xesc & Technology 2012";
+ 	this.website = "http://www.clipfish.de/";
+ 	this.ID = "clipfish.de";
+ 	this.caption = "Clipfish";
+@@ -57,6 +57,8 @@
+ 
+ //http://www.clipfish.de/suche/?search=Will+Smith
+ //http://www.clipfish.de/suche/Will+Smith/video/bestertreffer/2/listenansicht/?search=Will%20Smith
++
++
+ function searchVideos(keyWord, pageIndex)
+ {
+ 	const URL_SEARCH = "http://www.clipfish.de/suche/%1/video/bestertreffer/%2/listenansicht/?search=%1";
+@@ -72,18 +74,16 @@
+ 	var http = new Http();
+ 	var html = http.downloadWebpage(strFormat(URL_SEARCH, keyWord, pageIndex));
+ 	// access denied?
+-	if (strIndexOf(htmlResults, HTML_ACCESS_DENIED) != -1)
+-		return searchResults;
++	if (strIndexOf(htmlResults, HTML_ACCESS_DENIED) != -1) return searchResults;
+ 	// get the search summary
+ 	var tmp = copyBetween(html, '>Deine Suche nach', 'Treffer ergeben.');
+-	var summary = "Deine Suche nach " + cleanwhitespace(cleartags(tmp,1)) + ' Treffer ergeben.';
++	var summary = "Deine Suche nach " + cleanwhitespace(cleartags(tmp, 1)) + ' Treffer ergeben.';
+ 	var tmp = copyBetween(html, "Suchergebnisse", "</span></span>");
+-	var summary = summary + " (" + cleanwhitespace(cleartags(tmp,1)) + ")";
++	var summary = summary + " (" + cleanwhitespace(cleartags(tmp, 1)) + ")";
+ 	searchResults.setSummary(summary);
+ 	// get results html block
+ 	var htmlResults = copyBetween(html, HTML_SEARCH_START, HTML_SEARCH_FINISH);
+-	if (strIndexOf(htmlResults,HTML_SEARCH_SEPARATOR) != -1) 
+-		htmlResults = strRemove(htmlResults, 0, strIndexOf(htmlResults,HTML_SEARCH_SEPARATOR));
++	if (strIndexOf(htmlResults, HTML_SEARCH_SEPARATOR) != -1) htmlResults = strRemove(htmlResults, 0, strIndexOf(htmlResults, HTML_SEARCH_SEPARATOR));
+ 	// if we found some results then...
+ 	if (htmlResults != "")
+ 	{
+@@ -109,16 +109,16 @@
+ 	// get video url
+ 	videoUrl = VIDEO_URL + copyBetween(html, '<a href="', '"');
+ 	// get title and image url
+-	title = trim(copyBetween(html, 'title="', '"')," ");
++	title = trim(copyBetween(html, 'title="', '"'), " ");
+ 	imageUrl = copyBetween(html, '<img src="', '"');
+ 	//if (strIndexOf(imageUrl, "default.jpg") == -1) // if is not a "default.jpg"...
+ 	//	imageUrl = copyBetween(tmp, 'thumb="', '"');
+ 	// get video description
+-	tmp = copyBetween(html, '<div class="cf-video-list-item-info cf-gray">', '</div>') ;
+-	description = trim(cleartags(copyBetween(tmp,"<p>","</p>"),0)," ");
+-	description = (strIndexOf(description,"Video-L&auml;nge:") == -1 ? description : "Keine Beschreibung vorhanden.");
++	tmp = copyBetween(html, '<div class="cf-video-list-item-info cf-gray">', '</div>');
++	description = trim(cleartags(copyBetween(tmp, "<p>", "</p>"), 0), " ");
++	description = (strIndexOf(description, "Video-L&auml;nge:") == -1 ? description : "Keine Beschreibung vorhanden.");
+ 	// get video duration
+-	duration = convertToSeconds(trim(cleartags(copyBetween(tmp, "Video-L&auml;nge:", '</span>'),0)," "));
++	duration = convertToSeconds(trim(cleartags(copyBetween(tmp, "Video-L&auml;nge:", '</span>'), 0), " "));
+ 	// get rating
+ 	rating = getrating(copyBetween(html, '<div class="cf-voting-fishes">', '</div>'));
+ 	// add to results list
+@@ -131,12 +131,12 @@
+ 	var i = 1
+ 	while (i < 6)
+ 	{
+-		var part = getToken(text, '<img',i);
+-		if (strIndexOf(part,"cf-voting-fish-full") != -1)
++		var part = getToken(text, '<img', i);
++		if (strIndexOf(part, "cf-voting-fish-full") != -1)
+ 		{
+ 			rating = rating + 1
+ 		}
+-		if (strIndexOf(part,"cf-voting-fish-half") != -1)
++		if (strIndexOf(part, "cf-voting-fish-half") != -1)
+ 		{
+ 			rating = rating + 0.5
+ 		}
+@@ -147,30 +147,33 @@
+ 
+ function cleanwhitespace(text)
+ {
+-	text = trim(text," ");
+-	text = trim(text,"	");
+-	text = cleandoublevalue(text," ");
+-	text = cleandoublevalue(text,"	");
+-	text = strReplace(text,"\n","");
+-	text = strReplace(text,"\r","");
++	text = trim(text, " ");
++	text = trim(text, "	");
++	text = cleandoublevalue(text, " ");
++	text = cleandoublevalue(text, "	");
++	text = strReplace(text, "\n", "");
++	text = strReplace(text, "\r", "");
+ 	return text;
+ }
+ 
+-function trim(text,value)
++function trim(text, value)
+ {
+-	while(strIndexOf(text,value) == 0) {
+-		text = strRemove(text,0,1);
++	while (strIndexOf(text, value) == 0)
++	{
++		text = strRemove(text, 0, 1);
+ 	}
+-	while(strLastIndexOf(text,value,-1) == text.toString().length - 1) {
+-		text = strRemove(text,text.toString().length - 1,1);
++	while (strLastIndexOf(text, value, -1) == text.toString().length - 1 && text != "")
++	{
++		text = strRemove(text, text.toString().length - 1, 1);
+ 	}
+ 	return text;
+ }
+ 
+-function cleandoublevalue(text,value)
++function cleandoublevalue(text, value)
+ {
+-	while (strIndexOf(text,value+value) != -1) {
+-		text = strReplace(text,value+value,value);
++	while (strIndexOf(text, value + value) != -1)
++	{
++		text = strReplace(text, value + value, value);
+ 	}
+ 	return text;
+ }
+@@ -178,19 +181,23 @@
+ function cleartags(text, killopen)
+ {
+ 	var cleartext = text
+-	if (killopen==1) {
+-		if (strIndexOf(cleartext,">") < strIndexOf(cleartext,"<")) {
+-			cleartext = strRemove(cleartext,0,strIndexOf(cleartext,">")+1);
++	if (killopen == 1)
++	{
++		if (strIndexOf(cleartext, ">") < strIndexOf(cleartext, "<"))
++		{
++			cleartext = strRemove(cleartext, 0, strIndexOf(cleartext, ">") + 1);
+ 		}
+-		if (strLastIndexOf(cleartext,">",-1) < strLastIndexOf(cleartext,"<",-1)) {
+-			var tmp = strLastIndexOf(cleartext,"<",-1);
+-			cleartext = strRemove(cleartext,tmp,cleartext.toString().length-tmp);
++		if (strLastIndexOf(cleartext, ">", -1) < strLastIndexOf(cleartext, "<", -1))
++		{
++			var tmp = strLastIndexOf(cleartext, "<", -1);
++			cleartext = strRemove(cleartext, tmp, cleartext.toString().length - tmp);
+ 		}
+ 	}
+-	while (strIndexOf(cleartext,">") != -1 && strIndexOf(cleartext,"<") != -1) {
+-		var start = strIndexOf(cleartext,"<");
+-		var stop = strIndexOf(cleartext,">");
+-		cleartext = strRemove(cleartext,start,stop-start+1);
++	while (strIndexOf(cleartext, ">") != -1 && strIndexOf(cleartext, "<") != -1)
++	{
++		var start = strIndexOf(cleartext, "<");
++		var stop = strIndexOf(cleartext, ">");
++		cleartext = strRemove(cleartext, start, stop - start + 1);
+ 	}
+ 	return cleartext;
+ }

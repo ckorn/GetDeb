@@ -1,0 +1,41 @@
+hashmonster (0.2.7-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 29 Aug 2011 18:53:44 +0200
+
+hashmonster (0.2.6.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 13 Jul 2011 19:08:43 +0200
+
+hashmonster (0.2.6.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Jun 2011 23:16:03 +0200
+
+hashmonster (0.2.6-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #800919)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 23 Jun 2011 11:24:18 +0200
+
+hashmonster (0.2.5-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #791574)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 02 Jun 2011 09:09:57 +0200
+
+hashmonster (0.2.4-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #786003)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 May 2011 12:30:20 +0200
+
+hashmonster (0.2.3-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #782693)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 May 2011 21:32:35 +0200

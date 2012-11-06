@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Mobile Media Converter
+Exec=mmediac
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;

@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir /tmp/$$
+cd /tmp/$$
+/etc/alternatives/java -cp /usr/share/argouml -jar /usr/share/argouml//argouml.jar

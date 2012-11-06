@@ -1,0 +1,23 @@
+Do not check for updates.
+Index: rbutil-1.3.0/rbutil/rbutilqt/rbutilqt.cpp
+===================================================================
+--- rbutil-1.3.0.orig/rbutil/rbutilqt/rbutilqt.cpp	2012-09-02 20:26:01.000000000 +0200
++++ rbutil-1.3.0/rbutil/rbutilqt/rbutilqt.cpp	2012-09-23 14:04:04.171531815 +0200
+@@ -648,7 +648,7 @@
+ 
+ void RbUtilQt::downloadUpdateDone(bool error)
+ {
+-    if(error) {
++/*    if(error) {
+         qDebug() << "[RbUtil] network error:" << update->error();
+     }
+     else {
+@@ -716,7 +716,7 @@
+         else {
+             ui.statusbar->showMessage(tr("Rockbox Utility is up to date."), 5000);
+         }
+-    }
++    }*/
+ }
+ 
+ 

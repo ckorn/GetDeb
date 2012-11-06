@@ -1,0 +1,16 @@
+Source: skunkdav
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.8.3
+Homepage: http://sourceforge.net/projects/skunkdav/
+
+Package: skunkdav
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common
+Description: WebDAV Client
+ A WebDAV browser and remote file editing framework written in Java,
+ including an RFC-2518-compliant WEBDAV client library with optional
+ SSL support, a low-level DAV command-line client (written in JPython),
+ and a built-in text editing component.

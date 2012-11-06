@@ -1,0 +1,5 @@
+debian/avidemux2.6-qt.desktop		usr/share/applications
+debian/avidemux2.6-qt.xpm		usr/share/pixmaps
+usr/bin/avidemux3_qt4
+usr/lib/libADM_UIQT46.so
+usr/lib/libADM_render6_qt4.so

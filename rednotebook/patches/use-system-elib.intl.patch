@@ -1,0 +1,27 @@
+Description: use the system copy of elib.intl
+Author: Jonathan Wiltshire <jmw@debian.org>
+Forwarded: no
+Last-Update: 2011-08-09
+
+Index: rednotebook-1.5.0/rednotebook/journal.py
+===================================================================
+--- rednotebook-1.5.0.orig/rednotebook/journal.py	2012-06-21 11:22:41.000000000 +0200
++++ rednotebook-1.5.0/rednotebook/journal.py	2012-07-20 19:32:48.445663358 +0200
+@@ -47,7 +47,7 @@
+ 
+ ## ---------------------- Enable i18n -------------------------------
+ 
+-from rednotebook.external import elibintl
++import elib.intl
+ 
+ # We need to translate 3 different types of strings:
+ # * sourcecode strings
+@@ -61,7 +61,7 @@
+ 
+ # Register _() as a global translation function and set up the translation
+ try:
+-    elibintl.install(GETTEXT_DOMAIN, LOCALE_PATH)
++    elib.intl.install(GETTEXT_DOMAIN, LOCALE_PATH)
+ except locale.Error, err:
+     # unsupported locale setting
+     logging.error('Locale could not be set: "%s"' %  err)

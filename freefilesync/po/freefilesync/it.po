@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-30 10:45+0000\n"
+"PO-Revision-Date: 2010-08-07 15:14+0000\n"
+"Last-Translator: Emmo <Unknown>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-01-31 05:19+0000\n"
+"X-Generator: Launchpad (build 14734)\n"
+
+#: realtimesync.desktop.in:3
+msgid "Start synchronization in real time"
+msgstr "Lancia sincronizzazione in tempo reale"
+
+#: freefilesync.desktop.in:2
+msgid "FreeFileSync"
+msgstr "FreeFileSync"
+
+#: freefilesync.desktop.in:3
+msgid "Keep files and folders synchronized"
+msgstr "Mantieni file e cartelle sincronizzati"

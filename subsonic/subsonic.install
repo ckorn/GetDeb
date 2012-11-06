@@ -1,0 +1,4 @@
+debian/etc/default			etc
+debian/etc/init.d			etc
+*.sh *.jar *.war			usr/share/subsonic
+debian/scripts/subsonic			usr/bin

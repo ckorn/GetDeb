@@ -1,0 +1,3 @@
+*.jar			usr/share/jnetmap
+debian/scripts/*	usr/bin
+debian/*.desktop	usr/share/applications

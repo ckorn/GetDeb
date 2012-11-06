@@ -1,0 +1,59 @@
+wxhexeditor (0.20-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Mar 2012 15:43:30 +0100
+
+wxhexeditor (0.11-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Jun 2011 18:53:19 +0200
+
+wxhexeditor (0.10-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Mar 2011 13:38:54 +0100
+
+wxhexeditor (0.09-1~getdeb2) lucid; urgency=low
+
+  * Recompile for wx changes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Sep 2010 17:59:38 +0200
+
+wxhexeditor (0.09-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 24 Apr 2010 18:41:24 +0200
+
+wxhexeditor (0.8-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 13:33:37 +0100
+
+wxhexeditor (0.7+svn20091107-1~getdeb3) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 13:29:24 +0100
+
+wxhexeditor (0.7+svn20091107-1~getdeb2) karmic; urgency=low
+
+  * Rebuild to link against current wx version.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Nov 2009 15:46:51 +0100
+
+wxhexeditor (0.7+svn20091107-1~getdeb1) jaunty; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Sat, 07 Nov 2009 17:25:37 +0000
+
+wxhexeditor (0.07-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #455707)
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 20 Oct 2009 00:13:02 +0200

@@ -1,0 +1,4 @@
+2ManDVD				usr/lib/2ManDVD
+Interface/mandvd.png		usr/share/pixmaps
+debian/2ManDVD.desktop		usr/share/applications
+debian/scripts/2ManDVD		usr/bin

@@ -1,0 +1,3 @@
+*.jar			usr/share/hartmath
+debian/scripts/hartmath	usr/bin
+debian/hartmath.desktop	usr/share/application

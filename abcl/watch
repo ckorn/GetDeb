@@ -1,0 +1,3 @@
+version=3
+http://common-lisp.net/project/armedbear/ \
+    (?:.*/)?abcl-bin-([\d\.]+)\.tar\.gz

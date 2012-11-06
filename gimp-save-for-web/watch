@@ -1,0 +1,3 @@
+version=3
+http://registry.gimp.org/node/33 \
+    (?:.*/)?gimp-save-for-web-([\d\.]+)\.tar\.bz2

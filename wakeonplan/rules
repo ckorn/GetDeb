@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+%:
+ifneq ($(shell dh -l | grep -xF translations),)
+	dh $@ --with python2,translations
+else
+	dh $@ --with python2
+endif
+
+override_dh_auto_install:
+	dh_auto_install -- --install-scripts=/usr/share/wakeonplan                 --install-data=/usr/share/wakeonplan                 --install-lib=/usr/share/wakeonplan
+
+override_dh_python2:
+	dh_python2 /usr/share/wakeonplan
+
+
+override_dh_install:
+	dh_install
+	if [ -d debian/wakeonplan/usr/sharem/wakeonplan/share/glib-2.0/schemas ]; then glib-compile-schemas debian/wakeonplan/usr/share/wakeonplan/share/glib-2.0/schemas; fi
+	mv debian/wakeonplan/usr/share/wakeonplan/wakeonplan/wakeonplan debian/wakeonplan/usr/bin/wakeonplan
+	for d in applications doc glib-2.0 gnome ; do \
+	    mv debian/wakeonplan/usr/share/wakeonplan/share/$$d debian/wakeonplan/usr/share ; \
+	done
+	mv debian/wakeonplan/usr/share/wakeonplan/share/wakeonplan/* debian/wakeonplan/usr/share/wakeonplan
+	find debian/wakeonplan/usr -type d -empty -delete

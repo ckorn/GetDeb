@@ -1,0 +1,22 @@
+Source: hashmonster
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, libboost-all-dev,
+ libqca2-dev, libsph-dev, libmhash-dev, librhash-dev
+Standards-Version: 3.9.1
+Homepage: http://hashmonster.sourceforge.net/
+
+Package: hashmonster
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-xml, libqt4-dbus,
+ libqca2-plugin-ossl
+Description: Simple gui to generate and compare hashes
+ Features:
+  * Supports md2, md4, md5, ripemd160, sha0, sha1, sha224,
+    sha256, sha384 and sha512 hashes
+  * Includes a progress dialog to keep track of the
+    percentage completed when calculating hashes
+  * Generate and compare hashes for single files or strings
+  * Batch generate, save or compare multiple files at once
+  * Encode/decode strings in hex and base64

@@ -1,0 +1,19 @@
+Creates the shell script fox-pkg-config.sh. This script generates a
+pkg-config file for the FOX library.
+--- /dev/null
++++ b/fox-pkg-config.sh
+@@ -0,0 +1,14 @@
++cat << EOF
++    prefix=$(fox-config --prefix)
++    exec_prefix=\${prefix}
++    libdir=\${exec_prefix}/lib
++    includedir=\${prefix}/include
++
++    Name: FOX
++    Description: FOX LIB
++    Version: $(fox-config --version)
++    Requires:
++
++    Libs: $(fox-config --libs)
++    Cflags: $(fox-config --cflags)
++EOF

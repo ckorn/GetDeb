@@ -1,0 +1,24 @@
+Fix the filenames of the icon and the executable
+Index: tvbrowser-3.2/tvbrowser.desktop
+===================================================================
+--- tvbrowser-3.2.orig/tvbrowser.desktop	2012-09-14 10:59:48.000000000 +0200
++++ tvbrowser-3.2/tvbrowser.desktop	2012-09-14 18:42:39.616143470 +0200
+@@ -3,13 +3,13 @@
+ Type=Application
+ Terminal=false
+ Name=TV-Browser
+-Icon=imgs/tvbrowser128.png
+-Exec=tvbrowser.sh
+-TryExec=tvbrowser.sh
++Icon=tvbrowser
++Exec=tvbrowser
++TryExec=tvbrowser
+ Categories=Video;AudioVideo;TV
+ Name[de]=TV-Browser
+ GenericName=Digital TV Guide
+ GenericName[de]=Digitale TV-Zeitschrift
+ Comment=Themeable and easy to use TV Guide - written in Java
+ Comment[de]=Anpassbare und einfach zu benutzende TV-Zeitschrift - geschrieben in Java
+-StartupWMClass=tvbrowser-TVBrowser
+\ No newline at end of file
++StartupWMClass=tvbrowser-TVBrowser

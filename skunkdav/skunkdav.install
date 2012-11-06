@@ -1,0 +1,3 @@
+debian/scripts/skunkdav			usr/bin
+debian/skunkdav.desktop			usr/share/applications
+*.jar					usr/share/skunkdav

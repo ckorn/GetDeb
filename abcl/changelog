@@ -1,0 +1,374 @@
+abcl (1.0.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Changes
+    -------
+
+      * Updated ASDF to 2.019
+
+      * User Manual now contains more polished formating from docstring
+        groveling, an index of symbols, and additional enhancements.
+
+      * 'abcl.properties.in' now contains examples of optimizing the ABCL
+        wrapper script for 64bit instances for Java7 and for Java6.  
+
+      * [r13720] Randomize string hash computation to guard against
+        exploits.
+
+      * [r13723] New internal API in Package.java for looking up internal
+        vs. external symbols.
+
+    Fixes
+    -----
+
+      * [#181][r13718] The implementation now correctly loads ASDF
+      definitions
+        from jar archives.  This had prevented the ABCL-CONTRIB loading
+        mechanism from working.
+
+      * [#177] Made the mechanism for locating the abcl-contrib archive
+        more robust
+
+      * [#177] LIST-DIRECTORY no longer ignores :RESOLVE-SYMLINKS
+
+      * [r13706] Fix Streadm.readToken() bug reported by Blake McBride.
+
+      * [#183][r13703] Move threads-jss.lisp out of system source to
+        restore conditional recompilation logic.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 19:03:05 +0100
+
+abcl (1.0.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Nov 2011 19:04:29 +0100
+
+abcl (0.27.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Features
+    --------
+
+     * ABCL works as an SBCL build host
+
+     * Huge (> 64k) literal object support (fixes CL-UNICODE support)
+
+     * The ABCL-ASDF contrib allows the specification of JAR-FILE or
+       JAR-DIRECTORY components that can be resolved via a PATHNAME.  The
+       MVN component bootstraps a Maven3 Aether connector to locally
+       replicate a versioned jar artifact for dynamic inclusion in the
+       CLASSPATH.
+
+    Changes
+    -------
+
+     * Renamed LispObject.writeToString() method to (more Lispy) printObject()
+
+     * New LispObject.princToString() for user readable output
+
+     * Changed behaviour of LispObject.unreadableString() to signal
+       errors when *PRINT-READABLY* is non-NIL
+
+     * Static initializers moved to <clinit>() (java: static { }) to
+       prevent repeated execution when invoking the constructor multiple times
+
+     * Compiler clean-ups
+
+     * Changed implementation of LABELS to eliminate the need
+       to *always* create a closure
+
+     * File compiler (COMPILE-FILE) clean-ups
+
+     * When calling a function with the wrong number of arguments,
+       report the expected (range) of arguments
+
+     * Upgraded ASDF to 2.017
+
+     * JSS:JLIST-TO-LIST now converts any java.list.List to a Lisp list.
+
+     * The ASDF extensions from JSS for the "jar-directory", "jar-file",
+       and "class-file-directory" types have been refactored into the
+       ABCL-ASDF contrib as well as the *ADDED-TO-CLASSPATH* variable
+       which records dynamically added dependencies.  Use the
+       JSS:ENSURE-COMPATIBILITY function to have JSS include these
+       dependencies.  
+
+    *  As long as ABCL-ASDF:ENSURE-MVN-VERSION can dynamically introspect
+       and then load Maven 3 libraries at runtime, ASDF components of type
+       MVN can now be used to specify versioned JVM artifacts.
+
+     * Threads spawned by THREADS:MAKE-THREAD can terminate the Lisp image
+       via the EXT:QUIT and EXT:EXIT functions.
+
+
+    Fixes
+    -----
+
+     * MULTIPLE-VALUE-PROG1.10 (ansi test) fixed
+
+     * [ticket #148] READTABLE-CASE :INVERT doesn't work for uninterned symbols
+
+     * [ticket #161] READTABLE-CASE of current readtable affects FASL content
+
+     * [ticket #162] Non-symbol in variable position of SETQ form causes
+       class verification failure
+
+     * [ticket #163] Local functions shadow global macro and function bindings
+       (fixes PARENSCRIPT support)
+
+     * [ticket 158] Readable printing of the string "#<abc>" does not signal
+       a PRINT-NOT-READABLE error anymore
+
+     * Fixed SYNTAX.SHARP-BACKSLASH.6 and SYNTAX.SHARP-BACKSLASH.7
+
+     * Fixed many PPRINT.* test suite failures
+
+     * [ticket #151] LOAD fails for whitespace in JAR-PATHNAME
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 06 Sep 2011 14:28:16 +0200
+
+abcl (0.26.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Features
+    --------
+      * Enable compilation with Java 7
+
+    Fixes
+    -----
+      * Fix loading from fasls under Windows with whitespace in pathname.
+      * Fix #131: Don't include ':' in the version string.
+      * Fix #141: SETF of APPLY not working with arbitrary function.
+      * Include filename in the error string being reported.
+      * Include the test source in the release.
+      * Include ASDF definition in source release.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 15 Aug 2011 18:08:52 +0200
+
+abcl (0.26.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Features
+    --------
+     * Upgrade ASDF to 2.017.
+
+    Fixes
+    -----
+     * Fix compilation problems by including the
+       org.armedbear.lisp.protocol source in the build process
+     * Printing of conditions defined with DEFINE-CONDITION
+     * Regression with failing SYNTAX.SHARP-BACKSLASH.6
+       and SYNTAX.SHARP-BACKSLASH.7 ANSI test suite failures
+     * Multiple failures in PPRINT.* ANSI test suite failures
+     * String interop with Java for strings with fill pointer
+     * Made #\Uxxxx a synonym for character codes with values greater than
+       255 on input, but never output as the character name by the
+       implementation.
+
+    Version 0.26.0
+    ==============
+    (10 July 2011)
+
+    Features
+    --------
+     * Add support for weak reference objects
+     * Add support for finalizers on LispObject derived classes
+     * Upgrade ASDF to 2.0.16.1
+     * #\ reader macro now understands #\uNNNN as unicode codepoints
+     * JAVA:JRESOLVE-METHOD returns same method as would have been
+       called by JAVA:JCALL with the same arguments
+     * Ant 'update' target to upload application to Google App Engine
+     * Simple RUN-PROGRAM implementation
+     * Support for custom slot definitions according to AMOP
+     * New JAVA:*JAVA-OBJECT-TO-STRING-LENGTH* variable to control pretty
+       printing of Java objects
+     * JSS - more dynamic Lisp/Java FFI -
+     (http://lsw2.googlecode.com/svn/trunk)
+       imported
+     * (REQUIRE :ABCL-CONTRIB) adds 'abcl-contrib.jar' to the ASDF search
+     path
+     * Support for weak references in hash tables through a :WEAKNESS keyword
+       argument to MAKE-HASH-TABLE; with SYS:HASH-TABLE-WEAKNESS for
+       inspection
+     * Support for loading ASDF systems from JAR archives
+     * Fast SHA1, SHA256 and SHA512 cryptographic hashes for files
+     * Beginnings of a manual
+     * ABCL/ASDF integration with Maven provided systems
+     * ASDF-JAR:PACKAGE function to package ASDF systems into JARs
+
+    Changes
+    =======
+     * Reduced code size in the compiler by changing COMPILE-TEST-FORM
+     * Enhanced SLIME inspector for JAVA:JAVA-OBJECT
+     * Reimplemented MERGE-PATHNAMES
+     * TRANSLATE-PATHNAME aligned with SBCL's behaviour if version is wild
+     * Removed PRINT-OBJECT methods duplicating Java side code
+     * Refactored code in SYSTEM:ZIP function
+     * Allow JCOERCE to convert any number to java.lang.Byte (using
+       its two's complement)
+     * Replace MAKE-IMMEDIATE-OBJECT with +NULL+, +TRUE+ and +FALSE+
+     constants
+       (the only supported ones)
+     * Better separation between java-collections package and Java FFI
+     * JAVA:ADD-TO-CLASSPATH is now a generic function
+
+    Fixes
+    =====
+     * Google App Engine example fixed
+     * MAKE-PATHNAME erroneously merges directories as in MERGE-PATHNAME
+     * Pretty printer routines using SYS:OUTPUT-OBJECT with GRAY-STREAM
+     * Value of *PRINT-CASE* affects file (to FASL) compilation
+     * MAKE-PATHNAME ignores version in :DEFAULTS
+     * URI decoding algorithm in Pathname.java
+     * JNEW-ARRAY-FROM-ARRAY should create byte[] arrays
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 27 Jul 2011 18:28:42 +0200
+
+abcl (0.25.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Features
+    --------
+
+    * Add :resolve-symlinks keyword argument for DIRECTORY.
+    * Support -- as a command line parameter for the REPL.
+    * Preliminary support for Maven deployment.
+    * Add an initargs cache for speedups in check-initargs. This should
+      make the initarg checking in CLOS quite a bit faster.
+    * Incorporate output of 'svnversion' into LISP-IMPLEMENTATION-VERSION.
+    * Ant target for generating Javadoc.
+
+    Fixes
+    -----
+    * [svn r13229] Remove non-existing THREAD-LOCK and THREAD-UNLOCK from
+    autoloads.
+    * [svn 13228] Fix incorrect elimination of named local functions
+      declared inline when they're actually reified in the flet/labels body.
+    * [svn r13217] Forward-referenced classes work properly now.
+    * [svn r13209] Add initarg checking to REINITIALIZE-INSTANCE.
+    * [svn r13204] FINALIZE-INHERITANCE is (more) AMOP compatible.
+    * [svn r13203] Create ATOMIC-DEFGENERIC macro, in order to eliminate
+      FMAKUNBOUND calls and the resulting windows where no function is bound
+      to symbols which are the most essential building blocks in CLOS/AMOP.
+    * [svn r13200] Atomically swap generic functions into place of temporary
+      DEFUNs for all standard-class slot accessors.
+      Note: This addresses the recursive requirement to be able
+      to allocate objects and classes while changing the functions
+      used to create them.
+    * [svn r13196] Provide more context regarding the reason of autoloading.
+      Note: This change *hugely* helps debugging.
+    * [svn r13189] Fix MACROEXPAND-ALL autoloader which should be
+      loaded from 'format.lisp'.
+    * [svn r13188] Fix DEFSTRUCT trying to generate accessors named NIL
+    * [svn r13187] Fix #125: FASL reader should not convert symbol
+      case [Qi FASL loading issues].
+    * [svn r13185] Fix #119: Incorrect dynamic environment for
+      evaluation of :CLASS allocation slot initforms.
+    * [svn r13182-r13184] Fix error printing issues.
+    * [svn r13181] Increase autoload verbosity: include FASLs too
+      (not only Java classes).
+
+    Changes
+    -------
+    * Merge 'unsafe-p-removal' branch.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Mar 2011 16:43:22 +0100
+
+abcl (0.24.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Features
+    --------
+    * [svn r130103-r13107] Implemented JNULL_REF_P to distinguish a
+      JAVA-OBJECT which contains a Java "null" from the Lisp NIL.
+
+    * [svn r13102] More type-conversion helpers in JAVA package:
+      LIST-FROM-JARRAY, VECTOR-FROM-JARRAY, and LIST-FROM-JENUMERATION.
+
+    * [svn r13078] JVM::MAKE-CLASS-INTERFACE-FILE provides an interface
+      for the creation of Java interfaces as serialized by the new
+      classwriter code.  An example of use can be found in
+      "examples/misc/dynamic-interfaces.lisp".
+
+    * [svn r13087] Upgraded to ASDF-2.012
+
+    Fixes
+    -----
+    * [svn r13135] Fix the problem that FASLs can contain
+      a limited number of functions.
+
+    * [svn r13117][ticket #117] Fix stack inconsistency error.
+
+    * [svn r13018][ticket #114] Fix strange backtrace growth.
+
+    * [svn r13105] Fix Pathname.java failing to find boot.lisp in an
+      "unpacked JAR" situation found by running ABCL in the Glassfish v3
+      servlet container.
+
+    * [svn r13096] For arrays, add initialization with the default value
+      of the element type if neither INITIAL-ELEMENT nor INITIAL-CONTENT
+      have been specified.  Found by: dmalves_ (freenode irc nick).
+
+    * [svn r13094] Eliminate flushes after every character in
+      javax.scripting support.
+
+    * [svn r13090] Make --batch exit, use Lisp.exit() in places where
+      applicable so that the streams are flushed, hence allowing --eval
+      output to be flushed.
+
+    * [svn r13088] Fix algorithim error in writing byte sequences via
+      RandomAccessCharacterFile.  Found and fixed by David Kirkman.
+
+    Changes
+    -------
+    * [svn r13141-13146,13156] Make ABCL a well behaving library to better
+      support embedding: NEVER call System.exit() again.  Instead, ABCL now
+      throws org.armedbear.lisp.ProcessingTerminated and
+      org.armedbear.lisp.IntegrityError.
+
+    * [svn r13111] Added a "tools" directory available in SVN repository
+      to contain tools for developing ABCL in various states.  The first
+      inhabitant is 'code-grapher.lisp' that provides a prototype to
+      diagram a JVM instruction sequence via graphviz.
+
+    * [svn r13101] Reduced verbosity of the AbclScriptEngine.
+
+    * [svn r13097-13100] Slight refactoring of PATHNAME code, further
+      specifying URI escaping rules.
+
+    * [svn r13091-2] Better error reporting for UnhandledCondition thrown
+      from the Interpreter, storing the originating Java error in the
+      "cause" field if the cause is a subclass of JAVA_EXCEPTION.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 20 Feb 2011 17:40:05 +0100
+
+abcl (0.23.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 11 Dec 2010 15:30:55 +0100
+
+abcl (0.22.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Sep 2010 18:43:10 +0200
+
+abcl (0.21.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 02 Aug 2010 21:22:27 +0200
+
+abcl (0.20.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 20:37:50 +0200
+
+abcl (0.19.1-1~getdeb1) lucid; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 May 2010 20:30:40 +0200

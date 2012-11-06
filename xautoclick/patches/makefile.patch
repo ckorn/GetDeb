@@ -1,0 +1,49 @@
+We do the installation ourselves.
+Index: xautoclick-0.30/Makefile
+===================================================================
+--- xautoclick-0.30.orig/Makefile	2011-08-30 15:26:35.468506795 +0200
++++ xautoclick-0.30/Makefile	2011-08-30 15:27:12.398506806 +0200
+@@ -199,43 +199,4 @@
+ 	rm -f config.mak configure.log
+ 	rm -f *~
+ 
+-.PHONY:	install
+-install:		all
+-	@echo Installing to $(PREFIX)
+-	if test ! -d $(PREFIX)/bin ; then mkdir -p $(PREFIX)/bin ; fi
+-	if test ! -d $(PREFIX)/man/man1 ; then mkdir -p $(PREFIX)/man/man1 ; fi
+-ifeq ($(HAVE_GTK1),yes)
+-	cp $(PRGgtk1) $(PREFIX)/bin
+-endif
+-ifeq ($(HAVE_GTK2),yes)
+-	cp $(PRGgtk2) $(PREFIX)/bin
+-endif
+-ifeq ($(HAVE_QT3),yes)
+-	cp $(PRGqt3) $(PREFIX)/bin
+-endif
+-ifeq ($(HAVE_QT4),yes)
+-	cp $(PRGqt4) $(PREFIX)/bin
+-endif
+-ifeq ($(HAVE_FLTK),yes)
+-	cp $(PRGfltk) $(PREFIX)/bin
+-endif
+-ifeq ($(HAVE_ASCII),yes)
+-	cp $(PRGascii) $(PREFIX)/bin
+-endif
+-ifeq ($(HAVE_COMMANDLINE),yes)
+-	cp $(PRGcmdl) $(PREFIX)/bin
+-endif
+-	cp xautoclick.1 $(PREFIX)/man/man1
+-
+-.PHONY: uninstall
+-uninstall:
+-	@echo Uninstalling from $(PREFIX)
+-	rm -f $(PREFIX)/bin/$(PRGgtk1)
+-	rm -f $(PREFIX)/bin/$(PRGgtk2)
+-	rm -f $(PREFIX)/bin/$(PRGqt3)
+-	rm -f $(PREFIX)/bin/$(PRGqt4)
+-	rm -f $(PREFIX)/bin/$(PRGfltk)
+-	rm -f $(PREFIX)/bin/$(PRGascii)
+-	rm -f $(PREFIX)/bin/$(PRGcmdl)
+-	rm -f $(PREFIX)/man/man1/xautoclick.1
+ 

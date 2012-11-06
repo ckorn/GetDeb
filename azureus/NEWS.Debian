@@ -1,0 +1,16 @@
+azureus (4.2.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * This release is the result of a major packaging rewrite as part of
+    package adoption.
+  * Important changes:
+    - Most user-visible bugs fixed.
+    - Add multiuser support: allow multiple instances running in the
+      same machine.
+    - Fixes "a malicious user could control another user's instance".
+    - Handle file associations and magnet URL links.
+    - Refer to Vuze in menus.
+    - No updates that break sync with the Debian package manager.
+    - Launcher automatically detects installed JVM and sets classpath.
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Wed, 12 Aug 2009 11:20:03 -0400

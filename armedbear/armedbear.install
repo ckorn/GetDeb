@@ -1,0 +1,4 @@
+build/bin/jpty				usr/bin
+debian/scripts/j			usr/bin
+build/j.jar				usr/share/j
+debian/*.desktop			usr/share/applications

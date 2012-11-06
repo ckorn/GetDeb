@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+%:
+	dh --parallel $@
+
+override_dh_auto_configure:
+	qmake-qt4
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp INSTALL_ROOT=$(CURDIR)/debian/tmp install
+
+override_dh_auto_clean:
+	[ ! -f Makefile ] || $(MAKE) distclean
+
+	rm -rf Build

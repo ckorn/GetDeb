@@ -1,0 +1,23 @@
+Don't install into /usr/lib64 but /usr/lib.
+Index: oyranos-0.4.0/configure
+===================================================================
+--- oyranos-0.4.0.orig/configure	2012-04-15 12:32:19.890453304 +0200
++++ oyranos-0.4.0/configure	2012-04-15 12:33:06.338451921 +0200
+@@ -585,7 +585,7 @@
+     fi
+   fi
+ fi
+-LIBDIR="lib"$BARCH
++LIBDIR="lib"
+ export OSUNAME 
+ echo_="deb_arch=$deb_arch"
+ test -n "$ECHO" && $ECHO $e "$echo_" >> $CONF_LOG; test -n "$INFOECHO" && $INFOECHO "$echo_";
+@@ -876,7 +876,7 @@
+ pkg-config  --atleast-version=1.0 yajl 2>/dev/null
+ if [ $? != 0 ] && [ 0 -eq $rpm ]; then
+   l=yajl
+-  $CXX $CFLAGS -I$includedir $ROOT_DIR/tests/lib_test.cxx $LDFLAGS -L/usr/X11R6/lib$BARCH -L/usr/lib$BARCH -L$libdir -l$l -o tests/libtest 2>/dev/null
++  $CXX $CFLAGS -I$includedir $ROOT_DIR/tests/lib_test.cxx $LDFLAGS -L/usr/X11R6/lib$BARCH -L/usr/lib -L$libdir -l$l -o tests/libtest 2>/dev/null
+   if [ -f tests/libtest ]; then
+     rm tests/libtest$EXEC_END
+   elif [ -d $l ]; then

@@ -1,0 +1,14 @@
+Description: Remove line from manpage which causes a warning
+Author: Iain Lane <laney@ubuntu.com>
+Index: tomboy-1.11.2/data/tomboy.1
+===================================================================
+--- tomboy-1.11.2.orig/data/tomboy.1	2012-06-04 18:57:45.000000000 +0200
++++ tomboy-1.11.2/data/tomboy.1	2012-06-05 14:28:16.055496325 +0200
+@@ -13,7 +13,6 @@
+ This manual page documents briefly the
+ .BR tomboy
+ command.
+-.\"Instead, it has documentation in the GNU Info format; see below.
+ .PP
+ .B Tomboy
+ is a desktop note-taking application for Linux and Unix. Simple and

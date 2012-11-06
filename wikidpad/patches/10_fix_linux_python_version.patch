@@ -1,0 +1,14 @@
+Use another version.
+Index: wikidpad-2.1/lib/pwiki/SqliteThin3.py
+===================================================================
+--- wikidpad-2.1.orig/lib/pwiki/SqliteThin3.py	2011-06-25 08:53:38.000000000 +0200
++++ wikidpad-2.1/lib/pwiki/SqliteThin3.py	2011-11-30 19:46:42.054114751 +0100
+@@ -92,7 +92,7 @@
+ 
+ 
+ if isLinux():
+-    if sys.hexversion >= 0x02050000:
++    if sys.version_info >= (2, 5, 0):
+         _dll = CDLL("libsqlite3.so.0")
+     else:
+         _dll = CDLL("libsqlite3.so")

@@ -1,0 +1,34 @@
+Description: ALSA should use the "default" device instead of "dmix".
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/321028
+Author: http://avidemux.org/admForum/viewtopic.php?id=6739
+---
+ avidemux/ADM_libraries/ADM_utilities/prefs.cpp |    2 +-
+ avidemux/prefs.in                              |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Index: avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2.conf
+===================================================================
+--- avidemux-2.6.0.orig/avidemux_core/ADM_coreUtils/src/prefs2.conf	2012-07-25 09:18:58.000000000 +0200
++++ avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2.conf	2012-09-07 18:06:02.140919911 +0200
+@@ -51,7 +51,7 @@
+ #
+ audio_device{
+ string:audiodevice,			ALSA
+-string:alsa_device,                     "dmix"
++string:alsa_device,                     "default"
+ }
+ uint32_t:videodevice,			0,	0,	10
+ #
+Index: avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2_pref.h
+===================================================================
+--- avidemux-2.6.0.orig/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2012-07-25 09:18:58.000000000 +0200
++++ avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2012-09-07 18:06:31.060919052 +0200
+@@ -38,7 +38,7 @@
+ { LASTPROJECTS_FILE4,"lastprojects.file4"                             ,ADM_param_string  	,"",	0,	0},
+ { MESSAGE_LEVEL,"message_level"                                       ,ADM_param_uint32_t	,"2",	0,	2},
+ { AUDIO_DEVICE_AUDIODEVICE,"audio_device.audiodevice"                 ,ADM_param_string  	,"ALSA",	0,	0},
+-{ AUDIO_DEVICE_ALSA_DEVICE,"audio_device.alsa_device"                 ,ADM_param_string  	,"dmix",	0,	0},
++{ AUDIO_DEVICE_ALSA_DEVICE,"audio_device.alsa_device"                 ,ADM_param_string  	,"default",	0,	0},
+ { VIDEODEVICE,"videodevice"                                           ,ADM_param_uint32_t	,"0",	0,	10},
+ { PRIORITY_ENCODING,"priority.encoding"                               ,ADM_param_uint32_t	,"3",	0,	4},
+ { PRIORITY_INDEXING,"priority.indexing"                               ,ADM_param_uint32_t	,"3",	0,	4},

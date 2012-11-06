@@ -1,0 +1,91 @@
+rubyripper (0.6.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Dec 2011 15:08:13 +0100
+
+rubyripper (0.6.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Nov 2011 19:36:19 +0100
+
+rubyripper (0.6.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Sat, 10 Jul 2010 10:06:51 +0000
+
+rubyripper (0.5.7-1~getdeb3) lucid; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 19:39:26 +0200
+
+rubyripper (0.5.7-1~getdeb2) karmic; urgency=low
+
+  * Upload to karmic (LP: #533853)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Mar 2010 16:34:18 +0100
+
+rubyripper (0.5.7-1~getdeb1) jaunty; urgency=low
+
+  * a fix for discs that start with a data track
+  * a fix for checking the available space for some languages
+  * a few fixes for the OpenBSD platform
+  * fix a typo in the logfile when errors were corrected
+  * don't replace bracquets in filenames -> []
+  * fix a typo which resulted in a directory not containing the album name
+  * allow multiple encoding threads once again :)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sun, 12 Jul 2009 13:22:59 +0200
+
+rubyripper (0.5.6-1~getdeb1) jaunty; urgency=low
+
+  * fix a problem with cdparanoia and last track on some drives
+  * implement "abort" button while ripping
+  * add Bulgarian translation
+  * support for multiple-disc albums
+  * some ruby-1.9 syntax fixes
+  * fix various artist field for other codec
+  * don't convert to ISO-8859-1 for lame if the character isn't supported
+  * add an option to replace spaces with underscores
+  * add an option to lowercase all filenames.
+  * remove the hardcoded --id3v2only tag
+
+ -- Christoph Korn <c_korn@gmx.de>  Mon, 06 Jul 2009 22:08:36 +0200
+
+rubyripper (0.5.5-1~getdeb1) intrepid; urgency=low
+
+  [ Marco Rodrigues ]
+  * New upstream version.
+
+  [ Christoph Korn ]
+  * Set lower priority to encoding processes
+  * Fix image rips crash
+  * Some CLI enhancements
+  * Removed -p option of vorbis since it didn't work as intended.
+  * Add Swedish translation and update others
+  * Make the other codec setting more foolproof
+  * Fix problem with proxy without password
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 26 Feb 2009 22:21:15 +0100
+
+rubyripper (0.5.4-0~getdeb1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Wed, 29 Oct 2008 18:23:21 +0000
+
+rubyripper (0.5.0-1~getdeb1) gutsy; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Thu, 24 Jan 2008 19:31:53 +0000
+
+rubyripper (0.4.2-1~getdeb1) gutsy; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Mon, 15 Oct 2007 18:17:30 +0000
+

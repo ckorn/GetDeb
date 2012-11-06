@@ -1,0 +1,19 @@
+Source: qosmic
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), qt4-dev-tools,
+ liblua5.1-0-dev, libpng12-dev, libjpeg62-dev,
+ libxml2-dev, flam3, qt4-qmake, pkg-config,
+ libqt4-dev
+Standards-Version: 3.9.2
+Homepage: http://code.google.com/p/qosmic/
+
+Package: qosmic
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, flam3
+Description: Cosmic recursive flame fractal editor
+ Qosmic is graphical interface for creating, editing, and rendering
+ flam3 fractal images. The electricsheep screen saver has been
+ gaining popularity, and Qosmic was developed to provide a Qt
+ interface for people interested in creating and contributing sheep.

@@ -1,0 +1,63 @@
+Source: libxcm
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libx11-dev,
+               x11proto-core-dev,
+               libxfixes-dev,
+               libxrandr-dev,
+               liblcms1-dev,
+               libxinerama-dev,
+               libcairo2-dev,
+               libxmu-headers,
+               linux-libc-dev,
+               libxmu-dev
+Standards-Version: 3.9.3
+Section: libs
+Homepage: http://sourceforge.net/projects/oyranos/files/libXcm/
+
+Package: libxcm-dev
+Section: libdevel
+Architecture: any
+Depends: libxcm0 (= ${binary:Version}),
+         ${misc:Depends}
+Description: Library for X Color Management specification (header files)
+ The libXcm library contains the a reference implementation of the 
+ X Color Management specification. The X Color Management specification 
+ allows one to attach colour regions to X windows to communicate with colour
+ servers.
+ .
+ The XcmDDC API can be used to fetch a EDID data block from a monitor over
+ a i2c communication. On Linux typical the i2c-dev module
+ must be loaded to use this hardware data channel. The device nodes
+ must obtain rights accessible to normal users.
+ .
+ The XcmEdidParse API is for parsing EDID data blocks. A small example 
+ application is included.
+ .
+ The XcmEvents API allowes to easily observe X11 colour management events.
+ The included xcmsevents makes use of the XcmEvents API.
+ .
+ (This package contains the development files).
+
+Package: libxcm0
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Library for X Color Management specification
+ The libXcm library contains the a reference implementation of the 
+ X Color Management specification. The X Color Management specification 
+ allows one to attach colour regions to X windows to communicate with colour
+ servers.
+ .
+ The XcmDDC API can be used to fetch a EDID data block from a monitor over
+ a i2c communication. On Linux typical the i2c-dev module
+ must be loaded to use this hardware data channel. The device nodes
+ must obtain rights accessible to normal users.
+ .
+ The XcmEdidParse API is for parsing EDID data blocks. A small example 
+ application is included.
+ .
+ The XcmEvents API allowes to easily observe X11 colour management events.
+ The included xcmsevents makes use of the XcmEvents API.

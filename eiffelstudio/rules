@@ -1,0 +1,100 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	# Add here commands to configure the package.
+
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	[ -d Eiffel64 ] || tar xjf Eiffel64_gpl_79451-linux-x86-64.tar.bz2
+else
+	[ -d Eiffel64 ] || tar xjf Eiffel64_gpl_79451-linux-x86.tar.bz2
+endif
+	rm -rf Eiffel64/experimental
+	rm -rf Eiffel64/vision2_demo
+
+	touch configure-stamp
+
+
+build: build-stamp
+
+build-stamp: configure-stamp  
+	dh_testdir
+
+	# Add here commands to compile the package.
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	cd Eiffel64/precomp/spec/linux-x86-64 && ISE_EIFFEL=$(CURDIR)/Eiffel64 ISE_PLATFORM=linux-x86-64 $(CURDIR)/Eiffel64/studio/spec/linux-x86-64/bin/ec -precompile -config base.ecf -c_compile -clean
+	cd Eiffel64/precomp/spec/linux-x86-64 && ISE_EIFFEL=$(CURDIR)/Eiffel64 ISE_PLATFORM=linux-x86-64 $(CURDIR)/Eiffel64/studio/spec/linux-x86-64/bin/ec -precompile -config base-mt.ecf -c_compile -clean
+else
+	cd Eiffel64/precomp/spec/linux-x86 && ISE_EIFFEL=$(CURDIR)/Eiffel64 ISE_PLATFORM=linux-x86 $(CURDIR)/Eiffel64/studio/spec/linux-x86/bin/ec -precompile -config base.ecf -c_compile -clean
+	cd Eiffel64/precomp/spec/linux-x86 && ISE_EIFFEL=$(CURDIR)/Eiffel64 ISE_PLATFORM=linux-x86 $(CURDIR)/Eiffel64/studio/spec/linux-x86/bin/ec -precompile -config base-mt.ecf -c_compile -clean
+endif
+	#docbook-to-man debian/eiffelstudio.sgml > eiffelstudio.1
+
+	touch $@
+
+clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	rm -rf Eiffel64
+
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+
+	find Eiffel64 -name '*.o' -delete
+	find Eiffel64 -name '*.a' -delete
+
+
+# Build architecture-independent files here.
+binary-indep: install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+	dh_install
+#	dh_installmenu
+#	dh_installdebconf
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_python
+#	dh_installinit
+#	dh_installcron
+#	dh_installinfo
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_perl
+#	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

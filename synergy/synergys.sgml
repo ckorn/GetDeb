@@ -1,0 +1,731 @@
+<!doctype refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
+
+<!-- Process this file with docbook-to-man to generate an nroff manual
+     page: `docbook-to-man synergys.sgml > synergys.1'.  You may view
+     the manual page with: `docbook-to-man synergys.sgml | nroff -man |
+     less'.  A typical entry in a Makefile or Makefile.am is:
+
+synergys.1: synergys.sgml
+	docbook-to-man $< > $@
+
+    
+	The docbook-to-man binary is found in the docbook-to-man package.
+	Please remember that if you create the nroff version in one of the
+	debian/rules file targets (such as build), you will need to include
+	docbook-to-man in your Build-Depends control field.
+
+  -->
+
+  <!-- Fill in your name for FIRSTNAME and SURNAME. -->
+  <!ENTITY dhfirstname "<firstname>Titus</firstname>">
+  <!ENTITY dhsurname   "<surname>Barik</surname>">
+  <!-- Please adjust the date whenever revising the manpage. -->
+  <!ENTITY dhdate      "<date>October 31, 2003</date>">
+  <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
+       allowed: see man(7), man(1). -->
+  <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
+  <!ENTITY dhemail     "<email>barik@ieee.org</email>">
+  <!ENTITY dhusername  "Titus Barik">
+  <!ENTITY dhucpackage "<refentrytitle>SYNERGYS</refentrytitle>">
+  <!ENTITY dhpackage   "synergys">
+
+  <!ENTITY debian      "<productname>Debian</productname>">
+  <!ENTITY gnu         "<acronym>GNU</acronym>">
+]>
+
+<refentry>
+  <refentryinfo>
+    <address>
+      &dhemail;
+    </address>
+    <author>
+      &dhfirstname;
+      &dhsurname;
+    </author>
+    <copyright>
+      <year>2002</year>
+      <holder>&dhusername;</holder>
+    </copyright>
+    &dhdate;
+  </refentryinfo>
+  <refmeta>
+    &dhucpackage;
+
+    &dhsection;
+  </refmeta>
+
+  <refnamediv>
+    <refname>&dhpackage;</refname>
+
+    <refpurpose>synergy server</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <group>
+        <arg>-a <replaceable>address</replaceable></arg>
+        <arg>--address <replaceable>address</replaceable></arg>
+      </group>
+      <group>
+        <arg>-c <replaceable>pathname</replaceable></arg>
+        <arg>--config <replaceable>pathname</replaceable></arg>
+      </group>
+      <group>
+        <arg>-d <replaceable>level</replaceable></arg>
+        <arg>--debug <replaceable>level</replaceable></arg>
+      </group>
+      <group>
+        <arg>--display <replaceable>display</replaceable></arg>
+      </group>
+      <group>
+        <arg>--daemon</arg>
+        <arg>{ --no-daemon | -f }</arg>
+      </group>
+      <group>
+        <arg>-n <replaceable>screen-name</replaceable></arg>
+        <arg>--name <replaceable>screen-name</replaceable></arg>
+      </group>
+      <group>
+        <arg>--restart</arg>
+        <arg>{ --no-restart | -1 }</arg>
+      </group>
+      <arg choice="plain"><replaceable>address</replaceable></arg>
+    </cmdsynopsis>
+
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <arg choice="req"> { -h | --help }</arg>
+    </cmdsynopsis>
+    
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <arg choice="req"> --version</arg>
+    </cmdsynopsis>
+    
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>DESCRIPTION</title>
+    
+    <para>
+      Starts the <application>synergys</application> mouse/keyboard
+      sharing server.
+    </para>
+    
+    <para>
+      <application>Synergy</application> lets you use one keyboard and
+      mouse across multiple computers. To do so it requires that all
+      the computers are connected to each other via TCP/IP
+      networking. Most systems come with this installed.
+      
+    </para>
+
+    <para>This manual page was written for the &debian; distribution
+      because the original program does not have a manual page.
+      Slightly old documentation exists in 
+      <filename>/usr/share/doc/synergy/obsolete/index.html</filename>;
+      it is the most up-to-date information available, despite the
+      pathname.</para>
+  </refsect1>
+
+  <refsect1>
+    <title>OPTIONS</title>
+    
+    <variablelist>
+      <varlistentry>
+        <term>
+	  <option>-a <replaceable>address</replaceable></option>
+          <option>--address <replaceable>address</replaceable></option>
+        </term>
+	
+        <listitem>
+          <para>listen for clients on the given address.</para>	  
+	  
+	  <para>
+	    The argument for --address is of the form:
+	    [<replaceable>hostname</replaceable>][:<replaceable>port</replaceable>].
+	    The hostname must be the address or hostname of an
+	    interface on the system.  The default is to listen on all
+	    interfaces.  The port overrides the default port, 24800.
+	    </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-c <replaceable>pathname</replaceable></option>
+          <option>--config <replaceable>pathname</replaceable></option>
+        </term>
+        <listitem>
+          <para>use the named configuration file instead.</para>
+          <para>
+            If no configuration file pathname is provided then the first of the
+            following to load sets the configuration:
+            <itemizedlist>
+              <listitem>
+                <para><filename>~/.synergy.conf</filename></para>
+              </listitem>
+              <listitem>
+                <para><filename>/etc/synergy.conf</filename></para>
+              </listitem>
+            </itemizedlist>
+          </para>
+
+          <para>
+            If no configuration file can be loaded then the
+            configuration uses its defaults with just the server
+            screen.
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>
+	  <option>-d <replaceable>level</replaceable></option>
+          <option>--debug <replaceable>level</replaceable></option>
+        </term>
+        <listitem>
+          <para>filter out log messages with priority below
+          <replaceable>level</replaceable>.</para> 
+
+	  <para>
+	    Debug levels are from highest to lowest: FATAL, ERROR,
+	    WARNING, NOTE, INFO, DEBUG, DEBUG1, and DEBUG2.  Only
+	    messages at or above the given level are logged.  Messages
+	    are logged to a terminal window when running in the
+	    foreground, and to syslog when running as a daemon.
+	  </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>--display <replaceable>display</replaceable></option>
+        </term>
+        <listitem>
+          <para>connect to the X server at <replaceable>display</replaceable></para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--daemon</option>
+        </term>
+        <listitem>
+          <para>run the server as a daemon.</para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-f</option>
+          <option>--no-daemon</option>
+        </term>
+        <listitem>
+          <para>run the server in the foreground.</para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-n <replaceable>screen-name</replaceable></option>
+          <option>--name <replaceable>screen-name</replaceable></option>
+        </term>
+	
+        <listitem>
+          <para>use <replaceable>screen-name</replaceable> instead of
+          the hostname to identify this screen in the
+          configuration.</para> <para>This option lets the client use
+          a name other than its hostname for its screen.
+	  </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>--restart</option>
+        </term>
+        <listitem>
+          <para>restart the server automatically if it fails.</para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>-1</option>
+          <option>--no-restart</option>
+        </term>
+        <listitem>
+          <para>
+	    do not try to restart the server if it fails for some
+	    reason.
+	  </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>-h</option>
+          <option>--help</option>
+        </term>
+        <listitem>
+          <para>display help and exit.</para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>--version</option>
+        </term>
+        <listitem>
+          <para>display version information and exit.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </refsect1>
+  
+  <refsect1>
+    <title>CONFIGURING THE SERVER</title>
+    
+    <para>
+      The synergy server requires configuration.  The configuration
+      file is a plain text file broken into sections.  Each section
+      has the form:
+    </para>
+
+    <screen>
+      section: &lt;name&gt;
+      &nbsp;&nbsp;&lt;args&gt;
+      end
+    </screen>
+
+    <para>
+      Comments are introduced by `#' and continue to the end of the
+      line.  The file can have the following sections.  The `screens'
+      section must appear before the `links' and `aliases' sections.
+    </para>
+
+    <refsect2>
+	<title>screens</title>
+      
+      <para>
+	&lt;args&gt; is a list of screen names, one name per line,
+	each followed by a colon.  Names are arbitrary strings but
+	they must be unique.  The hostname of each computer is
+	recommended.  There must be a screen name for the server and
+	each client.  Each screen can specify a number of options.
+	Options have the form `name = value' and a listed one per line
+	after the screen name.
+      </para>
+
+      <para>Example:</para>
+      
+      <screen>
+	section: screens
+        &nbsp;&nbsp;moe: 
+        &nbsp;&nbsp;larry:
+        &nbsp;&nbsp;&nbsp;&nbsp;halfDuplexCapsLock = true
+	&nbsp;&nbsp;&nbsp;&nbsp;halfDuplexNumLock = true
+        &nbsp;&nbsp;curly:
+	&nbsp;&nbsp;&nbsp;&nbsp;meta = alt
+	end
+      </screen>
+
+      <para>
+	This declares three screens named: moe, larry, and curly.
+	Screen `larry' has half-duplex caps lock and num lock keys
+	(see below) and screen `curly' converts the meta modifier key
+	to the alt key.
+      </para>      
+
+      <para>Screen can have the following options:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>halfDuplexCapsLock = {true|false}</para>
+
+	  <para>
+	    This computer has a caps lock key that doesn't report a
+	    press and a release event when the user presses it but
+	    instead reports a press event when it's turned on and a
+	    release event when it's turned off.  If caps lock acts
+	    strangely on all screens then you may need this option on
+	    the server screen.  If it acts strangely on one screen
+	    then that screen may need the option.
+	  </para>	  
+	</listitem>
+
+	<listitem>
+	  <para>halfDuplexNumLock = {true|false}</para>
+	  
+	  <para>
+	    This is identical to halfDuplexCapsLock except it applies
+	    to the num lock key.
+	  </para>
+	</listitem>
+	
+	<listitem>
+	  <para>xtestIsXineramaUnaware = {true|false}</para>
+	  
+	  <para>
+	    This option works around a bug in the XTest extension when
+	    used in combination with Xinerama.  It affects X11 clients
+	    only.  Not all versions of the XTest extension are aware
+	    of the Xinerama extension.  As a result, they do not move
+	    the mouse correctly when using multiple Xinerama screens.
+	    This option is currently true by default.  If you know
+	    your XTest extension is Xinerama aware then set this
+	    option to false.
+	  </para>	  
+	</listitem>
+
+
+	<listitem>
+	  <para>Modifier keys:</para>
+
+	  <simplelist>
+	    <member>shift = {shift|ctrl|alt|meta|super|none}</member>
+	    <member>ctrl  = {shift|ctrl|alt|meta|super|none}</member>
+	    <member>alt   = {shift|ctrl|alt|meta|super|none}</member>
+	    <member>meta  = {shift|ctrl|alt|meta|super|none}</member>
+	    <member>super = {shift|ctrl|alt|meta|super|none}</member>
+	  </simplelist>
+
+	
+	  <para>
+	    Map a modifier key pressed on the server's keyboard to a
+	    different modifier on this client.  This option only has
+	    an effect on a client screen; it's accepted and ignored on
+	    the server screen.
+	  </para>	  
+
+	  <para>
+	    You can map, say, the shift key to shift (the default),
+	    ctrl, alt, meta, super or nothing.  Normally, you wouldn't
+	    remap shift or ctrl.  You might, however, have an X11
+	    server with meta bound to the Alt keys.  To use this
+	    server effectively with a windows client, which doesn't
+	    use meta but uses alt extensively, you'll want the windows
+	    client to map meta to alt (using `meta = alt').
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </refsect2>    
+
+    <refsect2>
+      <title>links</title>
+    
+      <para>
+	 &lt;args&gt; is a list of screen names just like in the
+	  `screens' section except each screen is followed by a list
+	  of links, one per line.  Each link has the form
+	  `&lt;left|right|up|down&gt; = &lt;name&gt;'.  A link
+	  indicates which screen is adjacent in the given direction.
+      </para>
+
+      <para>Example:</para>
+
+      <screen>
+	section: links 
+        moe:
+	&nbsp;&nbsp;right = larry
+	&nbsp;&nbsp;up&nbsp;&nbsp;&nbsp;&nbsp;= curly
+        larry:
+	&nbsp;&nbsp;left  = moe
+	&nbsp;&nbsp;up&nbsp;&nbsp;&nbsp;&nbsp;= curly
+        curly:
+	&nbsp;&nbsp;down&nbsp;&nbsp;= larry
+	end
+      </screen>
+
+      <para>
+	This indicates that screen `larry' is to the right of screen
+	`moe' (so moving the cursor off the right edge of moe would
+	make it appear at the left edge of larry), `curly' is above
+	`moe', `moe' is to the left of `larry', `curly' is above
+	`larry', and `larry' is below `curly'.  Note that links do not
+	have to be symmetrical; moving up from moe then down from
+	curly lands the cursor on larry.
+      </para>
+    </refsect2>
+
+    <refsect2>
+      <title>aliases</title>
+
+      <para> 
+	&lt;args&gt; is a list of screen names just like in the
+	`screens' section except each screen is followed by a list of
+	aliases, one per line *not* followed by a colon.  An alias is
+	a screen name and must be unique.  During screen name lookup
+	each alias is equivalent to the screen name it aliases.  So a
+	client can connect using its canonical screen name or any of
+	its aliases.
+      </para>
+
+      <para>Example:</para>
+
+      <screen>
+	section: aliases
+        larry:
+	&nbsp;&nbsp;larry.stooges.com
+        curly:
+	&nbsp;&nbsp;shemp
+	end
+      </screen>
+
+      <para>
+	Screen `larry' is also known as `larry.stooges.com' and can
+	connect as either name.  Screen `curly' is also known as
+	`shemp'.  (Hey, it's just an example.)
+      </para>    
+    </refsect2>
+
+    <refsect2>
+      <title>options</title>
+
+      <para>&lt;args&gt; is a list of lines of the form `name =
+	value'. These set the global options.
+      </para>
+      
+      <para>Example:</para>
+      
+      <screen>
+	section: options
+        &nbsp;heartbeat = 5000
+        &nbsp;switchDelay = 500
+	end	
+      </screen>
+
+      <para>You can use the following options:</para>
+      
+      <itemizedlist>
+	<listitem>
+	  <para>heartbeat = N</para>
+
+	  <para>
+	    The server will expect each client to send a message no
+	    less than every N milliseconds.  If no message arrives
+	    from a client within 3N seconds the server forces that
+	    client to disconnect.
+	  </para>
+
+	  <para>
+	    If synergy fails to detect clients disconnecting while the
+	    server is sleeping or vice versa, try using this option.
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>switchDelay = N</para>
+
+	  <para>
+	    Synergy won't switch screens when the mouse reaches the
+	    edge of a screen unless it stays on the edge for N
+	    milliseconds.  This helps prevent unintentional switching
+	    when working near the edge of a screen.
+	  </para>
+	  
+	</listitem>
+
+	<listitem>
+	  <para>switchDoubleTap = N</para>
+
+	  <para>
+	    Synergy won't switch screens when the mouse reaches the
+	    edge of a screen unless it's moved away from the edge and
+	    then back to the edge within N milliseconds.  With the
+	    option you have to quickly tap the edge twice to switch.
+	    This helps prevent unintentional switching when working
+	    near the edge of a screen.
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para>screenSaverSync = {true|false}</para>
+	  
+	  <para>
+	    If set to false then synergy won't synchronize screen
+	    savers.  Client screen savers will start according to
+	    their individual configurations.  The server screen saver
+	    won't start if there is input, even if that input is
+	    directed toward a client screen.
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+      <para>
+	The synergy server will try certain pathnames to load the
+	configuration file if the user doesn't specify a path using
+	the `--config' command line option.  `synergys --help' reports
+	those pathnames.
+      </para>
+      
+      
+    </refsect2>
+    
+  </refsect1>
+
+
+
+  <refsect1>
+    <title>RUNNING THE SERVER</title>
+    
+    <para>
+      Run the server on the computer that has the keyboard and mouse
+      to be shared.  You must have prepared a configuration file
+      before starting the server.  The server should be started before
+      the clients but that's not required.
+    </para>
+
+    <para>Run the synergy server on the server system using the following
+      command line:
+    </para>
+
+    <cmdsynopsis>
+      <command>synergys</command> 
+      <arg choice="plain"> -f</arg> 
+      <arg>--config <replaceable>config-pathname</replaceable></arg>
+    </cmdsynopsis>
+
+      
+    <para>
+      Replace <replaceable>config-pathname</replaceable> with the path
+      to the configuration file. See OPTIONS for the default locations
+      of the configuration file.  The `-f' option causes synergys to
+      run in the foreground.  This is recommended until you've
+      verified that the configuration works.  If you didn't include
+      the system's hostname in the configuration file (either as a
+      screen name or an alias) then you'll have to add `--name
+      <replaceable>screen-name</replaceable>' to the command line,
+      where <replaceable>screen-name</replaceable> is a name in the
+      configuration file. You can use `synergys --help' for a list of
+      command line options.
+    </para>
+
+    <para>
+      See `Starting Automatically on Unix' below for running synergy
+      automatically when the X server starts.
+    </para>
+  </refsect1>
+  
+  <refsect1>   
+    <title>CONFIGURE SYNERGY TO START AUTOMATICALLY</title>
+
+    <para>
+      Synergy requires an X server. That means a server must be
+      running and synergy must be authorized to connect to that
+      server. It's best to have the display manager start
+      synergy. You'll need the necessary (probably root) permission to
+      modify the display manager configuration files. If you don't
+      have that permission you can start synergy after logging in via
+      the .xsession file.
+    </para>
+
+    <para>
+      To start the server use something like:
+    </para>
+
+    <cmdsynopsis>
+      <command>killall </command> 
+      <arg choice="plain">synergys</arg> 
+    </cmdsynopsis>
+
+    <cmdsynopsis>
+      <command>synergys</command> 
+      <arg>&lt;options&gt;</arg> 
+      <arg choice="plain"> --config &lt;config-pathname&gt;</arg>
+    </cmdsynopsis>
+
+
+    <para>
+      &lt;options&gt; must not include `-f' or `--no-daemon'.  If the
+      configuration pathname is one of the default locations then you
+      don't need the `--config' option.
+    </para>
+
+    <para>
+      Note that some display managers (xdm and kdm, but not gdm) grab
+      the keyboard and do not release it until the user logs in, for
+      security reasons.  This prevents a synergy server from sharing
+      the mouse and keyboard until the user logs in.
+    </para>
+        
+  </refsect1>
+
+  <refsect1>
+    <title>NETWORK SECURITY</title>
+    
+    <para>
+      Synergy has no built-in support for encryption or
+      authentication.  The server accepts connections from any
+      computer.  The server and clients send all data unencrypted
+      which means the clipboard and mouse and keyboard events
+      (e.g. typed passwords) are easily examined by anyone listening
+      on the network.  Therefore, do not run synergy on untrusted
+      networks except as follows.
+    </para>
+
+    <para>
+      You can use SSH (secure shell) to provide strong authentication
+      and encryption to synergy without modifying either SSH or synergy.
+      On Linux and Unix a free implementation of SSH called OpenSSH is
+      available at http://www.openssh.com/.  On Windows you can use the
+      Cygwin version of OpenSSH.     
+    </para>
+
+    <cmdsynopsis>
+      <command>ssh </command>
+      <arg choice="plain">-f</arg>
+      <arg choice="plain">-N</arg>
+      <arg choice="plain">-L
+	<arg choice="plain">24800:<replaceable>server-hostname</replaceable>:24800</arg>
+      </arg>
+      <arg choice="plain"><replaceable>server-hostname</replaceable></arg>
+    </cmdsynopsis>
+
+    <para>
+where <replaceable>server-hostname</replaceable> is the name or
+address of the SSH and synergy server host.  24800 is the default
+synergy port; replace it with whichever port you use if you don't use
+the default.  Once ssh authenticates with the server, start the
+synergy client as usual except use `localhost' or `127.0.0.1' for the
+server address.  Synergy will then pass all communication through SSH
+which encrypts it, passes it over the network, decrypts it, and hands
+it back to synergy.  Authentication is provided by SSH's
+authentication.
+    </para>
+    
+  </refsect1>
+
+  <refsect1>
+    <title>FILES</title>
+
+    <para> ~/.synergy.conf, /etc/synergy.conf</para>
+  </refsect1>
+
+  <refsect1>
+    <title>SEE ALSO</title>
+
+    <para>synergyc(1), ssh(1)</para>
+  </refsect1>
+
+  <refsect1>
+    <title>AUTHOR</title>
+
+    <para>This manual page was written by Daniel Lutz &lt;danlutz@debian.org&gt; for
+      the &debian; system. Edited by Titus Barik &lt;barik@ieee.org&gt;.</para>
+  </refsect1>
+</refentry>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:nil
+sgml-default-dtd-file:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->
+
+

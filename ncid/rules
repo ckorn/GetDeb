@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_build:
+	$(MAKE) package
+
+override_dh_auto_install:
+	$(MAKE) \
+		prefix=$(CURDIR)/debian/tmp/usr \
+		prefix2=$(CURDIR)/debian/tmp \
+		prefix3=$(CURDIR)/debian/tmp \
+		install
+
+override_dh_install:
+	dh_install --list-missing
+
+override_dh_installchangelogs:
+	dh_installchangelogs doc/CHANGES
+
+# dh_installman replaces the .so links with symlinks but does not link
+# to the .gz file and does not rename the link file to .gz.
+override_dh_installman:

@@ -1,0 +1,23 @@
+Description: Removes refs to macosx build and forces java libraries
+ search path to Debian one (/usr/share/java)
+Author: Gabriele Giacone <1o5g4r8o@gmail.com>
+
+Index: sweethome3d-3.7/build.xml
+===================================================================
+--- sweethome3d-3.7.orig/build.xml	2012-10-24 18:48:02.000000000 +0200
++++ sweethome3d-3.7/build.xml	2012-10-27 00:31:14.927815137 +0200
+@@ -47,11 +47,14 @@
+       <!-- Use lib as an extension directory to override default Java 3D libraries -->
+       <extdirs>
+         <pathelement location="lib"/>
++        <pathelement location="/usr/share/java"/>
++        <pathelement location="/usr/share/icedtea-web"/>
+       </extdirs>
+       <classpath>
+         <pathelement location="libtest/AppleJavaExtensions.jar"/>
+         <pathelement location="libtest/jnlp.jar"/>
+       </classpath>
++	<exclude name="com/eteks/sweethome3d/MacOSXConfiguration.java"/>
+     </javac>
+     
+     <!-- Copy resources excepted furniture, textures and help files -->

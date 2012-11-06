@@ -1,0 +1,15 @@
+Change the desktop file according to the correct file names.
+Index: filebot-0.0.0r465/installer/deb/FileBot.desktop
+===================================================================
+--- filebot-0.0.0r465.orig/installer/deb/FileBot.desktop	2011-06-12 18:31:34.401398287 +0200
++++ filebot-0.0.0r465/installer/deb/FileBot.desktop	2011-06-12 19:31:50.271399495 +0200
+@@ -4,6 +4,6 @@
+ Terminal=false
+ Name=FileBot
+ Comment=The ultimate tv renamer / subtitle downloader / sfv validator
+-Exec=/usr/share/filebot/bin/filebot.sh
+-Icon=/usr/share/filebot/icon48.png
+-Categories=AudioVideo;Video;Renamer
++Exec=filebot
++Icon=filebot
++Categories=AudioVideo;Video

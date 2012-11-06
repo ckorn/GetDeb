@@ -1,0 +1,213 @@
+c++-gtk-utils (2.0.12-1~getdeb2) precise; urgency=low
+
+  * New upstream version
+    Provide a Cgu::Thread::TaskManager thread pool class for multiple
+    task to thread mapping (c++-gtk-utils/Makefile.am; task_manager.h
+    and task_manager.cpp; doxygen.main.in; tests/Makefile.am,
+    tests/test_task_manager.cpp).
+
+    Suppress deprecated warnings for g_thread_init(), GStaticRecMutex
+    and GtkTable with glib-2.34/gtk+-3.6 (mutex.h, mutex.cpp,
+    text_print_manager.cpp; test_future.cpp, test_gstream.cpp,
+    test_notifier.cpp, test_task_manager.cpp, test_thread.cpp;
+    tests/extra/test_file_print_manager.cpp,
+    tests/extra/test_text_print_manager.cpp).
+
+    Replace the sourceforge SVN repository with a sourceforge git
+    respository (doxygen.main.in).
+
+    Update documentation (async_queue.h, async_result.h, callback.h,
+    fdstream.h, future.h, mutex.h, shared_handle.h, shared_ptr.h,
+    thread.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 Oct 2012 17:59:21 +0200
+
+c++-gtk-utils (2.0.11-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Add move_pop() methods to AsyncQueue and AsyncQueueDispatch
+    classes, and move_pop_dispatch() and move_pop_timed_dispatch()
+    methods to the AsyncQueueDispatch class (async_queue.h;
+    tests/test_async_queue.cpp, tests/test_async_result.cpp).
+
+    Add move_get() method to AsyncResult class (async_result.h;
+    tests/test_async_result.cpp).
+
+    Add move_get() method to Thread::Future class (future.h;
+    tests/test_future.cpp).
+
+    Make AsyncResult::get() truly cancellation safe (async_result.h).
+
+    Carry out locking in the AsyncResult destructor (async_result.h).
+
+    Make Thread::Future::get() cancellation safe (future.h,
+    future.tpp).
+
+    Make sure Thread::Future::get() does not hang if a call to
+    Thread::Future::run() by another thread threw (future.tpp).
+
+    Merge c++11 branch with trunk in SVN (doxygen.main.in).
+
+    Update documentation (async_result.h, callback.h, future.h,
+    thread.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 03 Aug 2012 18:33:26 +0200
+
+c++-gtk-utils (2.0.10-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Enable Callback objects created with Cgu::Callback::lambda() to be
+    constructed for mutable lambda objects (callback.h).
+
+    Update build system to libtool-2.4.2, automake-1.12.1 and
+    autoconf-2.69.
+
+    Update doxygen configuration file for doxygen-1.8.1.1
+    (docs/Doxygen.in).
+
+    Update unit test (tests/test_async_result.cpp).
+
+    Update documentation (README; doxygen.main.in; async_result.h,
+    callback.h, convert.h, do_if.h, emitter.h, future.h, gstream.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 06 Jul 2012 19:13:14 +0200
+
+c++-gtk-utils (2.0.9-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Provide a new Callback::lambda() factory function for more
+    convenient construction of callback objects from C++11 lambda
+    expressions (callback.h; tests/test_callback.cpp)).
+
+    Provide for unblocking of threads waiting on an AsyncQueueDispatch
+    object where it acquires items from a move assignment
+    (async_queue.h).
+
+    Update unit tests (test/test_callback.cpp,
+    test/test_notifier.cpp).
+
+    Update documentation (doyxgen.main.in; async_queue.h,
+    async_result.h, callback.h, future.h, thread.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 30 May 2012 18:35:46 +0200
+
+c++-gtk-utils (2.0.8-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Provide new Cgu::AsyncResult class (tests/Makefile.am,
+    tests/test_async_result.cpp; c++-gtk-utils/Makefile.am,
+    configure-gtk2.ac, configure-gtk3.ac, doxygen.main.in,
+    async_queue.h, async_result.h, future.h).
+
+    Provide copy constructors, assignment operators and swap methods
+    for Cgu::AsyncQueue and Cgu::AsyncQueueDispatch classes
+    (async_queue.h; tests/test_async_queue.cpp).
+
+    Provide size() method for Cgu::AsyncQueue and
+    Cgu::AsyncQueueDispatch classes (async_queue.h;
+    tests/test_async_queue.cpp).
+
+    Add default constructor for Cgu::Thread::JoinableHandle class
+    (thread.h; tests/test_thread.cpp).
+
+    Add gcc-4.7 to the list of compilers requiring use of the
+    -std=c++0x flag (doxygen.main.in).
+
+    Update other documentation (async_queue.h, callback.h, emitter.h,
+    fdstream.h, future.h, gstream.h, mutex.h, notifier.h,
+    prog_present.h, reassembler.h, shared_handle.h, shared_ptr.h,
+    thread.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 23 May 2012 18:11:30 +0200
+
+c++-gtk-utils (2.0.7-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+
+    Fix compilation with gcc-4.7 (fdstream.h, fdstream.tpp, gstream.h,
+    gstream.tpp) (thanks to Malcolm Lewis for reporting this).
+
+    Provide unit test for Future asynchronous functions
+    (tests/test_future.cpp).
+
+    Avoid types deprecated in gtk+-3.4 in the Application unit test,
+    when compiled against gtk+-3.4 (tests/test_application.cpp).
+
+    Update FSF address in relevant copyright notices (thanks to
+    Malcolm Lewis for reporting this).
+
+    Update documentation (doxygen.main.in; async_queue.h, callback.h,
+    do_if.h, future.h, io_watch.h, mutex.h, notifier.h, param.h,
+    rw_lock.h, thread.h, timeout.h, window.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Apr 2012 20:52:32 +0200
+
+c++-gtk-utils (2.0.6-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    Version 2.0.6 (27 January 2012)
+    -------------
+
+        Fix a race condition when executing the Future::when() callback
+        (future.tpp).
+
+    Version 2.0.5 (24 January 2012)
+    -------------
+
+        Provide methods to obtain gio read and write errors on gstream
+        objects (gstream.h, gstream.tpp).
+
+        Deprecate GobjWeakHandle::expired(), which has the wrong
+        semantics, and provide GobjWeakHandle::valid() method
+        (gobj_handle.h).
+
+        Provide unit tests based on glib's test framework (Makefile.am,
+        Makefile.decl, acinclude.m4, configure-gtk2.ac,
+        configure-gtk-3.ac; c++-gtk-utils/Makefile.am; docs/Makefile.am;
+        'tests' sub-directory and contents).
+
+        Use automake silent rules (configure-gtk2.ac, configure-gtk3.ac).
+
+        Remove unnecessary increment and decrement of reference count in
+        Future::post_done() and Future::post_done_rel() (future.tpp).
+
+        Update documentation (doxygen.main.in; async_queue.h, callback.h,
+        future.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 19:09:03 +0100
+
+c++-gtk-utils (2.0.4-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    Provide Thread::make_future() convenience wrapper functions for
+    creating Thread::Future<> objects (PORTING-TO-2.0, README;
+    future.h).
+
+    Access 'val' member variable directly in execute_done() and
+    execute_done_rel() methods of Thread::Future to avoid unnecessary
+    mutex lock/unlock (future.tpp).
+
+    Make the test for whether Thread::FutureWhenError is thrown
+    entirely race free, if the when() method is called after the run()
+    method (future.h).
+
+    Adjust linker ordering and build system
+    (acinclude.m4, c++-gtk-utils-2-2.0.pc.in,
+    c++-gtk-utils-3-2.0.pc.in, c++-gtk-utils/Makefile.am)
+
+    Update documentation (application.h, emitter.h, future.h,
+    reassembler.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 02 Dec 2011 14:39:28 +0100
+
+c++-gtk-utils (2.0.3-1~getdeb2) oneiric; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Nov 2011 15:11:16 +0100
+
+c++-gtk-utils (2.0.3-1~getdeb1) oneiric; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Oct 2011 19:46:46 +0200

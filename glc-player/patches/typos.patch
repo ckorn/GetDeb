@@ -1,0 +1,129 @@
+Just happens.
+Index: glc-player-2.3.0/designer/AlbumManagerView.ui
+===================================================================
+--- glc-player-2.3.0.orig/designer/AlbumManagerView.ui	2011-07-01 20:06:10.643565366 +0200
++++ glc-player-2.3.0/designer/AlbumManagerView.ui	2011-07-01 20:08:26.313565372 +0200
+@@ -302,7 +302,7 @@
+       </sizepolicy>
+      </property>
+      <property name="title">
+-      <string>Current Model Informations</string>
++      <string>Current Model Information</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+Index: glc-player-2.3.0/designer/ExportWebDialog.ui
+===================================================================
+--- glc-player-2.3.0.orig/designer/ExportWebDialog.ui	2011-07-01 20:05:43.643565365 +0200
++++ glc-player-2.3.0/designer/ExportWebDialog.ui	2011-07-01 20:08:05.983565371 +0200
+@@ -262,7 +262,7 @@
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="imageModelInformation">
+            <property name="text">
+-            <string>Model Informations</string>
++            <string>Model Information</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+Index: glc-player-2.3.0/designer/MultiScreenshotsDialog.ui
+===================================================================
+--- glc-player-2.3.0.orig/designer/MultiScreenshotsDialog.ui	2011-07-01 20:09:08.803565375 +0200
++++ glc-player-2.3.0/designer/MultiScreenshotsDialog.ui	2011-07-01 20:09:16.583565376 +0200
+@@ -75,7 +75,7 @@
+       <item row="1" column="0" >
+        <widget class="QLabel" name="label_7" >
+         <property name="text" >
+-         <string>Lenght (second) :</string>
++         <string>Length (second) :</string>
+         </property>
+        </widget>
+       </item>
+Index: glc-player-2.3.0/designer/SettingsDialog.ui
+===================================================================
+--- glc-player-2.3.0.orig/designer/SettingsDialog.ui	2011-07-01 20:05:59.293565366 +0200
++++ glc-player-2.3.0/designer/SettingsDialog.ui	2011-07-01 20:08:17.703565373 +0200
+@@ -775,7 +775,7 @@
+           <item>
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="title">
+-             <string>Cache Location and Informations</string>
++             <string>Cache Location and Information</string>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+@@ -917,7 +917,7 @@
+                <item>
+                 <widget class="QToolButton" name="updateCacheInfoCmd">
+                  <property name="toolTip">
+-                  <string>Update Cache informations</string>
++                  <string>Update Cache information</string>
+                  </property>
+                  <property name="text">
+                   <string>...</string>
+Index: glc-player-2.3.0/ressources/glc_player_fr.ts
+===================================================================
+--- glc-player-2.3.0.orig/ressources/glc_player_fr.ts	2011-07-01 20:04:08.613565361 +0200
++++ glc-player-2.3.0/ressources/glc_player_fr.ts	2011-07-01 20:08:35.213565374 +0200
+@@ -134,7 +134,7 @@
+     </message>
+     <message>
+         <location filename="../designer/AlbumManagerView.ui" line="305"/>
+-        <source>Current Model Informations</source>
++        <source>Current Model Information</source>
+         <translation>Informations sur le modèle courant</translation>
+     </message>
+     <message>
+@@ -675,7 +675,7 @@
+     </message>
+     <message>
+         <location filename="../designer/ExportWebDialog.ui" line="265"/>
+-        <source>Model Informations</source>
++        <source>Model Information</source>
+         <translation>Informations sur le modèle</translation>
+     </message>
+     <message>
+@@ -1258,7 +1258,7 @@
+     </message>
+     <message>
+         <location filename="../designer/MultiScreenshotsDialog.ui" line="78"/>
+-        <source>Lenght (second) :</source>
++        <source>Length (second) :</source>
+         <translation>Durée (secondes) :</translation>
+     </message>
+     <message>
+@@ -2261,7 +2261,7 @@
+     </message>
+     <message>
+         <location filename="../designer/SettingsDialog.ui" line="778"/>
+-        <source>Cache Location and Informations</source>
++        <source>Cache Location and Information</source>
+         <translation>Emplacement et informations du cache</translation>
+     </message>
+     <message>
+@@ -2286,7 +2286,7 @@
+     </message>
+     <message>
+         <location filename="../designer/SettingsDialog.ui" line="920"/>
+-        <source>Update Cache informations</source>
++        <source>Update Cache information</source>
+         <translation>Mise à jour des informations du cache</translation>
+     </message>
+     <message>
+@@ -3028,7 +3028,7 @@
+         <translation type="obsolete">Gestionnaire de Session</translation>
+     </message>
+     <message>
+-        <source>Display Current Model Informations</source>
++        <source>Display Current Model Information</source>
+         <translation type="obsolete">Affichage des informations du modèle courant</translation>
+     </message>
+     <message>
+@@ -3060,7 +3060,7 @@
+         <translation type="obsolete">Nombre de modèles chargés :</translation>
+     </message>
+     <message>
+-        <source>Current Model Informations</source>
++        <source>Current Model Information</source>
+         <translation type="obsolete">Informations sur le modèle courant</translation>
+     </message>
+     <message>

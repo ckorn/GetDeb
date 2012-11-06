@@ -1,0 +1,61 @@
+#!/usr/bin/make -f
+
+DB2MAN=/usr/share/sgml/docbook/stylesheet/xsl/nwalsh/manpages/docbook.xsl
+XP=xsltproc -''-nonet
+USR="$(CURDIR)/debian/gnormalize/usr"
+
+gnormalize.1: debian/gnormalize.dbk
+	$(XP) $(DB2MAN) $<
+
+build: build-stamp
+
+build-stamp: gnormalize.1 patch
+	dh_testdir
+	touch build-stamp
+
+clean: clean-patched unpatch
+clean-patched:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	rm -f gnormalize.1
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+	install -m 755 gnormalize $(USR)/bin
+	install -m 644 README $(USR)/share/doc/gnormalize
+	install -m 644 icons/*.png  $(USR)/share/pixmaps
+	install -m 644 debian/gnormalize.desktop $(USR)/share/applications
+	install -m 644 animations/*.gif $(USR)/share/gnormalize/animations
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installman gnormalize.1
+	dh_compress
+	dh_fixperms
+	dh_perl
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch:
+binary: binary-indep binary-arch
+
+patch: patch-stamp
+patch-stamp:
+	dpatch apply-all
+	touch patch-stamp
+
+unpatch:
+	dpatch deapply-all
+	rm -rf patch-stamp debian/patched
+
+.PHONY: build clean binary-indep binary-arch binary install

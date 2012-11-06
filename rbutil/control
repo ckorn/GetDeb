@@ -1,0 +1,27 @@
+Source: rbutil
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Section: utils
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               qt4-qmake,
+               libqt4-dev,
+               libusb-1.0-0-dev,
+               zlib1g-dev
+Standards-Version: 3.9.3
+Homepage: http://www.rockbox.org
+
+Package: rbutil
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Rockbox installation utility
+ This package contains the rockbox installation utility.
+
+Package: rbutil-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: ${misc:Depends}, rbutil (= ${binary:Version})
+Description: Rockbox installation utility (debug package)
+ This package contains the rockbox installation utility.
+ .
+ (This package contains the debugging symbols)

@@ -1,0 +1,4 @@
+desktop_file.patch
+no_update.patch
+local_cleaners_dir.patch
+gnomevfs.patch

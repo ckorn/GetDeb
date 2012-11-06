@@ -1,0 +1,43 @@
+penguinpills (0.4.3-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version (LP: #945150)
+    -- Table can now be sorted A-Z or Z-A by clicking on column header
+    -- Table items can be edited by double clicking
+    -- Added Remove button to remove selected table items
+    -- Added Quit button to exit application from main window
+    -- Fixed bug that affected paths containing spaces
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 03 Mar 2012 16:33:35 +0100
+
+penguinpills (0.4.2-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+    -- Fixed bug that caused balloon messages to appear in top left
+       corner of the screen when executing a scan during startup.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 19 Jul 2011 18:14:04 +0200
+
+penguinpills (0.4.1-1~getdeb1) natty; urgency=low
+
+  * New upstream version (LP: #811741)
+    v0.4.1
+    -- Fixed bug involving the save settings feature.
+    -- Added support for vexira.
+
+    v0.4
+    -- Complete rewrite of the source code.
+    -- Settings are now managed with xml files rather than ini files.
+    -- Simplified the process of creating or designing an options window
+       for a scanner by using xml templates.
+    -- Added clamav, drweb and sophos.
+    -- Added restore feature.
+    -- Text boxes for scanner path, scan params and updater path are no
+       longer read only and can be manually edited.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 17 Jul 2011 12:45:28 +0200
+
+penguinpills (0.3.1-1~getdeb1) maverick; urgency=low
+
+  * Initial release (LP: #656443)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 19 Dec 2010 19:51:46 +0100

@@ -1,0 +1,29 @@
+wibom-gtk (0.12-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 28 Jul 2011 11:58:01 +0200
+
+wibom-gtk (0.11-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 16:18:31 +0100
+
+wibom-gtk (0.10-1~getdeb2) lucid; urgency=low
+
+  * Add conflict on wibom (LP: #704431)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 19 Jan 2011 20:37:18 +0100
+
+wibom-gtk (0.10-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 11 Dec 2010 16:58:56 +0100
+
+wibom-gtk (0.9-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #668420)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Oct 2010 18:50:58 +0200

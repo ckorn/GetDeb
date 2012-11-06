@@ -1,0 +1,5 @@
+?package(chmsee):needs="X11" section="Applications/Viewers"\
+  title="ChmSee" \
+  icon32x32="/usr/share/pixmaps/chmsee-32x32.xpm"\
+  icon16x16="/usr/share/pixmaps/chmsee-16x16.xpm"\
+  command="/usr/bin/chmsee"

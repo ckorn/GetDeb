@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# you'll need to update the vers variable below each
+# time a new version of the application is released
+vers="0.51"
+tested=""
+
+if [ -e "$HOME/.xnviewmp/XnView.db" ] ; then
+  if [ -e "$HOME/.xnviewmp/upgrade.ini" ] ; then
+    tested=`grep "dbtested=$vers" $HOME/.xnviewmp/upgrade.ini`
+  fi
+  if [ -z "$tested" -o ! -e "$HOME/.xnviewmp/upgrade.ini" ] ; then
+    rm $HOME/.xnviewmp/XnView.db
+    echo "dbtested=$vers" > $HOME/.xnviewmp/upgrade.ini
+  fi
+else
+  if [ ! -e "$HOME/.xnviewmp" ] ; then
+    mkdir $HOME/.xnviewmp
+  fi
+  echo "dbtested=$vers" > $HOME/.xnviewmp/upgrade.ini
+fi
+
+LD_LIBRARY_PATH=/usr/lib/xnviewmp:/usr/lib/xnviewmp/lib:/usr/lib/xnviewmp/lib/codecs:/usr/lib/xnviewmp/lib/imageformats:/usr/lib/xnviewmp/lib/phonon_backend:/usr/lib/xnviewmp/Plugins
+export LD_LIBRARY_PATH
+QT_PLUGIN_PATH=/usr/lib/xnviewmp:/usr/lib/xnviewmp/lib:/usr/lib/xnviewmp/lib/codecs:/usr/lib/xnviewmp/lib/imageformats:/usr/lib/xnviewmp/lib/phonon_backend:/usr/lib/xnviewmp/Plugins
+export QT_PLUGIN_PATH
+
+/usr/lib/xnviewmp/XnView $@
+
+exit 0

@@ -1,0 +1,14 @@
+Source: yydecode
+Section: utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.9.2
+Homepage: http://yydecode.sourceforge.net/
+
+Package: yydecode
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: decode yEnc archives
+ yydecode works almost identically to the infamous uudecode program, but
+ for yEnc encoded archives.

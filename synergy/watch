@@ -1,0 +1,4 @@
+version=3
+opts=filenamemangle=s/.*files\/(.+)/$1/ \
+  http://code.google.com/p/synergy/downloads/list \
+    .*/files/synergy-([\d\.]+)-Source\.tar\.gz

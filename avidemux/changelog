@@ -1,0 +1,1125 @@
+avidemux (1:2.5.6-1~getdeb2) precise; urgency=low
+
+  * Change debian/watch file to only scan for 2.5 versions
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 10 Sep 2012 19:43:55 +0200
+
+avidemux (1:2.5.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 May 2012 20:03:03 +0200
+
+avidemux (1:2.5.4-0ubuntu11) precise; urgency=low
+
+  * No-change rebuild to pick libvpx's new shlib. (LP: #926580)
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Thu, 09 Feb 2012 15:38:52 +0100
+
+avidemux (1:2.5.4-0ubuntu10) precise; urgency=low
+
+  * Rebuild for libx264-120.
+
+ -- Angel Abad <angelabad@ubuntu.com>  Sun, 29 Jan 2012 21:10:58 +0100
+
+avidemux (1:2.5.4-0ubuntu9) precise; urgency=low
+
+  * Rebuild for libx264-118.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sun, 13 Nov 2011 00:49:56 +0000
+
+avidemux (1:2.5.4-0ubuntu8) precise; urgency=low
+
+  * Fix build failure of 1:2.5.4-0ubuntu7 (LP: #831096) due to:
+    - changed structure members in x264.h release 115 and later;
+    - missing install rule for i18n files;
+    - missing dependency on xsltproc, causing unpredictable failures
+      on systems without xsltproc.
+
+ -- Daniel van Vugt <vanvugt@gmail.com>  Mon, 17 Oct 2011 17:27:32 +0800
+
+avidemux (1:2.5.4-0ubuntu7) oneiric; urgency=low
+
+  * Add patch to fix audio in avidemux2_qt4 (LP: #774912).
+  * Add patch to fix FTBFS with GCC4.6 (LP: #766017).
+  * Bump Standards.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Thu, 12 May 2011 11:36:01 +0200
+
+avidemux (1:2.5.4-0ubuntu6) natty; urgency=low
+
+  * Support Aften's GIT snapshots.
+  * [H264/indexer] Read the whole SPS, not 60 bytes hardcoded.
+    Fix decoding of some M2TS.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 17 Jan 2011 16:15:35 +0100
+
+avidemux (1:2.5.4-0ubuntu5) natty; urgency=low
+
+  * Add support to x264 core version 110.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Tue, 30 Nov 2010 20:34:46 +0100
+
+avidemux (1:2.5.4-0ubuntu4) natty; urgency=low
+
+  * Build-Depends on libqt4-opengl-dev.
+  * Build-Depends on libaften-dev.
+  * Build-Depends on libvpx-dev.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 22 Nov 2010 20:34:08 +0100
+
+avidemux (1:2.5.4-0ubuntu3) natty; urgency=low
+
+  * Handle end_tag in .FLV files properly.
+  * Fix playback of MOV when audio is LPCM.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sun, 14 Nov 2010 09:50:27 +0100
+
+avidemux (1:2.5.4-0ubuntu2) natty; urgency=low
+
+  * Adjust debian-tag field.
+  * Add patch to avoid crash of the GTK UI if menu default value runs out
+    of bound.
+  * Update config.{guess,sub} by calling
+    dh_autotools-dev_{updateconfig,restoreconfig} properly.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Wed, 27 Oct 2010 00:02:54 +0200
+
+avidemux (1:2.5.4-0ubuntu1) natty; urgency=low
+
+  * New upstream release (LP: #665630):
+    - Support for MKV compressed headers.
+    - Improved VC1 support.
+    - New display : QtOpenGL.
+    - Improved x264 dialog and options.
+  * Add .gitignore,debian/gbp.conf files.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Tue, 26 Oct 2010 00:05:16 +0200
+
+avidemux (1:2.5.3-0ubuntu3) maverick; urgency=low
+
+  * Bump Standards.
+  * Add debian/patches/04-xvid-detection.diff for proper xvid detection:
+    - Fixes FTBFS on Maverick (LP: #614896).
+
+ -- Артём Попов <artfwo@gmail.com>  Sun, 08 Aug 2010 10:43:33 +0700
+
+avidemux (1:2.5.3-0ubuntu2) maverick; urgency=low
+
+  * Bump Standards.
+  * Rebuild for JACK2 transition.
+  * Add missing misc:Depends macro to avidemux-common's Depends field.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Wed, 21 Jul 2010 12:58:06 +0200
+
+avidemux (1:2.5.3-0ubuntu1) maverick; urgency=low
+
+  * New upstream release (LP: #577798):
+    - Fix crash when importing from DVD iso (LP: #450584).
+  * Switch to debian 3.0 (quilt) format to ease upstream's tarball repacking.
+  * Remove unnecessary debian/README.source file.
+  * debian/control:
+    - Don't build-depend on quilt.
+    - Build-depend on yasm for i386,amd64 architectures.
+    - Bump Standards.
+    - Add Vcs-* tags.
+  * debian/rules:
+    - Remove get-orig-source rule, no longer needed.
+    - Don't pass DAVIDEMUX_LIB_DIR=/usr/lib to cmake, otherwise it tries to
+      to link plugins against the system libs.
+  * debian/avidemux-plugins-common.install: Install
+    usr/lib/ADM_plugins/videoEncoder/{libADM_vidEnc_mpeg2enc.so,mpeg2enc/*}.
+  * Refresh patches.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sun, 09 May 2010 19:47:31 +0200
+
+avidemux (1:2.5.2-0ubuntu3) lucid; urgency=low
+
+  * No-change rebuild against libfaad2 (libfaad0 is NBS).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 08 Mar 2010 16:45:59 +0100
+
+avidemux (1:2.5.2-0ubuntu2) lucid; urgency=low
+
+  * Add missing Conflicts/Replaces on avidemux-plugins to the new plugins
+    packages
+  * Add debian/patches/03-no-altivec.diff so SET(ADM_CPU_ALTIVEC 1) is not set
+    - Attempt to avoid FTBFS on Ubuntu powerpc
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 27 Dec 2009 17:15:18 -0500
+
+avidemux (1:2.5.2-0ubuntu1) lucid; urgency=low
+
+  * New upstream release
+    - Drop debian/patches/03-fix_crash_with_greek_locale.diff (incorporated
+      upstream)
+  * Add build-depends on libopencore-amrnb-dev and libopencore-amrwb-dev to
+    provide missing codec support
+  * Add build-depends on gettext
+  * Change arch: any packages to arch: i386 amd64 powerpc
+    - These are the only platforms upstream supports see
+      cmake/admDetermineSystem.cmake
+  * Split avidemux-plugins into avidemux-plugins-common, avidemux-plugins-qt,
+    avidemux-plugins-gtk, avidemux-plugins-cli (LP: #454167)
+    - Adjust for avidemux, avidemux-qt, and avidemux-cli
+  * Move plugins to recommends
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 27 Dec 2009 00:05:55 -0500
+
+avidemux (1:2.5.2~rc-0ubuntu3) lucid; urgency=low
+
+  * debian/patches/03-fix_crash_with_greek_locale.diff:
+    - Prevent crash while using Greek language (LP: #344528).
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sat, 19 Dec 2009 03:29:35 +0100
+
+avidemux (1:2.5.2~rc-0ubuntu2) lucid; urgency=low
+
+  * Add PulseAudio support (LP: #215560).
+  * Append ${misc:Depends} macro to the Depends fields.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 14 Dec 2009 00:35:23 +0100
+
+avidemux (1:2.5.2~rc-0ubuntu1) lucid; urgency=low
+
+  * 2.5.2 release candidate; taken from upstream's SVN
+    (tag avidemux_2.5.2rc, revision #5655):
+    - Re-enabled Vorbis decoder (regression introduced 2.5.0)
+    - Updated the FFmpeg libraries
+    - Added support for latest x264 core and updated Qt interface
+    - Added support for H264 video, VP6A video and AAC audio in FLV
+      container
+    - Added support for SEDG and WMVA four CCs
+    - Various fixes related to Xvid settings
+    - Fixed Xvid stat files remaining locked after encoding (regression
+      introduced 2.5.0)
+    - Improved MKV demuxer
+    - New Colour Curve Editor plugin for Qt interface
+    - Fixed partial filter support (regression introduced 2.5.0)
+    - Fixed FluxSmooth filter plugin (regression introduced 2.5.0)
+    - Added extra bitrate settings for LAME audio encoder
+    - Enabled JACK audio device plugin (regression introduced 2.5.0)
+    - Various GUI fixes for GTK+ and Qt interface
+    - Fixed command-line interface support for various video filters
+    - Changed "save-jpg" parameter of command-line interface to honour
+      "begin" parameter
+    - Fixed saving of crash file when Avidemux unexpectedly quits (regression
+      introduced in 2.5.0)
+    - Fixed GUI quirks when using Copy mode and AVI un/packing
+    - Proper channel mapping for multichannel DTS & Vorbis files
+    - Proper decoding of 5.1 vorbis file in mkv
+    - Fixes bugs:
+      - LP: #481561
+  * debian/rules: Update ffmpeg tarballs' filenames.
+  * Drop 01-build_vorbis_decoder.diff patch.
+  * Refresh 02-alsa_output.diff patch, partially adopted by upstream.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sun, 13 Dec 2009 12:41:41 +0100
+
+avidemux (1:2.5.1+repack-0ubuntu3) lucid; urgency=low
+
+  * Add 02-alsa_output.diff to make ALSA uses a different device (LP: #321028)
+  * Refresh patches.
+  * debian/control: Replace libxvidcore4-dev with libxvidcore-dev.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 23 Nov 2009 16:59:21 +0100
+
+avidemux (1:2.5.1+repack-0ubuntu2) karmic; urgency=low
+
+  * debian/{control,rules,README.source}: Add quilt support.
+  * debian/rules: Prevent FTBFS if the dir exists.
+  * Add a patch to build vorbis decoder plugin (LP: #447720).
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 12 Oct 2009 23:44:26 +0200
+
+avidemux (1:2.5.1+repack-0ubuntu1) karmic; urgency=low
+
+  * New upstream bugfix release (LP: #416066):
+    - Re-enabled several video and audio encoders (regression introduced
+      in 2.5.0)
+    - Updated the FFmpeg libraries
+    - More video encoders are now plugins
+    - DV video encoder now supports more profiles
+    - Fixed loading and saving issues with LAME, x264 and Xvid options
+      (regression introduced in 2.5.0)
+    - Fraps video decoding support
+    - Lowpass-5 mode added to libavcodec deinterlacer filter plugin
+    - Fixed formatting of parameters for various filters on 64-bit platforms
+    - Updated libass
+    - Fixed sizing of the bitrate control on various video encoder configure
+      windows (regression introduced in 2.5.0)
+    - Improved filter dialog for GTK+ interface
+    - New navigation icons for GTK+ interface
+    - Fixed the behaviour of several GTK+ open/save dialogs (regression
+      introduced in 2.5.0)
+    - asharp filter's Block Adaptive mode can now be disabled using the Qt
+      interface
+    - Re-enabled the colour chooser dialog using the Qt interface (regression
+      introduced in 2.5.0)
+    - GCC 4.4 support
+    - Fixed issues with CMake build scripts when using multiple make jobs
+      (regression introduced in 2.5.0)
+  * Remove debian/patches dir and drop all patches, now applied by upstream.
+  * Drop quilt support.
+  * debian/libavidemux0.install: Also install missing libraries.
+  * Move debian/install to debian/avidemux.install.
+  * debian/rules:
+    - Build the internal ffmpeg version properly (thanks to Christian Marillat).
+    - A bit of cleanup.
+  * debian/control:
+    - Bump Standards-Version.
+    - Update Homepage field.
+    - Adjust libavidemux0 short description.
+    - gtk -> GTK, qt -> QT.
+    - Set myself as Maintainer.
+  * Repack the tarball to remove the debian/ dir provided by upstream:
+    - Create debian/README.source.
+    - Update debian/watch.
+    - Add get-orig-source target to debian/rules.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Thu, 20 Aug 2009 08:42:44 +0200
+
+avidemux (1:2.5.0-0.0ubuntu4) karmic; urgency=low
+
+  * Re-add libavidemux0 needed to provide the shared libraries to all UIs.
+  * Move Recommends field from UI runtime stanzas to libavidemux0.
+  * Add libavidemux0 dependency on UI runtimes.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Fri, 14 Aug 2009 09:59:14 +0200
+
+avidemux (1:2.5.0-0.0ubuntu3) karmic; urgency=low
+
+  [ Christoph Korn ]
+  * Also build the plugins (LP: #401386).
+
+  [ Alessio Treglia ]
+  * debian/control:
+    - Build-Depends on libjack-dev to build with JACK support.
+    - Remove avidemux fom avidemux-common's dependencies.
+    - avidemux{-qt,-cli} runtime packages depend on avidemux-plugins.
+  * debian/patches/avidemux-plugins-2.5.0-gcc4.4.patch:
+    - Fix plugins build issues due to GCC4.4;
+      taken from http://avidemux.org/admForum/viewtopic.php?id=6304.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 10 Aug 2009 14:52:00 +0200
+
+avidemux (1:2.5.0-0.0ubuntu2) karmic; urgency=low
+
+  * Drop libavidemux, install all libraries into avidemux main
+    runtime package.
+  * debian/patches/avidemux-compile.patch: Add description.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Thu, 16 Jul 2009 10:00:11 +0200
+
+avidemux (1:2.5.0-0.0ubuntu1) karmic; urgency=low
+
+  * Merge with debian-multimedia, Ubuntu remaining changes:
+    - debian/{control,rules}:
+      + Drop ccache support.
+  * Remove libopencore-amrnb-dev build-dependency.
+  * Refresh avidemux-compile.patch.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 13 Jul 2009 16:56:09 +0200
+
+avidemux (1:2.5.0-0.0) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 28 Jun 2009 09:14:11 +0200
+
+avidemux (1:2.4.4-0.3ubuntu1) karmic; urgency=low
+
+  * Merge from debian-multimedia, Ubuntu remaining changes:
+    - Drop ccache support:
+      + debian/control: Remove ccache from Build-Depends field.
+      + debian/rules: Don't use ccache.
+    - debian/control:
+      + Drop libamrnb-dev build-dependency.
+      + Bump libx264-dev build-dependency and libpulse-dev build-dependency.
+    - Add debian/patches/avidemux-compile.patch to prevent FTBFS; patch taken
+      from https://bugzilla.rpmfusion.org/attachment.cgi?id=131
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Fri, 26 Jun 2009 18:03:35 +0200
+
+avidemux (1:2.4.4-0.3) unstable; urgency=low
+
+  * Avidemux doesn't use toolame but twolame since ??? So replace toolame by
+    twolame.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 06 Jun 2009 10:21:56 +0200
+
+avidemux (1:2.4.4-0.2ubuntu1) karmic; urgency=low
+
+  * Merge from debian-multimedia, remaining changes:
+    - debian/control:
+      + Bump-up Build-Depends on libx264-dev and add on libpulse-dev.
+      + Remove Build-Depends on ccache and libamrnb-dev.
+    - debian/rules: Don't use ccache.
+  * Refresh patches.
+  * Add (and adjust) debian/patches/avidemux-compile.patch to fix FTBFS.
+    Original patch taken from
+    https://bugzilla.rpmfusion.org/attachment.cgi?id=131.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sun, 10 May 2009 13:03:07 +0200
+
+avidemux (1:2.4.4-0.2) unstable; urgency=low
+
+  * Try to fix build on alpha and ia64 with 03_64bits-arch.diff patch.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 03 Apr 2009 15:02:51 +0200
+
+avidemux (1:2.4.4-0.1) unstable; urgency=low
+
+  * Rebuild against the latest libx264-dev.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 08 Mar 2009 15:27:50 +0100
+
+avidemux (1:2.4.4-0.0ubuntu1) jaunty; urgency=low
+
+  * Merge from debian multimedia, Ubuntu remaining changes:
+    - debian/control:
+      + Build-Depends on newer libx264-dev.
+      + Don't Build-Depends on ccache and libamrnb-dev.
+      + Build-Depends on libpulse-dev.
+      + Fixed small typo in avidemux description.
+    - Don't use ccache.
+    - Drop patch to fix build with newer x264, it has been merged by upstream.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Tue, 17 Feb 2009 23:41:46 +0100
+
+avidemux (1:2.4.4-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 08 Feb 2009 10:21:15 +0100
+ 
+avidemux (1:2.4.3-0.1ubuntu1) jaunty; urgency=low
+
+  * merge from debian-multimedia.org
+  * remove undocumented ubuntu patch debian/patches/01_QT4.diff. Does not
+    seem worth carrying around for us.
+  * remaining changes:
+    - Build-depend on libpulse-dev.
+    - Do not build-depend on libamrnb-dev.
+    - Set maintainer fields per specification.
+  * do not use ccache
+  * depend on newer libx264-dev
+  * import new patch from rpmfusion to fix build with newer x264.
+    patch created by Dominik Mierzejewski <rpm at greysector.net>
+    see http://lists.rpmfusion.org/pipermail/rpmfusion-commits/2008-December/003131.html
+
+ -- Reinhard Tartler <siretart@tauware.de>  Fri, 16 Jan 2009 08:16:14 +0100
+
+avidemux (1:2.4.3-0.1) unstable; urgency=low
+
+  * New patch from upstream author to fix build with 'no FPM selected'
+    error.
+
+ -- Christian Marillat <marillat@debian.org>  Wed, 06 Aug 2008 15:10:21 +0200
+  
+avidemux (1:2.4.3-0.0ubuntu1) intrepid; urgency=low
+
+  * Merge from debian-multimedia.org, remaining Ubuntu changes:
+    + debian/control:
+      - Build-depend on libpulse-dev.
+      - Do not build-depend on libamrnb-dev.
+      - Description: QT4 -> Qt 4.
+      - Set maintainer fields per specification.
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Tue, 05 Aug 2008 22:50:46 +0700
+
+avidemux (1:2.4.3-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Move to cmake (I still hate cmake).
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 04 Aug 2008 12:15:45 +0200
+
+avidemux (1:2.4.2-0.0ubuntu1) intrepid; urgency=low
+
+  * Merged from debian-multimedia.org (LP: #247363), remaining Ubuntu changes:
+    + debian/control:
+      - Added liblame-dev as an alternate build-dependency (libmp3lame-dev is
+        not in intrepid yet).
+      - Build-depend on libpulse-dev for PulseAudio support.
+      - Build-depend on chrpath.
+      - Set maintainer fields per specification.
+      - Removed libamrnb-dev build-dependency.
+      - Corrected spelling: QT4 -> Qt 4.
+    + debian/rules:
+      - Extra cleanup.
+      - Strip rpath from avidemux2_qt4.
+      - Manually define USE_PULSE_SIMPLE and link with -lpulse-simple, since
+        PulseAudio check is only built into the cmake builder, not automake.
+    + Added debian/patches/02_pulse.diff:
+      - Include PulseAudio support files in build.
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Sun, 20 Jul 2008 13:21:58 +0700
+
+avidemux (1:2.4.2-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Removed 03_subtitle-font and 04_fix_dib_colorspace patches included
+    upstream.
+  * Build against gcc/g++ 4.3
+
+ -- Christian Marillat <marillat@debian.org>  Tue, 08 Jul 2008 09:06:32 +0200
+
+avidemux (1:2.4.1-0.3) unstable; urgency=low
+
+  * New improved patch from Ubuntu to change the default subtitle font to
+    DejaVu Sans.
+  * Rebuild against the new libmp3lame package.
+  * Added a patch from Mathias Brodala to load correctly blender avi file.
+  * Build with gcc/g++ 4.2 (doesn't build with 4.3)
+  * Added libxmu-dev in Build-Depedns.
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 07 Jul 2008 11:28:19 +0200
+
+avidemux (1:2.4.1-0.2ubuntu3) intrepid; urgency=low
+
+  * Build-depend on libxmu-dev.
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Tue, 13 May 2008 14:28:17 +0700
+
+avidemux (1:2.4.1-0.2ubuntu2) intrepid; urgency=low
+
+  * Added debian/patches/03_missing-asm-naming.patch:
+    - Fix build failure with GCC 4.3.
+    - Patch by Sergey Dryabzhinsky, taken from Gentoo bug 213099.
+  * Added debian/patches/04_alsa-device.patch:
+    - Change the default ALSA device from "plughw:0,0" to "pulse" (LP: #215560).
+      Upstream might consider using "default" instead.
+  * Added debian/patches/05_subtitle-font.patch:
+    - Change the default subtitle font to DejaVu Sans. (LP: #222773)
+    - Modified patch by Festor Wailon Dacoba.
+  * debian/rules:
+    - Delete config.h.in in clean.
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Sat, 10 May 2008 12:37:45 +0700
+
+avidemux (1:2.4.1-0.2ubuntu1) intrepid; urgency=low
+
+  * Merged from debian-multimedia.org, remaining Ubuntu changes:
+    + debian/control:
+      - Set maintainer fields per specification.
+      - Removed libamrnb-dev build-dependency.
+      - Re-added chrpath build-dependency.
+      - Corrected spelling: QT4 -> Qt 4.
+    + debian/rules:
+      - Strip rpath from avidemux2_qt4.
+      - Link with -Wl,--as-needed.
+      - Extra cleanup in clean rule (much smaller diff.gz).
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Fri, 02 May 2008 11:43:49 +0700
+
+avidemux (1:2.4.1-0.2) unstable; urgency=low
+
+  * New patch to add various fix for g++ 4.3
+
+ -- Christian Marillat <marillat@debian.org>  Wed, 09 Apr 2008 09:32:57 +0200
+
+avidemux (1:2.4.1-0.1) unstable; urgency=low
+
+  * rebuild against the latest x264 package.
+
+ -- Christian Marillat <marillat@debian.org>  Tue, 08 Apr 2008 15:05:40 +0200
+
+avidemux (1:2.4.1-0.0ubuntu1) hardy; urgency=low
+
+  * Merged new upstream release from debian-multimedia.org (LP: #192774),
+    remaining Ubuntu changes:
+    + debian/control:
+      - Set maintainer fields per specification.
+      - Removed libamrnb-dev build-dependency.
+      - Re-added chrpath build-dependency.
+      - Corrected spelling: QT4 -> Qt 4.
+    + debian/rules:
+      - Strip rpath from avidemux2_qt4 (--disable-rpath won't work).
+
+ -- Matvey Kozhev <sikon@ubuntu.com>  Mon, 18 Feb 2008 20:31:37 +0600
+
+avidemux (1:2.4.1-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 18 Feb 2008 09:22:30 +0100
+
+avidemux (1:2.4.0-0.4) unstable; urgency=low
+
+  * debian/control fix typos verison --> version
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 11 Feb 2008 09:16:41 +0100
+
+avidemux (1:2.4.0-0.3ubuntu2) hardy; urgency=low
+
+  * Corrected the typo errors (LP: #189584)
+
+ -- Balaji (My Key) <balajig81@gmail.com>  Tue, 12 Feb 2008 22:25:34 +0530
+
+avidemux (1:2.4.0-0.3ubuntu1) hardy; urgency=low
+
+  * Merged new upstream release from debian-multimedia.org
+    (LP: #178845, LP: #180393), remaining Ubuntu changes:
+    + debian/control:
+      - set maintainer fields per Ubuntu policy.
+      - removed libamrnb-dev, not in Ubuntu and most likely
+        will never be (due to being proprietary software).
+      - build against current libx264-dev (LP: #177082).
+      - build against current libfaac-dev (LP: #181389).
+      - build-depend on chrpath to strip rpath from avidemux2_qt4.
+    + debian/rules: strip rpath from avidemux2_qt4.
+    + debian/source.lintian-overrides: re-added.
+
+ -- Matvey Kozhev <sikon@lucidfox.org>  Wed, 23 Jan 2008 14:24:55 +0600
+
+avidemux (1:2.4.0-0.3) unstable; urgency=low
+
+  * Use configure and make instead of cmake.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 29 Dec 2007 12:30:30 +0100
+
+avidemux (1:2.4.0-0.2) unstable; urgency=low
+
+  * avidemux-common should replace avidemux.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 29 Dec 2007 10:17:53 +0100
+
+avidemux (1:2.4.0-0.1) unstable; urgency=low
+
+  * Should Build-Depends on libsamplerate0-dev
+  * Upload in unstable.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 28 Dec 2007 12:40:30 +0100
+
+avidemux (1:2.4.0-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Merge changes from Ubuntu.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 28 Dec 2007 11:19:30 +0100
+
+avidemux (1:2.4~preview3-0.0ubuntu1) hardy; urgency=low
+
+  * Upload to Ubuntu. (LP: #163287, LP: #126572)
+  * debian/changelog: re-added Ubuntu releases.
+  * debian/control:
+    - Require debhelper >= 5.0.51 (for dh_icons) and imagemagick.
+    - Build-depend on libsdl1.2-dev instead of libsdl-dev.
+    - Build against newer libx264-dev. (LP: #138854)
+    - Removed libamrnb-dev, not in Ubuntu yet.
+  * debian/rules:
+    - Install all icon sizes, using convert (upstream installs none).
+    - Added missing calls to dh_installmenu, dh_installman, dh_icons and
+      dh_desktop.
+  * debian/menu, debian/avidemux-qt.menu:
+    - Corrected package and executable names.
+  * debian/avidemux-common.install: Install icons.
+  * debian/avidemux.common.manpages: Install man/avidemux.1.
+  * debian/links, debian/avidemux-cli.links, debian/avidemux-gtk.links:
+    - Link manpages to avidemux.1.gz.
+  * debian/install, debian/avidemux-qt.install, debian/avidemux-gtk.desktop,
+    debian/avidemux-qt.desktop: Install desktop files.
+
+ -- Matvey Kozhev <sikon@lucidfox.org>  Tue, 18 Dec 2007 13:53:04 +0600
+
+avidemux (1:2.4~preview3-0.0) experimental; urgency=low
+
+  * New upstream pre release uploaded to experimental.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 02 Dec 2007 15:24:26 +0100
+
+avidemux (1:2.3.0-0.0ubuntu3) feisty; urgency=low
+
+  * Fix race condition in po builds.
+
+ -- Soren Hansen <sh@linux2go.dk>  Tue, 13 Mar 2007 22:01:43 +0100
+
+avidemux (1:2.3.0-0.0ubuntu2) feisty; urgency=low
+
+  * Rebuild against newer libx264-dev (affects Ubuntu: #80387)
+    - No source changes needed; avidemux properly compensates for newer API
+
+ -- John Dong <jdong@ubuntu.com>  Wed, 17 Jan 2007 22:39:02 -0500
+
+avidemux (1:2.3.0-0.0ubuntu1) feisty; urgency=low
+
+  * Merge from debian-multimedia.org, remaining Ubuntu change:
+    - desktop file,
+    - no support for ccache and make -j.
+  * Closes Ubuntu: #69614.
+
+ -- Daniel T Chen <crimsun@ubuntu.com>  Fri, 15 Dec 2006 17:13:20 -0500
+
+avidemux (1:2.3.0-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Add support for ccache and make -j.
+
+ -- Christian Marillat <marillat@debian.org>  Sun,  3 Dec 2006 09:41:31 +0100
+
+avidemux (1:2.1.2+2.3-preview2-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 29 Oct 2006 11:41:01 +0100
+
+avidemux (1:2.1.2+2.2-preview2b-0.1) unstable; urgency=low
+
+  * Rebuild against the latest libdirectfb-0.9-25 package.
+  * New patch to build with latest x264.
+
+ -- Christian Marillat <marillat@debian.org>  Thu,  3 Aug 2006 14:55:51 +0200
+
+avidemux (1:2.1.2+2.2-preview2b-0.0) unstable; urgency=low
+
+  * New pre 2.2 release.
+
+ -- Christian Marillat <marillat@debian.org>  Wed,  5 Jul 2006 14:21:25 +0200
+
+avidemux (1:2.1.2-0.1) unstable; urgency=low
+
+  * Rebuild against the latest libfaad.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 23 Apr 2006 17:44:07 +0200
+
+avidemux (1:2.1.2-0.0ubuntu3) edgy; urgency=low
+
+  * Apply patch from Ubuntu #63842 for newer x264,
+    - RC freeze exception granted by Andrew Mitchell.
+
+ -- Daniel T Chen <crimsun@ubuntu.com>  Thu, 12 Oct 2006 17:12:16 -0400
+
+avidemux (1:2.1.2-0.0ubuntu2) dapper; urgency=low
+
+  * Add a desktop file (thanks Fabio Berta)
+    Closes Malone #39702
+
+ -- Gauvain Pocentek <gauvainpocentek@ubuntu.com>  Tue,  2 May 2006 07:46:14 +0200
+
+avidemux (1:2.1.2-0.0ubuntu1) dapper; urgency=low
+
+  * New upstream release.
+  * Sync with Marillat. Ubuntu patches preserved.
+  * UVF Exception: Malone #39819
+  * build and install addons/ffv1rec (on i386 only)
+
+ -- Jamie Jones <jamie_jones_au@yahoo.com.au>  Mon, 17 Apr 2006 11:54:34 +1000
+
+avidemux (1:2.1.2-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 11 Mar 2006 16:09:57 +0100
+
+avidemux (1:2.1.1-0.0ubuntu1) dapper; urgency=low
+
+  * Sync with Marillat
+  * UVF Exception: Malone #34448
+  * Don't build MMX support as we support older CPUs too, only build the
+    ffv1rec addon on x86. Patch by Jamie Jones.
+  * Adjust Build-Depends:
+    + liba52-dev -> liba52-0.7.4-dev
+
+ -- Sebastian Dröge <slomo@ubuntu.com>  Sun, 26 Mar 2006 16:33:17 +0200
+
+avidemux (1:2.1.1-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Add libsmjs-dev, libxv-dev and libx264-dev in Build-Depends.
+  * Add a watch file.
+
+ -- Christian Marillat <marillat@debian.org>  Tue,  7 Feb 2006 12:16:54 +0100
+
+avidemux (1:2.0.42-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 22 Jul 2005 23:26:25 +0200
+
+avidemux (1:2.0.40-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Wed, 25 May 2005 13:02:29 +0200
+
+avidemux (1:2.0.38+rc3-0.1) unstable; urgency=low
+
+  * Oooops, I've patched accidently ffv1rec, so now ffv1rec can be packaged.
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  6 May 2005 14:16:18 +0200
+
+avidemux (1:2.0.38+rc3-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Removed 01_ffv1rec patch included by upstream.
+  * ffv1rec doesn't compile.
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  6 May 2005 10:58:55 +0200
+
+avidemux (1:2.0.38+rc2b-0.2) unstable; urgency=low
+
+  * For now doesn't build ffv1rec for sparc.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 22 Apr 2005 13:52:25 +0200
+
+avidemux (1:2.0.38+rc2b-0.1) unstable; urgency=low
+
+  * Rebuild for testing.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 10 Apr 2005 19:39:54 +0200
+
+avidemux (1:2.0.38+rc2b-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  1 Apr 2005 11:50:26 +0200
+
+avidemux (1:2.0.38+rc1-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 20 Feb 2005 19:34:26 +0100
+
+avidemux (1:2.0.36-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 24 Jan 2005 16:16:37 +0100
+
+avidemux (1:2.0.34+test2-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 18 Dec 2004 13:55:13 +0100
+
+avidemux (1:2.0.34+test1-0.1) unstable; urgency=low
+
+  * Need to build depends on a versioned libfaac-dev (>= 1.24-0.2).
+
+ -- Christian Marillat <marillat@debian.org>  Wed, 24 Nov 2004 17:31:48 +0100
+
+avidemux (1:2.0.34+test1-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Add nasm, libfaac-dev and libfaad2-dev in Build-depends
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 14 Nov 2004 17:41:03 +0100
+
+avidemux (1:2.0.30-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 17 Oct 2004 11:10:27 +0200
+
+avidemux (1:2.0.28-0.2) unstable; urgency=low
+
+  * Little hack to remove the automake/aclocal calls and remove automake1.8
+   from Build-Depends.
+
+ -- Christian Marillat <marillat@debian.org>  Mon,  6 Sep 2004 15:05:39 +0200
+
+avidemux (1:2.0.28-0.1) unstable; urgency=low
+
+  * Really need to Build-depends on automake1.8
+
+ -- Christian Marillat <marillat@debian.org>  Sun,  5 Sep 2004 11:12:43 +0200
+
+avidemux (1:2.0.28-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Thu, 19 Aug 2004 14:46:55 +0200
+
+avidemux (1:2.0.26-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control Add libsdl-dev in Build-Depends.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 23 Jul 2004 09:44:16 +0200
+
+avidemux (1:2.0.24-0.2) unstable; urgency=low
+
+  * Add a Build-dependency for automaken | automake1.8
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 28 Jun 2004 14:40:36 +0200
+
+avidemux (1:2.0.24-0.1) unstable; urgency=low
+
+  * Build against xvid 1.0.0
+
+ -- Christian Marillat <marillat@debian.org>  Tue, 18 May 2004 15:03:11 +0200
+
+avidemux (1:2.0.24-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun,  9 May 2004 15:21:01 +0200
+
+avidemux (1:2.0.22-0.1) unstable; urgency=low
+
+  * Fix to complie ffv1rec from the author.
+
+ -- Christian Marillat <marillat@debian.org>  Tue,  2 Mar 2004 10:36:15 +0100
+
+avidemux (1:2.0.22-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * ffv1rec doesn't complie, not packaged.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 28 Feb 2004 09:52:26 +0100
+
+avidemux (1:2.0.20-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * Add the ffv1rec binary in the package.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 20 Dec 2003 22:49:46 +0100
+
+avidemux (1:2.0.18-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat,  1 Nov 2003 15:50:01 +0100
+
+avidemux (1:2.0.16-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Wed,  1 Oct 2003 21:17:13 +0200
+
+avidemux (1:2.0.12-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  8 Aug 2003 17:29:42 +0200
+
+avidemux (1:2.0.10-0.0) unstable; urgency=low
+
+  * New upstream release.
+  * 2.0.12-0.0 New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  8 Aug 2003 17:21:32 +0200
+
+avidemux (1:0.9-0.1) unstable; urgency=low
+
+  * Rebuild for sarge (libvorbis)
+
+ -- Christian Marillat <marillat@debian.org>  Wed, 14 May 2003 02:21:23 +0200
+
+avidemux (1:0.9-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Tue, 22 Apr 2003 10:23:07 +0200
+
+avidemux (0.9rc3-0.1) unstable; urgency=low
+
+  * Add mjpegtools in Recommends
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 20 Apr 2003 17:47:05 +0200
+
+avidemux (0.9rc3-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 23 Mar 2003 11:36:54 +0100
+
+avidemux (0.9rc2-0.2) unstable; urgency=low
+
+  * Add libxml2-dev in build-depends
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 16 Mar 2003 15:43:34 +0100
+
+avidemux (0.9rc2-0.1) unstable; urgency=low
+
+  * Build against the latest libvorbis
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 16 Mar 2003 09:01:52 +0100
+
+avidemux (0.9rc2-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat,  8 Mar 2003 23:00:37 +0100
+
+avidemux (0.9rc1-0.0) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat,  1 Mar 2003 14:02:54 +0100
+
+avidemux (0.9pre32-0.1) unstable; urgency=low
+
+  * Rebuild against the latest liba52 for woody.
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 24 Feb 2003 17:43:30 +0100
+
+avidemux (0.9pre32-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Mon, 10 Feb 2003 17:51:45 +0100
+
+avidemux (0.9pre30-0.1) unstable; urgency=low
+
+  * Rebuild against the latest libmjpegtools-dev
+
+ -- Christian Marillat <marillat@debian.org>  Wed,  5 Feb 2003 17:24:43 +0100
+
+avidemux (0.9pre30-0.0) unstable; urgency=low
+
+  * New upstream pre-release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 19 Jan 2003 14:13:27 +0100
+
+avidemux (0.9pre28-0.0) unstable; urgency=low
+
+  * New upstream pre-release.
+  * Bump Standards-Version to 3.5.8
+  * Remove freetype patche.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 12 Jan 2003 15:31:56 +0100
+
+avidemux (0.9pre26-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+  * Add a libfreetype6-dev build-dependency
+  * Add upstream patche to build with libfreetype6 => 2.1.3
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 29 Dec 2002 15:54:21 +0100
+
+avidemux (0.9pre24-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Mon,  9 Dec 2002 19:23:12 +0100
+
+avidemux (0.9pre22-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 22 Nov 2002 01:48:49 +0100
+
+avidemux (0.9pre20-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  8 Nov 2002 16:06:28 +0100
+
+avidemux (0.9pre18-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun,  6 Oct 2002 20:31:26 +0200
+
+avidemux (0.9pre17-0.1) unstable; urgency=low
+
+  * Revert my previous change (doesn't use the DivX 5 codec), otherwise
+    avidemux doesn't work with Divx 3 files
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  4 Oct 2002 19:06:21 +0200
+
+avidemux (0.9pre17-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+  * Doesn't use the DivX 5 codec libavcodec is better and faster
+
+ -- Christian Marillat <marillat@debian.org>  Fri,  4 Oct 2002 06:41:53 +0200
+
+avidemux (0.9pre16-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 29 Sep 2002 18:52:52 +0200
+
+avidemux (0.9pre14-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 14 Sep 2002 12:14:00 +0200
+
+avidemux (0.9pre13-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Tue,  3 Sep 2002 01:00:37 +0200
+
+avidemux (0.9pre12-0.1) unstable; urgency=low
+
+  * Should build-depends on liba52-dev
+
+ -- Christian Marillat <marillat@debian.org>  Fri, 16 Aug 2002 19:19:54 +0200
+
+avidemux (0.9pre12-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Wed, 14 Aug 2002 18:35:16 +0200
+
+avidemux (0.9pre11-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Tue, 13 Aug 2002 11:24:08 +0200
+
+avidemux (0.9pre10-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 28 Jul 2002 18:38:29 +0200
+
+avidemux (0.9pre9-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Thu, 11 Jul 2002 10:23:24 +0200
+
+avidemux (0.9pre8-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sat, 29 Jun 2002 12:05:29 +0200
+
+avidemux (0.9pre7-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 23 Jun 2002 22:00:42 +0200
+
+avidemux (0.9pre6-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 16 Jun 2002 16:16:50 +0200
+
+avidemux (0.9pre5-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Wed,  5 Jun 2002 09:03:32 +0200
+
+avidemux (0.9pre3-0.0) unstable; urgency=low
+
+  * New upstream pre release.
+
+ -- Christian Marillat <marillat@debian.org>  Sun, 19 May 2002 09:41:15 +0200
+
+avidemux (0.9pre2-0.0) unstable; urgency=low
+
+  * News upstream prerelease.
+
+ -- Christian Marillat <marillat@debian.org>  Tue,  7 May 2002 11:12:52 +0200
+
+avidemux (0.8-2) unstable; urgency=low
+
+  * debian/control update Builds-depends field.
+
+ -- Christian Marillat <marillat@debian.org>  Sun,  7 Apr 2002 14:55:39 +0200
+
+avidemux (0.8-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Christian Marillat <marillat@debian.org>  Mon,  1 Apr 2002 23:09:35 +0200
+

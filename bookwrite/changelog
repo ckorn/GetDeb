@@ -1,0 +1,30 @@
+bookwrite (0.9.1-1~getdeb5~oneiric) oneiric; urgency=low
+
+  * Rebuild for oneiric
+  * Added dependency for ruby-gnome2
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Oct 2011 18:44:05 +0200
+
+bookwrite (0.9.1-1~getdeb4) lucid; urgency=low
+
+  * Fixed debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 20:02:30 +0200
+
+bookwrite (0.9.1-1~getdeb3) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 15:02:27 +0100
+
+bookwrite (0.9.1-1~getdeb2) karmic; urgency=low
+
+  * Rebuild for karmic (LP: #519747)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 10 Feb 2010 12:49:33 +0100
+
+bookwrite (0.9.1-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #326627)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sun, 27 Sep 2009 11:33:36 +0200

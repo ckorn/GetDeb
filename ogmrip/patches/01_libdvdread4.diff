@@ -1,0 +1,18 @@
+Index: ogmrip-0.13.8/dvdcpy/dvdcpy.c
+===================================================================
+--- ogmrip-0.13.8.orig/dvdcpy/dvdcpy.c	2012-05-17 11:37:56.000000000 +0200
++++ ogmrip-0.13.8/dvdcpy/dvdcpy.c	2012-06-14 13:11:59.073862282 +0200
+@@ -59,13 +59,6 @@
+ #ifndef HAVE_DVD_FILE_STAT
+ uint32_t UDFFindFile (dvd_reader_t *, const char *, uint32_t *);
+ 
+-typedef struct
+-{
+-  off_t size;
+-  int nr_parts;
+-  off_t parts_size[9];
+-} dvd_stat_t;
+-
+ int
+ DVDFileStat (dvd_reader_t *reader, int vts, dvd_read_domain_t domain, dvd_stat_t *statbuf)
+ {

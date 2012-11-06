@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	cd c && qmake sph.pro
+
+override_dh_auto_build:
+	cd c && ./build.sh
+	make -C c release
+
+override_dh_auto_install:
+	cd c && ./build.sh -i --prefix=$(CURDIR)/debian/tmp/usr
+
+override_dh_auto_clean:
+	cd c && ./build.sh -c
+	[ ! -f c/Makefile ] || make -C c distclean

@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/_/\./g" \
+http://sf.net/xviservicethief/xVST_([\d_\.]+)_src\.zip

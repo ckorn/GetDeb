@@ -1,0 +1,21 @@
+Encoding is deprecated.
+Set the icon properly (is installed in /usr/share/pixmaps).
+Index: penguinpills-0.4.1/penguinpills.desktop
+===================================================================
+--- penguinpills-0.4.1.orig/penguinpills.desktop	2011-07-17 13:00:52.117959440 +0200
++++ penguinpills-0.4.1/penguinpills.desktop	2011-07-17 13:01:19.477959451 +0200
+@@ -1,13 +1,12 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ Type=Application
+ Name=Penguin Pills
+ GenericName=Anti-Virus Scanner GUI
+ Comment=GUI for command line anti-virus scanners
+ Exec=penguinpills %F
+ TryExec=penguinpills
+-Icon=/usr/share/penguinpills/icons/penguinpills48.png
++Icon=penguinpills
+ Terminal=false
+ Categories=Application;System;Security;Utility;
+ StartupNotify=true

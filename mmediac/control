@@ -1,0 +1,35 @@
+Source: mmediac
+Section: video
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), libgtk2.0-0,
+ libfaac0, libmp3lame0, libopencore-amrnb0, libopencore-amrwb0,
+ libvorbisenc2, libasound2
+Standards-Version: 3.9.1
+Homepage: http://www.miksoft.net/mobileMediaConverter.htm
+
+Package: mmediac
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Free video and audio converter and YouTube downloader
+ The Mobile Media Converter is a free video and audio converter for converting
+ between popular desktop media formats like MP3, Windows Media Audio (wma),
+ Ogg Vorbis Audio (ogg), Wave Audio (wav), MPEG video, AVI,
+ Windows Media Video (wmv), Flash Video (flv), QuickTime Video (mov) and
+ commonly used mobile devices/phones formats like AMR audio (amr) and 3GP
+ video. iPod/iPhone and PSP compatible MP4 video are supported. Moreover,
+ you can remove and add new formats or devices through the internet.
+ .
+ An integrated YoutTube downloader is available for direct downloading and
+ converting to any of these formats. You can trim your clips for ringtone
+ creation or any other purpose and crop your videos for removing up/down black
+ bars or other unwanted parts of the image. Additionally, embedded subtitles
+ can be encoded onto the video for watching movies or shows with subtitles on
+ devices that does not supports them.
+ .
+ The program has a very easy-to-use and simple GUI (Graphical User Interface)
+ that helps even the most amateur user. Most of the times, the only data that
+ you must enter is the input file(s) or just drag 'n' drop the input file(s)!
+ The 3GP and AMR formats are used by mobile phones for MMS,
+ video and sound recordings, etc.
+

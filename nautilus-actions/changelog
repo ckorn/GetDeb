@@ -1,0 +1,356 @@
+nautilus-actions (3.2.2-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+    Bug fixes:
+
+    - Fix #671043 reported by Vincent Untz - Invalid desktop file.
+    - Fix #671044 reported by Vincent Untz - Incorrect FSF address.
+    - Fix #671083 reporteed by Pierre Wieser - Release tool takes bad
+                                               package version.
+    - Fix wrong display in tabs vs. the current selection in tree view.
+
+    UI enhancements:
+
+    - let the example label be expandable.
+
+    Other modifications:
+
+    - Bump FDL to 1.3 among all documentation.
+    - Validate desktop file when making distcheck.
+
+    New and updated translations:
+
+    - es (Daniel Mustieles)
+    - fr (Bruno Brouard)
+    - sl (Matej Urbančič, Andrej Žnidaršič)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 21:09:40 +0200
+
+nautilus-actions (3.1.4-1build1) precise; urgency=low
+
+  * No-change-rebuild for libnautilus-extension transition
+
+ -- Andreas Moog <amoog@ubuntu.com>  Sat, 10 Dec 2011 15:00:19 +0100
+
+nautilus-actions (3.1.4-1) unstable; urgency=low
+
+  [ Alice Ferrazzi ]
+  * New upstream development release.
+    - debian/control.in:
+      - Recommends ksh for migrating tool.
+      - Fixed transition to nautilus 3. (closes: #637322)
+    - debian/watches
+      - fixed the watch link.
+    - debian/rules
+      - Build against gtk3
+      - Disabled GConf2 
+
+  [ Michael Biebl ]
+  * debian/control.in:
+    - Re-add Build-Depends on libgconf2-dev, still required to configure and
+      build successfully.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 17 Oct 2011 02:08:32 +0200
+
+nautilus-actions (3.1.2-1) unstable; urgency=low
+
+  [ Alice Ferrazzi ]
+  * New upstream maintenance release.
+    - debian/control.in:
+      - New Maintainer (closes: #620570)
+      - Added Homepage, thanks to jeansch.
+      - Bump Standards-Version to 3.9.2; no changes required.
+    debian/*.1
+      - Added nautilus-actions-print manpage; thanks to jeansch.
+      - Various fix.
+    debian/copyright
+      - Fixed GPL-2 path according to lintial warning the license used;
+      thanks to jeansch.
+    debian/nautilus-actions.dirs
+      - Removed, not used anymore; thanks to jeansch.
+    debian/watches
+      - fixed the watch link
+
+ -- Alice Ferrazzi <aliceinwire@gnumerica.org>  Sat, 09 apr 2011 22:14:39 -0500
+
+nautilus-actions (3.0.5-1) unstable; urgency=low
+
+  * New upstream maintenance release.
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Fix building with binutils-gold (Closes: #555763)
+    - Thanks to Bhavani Shankar for the patch.
+
+ -- Christine Spang <christine@debian.org>  Sat, 01 Jan 2011 20:45:43 -0500
+
+nautilus-actions (3.0.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Christine Spang <christine@debian.org>  Sun, 12 Dec 2010 13:18:33 -0500
+
+nautilus-actions (3.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Actions may be now stored as .desktop files, making them easy to share
+      with other desktop environments.
+    - New dependency: gnome-doc-utils
+    - New dependency: libgtop2
+    - New dependency: rarian-compat
+
+ -- Christine Spang <christine@debian.org>  Sat, 18 Sep 2010 14:20:56 -0400
+
+nautilus-actions (2.30.3-1) unstable; urgency=low
+
+  * New upstream bugfix/translation update release.
+  * Bump to Standards-Version 3.9.1.
+
+ -- Christine Spang <christine@debian.org>  Sat, 21 Aug 2010 11:41:16 -0400
+
+nautilus-actions (2.30.2-1) unstable; urgency=low
+
+  * New upstream bugfix/translation update release. (Closes: #577983)
+
+ -- Christine Spang <christine@debian.org>  Wed, 14 Apr 2010 22:29:02 -0400
+
+nautilus-actions (2.30.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Slightly relax the validity rules of a profile, so that already existing
+      actions may be still considered as valid, even when commands do not use
+      an absolute path.
+    - Current positions and folder of icons chooser dialog are now saved.
+    - Many bugfixes.
+    - Updated cs, es, sl translations.
+
+ -- Christine Spang <christine@debian.org>  Wed, 14 Apr 2010 10:13:36 -0400
+
+nautilus-actions (2.30.0-1) unstable; urgency=low
+
+  [Christine Spang]
+  * New upstream release.
+    - Allow an administrator to lock the configuration.
+    - Fully manage readonly items.
+    - New plugin architecture.
+    - Allow the user to define a full hierarchy of menus and actions.
+    - Implement full drag and drop.
+    - Implement full clipboard support.
+  * Add libdbus-glib-1-dev to build-deps
+  * Update manpages and add manpage for nautilus-actions-run
+  * Bump Standards-Version to 3.8.4.
+
+  [Emilio Pozeulo Monfort]
+  * debian/nautilus-actions.lintian,
+    debian/rules:
+    - Remove debian/nautilus-actions.lintian, the overrides are wrong.
+      Pass --no-act to dh_makeshlibs since nautilus-actions only ships
+      an extension and not a shared library.
+  * debian/rules:
+    - Download tarballs from gnome.org
+  * debian/watch:
+    - Likewise. Only track stable releases.
+
+ -- Christine Spang <christine@debian.org>  Sat, 27 Mar 2010 00:02:30 -0400
+
+nautilus-actions (2.29.1-1) unstable; urgency=low
+
+  * New upstream version.
+    - implements full API as defined for use by Nautilus menu
+      extensions : this let the user define items which will be
+      available when there is no selection, and will apply to
+      current folder, either in the 'File' menu or in the
+      toolbar ;
+    - the ability for the user to define a full hierarchy of
+      actions with menus, submenus, and so on ;
+    - drag and drop ;
+    - full cut/copy/paste clipboard support.
+    - Gnome bugs fixed:
+      - #325528 reported by Frederic Ruaudel
+                (bloated  contextual menu)
+      - #325587 reported by Frederic Ruaudel
+                (drag & drop support)
+      - #326699 reported by Frederic Ruaudel
+                (action items do not remain in user defined order)
+      - #353353 reported by Frederic Ruaudel
+                (check if command exist and if not warn user)
+      - #588482 reported by Sean
+              (ordering in actions list)
+      - #326699 reported by Frederic Ruaudel
+              (action items do not remain in user defined order)
+      - #353353 reported by Frederic Ruaudel
+                (check if command exist and if not warn user)
+      - #588482 reported by Sean
+                (ordering in actions list)
+      - #590400 reported by Pierre Wieser
+                (have some sort of warnings in the ui)
+      - #599520 reported by António Lima
+                (do not mark authors names and emails for translating)
+
+ -- Christine Spang <christine@debian.org>  Sun, 25 Oct 2009 14:04:13 -0400
+
+nautilus-actions (1.12.0-2) unstable; urgency=low
+
+  [Christine Spang]
+  * Backport patch to nautilus-actions-config-tool.ui (Closes: #546417)
+    -- build-dep on quilt
+  * Bump to Standards-Version 3.8.3
+
+  [Emilio Pozuelo Monfort]
+  * Wrap build depends.
+
+ -- Christine Spang <christine@debian.org>  Sat, 24 Oct 2009 23:08:12 -0500
+
+nautilus-actions (1.12.0-1) unstable; urgency=low
+
+  * New upstream stable release.
+    - Actions can now be enabled/disabled: disabled actions will
+      never show up in the nautilus context menu
+    - Gnome Bugzilla bugs fixed:
+      - #325519 asked by Frederic Ruaudel (enabled property)
+      - #590398 reported by Pierre Wieser (install doc)
+      - #590399 reported by Pierre Wieser (gtk_image_menu_item_set_image)
+      - #590709 reported by Claude Paroz (markup in translatable strings)
+      - #590711 reported by Claude Paroz (pipe char is ambiguous to translate)
+   - Do not install GConf schemas if --disable-schemas-install option has
+     been specified
+   - New/updated es and fr translations
+
+ -- Christine Spang <christine@debian.org>  Wed, 12 Aug 2009 14:04:00 -0400
+
+nautilus-actions (1.11.2-1) unstable; urgency=low
+
+  * New upstream development release.
+    - New user interface.
+      - New parameters:
+        - %p: expands to the port number from an URI
+        - %R: expands to a space-separated list of selected URIs
+      - Better visual feedback when modifying actions
+      - Automatically reload list of actions when they are modified
+        externally
+      - Import and Export actions are now assistant-driven
+      - Actions can be exported as a GConf dump entry
+    - Gnome Bugzilla bugs fixes:
+      - #325582 reported by Frederic Ruaudel (use GConf)
+      - #325585 reported by Frederic Ruaudel (delete actions created via
+        gconftool-2)
+      - #353198 reported by Frederic Ruaudel (single window mode)
+      - #531301 asked by IceWil (list of selected URIs)
+      - #576186 asked by gnutered (port of the URI)
+      - #580378 reported by James Campos (context menu doesn't update)
+      - #585652 reported by Claude Paroz (user interface layout)
+      - #589698 reported by Andre Klapper (use GtkBuilder)
+    - Translations updated.
+    - Command-line tools renamed:
+      - nautilus-actions-config -> nautilus-actions-config-tool
+      - nautilus-actions-new-config -> nautilus-actions-new
+    - New command-line tool nautilus-actions-schemas
+    - Code enhancements / dependency changes:
+      - migrated from libglade to GtkBuilder
+      - migrated from GnomeVFS to GVFS
+      - new dependency libunique 1.0
+      - requires now Gtk+ 2.12, Glib 2.16
+  * Bump to Standards-Version 3.8.2.
+  * Update manpage and add new manpages for new binaries.
+
+ -- Christine Spang <christine@debian.org>  Sun, 09 Aug 2009 12:42:10 -0400
+
+nautilus-actions (1.10.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Do not search through actions when the Nautilus-provided list of
+      selected files is empty
+    - Remove deprecated functions
+    - All sources are now ansi-compliant, though not (yet) pedantic
+    - Double-click on an action opens the editor
+    - Enable the OK button as soon as required fields are filled
+    - Enable syslog'ed debug messages when in maintainer mode
+    - Use NACT_GNOME_COMPILE_WARNINGS (see Gnome bugzilla bug #582860)
+    - Replace configure.in with configure.ac, updating all Makefile.am
+      accordingly
+    - Fix make distcheck
+    - create nautilus-actions.doap
+    - Gnome bugzilla bug #574919 fixed (Closes: #523854)
+    - Gnome bugzilla bugs #522605, #573365, and #568366 fixed
+    - translations updated
+  * Added Homepage: field to debian/control
+  * Bump to Standards-Version 3.8.1
+  * update GNOME_DOWNLOAD_URL in debian/rules
+  * add full list of contributors to debian/copyright
+  * Bump debhelper compat to 7
+  * Fix categories in .desktop file
+
+ -- Christine Spang <christine@debian.org>  Sat, 30 May 2009 10:15:52 -0400
+
+nautilus-actions (1.4.1-1) unstable; urgency=low
+
+  * New upstream bugfix and translation update release.
+
+ -- Christine Spang <christine@debian.org>  Mon, 06 Aug 2007 22:04:07 -0400
+
+nautilus-actions (1.4-1) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Add a get-orig-source target to retrieve the upstream tarball.
+
+  [ Christine Spang ]
+  * New upstream version.
+  * Bumped Standards-Version to 3.7.2.2
+  * Bumped nautilus-extension-dev dependency to >= 2.16
+  * Change my maintainer email address
+  * Add libgnomeui-dev to build-deps
+  * Add debian/nautilus-actions.dirs
+  * Add debian/nautilus-actions.lintian
+
+ -- Christine Spang <christine@debian.org>  Fri, 27 Apr 2007 22:31:59 -0400
+
+nautilus-actions (1.2-3) unstable; urgency=low
+
+  * Add the package to pkg-gnome subversion.
+  * Add gnome-team to uploaders.
+  * build-depend on pkg-gnome-tools.
+
+ -- Christine Spang <spang@mit.edu>  Fri, 21 Jul 2006 16:09:36 -0400
+
+nautilus-actions (1.2-2) unstable; urgency=low
+
+  * Update my email address in debian/control.
+  * Tighten depends on nautilus-extension-dev to avoid a crasher
+    bug. (Closes: #370493)
+  * Bump standards version to 3.7.2.1.
+
+ -- Christine Spang <spang@mit.edu>  Thu, 22 Jun 2006 23:36:15 -0400
+
+nautilus-actions (1.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Add support for filtering using mimetypes of selected files
+    - Add support for choice about case sensitiveness of file patterns
+    - New Tango style icons
+    - Grammar and spelling errors fixed
+    - Fix segfault when defining an action with an empty file pattern
+    - Fix a crash when selecting a cdrom drive with Nautilus 2.14
+    - Added Bengali translation; others updated
+    - Other minor bugfixes
+  * Bumped standards version to 2.7.0.0; no change.
+  * Added debian/watch
+
+ -- Christine Spang <spangarang@twcny.rr.com>  Tue,  2 May 2006 21:15:03 -0400
+
+nautilus-actions (1.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to main Debian archive.
+  * Added manpage.
+
+ -- Christine Spang <spangarang@twcny.rr.com>  Fri, 10 Feb 2006 15:55:31 -0500
+
+nautilus-actions (0.99-1) unstable; urgency=low
+
+  * Debian maintainer changed to myself.
+
+ -- Christine Spang <spangarang@twcny.rr.com>  Sat, 17 Dec 2005 12:24:31 -0500
+
+nautilus-actions (0.99-0ubuntu1) dapper; urgency=low
+
+  * First upload.
+
+ -- Sebastien Bacher <seb128@canonical.com>  Thu, 24 Nov 2005 18:11:41 +0100

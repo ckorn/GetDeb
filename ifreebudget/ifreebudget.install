@@ -1,0 +1,4 @@
+debian/scripts/ifreebudget usr/bin
+ifreebudget usr/share
+debian/ifreebudget.xpm usr/share/pixmaps
+debian/ifreebudget.desktop usr/share/applications

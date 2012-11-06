@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --builddirectory=build
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=RelWithDebInfo
+
+override_dh_installchangelogs:
+	dh_installchangelogs Changelog
+	rm -f debian/luminance/usr/share/luminance-hdr/LICENSE

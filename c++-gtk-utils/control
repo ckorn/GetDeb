@@ -1,0 +1,58 @@
+Source: c++-gtk-utils
+Section: libs
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libglib2.0-dev,
+               libgtk2.0-dev,
+               libdbus-1-dev,
+               libdbus-glib-1-dev,
+               libpango1.0-dev
+Standards-Version: 3.9.3
+Homepage: http://cxx-gtk-utils.sourceforge.net
+
+Package: libcxx-gtk-utils-2-2.0-0
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Programming GTK+ programs using C++
+ c++-gtk-utils is a lightweight library containing a number
+ of classes and functions for programming GTK+ programs
+ using C++ in POSIX (unix-like) environments, where the
+ user does not want to use a full-on wrapper such as gtkmm
+ or wxWidgets, or is concerned about exception safety or
+ thread safety of the wrapper and their documentation.
+ It is parallel installable for both GTK+2 and GTK+3.
+
+Package: libcxx-gtk-utils-dev
+Architecture: any
+Depends: ${misc:Depends},
+         libcxx-gtk-utils-2-2.0-0 (= ${binary:Version}),
+         libcxx-gtk-utils-doc (= ${source:Version})
+Section: libdevel
+Description: Programming GTK+ programs using C++ (header files)
+ c++-gtk-utils is a lightweight library containing a number
+ of classes and functions for programming GTK+ programs
+ using C++ in POSIX (unix-like) environments, where the
+ user does not want to use a full-on wrapper such as gtkmm
+ or wxWidgets, or is concerned about exception safety or
+ thread safety of the wrapper and their documentation.
+ It is parallel installable for both GTK+2 and GTK+3.
+ .
+ (This package contains the development files).
+
+Package: libcxx-gtk-utils-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Programming GTK+ programs using C++ (documentation)
+ c++-gtk-utils is a lightweight library containing a number
+ of classes and functions for programming GTK+ programs
+ using C++ in POSIX (unix-like) environments, where the
+ user does not want to use a full-on wrapper such as gtkmm
+ or wxWidgets, or is concerned about exception safety or
+ thread safety of the wrapper and their documentation.
+ It is parallel installable for both GTK+2 and GTK+3.
+ .
+ (This package contains the documentation).

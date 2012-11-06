@@ -1,0 +1,51 @@
+Source: grisbi
+Section: x11
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Roberto C. Sanchez <roberto@connexer.com>
+Build-Depends:
+ debhelper (>= 8),
+ libgtk2.0-dev,
+ libxml2-dev,
+ libofx-dev,
+ libssl-dev,
+ autotools-dev,
+ intltool,
+ chrpath
+Standards-Version: 3.9.3
+Homepage: http://www.grisbi.org/
+Vcs-Browser: http://git.debian.org/?p=collab-maint/grisbi.git
+Vcs-Git: git://git.debian.org/git/collab-maint/grisbi.git
+
+Package: grisbi
+Architecture: any
+Depends:
+ grisbi-common (= ${source:Version}),
+ xdg-utils,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Suggests: texlive, www-browser
+Description: personal finance management program
+ Grisbi is a personal accounting program. Grisbi can handle multiple
+ accounts, currencies and users. It helps you manage your money using
+ third party, expenditure and receipt categories, as well as budgetary
+ lines, financial years, and other information that makes it adapted
+ for both personal and associative accounting.
+ .
+ Grisbi can import accounts from QIF, OFX and Gnucash files. It can
+ print reports using LaTeX or export them via HTML.
+
+Package: grisbi-common
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: grisbi (<< 0.5.9-5)
+Replaces: grisbi (<< 0.5.9-5)
+Description: shared files for the finance management program Grisbi
+ Grisbi is a personal accounting program. Grisbi can handle multiple
+ accounts, currencies and users. It helps you manage your money using
+ third party, expenditure and receipt categories, as well as budgetary
+ lines, financial years, and other information that makes it adapted
+ for both personal and associative accounting.
+ .
+ This package contains architecture-independent files (icons,
+ documentation and translations).

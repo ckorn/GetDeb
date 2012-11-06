@@ -1,0 +1,26 @@
+Source: oneteam
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), libasound2,
+ libpulse0, libxss1, ia32-libs [amd64],
+ libgnomevfs2-0, libnotify4, libsqlite3-0, libglib2.0-0,
+ libxt6, liborbit2, libidl0, libgtk2.0-0, libatk1.0-0,
+ libpango1.0-0, libcairo2, libxrender1, libfreetype6,
+ libfontconfig1
+Standards-Version: 3.9.2
+Homepage: http://oneteam.im/
+
+Package: oneteam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Enterprise multi-network instant messaging client
+ OneTeam is a versatile instant messaging client that is
+ very intuitive to use. Even people who are new to instant
+ messaging will find it easy to get started, while experienced
+ users will discover a range of advanced features,
+ like accessing archived conversations or setting up chat
+ rooms. OneTeam offers all of the security features that
+ you would expect, including client to server encryption,
+ so you can be confident that all your conversations will
+ take place in private.

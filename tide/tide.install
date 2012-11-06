@@ -1,0 +1,3 @@
+*.jar			usr/share/j_tide
+debian/*.desktop	usr/share/applications
+debian/scripts/*	usr/bin

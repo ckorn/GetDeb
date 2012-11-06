@@ -1,0 +1,355 @@
+fotoxx (12.11-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Simplify world map zoom/pan/scroll: now works more like image files.
+    + Simplify the display of images from a clicked world map location.
+    + Icons in the favorites menu can have individual sizes up to 64x64.
+    + Slide Show option: select image files ad hoc from gallery/navigator.
+    + Slide Show: open gallery, navigate elsewhere, resume slide show.
+    + Slide Show: new animated image transition option, "Raindrops".
+    + Gallery file selection: select a range of files with shift+click.
+    + Brightness distribution graph with separate RGB color components.
+    + Menu shortcuts: right-click popup menu offers many edit options.
+    + Keyboard shortcuts: F/G/W keys open window tabs F/G/W respectively.
+    + Grid Lines shortcut moved to Ctrl+G (can be changed if wanted).
+    + Rigid free memory check was replaced with a more flexible warning.
+    + Replace several deprecated GTK functions with sanctioned functions.
+    + Synchronize Files: provide [cancel] button for temporary bypass.
+    + Bugfix: Slide Show: skip over directories instead of stopping.
+    + Bugfix: Leverage Edits: erratic results from strongly sloped curve.
+    + Bugfix: Resize: prevent tiny image size that can cause a crash.
+    + Bugfix: Prev/Next buttons: loop if last image file is deleted.
+    + Bugfix: Stop image files from appearing twice in the index file.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 01 Nov 2012 18:45:42 +0100
+
+fotoxx (12.10.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: Catalan was missing from the GUI language options.
+    + Bugfix: Monitor Gamma: check that the xgamma program is installed.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 04 Oct 2012 21:14:50 +0200
+
+fotoxx (12.10-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + This release focuses on user interface and efficiency improvements.
+    + The user manual and F1 help are now available in Castilian Spanish.
+    + The search index was revised for greater scalability. Metadata edits 
+      and related image searching should remain fast beyond 500K images.
+      A fresh resync of the search index will be done at first startup.
+    + A custom graphic menu in a popup window was implemented. Frequently 
+      used functions can be added and the layout arranged to taste.
+    + RAW files can be opened in Ufraw (menu or thumbnail click).
+    + A more precise world map was implemented (new download will be made).
+    + Large image files open 30% faster and memory consumption is reduced.
+    + The batch RAW converter now has a dialog to configure the parameters.
+    + New pan/scroll mode: image sticks to mouse and moves with mouse.
+    + Stop unnecessary refreshes of the image gallery for metadata edits.
+    + Added support for exotic PNG formats (e.g. palletized) via GTK library.
+    + Vignette bugfix: stop radius increase if vignette is moved off-center.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 29 Sep 2012 16:07:35 +0200
+
+fotoxx (12.09.1-1~getdeb2) precise; urgency=low
+
+  * New upstream version
+    2012.09.01  v.12.09.1
+    Bugfix: fix memory management error with uncertain implications.
+
+    2012.09.01  v.12.09
+    + RAW files can be opened via menu, command line or drag and drop.
+    + RAW files can be seen in thumbnail galleries like other image files.
+    + RAW file editing tool Ufraw was integrated into the Fotoxx menu.
+    + RAW file batch conversion parameters (dcraw) are user configurable.
+    + RAW file batch conversion is faster (about 50/minute on a strong PC).
+    + A wavelet denoise method was added (adapted from ufraw/dcraw).
+    + Deep color PNG files are supported (16 bits/color).
+    + Vignette: center of shading/brightening can be moved with the mouse.
+    + Images can be copied to the clipboard with a right-click popup menu.
+    + Trim: target circle added in the middle of the trim rectangle.
+    + World map shows locations of geotagged photos, click to see gallery.
+    + User interface simplified for location-based or map-based image search.
+    + A tool was added to remove chromatic abberation (color fringes).
+    + Select area by mouse and color: small user interface improvement.
+    + More dialogs preserve user inputs within and across Fotoxx sessions.
+    + New command line option: start up with a specified menu function.
+    + Panorama: option for zero image curve (e.g. to combine scanned images).
+    + Gallery is updated live if a file add/delete is done outside Fotoxx.
+    + Bugfix: click geotag group >> gallery window sometimes did nothing.
+    + Bugfix: memory leak when processing metadata (tags, captions ...).
+
+    2012.08.20  v.12.08.1
+    + New GUI translation for Catalan is available.
+    + Bugfix: bad fflush() call in exiftool_server caused fotoxx to crash
+      in some distros using newest c-libraries (observed in Mageia alpha).
+
+    2012.08.01  v.12.08
+    + Menus now show a popup description if the mouse dwells on the menu.
+    + Auto-synchronization (indexing of new image files) was made optional.
+      If disabled, metadata edit and search functions are also disabled.
+      These can be restored at any time by synchronizing the image files.
+    + The size of a printed image (in centimeters) can be set in advance.
+    + A 1-click sepia coloring was added (aged photo effect).
+    + If Linux standard trash and desktop trash folder both fail (possible
+      with some distros) give the option to simply delete the image file.
+    + Painting and scrolling the gallery window was made faster. 
+    + Navigating the gallery window to other directories was simplified.
+    + A gallery from an image search or collection can be discarded and
+      replaced with a directory gallery using a toolbar button.
+    + Bugfix: Edit Collections: keep the gallery window scroll position 
+      stable when adding or removing images from a collection.
+    + Bugfix: If the initial gallery window is list view (no thumbnails), 
+      then the gallery window displayed only a blank window. 
+    + Bugifx: Crash if a retouch function is "painted" with the mouse and
+      and the function is canceled before any change is made.
+    + Bugfix: Show RGB [clear] button cleared image tags but not the dialog.
+    + Web site was changed from squarespace.kornelix.com to kornelix.com.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 18 Sep 2012 21:45:42 +0200
+
+fotoxx (12.07.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: World map loses mouse connection and becomes unresponsive
+      after a left mouse click/drag is used to zoom/pan the map image.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 05 Jul 2012 18:19:14 +0200
+
+fotoxx (12.07-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Tabs are now used to switch between image and gallery windows.
+    + List Geotag Groups by country, country/city, or country/city/date.
+      Nearby dates can be grouped together. Click a listed group to get a 
+      corresponding thumbnail gallery, view or edit images from there.
+    + Click a location on a world map, get a corresponding gallery of images.
+    + Several small UI improvements in geotag edit and report functions.
+    + Bugfix: edit collection: removing images was sometimes not possible if 
+      some images still in the collection had been deleted from disk.
+    + Bugfix: memory leak if successive images viewed in rapid sequence.
+    + Bugfix: Art > Dots treatment was destroyed when saved to a file.
+    + Bugfix: crash in Open Recent File if the first file had been deleted.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 03 Jul 2012 17:58:12 +0200
+
+fotoxx (12.06.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + The Spanish and Galician translations were updated.
+    + bugfix: crash following use of batch add geotags function.
+    + Bugfix: stop unwanted gallery window from appearing when the control 
+      key is used to link mouse actions to the main window.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 19 Jun 2012 12:53:17 +0200
+
+fotoxx (12.06.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    2012.06.01  v.12.06.1
+    bugfix: version check for exiftool failed for locales having a comma
+    decimal point instead of a period (e.g. 8,60 instead of 8.60). 
+
+    2012.06.01  v.12.06
+    + The Spanish and Galician translations were updated (as of v.12.05).
+    + Package exiftool version 8.60 or later is now a requirement.
+      (this translates into Ubuntu 11.10 or later)
+    + New: List geotag groups (city, country, date, image count), click on a 
+      group to show a thumbnail gallery, click thumbnails to view or edit.
+    + Added and revised geotag locations were separated from the download
+    set, 
+      to make them easier to keep when changing computers or Linux releases.
+    + Geotag search for "null" can be used to find images with go geotags
+      (also within other search criteria such as date).
+    + New: Voodoo retouch function improves most images with one click.
+    + Thumbnail files are now .jpeg instead of .png. Initialization after a
+      new install is about 40% faster, and thumbnails are 1/3 as large.
+    + There are now three thumbnail options: no thumbnails, thumbnails in the
+      image directories (as before), or use a designated thumbnail directory.
+    + Flatten Distribution: prevent "color bands" in monotone bright areas.
+    + Rotate function user interface was improved and made more responsive.
+    + Keyboard shortcuts can be revised and new ones added by the user.
+    + Stop popup messages from getting hidden behind other windows.
+    + Block "save to file" if an edit dialog is active (unpredictable
+    result).
+    + Edit history log was moved from EXIF:EditStatus to EXIF:ImageHistory
+      because this is the de facto standard.
+    + Metadata reports were changed to use EXIF tag names instead of tag
+      descriptions. These are needed to directly edit metadata.
+    + Slide Show: added continuous loop option (last goes back to first).
+    + Trim: new option to start automatically for each new file opened
+      (work through a batch of new photos more quickly).
+    + Trim: convenience button to do rotate and return to trim.
+    + The [prev] and [next] buttons pre-load the next file ahead of need.
+      This can speed-up sequential viewing of images on a slow computer.
+    + F11 toggles main window to full-screen (no menu/toolbar) and back.
+    + Bugfix: geotag retrieval failure with photos from some cameras.
+    + Bugfix: Keyboard shortcut T (for Trim) caused a crash.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Jun 2012 18:36:22 +0200
+
+fotoxx (12.05-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+    + Geotagging and reporting was added. Geotags may be entered using city
+      names, with substring matching. Click the wanted city from multiple
+      candidates. Multiple images can be processed rapidly. Batch processing
+      is also available. Search images by city [country] or within radius of
+      a given location. Output is a gallery of clickable thumbnails. Select
+      locations to assign or search from a world map. Database has 3000+
+      cities and others can be added as needed from a web geocoding service.
+    + Search Images function was simplified. Searching by date, rating, tags,
+      comments, caption, filename, geotags, and any other metadata is in one
+      GUI with buttons to select the unusual options.
+    + Bugfix: captions and comments with imbedded quotes were causing some
+      metadata edits to fail (do nothing).
+    + Bugfix: stop GUI lockup if window is resized by user while panorama or
+      other composite function is still computing.
+    + Bugfix: stop paranoia if an image directory is read-only and thumbnail
+      subdirectory cannot be created - just leave out the thumbnails.
+    + Bugfix: GUI was too difficult to view and edit the same collection.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Apr 2012 11:30:50 +0200
+
+fotoxx (12.04-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+    + Select Area by color tones is almost 2x faster with less flicker.
+    + New: Erase an object by overpainting with selected background.
+    + New: Vignette Tool: change brightness or color in a radial pattern.
+    + Art > Tiles: an optional 3D depth effect was added.
+    + Edit Pixels: do area edge blending same as other edit functions.
+    + Gamma Curve: buttons [++] etc. added as in brightness/color curves.
+    + Select Area: "tweak" mode added: nudge an edge line using the mouse.
+    + White Balance: slider added to adjust the impact from 0 to 100%.
+    + Gallery window navigation was made a little more flexible.
+    + First time startup: initial thumbnail creation and image file indexing
+      is 2x faster (2000+ images/min. on a strong PC with 4 cpu cores).
+    + New: Help > Log File: view the current (live) log file.
+    + Memory allocation failure: no crash, exit with a reasonable message.
+    + Bugfix: rare crash when a concurrent edit function completes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Apr 2012 21:25:08 +0200
+
+fotoxx (12.03.2-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 20:22:30 +0200
+
+fotoxx (12.01.2-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * Refreshed patch:
+    - debian/patches/makefile_changes.patch
+    - debian/patches/docs_dir.patch
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Wed, 04 Jan 2012 23:14:41 +0700
+
+fotoxx (11.11.1-1) unstable; urgency=low
+
+  * New upstream release
+    
+  * debian/watch
+    -Fix lintian warning: debian_watch_contains_dh_make_template
+  
+  * debian/rules
+    -Remove -XTRANLATIONS -XCHANGES params in dh_compress.
+    -Fix lintian warning: debian_rules_missing_recommends_targets
+    -Add symlink to avoid duplicate documentation at intalldocs rule.
+    -Remove unnecessary files.
+ 
+  * debian/control
+   -Bump Standars-Version to 3.9.2
+   -Remov libfreeimage-dev, libimage-exiftool-perf from
+     Build-Depends
+   -Add xgd-utils and libimage-exiftool-perf to Recommends
+   -Add brasero to Suggests
+
+  * debian/copyright
+    -Update copyright to 2010, 2011
+   
+  * debian/patches/ 
+    -Fix lintian warning format-3.0-but-debian-changes-patch and
+     (closes: #643119) by creating:
+    -docs_dir.patch: changes upstream sources for the program to
+     know where documentation is installed
+    -makefile_changes.patch: edit makefile for installation
+     Removes the depencies check by dependencies.sh. (closes: #622315)
+     Fix FTBFS with binutils-gold. (closes: #610545)
+     fotoxxfotoxx.desktop was created by mistake. (closes: #610544)
+     Thanks to Mahyuddin Susanto.
+  
+  * debian/doc-base
+    -Register fotoxx user guide documentation.
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Mon, 07 Nov 2011 16:37:55 -0300
+ 
+fotoxx (10.7-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    -Bump Standars-Version to 3.9.0 No further changes.
+    -Changed Reccommends: ufraw-batch instead of ufraw. closes: #583084.
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Thu, 08 Jul 2010 18:24:21 -0300
+
+fotoxx (10.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Switch to quilt (3.0)
+  * debian/control
+    -Bump Standars-Version to 3.8.4 No further changes.
+    -Added libtiff4-dev to Build-Depends.
+  * New versions of fotoxx don't suggest printoxx anymore. closes: #582244
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Sat, 22 May 2010 13:37:32 -0300
+
+fotoxx (9.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Wed, 06 Jan 2010 23:03:44 -0300
+
+fotoxx (8.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Thu, 26 Nov 2009 18:59:39 -0300
+
+fotoxx (8.6.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Thu, 29 Oct 2009 19:34:43 -0300
+
+fotoxx (8.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Tue, 13 Oct 2009 23:05:46 -0300
+
+fotoxx (8.5.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Sat, 10 Oct 2009 13:06:31 -0300
+
+fotoxx (8.4.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Tue, 22 Sep 2009 08:08:16 -0300
+
+fotoxx (8.4.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Mon, 14 Sep 2009 22:44:23 -0300
+
+fotoxx (8.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #504360)
+
+ -- Santiago Torres Batan <santi73@gmail.com>  Thu, 20 Aug 2009 12:27:47 -0300

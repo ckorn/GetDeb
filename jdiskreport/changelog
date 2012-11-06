@@ -1,0 +1,6 @@
+jdiskreport (1.3.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (Closes LP: #612139)
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Sat, 31 Jul 2010 22:34:52 +0000
+

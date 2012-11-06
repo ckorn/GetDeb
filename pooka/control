@@ -1,0 +1,17 @@
+Source: pooka
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.8.3
+Homepage: http://sourceforge.net/projects/pooka/
+
+Package: pooka
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common,
+ fontconfig
+Description: eMail client written in Java
+ This is an email client written in Java, using Swing and JavaMail.
+ It supports IMAP (including disconnected IMAP), POP3, and
+ unix-style mbox folders. It also has (alpha) support for
+ encryption using PGP and S/MIME.

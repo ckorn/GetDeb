@@ -1,0 +1,35 @@
+subsonic (4.7-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 13 Sep 2012 18:48:54 +0200
+
+subsonic (4.6-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Dec 2011 16:19:43 +0100
+
+subsonic (4.5-1~getdeb1) natty; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Aug 2011 17:56:13 +0200
+
+subsonic (4.4-1~getdeb2) natty; urgency=low
+
+  * Update scripts
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 May 2011 18:33:33 +0200
+
+subsonic (4.4-1~getdeb1) maverick; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 15:59:35 +0100
+
+subsonic (4.2-1~getdeb1) maverick; urgency=low
+
+  * Initial release (LP: #665381)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 16 Dec 2010 19:56:16 +0100

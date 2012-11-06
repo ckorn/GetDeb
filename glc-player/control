@@ -1,0 +1,20 @@
+Source: glc-player
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), libqt4-dev,
+ libqt4-opengl-dev, glclib-dev, qt4-qmake
+Standards-Version: 3.9.1
+Homepage: http://www.glc-player.net
+
+Package: glc-player
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 3D model viewer
+ GLC_Player is an Open Source software used to view 3d models
+ (COLLADA 3DXML OBJ 3DS STL OFF COFF Format) and to navigate
+ easily in these models.
+ .
+ With the album management, capture and multi-capture capabilities,
+ html export and navigation possibilities GLC_Player is the accurate
+ tools to review a lot of 3D models and to create illustrations.

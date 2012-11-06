@@ -1,0 +1,16 @@
+Source: tide
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.8.4
+Homepage: http://tide.olympe-network.com/
+
+Package: tide
+Architecture: all
+Depends: ${misc:Depends}, openjdk-6-jdk | sun-java6-jdk, fontconfig
+Description: Java IDE
+ tIDE is a small but powerful and
+ full featured opensource Java
+ integrated development environment
+ (IDE)

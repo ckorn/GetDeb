@@ -1,0 +1,30 @@
+Source: bashare
+Section: net
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 7), gambas2-dev (>= 1.9.48),
+ gambas2-dev (<< 2.90), gambas2-gb-gui (>= 1.9.48), gambas2-gb-gui (<< 2.90),
+ gambas2-gb-form (>= 1.90.1), gambas2-gb-form (<< 2.90.0), gambas2-gb-desktop (>= 1.9.48),
+ gambas2-gb-desktop (<< 2.90), gambas2-gb-net (>= 1.9.48), gambas2-gb-net (<< 2.90),
+ gambas2-gb-net-curl (>= 1.9.48), gambas2-gb-net-curl (<< 2.90), gambas2-gb-settings (>= 1.9.48),
+ gambas2-gb-settings (<< 2.90)
+Standards-Version: 3.8.4
+Homepage: https://launchpad.net/bashare
+
+Package: bashare
+Architecture: all
+Depends: ${misc:Depends}, gambas2-runtime (>= 1.9.48), gambas2-runtime (<< 2.90),
+ gambas2-gb-gui (>= 1.9.48), gambas2-gb-gui (<< 2.90), gambas2-gb-form (>= 1.90.1),
+ gambas2-gb-form (<< 2.90.0), gambas2-gb-desktop (>= 1.9.48), gambas2-gb-desktop (<< 2.90),
+ gambas2-gb-net (>= 1.9.48), gambas2-gb-net (<< 2.90), gambas2-gb-net-curl (>= 1.9.48),
+ gambas2-gb-net-curl (<< 2.90), gambas2-gb-settings (>= 1.9.48), gambas2-gb-settings (<< 2.90)
+Recommends: miniupnpc
+Description:BaShare helps you share files with your friends
+ BaShare (Basic Share) is a very simply and user-friendly
+ file sharing tool over the Internet and private LAN too.
+ .
+ Basically BaShare is a http server with a graphical user
+ interface (GUI). Select a file, give the link to your friends
+ and they will be able to download the file from you speedily
+ (or not, as you wish :-) ) BaShare is very useful during
+ chat sessions!

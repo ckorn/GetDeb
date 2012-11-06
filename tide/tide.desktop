@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=tIDE
+Exec=j_tide
+Terminal=false
+Type=Application
+Categories=Application;Development;

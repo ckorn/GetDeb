@@ -1,0 +1,13 @@
+Encoding is depcrecated.
+Index: kchmviewer-6.0/packages/kchmviewer.desktop
+===================================================================
+--- kchmviewer-6.0.orig/packages/kchmviewer.desktop	2009-12-15 07:02:57.000000000 +0100
++++ kchmviewer-6.0/packages/kchmviewer.desktop	2012-05-05 14:50:13.402972727 +0200
+@@ -3,7 +3,6 @@
+ Categories=Qt;KDE;Office;Viewer;
+ Terminal=false
+ Type=Application
+-Encoding=UTF-8
+ Exec=kchmviewer %f
+ Icon=kchmviewer
+ GenericName=CHM file viewer

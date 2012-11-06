@@ -1,0 +1,33 @@
+Source: mount-gtk
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libgtk2.0-dev,
+               libglib2.0-dev,
+               libdbus-glib-1-dev,
+               libdbus-1-dev,
+               libpango1.0-dev,
+               libx11-dev,
+               libnotify-dev,
+               libcxx-gtk-utils-dev
+Standards-Version: 3.9.3
+Homepage: http://mount-gtk.sourceforge.net/
+
+Package: mount-gtk
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         udisks
+Description: Front end for pmount
+ This program is a front end for pmount. It provides a means of
+ mounting devices with pmount through a graphical interface.
+ .
+ It is principally intended for use where (i) the user does not want to
+ make use of the automounting facilities of say, nautilus, as and when
+ removable media are inserted in or removed from a computer, (ii) the
+ removable media are not recognised by nautilus (or whatever else is
+ used for automounting), (iii) the user wants to be able to mount
+ filesystems on user demand which are not removable media, such as
+ network filesystems, or (iv) the user just prefers pmount.

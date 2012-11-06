@@ -1,0 +1,7 @@
+debian/scripts/mmediac	usr/bin
+debian/mmediac.desktop	usr/share/applications
+lib/ffmpeg		usr/lib/mmediac
+lib/lib*.so.*		usr/lib/mmediac
+lib/mmc			usr/lib/mmediac
+lib/icons		usr/share/mmediac
+lib/profiles		usr/share/mmediac

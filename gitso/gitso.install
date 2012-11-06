@@ -1,0 +1,4 @@
+*.py *.png *.ico		usr/share/gitso
+debian/scripts/gitso		usr/bin
+debian/gitso.desktop		usr/share/applications
+debian/gitso.png		usr/share/pixmaps

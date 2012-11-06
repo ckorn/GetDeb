@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Algoscore
+Comment=Allows you to install and manage applications
+Icon=as_icon
+Exec=algoscore
+Categories=Application;AudioVideo;Audio;
+X-Publisher=Jonatan Liljedahl
+X-AppVersion=081112
+Terminal=false

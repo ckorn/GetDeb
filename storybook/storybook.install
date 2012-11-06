@@ -1,0 +1,10 @@
+storybook			usr/bin
+debian/storybook.desktop	usr/share/applications
+debian/storybook.png		usr/share/pixmaps
+lib				usr/share/storybook
+resources			usr/share/storybook
+xdg				usr/share/storybook
+*.xml				usr/share/storybook
+jasperreports.properties	usr/share/storybook
+log4j.dtd			usr/share/storybook
+*.png				usr/share/storybook

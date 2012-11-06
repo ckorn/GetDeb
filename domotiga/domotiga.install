@@ -1,0 +1,4 @@
+*.conf *.gambas	rrd logs icons floorplans tvguide sounds www		usr/share/domotiga
+*.desktop								usr/share/applications
+debian/domotiga.png							usr/share/pixmaps
+debian/scripts/*							usr/bin

@@ -1,0 +1,3 @@
+version=3
+http://kuthulu.com/gcm/?module=download \
+    (?:.*/)?gnome-connection-manager-([\d\.]+)\.tgz

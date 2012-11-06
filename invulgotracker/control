@@ -1,0 +1,16 @@
+Source: invulgotracker
+Section: gnome
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), autotools-dev,
+ libglade2-dev, libgtk2.0-dev, libxml2-dev,
+ libgnomevfs2-dev
+Standards-Version: 3.8.3
+Homepage: http://code.google.com/p/invulgotracker/
+
+Package: invulgotracker
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: GNOME task timekeeping
+ Simple GNOME application that enables simple
+ task time tracking.

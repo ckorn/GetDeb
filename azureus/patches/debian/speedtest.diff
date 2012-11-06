@@ -1,0 +1,43 @@
+From: Scott Wolchok <scott@wolchok.org>
+Subject: [PATCH] debian/speedtest
+
+Disable Client-side validation for Speed Test.
+
+Signed-off-by: Adrian Perez <adrianperez.deb@gmail.com>
+
+---
+ .../NetworkAdminSpeedTestScheduledTestImpl.java    |    8 +++++---
+ 1 files changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/com/aelitis/azureus/core/networkmanager/admin/impl/NetworkAdminSpeedTestScheduledTestImpl.java b/com/aelitis/azureus/core/networkmanager/admin/impl/NetworkAdminSpeedTestScheduledTestImpl.java
+index 01022eb..76e27df 100644
+--- a/com/aelitis/azureus/core/networkmanager/admin/impl/NetworkAdminSpeedTestScheduledTestImpl.java
++++ b/com/aelitis/azureus/core/networkmanager/admin/impl/NetworkAdminSpeedTestScheduledTestImpl.java
+@@ -461,20 +461,22 @@ NetworkAdminSpeedTestScheduledTestImpl
+             if( size==null || offset==null  )
+                 throw new IllegalStateException("scheduleTestWithSpeedTestService had a null parameter.");
+ 
+- 
++            /*
++              Speedtest authentication is disabled -- dont waste resources
++              reading the JAR.
+             //read the bytes
+             raf = new RandomAccessFile( jar_file, "r" );
+             byte[] jarBytes = new byte[size.intValue()];
+ 
+             raf.seek(offset.intValue());
+             raf.read( jarBytes );
+-
++            */
+ 
+             //Build the URL.
+             Map request = new HashMap();
+             request.put("request_type", new Long(CHALLENGE_REPLY) );
+             request.put("challenge_id", challenge_id );
+-            request.put("data",jarBytes);
++            request.put("data", new byte[] {0,});
+  
+             retVal = sendRequest( request );
+ 
+-- 
+tg: (7f589b9..) debian/speedtest (depends on: upstream)

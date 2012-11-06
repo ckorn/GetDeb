@@ -1,0 +1,25 @@
+This work was packaged for Debian by:
+
+    Joao Pinto <joao.pinto@getdeb.net> on Fri, 30 Jul 2010 21:21:30 +0100
+
+It was downloaded from:
+
+    http://sourceforge.net/projects/jugbbsqlrunner/files/
+
+Upstream Author:
+Copyright:
+
+	Jan Lolling, email: jan.lolling@mac.com
+
+License:
+
+	/usr/share/common-licenses/LGPL
+
+
+On Debian systems, the complete text of the GNU General
+Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Joao Pinto <joao.pinto@getdeb.net>
+

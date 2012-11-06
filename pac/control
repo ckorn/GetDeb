@@ -1,0 +1,38 @@
+Source: pac
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               perl
+Standards-Version: 3.9.3
+Homepage: http://sites.google.com/site/davidtv/
+
+Package: pac
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libgnome2-vte-perl,
+         libgnome2-gconf-perl,
+         libexpect-perl,
+         libnet-proxy-perl,
+         libyaml-perl,
+         libgtk2-perl,
+         libgtk2-gladexml-perl,
+         libgtk2-ex-simple-list-perl,
+         remote-tty,
+         cu,
+         libcrypt-cbc-perl,
+         libcrypt-blowfish-perl,
+         libnet-arp-perl,
+         libsocket6-perl,
+         libfreezethaw-perl,
+         libossp-uuid-perl,
+         ssh-askpass-gnome,
+         ftp,
+         telnet,
+         rdesktop,
+         gtk2-engines-pixbuf
+Description: Perl Auto Connector
+ PAC is a Perl/GTK GNOME replacement for SecureCRT/Putty/etc...
+ It provides a GUI to configure SSH/Telnet connections:
+ users, passwords, EXPECT regular expressions, macros, etc.

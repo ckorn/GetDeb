@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+SHARED_CONFIG := /usr/share/misc/config
+
+%:
+	dh $@
+
+.PHONY: override_dh_auto_configure
+override_dh_auto_configure: config-stamp
+	dh_auto_configure
+
+config-stamp:
+# Use most up-to-date config.{sub,guess}
+	for u in sub guess; do \
+	  if [ -f $(SHARED_CONFIG).$$u ]; then \
+	    mv config.$$u debian && \
+	    cp $(SHARED_CONFIG).$$u .; \
+	  fi; \
+	done
+	touch $@
+
+.PHONY: override_dh_auto_clean
+override_dh_auto_clean:
+# Restore upstream config.{sub,guess}
+	for u in sub guess; do \
+	  if [ -f debian/config.$$u ]; then \
+	    mv debian/config.$$u .; \
+	  fi; \
+	done
+	rm -f config-stamp
+	dh_auto_clean
+
+.PHONY: override_dh_auto_install
+override_dh_auto_install:
+	$(MAKE) install prefix=$(CURDIR)/debian/tmp/usr sysconfdir=$(CURDIR)/debian/tmp/etc
+# ./configure above seems to ignore --disable-rpath
+	chrpath -d $(CURDIR)/debian/tmp/usr/bin/grisbi $(CURDIR)/debian/tmp/usr/lib/grisbi/*.so
+
+.PHONY: override_dh_installchangelogs
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+.PHONY: override_dh_install
+override_dh_install:
+	dh_install --fail-missing -X.la

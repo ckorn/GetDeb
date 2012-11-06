@@ -1,0 +1,12 @@
+Grisbi Debian source package
+============================
+
+Patching upstream sources
+-------------------------
+
+The quilt series is generated from the Git repository, using
+dom-{apply,save}-patches, from the dh-ocaml (>= 0.4.2) package. Please
+refer to the appendix about Git in the Debian OCaml Packaging Policy
+(from the same package).
+
+ -- Stéphane Glondu <glondu@debian.org>, Tue, 27 Apr 2010 08:48:10 +0200

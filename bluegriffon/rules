@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf BlueGriffon
+
+override_dh_install:
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	tar xjf BlueGriffon-*-x86_64.tar.bz2
+else
+	tar xjf BlueGriffon-*-i686.tar.bz2
+endif
+
+	chmod -x BlueGriffon/distribution/extensions/*.xpi
+	chmod -x BlueGriffon/modules/devtools/*.jsm
+	chmod -x BlueGriffon/modules/accessibility/*.jsm
+	chmod -x BlueGriffon/components/*.js
+
+	dh_install
+
+	[ ! -d debian/bluegriffon-data/usr/share/bluegriffon/components ] || mv debian/bluegriffon-data/usr/share/bluegriffon/components/*.so debian/bluegriffon/usr/lib/bluegriffon/
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l$(CURDIR)/debian/bluegriffon/usr/lib/bluegriffon

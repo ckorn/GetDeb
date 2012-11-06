@@ -1,0 +1,36 @@
+Source: wikidpad
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), python-support, sharutils
+Standards-Version: 3.9.1
+Homepage: http://wikidpad.sourceforge.net/
+
+Package: wikidpad
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-wxgtk2.8
+Description: Wiki-like notebook for storing your thoughts and ideas
+ WikidPad is a Wiki-like notebook for storing your thoughts, ideas, todo
+ lists, contacts, or anything else you can think of to write down.
+ .
+ What makes WikidPad different from other notepad applications is the
+ ease with which you can cross-link your information. Links in a wiki
+ are created by typing in WikiWords. A WikiWord is any mixed case word
+ typed into the editor. TodoList or JohnDoe are example WikiWords.
+ The term wiki means "quick" in Hawaiian, and wikis are all about
+ quickly linking your information together. WikidPad is like an IDE
+ for your thoughts.
+ .
+ Features:
+  * Intuitive text based editing of wikis containing rich text and multimedia
+    content
+  * Heirarchial Tree view of the wiki for quick navigation of related
+    information
+  * One-click HTML preview
+  * HTML export
+  * Search (and replace) individual wiki pages or your entire wiki.
+  * Support for extensive customization via inline pythons scripts and user
+    plugins.
+  * Available plugins include: Embeddable TeX Equations using Mimetex,
+    Embeddable Graphs using Graphviz, Embabble Data Plots using Ploticus and
+    Spelling Checker.

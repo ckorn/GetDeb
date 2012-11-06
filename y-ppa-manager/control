@@ -1,0 +1,25 @@
+Source: y-ppa-manager
+Section: misc
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               python | python-all | python-dev | python-all-dev
+Homepage: https://launchpad.net/y-ppa-manager
+Standards-Version: 3.9.3
+
+Package: y-ppa-manager
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         yad (>= 0.8.0),
+         libnotify-bin,
+         ppa-purge,
+         python-software-properties,
+         wget,
+         xterm
+Description: Y PPA Manager
+ Easily manage PPAs: add, remove, purge and search all
+ Launchpad PPAs using a graphical interface.
+ The search feature allows you to add the found PPAs,
+ just list the packages and their versions in a
+ found PPA or download some packages in the PPA.

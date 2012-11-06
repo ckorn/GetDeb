@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=GLC_Player
+Exec=/usr/bin/glc_player
+Icon=glc-player
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Viewer;

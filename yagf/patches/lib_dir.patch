@@ -1,0 +1,14 @@
+Don't install library in /usr/lib64 on amd64.
+Index: yagf-0.9.2/CMakeLists.txt
+===================================================================
+--- yagf-0.9.2.orig/CMakeLists.txt	2012-09-04 18:30:12.074852146 +0200
++++ yagf-0.9.2/CMakeLists.txt	2012-09-04 18:30:17.242851990 +0200
+@@ -53,7 +53,7 @@
+         set (LIB_PATH_SUFFIX 64)
+         set_property (GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS TRUE)
+ endif(CMAKE_SIZEOF_VOID_P EQUAL 8)
+-install_targets(/lib${LIB_PATH_SUFFIX}/yagf xspreload)
++install_targets(/lib/yagf xspreload)
+ #install(FILES ${QM_FILES} DESTINATION share/yagf/translations/)
+ #install(FILES COPYING DESCRIPTION README AUTHORS ChangeLog DESTINATION share/yagf/)
+ install(FILES yagf.png DESTINATION share/pixmaps/)

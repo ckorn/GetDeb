@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=RSSOwl
+Exec=/usr/bin/rssowl
+Icon=rssowl
+Terminal=false
+Type=Application
+Categories=Application;Network;
+StartupWMClass=RSSOwl

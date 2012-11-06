@@ -1,0 +1,15 @@
+etc/xdg
+usr/bin/oyranos-monitor*
+usr/bin/oyranos-policy
+usr/bin/oyranos-profile*
+usr/bin/oyranos-xforms*
+usr/bin/qcmsevents
+usr/share/applications
+usr/share/man/man1/oyranos-monitor*.1
+usr/share/man/man1/oyranos-policy.1
+usr/share/man/man1/oyranos-profile*.1
+usr/share/man/man1/oyranos-xforms*.1
+usr/share/man/man1/qcmsevents.1
+usr/share/man/man3/oyranos.3
+usr/share/locale
+usr/share/pixmaps

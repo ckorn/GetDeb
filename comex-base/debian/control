@@ -1,0 +1,35 @@
+Source: comex-base
+Section: cli-mono
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), 
+ autotools-dev
+Build-Depends-Indep: cli-common-dev , 
+ mono-devel , 
+ liblog4net-cil-dev,
+ mono-gmcs,
+ pkg-config
+Standards-Version: 3.9.2
+Homepage: http://comex-project.googlecode.com/
+
+
+Package: libcomex-base0.1-cil
+Architecture: all
+Depends: ${cli:Depends}, ${misc:Depends},
+ pcscd,
+ liblog4net1.2-cil,
+ libpcsclite1
+Description: Is base component of a simple application that
+ can be used to exchange data with smartcards using PC/SC
+ standard readers or smartmouse phoenix serial reader.
+
+
+Package: libcomex-base-cil-dev
+Architecture: all
+Section: libdevel
+Depends: libcomex-base0.1-cil (= ${binary:Version}), ${misc:Depends}
+Description: Is base component of a simple application that (header files)
+ can be used to exchange data with smartcards using PC/SC
+ standard readers or smartmouse phoenix serial reader.
+ .
+ (This package contains the development files)

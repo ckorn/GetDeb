@@ -1,0 +1,19 @@
+Source: drjava
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://drjava.org
+
+Package: drjava
+Architecture: all
+Depends: ${misc:Depends},
+         openjdk-6-jdk | sun-java6-jdk,
+         fontconfig
+Description: Lightweight programming environment for Java
+ DrJava is a lightweight programming environment for Java
+ designed to foster test-driven software development.
+ It includes an intelligent program editor, an
+ interactions pane for evaluating program text,
+ a source level debugger, and a unit testing tool.

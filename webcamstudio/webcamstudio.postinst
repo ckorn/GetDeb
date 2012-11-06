@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+update-rc.d webcamstudio start 99 2 3 4 5 . stop 99 0 1 6 . > /dev/null
+
+# update the webcamstudio driver after installation
+echo Removing the webcamstudio module from memory
+rmmod webcamstudio || true
+KERNELVERSION=$(uname -r)
+echo Removing webcamstudio.ko from the modules
+rm -f /lib/modules/$KERNELVERSION/kernel/drivers/misc/webcamstudio.ko
+echo Restating the webcamstudio service to update the module
+invoke-rc.d webcamstudio restart
+
+##DEBHELPER##

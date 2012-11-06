@@ -1,0 +1,586 @@
+ledgersmb (1.3.17-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Address now shows on ECA selection screen (Erik H)
+    * Taxes::Simple now respects min/max values based on subtotal (Chris T)
+    * Fixed company name/address missing from income statement (Chris T, h/t
+    Mark L)
+    * Fixed company name/address missing from balance sheet (Chris T, h/t
+    Mark L)
+    * Optional image retrieval with size detection for latex templates (Chris
+    T)
+    * Added option to attach images to LaTeX PDF invoices/orders/etc (Chris
+    T)
+    * Corrected one is_zero error with latest Math::BigInt (Chris T)
+    * Fixed file uploads sometimes hanging (Chris T)
+    * Fixed file uploads sometimes throwing action not found errors (Chris T)
+    * Fixed helpful DB error messages not displayed (Chris T)
+    * Fixing Form.pm so that max_post_size = -1 behaves as in CGI::Simple
+    (Chris T)
+    * Fixed internal server error on tax lookup (Chris T)
+    * Better error message on db version error (Herman V)
+    * Fixed parsing error in xedemo bin_list.tex (Erik H)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 22 May 2012 18:44:07 +0200
+
+ledgersmb (1.3.16-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Changes in <head> element for non-Latin characters, HTML invoices (Erik
+    H)
+    * Corrected untranslated string in Contact management screen (Chris T)
+    * Corrected permissions issue creating pricelist (Chris T, 3513861)
+    * Correcting ordering of aging reports so currencies are clustered (Chris
+    T)
+    * Fixed curr totals not showing for aging rpts (Chris T, 3512591, h/t
+    John L)
+    * Fixed new user screen not respecting default country (Chris T, 3513760)
+    * Fixed hash(...) in HTML payment receipt (Chris T, 3515924, h/t Michael
+    R)
+    * Fixed errors about Concat() not found on Pg 8.4 (Erik H)
+    * Fixed can't edit templates with absolute templates path (Chris T
+    3516725)
+    * Added API for minimum value for taxes for local tax modules (Chris T)
+    * Added API (but not UI) for tax max value (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 May 2012 19:11:27 +0200
+
+ledgersmb (1.3.15-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+    * Update WX POS (almost there) - readme and code
+      (Andres B, item 3516949)
+    * Adding Perl-based database-setup and teardown scripts (Chris B)
+    * Corrected build issues w/Makefile due to inclusion of LedgerSMB.pm
+      (Chris T)
+    * ledgersmb.conf.default : Update default PATH (H Sorli, item 3430019)
+    * Fixed imballanced payments when early payment discount processed
+      (Chris T)
+    * Pricelists exportable as PDF and CSV (Chris T)
+    * Fixed payment/receipts shows with 0 due/payment list
+      (Erik H, bug 3512555)
+    * Correct POD spelling error in LedgerSMB/Form.pm (Robert C, bug 3472015)
+    * Fixed Reconciliation.sql not loading (Erik H)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Apr 2012 18:49:34 +0200
+
+ledgersmb (1.3.14-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    * Argentina (Spanish) translation and charts of accounts added. (Andres
+    B)
+    * Fixed errors saving when duedate is blank, bug 3503463 (Chris T)
+    * Corrected editing pos_invoice.txt whitelisting in front-end (Chris T)
+    * Corrected erroneous directory transversal denial (Chris T, bug 3504924)
+    * Added recon data to Norwegian chart of accounts (h/t H. Sorli) (Chris
+    T)
+    * Fixed some menu items disappearing after upgrade (Chris T, bug 3504934)
+    * Added default to country for initial setup (Chris T, bug 3496967)
+    * Added recon data to COA files for a few extra locales (Chris T bug
+    3505102)
+    * Clarified error message when contrib scripts not found (Chris T)
+    * Corrected warnings for missin glog initalization (Andres B)
+    * XLS and ODS buttons are now disabled if prereqs are missing (Erik H)
+    * Experimental support for migrating from SQL-Ledger via Setup.pl (Chris
+    T)
+    * Fixed POD issues with lsmb-request.pl (h/t Robert C) (Chris T item
+    3472648)
+    * Fixed means of adding parts/editing pricelist missing (Chris T, bug
+    3442163)
+    * Fixed unknown db detected as SQL-Ledger (Chris T, bug 3510039)
+    * Fixed pos ignores pd_proto and always connects tcp (Chris T, bug
+    3458112)
+    * Error now displayed when currencies are not defined (Chris T, bug
+    3509555)
+    * Fixed "no obvious way to select credit account" (Chris T, bug 3510564)
+    * Added code to unlink backup files after sent (Chris T)
+    * Added Gnome css (Andres B)
+    * Update doc; UPGRADE & README.sql-ledger (h/t Chris T & Erik H) (H
+    Sorli)
+    * Change logo to "new" design - rename old logo (H Sorli, item 3435532)
+    * POD corrections to correct for POD style guidelines (Robert C)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 28 Mar 2012 15:24:30 +0200
+
+ledgersmb (1.3.13-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Changelog for 1.3.13
+    * Reduced log messages when upgrading/creating db, for some log levels
+    (Chris T)
+    * Changed db setup not to use createdb for simple admin of pg_hba.conf
+    (Chris T)
+    * Corrected type = 'password' not handled properly in elements.html
+    (Chris T)
+    * Non-billable information now retained in db for timecards (Chris T)
+    * Corrected character encoding/corruption issue with backup scripts
+    (Chris T)
+    * Changes in the single payment UI to minimize mouse movements (Erik H)
+    * Adding link to employee edit screen from user page (h/t H Sorli) (Chris
+    T)
+    * Fixed: Can't designate managers (Chris T, bug  3486840)
+    * Can now skip adding the chart of accounts (Erik H)
+    * Fixed: can't reconcile accounts in foreign currency (bug 3498036)(Chris
+    T)
+    * Fixed: Recon not setup for cash accounts in default COA (Erik H and
+    Chris T)
+    * Corrected minor issue with demo sales quotation template (Chris T)
+
+    Chris T is Chris Travers
+    Erik H is Erik Huelsmann
+    H Sorli is Havard Sorli
+
+    Changelog for 1.3.12
+    * Corrected processing of <?lsmb tags in order/invoice numbers (Chris T)
+    * Corrected handling of accounts in dropdowns where () are present (Chris
+    T)
+    * Corrected erroneous log messages from debugging 1.3.11 (Chris T)
+    * Autocomplete ajaxselect now work (degraded) without Javascript (Chris
+    T)
+    * Autocomplete ajaxselect now accept full entry without waiting (Chris T)
+    * Inlined add_custom_field's argument names for autodocumentation (Chris
+    T)
+    * Updated add_custom_field to run on PostgreSQL 9.0 (Chris T)
+    * Updated dists/rpm/build.sh to support RHEL 5 (Hilton D)
+    * Corrected stylesheet not set on error pages (Chris T)
+    * Tightened up permissions on menu items and employee management (Chris
+    T)
+    * Corrected permissions on fixed asset depreciation workflow/menu (Chris
+    T)
+    * Corrected Perl issues on _db_init when custom fields defined, 5.12
+    (Chris T)
+    * Adding missing permissions for editing parts (Chris T)
+    * Clarified string for vendor's part number in parts screen (Frans S)
+    * Recon checkbox now is set properly (Chris T)
+    * Corrected missing "search assets" menu item (Chris T)
+    * Net Book Value report now shows undepreciated assets (Chris T)
+    * Permissions fixes to fixed asset module (Chris T)
+    * Corrected NULL being saved in method for asset class (Chris T)
+    * Corrected UI glitch on saving asset class (Chris T)
+    * Updated Slony setup scripts (Chris T)
+
+    Hilton D is Hilton Day
+    Frans S is Frans van der Star
+    Chris T is Chris Travers
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Mar 2012 12:32:00 +0100
+
+ledgersmb (1.3.11-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Changelog for 1.3.11
+    * Fixed outstanding report for payment reversal and partial payments
+    (Chris T)
+    * Fixed handling of non-existing roles in menu grants (Chris T)
+    * Added reverse_bank_recs setting for those that want to
+      do recs from bank perspective (Chris T)
+    * Added "bank register mode" for account transaction lists (Chris T)
+    * Fixed join projection issue in draft search routine (Chris T)
+    * Fixed prepare-database.sh for Pg 9.1 (Erik H)
+    * Fixed Customer/vendor selection for dropdowns (Chris T)
+    * Fixed some HASH() entries in CSV templates (Chris T)
+    * Removed unnecessary shebang lines in scripts/* files (Robert C)
+    * Fixed GL recurring transaction not posting (Chris T)
+    * Improved error handling when extensions/contrib scripts not found
+    (Chris T)
+    * Fixed multicurrency handling in bulk payment interface (Chris T and
+    Erik H)
+    * Corrected a number of number parsing/i18n issues (Herman V)
+    * Corrected pos_cashier inadequate permissions (Chris T)
+    * Corrected templates directive not handled properly (Chris T)
+
+    Chris T is Chris Travers
+    Erik H is Erik Huelsmann
+    Herman V is Herman Vierendeels
+    Robert C is Robert James Clay
+
+    Changelog for 1.3.10
+    * Fixes for permissions for exchangerate table (Erik H)
+    * Fixes for POS cashier permissions.  (Chris T)
+    * More Localization Fixes (Herman V)
+    * Customer/Vendor Search now shows records without credit accounts
+    (Herman V)
+    * Better error handling contrib modules not found (Chris T)
+    * pos.conf.pl no longer overwritten on upgrade (Chris T)
+    * Fixed multi-currency single payment handling (Erik H / Chris T)
+    * Fixed "New Window" not working (Erik H)
+    * Fixed Pg 9.1 detection in setup.pl (Chris T and Pongracz I)
+    * Fixed SQL error loading Utils.sql (Michael R)
+    * Updated docs on foreign exchange settings (Erik H)
+    * Fixed forex settings not saving on defaults screen (Chris T)
+    * Formatted paid amount for payment screen (Herman V)
+    * Fixed help message on prepare-database.sh (Michael R)
+    * Fixed links on payment report (Erik H)
+    * Added more forex documentation (Erik H)
+    * Fixed UK chart of accounts VAT accounts (Erik H)
+    * Fixed issues involving employee_id references (Erik H)
+    * Fixed shipto menu (Erik H)
+    * Fixed wrong orders showing up on ship/receive (Erik H)
+    * Fixed Makefile.PL version info (Chris T)
+    * Fixed HTML attribute quoting (John L and Erik H)
+
+    Chris T is Chris Travers
+    Erik H is Erik Huelsmann
+    Herman V is Herman Vierendeels
+    John L is John Locke
+    Michael R is Michael Richardson
+    Pongracz I is Pongracz Istvan
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 20:23:16 +0100
+
+ledgersmb (1.3.9-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    * More logging enhancements (Herman V)
+    * Translation fixes in tax form reports (Chris T)
+    * Added accidently omitted 1099 forms (Chris T)
+    * Fixed formatting issue in sales_quotation.tex (Chris T)
+    * Better localization handling on logout (Herman V)
+    * Better handling of successive logouts (Herman V)
+    * Correcting some erroneous errors on db setup (Herman V)
+    * Corrected error message in old handler (Herman V)
+    * Reduced warnings in logs (Herman V and Chris T)
+    * Corrected "Not a CODE reference" in payment processing (Herman V)
+    * Corrected year/month not working on payment dropdowns (Herman V)
+    * Can now be installed via RPM. (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 18 Dec 2011 14:31:59 +0100
+
+ledgersmb (1.3.8-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    * Fixed duplicate key error saving taxes (Herman V)
+    * Fixed not null violation when inserting bank acct w/o bic (Chris T)
+    * Corrected fkey violation when attaching file to order (Chris T)
+    * Moved language input on customer/vendor form for better display
+      (Chris T)
+    * Corrected binmode handling on templates (Herman V and Chris T)
+    * File.sql now loads transactionally (Chris T)
+    * OE no longer requires type input for editing orders/quotations
+      (Chris T)
+    * Fixed  "no such file or directory found" error when logging db
+      tasks (David B)
+    * Logging improvements (Herman V)
+    * Fixed company fax being printed under shipto (Herman V)
+    * Fixed "File does not exist... [object HTMLButtonElement]"
+      js error (Herman V)
+    * Fixed timecard template headers not showing company name, etc (Chris T)
+    * Fixed part account mappings broken after upgrade from 1.2 (Chris T)
+    * Fixed quotation number increasing when saving existing quotation
+      (Chris T)
+    * Fixed invalid from address on backup routine (Chris T)
+    * Fixed error "ERROR: lower bound of FOR loop cannot be null"
+      (Chris T)
+    * Updated documentation regarding retaining old migrated data
+      (Herman V)
+    * Fixed duplicate sessions created on login (Herman V)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Dec 2011 13:57:31 +0100
+
+ledgersmb (1.3.7-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Database
+    * Added foreign key of entity_credit_account.language_code (Herman V)
+    * Corrected permissions issue for editing assembly (Chris T)
+
+    Code and Administration
+    * Exposed LedgerSMB::Sysconfig::tempdir to configuration file (Herman V)
+    * Fixed invoice tempfiles never being cleaned up (Herman V)
+    * Fixed LedgerSMB.pm warnings during tests (Herman V)
+    * Backup functionality moved to database administration interface (Chris
+    T)
+    * Whitespace adjustment in Pg-database (Herman V)
+    * New form unsets $form->{header} to avoid lack of headers (Herman V)
+
+    User Interface
+    * Fixed pricelist button (customer/vendor) producing error (Chris T)
+    * Fixed date error when processing recurring transactions (Chris T)
+    * Corrected 'Invalid Year-end filter' when exporting trial balance (Chris
+    T)
+    * Correcting errors attaching and retriving URL attachments (Chris T)
+    * Correcting parse errors in pos_template.txt (Chris T)
+    * Database administration interface more consistent (Chris T)
+    * Corrected Action not defined error on asset import (Chris T)
+    * Default language handling for invoices (Herman V)
+    * Fixed LaTeX errors in timecard templates (Chris T)
+    * Fixed error when batch printing timecards (Erik H)
+    * Fixed menu reversal with batch printing (Erik H)
+    * Removed broken edit buttons on bank account tab of contacts form (Chris
+    T)
+    * Corrected UI glitches involving adding employee contact info (Chris T)
+    * Corrected missing translation call in contact template (Chris T)
+    * Corrected UI glitch when processing recurring transactions (Chris T)
+    * Corrected double escaping bug in balance sheet template (Erik H)
+    * Corrected filtering of customers/vendors on AR/AP screens (Chris T)
+    * Added logged in username to setup utility confirm operation screen
+    (Chris T)
+    * Corrected sales tax issue for sales/purchase orders (Herman V)
+
+    Logging
+    * Allow log-level to be set from config file (Herman V)
+    * Correcting history.css not found (Chris T)
+    * Reduced warnings in logs (Chris T)
+    * Logging enhancements (Herman V)
+    * Corrected error regarding css file not found (Erik H)
+    * Corrected global.css not found error (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 02 Dec 2011 15:49:17 +0100
+
+ledgersmb (1.3.6-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Changelog for LedgerSMB 1.3.6
+    * Including xelatex templates under directory templates/xedemo (Chris T)
+    * Fix for company name in order entry (David B)
+    * Corrected UI dropdown box issue on ar/ap transaction screen (Herman V)
+    * Corrected minor workflow issues on AR/AP transactions (Herman V)
+    * Corrected permissions for users creating employee records (Chris T)
+    * Corrected error when trying to save employee location as new (Chris T)
+    * Corrected save as new overwriting existing for vendors/customers
+      (Chris T)
+    * Logging improvements (Herman V)
+    * Fixed SQL errors in Goods and Services/All Items report (David B)
+    * Corrected issue saving country in contact.html (Pongracz I)
+    * Corrected permission denied to partsgroup_id_seq (Chris T)
+    * Corrected discount_terms not being displayed after saving (Chris T)
+    * Corrected language drop-down missing from email form (Chris T)
+    * Customer search result label correction (Herman V)
+    * Company name can now be prepopulated on login screen (Chris T)
+
+    Chris T is Chris Travers
+    David B is David Bandel
+    Herman V is Herman Vierendeels
+    Pongracz I is Pongracz Istvan
+
+    Changelog for LedgerSMB 1.3.5
+    * Fixing Menu and Permissions bug 3430820 (Chris T)
+    * Fixing permissions bug 3433644 (Chris T)
+    * Fixing file not found printing HTML invoice (Chris T)
+    * Corrected join issues in generating sales orders (Erik H)
+    * Removed commits in child subroutines (Herman V)
+    * Correcting warnings about HOME not set (Chris T)
+    * Corrected debian-specific db creation issue (Pongracz I)
+    * Corrected company name representation in timecard->sales order
+      (Chris T)
+    * Better error handling when currency not set (Chris T)
+    * Exposed adding currency for customer/vendor to UI (Chris T)
+    * Corrected POS roles as per bug 3434549 (Chris T)
+    * Updated manual per ticket 3435124 (Chris T)
+    * Removed intermediate LaTeX files (Erik H)
+    * Fixed error: css/scripts/create_batch.css not found (Erik H)
+    * Translation string updates Herman V)
+    * Additional upgrade checks added (Herman V)
+    * Better whitespace handling in upgrade scripts (from 1.2) (Herman V)
+    * Translation string fixes for Payment workflow (Herman V)
+    * Fixed UTF8 chars broken in printed HTML invoices (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 27 Nov 2011 16:08:41 +0100
+
+ledgersmb (1.3.4-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    * Corrected case matching error in upgrade script (Chris T)
+    * Corrected version number on new databases (Chris T)
+    * Corrected multiple load errors on upgrade (David B)
+    * Corrected problem creating UTF-8 database on Debian (David B)
+    * Corrected display issues with numbers (Herman V)
+    * Updated Ubuntu notes (Frans S)
+    * Corrected a couple of menu items (David B)
+    * Added 1.3-1.2 downgrade script to recover from failed upgrades
+      (Chris T)
+    * Corrected ship/receive bug due to invalid join conditions (Chris T)
+    * Corrected template error in printPayment.html (Herman V)
+    * Form.pl now provides instructions to use setup.pl to correct database
+      versioning errors (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 10 Nov 2011 19:18:06 +0100
+
+ledgersmb (1.3.3-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Changelog for LedgerSMB 1.3.3
+    * Fix for being unable to delete AR/AP drafts (Herman V)
+    * Additional button cleanup (Herman V)
+    * Fix for is_zero issue with latest Math::BigFloat in AR/AP trans (Chris
+    T)
+    * Fix for inability to save employee country (Chris T)
+    * API inconsistency fixed (Chris T)
+    * Fix for translation string standardization (Herman V)
+    * Fix for AP posting issue with 1.000,00 number format (Herman V)
+    * More number format fixes (Herman V)
+    * Database upgrade within 1.3 now possible from setup.pl (Chris T)
+    * Corrected Norwegian tax rates (Erik H)
+
+    Chris T is Chris Travers
+    Herman V is Herman Vierendeels
+    Erik H is Erik Huelsman
+
+    Changelog for LedgerSMB 1.3.2
+    * Fixed a few files where suExec fixes were not applied (Chris T)
+    * Fixed erroneous buttons marked "Save and Post" showing up (Chris T)
+    * Corrected test cases so they do not fail w/o optional LaTeX mods (Chris
+    T)
+    * Made errors saving chart of accounts entry more friendly (Chris T)
+    * Fixed permissions issue involving yearend (Chris T)
+    * Fixed filename issue in install.sh (Chris T)
+    * Fixed stylesheet/salutations display issue in user editing screen
+    (Chris T)
+    * Correcting LedgerSMB.pot (bug reported by Herman V) (Chris T)
+    * Documented parameterized translation syntax for .po files (Herman V)
+    * Added en_GB and en_US to language table for new installations (Chris T)
+    * Added check for system configuration before tests begin (Chris T)
+    * Clarified password reset interface for user management (Chris T)
+    * Added notes on installing on Ubuntu 11.10 (Frans S)
+    * Correcting some issues with Perl 5.12 and Math::BigInt (Herman V)
+
+    Chris T is Chris Travers
+    Herman V is Herman Vierendeels
+    Frans S is Frans van der Star
+
+    Changelog for LedgerSMB 1.3.1
+    * Language selection for invoice templates fixed (Chris T)
+    * Fixed DB errors on project search (Chris T)
+    * Fixed DB errors on timecard entry (Chris T)
+    * Fixed DB errors on timecard searches (Chris T)
+    * String standardization in employee/user management (Herman V)
+    * Fixed Employee record duplicted on save (Herman V)
+    * Fixed upgrade script not bringing in entity.name for employees (Chris
+    T)
+    * Fixed upgrade script error importing duplicate customer/vendor numbers
+    (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 09 Nov 2011 19:48:16 +0100
+
+ledgersmb (1.3.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    Security:
+    * Security is now robustly enforced on the db level (Chris T and Josh D)
+    * New user interface to manage users (Chris T and Aurynn)
+
+    Separation of Duties:
+    * Separate permissions for entry and posting to the books.
+    * Voucher/Batch system (Chris T)
+    * Draft system for unapproved transactions (Chris T)
+    * Reconciliation is now subject to separation of duties (Chris T and
+    Aurynn)
+
+    End of Year:
+    * Close books and end of year transactions at once (Chris T and Aurynn)
+    * Cannot close books where unapproved transactions are before
+    yearend(Chris T)
+    * Yearend/closed books now creates balance checkpoints for better
+    performance
+    (Chris T and Aurynn)
+    * The prohibition against entering transactions into closed period
+    enforced
+    on a database level.
+
+    General Ledger/Journal:
+    * GL reports filter by account (Chris T)
+    * GL reports account is ajax-style autocomplete (John W)
+    * Journal Entry screen now uses AJAX-style autocomplete for accounts
+    (Chris T)
+    * GL reference now populated by default in the initial screen (Chris T).
+    * Files can be attached to financial transactions (Chris T)
+
+    AR/AP:
+    * Files can be attached to AR/AP transactions (Chris T)
+    * Project numbers can be displayed on AR/AP transactions report (Chris T)
+
+    Reconciliation:
+    * Reconciliation is on new codebase!
+    * Redesigned workflow (Chris T and Aurynn)
+    * Optimized for high volumes (1000 transactions or more per run, Chris T)
+    * Plug in model for bank import scripts (Chris T and Aurynn)
+
+    Payments:
+    * Payments are on new codebase!
+    * Redesigned bulk payment workflow/UI (Chris T)
+    * Bulk payment optimizations for high volumes (5000 invoices per run,
+    Chris T)
+    * Redesigned single payment workfow/UI (David M)
+
+    Contact Handling:
+    * Contacts are now on new code base!
+    * Customers/Vendors Now Can Be Tracked Together (Josh D, Chris T, Aurynn)
+    * Multiple addresses and contact info stored per account (Josh D and
+    Chris T)
+    * Multiple read-only notes per account (Josh D, Chris T, and Lacey P)
+    * Multiple bank accounts per customer/vendor account (Josh D and Chris T)
+    * Track 1099 or equiv. forms for customers/vendors (Chris T and John W)
+
+    Invoicing:
+    * Can now set sales tax amounts and rates per invoice if necessary (Chris
+    T).
+    * Files can be attached to invoices (Chris T)
+    * Invoices can be placed on hold (Chris T)
+
+    Fixed Assets:
+    * New Feature!
+    * Group assets into classes to depreciate together (Chris T)
+    * Depreciate assets using straight-line depreciation (Chris T)
+    * Plugin model for time- or production-based depreciation methods (Chris
+    T)
+    * Dispose of assets --- full and partial disposal supported (Chris T)
+    * Net Book Value Report (Chris T)
+
+    Development:
+    * New API structure for new code (Entire Team)
+    * Better error handling/display (Jason and Chris T)
+    * Errors logged to httpd error log (Chris T)
+    * Cleaned up file structure for charts of accounts (Chris T)
+    * New UI and template system using TT (Seneca)
+    * Form.pm deprecated.  New Object Oriented and data-driven model (Chris
+    T)
+    * Added ledgersmb-smallgray.css (Jeff K)
+    * Stored procedure-based ORM for data model encapsulation in db (Chris T)
+    * Many small forms moved to templates (Seneca)
+    * Greatly expanded test cases (Chris T and Seneca)
+
+
+    Misc:
+    * Timecard lists project descriptions as well as numbers (Chris T)
+    * Invoices can now be put on hold (Aurynn)
+    * New CLI database creation routines  (Jeff K)
+    * New web-based db creation routines (Sadashiva A)
+
+    Database:
+    * Redesigned database schema for contacts (Josh D)
+    * Redesigned database schema for chart of accounts (Chris T)
+    * Redesigned database schema for reconciliation (Aurynn and Chris T)
+    * Redesigned database schema for payments (David M)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 09 Oct 2011 13:53:35 +0200
+
+ledgersmb (1.2.25-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    * Corrected sql injection issue (Chris T)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 23 Aug 2011 18:51:02 +0200
+
+ledgersmb (1.2.24-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Jul 2011 18:33:01 +0200
+
+ledgersmb (1.2.23-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 06 Jul 2011 19:07:30 +0200
+
+ledgersmb (1.2.22-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Jun 2011 19:01:52 +0200
+
+ledgersmb (1.2.21-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #737488)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 20 Mar 2011 14:29:56 +0100

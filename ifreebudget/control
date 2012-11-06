@@ -1,0 +1,20 @@
+Source: ifreebudget
+Section: net
+Priority: optional
+Maintainer: Peter van der Does <peter.does@getdeb.net>
+Build-Depends: cdbs, debhelper (>= 5), unzip
+Standards-Version: 3.9.1
+Homepage: http://ifreebudget.fr/
+
+Package: ifreebudget
+Architecture: all
+Depends: ${misc:Depends}, openjdk-6-jre | sun-java6-jre, fontconfig
+Description: A budgeting and personal finance management application
+ iFreeBudget is a free, open source budgeting and personal finance management
+ application.
+ .
+ It is designed for home and small business users with simple interface
+ and fast user interaction.
+ It is safe and secure with password based encryption for storing all
+ financial data.
+

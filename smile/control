@@ -1,0 +1,31 @@
+Source: smile
+Section: graphics
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+XSBC-Original-Maintainer: Matthias Klumpp <matthias@nlinux.org>
+Build-Depends: cdbs, debhelper (>= 5), libqt4-dev,
+ libqt4-opengl-dev, libqt4-webkit, libogg-dev,
+ libvorbis-dev, libmad0-dev, sharutils, libqtwebkit-dev
+Standards-Version: 3.9.3
+
+Package: smile
+Architecture: any
+Depends: ${misc:Depends}, mplayer, mencoder, vorbis-tools (>=1.1.1), imagemagick, sox (>=14.0.0-5), netpbm,
+ libqt4-core, libqt4-opengl, smile-data, libqt4-webkit
+Recommends: libsox-fmt-ogg | libsox-fmt-mp3
+Description: A powerful tool to create slide-show videos
+ Smile is a powerful video tool that permit creation of slide-show videos with
+ pictures of any size, with transitions, effects, posizioning slides in 3D. It
+ can produce mpeg-2, xvid and flash videos.
+
+Package: smile-data
+Architecture: all
+Depends: ${misc:Depends}, mplayer, mencoder, vorbis-tools (>=1.1.1), imagemagick, sox (>=14.0.0-5), netpbm,
+  libqt4-core
+Description: A powerful tool to create slide-show videos (data files)
+ This package contains architecture independent files for Smile.
+ Smile is a powerful video tool that permit creation of slide-show videos with
+ pictures of any size, with transitions, effects, posizioning slides in 3D. It
+ can produce mpeg-2, xvid and flash videos.
+ .
+ This package contains architecture independent files for Smile.

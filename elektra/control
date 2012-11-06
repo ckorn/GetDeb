@@ -1,0 +1,40 @@
+Source: elektra
+Section: libs
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 6), cdbs, pkg-config,
+               libdb4.6-dev, libxml2-dev, libltdl-dev,
+               doxygen, man2html, docbook-xsl, xsltproc
+Standards-Version: 3.8.3
+Homepage: http://www.libelektra.org/
+
+Package: elektra
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: A key/value pair database to store software configurations
+ Elektra provides a universal and secure framework to store configuration
+ parameters in a hierarchical key-value pair mechanism, instead of each
+ program using its own text configuration files. This allows any program
+ to read and save its configuration with a consistent API, and allows
+ them to be aware of other applications' configurations, permitting
+ easy application integration. While architecturally similar to other OS
+ registries, Elektra does not have most of the problems found in those
+ implementations.
+ .
+ This package contains a Berkeley DB backend for Elektra, to let 
+ Elektra use Berkeley DB databases to store its keys and daemon which can
+ be used as a proxy for access to the keys.
+ .
+ This package also contains the documentation for elektra.
+
+Package: elektra-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, elektra (= ${binary:Version})
+Description: development library files for CinePaint
+ Elektra provides a universal and secure framework to store configuration
+ parameters in a hierarchical key-value pair tree.
+ .
+ This package contains development specific things as include files to 
+ create elektrified programs.
+

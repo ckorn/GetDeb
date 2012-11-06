@@ -1,0 +1,28 @@
+gnormalize for Debian
+---------------------
+If you want to use the full featureset of gnormalize you will need to download
+some software from non-debian sources, since not all the utilities that
+gnormalize can make use of are included in the debian archive for various
+reasons. If you want, for instance, choose mp3 as the output format, you will
+need the lame encoder which is not included in the debian archive due to legal
+issues. An excellent repository of media utilities can be found at
+http://www.rarewares.org/
+They also offer a Debian repository that you can include in your sources.list
+and install all required packages via your favorite package manager. The
+gnormalize package has recommends-dependencies on the packages it can use, with
+the package names matching those chosen in the rarwares archive.
+The packages useful to gnormalize are:
+faac, faad: Encoding and decoding of MP4
+lame: Encoding to MP3
+musepack-encoder, musepack-decoder: Encoding and decoding of MPC
+
+Since the normalize program is called normalize-audio on debian, the gnormalize
+script has been adjusted to use it.
+
+The upstream tarball contained a lot of supplementary files, namely the musepack
+tools and the perl modules that gnormalize can make use of. As these are not
+part of this package, they have been removed from the source package to reduce
+its size. Furthermore, the penguin animations have been removed since their
+license is unknown and the may be non-free content.
+
+ -- Michael Stilkerich <ms@mike2k.de>, Mon,  27 Feb 2006 09:23:06 -0800

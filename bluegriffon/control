@@ -1,0 +1,36 @@
+Source: bluegriffon
+Section: web
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               libdbus-glib-1-2,
+               libnotify4,
+               libgtk2.0-0,
+               libxt6,
+               libasound2
+Standards-Version: 3.9.3
+Homepage: http://bluegriffon.org/
+
+Package: bluegriffon
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         bluegriffon-data (= ${source:Version})
+Description: Web Editor based on the rendering engine of Firefox
+ BlueGriffon is a new WYSIWYG content editor for
+ the World Wide Web. Powered by Gecko, the rendering
+ engine of Firefox 4, it's a modern and robust
+ solution to edit Web pages in conformance to the
+ latest Web Standards.
+
+Package: bluegriffon-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Web Editor based on the rendering engine of Firefox (data files)
+ BlueGriffon is a new WYSIWYG content editor for
+ the World Wide Web. Powered by Gecko, the rendering
+ engine of Firefox 4, it's a modern and robust
+ solution to edit Web pages in conformance to the
+ latest Web Standards.
+ .
+ (This package contains the data files)

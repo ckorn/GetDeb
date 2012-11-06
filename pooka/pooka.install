@@ -1,0 +1,3 @@
+*.jar				usr/share/pooka
+debian/scripts/pooka		usr/bin
+debian/pooka.desktop		usr/share/applications

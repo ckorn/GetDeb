@@ -1,0 +1,4 @@
+etc/apache2/conf.d
+usr/share/urd/download
+usr/share/urd/functions/libs/magpierss/cache
+usr/share/urd/urdd/pid

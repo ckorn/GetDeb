@@ -1,0 +1,4 @@
+lang *.gif *.py ssh.expect *.glade *.png	usr/share/gnome-connection-manager
+debian/scripts/gnome-connection-manager		usr/bin
+debian/gnome-connection-manager.desktop		usr/share/applications
+debian/gnome-connection-manager.png		usr/share/pixmaps

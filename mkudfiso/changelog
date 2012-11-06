@@ -1,0 +1,5 @@
+mkudfiso (0.0.0.0+20100208-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #727866)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Mar 2011 14:02:29 +0100

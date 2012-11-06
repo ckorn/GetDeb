@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+GenericName=Slideshow Maker
+Comment=Create simple slideshows for DVD
+Comment[fr]=Création de diaporama DVD
+Comment[de]=DVD Diashow erstellen
+Comment[ca]=Creeu presentacions simples
+Name=SMILE
+Type=Application
+Exec=smile
+Icon=smile-slide
+Terminal=false
+Categories=Qt;KDE;AudioVideo;AudioVideoEditing;

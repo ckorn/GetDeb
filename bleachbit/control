@@ -1,0 +1,35 @@
+Source: bleachbit
+Section: admin
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: python (>= 2.6.6-3~),
+                     gettext
+Standards-Version: 3.9.3
+X-Python-Version: >= 2.5
+Vcs-Svn: svn://svn.debian.org/python-apps/packages/bleachbit/trunk/
+Vcs-Browser: http://svn.debian.org/viewsvn/python-apps/packages/bleachbit/trunk/
+Homepage: http://bleachbit.sourceforge.net
+
+Package: bleachbit
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python (>= 2.6) | python-simplejson,
+         python-gtk2 (>= 2.14),
+         menu
+Recommends: python-notify
+Description: delete unnecessary files from the system
+ BleachBit deletes unnecessary files to free valuable disk space, maintain
+ privacy, and remove junk. It removes cache, Internet history, temporary files,
+ cookies, and broken shortcuts.
+ . 
+ It handles cleaning of Adobe Reader, Bash, Beagle, Epiphany, Firefox, Flash,
+ GIMP, Google Earth, Java, KDE, OpenOffice.org, Opera, RealPlayer, rpmbuild,
+ Second Life Viewer, VIM, XChat, and more.
+ .
+ Beyond simply erasing junk files, BleachBit wipes free disk space (to hide
+ previously deleted files for privacy and to improve compression of images),
+ vacuums Firefox databases (to improve performance without deleting data), and
+ securely shreds arbitrary files.

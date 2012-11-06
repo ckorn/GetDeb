@@ -1,0 +1,48 @@
+Source: libpagoda-ruby
+Section: libs
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               ruby-pkg-tools,
+               ruby1.8,
+               librspec-ruby,
+               gem2deb (>= 0.2.6~)
+Standards-Version: 3.9.3
+Homepage: http://www.pagodabox.com
+XS-Ruby-Versions: all
+
+Package: libpagoda-ruby1.8
+Architecture: all
+Section: ruby
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         libruby1.8,
+         libpassword-ruby,
+         librestclient-ruby,
+         libjson-ruby,
+         libiniparse-ruby,
+         ruby1.8,
+         libopenssl-ruby,
+         ruby-gli,
+         ruby-pagoda-client,
+         ruby-pagoda-tunnel,
+         ruby | ruby-interpreter
+Description: Terminal client for pagodabox
+ Terminal client for interacting with the pagodabox.
+ This client does not contain full API functionality,
+ just functionality that will enhance the workflow
+ experience.
+
+Package: libpagoda-ruby
+Architecture: all
+Section: ruby
+Depends: ${misc:Depends},
+         libpagoda-ruby1.8
+Description: Terminal client for pagodabox (dummy package)
+ Terminal client for interacting with the pagodabox.
+ This client does not contain full API functionality,
+ just functionality that will enhance the workflow
+ experience.
+ .
+ This package is a dependency package, which depends on Ubuntu's
+ default Ruby version (currently 1.8.x).

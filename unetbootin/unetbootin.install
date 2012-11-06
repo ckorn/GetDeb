@@ -1,0 +1,3 @@
+debian/unetbootin.xpm usr/share/pixmaps
+unetbootin usr/bin
+unetbootin.desktop usr/share/applications

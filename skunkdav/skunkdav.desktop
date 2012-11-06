@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=SkunkDAV
+Exec=/usr/bin/skunkdav
+Terminal=false
+Type=Application
+Categories=Application;Network;

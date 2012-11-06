@@ -1,0 +1,72 @@
+---------------
+NCID for Debian
+---------------
+
+Ubuntu service files:
+
+  ncid-initmodem.init - service file for ncid with ncid-initmodem output module
+  ncid-mythtv.init    - service file for ncid with ncid-mythtv output module
+  ncid-page.init      - service file for ncid with ncid-page module
+  ncid-samba.init     - service file for ncid with ncid-samba module
+  ncid-speak.init     - service file for ncid with ncid-speak module
+  ncid-yac.init       - service file for ncid with ncid-yac module
+  ncidd.init          - service file for ncidd
+  ncidsip.init        - service file for ncidsip
+  ncid2ncid.init      - service file for ncid2ncid
+  sip2ncid.init       - service file for sip2ncid
+  yac2ncid.init       - service file for yac2ncid
+
+See Doc/INSTALL-Ubuntu for install instructions
+
+Makefile:
+
+    The Makefile is used to configure and install the services
+    into the init.d directory
+
+	prefix2 controls where to look for the service file,
+
+Ubuntu files for building the package:
+
+    changelog     - package change log
+    control       - package control file
+    postinst      - package post-install script
+    postrm        - package post-remove script
+    prerm         - package pre-remove script
+    README.Debian - package building instructions
+    rules         - package makefile
+
+---------------------------------------------------
+Steps required to build a Ubuntu or Debian package:
+The steps use ncid-0.82-src.tar.gz as an example:
+---------------------------------------------------
+
+    mkdir ncid (and put ncid-0.82-src.tar.gz in it)
+    cd ncid
+    tar -xzvf ncid-0.82-src.tar.gz
+    mv ncid ncid-0.82
+    cd ncid-0.82
+    fakeroot debian/rules build
+    fakeroot debian/rules binary
+    fakeroot debian/rules clean
+
+Binary package built:
+
+    ncid_0.82-0ubuntu1_i386.deb
+
+Build the source package (not needed)
+
+    dpkg-buildpackage -us -uc -S -rfakeroot
+
+Source file built:
+
+    ncid_0.82-0ubuntu1.tar.gz
+
+The ncid directory may contain:
+
+    ncid-0.82/
+    ncid-0.82.tar.gz
+    ncid_0.82-0ubuntu1_i386.deb
+    ncid_0.82-0ubuntu1.tar.gz
+
+
+ -- John L. Chmielewski <jlc@users.sourceforge.net>  Mon, 29 Jan 2011 23:23:00 -0400

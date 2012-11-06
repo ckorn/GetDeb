@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+build: build-stamp
+build-stamp:
+	qmake-qt4 "QMAKE_CXXFLAGS_RELEASE += $(CFLAGS)"
+	make
+	touch $@
+
+clean:
+	dh clean
+	rm -f *.qm
+
+install: build
+	dh install -punetbootin
+
+# Build architecture-independent files here.
+binary-indep:
+	lrelease-qt4 unetbootin.pro
+	dh_install --sourcedir=$(CURDIR) -punetbootin-translations
+
+# Build architecture-dependent files here.
+binary-arch: install
+	dh binary-arch
+
+binary: binary-indep binary-arch
+.PHONY: build binary-indep binary-arch install

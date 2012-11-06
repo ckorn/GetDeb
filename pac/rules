@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	rm debian/pac/usr/share/pac/res/*.desktop
+	rm debian/pac/usr/share/pac/res/*.1
+
+	find debian -type d -name ".svn" -exec rm -rf {} \; || true
+
+	rm -r debian/pac/usr/share/pac/lib/ex/vte32
+	rm -r debian/pac/usr/share/pac/lib/ex/vte64
+	rm -r debian/pac/usr/share/pac/lib/ex/vteARM
+
+override_dh_installchangelogs:
+	dh_installchangelogs README

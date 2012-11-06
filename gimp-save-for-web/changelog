@@ -1,0 +1,29 @@
+gimp-save-for-web (0.29.3-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Nov 2011 19:08:40 +0100
+
+gimp-save-for-web (0.29.0-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 21:04:31 +0100
+
+gimp-save-for-web (0.28.6-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 21:01:34 +0100
+
+gimp-save-for-web (0.28.6-1~getdeb1) karmic; urgency=low
+
+  * Upload for karmic (LP: #472654)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Nov 2009 00:19:54 +0100
+
+gimp-save-for-web (0.28.6-0~getdeb1) intrepid; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 06 Nov 2008 17:22:25 +0100

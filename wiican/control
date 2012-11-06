@@ -1,0 +1,38 @@
+Source: wiican
+Section: utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: J. Félix Ontañón <felixonta@gmail.com>,
+           Juanje Ojeda Croissier <jojeda@emergya.es>
+Build-Depends: debhelper (>= 9),
+               python-dev (>= 2.3.5-11),
+               gettext
+Standards-Version: 3.9.3
+Homepage: http://launchpad.net/wiican
+
+Package: wiican
+Architecture: any
+Depends: ${misc:Depends},
+         ${python:Depends},
+         gnome-bluetooth,
+         wminput,
+         python-gtk2,
+         python-dbus,
+         upstart,
+         python-ply,
+         python-gconf,
+         python-xdg,
+         python-gudev,
+         python-appindicator,
+         python-gtksourceview2
+XB-Python-Version: ${python:Versions}
+Description: Simple wiimote usage assistant and mapping manager
+ Wiican it's an user-friendly systray application for use 
+ and configure wiimote (or Wii remote controller).
+ On backend it's wminput , the cwiid event driver for wiimote. 
+ .
+ It tracks if the needed bluetooth adapter it's available and drives
+ the user into the process of connect/disconnect wiimote
+ .
+ A mapping manager it's supplied for edit and create  multiple wiimote
+ configurations.

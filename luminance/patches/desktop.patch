@@ -1,0 +1,11 @@
+Encoding is deprecated.
+Index: luminance-2.3.0/luminance-hdr.desktop
+===================================================================
+--- luminance-2.3.0.orig/luminance-hdr.desktop	2012-07-01 11:10:50.000000000 +0200
++++ luminance-2.3.0/luminance-hdr.desktop	2012-07-06 20:14:23.071271148 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Luminance HDR
+ GenericName=HDR imaging tool
+ GenericName[de]=Workflow für HDR-Bilder

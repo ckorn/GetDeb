@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Anomos
+Exec=anondownloadgui.py
+Icon=anomos
+Terminal=false
+Type=Application
+Categories=Application;Network;

@@ -1,0 +1,17 @@
+Index: encspot-2.01/Makefile
+===================================================================
+--- encspot-2.01.orig/Makefile	2010-02-06 10:42:56.043159702 +0100
++++ encspot-2.01/Makefile	2010-02-06 10:43:29.550633382 +0100
+@@ -1,3 +1,5 @@
++DESTDIR = `pwd`/debian/encspot
++INSTDIR = /usr/bin
+ CC = g++
+ 
+ OBJS = encspot.o mp3file.o mp3structs.o mediafile.o id3tag.o
+@@ -7,3 +9,6 @@
+ 
+ clean:
+ 	rm -rf encspot *.o
++
++install:
++	install -m 0755 -D encspot $(DESTDIR)/$(INSTDIR)/encspot

@@ -1,0 +1,56 @@
+Source: urd
+Section: news
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.urdland.com
+
+Package: urd
+Architecture: all
+Depends: ${misc:Depends},
+         apache2,
+         apache2.2-common,
+         php5,
+         mysql-server,
+         php5-cli,
+         php5-mysql,
+         unrar,
+         par2,
+         smarty,
+         php5-xmlrpc,
+         php5-curl,
+         procps,
+         php5-gmp,
+         ttf-liberation,
+         php5-gd,
+         yydecode
+Recommends: arj,
+            p7zip-full,
+            unace-nonfree,
+            trickle,
+            unzip,
+            p7zip,
+            cfv,
+            zenity
+Suggests: vnstat
+Description: Web based binary download
+ URD is a program to download binaries from usenet
+ (newsgroups) via a web based interface.
+ .
+ It's written entirely in PHP, besides making use
+ of a few external programs to do some of
+ the CPU intensive work. It stores all the
+ information it needs in a generic database
+ (like MySQL, or PostGreSQL). Articles are aggregated
+ into sets of files that belong together.
+ .
+ Downloading requires only a few clicks. Optionally,
+ an NZB file can be created. When the download is
+ finished it can automatically verify the par2 or
+ sfv files and decompress the results.
+ .
+ In the background URD uses a download program called
+ URDD or the URD Daemon. This daemon handles nearly
+ all of the activity with respect to the newsgroups,
+ the sets and the downloads.

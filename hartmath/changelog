@@ -1,0 +1,5 @@
+hartmath (0.8~pre2-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #486470)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Nov 2009 01:53:14 +0100

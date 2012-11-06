@@ -1,0 +1,3 @@
+version=3
+opts="dversionmangle=s/0\.0\.0\.0\+r([\d]+)/$1/" \
+http://sf.net/drjava/drjava-(?:beta|stable)-(?:[\d]+)-r([\d]+)\.jar

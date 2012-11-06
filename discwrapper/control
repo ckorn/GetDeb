@@ -1,0 +1,18 @@
+Source: discwrapper
+Section: utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 6), autotools-dev,
+ libwxgtk2.8-dev
+Standards-Version: 3.8.4
+Homepage: http://sourceforge.net/projects/discwrapper
+
+Package: discwrapper
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DiscWrapper
+ DiscWrapper is a cover designer for home-made discs.
+ It was made with Code::Blocks and it uses the
+ wxWidgets library. It has template covers. Depending on
+ the case there are pages where you can place labels,
+ images, and directory lists.

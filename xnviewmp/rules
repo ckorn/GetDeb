@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf XnView
+
+override_dh_auto_build:
+ifeq ($(DEB_BUILD_ARCH), amd64)
+	tar xzf XnViewMP-linux-x64.tgz
+else
+	tar xzf XnViewMP-linux.tgz
+endif 
+	rm XnView/Plugins/IlmImf.so
+	rm XnView/Plugins/Xjp2.so
+
+	chrpath -d XnView/lib/codecs/libqcncodecs.so
+	chrpath -d XnView/lib/codecs/libqjpcodecs.so
+	chrpath -d XnView/lib/codecs/libqkrcodecs.so
+	chrpath -d XnView/lib/codecs/libqtwcodecs.so
+	chrpath -d XnView/lib/imageformats/libqgif.so
+	chrpath -d XnView/lib/imageformats/libqico.so
+	chrpath -d XnView/lib/imageformats/libqjpeg.so
+	chrpath -d XnView/lib/imageformats/libqmng.so
+	chrpath -d XnView/lib/imageformats/libqsvg.so
+	chrpath -d XnView/lib/imageformats/libqtga.so
+	chrpath -d XnView/lib/imageformats/libqtiff.so
+	chrpath -d XnView/lib/libQtCore.so.4.8.2
+	chrpath -d XnView/lib/libQtDBus.so.4.8.2
+	chrpath -d XnView/lib/libQtGui.so.4.8.2
+	chrpath -d XnView/lib/libQtNetwork.so.4.8.2
+	chrpath -d XnView/lib/libQtSvg.so.4.8.2
+	chrpath -d XnView/lib/libQtWebKit.so.4.8.2
+	chrpath -d XnView/lib/libQtXml.so.4.8.2
+	chrpath -d XnView/lib/libphonon.so.4
+	chrpath -d XnView/lib/phonon_backend/libphonon_gstreamer.so
+
+	chrpath -d XnView/XnView
+	chmod -x XnView/*.png
+
+override_dh_install:
+	dh_install
+	rm -f debian/xnviewmp-data/usr/share/xnviewmp/license.txt
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l$(CURDIR)/debian/xnviewmp/usr/lib/xnviewmp/lib
+
+override_dh_makeshlibs:
+	dh_makeshlibs -Xusr/lib/xnviewmp

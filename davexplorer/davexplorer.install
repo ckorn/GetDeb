@@ -1,0 +1,3 @@
+debian/scripts/davexplorer				usr/bin
+debian/davexplorer.desktop				usr/share/applications
+*.jar *.txt *.sh					usr/share/davexplorer

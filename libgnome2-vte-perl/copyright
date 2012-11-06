@@ -1,0 +1,28 @@
+Format: http://anonscm.debian.org/gitweb/?p=dbnpolicy/policy.git;a=blob;f=copyright-format/copyright-format.xml;hb=b4d036bab75ac794c3500563768d60ad994ae4f1
+Upstream-Contact: (information incomplete)
+Source: http://search.cpan.org/dist/Gnome2-Vte/
+Upstream-Name: Gnome2-Vte
+
+Files: *
+Copyright: Copyright (C) 2003-2006 by the gtk2-perl team.
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2010, Christoph Korn <christoph.korn@getdeb.net>
+License: GPL-2+ or Artistic
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991, or (at your
+ option) any later version.
+ .
+ On Debian GNU/Linux systems, the complete text of version 2 of the GNU
+ General Public License can be found in `/usr/share/common-licenses/GPL-2'
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian GNU/Linux systems, the complete text of the Artistic License
+ can be found in `/usr/share/common-licenses/Artistic'

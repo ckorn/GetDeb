@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar /usr/share/jnetmap/jNetMap-0.5.2.jar $@

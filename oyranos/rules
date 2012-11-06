@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	#cp debian/*.ICM default_profiles/base/
+	dh_auto_configure -- --disable-static --without-rpath
+
+override_dh_install:
+	dh_install --list-missing
+	rm -f debian/oyranos-icc/usr/share/color/icc/PhotoGamutRGB_avg6c.icc
+	rm -f debian/oyranos-doc/usr/share/doc/oyranos/COPYING
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog

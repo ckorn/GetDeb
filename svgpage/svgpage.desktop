@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=SVGpage
+Exec=/usr/bin/svgpage
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Viewer;

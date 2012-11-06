@@ -1,0 +1,1 @@
+python-gnucash: hardening-no-fortify-functions usr/lib/python*/dist-packages/gnucash/_gnucash_core_c.so

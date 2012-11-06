@@ -1,0 +1,15 @@
+Index: wdt-2.6.6/applications/wdt.desktop
+===================================================================
+--- wdt-2.6.6.orig/applications/wdt.desktop	2011-03-26 19:37:39.337284999 +0100
++++ wdt-2.6.6/applications/wdt.desktop	2011-03-26 19:37:53.517285001 +0100
+@@ -1,9 +1,8 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Application
+ Name=Web Developer Tools
+ Comment=Suite of tools for web developers
+ Exec=/usr/bin/wdt
+-Icon=/usr/share/wdt/icons/wdt.png
++Icon=wdt
+ Categories=GNOME;Development;
+ Terminal=false

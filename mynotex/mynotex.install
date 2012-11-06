@@ -1,0 +1,3 @@
+mynotex			usr/bin
+debian/mynotex.png	usr/share/pixmaps
+debian/mynotex.desktop	usr/share/applications

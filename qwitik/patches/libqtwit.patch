@@ -1,0 +1,16 @@
+Index: qwitik-0.1.1/qwitik.pro
+===================================================================
+--- qwitik-0.1.1.orig/qwitik.pro	2009-09-29 23:21:58.264467874 +0200
++++ qwitik-0.1.1/qwitik.pro	2009-09-29 23:26:12.804460921 +0200
+@@ -5,9 +5,10 @@
+ DESTDIR = bin
+ TEMPLATE = app
+ INCLUDEPATH += src \
+-    ../qtwitlib/include
++    /usr/include/qtwit
+ unix:LIBS += -L../qtwitlib/release \
+         -lQTwitLib
++QMAKE_LFLAGS_RELEASE += -Wl,--as-needed
+ win32 { 
+     RC_FILE = qwitik.rc
+     LIBS += -L../qtwitlib/release \

@@ -1,0 +1,2 @@
+?package(gnaural):needs="X11" section="Apps/Sound"\
+  title="Gnaural" command="/usr/bin/gnaural"

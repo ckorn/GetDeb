@@ -1,0 +1,28 @@
+Description: disable check new version
+Bug: 602535
+Index: kchmviewer-6.0/src/config.cpp
+===================================================================
+--- kchmviewer-6.0.orig/src/config.cpp	2011-12-19 09:07:51.000000000 +0100
++++ kchmviewer-6.0/src/config.cpp	2012-05-05 14:45:52.314980491 +0200
+@@ -53,7 +53,7 @@
+ 	m_advLayoutDirectionRL = settings.value( "advanced/layoutltr", false ).toBool();
+ 	m_advAutodetectEncoding = settings.value( "advanced/autodetectenc", false ).toBool();
+ 	m_advExternalEditorPath = settings.value( "advanced/editorpath", "/usr/bin/kate" ).toString();
+-	m_advCheckNewVersion = settings.value( "advanced/checknewver", true ).toBool();
++	m_advCheckNewVersion = false;
+ 	m_toolbarMode = (Config::ToolbarMode) settings.value( "advanced/toolbarmode", TOOLBAR_LARGEICONSTEXT ).toInt();
+ 	m_lastOpenedDir = settings.value( "advanced/lastopendir", "." ).toString();
+ 
+Index: kchmviewer-6.0/src/dialog_setup.cpp
+===================================================================
+--- kchmviewer-6.0.orig/src/dialog_setup.cpp	2011-12-19 09:07:51.000000000 +0100
++++ kchmviewer-6.0/src/dialog_setup.cpp	2012-05-05 14:46:46.722978872 +0200
+@@ -177,7 +177,7 @@
+ 	
+ 	// Autodetect encoding
+ 	Check_Need_Restart( boxAutodetectEncoding, &pConfig->m_advAutodetectEncoding, &need_restart );
+-	pConfig->m_advCheckNewVersion = cbCheckForUpdates->isChecked();
++	pConfig->m_advCheckNewVersion = false;
+ 
+ 	// Layout direction management
+ 	bool layout_rl = boxLayoutDirectionRL->isChecked();

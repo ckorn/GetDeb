@@ -1,0 +1,24 @@
+Source: libqtwit
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 6), libqt4-dev,
+ qt4-qmake, quilt
+Standards-Version: 3.8.4
+Section: libs
+Homepage: http://code.google.com/p/twitlib/
+
+Package: libqtwit-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libqtwit1 (= ${binary:Version})
+Description: C++ Twitter Library (header files)
+ A C++ Twitter Library used by qwitik.
+ .
+ (This package contains the header files)
+
+Package: libqtwit1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C++ Twitter Library
+ A C++ Twitter Library used by qwitik.

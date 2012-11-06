@@ -1,0 +1,3 @@
+?package(gogglesmm):needs="X11" section="Applications/Sound"\
+  icon="/usr/share/pixmaps/gogglesmm.xpm"\
+  title="Goggles Music Manager and Player" command="/usr/bin/gogglesmm"

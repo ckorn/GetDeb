@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=ArgoUML
+GenericName=ArgoUML
+Comment=modelling tool to help you do your design using UML
+Exec=argouml
+Icon=argouml
+Terminal=false
+Categories=Application;Development;

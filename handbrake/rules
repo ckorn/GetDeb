@@ -1,0 +1,105 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+ifneq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
+CROSS= --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
+else
+CROSS= --build $(DEB_BUILD_GNU_TYPE)
+endif
+
+
+
+configure-stamp: configure
+	dh_testdir
+	# unset CFLAGS; unset CPPLAGS; unset CXXLAGS; 
+	./configure --launch --prefix=/usr
+	# unset CFLAGS ; unset CPPLAGS ; unset CXXLAGS; 
+	#cd gtk && ./autogen.sh && ./configure $(CROSS) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info LDFLAGS="-Wl,-z,defs"
+
+	touch $@
+
+
+build: build-stamp
+
+build-stamp: configure-stamp
+	dh_testdir
+	#We must build both the main project and the GTK project
+	# unset CFLAGS ; unset CPPLAGS ; unset CXXLAGS;
+#	$(MAKE)
+	# unset CFLAGS ; unset CPPLAGS ; unset CXXLAGS;
+#	cd gtk && $(MAKE)
+
+	touch $@
+
+clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	rm -rf build download
+
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+
+	# Installing the GTK UI also installs HandBrakeCLI into usr/bin.
+	# If we want to separate out the GUI and CLI (which we will want to),
+	# this needs some magic.
+	#
+#	cd gtk && $(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+	cd build && $(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs -i
+	dh_installdocs -i
+	dh_install -i --sourcedir=$(CURDIR)/debian/tmp
+	dh_icons -i
+	dh_link -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_install -a --sourcedir=$(CURDIR)/debian/tmp
+	dh_installchangelogs -a
+	dh_installdocs -a
+	dh_installexamples -a
+	dh_installman -a
+	dh_link -a
+	dh_icons -a
+	dh_strip -a
+	dh_compress -a
+	dh_fixperms -a
+	dh_installdeb -a
+	dh_shlibdeps -a
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a -- -Zbzip2
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install 

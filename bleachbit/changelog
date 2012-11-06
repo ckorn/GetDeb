@@ -1,0 +1,286 @@
+bleachbit (0.9.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 18 Jul 2012 18:33:08 +0200
+
+bleachbit (0.9.2-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 20:15:59 +0200
+
+bleachbit (0.9.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Fri, 11 Nov 2011 20:20:41 +0100
+
+bleachbit (0.9.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Use word 'Clean' instead of 'Delete' (Closes: #626883).
+  * debian/patches/desktop_file.patch, debian/patches/gnomevfs.patch:
+    - Refresh for new upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 29 Aug 2011 22:29:46 +0200
+
+bleachbit (0.8.8-2) unstable; urgency=low
+
+  * Install new loader (LP: #797328).
+    + debian/bleachbit.1:
+      - Reworked to include CLI parameters.
+    + debian/bleachbit_cli.1:
+      - Removed, no longer needed.
+    + debian/install:
+      - Install bleachbit.py file.
+    + debian/links:
+      - Adjust bleachbit link to the new loader.
+      - No longer provide link to CLI interface.
+    + debian/manpages:
+      - No longer install bleachbit_cli.1, removed.
+    + debian/rules:
+      - Adjust permissions of bleachbit.py.
+  * debian/copyright:
+    - Convert to DEP5 format.
+  * debian/rules:
+    - Remove egg-info information from binary package.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 02 Jul 2011 10:56:33 +0200
+
+bleachbit (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix crash when changing options (LP: #715286).
+  * debian/patches/gnomevfs.patch:
+    - Refresh for new upstream release.
+  * debian/control:
+    - Depend on menu (Closes: #630899) (LP: #632989).
+    - Bump Standards-Version to 3.9.2, no changes required.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 18 Jun 2011 18:14:41 +0200
+
+bleachbit (0.8.7-1) unstable; urgency=low
+
+  * New upstream release (LP: #713537).
+  * Refresh patches for new upstream release.
+  * Switch to dh_python2.
+  * debian/patches/gnomevfs.patch:
+    - Replace gnomevfs methods, now deprecated.
+  * debian/bleachbit_cli.1:
+    - Document latest option implemented upstream.
+  * debian/control:
+    - Depends on python (>= 2.6) | python-simplejson.
+    - Drop python-glade2 dependency.
+    - Drop python-gnome2 dependency (Closes: #605555).
+    - No longer recommend menu.
+    - Bump Standards-Version to 3.9.1, no changes required.
+  * debian/copyright:
+    - Update copyright years.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 06 Feb 2011 18:39:49 +0100
+
+bleachbit (0.8.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 06 Jun 2010 11:43:36 +0200
+
+bleachbit (0.7.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches for new upstream release.
+  * debian/install:
+    - Also provide bleachbit.png file.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 15 Apr 2010 22:52:40 +0200
+
+bleachbit (0.7.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Bump Standards-Version to 3.8.4, no changes required.
+  * debian/copyright:
+    - Update copyright years.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 21 Feb 2010 15:10:00 +0100
+
+bleachbit (0.7.2-2) unstable; urgency=low
+
+  * debian/patches/local_cleaners_dir.patch:
+    - Point local_cleaners_dir to personal_cleaners_dir. The former is
+      not useful when BleachBit is installed system-wide, this way users
+      are not bothered for new cleaners each time (Closes: #565359).
+  * Switch to format 3.0 (quilt).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 24 Jan 2010 21:28:06 +0100
+
+bleachbit (0.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/GUI_relative_imports.patch:
+    - Removed, applied upstream.
+  * debian/install, debian/rules:
+    - No longer generate bleachbit-root.desktop in build directory, this
+      way build is automatically removed during clean. Generate .desktop
+      file into the correct location directly.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 02 Dec 2009 22:12:24 +0100
+
+bleachbit (0.7.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches for new upstream release.
+  * Use debhelper buildsystem feature.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Tue, 10 Nov 2009 22:48:59 +0100
+
+bleachbit (0.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/GUI_relative_imports.patch:
+    - Refreshed for new upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 22 Oct 2009 21:49:11 +0200
+
+bleachbit (0.6.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/GUI_relative_imports.patch:
+    - Do not use absolute imports, we install bleachbit module in a
+      private directory.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 01 Oct 2009 22:02:24 +0200
+
+bleachbit (0.6.4-1) unstable; urgency=low
+
+  * New upstream release:
+    - New feature: command line inferface (CLI).
+  * Add manpage for bleachbit_cli script.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 16 Sep 2009 23:39:09 +0200
+
+bleachbit (0.6.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Fri, 28 Aug 2009 08:08:08 +0000
+
+bleachbit (0.6.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/no_update:
+    - Refresh patch for new upstream release.
+  * debian/control:
+    - Update my e-mail address.
+    - Adjust Homepage field to match new location.
+    - Bump Standards-Version to 3.8.3, no changes required.
+  * debian/watch:
+    - Upstream provides .tar.gz archives, get those instead of .tar.bz2.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 26 Aug 2009 21:59:06 +0200
+
+bleachbit (0.5.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sun, 19 Jul 2009 22:16:44 +0200
+
+bleachbit (0.5.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches for new upstream release:
+    - debian/patches/desktop_file
+  * Adjust Homepage field and download location to match current ones.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sun, 05 Jul 2009 21:45:32 +0200
+
+bleachbit (0.5.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches for new upstream release:
+    - debian/patches/desktop_file
+    - debian/patches/no_update
+  * Do not install Windows-specific cleaners, (as seen in release notes).
+  * Bump Standards-Version to 3.8.2, no changes required.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Wed, 24 Jun 2009 23:39:54 +0200
+
+bleachbit (0.5.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches for new upstream release:
+    - debian/patches/desktop_file
+    - debian/patches/no_update
+  * debian/patches/suppress_locales_warnings:
+    - Removed, fixed upstream.
+  * Bump debhelper minimum version to 7.0.50 for override_* support.
+  * Install only *.xml files from cleaners directory.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sat, 13 Jun 2009 19:45:53 +0200
+
+bleachbit (0.4.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to debhelper 7.
+  * debian/patches/launcher:
+    - Remove it, no longer needed because launcher has been replaced by
+      a symlink to usr/share/bleachbit/bleachbit/GUI.py file.
+  * debian/rules:
+    - Make /usr/share/bleachbit/bleachbit/GUI.py executable.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Tue, 12 May 2009 20:35:05 +0200
+
+bleachbit (0.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - French translation improved (Closes: #518951).
+  * Remove patches merged upstream:
+    - debian/patches/LANG_env
+    - debian/patches/no_X
+  * Refresh patches for new upstream release:
+    - debian/patches/launcher
+  * Remove python-dev from Build-Depends-Indep, use python instead.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sun, 19 Apr 2009 14:50:20 +0200
+
+bleachbit (0.4.0-2) unstable; urgency=low
+
+  * debian/patches/LANG_env:
+    - Fix AttributeError if LANG is not set (Closes: #519027).
+  * debian/patches/no_X:
+    - Do not show intrusive pyGTK warnings if X is not available, only
+      display a message X is required to run BleachBit (Closes: #520107).
+  * debian/patches/suppress_locales_warnings:
+    - Suppress locale files warning messages when they are actually not
+      locale files (Closes: #521240).
+  * Bump Standards-Version to 3.8.1, no changes required.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Mon, 06 Apr 2009 14:29:23 +0200
+
+bleachbit (0.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - New feature: CleanerML files.
+  * Refresh patches for new upstream release:
+    - debian/patches/desktop_file
+    - debian/patches/launcher
+  * Provide a bleachbit-root.desktop file to enable superuser tasks:
+    - debian/rules: create the new file on top of bleachbit.desktop.
+    - debian/bleachbit.install: install new .desktop file.
+    - debian/control: let bleachbit recommends menu package.
+  * Add locales support:
+    - debian/rules: add command to create and install .mo files.
+    - debian/control: add gettext build-dependency.
+  * Install example files: doc/*.xml and doc/*.xsd.
+  * Switch to python-support.
+  * debian/rules: remove po/*.mo files, fix FTBFS if built twice in a row.
+  * debian/copyright: adjust copyright years.
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sat, 07 Mar 2009 20:54:59 +0100
+
+bleachbit (0.2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #510480).
+
+ -- Luca Falavigna <dktrkranz@ubuntu.com>  Sat, 10 Jan 2009 12:03:37 +0100

@@ -1,0 +1,5 @@
+libroadnav (0.19-1~getdeb1) karmic; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Nov 2009 22:03:08 +0100

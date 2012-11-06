@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf cslbuild/built
+
+override_dh_auto_test:
+
+override_dh_auto_configure:
+	./configure --with-csl
+
+override_dh_auto_install:
+	for l in cslbuild/*-*-* ; \
+	do \
+	[ ! -d $$l ] || ( mv $$l cslbuild/built ) ; \
+	done
+
+override_dh_install:
+	dh_install
+	[ ! -d debian/reduce-algebra-fonts/usr/share/reduce-algebra/reduce.fonts ] || \
+	( find debian/reduce-algebra-fonts/usr/share/reduce-algebra/reduce.fonts -type f -exec chmod -x {} \; )
+
+	[ ! -d debian/reduce-algebra-docs/usr/share/reduce-algebra/reduce.doc ] || \
+	( find debian/reduce-algebra-docs/usr/share/reduce-algebra/reduce.doc -type f -exec chmod -x {} \; )

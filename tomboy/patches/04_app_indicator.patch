@@ -1,0 +1,297 @@
+Add indicator support.
+=== modified file 'Tomboy/Makefile.am'
+Index: tomboy-1.11.2/Tomboy/Makefile.am
+===================================================================
+--- tomboy-1.11.2.orig/Tomboy/Makefile.am	2011-06-25 17:59:45.000000000 +0200
++++ tomboy-1.11.2/Tomboy/Makefile.am	2012-06-05 14:27:24.919497844 +0200
+@@ -122,6 +122,7 @@
+ 	$(srcdir)/Tag.cs			\
+ 	$(srcdir)/TagButton.cs			\
+ 	$(srcdir)/TagManager.cs			\
++	$(srcdir)/TomboyIndicatorTray.cs	\
+ 	$(srcdir)/Tray.cs 			\
+ 	$(srcdir)/Trie.cs			\
+ 	$(srcdir)/Undo.cs 			\
+@@ -147,6 +148,7 @@
+ 
+ ASSEMBLIES = 		\
+ 	$(GTKSHARP_LIBS) 	\
++	$(APPINDICATORSHARP_LIBS) 	\
+ 	$(GNOME_LIBS) 	\
+ 	-r:Mono.Posix	\
+ 	$(DBUS_LIBS)	\
+Index: tomboy-1.11.2/Tomboy/NoteManager.cs
+===================================================================
+--- tomboy-1.11.2.orig/Tomboy/NoteManager.cs	2012-06-04 18:57:45.000000000 +0200
++++ tomboy-1.11.2/Tomboy/NoteManager.cs	2012-06-05 14:27:24.919497844 +0200
+@@ -369,6 +369,9 @@
+ 			// Update the trie so addins can access it, if they want.
+ 			trie_controller.Update ();
+ 
++			if (NotesLoaded != null)
++				NotesLoaded (this, EventArgs.Empty);
++
+ 			bool startup_notes_enabled = (bool)
+ 			                             Preferences.Get (Preferences.ENABLE_STARTUP_NOTES);
+ 
+Index: tomboy-1.11.2/Tomboy/RecentChanges.cs
+===================================================================
+--- tomboy-1.11.2.orig/Tomboy/RecentChanges.cs	2012-06-04 18:57:45.000000000 +0200
++++ tomboy-1.11.2/Tomboy/RecentChanges.cs	2012-06-05 14:27:24.919497844 +0200
+@@ -247,7 +247,8 @@
+ 			am ["DeleteNotebookAction"].Activated += OnDeleteNotebook;
+ 			am ["CloseWindowAction"].Activated += OnCloseWindow;
+ 			if (Tomboy.TrayIconShowing == false &&
+-			    (bool) Preferences.Get (Preferences.ENABLE_TRAY_ICON))
++			    (bool) Preferences.Get (Preferences.ENABLE_TRAY_ICON) &&
++				!TomboyIndicatorTray.IndicatorTrayPresent)
+ 				am ["CloseWindowAction"].Visible = false;
+ 
+ 			// Allow Escape to close the window as well as <Control>W
+@@ -1141,7 +1142,8 @@
+ 			instance = null;
+ #if !MAC
+ 			if (Tomboy.TrayIconShowing == false &&
+-			    (bool) Preferences.Get (Preferences.ENABLE_TRAY_ICON))
++			    (bool) Preferences.Get (Preferences.ENABLE_TRAY_ICON) &&
++				!TomboyIndicatorTray.IndicatorTrayPresent)
+ 				Tomboy.ActionManager ["QuitTomboyAction"].Activate ();
+ #endif
+ 		}
+Index: tomboy-1.11.2/Tomboy/Tomboy.cs
+===================================================================
+--- tomboy-1.11.2.orig/Tomboy/Tomboy.cs	2012-06-04 18:57:45.000000000 +0200
++++ tomboy-1.11.2/Tomboy/Tomboy.cs	2012-06-05 14:27:24.919497844 +0200
+@@ -191,11 +191,17 @@
+ #endif
+ 		}
+ 
++		static TomboyIndicatorTray indicator;
+ 		static void StartTrayIcon ()
+ 		{
+-			// Create the tray icon and run the main loop
+-			tray_icon = new TomboyTrayIcon (manager);
+-			tray = tray_icon.Tray;
++			if (TomboyIndicatorTray.IndicatorTrayPresent) {
++				indicator = new TomboyIndicatorTray (manager);
++			} else {
++				// Create the tray icon and run the main loop
++				tray_icon = new TomboyTrayIcon (manager);
++				tray = tray_icon.Tray;
++			}
++
+ 			StartMainLoop ();
+ 		}
+ 
+Index: tomboy-1.11.2/Tomboy/TomboyIndicatorTray.cs
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ tomboy-1.11.2/Tomboy/TomboyIndicatorTray.cs	2012-06-05 14:27:24.923497843 +0200
+@@ -0,0 +1,180 @@
++//  
++//  Copyright (C) 2009 GNOME Do
++// 
++//  This program is free software: you can redistribute it and/or modify
++//  it under the terms of the GNU General Public License as published by
++//  the Free Software Foundation, either version 3 of the License, or
++//  (at your option) any later version.
++// 
++//  This program is distributed in the hope that it will be useful,
++//  but WITHOUT ANY WARRANTY; without even the implied warranty of
++//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++//  GNU General Public License for more details.
++// 
++//  You should have received a copy of the GNU General Public License
++//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
++// 
++
++using System;
++using System.Collections.Generic;
++using System.Linq;
++
++using Mono.Unix;
++
++using Gnome;
++using AppIndicator;
++
++namespace Tomboy
++{
++	public class TomboyIndicatorTray
++	{
++		public static bool IndicatorTrayPresent {
++			get {
++				return true;
++			}
++		}
++		
++		ApplicationIndicator indicator;
++		NoteManager manager;
++		Gtk.Menu menu;
++		int idle_source = 0;
++
++		public TomboyIndicatorTray (NoteManager manager)
++		{
++			this.manager = manager;
++			indicator = new ApplicationIndicator ("tomboy-notes", "tomboy", Category.ApplicationStatus);
++			
++			SetMenuItems ();
++			indicator.Status = Status.Active;
++			indicator.Title = Catalog.GetString ("Tomboy Notes");
++
++			manager.NoteDeleted += OnNoteDeleted;
++			manager.NoteAdded += OnNoteAdded;
++			manager.NoteRenamed += OnNoteRenamed;
++			manager.NotesLoaded += OnNotesLoaded;
++		}
++
++		void OnNoteAdded (object sender, Note added)
++		{
++			SetMenuItems ();
++		}
++
++		void OnNoteDeleted (object sender, Note deleted)
++		{
++			SetMenuItems ();
++		}
++
++		void OnNoteRenamed (Note renamed, string old_title)
++		{
++			SetMenuItems ();
++		}
++
++		void OnNotesLoaded (object sender, EventArgs args)
++		{
++			SetMenuItems ();
++		}
++		
++		void SetMenuItems ()
++		{
++			if (idle_source == 0)
++				GLib.Idle.Add(SetMenuItemsIdle);
++		}
++
++		bool SetMenuItemsIdle ()
++		{
++			idle_source = 0;
++
++			if (menu != null) {
++				foreach (Gtk.Widget widget in menu.Children) {
++					menu.Remove (widget);
++					widget.Destroy ();
++				}
++			}
++			
++			menu = new Gtk.Menu ();
++			
++			foreach (Gtk.MenuItem item in CurrentMenuItems ()) {
++				menu.Append (item);
++				item.Show();
++			}
++
++			menu.Show();
++			
++			//if (indicator.Menu == null)
++			indicator.Menu = menu;
++
++			return false;
++		}
++		
++		Gtk.MenuItem CreateNoteMenuItem(Note n)
++		{
++		    var item = new Gtk.MenuItem (n.Title);
++			item.Activated += (o, a) => SetMenuItems ();
++			item.Activated += (o, a) => n.Window.Present ();
++			return item;
++		}
++
++		IEnumerable<Gtk.MenuItem> CurrentMenuItems ()
++		{
++			Gtk.ImageMenuItem item;
++			
++			item = new Gtk.ImageMenuItem (Catalog.GetString ("Create New Note"));
++			item.Image = new Gtk.Image (Gtk.Stock.New, Gtk.IconSize.Menu);
++			item.Activated += (o, a) => Tomboy.ActionManager["NewNoteAction"].Activate ();
++			item.Activated += (o, a) => SetMenuItems ();
++			yield return item;
++			
++			item = new Gtk.ImageMenuItem (Catalog.GetString ("_Search All Notes"));
++			item.Image = new Gtk.Image (Gtk.Stock.Find, Gtk.IconSize.Menu);
++			item.Activated += (o, a) => Tomboy.ActionManager["ShowSearchAllNotesAction"].Activate ();
++			yield return item;
++			
++			yield return new Gtk.SeparatorMenuItem ();
++			
++			if (manager != null && manager.Notes != null) {
++				Tag template_tag = TagManager.GetOrCreateSystemTag (TagManager.TemplateNoteSystemTag);
++				var menuItems = manager.Notes
++					.Where (n => !n.IsSpecial && !n.ContainsTag(template_tag))
++					.OrderByDescending (n => n.ChangeDate)
++					.Take (10)
++					.Select (n => CreateNoteMenuItem(n))
++					.ToArray ();
++				// avoid lazy eval for menu item construction
++				
++				foreach (Gtk.MenuItem mi in menuItems) {
++					yield return mi;
++				}
++			}
++			
++			yield return new Gtk.SeparatorMenuItem ();
++			
++			Gtk.MenuItem mitem = new Gtk.MenuItem (Catalog.GetString ("S_ynchronize Notes"));
++			// setting this changes the menu text to "Convert"
++			// item.Image = new Gtk.Image (Gtk.Stock.Convert, Gtk.IconSize.Menu);
++			mitem.Activated += (o, a) => Tomboy.ActionManager["NoteSynchronizationAction"].Activate ();
++			yield return mitem;
++			
++			item = new Gtk.ImageMenuItem (Catalog.GetString ("_Preferences"));
++			item.Image = new Gtk.Image (Gtk.Stock.Preferences, Gtk.IconSize.Menu);
++			item.Activated += (o, a) => Tomboy.ActionManager["ShowPreferencesAction"].Activate ();
++			yield return item;
++			
++			item = new Gtk.ImageMenuItem (Catalog.GetString ("_Help"));
++			item.Image = new Gtk.Image (Gtk.Stock.Help, Gtk.IconSize.Menu);
++			item.Activated += (o, a) => Tomboy.ActionManager["ShowHelpAction"].Activate ();
++			yield return item;
++			
++			item = new Gtk.ImageMenuItem (Catalog.GetString ("_About Tomboy"));
++			item.Image = new Gtk.Image (Gtk.Stock.About, Gtk.IconSize.Menu);
++			item.Activated += (o, a) => Tomboy.ActionManager["ShowAboutAction"].Activate ();
++			yield return item;
++			
++			yield return new Gtk.SeparatorMenuItem ();
++			
++			item = new Gtk.ImageMenuItem (Catalog.GetString ("_Quit"));
++			item.Image = new Gtk.Image (Gtk.Stock.Quit, Gtk.IconSize.Menu);
++			item.Activated += (o, a) => Tomboy.ActionManager["QuitTomboyAction"].Activate ();
++			yield return item;
++		}
++	}
++}
+Index: tomboy-1.11.2/configure.in
+===================================================================
+--- tomboy-1.11.2.orig/configure.in	2012-06-04 18:57:45.000000000 +0200
++++ tomboy-1.11.2/configure.in	2012-06-05 14:27:24.923497843 +0200
+@@ -207,6 +207,10 @@
+ 		  gtk-sharp-2.0 >= $GTKSHARP2_MINIMUM_VERSION)
+ AC_SUBST(GTKSHARP_LIBS)
+ 
++APPINDICATOR_MINIMUM_VERSION=0.0.5
++PKG_CHECK_MODULES(APPINDICATORSHARP,
++		  appindicator-sharp-0.1 >= $APPINDICATOR_MINIMUM_VERSION)
++AC_SUBST(APPINDICATORSHARP_LIBS)
+ #
+ # Printing at least needs Mono.Cairo
+ #
+Index: tomboy-1.11.2/po/POTFILES.in
+===================================================================
+--- tomboy-1.11.2.orig/po/POTFILES.in	2012-04-17 07:51:14.000000000 +0200
++++ tomboy-1.11.2/po/POTFILES.in	2012-06-05 14:27:24.923497843 +0200
+@@ -68,6 +68,7 @@
+ Tomboy/Synchronization/SyncManager.cs
+ Tomboy/Synchronization/SyncUtils.cs
+ Tomboy/Tomboy.cs
++Tomboy/TomboyIndicatorTray.cs
+ Tomboy/Tray.cs
+ Tomboy/Utils.cs
+ Tomboy/Watchers.cs

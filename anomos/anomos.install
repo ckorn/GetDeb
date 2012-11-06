@@ -1,0 +1,3 @@
+default_certificates default_config			usr/lib/pymodules/python2.6/Anomos
+debian/anomos.png					usr/share/pixmaps
+debian/anomos.desktop					usr/share/applications

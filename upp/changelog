@@ -1,0 +1,5 @@
+upp (0.0r1668-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #456359)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 30 Oct 2009 00:16:36 +0100

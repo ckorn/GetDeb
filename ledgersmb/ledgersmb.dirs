@@ -1,0 +1,5 @@
+usr/share/ledgersmb
+etc/ledgersmb
+var/lib/ledgersmb
+var/spool/ledgersmb
+etc/apache2/sites-available

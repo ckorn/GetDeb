@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=DrJava
+Exec=drjava
+Icon=drjava
+Terminal=false
+Type=Application
+Categories=Application;Development;

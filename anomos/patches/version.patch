@@ -1,0 +1,54 @@
+Index: anomos-0.9.5/Anomos/__init__.py
+===================================================================
+--- anomos-0.9.5.orig/Anomos/__init__.py	2010-09-15 20:06:50.740889732 +0200
++++ anomos-0.9.5/Anomos/__init__.py	2010-09-15 20:07:38.971822111 +0200
+@@ -48,6 +48,8 @@
+         image_root, doc_root = map( lambda p: os.path.join(sys.prefix, 'local', p), calc_unix_dirs() )
+     else:
+         image_root, doc_root = map( lambda p: os.path.join(sys.prefix, p), calc_unix_dirs() )
++    image_root = "/usr/share/pixmaps/Anomos-0.9.5/"
++    doc_root = "/usr/share/doc/Anomos-0.9.5/"
+ 
+ 
+ # a cross-platform way to get user's home directory
+Index: anomos-0.9.5/setup.py
+===================================================================
+--- anomos-0.9.5.orig/setup.py	2010-09-15 20:05:18.202138924 +0200
++++ anomos-0.9.5/setup.py	2010-09-15 20:06:33.661351615 +0200
+@@ -18,10 +18,11 @@
+ import sys
+ import os
+ from distutils.core import setup, Extension
+-import Anomos
+ 
+ import glob
+ 
++version = "0.9.5"
++
+ if (os.name == 'nt'):
+     sys.exit(1)
+ 
+@@ -29,11 +30,12 @@
+            "anontrack.py", "anonreannounce.py", "anonrename.py", "anonshowmetainfo.py", "anomosify.py"]
+ #scripts += ["anondownloadcurses.py", "anonlaunchmany.py", "anonlaunchmanycurses.py" ]
+ 
+-img_root, doc_root = Anomos.calc_unix_dirs()
++img_root = "/usr/share/pixmaps/Anomos-" + version
++doc_root = "/usr/share/doc/Anomos-" + version
+ 
+ data_files = [ (img_root        , glob.glob('Anomos/GUI/images/*png')+['Anomos/GUI/images/anomos.ico',]),
+                (img_root+'/logo', glob.glob('Anomos/GUI/images/logo/anomos_[0-9]*.png')  ),
+-               (doc_root        , ['credits.txt', 'LICENSE.txt', 'README.txt', 'GeoIP.dat']),
++               (doc_root        , ['credits.txt', 'README.txt', 'GeoIP.dat']),
+                (doc_root+'/default_certificates' , glob.glob('default_certificates/*')),
+                (doc_root+'/default_config'       , glob.glob('default_config/*'))
+              ]
+@@ -44,7 +46,7 @@
+ 
+ setup(
+     name = "Anomos",
+-    version = Anomos.version,
++    version = version,
+     author = "Anomos Liberty Enhancements",
+     author_email = "partners@anomos.info",
+     url = "http://anomos.info/",

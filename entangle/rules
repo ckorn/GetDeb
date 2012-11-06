@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+export DH_ALWAYS_EXCLUDE=gschemas.compiled
+%:
+	dh $@ 
+
+override_dh_auto_clean:
+	[ ! -f Makefile ] || dh_auto_clean
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian/entangle -type d -name plugins -empty -delete
+	rm -rf debian/entangle/usr/lib

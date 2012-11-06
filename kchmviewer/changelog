@@ -1,0 +1,164 @@
+kchmviewer (6.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #993593)
+    - Version 6.0 released
+    - Removed outdated and buggy QTextBrowser support.
+    - Removed unneeded KHTMLPart support. Only QWebKit is now supported.
+    - Fixed zoom and "select all".
+    - Fixed storing scrollbar position.
+    - Added browser options to control JavaScript, Java and HTML5 features,
+      which now apply to Webkit
+    - Fixed crash on start when the number of recent files was set to zero
+    - Added support for opening the specific page on startup using the
+      --url switch
+    - Fixed scrolling at the same page when links are clicked
+    - Fixed the "Locate in content tree" which was broken for QWebKit
+    - For CHM entries with an URL but no name use the URL as name
+    - Updated copyrights
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 May 2012 14:30:25 +0200
+
+kchmviewer (5.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patches:
+    - 00_ftbfs_svn_r363.diff - merged upstream
+    - 02_grammatical_error.diff - merger upstream
+  * Add disable_check_new_version.patch to disable new version checking.
+    (Closes: #602535)
+
+ -- Fathi Boudra <fabo@debian.org>  Sun, 30 Jan 2011 19:08:06 +0200
+
+kchmviewer (5.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add patch to fix ftbfs caused by missing files.
+  * Add Recommends okular-extra-backends. (Closes: #597719)
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 06 Oct 2010 16:47:08 +0300
+
+kchmviewer (5.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+  [ José Manuel Santamaría Lema ]
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * Update debian/control:
+    - Remove quilt from Build-Depends.
+  * Refresh 01_disable_kio-msits_build.diff patch.
+
+  [ Fathi Boudra ]
+  * Add 02_grammatical_error.diff patch. Thanks to Chris Leick.
+    (Closes: #536201)
+  * Update debian/control:
+    - Bump build dependencies versions (debhelper and pkg-kde-tools).
+    - Bump Standards-Version to 3.8.4 (no changes needed).
+  * Update debian/copyright:
+    - kchmviewer is licensed under the GPL version 3 since version 5.0.
+  * Update debian/rules:
+    - Enable parallel build (pass --parallel option to dh).
+    - Use kde sequence addon. (Closes: #574309)
+
+ -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Wed, 17 Mar 2010 19:56:04 +0100
+
+kchmviewer (4.1-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #479402, #496888)
+  * Add patch to disable kio-msits build to avoid okular-extra-backends
+    conflict.
+  * Bump compat/debhelper to 7.
+  * Update debian/control:
+    - Set Debian KDE Extras Team as Maintainer and myself in Uploaders.
+    - Update build dependencies:
+      - Add cmake, quilt and pkg-kde-tools
+      - Replace kdelibs4-dev by kdelibs5-dev
+      - Remove autotools-dev
+    - Update Standards-Version to 3.8.2 (no changes needed).
+    - Add Homepage field
+  * Remove deprecated files: debiandirs, dirs and Makefile.
+  * Update debian/menu file to Debian menu policy 2.1
+  * Switch debian/rules to dh.
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 29 Jul 2009 21:43:18 +0200
+
+kchmviewer (3.1-2) unstable; urgency=low
+
+  * Fixed FTBFS with gcc-4.3 (Closes: #474869)
+    - Updated to S-V 3.7.3 with no changes
+
+  * Fixed uscan (Closes: #449696)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sun, 13 Apr 2008 01:27:32 +0200
+
+kchmviewer (3.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #428128)
+    - Fixed crash if last file gone (Closes: #420561)
+
+  * Fixed menu entry to file into "Apps/Viewers" (Closes: #403032)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sun, 17 Jun 2007 13:55:44 +0200
+
+kchmviewer (3.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Fri, 25 May 2007 23:21:26 +0200
+
+kchmviewer (2.7-1) unstable; urgency=low
+
+  * New upstream version
+    - Should fix crashes due to bad encoding detection (Closes: #390329)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Fri,  8 Dec 2006 02:11:46 +0100
+
+kchmviewer (2.6-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Thu, 31 Aug 2006 02:56:52 +0200
+
+kchmviewer (2.5-2) unstable; urgency=low
+
+  * Fix FTBFS with g++4.1 (Closes: #372168)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Thu, 08 Jun 2006 20:08:39 +0200
+
+kchmviewer (2.5-1) unstable; urgency=low
+
+  * New upstream version
+  
+  * Fix building with g++4.1 (Closes: #356517)
+
+  * Updated to standards version 3.7.2 with no changes
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Thu, 11 May 2006  2:32:41 +0200
+
+kchmviewer (2.0-1) unstable; urgency=low
+
+  * New upstream version (Closes: #353709)
+    - included proper icons from upstream :-)
+
+  * Package sponsored by Tommaso Moroni
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Mon, 20 Feb 2006 22:19:57 +0100
+
+kchmviewer (1.3a-1) unstable; urgency=low
+
+  * First upload to the Archive (Closes: #312700)
+
+  * Package sponsored by Tommaso Moroni
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sun,  1 Jan 2006  2:33:38 +0100
+
+kchmviewer (1.2a-1) unstable; urgency=low
+
+  [ Tommaso Moroni ]
+  * Initial packaging, incomplete
+
+  [ Jose Luis Tallon ]
+  * Initial release
+    - Fixed to use libchm instead of chmlib
+    - Added icons and manpage (1.2 -> 1.2a)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sat,  10 Dec 2005 18:48:17 +0100

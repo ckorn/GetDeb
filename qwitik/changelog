@@ -1,0 +1,17 @@
+qwitik (0.1.2-1~getdeb3) lucid; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 19:43:40 +0200
+
+qwitik (0.1.2-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 26 Feb 2010 00:08:10 +0100
+
+qwitik (0.1.2-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #371821)
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 29 Sep 2009 22:13:22 +0200

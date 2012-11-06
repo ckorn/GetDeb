@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Java;Network;FileTransfer;P2P
+Comment=Download and share files using the BitTorrent P2P network
+Exec=azureus %f
+GenericName=BitTorrent client
+Icon=Azureus
+MimeType=application/x-bittorrent
+Name=Vuze
+Type=Application

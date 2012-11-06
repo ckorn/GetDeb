@@ -1,0 +1,18 @@
+anomos (0.9.5-1~getdeb2) lucid; urgency=low
+
+  * Fix debian/watch file. Just look for the uptodate
+    version for Apple.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 25 Apr 2011 14:39:16 +0200
+
+anomos (0.9.5-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #620695)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 15 Sep 2010 20:02:53 +0200
+
+anomos (0.9.1-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #574058)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 08 May 2010 23:04:00 +0200

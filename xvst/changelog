@@ -1,0 +1,283 @@
+xvst (2.4.1-1~getdeb30) precise; urgency=low
+
+  * Update YouTube plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 17 Sep 2012 20:07:40 +0200
+
+xvst (2.4.1-1~getdeb29) precise; urgency=low
+
+  * Plugin updates
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 03 Aug 2012 20:11:04 +0200
+
+xvst (2.4.1-1~getdeb28) precise; urgency=low
+
+  * Update YouTube plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 12 Jul 2012 17:56:13 +0200
+
+xvst (2.4.1-1~getdeb27) precise; urgency=low
+
+  * Update YouTube plugin.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 18 May 2012 19:03:21 +0200
+
+xvst (2.4.1-1~getdeb26) precise; urgency=low
+
+  * Update YouTube plugin.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 May 2012 22:43:47 +0200
+
+xvst (2.4.1-1~getdeb25) precise; urgency=low
+
+  * New youtube plugin update.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 30 Apr 2012 19:02:14 +0200
+
+xvst (2.4.1-1~getdeb24) lucid; urgency=low
+
+  * Plugin updates
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 20 Apr 2012 19:28:54 +0200
+
+xvst (2.4.1-1~getdeb23) lucid; urgency=low
+
+  * Plugin updates
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 14 Feb 2012 18:49:32 +0100
+
+xvst (2.4.1-1~getdeb22) lucid; urgency=low
+
+  * Update YouTube plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 27 Jan 2012 14:52:10 +0100
+
+xvst (2.4.1-1~getdeb21) lucid; urgency=low
+
+  * Update plugins
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 16 Jan 2012 21:02:50 +0100
+
+xvst (2.4.1-1~getdeb20) lucid; urgency=low
+
+  * Update plugins
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 06 Dec 2011 19:22:00 +0100
+
+xvst (2.4.1-1~getdeb19) lucid; urgency=low
+
+  * Update plugins.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Oct 2011 22:39:56 +0200
+
+xvst (2.4.1-1~getdeb18) lucid; urgency=low
+
+  * Update plugins.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 05 Oct 2011 20:34:23 +0200
+
+xvst (2.4.1-1~getdeb17) lucid; urgency=low
+
+  * Update TV3
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 28 Aug 2011 18:21:58 +0200
+
+xvst (2.4.1-1~getdeb16) lucid; urgency=low
+
+  * Update plugins
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 21 Aug 2011 21:46:47 +0200
+
+xvst (2.4.1-1~getdeb15) lucid; urgency=low
+
+  * New plugins
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 16 Aug 2011 18:34:15 +0200
+
+xvst (2.4.1-1~getdeb14) lucid; urgency=low
+
+  * Update YouTube plugin.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Aug 2011 11:32:47 +0200
+
+xvst (2.4.1-1~getdeb13) lucid; urgency=low
+
+  * Include 7 new plugins.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Jul 2011 18:19:03 +0200
+
+xvst (2.4.1-1~getdeb12) lucid; urgency=low
+
+  * Include VBOX7 plugin.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 29 Jun 2011 18:51:20 +0200
+
+xvst (2.4.1-1~getdeb11) lucid; urgency=low
+
+  * YouTube plugin update.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 01 Jun 2011 21:36:22 +0200
+
+xvst (2.4.1-1~getdeb10) lucid; urgency=low
+
+  * YouTube plugin update.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 30 May 2011 18:08:27 +0200
+
+xvst (2.4.1-1~getdeb9) lucid; urgency=low
+
+  * ExtremeTube 1.0.1
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 May 2011 18:48:44 +0200
+
+xvst (2.4.1-1~getdeb8) lucid; urgency=low
+
+  * debian/patches/keezmovies.patch: Update to 1.0.4a
+  * debian/patches/extremetube.patch: New plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 22 Apr 2011 10:35:32 +0200
+
+xvst (2.4.1-1~getdeb7) lucid; urgency=low
+
+  * debian/disable_update.patch: Disable
+    automatic updates because it makes the
+    app crash.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 13 Mar 2011 20:32:32 +0100
+
+xvst (2.4.1-1~getdeb6) lucid; urgency=low
+
+  * Update Youtube plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Mar 2011 20:07:22 +0100
+
+xvst (2.4.1-1~getdeb5) lucid; urgency=low
+
+  * Update Youtube plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 Feb 2011 00:47:25 +0100
+
+xvst (2.4.1-1~getdeb4) lucid; urgency=low
+
+  * Update youtube and google videos plugin.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 09 Oct 2010 12:09:16 +0200
+
+xvst (2.4.1-1~getdeb3) lucid; urgency=low
+
+  * Update youtube plugin
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Oct 2010 20:18:38 +0200
+
+xvst (2.4.1-1~getdeb2) lucid; urgency=low
+
+  * Fixed debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 12 Sep 2010 00:18:37 +0200
+
+xvst (2.4.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+    2.4.1:
+    ------
+
+    - Added support for "RTMPE" Flash protocol
+    - Added a confirmation dialog before cleaning the downloads list
+    - Added a confirmation dialog before deleting a download
+    - Added possibility to add urls from files (separated in lines)
+    - Added possibility to paste from clipboard more than one url at same
+    time (separated in lines)
+    - Added possibility to drop more than one url at same time (separated in
+    lines)
+    - Added new conversion format (mp4 HD)
+
+    - Updated catalan translation
+    - Updated spanish translation
+    - Updated japanese translation
+    - Updated german translation
+    - Updated italian translation
+
+    - Added two new plugins:
+        - XHamster (thanks to Supelex Technologies)
+        - UStream
+
+    - Changed plug-in:
+        - Aniboom
+        - Atom
+        - Break
+        - Caught on Tape (before known as Caught on Video)
+        - Cinemavip
+        - DailyMotion
+        - Disclose
+        - Shred or Die
+        - Streetfire
+        - Keezmovies
+        - XHamster
+        - XTube
+        - JizzHut
+
+    - Improved all plug-in's icons (reduced icon file size)
+    - Improved the internal management of downloads
+    - Improved conversion to mp4 (now uses x264 v-codec + presets)
+
+    - Fixed bug (Error: Custom video conversion was ignored if the options
+    "Convert downloaded videos" was disabled)
+
+    Plug-ins SDK:
+    -------------
+
+    - Fixed bug (Error: The empty selections were not detected by
+    "copyBetween" function)
+
+    Windows:
+    --------
+
+    - Updated ffmpeg library to version 0.6 (SVN-r25039 )
+
+    Mac OS X:
+    ---------
+
+    - Compiled with Qt 4.6.3
+
+    - Updated ffmpeg library to version 0.6 (SVN-r25039 ) for 64bits users
+
+    - Fixed bug (Error: Modal sheets were not responding to mouse events
+    correctly)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 06 Sep 2010 23:13:01 +0200
+
+xvst (2.4-1~getdeb2) lucid; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 13 Apr 2010 23:30:34 +0200
+
+xvst (2.4-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 13 Apr 2010 23:26:39 +0200
+
+xvst (2.3.5-1~getdeb2) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 06 Apr 2010 14:55:14 +0200
+
+xvst (2.3.5-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Mar 2010 00:02:06 +0100
+
+xvst (2.3.4-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 23 Feb 2010 22:45:58 +0100
+
+xvst (2.3.3-1~getdeb1) karmic; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 13 Feb 2010 12:30:11 +0100

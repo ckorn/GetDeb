@@ -1,0 +1,6 @@
+etc/ledgersmb/ledgersmb.conf			usr/share/ledgersmb/ledgersmb.conf
+var/lib/ledgersmb/users				usr/share/ledgersmb/users
+var/lib/ledgersmb/css				usr/share/ledgersmb/css
+var/lib/ledgersmb/templates			usr/share/ledgersmb/templates
+var/spool/ledgersmb				usr/share/ledgersmb/spool
+etc/apache2/sites-available/ledgersmb.conf	etc/apache2/sites-enabled/ledgersmb.conf

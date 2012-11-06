@@ -1,0 +1,175 @@
+Source: avidemux
+Section: graphics
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Homepage: http://avidemux.org
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9),
+ autotools-dev (>= 20100122.1~),
+ cmake,
+ gettext,
+ libgtk2.0-dev,
+ libaften-dev,
+ libmp3lame-dev,
+ libmad0-dev,
+ liba52-dev,
+ libvorbis-dev,
+ libmjpegtools-dev,
+ libxvidcore-dev,
+ libfreetype6-dev,
+ libxml2-dev,
+ libasound2-dev,
+ libsdl-dev,
+ libxv-dev,
+ libxmu-dev,
+ libfaac-dev (>= 1.24),
+ libfaad-dev,
+ libx264-dev (>= 1:0.svn20090222),
+ libvpx-dev,
+ libqt4-dev,
+ libqt4-opengl-dev,
+ imagemagick,
+ libsamplerate0-dev,
+ libdca-dev,
+ libjack-dev,
+ libpulse-dev,
+ yasm [i386 amd64],
+ xsltproc,
+ libopencore-amrnb-dev,
+ libopencore-amrwb-dev
+Vcs-Git: git://git.debian.org/collab-maint/avidemux.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/avidemux.git
+
+Package: avidemux
+Architecture: i386 amd64 powerpc
+Depends: ${shlibs:Depends},
+ avidemux-common,
+ libavidemux0,
+ ${misc:Depends}
+Recommends: avidemux-plugins-gtk
+Description: Free video editor - GTK version
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package contains the classic version with GTK+ interface.
+
+Package: avidemux-qt
+Architecture: i386 amd64 powerpc
+Depends: ${shlibs:Depends},
+ avidemux-common,
+ libavidemux0,
+ ${misc:Depends}
+Recommends: avidemux-plugins-qt
+Provides: avidemux
+Description: Free video editor - QT version
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package contains the QT4 version.
+
+Package: avidemux-cli
+Architecture: i386 amd64 powerpc
+Depends: ${shlibs:Depends},
+ avidemux-common,
+ libavidemux0,
+ ${misc:Depends}
+Recommends: avidemux-plugins-cli
+Provides: avidemux
+Description: Free video editor - command line version
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package contains the command line version.
+
+Package: avidemux-common
+Architecture: all
+Depends: ${misc:Depends}
+Replaces: avidemux (<= 1:2.4.0-0.0)
+Description: Free video editor - Internationalization files
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package contains internationalization files needed to translate
+ strings in avidemux to others languages.
+
+Package: avidemux-plugins-common
+Architecture: i386 amd64 powerpc
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
+Conflicts: avidemux-plugins
+Replaces: avidemux-plugins
+Description: Free video editor - common files for plugins
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package includes common files for plugins to extend the functionality
+ of Avidemux and should not be installed directly.
+
+Package: avidemux-plugins-gtk
+Architecture: i386 amd64 powerpc
+Depends: avidemux-plugins-common,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Conflicts: avidemux-plugins
+Replaces: avidemux-plugins
+Description: Free video editor - GTK plugins
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package includes plugins to extend the functionality of Avidemux.
+
+Package: avidemux-plugins-qt
+Architecture: i386 amd64 powerpc
+Depends: avidemux-plugins-common,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Conflicts: avidemux-plugins
+Replaces: avidemux-plugins
+Description: Free video editor - Qt plugins
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package includes plugins to extend the functionality of Avidemux Qt.
+
+Package: avidemux-plugins-cli
+Architecture: i386 amd64 powerpc
+Depends: avidemux-plugins-common,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Conflicts: avidemux-plugins
+Replaces: avidemux-plugins
+Description: Free video editor - CLI plugins
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package includes plugins to extend the functionality of Avidemux CLI.
+
+Package: libavidemux0
+Architecture: i386 amd64 powerpc
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
+Replaces: avidemux (<= 1:2.5.0-0.0ubuntu3)
+Recommends: mjpegtools, twolame, lame
+Description: Free video editor - shared libraries
+ Avidemux is a free video editor designed for simple cutting, filtering and
+ encoding tasks. It supports many file types, including AVI, DVD compatible
+ MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+ using projects, job queue and powerful scripting capabilities.
+ .
+ This package contains the shared library files.

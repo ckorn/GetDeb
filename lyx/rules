@@ -1,0 +1,70 @@
+#!/usr/bin/make -f
+
+LDFLAGS += -Wl,-z,defs -Wl,--as-needed
+
+%:
+	dh $@ --with autotools_dev,python2,tex --builddirectory
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--disable-rpath \
+		--enable-warnings \
+		--enable-nls \
+		--with-gnu-ld \
+		--without-aspell \
+		--without-hunspell \
+		--with-enchant \
+		--with-x \
+		--without-included-gettext \
+		--without-included-boost \
+		--without-included-mythes \
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/lyx-common
+
+# move binaries to arch package
+	mkdir -p debian/lyx/usr/share
+	mv debian/lyx-common/usr/bin debian/lyx/usr/bin
+	mv debian/lyx-common/usr/share/man debian/lyx/usr/share/man
+
+# move fonts to font package
+	mkdir -p debian/ttf-lyx/usr/share/fonts/truetype
+	mv debian/lyx-common/usr/share/lyx/fonts \
+		debian/ttf-lyx/usr/share/fonts/truetype/ttf-lyx
+
+# remove empty directory
+	rmdir debian/lyx-common/usr/share/lyx/images/commands
+
+# move tex files to correct place
+	mkdir -p debian/lyx-common/usr/share/texmf/tex/latex
+	mv debian/lyx-common/usr/share/lyx/tex \
+		debian/lyx-common/usr/share/texmf/tex/latex/lyx
+
+# install bash completion in the correct location
+	mkdir -p debian/lyx-common/etc/bash_completion.d
+	mv debian/lyx-common/usr/share/lyx/scripts/bash_completion \
+		debian/lyx-common/etc/bash_completion.d/lyx
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+
+override_dh_installdocs:
+	mkdir -p debian/lyx/usr/share/doc
+	ln -s lyx-common debian/lyx/usr/share/doc/lyx
+
+	dh_installdocs
+
+	mkdir -p debian/ttf-lyx/usr/share/doc/ttf-lyx
+	mv debian/ttf-lyx/usr/share/fonts/truetype/ttf-lyx/ReadmeBaKoMa4LyX.txt \
+		debian/ttf-lyx/usr/share/doc/ttf-lyx/
+	rm debian/ttf-lyx/usr/share/fonts/truetype/ttf-lyx/BaKoMaFontLicense.txt
+
+override_dh_python2:
+	dh_python2 /usr/share/lyx
+
+override_dh_installtex:
+	dh_installtex -plyx-common
+
+override_dh_builddeb:
+	dh_builddeb -- -Z xz

@@ -1,0 +1,4 @@
+bookwrite			usr/bin
+src				usr/share/bookwrite
+debian/bookwrite.desktop	usr/share/applications
+bookwrite.png			usr/share/pixmaps

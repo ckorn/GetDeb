@@ -1,0 +1,17 @@
+gnocky (0.0.7-1~getdeb3) maverick; urgency=low
+
+  * Rebuild for maverick
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 23 Oct 2010 18:17:42 +0200
+
+gnocky (0.0.7-1~getdeb2) lucid; urgency=low
+
+  * Initial release (LP: #209236)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 26 Sep 2010 21:09:41 +0200
+
+gnocky (0.0.7-3) lucid; urgency=low
+
+  * Initial release (closes LP: #209236)
+
+ -- Matthias Mailänder <matthias@mailaender.name>  Sat, 21 Nov 2009 13:28:42 +0100

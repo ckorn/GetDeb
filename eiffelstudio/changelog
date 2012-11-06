@@ -1,0 +1,5 @@
+eiffelstudio (6.4-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #336489)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sun, 18 Oct 2009 15:00:46 +0200

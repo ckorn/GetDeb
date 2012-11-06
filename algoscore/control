@@ -1,0 +1,43 @@
+Source: algoscore
+Section: sound
+Priority: optional
+Maintainer: Matthias Klumpp <matthias@nlinux.org>
+Build-Depends: cdbs,
+               debhelper (>= 9),
+               cmake,
+               libsndfile1-dev,
+               libglib2.0-dev,
+               libgtk2.0-dev,
+               libpcre++-dev,
+               liblo-dev (>=0.24),
+               libjack-dev,
+               libcsound64-dev
+Standards-Version: 3.9.3
+Homepage: http://kymatica.com/algoscore
+
+Package: algoscore
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         algoscore-data (= ${source:Version}),
+         csound
+Description: Graphical environment for algorithmic composition
+ AlgoScore is a graphical environment for algorithmic composition,
+ where music is constructed directly in an interactive graphical score.
+ The result is output as audio (through CSound), arbitrary control data
+ (through JACK ports) for control of other applications, MIDI through JACK
+ or to file, or OpenSoundControl messages. The generated audio can be played
+ back through JACK or exported to an audiofile.
+
+Package: algoscore-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: GUI for algorithmic composition (data files)
+ AlgoScore is a graphical environment for algorithmic composition,
+ where music is constructed directly in an interactive graphical score.
+ The result is output as audio (through CSound), arbitrary control data
+ (through JACK ports) for control of other applications, MIDI through JACK
+ or to file, or OpenSoundControl messages. The generated audio can be played
+ back through JACK or exported to an audiofile. 
+ .
+ This package contains the architecture independent files.

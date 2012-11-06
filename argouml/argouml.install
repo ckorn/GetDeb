@@ -1,0 +1,4 @@
+*.jar *.sh ext		usr/share/argouml
+debian/scripts/argouml	usr/bin
+debian/*.desktop	usr/share/applications
+debian/argouml.png	usr/share/pixmaps

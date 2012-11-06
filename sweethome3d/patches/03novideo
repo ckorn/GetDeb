@@ -1,0 +1,110 @@
+Description: This patch disables video creation feature.
+Author: Gabriele Giacone <1o5g4r8o@gmail.com>
+
+Index: sweethome3d-3.7/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java
+===================================================================
+--- sweethome3d-3.7.orig/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java	2012-10-24 18:48:02.000000000 +0200
++++ sweethome3d-3.7/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java	2012-10-27 00:31:23.323814887 +0200
+@@ -184,8 +184,8 @@
+   /**
+    * Returns a new view able to compute a 3D video of a home. 
+    */
+-  public abstract DialogView createVideoView(Home home, UserPreferences preferences, 
+-                                             VideoController videoController);
++/*  public abstract DialogView createVideoView(Home home, UserPreferences preferences, 
++                                             VideoController videoController);	*/
+ 
+   /**
+    * Returns a new view that displays Sweet Home 3D help.
+Index: sweethome3d-3.7/src/com/eteks/sweethome3d/viewcontroller/VideoController.java
+===================================================================
+--- sweethome3d-3.7.orig/src/com/eteks/sweethome3d/viewcontroller/VideoController.java	2012-10-24 18:48:02.000000000 +0200
++++ sweethome3d-3.7/src/com/eteks/sweethome3d/viewcontroller/VideoController.java	2012-10-27 00:31:23.327814887 +0200
+@@ -99,7 +99,7 @@
+   public DialogView getView() {
+     // Create view lazily only once it's needed
+     if (this.videoView == null) {
+-      this.videoView = this.viewFactory.createVideoView(this.home, this.preferences, this);
++//      this.videoView = this.viewFactory.createVideoView(this.home, this.preferences, this);
+     }
+     return this.videoView;
+   }
+Index: sweethome3d-3.7/src/com/eteks/sweethome3d/swing/SwingViewFactory.java
+===================================================================
+--- sweethome3d-3.7.orig/src/com/eteks/sweethome3d/swing/SwingViewFactory.java	2012-10-24 18:48:02.000000000 +0200
++++ sweethome3d-3.7/src/com/eteks/sweethome3d/swing/SwingViewFactory.java	2012-10-27 00:31:23.327814887 +0200
+@@ -56,7 +56,6 @@
+ import com.eteks.sweethome3d.viewcontroller.ThreadedTaskController;
+ import com.eteks.sweethome3d.viewcontroller.ThreadedTaskView;
+ import com.eteks.sweethome3d.viewcontroller.UserPreferencesController;
+-import com.eteks.sweethome3d.viewcontroller.VideoController;
+ import com.eteks.sweethome3d.viewcontroller.View;
+ import com.eteks.sweethome3d.viewcontroller.ViewFactory;
+ import com.eteks.sweethome3d.viewcontroller.WallController;
+@@ -280,11 +279,11 @@
+   /**
+    * Returns a new view able to create 3D videos of the given home. 
+    */
+-  public DialogView createVideoView(Home home, 
++/*  public DialogView createVideoView(Home home, 
+                                     UserPreferences preferences, 
+                                     VideoController videoController) {
+     return new VideoPanel(home, preferences, videoController);
+-  }
++  }	*/
+   
+   /**
+    * Returns a new view that displays Sweet Home 3D help.
+Index: sweethome3d-3.7/build.xml
+===================================================================
+--- sweethome3d-3.7.orig/build.xml	2012-10-27 00:31:21.243814949 +0200
++++ sweethome3d-3.7/build.xml	2012-10-27 00:31:23.327814887 +0200
+@@ -55,6 +55,8 @@
+         <pathelement location="libtest/jnlp.jar"/>
+       </classpath>
+ 	<exclude name="com/eteks/sweethome3d/MacOSXConfiguration.java"/>
++	<exclude name="com/eteks/sweethome3d/swing/VideoPanel.java"/>
++	<exclude name="com/eteks/sweethome3d/viewcontroller/VideoController.java"/>
+     </javac>
+     
+     <!-- Copy resources excepted furniture, textures and help files -->
+Index: sweethome3d-3.7/src/com/eteks/sweethome3d/swing/HomePane.java
+===================================================================
+--- sweethome3d-3.7.orig/src/com/eteks/sweethome3d/swing/HomePane.java	2012-10-24 18:48:02.000000000 +0200
++++ sweethome3d-3.7/src/com/eteks/sweethome3d/swing/HomePane.java	2012-10-27 00:31:23.327814887 +0200
+@@ -460,7 +460,7 @@
+           homeController3D, "displaySelectedLevel");
+       createAction(ActionType.MODIFY_3D_ATTRIBUTES, preferences, homeController3D, "modifyAttributes");
+       createAction(ActionType.CREATE_PHOTO, preferences, controller, "createPhoto");
+-      createAction(ActionType.CREATE_VIDEO, preferences, controller, "createVideo");
++//      createAction(ActionType.CREATE_VIDEO, preferences, controller, "createVideo");
+       createAction(ActionType.EXPORT_TO_OBJ, preferences, controller, "exportToOBJ");
+     }
+     
+@@ -995,7 +995,7 @@
+     addActionToMenu(ActionType.MODIFY_3D_ATTRIBUTES, preview3DMenu);
+     preview3DMenu.addSeparator();
+     addActionToMenu(ActionType.CREATE_PHOTO, preview3DMenu);
+-    addActionToMenu(ActionType.CREATE_VIDEO, preview3DMenu);
++//    addActionToMenu(ActionType.CREATE_VIDEO, preview3DMenu);
+     preview3DMenu.addSeparator();
+     addActionToMenu(ActionType.EXPORT_TO_OBJ, preview3DMenu);
+     
+@@ -1840,7 +1840,7 @@
+     addActionToToolBar(ActionType.ZOOM_OUT, toolBar);
+     toolBar.addSeparator();
+     addActionToToolBar(ActionType.CREATE_PHOTO, toolBar);
+-    addActionToToolBar(ActionType.CREATE_VIDEO, toolBar);
++//    addActionToToolBar(ActionType.CREATE_VIDEO, toolBar);
+     toolBar.addSeparator();
+     
+     // Add plugin actions buttons
+@@ -2508,7 +2508,7 @@
+       addActionToPopupMenu(ActionType.MODIFY_3D_ATTRIBUTES, view3DPopup);
+       view3DPopup.addSeparator();
+       addActionToPopupMenu(ActionType.CREATE_PHOTO, view3DPopup);
+-      addActionToPopupMenu(ActionType.CREATE_VIDEO, view3DPopup);
++//      addActionToPopupMenu(ActionType.CREATE_VIDEO, view3DPopup);
+       view3DPopup.addSeparator();
+       addActionToPopupMenu(ActionType.EXPORT_TO_OBJ, view3DPopup);
+       SwingTools.hideDisabledMenuItems(view3DPopup);

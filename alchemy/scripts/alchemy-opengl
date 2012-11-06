@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/alchemy
+java -client -Xmx256m -Dsun.java2d.opengl=true -jar ./Alchemy.jar $*

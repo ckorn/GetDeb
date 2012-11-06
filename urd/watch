@@ -1,0 +1,4 @@
+version=3
+opts="uversionmangle=s/-/\./g" \
+http://urdland.com/cms/content/view/13/27/ \
+    (?:.*/)?urd-([\d\.-]+)\.tar\.gz.*

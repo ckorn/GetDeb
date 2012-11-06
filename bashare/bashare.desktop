@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=BaShare
+Comment=
+Exec=/usr/bin/BaShare.gambas
+Icon=/usr/share/pixmaps/bashare.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Network;P2P;
+

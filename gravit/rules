@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with autoreconf
+
+# it fails without those files.
+override_dh_autoreconf:
+	touch AUTHORS NEWS
+	dh_autoreconf

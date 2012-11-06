@@ -1,0 +1,5 @@
+ignuit (0.0.16-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #486346)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 Nov 2009 20:00:03 +0100

@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	# dh_install cannot handle spaces:
+	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=198507
+	dh_install
+	cp -a lib/mmc\ Libs debian/mmediac/usr/lib/mmediac/
+	# And because dh_makeshlibs and dh_shlibdeps also have problems
+	# with spaces we remove the space here and add it afterwards again.
+	# (The executable has been linked to the directory with a space in it
+	# this is why we have to do this at all).
+	mv debian/mmediac/usr/lib/mmediac/mmc\ Libs debian/mmediac/usr/lib/mmediac/mmc_Libs
+
+override_dh_makeshlibs:
+	dh_makeshlibs -Xmmediac
+
+override_dh_shlibdeps:
+	dh_shlibdeps
+	mv debian/mmediac/usr/lib/mmediac/mmc_Libs debian/mmediac/usr/lib/mmediac/mmc\ Libs

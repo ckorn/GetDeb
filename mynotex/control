@@ -1,0 +1,32 @@
+Source: mynotex
+Section: x11
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               libatk1.0-0 (>= 1.12.4),
+               libcairo2 (>= 1.2.4),
+               libgdk-pixbuf2.0-0 (>= 2.22.0),
+               libglib2.0-0 (>= 2.12.0),
+               libgtk2.0-0 (>= 2.24.0),
+               libpango1.0-0 (>= 1.14.0),
+               libsqlite3-0 (>= 3.5.9),
+               libx11-6
+Standards-Version: 3.9.3
+Homepage: http://sites.google.com/site/mynotex/
+
+Package: mynotex
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Free note-taking and note manager for GNU/Linux
+ MyNotex is a free software for Gnu/Linux useful to take and to
+ manage textual notes, also a large number of them. Notes are
+ gathered under different subjects and are made by a title,
+ a date, a tags (keywords) list and a free-length text.
+ .
+ This may be formatted: it is possible to change the font name,
+ size and color of a selected text and of its background,
+ and also to set bold, italic, underline and strike-through;
+ the text may have pictures within it. The software can manage
+ paragraph alignment, bullets and numbered lists with automatic
+ indentation. A single file of MyNotex contains various subjects
+ and notes.

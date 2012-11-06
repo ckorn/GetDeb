@@ -1,0 +1,5 @@
+invulgotracker (0.61-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #491674)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 19 Jan 2010 20:26:41 +0100

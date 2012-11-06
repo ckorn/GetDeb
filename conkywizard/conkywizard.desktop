@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=ConkyWizard
+Exec=conkywizard
+Icon=conkywizard
+Terminal=false
+Type=Application
+Categories=Utility;

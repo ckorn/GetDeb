@@ -1,0 +1,13 @@
+debian/tvbrowser.png			usr/share/pixmaps
+tvbrowser.desktop			usr/share/applications
+debian/scripts/tvbrowser		usr/bin
+hyphen					usr/share/tvbrowser
+icons					usr/share/tvbrowser
+imgs					usr/share/tvbrowser
+personas				usr/share/tvbrowser
+plugins					usr/share/tvbrowser
+themepacks				usr/share/tvbrowser
+*.url					usr/share/tvbrowser
+linux.properties			usr/share/tvbrowser
+tvbrowser.jar				usr/share/tvbrowser
+tvbrowser.sh				usr/share/tvbrowser

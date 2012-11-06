@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=python_distutils --with python2
+
+override_dh_auto_install:
+	dh_auto_install -- --install-lib=/usr/share/bleachbit
+	make -C po install DESTDIR=$(CURDIR)/debian/bleachbit
+	find $(CURDIR)/debian/bleachbit -name "*.egg-info" -delete
+
+override_dh_install:
+	# Do not install Windows-specific cleaners
+	dh_install $(addprefix -X,$(notdir $(shell grep -l os=.windows. cleaners/*.xml | xargs ls)))
+	# Automatically generate .desktop file to invoke BleachBit as superuser
+	sed -e "s/Name=BleachBit/Name=BleachBit \(as root\)/; \
+		s/TryExec=bleachbit/TryExec=su-to-root/; \
+		s/Exec=bleachbit/Exec=su-to-root -X -c bleachbit/" \
+		bleachbit.desktop > debian/bleachbit/usr/share/applications/bleachbit-root.desktop
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x $(CURDIR)/debian/bleachbit/usr/share/bleachbit/bleachbit.py

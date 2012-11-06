@@ -1,0 +1,20 @@
+Source: gimp-save-for-web
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev,
+ pkg-config, libgimp2.0-dev, autoconf,
+ libglib2.0-dev, automake1.7, libtool
+Homepage: http://registry.gimp.org/node/33
+Standards-Version: 3.9.1
+
+Package: gimp-save-for-web
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gimp
+Description: Save for Web (GIMP plugin)
+ Save for Web allows to find compromise between minimal file size
+ and acceptable quality of image quickly. While adjusting various
+ settings, you may explore how image quality and file size change.
+ Options to reduce file size of an image include setting compression
+ quality, number or colors, resizing, cropping, Exif information
+ removal, etc.

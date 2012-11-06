@@ -1,0 +1,20 @@
+lyx (1.5.1-2) unstable; urgency=low
+
+    In the 1.5.x version series, LyX has finally gained UTF-8 support.
+  
+    Starting with the 1.5.x series, LyX only provides one frontend, based
+    on Qt 4. Therefore, we have removed the lyx-qt and lyx-xforms
+    packages. All binaries are now included in the lyx package.
+
+ -- Per Olofsson <pelle@debian.org>  Sat, 15 Sep 2007 21:46:40 +0200
+
+lyx (1.4.2-1) unstable; urgency=low
+
+    Since version 1.4.2, LyX no longer creates a global configuration file
+    with the '/usr/share/lyx/configure' script.
+    If you want to reconfigure your LyX setup you can run
+    "cd ~/.lyx && /usr/share/lyx/configure.py" by hand or use
+    Tools->Reconfigure from LyX's menu.
+
+ -- Sven Hoexter <sven@timegate.de>  Wed, 29 June 2006 18:41:18 +0200
+

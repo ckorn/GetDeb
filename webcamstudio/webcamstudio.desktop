@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=WebcamStudio
+Type=Application
+Categories=Application;AudioVideo;
+Terminal=false
+Icon=webcamstudio
+Exec=/usr/bin/webcamstudio
+Comment=WebcamStudio for GNU/Linux

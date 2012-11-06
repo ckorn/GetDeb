@@ -1,0 +1,56 @@
+Source: lince
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 9),
+               libgtkmm-3.0-dev,
+               libboost-filesystem1.46-dev,
+               libglibmm-2.4-dev,
+               libxml2-dev,
+               libboost-date-time1.46-dev,
+               libboost1.46-dev,
+               libnotify-dev,
+               libglib2.0-dev,
+               libboost-program-options1.46-dev,
+               libboost-regex1.46-dev,
+               libboost-signals1.46-dev,
+               libboost-thread1.46-dev,
+               libtorrent-rasterbar-dev,
+               libgeoip-dev,
+               python | python-all | python-dev | python-all-dev
+Standards-Version: 3.9.3
+Homepage: http://lincetorrent.sourceforge.net
+
+Package: lince
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends},
+         libcanberra-gtk-module,
+         liblince-1-0 (= ${binary:Version})
+Description: Bittorrent client inspired by azureus
+ Lince is a bittorrent client inspired by
+ azureus using gtkmm and libtorrent.
+
+Package: lince-dbg
+Architecture: any
+Priority: extra
+Section: debug
+Depends: ${misc:Depends},
+         lince (= ${binary:Version})
+Description: Bittorrent client inspired by azureus (debug package)
+ Lince is a bittorrent client inspired by
+ azureus using gtkmm and libtorrent.
+ .
+ (This package contains the debug symbols).
+
+Package: liblince-1-0
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Bittorrent client inspired by azureus (library package)
+ Lince is a bittorrent client inspired by
+ azureus using gtkmm and libtorrent.
+ .
+ (This package contains the library files).

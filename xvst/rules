@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	qmake -set build_mode dynamic_build
+	qmake
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf bin build

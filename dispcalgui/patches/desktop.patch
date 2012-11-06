@@ -1,0 +1,28 @@
+I: dispcalgui: desktop-entry-contains-encoding-key usr/share/applications/dispcalGUI.desktop:3 Encoding
+N: 
+N:    The Encoding key is now deprecated by the FreeDesktop standard and all
+N:    strings are required to be encoded in UTF-8. This desktop entry
+N:    explicitly specifies an Encoding of UTF-8, which is harmless but no
+N:    longer necessary.
+N:    
+N:    The desktop-file-validate tool in the desktop-file-utils package is
+N:    useful for checking the syntax of desktop entries.
+N:    
+N:    Refer to
+N:    http://standards.freedesktop.org/desktop-entry-spec/1.0/apc.html for
+N:    details.
+N:    
+N:    Severity: wishlist, Certainty: certain
+N:    
+N:    Check: menu-format, Type: binary
+Index: dispcalgui-0.9.9.1/misc/dispcalGUI.desktop
+===================================================================
+--- dispcalgui-0.9.9.1.orig/misc/dispcalGUI.desktop	2010-09-19 21:22:17.000000000 +0200
++++ dispcalgui-0.9.9.1/misc/dispcalGUI.desktop	2012-05-06 11:25:52.068740820 +0200
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ Type=Application
+ Name=dispcalGUI
+ Name[de]=dispcalGUI

@@ -1,0 +1,17 @@
+wakeonplan (0.0.0+bzr61-1~getdeb1) precise; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 28 Sep 2012 20:09:58 +0200
+
+wakeonplan (0.5public2ubuntu1) precise; urgency=low
+
+  * Fixed notification not showing because of empty title string
+
+ -- Сергій Загорія <xintx.ua@gmail.com>  Fri, 06 Jul 2012 13:56:44 +0300
+
+wakeonplan (0.5public1ubuntu1) precise; urgency=low
+
+  * Release. Fixed minor packaging issues.
+
+ -- Сергій Загорія <xintx.ua@gmail.com>  Fri, 06 Jul 2012 13:56:44 +0300

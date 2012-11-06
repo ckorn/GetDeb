@@ -1,0 +1,12 @@
+utrac (0.3.0-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #365109)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 19 Jan 2010 21:03:50 +0100
+
+utrac (0.3.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- KLEIN Stéphane <stephane@harobed.org>  Fri, 02 Jan 2009 18:43:18 +0100
+

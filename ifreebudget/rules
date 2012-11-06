@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+  
+build: build-stamp
+
+build-stamp:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	dh_clean
+	[ ! -f build-stam ] || rm build-stamp
+	rm -rf ifreebudget
+
+install: build
+	dh_testdir
+	dh_testroot
+	unzip iFreeBudget-*zip
+	mv fm ifreebudget
+	rm ifreebudget/iFreeBudget.exe
+	rm ifreebudget/run_fedora.sh
+	rm ifreebudget/run.bat
+	rm ifreebudget/rrun.sh
+	dh_install
+
+# Build architecture-dependent files here.
+binary-arch:
+# Nothing to do by default
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs -Xlicense.txt
+	dh_installdeb
+	dh_compress
+	dh_fixperms
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-arch binary-indep binary install
+

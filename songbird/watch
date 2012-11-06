@@ -1,0 +1,3 @@
+version=3
+http://wiki.songbirdnest.com/Developer/Articles/Builds/Contributed_Builds \
+    http://download\.songbirdnest\.com/installer/linux/i686/Songbird_(\d.+)-\d+_linux-i686\.tar\.gz

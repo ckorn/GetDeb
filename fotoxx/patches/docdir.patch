@@ -1,0 +1,14 @@
+We put the documentation in an own directory.
+Index: fotoxx-12.11/zfuncs.cc
+===================================================================
+--- fotoxx-12.11.orig/zfuncs.cc	2012-11-01 11:20:02.000000000 +0100
++++ fotoxx-12.11/zfuncs.cc	2012-11-01 21:04:48.479009814 +0100
+@@ -3276,7 +3276,7 @@
+    strncatv(zdatadir,199,work,"/share/",zappname,"/data",null);            //  /prefix/share/appname/data
+    strncatv(zicondir,199,work,"/share/",zappname,"/icons",null);           //  /prefix/share/appname/icons
+    strncatv(zlocalesdir,199,work,"/share/",zappname,"/locales",null);      //  /prefix/share/appname/locales
+-   strncatv(zdocdir,199,work,"/share/doc/",zappname,null);                 //  /prefix/share/doc/appname
++   strncatv(zdocdir,199,work,"/share/doc/",zappname,"/extras/",null);                 //  /prefix/share/doc/appname/extras
+    
+    #ifdef DOCDIR
+       strncpy0(zdocdir,DOCDIR,199);                                        //  flexible DOCDIR location

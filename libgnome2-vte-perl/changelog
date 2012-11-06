@@ -1,0 +1,24 @@
+libgnome2-vte-perl (0.10-1~getdeb2~precise) precise; urgency=low
+
+  * Rebuild for precise.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 12 Apr 2012 20:25:41 +0200
+
+libgnome2-vte-perl (0.10-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    * Avoid a segfault in the tests.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 03 Mar 2012 16:18:06 +0100
+
+libgnome2-vte-perl (0.09-1~getdeb2~oneiric) oneiric; urgency=low
+
+  * Rebuild for oneiric
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Oct 2011 20:19:03 +0200
+
+libgnome2-vte-perl (0.09-1~getdeb1) lucid; urgency=low
+
+  * Initial Release.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 8 May 2010 20:39:51 +0200

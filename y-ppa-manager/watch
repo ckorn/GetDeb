@@ -1,0 +1,3 @@
+version=3
+http://ppa.launchpad.net/webupd8team/y-ppa-manager/ubuntu/pool/main/y/y-ppa-manager/ \
+    (?:.*/)?y-ppa-manager_([\d\.]+)(?:.*)\.tar\.gz

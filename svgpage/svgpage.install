@@ -1,0 +1,3 @@
+*.py *.svg *.png *.cfg				usr/share/svgpage
+debian/scripts/svgpage				usr/bin
+debian/svgpage.desktop				usr/share/applications

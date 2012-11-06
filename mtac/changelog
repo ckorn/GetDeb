@@ -1,0 +1,5 @@
+mtac (0.1~alpha-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #339203)
+
+ -- Christoph Korn <c_korn@gmx.de>  Mon, 26 Oct 2009 12:59:08 +0100

@@ -1,0 +1,24 @@
+This work was packaged for Debian by:
+
+    Christoph Korn <christoph.korn@getdeb.net> on Fri, 30 Apr 2010 13:05:50 +0200
+
+It was downloaded from http://kuthulu.com/gcm/?module=download
+
+Upstream Author:
+
+    Renzo Bertuzzi <gcm@kuthulu.com>
+
+Copyright:
+
+    Copyright (C) 2010 Renzo Bertuzzi
+
+License:
+
+    Open Source
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Christoph Korn <christoph.korn@getdeb.net>
+
+and is licensed under the GPL version 3, 
+see `/usr/share/common-licenses/GPL-3'.

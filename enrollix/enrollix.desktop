@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Enrollix
+Comment=A free software to manage enrollments
+Exec=env LIBOVERLAY_SCROLLBAR=0 /usr/bin/enrollix
+Terminal=false
+Type=Application
+Icon=enrollix
+Categories=Office;
+Name[en]=Enrollix
+GenericName=Enrollix

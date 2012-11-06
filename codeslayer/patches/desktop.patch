@@ -1,0 +1,19 @@
+Encoding is deprecated.
+Index: codeslayer-1.2.1/codeslayer.desktop.in
+===================================================================
+--- codeslayer-1.2.1.orig/codeslayer.desktop.in	2011-06-10 12:05:38.722531035 +0200
++++ codeslayer-1.2.1/codeslayer.desktop.in	2011-06-10 12:05:42.362531037 +0200
+@@ -1,11 +1,10 @@
+ [Desktop Entry]
+ Type=Application
+ Version=1.0
+-Encoding=UTF-8
+ Name=CodeSlayer Source Editor
+ Comment=A lightweight source code editor
+ Exec=codeslayer
+ Icon=codeslayer.png
+ Terminal=false
+ Categories=GTK;Development;IDE;
+-StartupNotify=true
+\ No newline at end of file
++StartupNotify=true

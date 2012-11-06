@@ -1,0 +1,278 @@
+synergy (1.4.10-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Bug #2799 - Right shift broken (Windows server, Mac OS X client)
+    Bug #3302 - GUI does not show/hide when tray icon is double clicked
+    (Windows)
+    Bug #3303 - Mac OS X IPC integ test fails intermittently
+    Feature #2974 - Gesture Support for Magic Mouse/Trackpad
+    Feature #3172 - Button to stop Synergy when in service mode
+    Feature #3241 - Option to elevate synergyc/s when in service mode
+    Feature #3242 - Show a list of available IP addresses and screen name on
+    the main screen
+    Feature #3296 - 64-bit Windows installer should display helpful message
+    on 32-bit Windows
+    Feature #3300 - Make service mode default mode (now that we have elevate
+    option)
+    Feature #3301 - Add process mode option to settings (remove startup
+    wizard page)
+    Feature #3306 - Gatekeeper compatibility on Mac OS X 10.8
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 31 Jul 2012 18:03:46 +0200
+
+synergy (1.4.9-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Bug #3159 - In service mode, server doesn't start unless GUI is running
+    Bug #3214 - Client sometimes can't connect if GUI is closed
+    Bug #56 - Mac OS X server not sending keystrokes to client
+    Bug #3161 - First time GUI appears, service doesn't send logging
+    Bug #3164 - In service mode, you need to add a firewall exception
+    Bug #3166 - Service shutdown stalls when GUI is closed
+    Bug #3216 - Fatal error if plugins folder doesn't exist
+    Bug #3221 - ERROR: could not connect to service, error: 2
+    Feature #3192 - Add support for JOYINFOEX structure to poll
+                    game device info
+    Feature #3202 - Plugin support (sending for primary screen
+                    events on Windows only)
+    Feature #3155 - Cross-platform TCP IPC between GUI and service
+    Task #3177 - Fix Mac buildslave to build multiple versions
+    Task #3193 - Add Micro Synergy to repository
+    Task #3275 - Change hostname label to "IP address or hostname"
+    Task #3276 - Installation recovery mechanism for synrgyhk.dll
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Jul 2012 18:51:34 +0200
+
+synergy (1.4.8-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+    Bug #143: Cursor on Mac OS X goes to center when inactive
+    Bug #146: Screen Resize causes problems with moving off right-hand side
+              of screen
+    Bug #3058: Modifier keys not working on Mac OS X server
+    Bug #3139: Double click too strict (click, move, click should not count)
+    Bug #3195: Service install can fail first time
+    Bug #3196: Wizard buttons not visible
+    Bug #3197: GUI doesn't take focus after install
+    Bug #3202: Hook DLL (synrgyhk.dll) is not released
+    Feature #3143: Setup wizard for first time users
+    Feature #3145: Check for updates
+    Feature #3174: Startup mode wizard page
+    Feature #3184: New service for process management
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Apr 2012 22:16:42 +0200
+
+synergy (1.4.7-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 21:41:51 +0200
+
+synergy (1.3.8-1ubuntu1) precise; urgency=low
+
+  * Import Feng Ye's patch from
+    http://synergy-foss.org/tracker/issues/3043 as a fix for upstream 3063
+    (original patcher in 3063 agreed 3043 fix was better, although the fix in
+    3063 is currently in upstream). LP: #908578
+
+ -- Dr. David Alan Gilbert <dave@treblig.org>  Mon, 26 Dec 2011 09:51:48 +0100
+
+synergy (1.3.8-1) unstable; urgency=low
+
+  * New upstream version.
+  * Switch to 3.0 (quilt) source format.
+  * Apply upstream patch to fix GNOME 3 issues.  Closes: #649208.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 04 Dec 2011 18:58:04 -0500
+
+synergy (1.3.7-1) unstable; urgency=low
+
+  * New upstream version.
+  * Update Standards-Version, fix new lintian warnings.
+  * Add test suites to build.  One appears unreliable; disable
+    until fixed.
+  * Switch back to the Debian-specific man pages, which are better.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 02 Oct 2011 19:37:04 -0400
+
+synergy (1.3.6-1) unstable; urgency=low
+
+  * New upstream version.  Closes: #611056.
+  * Pull in previous updates from experimental.
+    Closes: #591372.
+  * Switch to cmake from autotools.
+  * Drop obsolete docs.
+  * Use project-suppled man pages instead of Debian-specific ones.
+  * Update watch file to point to new synergy project.  Closes: #611726.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 13 Feb 2011 21:34:22 -0500
+
+synergy (1.3.4-1) experimental; urgency=low
+
+  * New upstream version.
+  * Set source package version.
+  * Update Standards-Version.
+  * Fix doc links to "obsolete" docs.
+  * Updated documentation and Homepage to reflect the merger
+    with synergy-plus.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 09 Nov 2010 16:44:15 -0500
+
+synergy (1.3.1-6) unstable; urgency=low
+
+  * Apply similar patch to synergyc.  Closes: #520008.
+  * Update Standards-Version and debhelper compatibility.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 31 Mar 2009 15:18:57 -0400
+
+synergy (1.3.1-5) unstable; urgency=low
+
+  * Apply patch from Carlo Wood which fixes a crash in synergys
+    with XCB.  Closes: #495498.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 07 Sep 2008 23:25:43 -0400
+
+synergy (1.3.1-4) unstable; urgency=low
+
+  * Apply patch from Mike Stroyan which fixes some race conditions.
+    Closes: #432938.
+  * Re-jigger how options get passed to configure in debian/rules.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 24 Jun 2008 22:13:36 -0400
+
+synergy (1.3.1-3) unstable; urgency=low
+
+  * New maintainer.  Closes: #470186.
+  * Update Standards-Version.
+  * Add Homepage and Vcs-* fields.
+  * Fix lintian warnings on copyright and doc-base files.
+    Closes: #430783.
+  * Fix problem with synergys man page.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 07 Jun 2008 19:26:22 -0500
+
+synergy (1.3.1-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * fix g++-4.3 FTBFS (Closes: 417719).
+
+ -- Pierre Habouzit <madcoder@debian.org>  Sun, 16 Mar 2008 22:01:24 +0000
+
+synergy (1.3.1-2) unstable; urgency=low
+
+  * added build-dependency on libxt-dev (closes: #367837)
+  * Bumped Standard-Version to 3.7.2. no change.
+
+ -- Cord Beermann <cord@debian.org>  Wed, 31 May 2006 22:57:17 +0200
+
+synergy (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Cord Beermann <cord@debian.org>  Sat,  8 Apr 2006 20:44:18 +0200
+
+synergy (1.3.0-1) unstable; urgency=low
+
+  * New upstream release
+  * should fix 'Shift key does not work inside VMware' (closes: #321055)
+  * closing old unreproducable bug (closes: #276282)
+
+ -- Cord Beermann <cord@debian.org>  Sat,  1 Apr 2006 09:04:14 +0200
+
+synergy (1.2.8-2) unstable; urgency=low
+
+  * doc-base install-docs control files do not appear to have a syntax
+    for comments. comments removed. thanks to Paul Cannon
+    for the diagnosis. (closes: #351997)
+
+ -- Cord Beermann <cord@cord.de>  Thu,  9 Feb 2006 23:25:34 +0100
+
+synergy (1.2.8-1) unstable; urgency=low
+
+  * Hijack the package (closes: #349746)
+  * Rebuild the package from scratch.
+  * moved package from 'net' to 'x11'.
+
+ -- Cord Beermann <cord@debian.org>  Sat,  4 Feb 2006 22:48:34 +0100
+
+synergy (1.2.7-0.2) unstable; urgency=low
+
+  * Non-maintainer upload
+  * configure is unhappy, adding xutils.
+
+ -- Cord Beermann <cord@debian.org>  Tue, 24 Jan 2006 16:50:40 +0100
+
+synergy (1.2.7-0.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * New upstream release (closes: #323922)
+  * fix FTBFS: build-depends on removed xlibs-dev (closes: #347066)
+
+ -- Cord Beermann <cord@debian.org>  Mon, 16 Jan 2006 16:39:53 +0100
+
+synergy (1.2.2-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#293461, Bug#279660, Bug#192516)
+  * Corrected typo in synergys.1 (s/heatbeat/heartbeat)
+    (closes: Bug#273236)
+
+ -- Daniel Lutz <danlutz@debian.org>  Wed, 16 Feb 2005 21:35:41 +0100
+
+synergy (1.0.14-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#195043, Bug#189953, Bug#211309)
+  * Added synergys.sgml and synergyc.sgml.
+  * Changed debian/rules to use docbook-to-man.
+  * Added docbook-to-man to debian/control Build-Depends.
+  * Updated synergys and synergyc manual pages.
+  * Happy Halloween!
+  * Packaged by Titus Barik <barik@ieee.org>
+    Thanks a lot!
+
+ -- Daniel Lutz <danlutz@debian.org>  Fri, 31 Oct 2003 19:36:30 -0500
+
+synergy (1.0.3-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#178504)
+  * Changed Standards-Version to 3.5.8
+  * Removed `dh_undocumented' from debian/rules
+  * Removed gcc-3.2 handling for hppa from debian/rules
+
+ -- Daniel Lutz <danlutz@debian.org>  Tue, 18 Feb 2003 12:39:12 +0100
+
+synergy (0.9.12-3) unstable; urgency=low
+
+  * Build-depend on g++-3.2 on `hppa' platform.
+    Choose gcc-3.2 and g++-3.2 instead of default compilers
+    in rules file if platform is `hppa'.
+    (This is needed because on `hppa', gcc-3.0 produces an ICE.)
+
+ -- Daniel Lutz <danlutz@debian.org>  Tue,  1 Oct 2002 22:13:22 +0200
+
+synergy (0.9.12-2) unstable; urgency=low
+
+  * Changed order of inclusion of files "CLog.h" and "std[fs]stream.h"
+    in cmd/synergys/synergys.cpp, lib/http/CHTTPProtocol.cpp
+    and lib/server/CHTTPServer.cpp so that it compiles with
+    gcc 3.2.
+
+ -- Daniel Lutz <danlutz@debian.org>  Mon, 30 Sep 2002 22:07:11 +0200
+
+synergy (0.9.12-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#160729)
+
+ -- Daniel Lutz <danlutz@debian.org>  Thu, 19 Sep 2002 12:58:51 +0200
+
+synergy (0.9.8-1) unstable; urgency=low
+
+  * Initial Release.
+    (closes: Bug#156849)
+  * Added manual pages.
+
+ -- Daniel Lutz <danlutz@debian.org>  Thu, 15 Aug 2002 23:00:53 +0200
+

@@ -1,0 +1,24 @@
+Source: libroadnav
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), autotools-dev,
+ wx2.8-headers, libwxbase2.8-dev, libwxgtk2.8-dev
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://roadnav.sourceforge.net
+
+Package: libroadnav-dev
+Section: libdevel
+Architecture: any
+Depends: libroadnav1 (= ${binary:Version}), ${misc:Depends}
+Description: Library for RoadNav (header files)
+ Library for RoadNav.
+ .
+ (This package contains the header files)
+
+Package: libroadnav1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library for RoadNav
+ Library for RoadNav

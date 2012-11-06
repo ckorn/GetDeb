@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Gravit
+Exec=/usr/bin/gravit
+Icon=/usr/share/gravit/data/gravit.png
+Terminal=false
+Type=Application
+Categories=Utility

@@ -1,0 +1,4 @@
+?package(avidemux2.6-qt):needs="X11" section="Applications/Graphics" \
+  title="avidemux" \
+  icon="/usr/share/pixmaps/avidemux2.6-qt.xpm" \
+  command="/usr/bin/avidemux3_qt4"

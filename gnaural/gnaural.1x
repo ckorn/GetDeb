@@ -1,0 +1,65 @@
+.TH "GNAURAL" "1" "April 21, 2006" "Bret Logan" "sound"
+.SH "NAME"
+.B gnaural 
+\- programmable binaural beat audio generator
+.SH "SYNOPSIS"
+.B gnaural
+.RI [ options ]
+.br 
+.SH "DESCRIPTION"
+\fBgnaural\fP is a programmable binaural beat generator. It outputs in stereo 44.1khz PCM WAV format following directives in file:
+.br 
+\fI~/.gnaural/gnaural_schedule.txt\fR
+.PP 
+For more info see:
+.br 
+\fIhttp://gnaural.sourceforge.net/\fR
+.SH "OPTIONS"
+A summary of
+.B gnaural 
+options is included below.
+.TP 
+.B \-w [file.wav]
+write output to a .WAV file
+.TP 
+.B \-o
+write output to stdout (for redirection)
+.TP 
+.B \-p
+play output through sound system
+.TP 
+.B \-a
+specify sound card (optional)
+.TP 
+.B \-s
+create default file ~/.gnaural/gnaural_schedule.txt
+.TP 
+.B \-i
+show runtime info on screen (use with \-p or \-w)
+.TP 
+.B \-d
+output debug info
+.TP 
+.B \-h
+Brief help info
+.SH "EXAMPLES"
+.TP 
+Create a CD\-compatible WAV file:
+.B gnaural \-iw MyMeditation.wav
+.TP 
+Play directly through sound system:
+.B gnaural \-pi
+.TP 
+Pipe Gnaural through LAME to create an MP3:
+.B gnaural \-o | lame \- MyMeditation.mp3
+.SH "SEE ALSO"
+.BR lame (1).
+.PP 
+Further documentation can be found on the project's website:
+.br 
+\fIhttp://gnaural.sourceforge.net/\fR
+.SH "AUTHOR"
+\fBgnaural\fR 
+and this manual page were written by:
+.br 
+Bret Logan <gnaural@users.sourceforge.net>.

@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	cp lib/libjpen-2-2-x86_64.so debian/alchemy/usr/share/alchemy/lib
+else
+	cp lib/libjpen-2-2.so debian/alchemy/usr/share/alchemy/lib
+endif

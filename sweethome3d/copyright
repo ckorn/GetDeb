@@ -1,0 +1,22 @@
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=202
+Upstream-Name: Sweet Home 3D - Interior 2D design application with 3D preview
+Upstream-Contact: Emmanuel Puybaret, eTeks <info@eteks.com>
+Source: http://www.sweethome3d.com/
+
+Files: *
+Copyright: 2006-2011, Emmanuel Puybaret, eTeks <info@eteks.com>
+License: GPL-2+
+ On Debian systems the full text of the GNU General Public License can be found
+ in the `/usr/share/common-licenses/GPL-2' file.
+
+Files: src/com/eteks/sweethome3d/swing/resources/icons/tango/*
+Copyright: Public Domain
+License: public-domain
+ Tango theme toolbar and menus icons included as part of this product are in
+ public domain.
+
+Files: debian/*
+Copyright: 2011, Gabriele Giacone <1o5g4r8o@gmail.com>
+License: GPL-2+
+ On Debian systems the full text of the GNU General Public License can be found
+ in the `/usr/share/common-licenses/GPL-2' file.

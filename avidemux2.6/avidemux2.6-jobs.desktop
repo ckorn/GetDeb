@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Avidemux 2.6 (Jobs)
+GenericName=Video Editor Jobs application
+TryExec=avidemux3_jobs
+Exec=avidemux3_jobs
+Icon=avidemux2.6-jobs
+Terminal=false
+Type=Application
+Categories=AudioVideo

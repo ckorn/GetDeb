@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+  
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+DEB_MAKE_INSTALL_TARGET := install DESTDIR=$(CURDIR)/debian/rubyripper prefix=/usr
+
+configure/rubyripper::
+	./configure --prefix=/usr --ruby=/usr/lib/ruby/1.8 \
+	  --enable-cli --enable-lang-all --enable-gtk2
+
+make/rubyripper::
+	make
+
+install/rubyripper::
+	make install DESTDIR=$(CURDIR)/debian/rubyripper
+	chmod -x rubyripper.png
+
+clean::
+	rm -f Makefile
+	rm -f locale/*/*/*.mo

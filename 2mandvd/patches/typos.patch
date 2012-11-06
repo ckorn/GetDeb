@@ -1,0 +1,227 @@
+Just fix some typos.
+Index: 2mandvd-1.8.4/2mandvd_en.ts
+===================================================================
+--- 2mandvd-1.8.4.orig/2mandvd_en.ts	2012-06-19 05:32:36.000000000 +0200
++++ 2mandvd-1.8.4/2mandvd_en.ts	2012-10-30 14:13:59.000000000 +0100
+@@ -666,7 +666,7 @@
+         <location filename="mainfrm.cpp" line="1838"/>
+         <source>ATTENTION ! il manque certaines dependances pour le bon fonctionnement de l&apos;application. Liste des dependances manquantes : 
+ </source>
+-        <translation>WARNING ! Missing dependancies :</translation>
++        <translation>WARNING ! Missing dependencies :</translation>
+     </message>
+     <message>
+         <location filename="mainfrm.cpp" line="2109"/>
+@@ -1108,7 +1108,7 @@
+     <message>
+         <location filename="mainfrm.ui" line="3279"/>
+         <source>Informations</source>
+-        <translation>Informations</translation>
++        <translation>Information</translation>
+     </message>
+     <message>
+         <location filename="mainfrm.ui" line="3282"/>
+Index: 2mandvd-1.8.4/mainfrm.cpp
+===================================================================
+--- 2mandvd-1.8.4.orig/mainfrm.cpp	2012-06-22 13:59:54.000000000 +0200
++++ 2mandvd-1.8.4/mainfrm.cpp	2012-10-30 17:09:18.994744796 +0100
+@@ -1518,7 +1518,7 @@
+         connect(bt_cancel_drawing_menu, SIGNAL(clicked()),this, SLOT(f_cancel_pencil_menu()));
+ 
+ 	// *** TEST DES DEPENDANCES ***
+-        splash.showMessage("Control dependancies",spal,Qt::white);
++        splash.showMessage("Control dependencies",spal,Qt::white);
+         splash.setPixmap(pixmap3);
+ 	QFile wmyficext;
+ 	QTextStream outext(&wmyficext);
+@@ -1537,7 +1537,7 @@
+ 	outext << "mpeg2enc" << endl;
+     outext << "convert" << endl;
+         outext << "jpegtopnm /dev/null" << endl;
+-        outext << "cat " << (QString)DEF_FAKE << "/fake.pl" << endl;
++        outext << "cat /usr/share/2ManDVD/fake.pl" << endl;
+         outext << "rm -f " << homeDir.path() << "/.mdvdep.sh" << endl;
+ 	outext << "exit" << endl;
+ 	wmyficext.close();
+@@ -2140,7 +2140,7 @@
+ 		}
+ 		else
+ 		{
+-			qDebug() << "ERROR CREATING ENVIRONEMENT ************************************";
++			qDebug() << "ERROR CREATING ENVIRONMENT ************************************";
+ 			QMessageBox::information(this, name_application, tr("Impossible de créer les dossiers de travail"));
+ 		}
+ 
+Index: 2mandvd-1.8.4/project.cpp
+===================================================================
+--- 2mandvd-1.8.4.orig/project.cpp	2012-06-12 05:45:20.000000000 +0200
++++ 2mandvd-1.8.4/project.cpp	2012-10-30 14:13:59.000000000 +0100
+@@ -725,7 +725,7 @@
+ 			}
+ 			else
+ 			{
+-				qDebug() << "ERROR CREATING ENVIRONEMENT ************************************";
++				qDebug() << "ERROR CREATING ENVIRONMENT ************************************";
+ 				QMessageBox::information(this, name_application, tr("Impossible de créer les dossiers de travail"));
+ 				this->setEnabled(true);
+ 			}
+Index: 2mandvd-1.8.4/diaporama.cpp
+===================================================================
+--- 2mandvd-1.8.4.orig/diaporama.cpp	2012-06-25 09:31:26.000000000 +0200
++++ 2mandvd-1.8.4/diaporama.cpp	2012-10-30 17:13:14.098737803 +0100
+@@ -3344,11 +3344,11 @@
+         {
+             if ( dvd_format == "4/3" )
+             {
+-                outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -oac lavc -ovc lavc -vf harddup -of mpeg -mpegopts format=dvd:tsaf:vbitrate=9700:muxrate=7500 -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:aspect=4/3:vrc_buf_size=1835:vrc_maxrate=9800:threads=" + QString::number(nbre_threads) + ":vbitrate=9800:keyint=12:vstrict=0:acodec=ac3:abitrate=128 -cache 8192 -audiofile silent.mp2 | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -oac lavc -ovc lavc -vf harddup -of mpeg -mpegopts format=dvd:tsaf:vbitrate=9700:muxrate=7500 -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:aspect=4/3:vrc_buf_size=1835:vrc_maxrate=9800:threads=" + QString::number(nbre_threads) + ":vbitrate=9800:keyint=12:vstrict=0:acodec=ac3:abitrate=128 -cache 8192 -audiofile silent.mp2 | perl /usr/share/2ManDVD/fake.pl" << endl;
+             }
+             else
+             {
+-                outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -oac lavc -ovc lavc -vf harddup -of mpeg -mpegopts format=dvd:tsaf:vbitrate=9700:muxrate=7500 -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:aspect=16/9:vrc_buf_size=1835:vrc_maxrate=9800:threads=" + QString::number(nbre_threads) + ":vbitrate=9800:keyint=12:vstrict=0:acodec=ac3:abitrate=128 -cache 8192 -audiofile silent.mp2 | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -oac lavc -ovc lavc -vf harddup -of mpeg -mpegopts format=dvd:tsaf:vbitrate=9700:muxrate=7500 -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:aspect=16/9:vrc_buf_size=1835:vrc_maxrate=9800:threads=" + QString::number(nbre_threads) + ":vbitrate=9800:keyint=12:vstrict=0:acodec=ac3:abitrate=128 -cache 8192 -audiofile silent.mp2 | perl /usr/share/2ManDVD/fake.pl" << endl;
+             }
+         }
+         else
+@@ -3357,11 +3357,11 @@
+             {
+                 if ( dvd_format == "4/3" )
+                 {
+-                    outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -ovc lavc -lavcopts vcodec=msmpeg4v2:vbitrate=800:aspect=4/3 -oac mp3lame -lameopts cbr:br=128 -audiofile silent.mp2 | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                    outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -ovc lavc -lavcopts vcodec=msmpeg4v2:vbitrate=800:aspect=4/3 -oac mp3lame -lameopts cbr:br=128 -audiofile silent.mp2 | perl /usr/share/2ManDVD/fake.pl" << endl;
+                 }
+                 else
+                 {
+-                    outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -ovc lavc -lavcopts vcodec=msmpeg4v2:vbitrate=800:aspect=16/9 -oac mp3lame -lameopts cbr:br=128 -audiofile silent.mp2 | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                    outext << "mencoder \"mf://*.jpg\" -noskip -mf w=" + QString::number(dvdxsize) + ":h=" + QString::number(dvdysize) + ":fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -ovc lavc -lavcopts vcodec=msmpeg4v2:vbitrate=800:aspect=16/9 -oac mp3lame -lameopts cbr:br=128 -audiofile silent.mp2 | perl /usr/share/2ManDVD/fake.pl" << endl;
+                 }
+             }
+             else
+@@ -3370,7 +3370,7 @@
+ 
+                 int cropy = (sizy-1080)/2;
+ 
+-                outext << "mencoder \"mf://*.jpg\" -noskip -mf fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -oac mp3lame -ovc lavc -lavcopts vcodec=mpeg4:threads=" + QString::number(nbre_threads) + ":vbitrate=2160000:mbd=2:keyint=132:v4mv:vqmin=3:vlelim=-4:vcelim=7:lumi_mask=0.07:dark_mask=0.10:naq:vqcomp=0.7:vqblur=0.2:mpeg_quant:aspect=16/9 -vf scale=1920:" + QString::number(sizy) + ",crop=1920:1080:0:" + QString::number(cropy) + " -audiofile silent.mp2 | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                outext << "mencoder \"mf://*.jpg\" -noskip -mf fps=" + wg_fps + ":type=jpg -o \"" + wg_str_int_001 + "\" -oac mp3lame -ovc lavc -lavcopts vcodec=mpeg4:threads=" + QString::number(nbre_threads) + ":vbitrate=2160000:mbd=2:keyint=132:v4mv:vqmin=3:vlelim=-4:vcelim=7:lumi_mask=0.07:dark_mask=0.10:naq:vqcomp=0.7:vqblur=0.2:mpeg_quant:aspect=16/9 -vf scale=1920:" + QString::number(sizy) + ",crop=1920:1080:0:" + QString::number(cropy) + " -audiofile silent.mp2 | perl /usr/share/2ManDVD/fake.pl" << endl;
+             }
+         }
+         outext << "rm -f *.wav" << endl;
+Index: 2mandvd-1.8.4/rendering.cpp
+===================================================================
+--- 2mandvd-1.8.4.orig/rendering.cpp	2012-06-13 11:14:12.000000000 +0200
++++ 2mandvd-1.8.4/rendering.cpp	2012-10-30 17:14:18.118735899 +0100
+@@ -1866,16 +1866,16 @@
+ 						{
+ 							if ( combo_format_dvd->currentIndex() < 2 )
+ 							{
+-                                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 							}
+ 							else
+ 							{
+-                                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 							}
+ 						}
+ 						else
+ 						{
+-                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=16/9:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=16/9:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 						}
+ 
+ 						if ( wl_nbrefois > 1 )
+@@ -1900,11 +1900,11 @@
+ 					{
+ 						if ( combo_format_dvd->currentIndex() < 2 )
+ 						{
+-                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 						}
+ 						else
+ 						{
+-                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 						}
+ 					}
+ 				}
+@@ -1931,16 +1931,16 @@
+ 					{
+ 						if ( combo_format_dvd->currentIndex() < 2 )
+ 						{
+-                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 						}
+ 						else
+ 						{
+-                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                        out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 						}
+ 					}
+ 					else
+ 					{
+-                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=16/9:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=576:fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=16/9:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=9000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 
+ 					if ( wl_nbrefois > 1 )
+@@ -1958,11 +1958,11 @@
+ 				{
+ 					if ( combo_format_dvd->currentIndex() < 2 )
+ 					{
+-                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=7000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=7000:keyint=15 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 					else
+ 					{
+-                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=7000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder \"mf://" + path_project +"/DVD/MAIN/MX" + QString::number(wg_int_001) + "-*.jpg\" -of rawvideo -mf w=720:h=480:fps=30000/1001:type=jpg -ovc lavc -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:vstrict=0:aspect=4/3:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=7000:keyint=18 -nosound -o " + QString::number(wg_int_001) + ".m2v | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 				}
+ 			}
+@@ -3254,22 +3254,22 @@
+ 				{
+                                         if ( combo_format_dvd->currentIndex() == 0 )
+ 					{
+-                                                out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) +  ":keyint=15:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=4/3 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) +  ":keyint=15:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=4/3 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 					else
+ 					{
+-                                                out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) +  ":keyint=18:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=4/3 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) +  ":keyint=18:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=4/3 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 				}
+ 				else
+ 				{
+                                         if ( combo_format_dvd->currentIndex() == 3 )
+                                         {
+-                                            out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf:telecine -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) + ":keyint=15:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=16/9 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                            out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf:telecine -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) + ":keyint=15:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=16/9 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+                                         }
+                                         else
+                                         {
+-                                            out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) + ":keyint=15:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=16/9 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                            out << "mencoder -v " + wl_str_encfmt + " -of mpeg -mpegopts format=dvd:tsaf -vf " + wl_supenc + wl_effects + ",harddup" + " -srate 48000 -af lavcresample=48000 " + wl_audio_delay + "-lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=" + QString::number(wl_vmax) + ":vbitrate=" + QString::number(wl_bitrate) + ":keyint=15:vstrict=0:acodec=" + global_audio + ":abitrate=128:aspect=16/9 " + wg_string_002 + "-ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_hdl_medias[wg_int_001]->pathname_media + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+                                         }
+ 				}
+ 				out << "echo GIBOSTEP" << endl;
+@@ -3359,16 +3359,16 @@
+ 				{
+ 					if ( combo_format_dvd->currentIndex() < 2 )
+ 					{
+-                                                out << "mencoder -oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=" + QString::number(dvdxsize) + ":" + QString::number(dvdysize) + ",harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=15:vstrict=0:acodec=ac3:abitrate=128:aspect=4/3 -ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_menus_property[wg_int_002][5] + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder -oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=" + QString::number(dvdxsize) + ":" + QString::number(dvdysize) + ",harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=15:vstrict=0:acodec=ac3:abitrate=128:aspect=4/3 -ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_menus_property[wg_int_002][5] + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 					else
+ 					{
+-                                                out << "mencoder -oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=" + QString::number(dvdxsize) + ":" + QString::number(dvdysize) + ",harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=18:vstrict=0:acodec=ac3:abitrate=128:aspect=4/3 -ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_menus_property[wg_int_002][5] + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                                out << "mencoder -oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=" + QString::number(dvdxsize) + ":" + QString::number(dvdysize) + ",harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=18:vstrict=0:acodec=ac3:abitrate=128:aspect=4/3 -ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_menus_property[wg_int_002][5] + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 					}
+ 				}
+ 				else
+ 				{
+-                                        out << "mencoder -oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=720:576,harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=15:vstrict=0:acodec=ac3:abitrate=128:aspect=16/9 -ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_menus_property[wg_int_002][5] + "\" | perl " + (QString)DEF_FAKE + "/fake.pl" << endl;
++                                        out << "mencoder -oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=720:576,harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:trell:mbd=2:sc_threshold=1000000000:cgop:threads=" + QString::number(nbre_threads) + ":vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=15:vstrict=0:acodec=ac3:abitrate=128:aspect=16/9 -ofps " + wl_fps + " -o \"" + path_project + "/DVD/MEDIAS/" + wg_string_001 + "\" \"" + table_menus_property[wg_int_002][5] + "\" | perl /usr/share/2ManDVD/fake.pl" << endl;
+ 				}
+ 				out << "echo GIBOSTEP" << endl;
+ 				wg_int_001++;

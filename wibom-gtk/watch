@@ -1,0 +1,2 @@
+version=3
+http://sf.net/wibom/wibom-gtk-([\d\.]+).*\.tar\.bz2

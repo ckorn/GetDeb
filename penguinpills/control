@@ -1,0 +1,16 @@
+Source: penguinpills
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~),
+ libqt4-dev, libboost1.42-dev
+Standards-Version: 3.9.2
+Homepage: http://penguinpills.sourceforge.net
+
+Package: penguinpills
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gksu
+Description: GUI for command line anti-virus scanners
+ Provides a graphical interface for multiple Linux
+ anti-virus scanners. Supports context menu scanning,
+ drag and drop file targets and signature updating.

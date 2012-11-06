@@ -1,0 +1,14 @@
+Set the correct script path.
+Index: urd-1.6.1/functions/defaults.php
+===================================================================
+--- urd-1.6.1.orig/functions/defaults.php	2012-10-15 23:23:47.000000000 +0200
++++ urd-1.6.1/functions/defaults.php	2012-10-27 13:24:03.815697094 +0200
+@@ -121,7 +121,7 @@
+     if (isset($_SESSION['trickle']))  { $prefArray_root['trickle_path']  = $_SESSION['trickle']; }
+     if (isset($_SESSION['subdownloader'])) {  $prefArray_root['subdownloader_path']  = $_SESSION['subdownloader']; }
+ 
+-    $prefArray_root['urdd_path'] = $pathc . 'urdd.sh'; // location where urdd is stored
++    $prefArray_root['urdd_path'] = '/usr/share/urd/urdd.sh'; // location where urdd is stored
+     if (isset($_SESSION['urdd'])) {
+         $prefArray_root['urdd_path']  = $_SESSION['urdd'];
+     }

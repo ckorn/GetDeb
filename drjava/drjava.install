@@ -1,0 +1,4 @@
+debian/scripts/*			usr/bin
+debian/*.desktop			usr/share/applications
+debian/drjava.png			usr/share/pixmaps
+*.jar					usr/share/drjava

@@ -1,0 +1,4 @@
+symon/symon			usr/bin
+symux/symux			usr/bin
+symon/symon.conf		etc
+symux/symux.conf		etc

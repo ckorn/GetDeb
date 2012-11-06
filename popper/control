@@ -1,0 +1,17 @@
+Source: popper
+Section: web
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50~), python-support, python (>=2.6)
+Standards-Version: 3.9.1
+Homepage: https://launchpad.net/popper
+
+Package: popper
+Architecture: all
+Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, python-gtk2,
+ python-gnomekeyring, python-notify, python-indicate
+Description: Email Notifier
+ Popper reads the new emails from POP3 and IMAP email servers
+ and notifies about the number, subject, sender and time
+ of new emails in the indicator applet and via a
+ notification bubble.

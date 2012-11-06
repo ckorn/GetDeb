@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Categories=Java;Network;FileTransfer;P2P
+Comment=Powerful BitTorrent client and open content platform
+Exec=vuze %f
+GenericName=Multimedia BitTorrent client
+Icon=/usr/share/pixmaps/Azureus.png
+MimeType=application/x-bittorrent
+Name=Vuze
+Type=Application

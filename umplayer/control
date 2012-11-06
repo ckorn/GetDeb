@@ -1,0 +1,43 @@
+Source: umplayer
+Section: video
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Maia Kozheva <sikon@ubuntu.com>
+Build-Depends: debhelper (>= 9),
+               libqt4-dev (>= 4.6.3),
+               zlib1g-dev
+Standards-Version: 3.9.3
+Homepage: http://umplayer.sourceforge.net/
+
+Package: umplayer
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         mplayer-nogui | mplayer
+Recommends: umplayer-translations, umplayer-themes
+Description: complete front-end for MPlayer
+ Qt Mplayer front-end, with basic features like playing
+ videos, DVDs, and VCDs to more advanced features like support
+ for MPlayer filters and more. One of the most interesting features
+ of UMPlayer: it remembers the settings of all files you play.
+ So you start to watch a movie but you have to leave... don't
+ worry, when you open that movie again it will resume at the same
+ point you left it, and with the same settings: audio track,
+ subtitles, volume...
+
+Package: umplayer-translations
+Architecture: all
+Depends: ${misc:Depends},
+         umplayer (>= ${source:Version})
+Replaces: umplayer (<< 0.5.62)
+Description: complete front-end for MPlayer - translation files
+ Qt Mplayer front-end, with basic features like playing
+ videos, DVDs, and VCDs to more advanced features like support
+ for MPlayer filters and more. One of the most interesting features
+ of UMPlayer: it remembers the settings of all files you play.
+ So you start to watch a movie but you have to leave... don't
+ worry, when you open that movie again it will resume at the same
+ point you left it, and with the same settings: audio track,
+ subtitles, volume...
+ .
+ This package contains translation files.

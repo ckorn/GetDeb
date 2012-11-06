@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+
+	chmod +x debian/urd/usr/share/urd/examples/example_script.urdd_sh
+	chmod +x debian/urd/usr/share/urd/urdd.init
+	chmod -x debian/urd/usr/share/urd/functions/libs/spot_signing.php
+	chmod -x debian/urd/usr/share/urd/html/smarty/templates/default/img/classic/waiting.png
+	rm debian/urd/usr/share/urd/docs/COPYING
+	rm debian/urd/usr/share/urd/html/smarty/templates/default/licence.tpl
+	rm debian/urd/usr/share/urd/functions/libs/smarty/COPYING.lib
+	rm debian/urd/usr/share/urd/functions/libs/adodb/license.txt
+	rm debian/urd/usr/share/urd/functions/libs/phplot/COPYING
+	touch debian/urd/usr/share/urd/html/smarty/c_templates/default/dont_delete
+	touch debian/urd/usr/share/urd/download/dont_delete
+	touch debian/urd/usr/share/urd/functions/libs/magpierss/cache/dont_delete
+	touch debian/urd/usr/share/urd/urdd/pid/dont_delete
+	find debian/urd -type d -empty -delete
+
+override_dh_installchangelogs:
+	dh_installchangelogs docs/CHANGELOG

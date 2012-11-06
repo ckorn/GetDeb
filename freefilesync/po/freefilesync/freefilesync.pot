@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Damien Lecan <dev@dlecan.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: realtimesync.desktop.in:3
+msgid "Start synchronization in real time"
+msgstr ""
+
+#: freefilesync.desktop.in:3
+msgid "Keep files and folders synchronized"
+msgstr ""
+

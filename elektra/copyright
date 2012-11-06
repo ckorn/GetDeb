@@ -1,0 +1,36 @@
+Format-Specification: http://dep.debian.net/deps/dep5/
+Name: Elektra
+Maintainer: Avi Alkalay <avi@unix.sh>
+Source: http://sourceforge.net/projects/elektra/files/
+
+Files: *
+Copyright: 2004, Avi Alkalay <avi@unix.sh>
+           Markus Raab <elektra@markus-raab.org>
+           Yannick Lecaillez <yl@itioweb.com>
+           Jens Andersen <jens.andersen@gmail.com>
+           Patrick Sabin <patricksabin@gmx.at>
+           Pier Luigi Fiorini <pierluigi.fiorini@mockup.org>
+           Rèmi <remipouak@yahoo.fr>
+           Studio-HB <contact@studio-hb.com>
+License: BSD
+
+Files: debian/*
+Copyright: 2009, Savvas Radevic <vicedar@gmail.com>
+License: BSD
+
+License: BSD
+    Redistribution and use in source and binary forms, with or without 
+    modification, are permitted provided that the following conditions are met:
+
+     * Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright 
+     notice, this list of conditions and the following disclaimer in the 
+     documentation and/or other materials provided with the distribution.
+     * Neither the name of the <ORGANIZATION> nor the names of its 
+     contributors may be used to endorse or promote products derived from 
+     this software without specific prior written permission.
+
+    On Debian systems, the full text of the BSD can be found at
+    '/usr/share/common-licenses/BSD'.
+

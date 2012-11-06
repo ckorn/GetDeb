@@ -1,0 +1,12 @@
+Index: pomamonitor-0.01/pomamonitor.sh
+===================================================================
+--- pomamonitor-0.01.orig/pomamonitor.sh	2009-11-22 00:27:09.870729590 +0100
++++ pomamonitor-0.01/pomamonitor.sh	2009-11-22 00:28:05.538233894 +0100
+@@ -128,6 +128,7 @@
+ then
+     clioutput "Using the configuration file $config_file"
+ else
++    mkdir $HOME/.pomamonitor || /bin/true
+     zenity_conf_maker
+ fi
+ #Alertas ao usuário

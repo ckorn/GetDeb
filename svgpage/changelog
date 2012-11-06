@@ -1,0 +1,5 @@
+svgpage (0.5-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #483169)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 Nov 2009 22:24:54 +0100

@@ -1,0 +1,19 @@
+Change the program name.
+Index: gimp-save-for-web-0.28.6/src/Makefile.am
+===================================================================
+--- gimp-save-for-web-0.28.6.orig/src/Makefile.am	2008-11-07 16:04:15.000000000 +0100
++++ gimp-save-for-web-0.28.6/src/Makefile.am	2008-11-07 16:23:49.000000000 +0100
+@@ -8,11 +8,11 @@
+ 
+ SUBDIRS = cursors
+ 
+-bin_PROGRAMS = webexport
++bin_PROGRAMS = gimp_save_for_web
+ 
+ bindir = $(GIMP_LIBDIR)/plug-ins
+ 
+-webexport_SOURCES = \
++gimp_save_for_web_SOURCES = \
+ 	plugin-intl.h		\
+ 	webx_main.c		\
+ 	webx_main.h		\

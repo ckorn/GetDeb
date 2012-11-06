@@ -1,0 +1,15 @@
+azureus for Debian
+------------------
+
+ * Azureus in Debian will start the classic interface by default when the vuze package
+   isn't installed.
+   If it is, then the azureus executable will start the user preferred's interface.
+ * Please note that the new interface won't work without the vuze package installed, 
+   so if you need to use it, install that package first. 
+ * The vuze package is actually kind of dummy package, providing the dependencies
+   necessary to run the new interface.
+ * Azureus in Debian has been patched to prevent updates to the Core and SWT components,
+   since those updates will break sync with the package manager. The remaining plugins
+   updates remain unchanged, since they are not part of the debian archive.
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Fri, 31 Jul 2009 13:49:06 -0400

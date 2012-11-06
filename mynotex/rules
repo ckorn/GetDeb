@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	tar xzf executable_mynotex-amd64_*.tar.gz
+else
+	tar xzf executable_mynotex-i386_*.tar.gz
+endif
+

@@ -1,0 +1,6 @@
+debian/tmp/usr/bin/webilder_downloader
+debian/tmp/usr/share/pixmaps
+debian/tmp/usr/lib/python2.6/site-packages
+#debian/tmp/usr/share/webilder
+debian/tmp/usr/bin/webilder_desktop
+debian/tmp/usr/bin/wbz_handler

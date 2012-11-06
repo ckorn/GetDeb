@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh --with python-support $@
+
+override_dh_install:
+	dh_install
+	chmod 0644 debian/gnome-connection-manager/usr/share/gnome-connection-manager/SimpleGladeApp.py \
+	           debian/gnome-connection-manager/usr/share/gnome-connection-manager/donate.gif \
+	           debian/gnome-connection-manager/usr/share/gnome-connection-manager/lang/en_US.po \
+	           debian/gnome-connection-manager/usr/share/gnome-connection-manager/lang/en/LC_MESSAGES/gcm-lang.mo \
+	           debian/gnome-connection-manager/usr/share/gnome-connection-manager/icon.png

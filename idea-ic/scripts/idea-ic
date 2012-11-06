@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ -d /usr/lib/jvm/java-6-openjdk ] ; then
+	export JDK_HOME=/usr/lib/jvm/java-6-openjdk
+else
+	if [ -e /usr/lib/jvm/java-6-sun ] ; then
+		export JDK_HOME=/usr/lib/jvm/java-6-sun
+	else
+		echo "No Java JDK found"
+		exit 1
+	fi
+fi
+
+cd /usr/share/idea-ic/bin
+sh idea.sh

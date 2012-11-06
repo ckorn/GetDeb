@@ -1,0 +1,10 @@
+lib						usr/lib/webcamstudio
+README.TXT					usr/lib/webcamstudio
+WebcamStudio.jar				usr/lib/webcamstudio
+microphone					usr/share/webcamstudio
+usr/share/webcamstudio/webcamstudio-src		usr/share/webcamstudio
+debian/*.desktop				usr/share/applications
+debian/webcamstudio.png				usr/share/pixmaps
+debian/scripts/webcamstudio			usr/bin
+debian/scripts/webcamstudio-x-install-vloopback	usr/bin
+etc

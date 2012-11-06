@@ -1,0 +1,6 @@
+delete_tree_class.patch
+debian/speedtest.diff -p1
+debian/update-disable.diff
+fixes/multiuser.diff
+fixes/platform.diff -p1
+debian/no-auto-update.patch

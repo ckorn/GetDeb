@@ -1,0 +1,11 @@
+gitso (0.6-1~getdeb2) lucid; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 19:59:34 +0200
+
+gitso (0.6-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #319444)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Apr 2010 19:05:49 +0200

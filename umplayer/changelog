@@ -1,0 +1,27 @@
+umplayer (0.95-1~getdeb2) precise; urgency=low
+
+  * Update to SVN trunk
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 17 Aug 2012 19:34:20 +0200
+
+umplayer (0.95-1~getdeb1) lucid; urgency=low
+
+  * Upload to GetDeb (LP: #854920)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Sep 2011 18:02:54 +0200
+
+umplayer (0.95) unstable; urgency=high
+
+  * debian/compat:
+    - Bumped to 7.
+  * debian/control:
+    - Changed maintainer to team.
+    - Build-depend on dh 7, no cdbs.
+  * debian/rules, debian/clean:
+    - Rewritten to use dh 7.
+    - Set DOC_PATH and remove an unneeded upstream file.
+  * debian/umplayer.install, debian/umplayer.doc-base:
+    - Install upstream docs correctly. (Closes: #557069)
+  * Dropped debian/README.source - not using CDBS simple-patchsys anymore.
+
+ -- Maia Kozheva <sikon@ubuntu.com>  Sat, 21 Nov 2009 14:08:08 +0600

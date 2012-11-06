@@ -1,0 +1,17 @@
+Source: conkywizard
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               libqt4-dev
+Standards-Version: 3.9.3
+Homepage: http://code.google.com/p/conkywizard/
+
+Package: conkywizard
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Wizard to set up Conky on Linux
+ ConkyWizard is a wizard to set up Conky on Linux,
+ without knowledge of its use.
+ Currently the program is customized for Ubuntu Lucid.

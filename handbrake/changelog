@@ -1,0 +1,362 @@
+handbrake (0.9.8-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Changes betwen 0.9.7 and 0.9.8:
+
+    -> Corrects a few crash bugs that showed up in 0.9.7
+
+    Changes betwen 0.9.6 and 0.9.7:
+
+    -> This is a bug fix release for 0.9.6.
+    -> Includes an AppleTV3 Preset and updated iPad Preset
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 18 Jul 2012 18:40:26 +0200
+
+handbrake (0.9.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Encoders:
+    ---------
+
+    -> Video:
+
+       - updated libx264 (revision 2146)
+       - MPEG-2 encoder (from libavcodec)
+       - advanced options support for libavcodec encoders
+         format: option1=value1:option2=value2
+                 -bf 2 -trellis 2 becomes bf=2:trellis=2
+
+    -> Audio:
+
+       - audio gain control (increase/decrease audio volume)
+
+       - updated libogg (1.3.0) and libvorbis (aoTuV b6.03)
+       - new AAC encoder (from libavcodec) (considered experimental)
+         (supported mixdowns: Mono/Stereo/Dolby, 5.1 will come later)
+         (should be on par with faac in terms of quality, sometimes better)
+       - FLAC encoder (16-bit, MKV container only)
+
+       - Mac OS X: HE-AAC encoding support, via Core Audio
+
+       - quality-based variable bitrate encoding support
+         works with: Lame MP3, Vorbis, Core Audio AAC
+         only implemented in CLI and Linux GUI
+
+       - AC3 encoder: set Dolby Surround flag in stream parameters when
+       mixdown is Dolby Surround or Pro Logic II
+
+
+    -> Audio Passthru:
+
+       - DTS Passthru to MP4 container (in addition to MKV) (supported by
+       e.g. VLC, MPlayer)
+       - DTS-HD Passthru (MP4, MKV containers)
+       - MP3 Passthru (MP4, MKV containers)
+       - AAC Passthru (MP4, MKV containers)
+         (known issue: Magic Cookie not passed through from MPEG
+         Program/Transport streams,
+          which will break playback in e.g. QuickTime Player)
+       - Auto Passthru: one encoder, multiple codecs
+         lets you define allowed codecs (from supported passthru codecs)
+         lets you pick a fallback encoder if passthru is not possible
+
+    Muxers:
+    -------
+
+       - start MKV clusters with a video keyframe whenever possible
+         should improve seeking and DLNA streaming
+
+       - bug fix: use ISO 639-2 bibliographic form for MKV language codes
+       - bug fix: fix crash due to division by zero in MP4 muxer
+       - bug fix: fix muxing of Closed Captions. Improper interleaving broke
+       playback on some players
+
+    Decoders:
+    ---------
+
+    -> Video:
+
+       - updated libav* libraries from Libav (http://libav.org/)
+       (v0.7-1696-gcae4f4b, late October 2011)
+         frame-based multithreading for H.264, VP8
+         10-bit decoding support for H.264, DNxHD
+         Apple ProRes decoding support
+       - improved average framerate detection
+       - duplicate frame detection for improved frame drop decision (CFR/PFR)
+       - new Same as source, Constant Framerate option
+         for devices that don't support variable framerate
+         automatically picks a constant framerate closest to the detected
+         average framerate
+
+       - bug fix: fix problem when resolution changes in the middle of a
+       video stream
+
+    -> Audio:
+
+       - Blu-ray: make TrueHD, DTS-HD and E-AC3 Secondary Audio streams
+       available for decoding and/or passthrough
+
+       - bug fix: libavcodec-decoded streams can now be decoded multiple
+       times
+                  previously, multiple decodes of the same source tracks
+                  weren't possible
+                  and audio output tracks had to be dropped
+       - bug fix: fix audio screech at beginning of some audio tracks when
+       decoding AC3
+       - bug fix: fix DTS decoder audio volume (was too low)
+       - bug fix: garbled audio when decoding DTS-HD audio from MKV
+       containers
+       - bug fix: fix support for DTS-HD High Resolution Audio in MPEG
+       Transport streams
+
+    -> Subtitles:
+
+       - updated libass (0.10.0)
+       - improved handling of subtitles with overlapping timestamps
+       - improved handling of DVD subtitles without Stop Display commands
+       - SSA subtitles are now passed through to MKV without conversion to
+       SRT/UTF-8
+
+       - bug fix: fix rendering problem with SSA subtitles when no font is
+       embedded in the source video
+
+    Demuxers:
+    ---------
+
+       - improved MPEG Program/Transport stream support
+         support for MPEG-1 Program streams
+         support for HD-DVD EVOB streams
+         improved handling of Transport streams that have no PCR
+       - WTV container support (via libavformat)
+
+       - bug fix: files with more than 20 tracks (video, audio, subtitles
+       etc.) are now supported
+       - bug fix: some QuickTime MOV files were misdirected as MPEG Transport
+       streams
+       - bug fix: fix detection of TrueType font attachments that don't have
+       the correct MIME type
+
+    Filters:
+    --------
+
+       - new, much improved decomb filter (but slower)
+         new settings are default
+         old settings become decomb "Fast"
+
+    Presets:
+    --------
+
+       - improved "Normal" preset (much faster, similar file size and
+       quality)
+       - removed obsolete legacy presets
+       - added new device presets for Android phones/tablets
+         recent and/or powerful devices recommended
+
+    Mac OS X:
+    ---------
+
+    -> DVD decryption:
+
+       - VLC 2.x or later will not work for DVD decryption
+         and is therefore unsupported as of HandBrake 0.9.6
+       - libdvdcss is now the preferred method for DVD decryption
+         already works with HandBrake 0.9.5
+         a .pkg installer is available from Videolan:
+         http://download.videolan.org/libdvdcss/last/macosx/
+
+    -> Build system:
+
+       - support for Xcode 4 and Mac OS X 10.7 "Lion"
+       - Mac OS X 10.5 "Leopard" no longer supported
+
+    Mac OS X GUI:
+    -------------
+
+    -> OS X 10.7 Lion support:
+
+       - bug fix: Live Preview window widgets updated to work under Lion
+       - bug fix: fixed positioning of widgets in the Audio panel under Lion
+
+    -> Other:
+
+       - wider main window providing more room for various widgets
+
+    Windows GUI:
+    ------------
+
+    -> Preview window:
+
+       - complete redesign
+       - support for VLC or the system default video player
+       - dropped built-in QuickTime playback support
+
+    -> Other:
+
+       - much improved control over the default audio and subtitle tracks
+       selected (see Options)
+       - ability to set the minimal title length that will show up during a
+       scan (see Options)
+       - several other usability improvements
+       - installer now has a silent option for easier network installs
+       (launch the installer with /S)
+
+    Linux GUI:
+    ----------
+
+    -> Audio panel:
+
+       - new advanced audio options section for gain and audio track names
+       - dynamic range compression and samplerate moved to advanced audio
+       options
+
+    -> Other:
+
+       - minor UI tweaks and usability enhancements
+
+    Miscellaneous:
+    --------------
+
+       - Target Size is gone, and isn't coming back
+         Don't bother complaining on the forums
+
+       - CLI: support for x264 presets, tunes and profiles
+         new --x264-preset, --x264-tune and --x264-profile options
+
+       - DVD: fix issues with some discs (e.g. True Grit, Thor, Transformers
+       3)
+       - DVD: improved main feature detection
+
+       - updated libbluray (0.0.1-pre-213-ga869da8, late May 2011)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 Jul 2012 11:49:16 +0200
+
+handbrake (0.9.5-1~getdeb3~precise) precise; urgency=low
+
+  * Rebuild for precise
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 Jul 2012 11:44:22 +0200
+
+handbrake (0.9.5-1~getdeb2~natty) natty; urgency=low
+
+  * Rebuild for natty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 17 Apr 2011 10:38:51 +0200
+
+handbrake (0.9.5-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #712729)
+    Changes between 0.9.4 and 0.9.5:
+
+    * Core Library
+      - BluRay disc structure support. (No decryption support) 
+      - Updated Libraries (x264, ffmpeg) 
+      - SSA Subtitle support. (Including burn-in) 
+      - MP3 audio now supported in MP4 files (Note: Limited Player
+      compatibility) 
+      - VOBSUB subtitle now supported in MP4 files (Note: Limited Player
+      compatibility) 
+      - Updated Presets for newer devices and better quality 
+      - AC3 encoding support.
+      - Many Bug fixes and other small improvements
+      - Improved DVD Main Feature detection (when using dvdnav)
+      - Universal audio downmix support (all audio types can be downmixed)
+
+    *All GUIs
+      - Updated x264 Advanced Panel
+      - Video Quality Slider drops % value and only shows RF for x264
+      - Batch Scan (Scan Multiple files at once. N.B: Does not include
+      multiple VIDEO_TS folders / Image files) 
+      - Peak framerate option (Capped VFR)
+      - Many Bug fixes
+      - Many Tweaks to improve usability.
+      - Ability to edit queue jobs
+      - Point-to-Point encoding (second or frame start and end times)
+
+    * Mac GUI
+      - New Audio Panel supporting >4 Audio Tracks
+      - VLC detection in /Applications and ~/Applications
+
+    * Windows GUI
+      - Encode Status in GUI. (CLI window is now always hidden)
+      - Improved Auto-Naming for Destination file name.
+      - Drag / Drop Video onto Main Window to scan.
+
+    * Linux GUI
+      - Multiple instance support (run multiple copies of ghb at once)
+      - Many Bug fixes and UI improvements. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 04 Feb 2011 21:26:08 +0100
+
+handbrake (0.9.4+svn3278-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 30 Apr 2010 22:03:42 +0200
+
+handbrake (0.9.4-1getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 14:18:10 +0100
+
+handbrake (0.9.4-1getdeb1) karmic; urgency=low
+
+  * New upstream version (LP: #504396)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 07 Jan 2010 19:37:19 +0100
+
+handbrake (0.9.3-0getdeb1) intrepid; urgency=low
+
+  * Initial release.
+
+ -- Christoph Korn <c_korn@gmx.de>  Sat, 07 Feb 2009 21:46:42 +0100
+
+handbrake (0.9.3+repack1-0ubuntu0~8.10jdong4) intrepid; urgency=low
+
+  * Incorporate fixes suggested by John Stebbins:
+   - Don't have the buildsys override HB's optimized CFLAGS
+   - Do an official build (not a snapshot)
+   - dh_icons/dh_desktop to correctly install menu icon
+
+ -- John Dong <jdong@ubuntu.com>  Wed, 17 Dec 2008 21:15:07 -0500
+
+handbrake (0.9.3+repack1-0ubuntu0~8.04jdong3) hardy; urgency=low
+
+  *  Switch to bzip2 compression
+
+ -- John Dong <jdong@ubuntu.com>  Mon, 01 Dec 2008 14:19:06 -0500
+
+handbrake (0.9.3+repack1-0ubuntu0~8.04jdong2) hardy; urgency=low
+
+  * Split the GUI from the CLI:
+   - handbrake-gtk: GUI frontend
+   - handbrake-cli: CLI frontend
+   - handbrake-common: README files and documentations common to both.
+
+ -- John Dong <jdong@ubuntu.com>  Mon, 01 Dec 2008 12:39:22 -0500
+
+handbrake (0.9.3+repack1-0ubuntu0~8.10jdong1) intrepid; urgency=low
+
+  * Repacked orig.tar.gz:
+    - Bundled contribs/ libraries so they don't get fetched as a part of the 
+      build process.
+    - Documented this process in README.Debian
+  * TODO:
+    - Document debian/copyright for contrib libraries
+    - Split handbrake-cli and handbrake-gtk
+
+ -- John Dong <jdong@ubuntu.com>  Sat, 29 Nov 2008 00:31:50 -0500
+
+handbrake (0.9.3-0ubuntu0~8.10jdong2) jaunty; urgency=low
+
+  * UNRELEASED:
+   - Work-in-progress documenting debian/copyright
+
+ -- John Dong <jdong@ubuntu.com>  Sat, 29 Nov 2008 00:26:56 -0500
+
+handbrake (0.9.3-0ubuntu0~8.10jdong1) jaunty; urgency=low
+
+  * Initial attempt at packaging
+
+ -- John Dong <jdong@ubuntu.com>  Fri, 28 Nov 2008 14:17:16 -0500
+

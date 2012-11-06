@@ -1,0 +1,106 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+#export DH_OPTIONS=-v
+
+export DESTRESDIR=$(CURDIR)/debian/tmp
+export IMGDIR=$(DESTRESDIR)/usr/share/icons/hicolor
+
+# Grab the version from the changelog, up to the first -
+export DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
+export DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+                               | sed -rne 's,^Version: ([^-]+).*,\1,p')
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	dh_auto_clean --sourcedirectory=RealtimeSync
+
+override_dh_auto_build:
+	dh_auto_build
+	dh_auto_build --sourcedirectory=RealtimeSync
+	
+override_dh_auto_install:
+	dh_auto_install
+	dh_auto_install --sourcedirectory=RealtimeSync
+	
+	# Extract program icons
+	mkdir -p $(IMGDIR)/256x256/apps
+	mkdir -p $(IMGDIR)/256x256/mimetypes
+	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
+	# See LP : 807013
+	#mkdir -p $(IMGDIR)/128x128/apps
+	#mkdir -p $(IMGDIR)/128x128/mimetypes
+	mkdir -p $(IMGDIR)/48x48/apps
+	mkdir -p $(IMGDIR)/48x48/mimetypes
+	mkdir -p $(IMGDIR)/32x32/apps
+	mkdir -p $(IMGDIR)/32x32/mimetypes
+	mkdir -p $(IMGDIR)/16x16/apps
+	mkdir -p $(IMGDIR)/16x16/mimetypes
+	
+	# FreeFileSync
+	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/apps/freefilesync.png
+	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-ffs.png
+	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
+	# See LP : 807013
+	#convert lib/FreeFileSync.ico[1] $(IMGDIR)/128x128/apps/freefilesync.png
+	#convert lib/FreeFileSync.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-ffs.png
+	convert lib/FreeFileSync.ico[2] $(IMGDIR)/48x48/apps/freefilesync.png
+	convert lib/FreeFileSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-ffs.png
+	convert lib/FreeFileSync.ico[3] $(IMGDIR)/32x32/apps/freefilesync.png
+	convert lib/FreeFileSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-ffs.png
+	convert lib/FreeFileSync.ico[4] $(IMGDIR)/16x16/apps/freefilesync.png
+	convert lib/FreeFileSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-ffs.png
+	
+	# RealTimeSync
+	convert RealtimeSync/RealtimeSync.ico[0] $(IMGDIR)/256x256/apps/realtimesync.png
+	convert RealtimeSync/RealtimeSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-real.png
+	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
+	# See LP : 807013
+	#convert RealtimeSync/RealtimeSync.ico[1] $(IMGDIR)/128x128/apps/realtimesync.png
+	#convert RealtimeSync/RealtimeSync.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-real.png
+	convert RealtimeSync/RealtimeSync.ico[2] $(IMGDIR)/48x48/apps/realtimesync.png
+	convert RealtimeSync/RealtimeSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-real.png
+	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/32x32/apps/realtimesync.png
+	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-real.png
+	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/16x16/apps/realtimesync.png
+	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
+    
+	# FreeFileSync Batch
+	convert lib/Batch.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-batch.png
+	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
+	# See LP : 807013
+	#convert lib/Batch.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-batch.png
+	convert lib/Batch.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-batch.png
+	convert lib/Batch.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-batch.png
+	convert lib/Batch.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-batch.png	
+
+	# Build desktop files
+	mkdir -p $(DESTRESDIR)/usr/share/applications
+	intltool-merge debian/po/freefilesync -d -u -c debian/po/.intltool-merge-cache debian/freefilesync.desktop.in $(DESTRESDIR)/usr/share/applications/freefilesync.desktop
+	intltool-merge debian/po/freefilesync -d -u -c debian/po/.intltool-merge-cache debian/realtimesync.desktop.in $(DESTRESDIR)/usr/share/applications/realtimesync.desktop
+
+override_dh_installchangelogs:
+	dh_installchangelogs BUILD/Changelog.txt
+
+get-orig-source:
+	# Uscan can grab upstream source zip
+	uscan --noconf --force-download --download-current-version --debug --verbose --destdir=. $(DEB_DEBIAN_DIR)/..
+	# Unpack
+	# Repacked source should have a top-level directory ending in .orig
+	# as a reminder to other developers
+	unzip FreeFileSync_v$(DEB_UPSTREAM_VERSION)_source.zip -d freefilesync_$(DEB_UPSTREAM_VERSION).orig
+	rm FreeFileSync_v$(DEB_UPSTREAM_VERSION)_source.zip
+	GZIP=--best tar -cz --owner root --group root --mode a+rX \
+			-f freefilesync_$(DEB_UPSTREAM_VERSION).orig.tar.gz \
+			freefilesync_$(DEB_UPSTREAM_VERSION).orig
+	rm -r freefilesync_$(DEB_UPSTREAM_VERSION).orig

@@ -1,0 +1,118 @@
+sweethome3d (3.7-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+        Displayed groups in the furniture table as expandable / collapsible
+        tree nodes.
+        Used antialiasing in the 3D view when possible.
+        Fixed a bug that could create invalid SH3D files after the
+        importation of a 3D model file containing non ASCII characters (like
+        accentuated letters).
+        Fixed the management of multiple holes in polygons defined in
+        imported DAE files.
+        Forbade window resizing while a SH3D file is opened under Mac OS X,
+        to avoid program freezing.
+        Saved in a SH3D file only the textures of the SH3T file used by the
+        home.
+        Released the version 1.0 (670 kB) of the Textures Library Editor, a
+        separate tool that lets the user create and edit easily SH3T files.
+        Updated the new portable version of Sweet Home 3D (version 3.7, 116
+        MB) et Furniture Library Editor (version 1.9, 5 Mo).
+        Replaced JRE 6u35 by JRE 6u37 in Sweet Home 3D installers bundled
+        with Java.
+        Other minor bugs fixes and enhancements.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 27 Oct 2012 00:29:23 +0200
+
+sweethome3d (3.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 08 Sep 2012 16:19:25 +0200
+
+sweethome3d (3.5-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #994050)
+    http://www.sweethome3d.com/history.html
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 03 May 2012 18:48:27 +0200
+
+sweethome3d (3.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release (Closes: #654989).
+  * Add libbatik-java as build and runtime dep.
+  * Replace dep on icedtea-netx with icedtea-netx-common.
+  * Fix d/copyright.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sat, 28 Jan 2012 02:37:57 +0000
+
+sweethome3d (3.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to "public" package.
+  * Add icedtea-netx as B-D and runtime dependency (Closes: #626052, #626050).
+  * Add German translation and StartupWMClass to desktop file (Closes: #621740).
+  * Add Class-Path to manifest file.
+  * Bump Standards Version to 3.9.2 (no changes).
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Mon, 08 Aug 2011 00:57:46 +0200
+
+sweethome3d (3.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sun, 20 Mar 2011 16:21:36 +0100
+
+sweethome3d (3.0+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Thu, 30 Dec 2010 02:20:14 +0100
+
+sweethome3d (2.6+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added upstream changelog.
+  * Standards version to 3.9.1.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Fri, 27 Aug 2010 19:06:09 +0200
+
+sweethome3d (2.5+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sat, 26 Jun 2010 20:13:47 +0200
+
+sweethome3d (2.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sat, 29 May 2010 13:17:46 +0200
+
+sweethome3d (2.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Replaced sunflow with libsunflow-java.
+  * Disabled video creation feature based on JMF.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sun, 16 May 2010 19:45:39 +0200
+
+sweethome3d (2.2+dfsg-3) unstable; urgency=low
+
+  * Fixed export to SVG format (Closes: #580778).
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sat, 08 May 2010 17:06:24 +0200
+
+sweethome3d (2.2+dfsg-2) unstable; urgency=low
+
+  * Fixed bug when run with Sun jvm (Closes: #578413).
+  * Fixed patch to ignore missing contributors furnitures (Closes: #578413).
+  * Added janino to classpath to fix global illumination with shadows in photo
+    from 3D view.
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sat, 24 Apr 2010 22:49:33 +0200
+
+sweethome3d (2.2+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #475922)
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Sun, 28 Mar 2010 18:35:10 +0200

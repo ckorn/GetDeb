@@ -1,0 +1,15 @@
+Fix desktop file.
+Index: mount-gtk-1.2.1/mount-gtk.desktop
+===================================================================
+--- mount-gtk-1.2.1.orig/mount-gtk.desktop	2012-07-03 11:29:15.000000000 +0200
++++ mount-gtk-1.2.1/mount-gtk.desktop	2012-07-06 19:29:18.931351591 +0200
+@@ -1,9 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ Name=Mount-gtk
+ Type=Application
+-Terminal=false
+ Name[en_GB]=Mount-gtk
+ Exec=mount-gtk
+ Icon=drive-removable-media

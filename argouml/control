@@ -1,0 +1,36 @@
+Source: argouml
+Section: misc
+Priority: optional
+Maintainer: Joao Pinto <joao.pinto@getdeb.net>
+Uploaders: Marco Rodrigues <gothicx@sapo.pt>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.9.1
+Homepage: http://argouml.tigris.org/
+
+Package: argouml
+Architecture: all
+Depends: openjdk-6-jre | sun-java5-jre | sun-java6-jre | java-runtime | java2-runtime,
+  fontconfig, ${misc:Depends}
+Description: modelling tool to help you do your design using UML
+ ArgoUML provides the following features:
+  * Runs on any platform with Java 1.2
+  * Standard UML Meta-Model
+  * XMI-Support
+  * UML Design Editing
+  * OCL Support
+  * Database Support
+  * Several diagram export formats
+  * Code Generation (partially implemented)
+ .
+ Cognitive Support:
+  * Reflection-in-action (Design Critics, Corrective Automations (partially
+    implemented), "To Do" List, Checklists, User model (partially implemented))
+  * Opportunistic Design ("To Do" List, Checklists, Work Breakdown Structure
+    (future))
+  * Comprehension and Problem Solving (Navigational Perspectives, Multiple,
+    Overlapping Views, Alternative Design Representations: Graphs, Text, or
+    Table, Model-based Graph Layout (future))
+  * Customization (Customizable User Model (partially implemented),
+    Customizable Process Model (partially implemented), Critic Editor (future),
+    Checklist Editor (future), Corrective Automation Editor (future),
+    Navigational Perspective Editor)

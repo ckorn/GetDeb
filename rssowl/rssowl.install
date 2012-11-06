@@ -1,0 +1,3 @@
+debian/scripts/rssowl					usr/bin
+debian/rssowl.desktop					usr/share/applications
+rssowl							usr/lib

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if [ ! -d $HOME/.xVideoServiceThief/plugins ] ; then
+	mkdir -p $HOME/.xVideoServiceThief/plugins
+	cp -a /usr/share/xvst/plugins/*.js $HOME/.xVideoServiceThief/plugins/
+fi
+
+cd /usr/share/xvst/plugins
+
+for f in *.js ; do
+	if [ ! -f $HOME/.xVideoServiceThief/plugins/$f ] ; then
+		echo "Copying " $f " because it does not exist."
+		cp $f $HOME/.xVideoServiceThief/plugins/
+	fi
+
+	if [ $f -nt $HOME/.xVideoServiceThief/plugins/$f ] ; then
+		echo "Copying " $f " because it is newer."
+		cp $f $HOME/.xVideoServiceThief/plugins/
+	fi
+done
+
+cd ..
+./xvst $@

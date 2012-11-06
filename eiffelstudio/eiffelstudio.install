@@ -1,0 +1,10 @@
+debian/scripts/eiffelstudio	usr/bin
+debian/eiffelstudio.xpm		usr/share/pixmaps
+debian/eiffelstudio.desktop	usr/share/applications
+Eiffel64/C_library		usr/lib/eiffelstudio
+Eiffel64/esbuilder		usr/lib/eiffelstudio
+Eiffel64/eweasel		usr/lib/eiffelstudio
+Eiffel64/examples		usr/lib/eiffelstudio
+Eiffel64/precomp		usr/lib/eiffelstudio
+Eiffel64/studio			usr/lib/eiffelstudio
+Eiffel64/tools			usr/lib/eiffelstudio

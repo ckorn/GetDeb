@@ -1,0 +1,5 @@
+fox.pc
+config.make
+config.guess
+config.sub
+src/gmconfig.h

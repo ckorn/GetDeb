@@ -1,0 +1,36 @@
+From df6d54429261cb9916fbf83aa33d41144120380c Mon Sep 17 00:00:00 2001
+From: Christoph Korn <korn@ubuntu.(none)>
+Date: Mon, 14 Dec 2009 22:11:13 +0100
+Subject: [PATCH] Makefile
+
+---
+ fotoxx-9.0/Makefile |    7 +++----
+ 1 files changed, 3 insertions(+), 4 deletions(-)
+
+Index: fotoxx-12.11/Makefile
+===================================================================
+--- fotoxx-12.11.orig/Makefile	2012-11-01 11:20:02.000000000 +0100
++++ fotoxx-12.11/Makefile	2012-11-01 21:04:43.839009952 +0100
+@@ -12,9 +12,9 @@
+ SHAREDIR = $(PREFIX)/share/fotoxx
+ ICONDIR = $(SHAREDIR)/icons
+ LOCALESDIR = $(SHAREDIR)/locales
+-DOCDIR = $(PREFIX)/share/doc/fotoxx
++DOCDIR = $(PREFIX)/share/doc/fotoxx/extras
+ MANDIR = $(PREFIX)/share/man/man1
+-MENUFILE = $(PREFIX)/share/applications/kornelix-fotoxx.desktop
++MENUFILE = $(PREFIX)/share/applications/fotoxx.desktop
+ 
+ CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-3.0`
+ LIBS = `pkg-config --libs gtk+-3.0`
+@@ -74,8 +74,8 @@
+ 	cp fotoxx.1.gz $(DESTDIR)$(MANDIR)
+ 	rm -f fotoxx.1.gz
+ 	# menu (desktop) file
+-	cp -f desktop $(DESTDIR)$(MENUFILE)
+-	xdg-desktop-menu install $(DESTDIR)$(MENUFILE)
++	mkdir -p $(DESTDIR)/usr/share/applications
++	cp desktop $(DESTDIR)$(MENUFILE)
+ 
+ uninstall:
+ 	rm -f  $(DESTDIR)$(BINDIR)/fotoxx

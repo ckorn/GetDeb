@@ -1,0 +1,108 @@
+mount-gtk (1.2.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 07 Aug 2012 18:32:26 +0200
+
+mount-gtk (1.2.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 06 Jul 2012 19:19:49 +0200
+
+mount-gtk (1.2.0-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    Use udisks instead of pmount to mount block devices (configure.ac,
+    README, src/Makefile.am; dialogs.cpp, main.cpp, mainwindow.h,
+    mainwindow.cpp, mounter.h, mounter.cpp, prog_defs.h, preferences.h
+    and preferences.cpp).
+
+    Remove redundant reference to repopulate_mount_points() in
+    MainWindow class definition (mainwindow.h).
+
+    Change library linking order (src/Makefile.am).
+
+    Remove unnecessary configure checks (acinclude.m4, configure.ac
+    and src/Makefile.am)
+
+    Add further header checks (configure.ac).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Feb 2012 19:33:24 +0100
+
+mount-gtk (1.0.11-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    Have a hard dependency on c++-gtk-utils-1.2 >= 1.2.7 or
+    c++-gtk-utils-2.0 >= 2.0.0-rc1, so that C++0x/11 can be more
+    easily supported, and maintainability is improved (README,
+    acinclude.m4, configure.ac, src/Makefile.am; delete src/internal
+    directory and its contents.)
+
+    Move required libnotify version to >= 0.7.1 and allow use of
+    libnotify in GTK+3 compiles (acinclude.m4; main.cpp, mainwindow.h,
+    tray_icon.h).
+
+    Improve handling of style change events (mainwindow.h and
+    mainwindow.cpp).
+
+    Suppress warnings about std::auto_ptr deprecation when compiling
+    in c++0x (acinclude.m4).
+
+    Upgrade gettext to version 0.18 and include m4 macros
+    (po/Makefile.in.in, po/Rules-quot, m4 directory, Makefile.am).
+
+    Add proper header checks at configuration time (configure.ac).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Oct 2011 19:22:39 +0200
+
+mount-gtk (1.0.10-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Mar 2011 14:54:49 +0100
+
+mount-gtk (1.0.9-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 16 Nov 2010 14:54:46 +0100
+
+mount-gtk (1.0.8-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 22:45:17 +0200
+
+mount-gtk (1.0.7-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+        Update c++-gtk-utils to version 1.2.2 and fix compilation error
+        with gcc-4.5.0.
+
+            Provide an error dialog if, on program start-up, a connection to
+            the dbus session message bus cannot be established (main.cpp).
+
+        Omit std namespace using directive in prog_defs.h (mounter.cpp and
+        prog_defs.h).
+
+        Omit unnecessary conditional inclusion of c++-gtk-utils
+        headers (dislogs.h, dialogs.cpp, main.cpp, mainwindow.h,
+        mainwindow.cpp, mount_entries.h, mount_entries.cpp, mounter.h,
+        mounter.cpp, preferences.h, preferences.cpp, prog_defs.h,
+        tray_icon.h, utils/icon_info_handle.h and
+        utils/tree_patch_handle.h).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 May 2010 21:02:20 +0200
+
+mount-gtk (1.0.6-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #570142)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 26 Apr 2010 15:03:46 +0200
+
+mount-gtk (1.0.4-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #429430)
+
+ -- Christoph Korn <c_korn@gmx.de>  Mon, 14 Sep 2009 17:13:59 +0200

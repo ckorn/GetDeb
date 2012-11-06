@@ -1,0 +1,36 @@
+Description: Fix build failure with libx264 >= 115
+ The structure member x264_param_t.i_open_gop was renamed to b_open_gop in
+ x264.h version 115.
+Origin: http://debian-multimedia.org/pool/main/a/avidemux/avidemux_2.5.5-0.3.diff.gz
+Bug-Ubuntu: https://launchpad.net/bugs/831096
+
+Index: avidemux-2.5.6/plugins/ADM_videoEncoder/ADM_vidEnc_x264/x264Options.cpp
+===================================================================
+--- avidemux-2.5.6.orig/plugins/ADM_videoEncoder/ADM_vidEnc_x264/x264Options.cpp	2011-06-16 21:46:07.000000000 +0200
++++ avidemux-2.5.6/plugins/ADM_videoEncoder/ADM_vidEnc_x264/x264Options.cpp	2012-05-16 20:02:32.021383510 +0200
+@@ -417,7 +417,7 @@
+ 	_param.b_cabac = cabac;
+ }
+ 
+-#if X264_BUILD > 101
++#if X264_BUILD > 101 && X264_BUILD < 115
+ unsigned int x264Options::getOpenGopMode(void)
+ {
+ #if X264_BUILD > 114
+@@ -449,6 +449,16 @@
+ 		_param.i_open_gop = openGopMode;
+ #endif
+ }
++#elif X264_BUILD > 114
++unsigned int x264Options::getOpenGopMode(void)
++{
++	return _param.b_open_gop;
++}
++void x264Options::setOpenGopMode(unsigned int openGopMode)
++{
++	if (openGopMode < 3)
++		_param.b_open_gop = openGopMode;
++}
+ #endif
+ 
+ unsigned int x264Options::getInterlaced(void)

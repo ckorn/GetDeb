@@ -1,0 +1,95 @@
+Source: oyranos
+Section: graphics
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), pkg-config,
+               libxml2-dev, libxinerama-dev, libtiff-dev,
+               libfltk-dev, libpng-dev, liblcms-dev, libcairo2-dev,
+               libxext-dev, libxxf86vm-dev, libcups2-dev, libsane-dev,
+               doxygen, liblcms2-dev, libraw-dev, libexiv2-dev, libxrandr-dev,
+               libxcm-dev, libyajl-dev, libqt4-dev, libxmu-dev, libxfixes-dev
+Standards-Version: 3.9.2
+Homepage: http://www.oyranos.org
+
+Package: oyranos
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: oyranos-icc (>= ${source:Version}), oyranos-doc (>= ${source:Version})
+Description: Colour Management System (CMS) on operating system level (binaries)
+ It allows applications and users to match predictably input device colours to 
+ output device colours. To do so in a consistent manner, applications and 
+ workflows need to support the Oyranos CMS.
+ .
+ Oyranos is based one the well established ICC standard and various other 
+ specifications. System wide settings in Oyranos shall enshure consistency in a 
+ portable fashion. Oyranos will provide in the future a Colour Matching Module 
+ (CMM) framework. Users can then transparently select a desired colour engine.
+ .
+ This package contains the binary commands.
+
+Package: liboyranos0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Replaces: liboyranos
+Description: Colour Management System (CMS) on operating system level (libs)
+ It allows applications and users to match predictably input device colours to 
+ output device colours. To do so in a consistent manner, applications and 
+ workflows need to support the Oyranos CMS.
+ .
+ Oyranos is based one the well established ICC standard and various other 
+ specifications. System wide settings in Oyranos shall enshure consistency in a 
+ portable fashion. Oyranos will provide in the future a Colour Matching Module 
+ (CMM) framework. Users can then transparently select a desired colour engine.
+ .
+ This package contains the libraries.
+
+Package: liboyranos-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, liboyranos0 (= ${binary:Version})
+Description: Colour Management System (CMS) on operating system level (dev)
+ It allows applications and users to match predictably input device colours to 
+ output device colours. To do so in a consistent manner, applications and 
+ workflows need to support the Oyranos CMS.
+ .
+ Oyranos is based one the well established ICC standard and various other 
+ specifications. System wide settings in Oyranos shall enshure consistency in a 
+ portable fashion. Oyranos will provide in the future a Colour Matching Module 
+ (CMM) framework. Users can then transparently select a desired colour engine.
+ .
+ This package contains development-specific files.
+
+Package: oyranos-icc
+Section: misc
+Architecture: all
+Depends: ${misc:Depends}, icc-profiles
+Enhances: oyranos (>= ${source:Version})
+Description: Colour Management System (CMS) on operating system level (icc)
+ It allows applications and users to match predictably input device colours to 
+ output device colours. To do so in a consistent manner, applications and 
+ workflows need to support the Oyranos CMS.
+ .
+ Oyranos is based one the well established ICC standard and various other 
+ specifications. System wide settings in Oyranos shall enshure consistency in a 
+ portable fashion. Oyranos will provide in the future a Colour Matching Module 
+ (CMM) framework. Users can then transparently select a desired colour engine.
+ .
+ This package contains the icc color profile files.
+
+Package: oyranos-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, oyranos (>= ${source:Version})
+Enhances: oyranos (>= ${source:Version})
+Description: Colour Management System (CMS) on operating system level (docs)
+ It allows applications and users to match predictably input device colours to 
+ output device colours. To do so in a consistent manner, applications and 
+ workflows need to support the Oyranos CMS.
+ .
+ Oyranos is based one the well established ICC standard and various other 
+ specifications. System wide settings in Oyranos shall enshure consistency in a 
+ portable fashion. Oyranos will provide in the future a Colour Matching Module 
+ (CMM) framework. Users can then transparently select a desired colour engine.
+ .
+ This package contains documentation files.

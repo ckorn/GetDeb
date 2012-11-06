@@ -1,0 +1,34 @@
+Description: ALSA should use the "default" device instead of "dmix".
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/321028
+Author: http://avidemux.org/admForum/viewtopic.php?id=6739
+---
+ avidemux/ADM_libraries/ADM_utilities/prefs.cpp |    2 +-
+ avidemux/prefs.in                              |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Index: avidemux-2.5.6/avidemux/ADM_libraries/ADM_utilities/prefs.cpp
+===================================================================
+--- avidemux-2.5.6.orig/avidemux/ADM_libraries/ADM_utilities/prefs.cpp	2010-11-09 21:41:33.000000000 +0100
++++ avidemux-2.5.6/avidemux/ADM_libraries/ADM_utilities/prefs.cpp	2012-05-16 19:51:27.761403270 +0200
+@@ -76,7 +76,7 @@
+ #else
+ 	{"device.audiodevice",		STRING,"ALSA",	NULL, NULL, NULL },
+ #endif
+-	{"device.audio.alsa_device",		STRING,"dmix",	NULL, NULL, NULL },
++	{"device.audio.alsa_device",		STRING,"default",	NULL, NULL, NULL },
+ 	{"device.videodevice",		UINT,	"0",	NULL,	"0",	"10"	},
+ 	{"default.postproc_type",		UINT,	"3",	NULL,	"0",	"7"	},
+ 	{"default.postproc_value",		UINT,	"3",	NULL,	"0",	"5"	},
+Index: avidemux-2.5.6/avidemux/prefs.in
+===================================================================
+--- avidemux-2.5.6.orig/avidemux/prefs.in	2010-11-09 21:41:33.000000000 +0100
++++ avidemux-2.5.6/avidemux/prefs.in	2012-05-16 19:51:27.761403270 +0200
+@@ -33,7 +33,7 @@
+ #else
+ device.audiodevice,			STRING,	ALSA
+ #endif
+-device.audio.alsa_device,               STRING, "dmix"
++device.audio.alsa_device,               STRING, "default"
+ device.videodevice,			UINT,	0,	0,	10
+ # Posproc
+ default.postproc_type,			UINT,	3,	0,	7

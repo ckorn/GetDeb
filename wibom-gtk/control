@@ -1,0 +1,23 @@
+Source: wibom-gtk
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.9.1
+Homepage: http://wibom.sourceforge.net
+
+Package: wibom-gtk
+Architecture: all
+Depends: ${misc:Depends}, ruby,
+ libgtk2-ruby, libgettext-ruby1.8 | libgettext-ruby1.9
+Recommends: wine1.2
+Conflicts: wibom
+Description: Wine bottle management
+ Wine is the program for running applications for Microsoft Windows on
+ other operating systems, primary on GNU/Linux. This program creates
+ in the user's home directory a folder called .wine containing user
+ preferences, the simplified version of Windows registers and files
+ structure of simulated disk C:. Many Wine users don't know there
+ can be more those folders coexisting. They are called bottles.
+ Because of bottles it is possible to have a few isolated
+ instances of “Pseudowindows” on one system.

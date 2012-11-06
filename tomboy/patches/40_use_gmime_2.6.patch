@@ -1,0 +1,19 @@
+Description: Use gmime 2.6 instead of 2.4
+Author: Michael Biebl <biebl@debian.org>
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=663216
+
+Index: tomboy-1.11.5/configure.in
+===================================================================
+--- tomboy-1.11.5.orig/configure.in	2012-08-07 18:55:28.000000000 +0200
++++ tomboy-1.11.5/configure.in	2012-08-07 18:56:47.647662207 +0200
+@@ -239,9 +239,7 @@
+ # Evolution.dll needs GMime#
+ #
+ if test "x$ENABLE_GNOME" != "xno"; then
+-	if pkg-config --exists gmime-sharp-2.4; then
+-		PKG_CHECK_MODULES(EVOLUTION, gmime-sharp-2.4, ENABLE_EVOLUTION="yes", ENABLE_EVOLUTION="no")
+-	elif pkg-config --exists gmime-sharp-2.6; then
++	if pkg-config --exists gmime-sharp-2.6; then
+ 		PKG_CHECK_MODULES(EVOLUTION, gmime-sharp-2.6, ENABLE_EVOLUTION="yes", ENABLE_EVOLUTION="no")
+ 	else
+ 		PKG_CHECK_MODULES(EVOLUTION, gmime-sharp >= 2.2.7, ENABLE_EVOLUTION="yes", ENABLE_EVOLUTION="no")

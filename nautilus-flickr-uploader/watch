@@ -1,0 +1,3 @@
+version=3
+http://www.usebox.net/jjm/nautilus-flickr-uploader/ \
+    (?:.*/)nautilus-flickr-uploader-([\d\.]+)\.tar\.gz

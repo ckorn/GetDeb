@@ -1,0 +1,29 @@
+glc-player (2.3.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Jul 2011 19:52:44 +0200
+
+glc-player (2.2.0-1~getdeb2) lucid; urgency=low
+
+  * Rebuild against new version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Mar 2011 19:13:08 +0100
+
+glc-player (2.2.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 20:29:53 +0200
+
+glc-player (2.1.0-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 12:52:07 +0100
+
+glc-player (2.1.0-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #487238)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 27 Nov 2009 23:39:26 +0100

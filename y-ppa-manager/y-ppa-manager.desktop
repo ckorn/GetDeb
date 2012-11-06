@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Y PPA Manager
+Comment=Y PPA Manager
+GenericName=Y PPA Manager
+Exec=/usr/bin/y-ppa-manager
+Icon=y-ppa-manager
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Categories=GNOME;System;
+StartupWMClass=y-ppa-manager

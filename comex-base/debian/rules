@@ -1,0 +1,100 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+
+	# move original key into debian
+	cp comex-base/comex-base.snk debian/
+	# use mono snk file
+	cp -f /usr/share/cli-common/keys/mono.snk comex-base/comex-base.snk
+	# start configure
+	./configure --prefix=/usr --libdir=/usr/lib 
+	touch configure-stamp
+
+build: configure-stamp build-stamp
+
+build: configure-stamp build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+
+
+build-stamp:  
+	dh_testdir
+	$(MAKE)
+	touch build-stamp
+
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	# start make clean
+	[ ! -f Makefile ] || $(MAKE) distclean
+	# remove DESTDIR folder
+	rm -rf $(CURDIR)/debian/tmp/comex-base
+	# remove original copied key
+	rm -rf debian/comex-base.snk
+	dh_clean 
+
+
+install: build
+	dh_testdir
+	dh_testroot
+	#dh_clean -k 
+	dh_prep
+	dh_installdirs
+
+	# install the package into debian/tmp/comex-base folder
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp/comex-base install
+
+
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_install
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_installcligac
+	dh_cligacpolicy
+	dh_link
+	dh_strip
+	dh_clistrip
+	dh_compress
+	dh_fixperms
+	dh_clifixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_makeclilibs -m 0.1.8.5
+#	dh_clideps -d
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+
+
+
+# Build architecture-dependent files here.
+binary-arch:
+
+
+binary: binary-indep
+.PHONY: build clean binary-indep binary install configure
+
+
+
+
+

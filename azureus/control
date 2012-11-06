@@ -1,0 +1,57 @@
+Source: azureus
+Section: net
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Adrian Perez <adrianperez.deb@gmail.com>
+DM-Upload-Allowed: yes
+Build-Depends: ant,
+               cdbs,
+               debhelper (>= 9)
+Build-Depends-Indep: default-jdk,
+                     libcommons-cli-java,
+                     liblog4j1.2-java, 
+                     libswt-gtk-3-java,
+                     junit
+Standards-Version: 3.9.3
+Vcs-Git: git://git.debian.org/git/pkg-java/azureus.git
+Vcs-Browser: http://git.debian.org/?p=pkg-java/azureus.git
+Homepage: http://azureus.sourceforge.net
+
+Package: azureus
+Architecture: all
+Depends: openjdk-7-jre | openjdk-6-jre | sun-java5-jre | sun-java6-jre, 
+         libcommons-cli-java,
+         liblog4j1.2-java,
+         libswt-gtk-3-java, 
+         java-wrappers,
+         ${misc:Depends}
+Recommends: vuze
+Description: BitTorrent client
+ BitTorrent is a peer-to-peer file distribution tool.
+ .
+ Azureus offers multiple torrent downloads, queuing/priority systems
+ (on torrents and files), start/stop seeding options and instant
+ access to numerous pieces of information about your torrents. Azureus
+ now features an embedded tracker easily set up and ready to use.
+
+Package: vuze
+Architecture: all
+Depends: azureus,
+         libswt-cairo-gtk-3-jni,
+         libswt-gnome-gtk-3-jni,
+         libswt-webkit-gtk-3-jni | libswt-mozilla-gtk-3-jni,
+         ${misc:Depends}
+Description: Multimedia BitTorrent client
+ BitTorrent is a peer-to-peer file distribution tool.
+ .
+ Vuze is a multimedia BitTorrent client based on Azureus intended for
+ DVD and HD video. It includes some social-networking features to
+ share videos among friends.
+ .
+ Vuze offers subscriptions to preferred content, an embed media player and
+ web-browser, support for multiple Content Networks, sharing .vuze files,
+ popularity contexts, categories and tagging, IPv6 compact tracker support,
+ automatic URL handling, and a plugin architecture; besides other features.
+ . 
+ This package is part of the azureus package, and provides the dependencies
+ necessary to run the new user interface.

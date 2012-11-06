@@ -1,0 +1,17 @@
+opentumblr (0.1.0-1~getdeb2) lucid; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 19:51:18 +0200
+
+opentumblr (0.1.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 09 Apr 2010 15:35:21 +0200
+
+opentumblr (0.0.5-1~getdeb1) jaunty; urgency=low
+
+  * Initial release (LP: #405885)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sat, 24 Oct 2009 16:42:11 +0200

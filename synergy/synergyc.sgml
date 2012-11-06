@@ -1,0 +1,352 @@
+<!doctype refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
+
+<!-- Process this file with docbook-to-man to generate an nroff manual
+     page: `docbook-to-man synergyc.sgml > synergyc.1'.  You may view
+     the manual page with: `docbook-to-man synergyc.sgml | nroff -man |
+     less'.  A typical entry in a Makefile or Makefile.am is:
+
+synergyc.1: synergyc.sgml
+	docbook-to-man $< > $@
+
+    
+	The docbook-to-man binary is found in the docbook-to-man package.
+	Please remember that if you create the nroff version in one of the
+	debian/rules file targets (such as build), you will need to include
+	docbook-to-man in your Build-Depends control field.
+
+  -->
+
+  <!-- Fill in your name for FIRSTNAME and SURNAME. -->
+  <!ENTITY dhfirstname "<firstname>Daniel</firstname>">
+  <!ENTITY dhsurname   "<surname>Lutz</surname>">
+  <!-- Please adjust the date whenever revising the manpage. -->
+  <!ENTITY dhdate      "<date>October 31, 2003</date>">
+  <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
+       allowed: see man(7), man(1). -->
+  <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
+  <!ENTITY dhemail     "<email>danlutz@debian.org</email>">
+  <!ENTITY dhusername  "Daniel Lutz">
+  <!ENTITY dhucpackage "<refentrytitle>SYNERGYC</refentrytitle>">
+  <!ENTITY dhpackage   "synergyc">
+
+  <!ENTITY debian      "<productname>Debian</productname>">
+  <!ENTITY gnu         "<acronym>GNU</acronym>">
+]>
+
+<refentry>
+  <refentryinfo>
+    <address>
+      &dhemail;
+    </address>
+    <author>
+      &dhfirstname;
+      &dhsurname;
+    </author>
+    <copyright>
+      <year>2002</year>
+      <holder>&dhusername;</holder>
+    </copyright>
+    &dhdate;
+  </refentryinfo>
+  <refmeta>
+    &dhucpackage;
+    
+    &dhsection;
+  </refmeta>
+
+  <refnamediv>
+    <refname>&dhpackage;</refname>
+
+    <refpurpose>synergy client</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <group>
+	<arg>-d <replaceable>level</replaceable></arg>    
+	<arg>--debug <replaceable>level</replaceable></arg>   
+      </group>
+      <group>
+        <arg>--display <replaceable>display</replaceable></arg>
+      </group>
+      <group>
+        <arg>--daemon</arg>
+        <arg>{ --no-daemon | -f }</arg>
+      </group>
+      <group>
+        <arg>-n <replaceable>name</replaceable></arg>
+        <arg>--name <replaceable>name</replaceable></arg>
+      </group>
+      <group>
+        <arg>--restart</arg>
+        <arg>{ --no-restart | -1 }</arg>
+      </group>
+      <arg choice="plain"><replaceable>address</replaceable></arg>
+    </cmdsynopsis>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <arg choice="req"> { --help | -h }</arg>
+    </cmdsynopsis>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+      <arg choice="req"> --version</arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>DESCRIPTION</title>
+
+    <para>Starts the <application>synergyc</application>
+    mouse/keyboard sharing client.</para>
+
+    <para>This manual page was written for the &debian; distribution
+      because the original program does not have a manual page.
+      Slightly old documentation exists in 
+      <filename>/usr/share/doc/synergy/obsolete/index.html</filename>;
+      it is the most up-to-date information available, despite the
+      pathname.</para>
+  </refsect1>
+
+  <refsect1>
+    <title>OPTIONS</title>
+
+    <variablelist>
+      <varlistentry>
+        <term><option>-d <replaceable>level</replaceable></option>
+          <option>--debug <replaceable>level</replaceable></option>
+        </term>
+        <listitem>
+          <para>use debugging level <replaceable>level</replaceable>.</para>
+          <para>Debug levels are from highest to lowest:  FATAL,
+            ERROR, WARNING, NOTE, INFO, DEBUG, DEBUG1, and DEBUG2.
+            Only messages at or above the given level are logged.
+            Messages are logged to a terminal window when running in
+            the foreground, and to syslog when running as a daemon.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--display <replaceable>display</replaceable></option>
+        </term>
+        <listitem>
+          <para>connect to the X server at <replaceable>display</replaceable></para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--daemon</option>
+        </term>
+        <listitem>
+          <para>run the client as a daemon.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-f</option>
+          <option>--no-daemon</option>
+        </term>
+        <listitem>
+          <para>run in client the foreground.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-n <replaceable>screen-name</replaceable></option>
+          <option>--name <replaceable>screen-name</replaceable></option>
+        </term>
+        <listitem>
+          <para>use <replaceable>screen-name</replaceable> instead of
+	    the hostname.</para> 
+
+	  <para>This option lets the client use a name other than its
+	    hostname for its screen. This name is used when checking
+	    the configuration.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>--restart</option>
+        </term>
+        <listitem>
+          <para>restart the client automatically if it fails.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-1</option>
+          <option>--no-restart</option>
+        </term>
+        <listitem>
+          <para>do not try to restart the client if it fails for some
+          reason.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-h</option>
+          <option>--help</option>
+        </term>
+        <listitem>
+          <para>display help and exit.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>--version</option>
+        </term>
+        <listitem>
+          <para>display version information and exit.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option><replaceable>address</replaceable></option>
+        </term>
+        <listitem>
+          <para>address of server.</para>
+          <para><replaceable>address</replaceable> has one of the
+          following forms:
+            <itemizedlist>
+              <listitem>
+                <para><replaceable>hostname</replaceable></para>
+              </listitem>
+              <listitem>
+                <para><replaceable>hostname</replaceable>:<replaceable>port</replaceable></para>
+              </listitem>
+            </itemizedlist>
+          </para>
+          <para>
+	    <replaceable>hostname</replaceable> is a hostname or
+            address of a network interface on the server
+            system. <replaceable>port</replaceable> is a port number
+            from 1 to 65535.  <replaceable>port</replaceable> defaults
+            to 24800.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+
+  <refsect1>
+    <title>RUNNING THE CLIENT</title>
+
+    <para>Run the client on all computers that aren't the server using
+      the following command line:
+      
+      <cmdsynopsis>
+	<command>synergyc </command> 
+	<arg choice="plain">-f</arg>
+	<arg choice="plain"><replaceable>server-hostname</replaceable></arg>
+      </cmdsynopsis>
+      
+      Replace <replaceable>server-hostname</replaceable> with the
+      hostname or address of the server system. The `-f' option causes
+      synergy to run in the foreground. This option is recommended until
+      you've verified that the configuration works.
+      If you didn't include the system's
+      hostname in the configuration file (either as a screen name or
+      an alias) then you'll have to add `--name
+      <replaceable>screen-name</replaceable>' to the command line,
+      where <replaceable>screen-name</replaceable> is a name in the
+      configuration file.
+    </para>
+
+    <para>
+      The client should quickly report `connected to server'.  If it
+      does not but doesn't print an error and exit immediately then
+      it's trying to connect to the server but cannot.  It will time
+      out in 30 seconds and exit (use ctrl+c to exit earlier).  You
+      should check that the server is running and is reachable over
+      the network and try again.
+    </para>
+
+    <para>
+    If the client fails and exits it should print an error describing
+    the problem.  Here are typical problems and possible solutions:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>failed to open screen:</para>
+        <para>check permission to open the X display</para>
+        <para>check that the DISPLAY environment variable is set</para>
+      </listitem>
+      <listitem>
+        <para>already connected:</para>
+        <para>check that the synergy client isn't already running</para>
+      </listitem>
+      <listitem>
+        <para>refused client:</para>
+        <para>add client to the server's configuration file</para>
+      </listitem>
+      <listitem>
+        <para>connection failed:</para>
+        <para>check <replaceable>server-hostname</replaceable></para>
+        <para>the server cannot open the desired port, stop the
+          program using that port (24800) and restart the
+          server</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+    Once all the clients are running, try moving the mouse to each
+    screen.  Be sure to check all the configured links. 
+    </para>
+  </refsect1>
+
+  <refsect1>
+    <title>STARTING AUTOMATICALLY</title>
+
+    <para>
+      Synergy requires an X server.  That means a server must be
+      running and synergy must be authorized to connect to that server.
+      I recommend to start the synergy client from a start script
+      of your desktop environment or window manager. The commands
+      should look something like this:
+<cmdsynopsis>
+  <command>pkill synergyc</command>
+</cmdsynopsis>
+<cmdsynopsis>
+	<command>synergyc</command>
+  <arg><replaceable>options</replaceable></arg>
+	<arg choice="plain"><replaceable>server-hostname</replaceable></arg>
+      </cmdsynopsis></para>
+    
+    <para>
+      If you are using GNOME, you can add the synergy client to the
+      list of the non-session-managed startup programs. For doing this,
+      start the control center, choose `Session Properties & Startup'
+      and then `Startup Programs'. Add a new entry with `<command>/usr/bin/synergyc
+	<replaceable>server-hostname</replaceable></command>' as the startup command.
+    </para>
+    
+    <para>
+      <replaceable>options</replaceable> must not include `-f' or `--no-daemon'.
+      It's important to make sure no old copies of synergy are running so they
+      can't interfere with the new one.
+    </para>
+  </refsect1>
+  
+  <refsect1>
+    <title>SEE ALSO</title>
+    
+    <para>synergys(1)</para>
+  </refsect1>
+  
+  <refsect1>
+    <title>AUTHOR</title>
+    
+    <para>This manual page was written by Daniel Lutz &lt;danlutz@debian.org&gt; for
+      the &debian; system. Edited by Titus Barik &lt;barik@ieee.org&gt;.</para>
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:nil
+sgml-default-dtd-file:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

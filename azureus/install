@@ -1,0 +1,7 @@
+debian/Azureus.png usr/share/pixmaps
+debian/Azureus.torrent.png usr/share/pixmaps
+dist/Azureus2.jar usr/share/java
+debian/wrappers/azureus usr/bin
+debian/azureus.desktop usr/share/applications
+debian/azureus.xpm usr/share/pixmaps
+debian/azureus.schemas usr/share/gconf/schemas

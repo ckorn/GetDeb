@@ -1,0 +1,605 @@
+From 489e959d5a5072d5c26ac91b25eeb4683b4cf219 Mon Sep 17 00:00:00 2001
+From: Christoph Korn <c_korn@gmx.de>
+Date: Fri, 17 Aug 2012 19:29:51 +0200
+Subject: [PATCH] youtube fix and record fix
+
+---
+ src/basegui.cpp          |   14 +--
+ src/basegui.h            |    4 +-
+ src/core.cpp             |    9 +-
+ src/core.h               |    4 +-
+ src/downloadfile.cpp     |  281 +++++++++++++++++++++++++---------------------
+ src/downloadfile.h       |   47 ++++----
+ src/mediadata.h          |    1 +
+ src/retrievevideourl.cpp |    2 +-
+ src/ytdialog.cpp         |    2 +-
+ src/ytdialog.h           |    2 +-
+ 10 files changed, 196 insertions(+), 170 deletions(-)
+
+diff --git a/src/basegui.cpp b/src/basegui.cpp
+index 571845c..dc1e7f7 100644
+--- a/src/basegui.cpp
++++ b/src/basegui.cpp
+@@ -218,7 +218,7 @@ BaseGui::BaseGui( QWidget* parent, Qt::WindowFlags flags )
+ void BaseGui::createYTDialog()
+ {
+         youTubeDialog = YTDialog::instance();
+-        connect(youTubeDialog, SIGNAL(gotUrls(QMap<int,QString>,QString)), this, SLOT(playYTUrl(QMap<int,QString>,QString)));
++        connect(youTubeDialog, SIGNAL(gotUrls(QMap<int,QString>, QString, QString)), this, SLOT(playYTUrl(QMap<int,QString>,QString, QString)));
+         shoutcastDialog = SCDialog::instance();
+         connect(shoutcastDialog, SIGNAL(gotUrls(QString,QString)), this, SLOT(playSCUrl(QString,QString)));
+ }
+@@ -1397,7 +1397,7 @@ void BaseGui::shareUmplayer()
+ void BaseGui::recordYoutube()
+ {
+     QUrl qurl(core->mdat.filename);
+-    QString id = qurl.queryItemValue("video_id");
++    QString id = core->mdat.youtube_id;
+     if(core->mdat.filename.toLower().contains("youtube"))
+         RecordingDialog::downloadVideoId(id, core->mdat.stream_title, core->mdat.duration);
+ }
+@@ -3816,7 +3816,7 @@ void BaseGui::openURL() {
+ 	}
+ }
+ 
+-void BaseGui::openURL(QString url, QString title, bool yt) {
++void BaseGui::openURL(QString url, QString title, bool yt, QString id) {
+ 	if (!url.isEmpty()) {
+ 		//pref->history_urls->addUrl(url);
+ 
+@@ -3825,7 +3825,7 @@ void BaseGui::openURL(QString url, QString title, bool yt) {
+                             if(!yt)
+                                 core->openStream(url, title);
+                             else
+-                                core->openYT(url, title);
++                                core->openYT(url, title, id);
+ 				playlist->clear();
+ 				playlist->addFile(url, Playlist::NoGetInfo);
+ 			}
+@@ -3833,7 +3833,7 @@ void BaseGui::openURL(QString url, QString title, bool yt) {
+                     if(!yt)
+                         core->openStream(url, title);
+                     else
+-                        core->openYT(url, title);
++                        core->openYT(url, title, id);
+                 }
+ 	}
+ }
+@@ -4999,7 +4999,7 @@ void BaseGui::play_or_pause(bool checked)
+     core->play_or_pause();
+ }
+ 
+-void BaseGui::playYTUrl(const QMap<int, QString> &qualityMap, QString title)
++void BaseGui::playYTUrl(const QMap<int, QString> &qualityMap, QString title, QString id)
+ {
+     QString url;
+     switch(pref->playback_quality)
+@@ -5015,7 +5015,7 @@ void BaseGui::playYTUrl(const QMap<int, QString> &qualityMap, QString title)
+     }
+     raise();
+     activateWindow();
+-    openURL(url, title, true);
++    openURL(url, title, true, id);
+ }
+ 
+ void BaseGui::playSCUrl(QString url, QString title)
+diff --git a/src/basegui.h b/src/basegui.h
+index 3b8f14b..86c3fe4 100644
+--- a/src/basegui.h
++++ b/src/basegui.h
+@@ -96,7 +96,7 @@ public slots:
+ 	virtual void openFile(QString file);
+ 	virtual void openFiles(QStringList files);
+ 	virtual void openURL();
+-        virtual void openURL(QString url, QString title = QString(), bool yt= false);
++        virtual void openURL(QString url, QString title = QString(), bool yt= false, QString id = QString());
+ 	virtual void openVCD();
+ 	virtual void openAudioCD();
+ 	virtual void openDVD();
+@@ -157,7 +157,7 @@ public slots:
+         void showYoutube();
+         void showShoutCast();
+         void recordYoutube();
+-        void playYTUrl(const QMap<int, QString>& qualityMap, QString title = QString());
++        void playYTUrl(const QMap<int, QString>& qualityMap, QString title, QString id);
+         void playSCUrl(QString url, QString title);
+         void searchYT(QString searchTerm, int engine);
+ 
+diff --git a/src/core.cpp b/src/core.cpp
+index 8405a57..44dfb98 100644
+--- a/src/core.cpp
++++ b/src/core.cpp
+@@ -760,11 +760,11 @@ void Core::openStream(QString name, QString title) {
+         openYTStream(name, TYPE_STREAM, title);
+ }
+ 
+-void Core::openYT(QString name, QString title){
+-        openYTStream(name, TYPE_YOUTUBE, title);
++void Core::openYT(QString name, QString title, QString id){
++        openYTStream(name, TYPE_YOUTUBE, title, id);
+ }
+ 
+-void Core::openYTStream(QString name, int type, QString title)
++void Core::openYTStream(QString name, int type, QString title, QString id)
+ {
+     qDebug("Core::openYT: '%s'", name.toUtf8().data());
+     mplayerwindow->showAnimation(true);
+@@ -782,6 +782,7 @@ void Core::openYTStream(QString name, int type, QString title)
+     mdat.filename = name;
+     mdat.type = type;
+     mdat.stream_title = title;
++    mdat.youtube_id = id;
+ 
+     mset.reset();
+ 
+@@ -899,9 +900,11 @@ void Core::newMediaPlaying() {
+ 	QString file = mdat.filename;
+ 	int type = mdat.type;
+         QString title = mdat.stream_title;
++        QString id = mdat.youtube_id;
+ 	mdat = proc->mediaData();
+ 	mdat.filename = file;
+ 	mdat.type = type;
++        mdat.youtube_id = id;
+         if(!title.isEmpty())
+         {
+             mdat.stream_title = title;
+diff --git a/src/core.h b/src/core.h
+index c4fd4e2..3e99944 100644
+--- a/src/core.h
++++ b/src/core.h
+@@ -71,8 +71,8 @@ public slots:
+ 	void open(QString file, int seek=-1); 
+ 	void openFile(QString filename, int seek=-1);
+         void openStream(QString name, QString title = QString());
+-        void openYT(QString name, QString title);
+-        void openYTStream(QString name, int type, QString title = QString());
++        void openYT(QString name, QString title, QString id);
++        void openYTStream(QString name, int type, QString title = QString(), QString id = QString());
+ 	/*
+ 	void openDVD( bool from_folder, QString directory = "");
+ 	void openDVD(); // Plays title 1
+diff --git a/src/downloadfile.cpp b/src/downloadfile.cpp
+index 21ca687..3c7ea4e 100644
+--- a/src/downloadfile.cpp
++++ b/src/downloadfile.cpp
+@@ -27,163 +27,182 @@
+ #define MOD_TIME(x) ((x+86400000)%86400000)
+ 
+ DownloadFile::DownloadFile(QString site, QFile *fileToDownload, QObject *parent):
+-    QObject(parent), speed(0)
++QObject(parent), speed(0)
+ {
+-    url = site;    
+-    manager = new QNetworkAccessManager(this);
+-    connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(finished(QNetworkReply*)));
+-    getRequest(url);
+-    file = fileToDownload;
+-    file->open(QFile::ReadWrite);
++        url = site;
++        manager = new QNetworkAccessManager(this);
++        connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(finished(QNetworkReply*)));
++        file = fileToDownload;
++        getRequest(url);
++
+ }
+ 
+ void DownloadFile::getRequest(QString url)
+-{    
+-    QNetworkRequest req(QUrl::fromEncoded(url.toAscii(), QUrl::StrictMode));
+-    reply = manager->get(req);
+-    qDebug() << req.url().toEncoded();
+-    connect(reply, SIGNAL(downloadProgress(qint64,qint64)), this, SLOT(downloaded(qint64,qint64)));
+-    connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(emitError(QNetworkReply::NetworkError)));
+-    connect(reply, SIGNAL(metaDataChanged()), this, SLOT(gotMetaData()));    
++{
++        QUrl realUrl = QUrl::fromEncoded(url.toAscii(), QUrl::StrictMode);
++        getRequest(realUrl);
++}
++
++
++void DownloadFile::getRequest( QUrl url )
++{
++        QNetworkRequest req(url);
++        if(!file->isOpen())
++        {
++                file->open(QFile::ReadWrite);
++        }
++        reply = manager->get(req);
++        connect(reply, SIGNAL(downloadProgress(qint64,qint64)), this, SLOT(downloaded(qint64,qint64)));
++        connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(emitError(QNetworkReply::NetworkError)));
++        connect(reply, SIGNAL(metaDataChanged()), this, SLOT(gotMetaData()));
++
+ }
+ 
+ void DownloadFile::downloaded(qint64 bytesReceived, qint64 total)
+ {
+-    totalSize = total;
+-    completed = bytesReceived;
+-    QTime current = QTime::currentTime();
+-    QPair<QTime, qint64> head = lastReceivedBytes.head();    
+-    if(MOD_TIME(lastReceivedBytes.last().first.msecsTo(current)) >= 1000)
+-    {
+-        lastReceivedBytes.enqueue(qMakePair(current, bytesReceived));
+-        speed = (bytesReceived - head.second)*1000/ MOD_TIME(head.first.msecsTo(current));
+-    }
+-    if(MOD_TIME(lastReceivedBytes.head().first.msecsTo(current)) >= 5000)
+-    {
+-        lastReceivedBytes.dequeue();
+-    }    
+-    emit progress(qRound(bytesReceived*100.0/total), total);
+-    file->write(static_cast<QNetworkReply*>(sender())->readAll());
+-    if(bytesReceived == total)
+-    {
+-        if(reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl().isEmpty())
+-        {
+-            file->close();
+-            emit downloadFinished(reply->error() != QNetworkReply::NoError);
+-            deleteLater();
+-        }
+-    }
+-    updateFooterText();
++        totalSize = total;
++        completed = bytesReceived;
++        QTime current = QTime::currentTime();
++        QPair<QTime, qint64> head = lastReceivedBytes.head();
++        if(MOD_TIME(lastReceivedBytes.last().first.msecsTo(current)) >= 1000)
++        {
++                lastReceivedBytes.enqueue(qMakePair(current, bytesReceived));
++                speed = (bytesReceived - head.second)*1000/ MOD_TIME(head.first.msecsTo(current));
++        }
++        if(MOD_TIME(lastReceivedBytes.head().first.msecsTo(current)) >= 5000)
++        {
++                lastReceivedBytes.dequeue();
++        }
++        emit progress(qRound(bytesReceived*100.0/total), total);
++        file->write(static_cast<QNetworkReply*>(sender())->readAll());
++        if(bytesReceived == total)
++        {
++                if(reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl().isEmpty())
++                {
++                        file->close();
++                        emit downloadFinished(reply->error() != QNetworkReply::NoError);
++                        deleteLater();
++                }
++        }
++        updateFooterText();
+ }
+ 
+ void DownloadFile::updateFooterText()
+ {
+-    qint64 remainingTime = -1;
+-    QString remainingTimeString;
+-    if(speed > 0 )
+-        remainingTime = (totalSize - completed)/speed + 1 ;
+-    if(remainingTime == -1)
+-        remainingTimeString = "unknown time remaining - ";
+-    else
+-    {
+-        bool flag = false; // if hour is there but not minutes
+-        if(remainingTime > 3600)
+-        {
+-            remainingTimeString += QString::number(remainingTime / 3600) + " hours, ";
+-            remainingTime = remainingTime % 3600;
+-            flag = true;
+-        }
+-        if(remainingTime > 60 || flag)
+-        {
+-            remainingTimeString += QString("%1 minutes, ").arg(remainingTime / 60, 2, 10, QChar('0'));
+-            remainingTime = remainingTime % 60;
+-        }
+-        remainingTimeString += QString("%1 seconds remaining - ").arg(remainingTime, 2, 10, QChar('0'));
+-    }
+-
+-    if(totalSize > 1048576 )
+-    {
+-        remainingTimeString += QString::number(completed / (qreal)1048576, 'f', 2);
+-        remainingTimeString += " of ";
+-        remainingTimeString += QString::number(totalSize / (qreal)1048576, 'f', 2);
+-        remainingTimeString += " MB ";
+-    }
+-    else if(totalSize > 1024 )
+-    {
+-        remainingTimeString += QString::number(completed / (qreal)1024, 'f', 2);
+-        remainingTimeString += " of ";
+-        remainingTimeString += QString::number(totalSize / (qreal)1024, 'f', 2);
+-        remainingTimeString += " KB ";
+-    }
+-    else if(totalSize >= 0)
+-    {
+-        remainingTimeString += QString::number(completed);
+-        remainingTimeString += " of ";
+-        remainingTimeString += QString::number(totalSize);
+-        remainingTimeString += " bytes ";
+-    }
+-    else
+-    {
+-        remainingTimeString += QString::number(completed);
+-        remainingTimeString += " of ";
+-        remainingTimeString += " Unknown size ";
+-    }
+-    remainingTimeString += "(";
+-    if(speed > 1048576 )
+-    {
+-        remainingTimeString += QString::number(speed/ (qreal)1048576, 'f', 2);
+-        remainingTimeString += " MB/sec)";
+-    }
+-    else if(totalSize > 1024 )
+-    {
+-        remainingTimeString += QString::number(speed/ (qreal)1024, 'f', 2);
+-        remainingTimeString += " KB/sec)";
+-    }
+-    else
+-    {
+-        remainingTimeString += QString::number(speed);
+-        remainingTimeString += " bytes/sec)";
+-    }
+-    emit downloadStatus(remainingTimeString);
++        qint64 remainingTime = -1;
++        QString remainingTimeString;
++        if(speed > 0 )
++                remainingTime = (totalSize - completed)/speed + 1 ;
++        if(remainingTime == -1)
++                remainingTimeString = "unknown time remaining - ";
++        else
++        {
++                bool flag = false; // if hour is there but not minutes
++                if(remainingTime > 3600)
++                {
++                        remainingTimeString += QString::number(remainingTime / 3600) + " hours, ";
++                        remainingTime = remainingTime % 3600;
++                        flag = true;
++                }
++                if(remainingTime > 60 || flag)
++                {
++                        remainingTimeString += QString("%1 minutes, ").arg(remainingTime / 60, 2, 10, QChar('0'));
++                        remainingTime = remainingTime % 60;
++                }
++                remainingTimeString += QString("%1 seconds remaining - ").arg(remainingTime, 2, 10, QChar('0'));
++        }
++
++        if(totalSize > 1048576 )
++        {
++                remainingTimeString += QString::number(completed / (qreal)1048576, 'f', 2);
++                remainingTimeString += " of ";
++                remainingTimeString += QString::number(totalSize / (qreal)1048576, 'f', 2);
++                remainingTimeString += " MB ";
++        }
++        else if(totalSize > 1024 )
++        {
++                remainingTimeString += QString::number(completed / (qreal)1024, 'f', 2);
++                remainingTimeString += " of ";
++                remainingTimeString += QString::number(totalSize / (qreal)1024, 'f', 2);
++                remainingTimeString += " KB ";
++        }
++        else if(totalSize >= 0)
++        {
++                remainingTimeString += QString::number(completed);
++                remainingTimeString += " of ";
++                remainingTimeString += QString::number(totalSize);
++                remainingTimeString += " bytes ";
++        }
++        else
++        {
++                remainingTimeString += QString::number(completed);
++                remainingTimeString += " of ";
++                remainingTimeString += " Unknown size ";
++        }
++        remainingTimeString += "(";
++        if(speed > 1048576 )
++        {
++                remainingTimeString += QString::number(speed/ (qreal)1048576, 'f', 2);
++                remainingTimeString += " MB/sec)";
++        }
++        else if(totalSize > 1024 )
++        {
++                remainingTimeString += QString::number(speed/ (qreal)1024, 'f', 2);
++                remainingTimeString += " KB/sec)";
++        }
++        else
++        {
++                remainingTimeString += QString::number(speed);
++                remainingTimeString += " bytes/sec)";
++        }
++        emit downloadStatus(remainingTimeString);
+ }
+ 
+ void DownloadFile::gotMetaData()
+ {
+-    qDebug() << reply->rawHeaderList();
+-    if(reply->header(QNetworkRequest::ContentTypeHeader).isValid())
+-    {
+-        if( lastReceivedBytes.isEmpty())
+-            lastReceivedBytes.enqueue(qMakePair(QTime::currentTime(), 0LL));
+-    }
++        if(reply->header(QNetworkRequest::ContentTypeHeader).isValid())
++        {
++                if( lastReceivedBytes.isEmpty())
++                        lastReceivedBytes.enqueue(qMakePair(QTime::currentTime(), 0LL));
++        }
+ }
+ 
+ void DownloadFile::finished(QNetworkReply *rep)
+ {
+-    if(reply->error() != QNetworkReply::NoError) return;
+-    QUrl url = reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl();        
+-    if(!url.isEmpty() && url != reply->request().url() )
+-    {
+-        reply->deleteLater();
+-        reply = 0;
+-        getRequest(url.toString());
+-    }
+-    else
+-    {
+-        reply->deleteLater();
+-        reply = 0;
+-    }
++        qDebug() << reply->error() << reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl();
++        if(reply->error() != QNetworkReply::NoError  && reply->error() != QNetworkReply::ContentOperationNotPermittedError ) return;
++        file->close();
++        QUrl url = reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl();
++        if(!url.isEmpty() && url != reply->request().url() )
++        {
++                reply->deleteLater();
++                reply = 0;
++                getRequest(url);
++        }
++        else
++        {
++                reply->deleteLater();
++                reply = 0;
++
++        }
+ }
+ 
+ void DownloadFile::cancel()
+ {
+-    reply->disconnect(this, SLOT(downloaded(qint64,qint64)));
+-    reply->disconnect(this, SLOT(gotMetaData()));
+-    reply->abort();
+-    file->remove();
++        reply->disconnect(this, SLOT(downloaded(qint64,qint64)));
++        reply->disconnect(this, SLOT(gotMetaData()));
++        reply->abort();
++        if(file->isOpen()) file->close();
++        file->remove();
+ }
+ 
+ void DownloadFile::emitError(QNetworkReply::NetworkError error)
+ {
+-    qDebug() << error;
+-    emit errorOcurred((int)error);
++        if(error != QNetworkReply::ContentOperationNotPermittedError)
++        {
++                file->close();
++                emit errorOcurred((int)error);
++        }
++        else
++                qDebug() << "Hello Darling";
+ }
+diff --git a/src/downloadfile.h b/src/downloadfile.h
+index 24186ba..5f3645a 100644
+--- a/src/downloadfile.h
++++ b/src/downloadfile.h
+@@ -31,42 +31,45 @@ class QNetworkAccessManager;
+ 
+ class DownloadFile : public QObject
+ {
+-Q_OBJECT
++        Q_OBJECT
+ public:
+-    explicit DownloadFile(QString url, QFile* fileToDownload, QObject *parent = 0);
+-    qint64 fileSize() { return totalSize; }
+-    void cancel();
++        explicit DownloadFile(QString url, QFile* fileToDownload, QObject *parent = 0);
++        qint64 fileSize() { return totalSize; }
++        void cancel();
++        QString fileName() { return file->fileName();}
+ private:
+-    qint64 totalSize;
+-    qint64 completed;
+-    qint64 speed;
+-    QString url;
+-    QQueue< QPair<QTime, qint64> > lastReceivedBytes;
+-    QFile* file;
+-    QNetworkAccessManager* manager;
+-    QNetworkReply* reply;
++        qint64 totalSize;
++        qint64 completed;
++        qint64 speed;
++        QString url;
++        QQueue< QPair<QTime, qint64> > lastReceivedBytes;
++        QFile* file;
++        QNetworkAccessManager* manager;
++        QNetworkReply* reply;
+ 
+ 
+-    void updateFooterText();
+-    void getRequest(QString url);
++        void updateFooterText();
++        void getRequest(QString url);
++        void getRequest(QUrl url);
+ 
+ 
+ 
+ 
+ 
+ signals:
+-    void errorOcurred(int);
+-    void downloadStatus(QString status);
+-    void downloadFinished(bool error);
+-    void progress(int percent, qint64 size);
++        void errorOcurred(int);
++        void downloadStatus(QString status);
++        void downloadFinished(bool error);
++        void progress(int percent, qint64 size);
+ 
+ public slots:
+-    void downloaded(qint64 bytesReceived, qint64 total);
+-    void gotMetaData();
+-    void finished(QNetworkReply* reply);
+-    void emitError(QNetworkReply::NetworkError);
++        void downloaded(qint64 bytesReceived, qint64 total);
++        void gotMetaData();
++        void finished(QNetworkReply* reply);
++        void emitError(QNetworkReply::NetworkError);
+ 
+ };
+ 
+ 
++
+ #endif // DOWNLOADFILE_H
+diff --git a/src/mediadata.h b/src/mediadata.h
+index 88cd8df..823f130 100644
+--- a/src/mediadata.h
++++ b/src/mediadata.h
+@@ -99,6 +99,7 @@ public:
+ 
+ 	QString stream_title;
+ 	QString stream_url;
++        QString youtube_id;
+ 
+ 
+ 	// Other data not really useful for us,
+diff --git a/src/retrievevideourl.cpp b/src/retrievevideourl.cpp
+index 323a0ae..d1b13af 100644
+--- a/src/retrievevideourl.cpp
++++ b/src/retrievevideourl.cpp
+@@ -101,7 +101,7 @@ void RetrieveVideoUrl::gotVideoPage(QNetworkReply *reply)
+     {
+         urlMap[LowFlv] = QString("http://www.youtube.com/get_video?video_id=%1&t=%2&fmt=%3&asv=2").arg(id).arg(tString).arg(LowFlv);
+     }*/
+-    emit gotUrls(urlMap, m_title, id);
++    emit gotUrls(urlMap, m_title, id);    
+ }
+ 
+ QString RetrieveVideoUrl::sanitizeForUnicodePoint(QString string)
+diff --git a/src/ytdialog.cpp b/src/ytdialog.cpp
+index e36d05e..a027566 100644
+--- a/src/ytdialog.cpp
++++ b/src/ytdialog.cpp
+@@ -581,7 +581,7 @@ void YTDialog::videoDblClicked(QListWidgetItem *item)
+ {
+     SingleVideoItem* svi = item->data(0).value<SingleVideoItem*>();
+     RetrieveVideoUrl* rvu = new RetrieveVideoUrl(this);
+-    connect(rvu, SIGNAL(gotUrls(QMap<int,QString>, QString, QString)), this, SIGNAL(gotUrls(QMap<int,QString>, QString)) );
++    connect(rvu, SIGNAL(gotUrls(QMap<int,QString>, QString, QString)), this, SIGNAL(gotUrls(QMap<int,QString>, QString, QString)) );
+     connect(rvu, SIGNAL(gotUrls(QMap<int,QString>, QString, QString)), rvu, SLOT(deleteLater()));
+     rvu->fetchYTVideoPage(svi->videoid, svi->header );
+ }
+diff --git a/src/ytdialog.h b/src/ytdialog.h
+index 348b290..b0c1589 100644
+--- a/src/ytdialog.h
++++ b/src/ytdialog.h
+@@ -162,7 +162,7 @@ public:
+ 
+ 
+ signals:
+-    void gotUrls(const QMap<int, QString>&, QString);
++    void gotUrls(const QMap<int, QString>&, QString, QString);
+ 
+ public slots:
+     void gotCurrentTab(int index);
+-- 
+1.7.9.5
+

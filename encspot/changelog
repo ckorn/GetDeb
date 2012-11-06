@@ -1,0 +1,18 @@
+encspot (2.01-1~getdeb1) karmic; urgency=low
+
+  * Upload to getdeb (LP: #517845)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 Feb 2010 10:30:11 +0100
+
+encspot (2.01-1~dh.0) sarge-backports; urgency=low
+
+  * Rebuilt for sarge.
+
+ -- daemon's horn <daemon.horn@gmail.com>  Sun, 10 Dec 2006 22:03:10 +0900
+
+encspot (2.01-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- mike gan <xmixahlx@yahoo.com>  Wed,  7 Jul 2004 16:41:45 -0700
+

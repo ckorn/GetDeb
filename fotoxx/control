@@ -1,0 +1,32 @@
+Source: fotoxx
+Section: graphics
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Original-Maintainer: Santiago Torres Batan <santi73@gmail.com>
+Build-Depends: debhelper (>= 9),
+               libgtk-3-dev,
+               libtiff4-dev,
+               xdg-utils
+Standards-Version: 3.9.3
+Homepage: http://kornelix.squarespace.com/downloads/
+
+Package: fotoxx
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libimage-exiftool-perl,
+         ufraw-batch,
+         xdg-utils,
+         dcraw
+Suggests: brasero
+Description: easy-to-use digital photo editor
+ Fotoxx is a program for improving digital photos. It allows you to navigate
+ through large image directories using a window of thumbnail images, create HDR
+ (high dynamic range) images by combining bright and dark images to improve
+ details visible in both bright and dark areas, create panoramas by joining
+ overlapped images, adjust brightness and color intensity independently for
+ different underlying brightness levels, reduce fog or haze by removing
+ "whiteness" and intensifying colors, rotate an image (level a tilted image or
+ turn 90 degrees), remove red-eyes from electronic flash photos, sharpen,
+ resize, or crop images, reduce noise in low-light photos, change color depth,
+ and stretch an image by dragging the mouse. 

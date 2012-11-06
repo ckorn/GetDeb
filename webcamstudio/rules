@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	rm debian/webcamstudio/usr/share/webcamstudio/webcamstudio-src/COPYING
+	chmod 0755 debian/webcamstudio/usr/share/webcamstudio/microphone/default.pa
+	chmod 0644 debian/webcamstudio/usr/share/webcamstudio/webcamstudio-src/webcamstudio-install-vloopback.sh \
+	           debian/webcamstudio/usr/share/webcamstudio/microphone/delay-microphone
+
+	cd debian/webcamstudio/etc && rm -rf rc2.d rc3.d rc4.d rc5.d

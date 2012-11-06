@@ -1,0 +1,18 @@
+Source: jnetmap
+Section: java
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50)
+Standards-Version: 3.9.1
+Homepage: http://www.rakudave.ch/?q=jnetmap
+
+Package: jnetmap
+Architecture: all
+Depends: ${misc:Depends}, openjdk-6-jre | sun-java6-jre, fontconfig
+Description: Advanced network scanner
+ jNetMap will ping all registered devices every x minutes,
+ updating it's status according to the result of the ping.
+ Alternatively you can also monitor a specific port,
+ such as port 80 for webservers. Available devices
+ are green, unavailable devices are red. Gray means
+ "unknown" and orange "not found".

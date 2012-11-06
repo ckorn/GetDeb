@@ -1,0 +1,28 @@
+Index: opentumblr-0.0.5/opentumblr.desktop
+===================================================================
+--- opentumblr-0.0.5.orig/opentumblr.desktop	2009-10-24 17:32:26.873414709 +0200
++++ opentumblr-0.0.5/opentumblr.desktop	2009-10-24 17:32:34.296413155 +0200
+@@ -5,9 +5,8 @@
+ Name[es]= Cliente OpenTumblr
+ GenericName[es]= Cliente Tumblr
+ Comment[es]=Cliente de escritorio multiplataforma desarrollado en wxpython para tumblr
+-Exec=opentumblr-client.py
++Exec=opentumblr-client
+ Type=Application
+ Terminal=false
+ Categories=Application;Network;
+ Icon=opentumblr
+-
+Index: opentumblr-0.0.5/setup.py
+===================================================================
+--- opentumblr-0.0.5.orig/setup.py	2009-10-24 17:32:11.941415036 +0200
++++ opentumblr-0.0.5/setup.py	2009-10-24 17:32:19.180420212 +0200
+@@ -14,7 +14,7 @@
+ poster = packages_path + '/poster'
+ simplejson = packages_path + '/simplejson'
+ opentumblr = packages_path + '/opentumblr'
+-opentumblr_client = opentumblr + '/opentumblr-client.py'
++opentumblr_client = opentumblr + '/opentumblr-client'
+ tumblr = packages_path + '/tumblr.py'
+ 
+ image_files = []

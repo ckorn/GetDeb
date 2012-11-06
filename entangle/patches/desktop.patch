@@ -1,0 +1,12 @@
+Remove deprecated encoding.
+Index: entangle-0.3.1/src/entangle.desktop.in
+===================================================================
+--- entangle-0.3.1.orig/src/entangle.desktop.in	2012-02-28 20:15:04.202122977 +0100
++++ entangle-0.3.1/src/entangle.desktop.in	2012-02-28 20:15:15.510123407 +0100
+@@ -6,6 +6,5 @@
+ Exec=::PACKAGE::
+ Type=Application
+ Terminal=false
+-Encoding=UTF-8
+ Categories=Graphics;GTK;
+ StartupNotify=true

@@ -1,0 +1,24 @@
+Source: utrac
+Section: main/utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 7), autotools-dev,
+ automake1.10
+Standards-Version: 3.8.3
+Homepage: http://utrac.sourceforge.net/
+
+Package: utrac
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: command line tool that recognize the encoding of an input file
+ UTRAC stands for Universal Text Recognizer and Converter.
+ It is a command line tool and a library that recognize the encoding of an
+ input file (ex: UTF-8, ISO-8859-1, CP437...) and its end-of-line type
+ (CR, LF, CRLF).
+ .
+ It has three main features:
+ .
+    * Automatic recognition (depending on the file and on the system's locale),
+      reliable in most cases;
+    * Assistance for verification or manual recognition;
+    * Conversion to an other charset and/or end-of-line type.

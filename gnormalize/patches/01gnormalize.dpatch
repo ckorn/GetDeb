@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 01gnormalize.dpatch by Christoph Korn <christoph.korn@getdeb.net>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gnormalize-0.63~/gnormalize gnormalize-0.63/gnormalize
+--- gnormalize-0.63~/gnormalize	2008-07-11 04:28:13.000000000 +0200
++++ gnormalize-0.63/gnormalize	2010-01-19 18:46:55.612505206 +0100
+@@ -631,7 +631,7 @@
+ 
+ # from /usr/share/doc/perl-Gtk2-1.054/gtk-demo/main.pl
+ sub set_icon {
+-  my $icon_path = shift || "/usr/share/icons/gnormalize.png";
++  my $icon_path = shift || "/usr/share/pixmaps/gnormalize.png";
+   my $pixbuf;
+   eval { $pixbuf = Gtk2::Gdk::Pixbuf->new_from_file($icon_path); };
+   #eval { $pixbuf = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/icons/wolf.png"); };

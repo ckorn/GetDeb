@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean filebot.png filebot.desktop libmediainfo.so libzen.so
+
+override_dh_install:
+	cp installer/icons/icon48.png filebot.png
+	cp installer/deb/FileBot.desktop filebot.desktop
+ifeq (${DEB_BUILD_ARCH},amd64)
+	cp lib/native/linux-amd64/libmediainfo.so .
+	cp lib/native/linux-amd64/libzen.so .
+else
+	cp lib/native/linux-i386/libmediainfo.so .
+	cp lib/native/linux-i386/libzen.so .
+endif
+	dh_install

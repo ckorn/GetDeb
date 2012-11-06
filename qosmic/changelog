@@ -1,0 +1,33 @@
+qosmic (1.5.0-1~getdeb1) oneiric; urgency=low
+
+  * New upstream version
+    - Compatibility updates for flam3-3.0.1.
+    - Enhanced directory browsing widget.
+    - Added move, rotate, scale, and flip modes to the triangle editor.
+    - Added xform previews and rendering enhancements to the triangle editor.
+    - Added a genome palette histogram to the xform color selector.
+    - Enhanced flam3 types in Lua scripts.
+    - Alpha channel and HSV colorspace support for ggr gradients.
+    - Enhanced mutations editor.
+    - Enhanced genome selector.
+    - New sheep loop animation widget.
+    - Added a configuration dialog for the autosave feature.
+    - Enhanced tree view in the variations widget.
+    - Added a message output pane to the Lua script editor.
+    - Fixed a bug when modifying coefs in the coordinates widget.
+    - Added drag+drop support to mutations, directory browser, and genome
+      selector.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 10 Nov 2011 19:09:50 +0100
+
+qosmic (1.4.8-1~getdeb2) lucid; urgency=low
+
+  * Fixed debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 19:45:35 +0200
+
+qosmic (1.4.8-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #193485)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 19 Apr 2010 12:07:01 +0200

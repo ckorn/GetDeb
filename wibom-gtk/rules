@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	find debian/wibom-gtk/usr/share/icons -name "wine-notepad.*" -delete
+	find debian/wibom-gtk/usr/share/icons -name "wine-uninstaller.*" -delete
+	find debian/wibom-gtk/usr/share/icons -name "wine-winecfg.*" -delete

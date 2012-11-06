@@ -1,0 +1,47 @@
+Index: encspot-2.01/encspot.cpp
+===================================================================
+--- encspot-2.01.orig/encspot.cpp	2010-02-06 10:34:11.280666057 +0100
++++ encspot-2.01/encspot.cpp	2010-02-06 10:34:11.460650346 +0100
+@@ -1,3 +1,5 @@
++#include <string.h>
++#include <stdlib.h>
+ #include "stdafx.h"
+ #include "mp3file.h"
+ 
+Index: encspot-2.01/mp3file.cpp
+===================================================================
+--- encspot-2.01.orig/mp3file.cpp	2010-02-06 10:34:11.250629564 +0100
++++ encspot-2.01/mp3file.cpp	2010-02-06 10:34:11.460650346 +0100
+@@ -2,6 +2,8 @@
+ //
+ //////////////////////////////////////////////////////////////////////
+ 
++#include <string.h>
++#include <stdlib.h>
+ #include "mp3file.h"
+ 
+ const long freqs[9] = { 44100, 48000, 32000,
+Index: encspot-2.01/mp3structs.cpp
+===================================================================
+--- encspot-2.01.orig/mp3structs.cpp	2010-02-06 10:34:11.250629564 +0100
++++ encspot-2.01/mp3structs.cpp	2010-02-06 10:34:11.460650346 +0100
+@@ -1,3 +1,5 @@
++#include <string.h>
++#include <stdlib.h>
+ #include "stdafx.h"
+ #include "mp3structs.h"
+ 
+Index: encspot-2.01/id3tag.cpp
+===================================================================
+--- encspot-2.01.orig/id3tag.cpp	2010-02-06 10:34:24.703142254 +0100
++++ encspot-2.01/id3tag.cpp	2010-02-06 10:34:34.720633066 +0100
+@@ -1,7 +1,8 @@
+ // ID3tag.cpp: implementation of the CID3tag class.
+ //
+ //////////////////////////////////////////////////////////////////////
+-
++#include <string.h>
++#include <stdlib.h>
+ #include "stdafx.h"
+ #include "id3tag.h"
+ 

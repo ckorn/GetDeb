@@ -1,0 +1,4 @@
+version=3
+
+http://www.kornelix.com/downloads---source.html \
+    (?:.*/)?fotoxx-(.*)\.tar\.(?:gz|bz2|xz)

@@ -1,0 +1,719 @@
+freefilesync (5.9-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Scroll grid directly under mouse cursor
+    Move files directly to recycle bin without parent "FFS 2012-05-15 131513"
+    temporary folders
+    Offer $HOME directory alias in directory dropdown list (Linux)
+    Support for tilde (~) character in input folder paths (Linux)
+    New environment variables for RealtimeSync: %change_action%,
+    "%change_path%
+    Use Internet Explorer proxy settings for new version check (Windows)
+    Show proper error message after failed symlink creation
+    Start comparison directly when double-clicking config list
+    New batch return code: "Synchronization completed with warnings"
+    Hide files that won't be copied by default if direction "none" is part of
+    the rule set (e.g. update variant)
+    New sync completion sound
+    Remember save config and folder picker dialog positions separately
+    Fixed sync completion sound not playing (Ubuntu)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 04 Nov 2012 12:27:15 +0100
+
+freefilesync (5.8-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    New icon theme
+    Dynamic save button and dialog title show unsaved configuration
+    Exclude all folders if file size or time span filters are active
+    Added macros %csidl_Nethood%, %csidl_Programs%, %csidl_Startup%
+    Fixed crash on failed CRT parameter validation (Windows)
+    Auto-updater handles moved web address for version check
+    Fixed configuration conversion error when deleting into versioning folder
+    Avoid modal error dialogs in batch mode unless error handling is set to
+    "popup"
+    Set return codes in batch mode even if modal dialogs are shown
+    Disabled UAC virtualization for 32-bit user-mode process
+    Descriptive error message when setting invalid dates on FAT volumes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 02 Oct 2012 20:39:30 +0200
+
+freefilesync (5.7-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Modern directory selection dialog (Windows Vista and later)
+
+    New file versioning scheme appending revision number to files
+
+    New sync option to limit number of versions per file
+
+    Revised configuration format for *.ffs_gui/*.ffs_batch files: old format
+    will be supported for some time
+
+    Fixed crash on invalid file modification times
+
+    Fixed zlib error on empty database stream
+
+    GlobalSettings.xml: added "MaxSize" parameter to "ConfigHistory"
+
+    Fixed occasional crash on GTK 2 (Linux)
+
+    Always show "items processed" in log file
+
+    Simplified configuration dialogs
+
+    Fixed password prompt not always coming up when connecting to a network
+    share
+
+    Support environment variables everywhere: +on completion; +external
+    applications; +RTS command
+
+    Harmonized external application macros: %item_path%, %item_folder%,
+    %item2_path%, %item2_folder%
+
+    Updated translation files
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 05 Sep 2012 18:06:28 +0200
+
+freefilesync (5.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 02 Aug 2012 23:57:01 +0200
+
+freefilesync (5.5-1~getdeb1) precise; urgency=low
+
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Jul 2012 19:48:31 +0200
+
+freefilesync (5.5-0ubuntu2~precise) precise; urgency=low
+  * New package: freefilesync. (LP: #597694)
+  * Add new compilation dependencies
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 04 Jul 2012 21:45:01 +0200
+
+freefilesync (5.5-0ubuntu1~precise) precise; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * New upstream version: FFS 5.5
+    * New database format for <automatic> variant: old database files are converted automatically
+    * Tuned performance for <automatic> variant when saving database for millions of files: > 95% faster
+    * Support partial database updates for <automatic> variant respecting current filter
+    * Reduced size of database files by 30%
+    * Fine-tuned <automatic> algorithm to avoid certain conflicts after changing comparison settings
+    * Lower peak memory consumption when reading database participating in multiple sync jobs
+    * Refined symlink categorization and <automatic> variant handling
+    * Always save log of last syncs to %appdata%\FreeFileSynce\LastSyncs.log (128 kB limit)
+    * "Save" and "Save As" menu options
+    * Properly show status message after save configuration
+    * Avoid issues applying file modification time on certain NAS
+    * Refined last-used configuration handling
+    * Avoid race-condition: database file is only read if directory is existing
+    * Protect against temporary network drop between comparison and synchronization
+    * Rearranged statistics panel to save vertical space when vertically aligned
+    * Removed limitation for number of conflicts shown in the warning message and log
+    * Consider both global and local filter when estimating whether folder could contain matches
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 04 Jul 2012 15:29:06 +0200
+
+freefilesync (5.4-0ubuntu1~precise) precise; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * Update to Standard 3.9.3 - no changes necessary
+  * New icon for .ffs_batch files
+  * Update translation files
+  * New upstream version: FFS 5.4
+    * Copy all NTFS extended attributes
+    * Improved statistics panel
+    * Improved main grid
+    * Support context menu for files in overview tree
+    * Process double-clicks outside main grid
+    * Allow quoted paths ending with backslash in command line: "C:\"
+    * Fully localized number formatting (Windows)
+    * Fixed deletion dialog header being trimmed (Linux)
+    * Fixed exclusion via context menu (Linux)
+    * Preserve row label width after comparison (Linux)
+    * Updated help file
+    * New batch mode return codes, see help file
+    * Prefix custom deletion directory with job name
+    * Use the same time stamp for log file and versioning
+    * Handle folder drag and drop outside main grid
+    * Avoid name clash having multiple folder pairs delete into the same versioning folder
+    * Exit FreeFileSync automatically while upgrading to new version
+    * Accessibility: Support high contrast color schemes
+    * Yet another UI design overhaul
+    * Fixed "access denied" issue on OS X-hosted network shares
+    * Support Citrix folder shares
+    * Support Arch Linux (Chakra)
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 04 June 2012 15:47:02 +0200
+
+freefilesync (5.3-0ubuntu1~precise) precise; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * New upstream version : FFS 5.3
+    * Show which processes lock a file during synchronization (Windows Vista and later)
+    * Use unbuffered copy to speed up copying large files (Windows Vista and later)
+    * Preserve NTFS sparse files
+    * Support referencing all logical volumes by name (including FreeOTFE virtual drives)
+    * Fixed lag showing "Searching for directory" on comparison
+    * New context menu filter option: exclude by short name
+    * Use clicked-on row rather than anchor when determining action for shift-selection
+    * Refresh grid after pressing "CTRL + A"
+    * Add base folder pairs to CSV export
+    * Show full path in tooltip if multiple folder pairs are used
+    * Show child dialogs on same monitor as parent dialog on multiple monitor systems
+    * Added statistics at beginning of batch log file
+    * Fixed batch mode final speed statistic and reset graph after binary comparison
+    * RealtimeSync: Automatically retry after 15 seconds if an error occurrs
+    * Show button images untrimmed (Linux)
+    * Fixed problems with auto-closing progress dialog (Linux)
+    * Fixed unresponsive progress dialog and systray icon (Linux)
+    * New option in GlobalSettings.xml: "LockDirectoriesDuringSync"
+    * Added Lithuanian translation
+    * Added Norwegian translation
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 03 May 2012 15:06:21 +0200
+
+freefilesync (5.2-0ubuntu1~precise) precise; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * New upstream version : FFS 5.1 and FFS 5.2
+    * Fixed runtime error "Error comparing strings! (LCMapString)" (Windows 2000, XP only)
+    * New category for time span filter: last x days
+    * Fixed "Error loading library function: GetVolumeInformationByHandleW" if NTFS permissions are copied
+    * Fixed command line issues: allow config name without extension, allow multiple directories instead of a config file
+    * Reenabled global shortcut F8 to toggle data shown in middle grid
+    * Unified error handling on failure to create log directory
+    * Do not close batch creation dialog after save
+    * Tree view: compress and filter root nodes the same way as regular folder nodes
+    * Fixed wrong tooltip being shown if directory name changes
+    * Date range selector does not trim year field anymore
+    * Show action "do nothing" on mouse-hover for conflicts in middle grid
+    * Fixed "Windows Error Code 59: An unexpected network error occurred"
+    * New filter pattern: *\* matches all files in subdirectories of base directories
+    * Fixed "*?" filter sub-sequence
+    * Fixed "Cannot convert from the charset 'Unknown encoding (-1)'!"
+    * Support Ctrl + A in filter dialog
+    * Support large filter lists > 32 kByte
+    * Allow to hide file icons
+    * Avoid switching monitor when main dialog is maximized on multiple monitor systems
+    * Improved huge XML files loading times by a factor of 3000, saving by a factor of 3
+    * Restore grid scroll position after repeated comparisons
+    * Show log after sync when non-fatal errors occurred
+    * Fixed crash in UTF8 conversion when processing a corrupted ffs_db file
+    * Even more pedantic user interface fine-tuning
+    * Compiles and runs on openSuse 12.1
+    * Fixed grid page-up/down keys scrolling twice (Linux, wxGTK 2.9.3)
+    * Fixed unwanted grid scrolling when toggling middle column (Linux, wxGTK 2.9.3)
+    * Fixed middle grid tooltip occasionally going blank (Linux)
+    * Support single shift-click to check/set direction of multiple rows
+    * Removed gtkmm dependency (Linux)
+    * Installer remembers all settings for next installation (local installation only)
+    * All executables digitally signed
+    * Updated translation files  
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 01 Apr 2012 16:01:04 +0200
+
+freefilesync (5.0.1-0ubuntu6~precise) precise; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * New series : Ubuntu Precise Pangolin
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 27 Feb 2012 21:48:17 +0100
+
+freefilesync (5.0.1-0ubuntu5) oneiric; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * New series : Ubuntu Precise Pangolin
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 27 Feb 2012 21:36:45 +0100
+
+freefilesync (5.0.1-0ubuntu4) oneiric; urgency=low
+
+  * New package: freefilesync. (LP: #597694)
+  * Better watch file (again)
+  * Remove lintian override (against watch file)
+  * debian/rules get-orig-source target added
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 15 Feb 2012 21:23:04 +0100
+ 
+freefilesync (5.0.1-0ubuntu3~ppa) oneiric; urgency=low
+
+  * Better watch file
+
+ -- Damien Lecan <dev@dlecan.com>  Sat, 11 Feb 2012 22:00:18 +0100
+ 
+freefilesync (5.0.1-0ubuntu2~ppa) oneiric; urgency=low
+
+  * Full "rules" file rewrite
+  * Better manpages installation
+  * Remove lintian warning about debhelper version
+  * Remove lintian warning about SF redirector
+  * Images are no more generated in debian/ directory
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 08 Feb 2012 10:50:58 +0100
+ 
+freefilesync (5.0.1-0ubuntu1~ppa1~oneiric1) oneiric; urgency=low
+
+  * New upstream version : FFS 5.0.1
+    * Fix 64 bits build errors
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 31 Dec 2011 21:24:16 +0100
+
+freefilesync (5.0-0ubuntu1~ppa1~oneiric1) oneiric; urgency=low
+
+  * New upstream version : FFS 5.0
+    * New grid control
+    * New tree control
+    * Revised Right to Left layout for Hebrew
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 30 Dec 2011 21:53:11 +0100
+
+freefilesync (4.6-0ubuntu1~ppa1~oneiric1) oneiric; urgency=low
+
+  * New upstream version : FFS 4.6
+    * Execute user-defined command after synchronization
+    * Option to automatically close synchronization progress dialog
+    * Automatically adjust statistics during sync if changes happened after comparison
+    * Fixed "DecodePointer could not be located in KERNEL32.dll" (Windows 2000)
+    * Fixed "Windows Error Code 31: A device attached to the system is not functioning"
+    * Mouse wheel will scroll list of folder pairs instead of toggle through directory history
+    * No error message when scanning a single directory
+    * Minimized disk accesses when deleting files
+    * Less mouse-clicks required when overwriting configuration
+    * Pause timers while showing error messages
+    * Show error message for malformed external commands
+    * Support detection of moved files over "subst" alias
+    * New default font: Segoe UI (Windows Vista and later)
+    * Save settings before forced exit due to shutdown or logoff
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 29 Dec 2011 15:54:34 +0100
+
+freefilesync (4.3-0ubuntu1~ppa3~oneiric1) oneiric; urgency=low
+
+  * Fix many lintian warnings :
+    * Update copyright
+    * Add man pages
+    * Update description
+    * Remove useless resources
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 12 Dec 2011 22:25:13 +0100
+
+freefilesync (4.3-0ubuntu1~ppa2~oneiric1) oneiric; urgency=low
+
+  * Fix lintian warnings
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 23 Nov 2011 21:49:17 +0100
+
+freefilesync (4.3-0ubuntu1~ppa1~oneiric1) oneiric; urgency=low
+
+  * New upstream version : FFS 4.3
+  * Changelog :
+    * Detection of moved and renamed files
+    * New database format for &lt;Automatic&gt; mode: a full sync is suggested before upgrading
+    * Fixed overwrite symlink with regular file
+    * Fixed synchronization result dialog GUI glitch (Windows XP)
+    * Fixed macro %weekday%
+    * RealtimeSync: Fixed support for manual volume unmount (Windows)
+    * Added Croatian language
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 21 Nov 2011 22:12:21 +0100
+
+freefilesync (4.2-0ubuntu1~ppa3~oneiric1) oneiric; urgency=low
+
+  * Clean-up : licenses and dependencies
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 13 Nov 2011 15:10:22 +0100
+
+freefilesync (4.2-0ubuntu1~ppa2~oneiric1) oneiric; urgency=low
+
+  * "library" folder has been renamed "lib"
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 05 Nov 2011 15:05:42 +0100
+
+freefilesync (4.2-0ubuntu1~ppa1~oneiric1) oneiric; urgency=low
+
+  * New upstream version : FFS 4.2
+  * Changelog :
+    * Implemented workaround for compiler bug leading to uncaught exceptions (Windows 32 bit)
+    * Shadow Copy Service: Native support for Windows7/Server 2008
+    * Fixed reference by volume name parsing issue
+    * Rearranged synchronization progress dialog
+    * More concise log message format
+    * Fixed default file icon (Kubuntu)
+    * Support for wxWidgets 2.9 series (Ubuntu/Kubuntu)
+    * FAT 2 sec tolerance for files dated in the future
+    * Honor DACL/SACL inheritance flags when copying NTFS permissions (Windows)
+    * New option in GlobalSettings.xml: "RunWithBackgroundPriority" (Windows Vista and later)
+  * Changelog for FFS 4.1 :
+    * Improved synchronization progress dialog
+    * Show all available aliases in directory history list
+    * Show password prompt when connecting to mapped network share
+    * Removed busy cursor after program startup
+    * RealtimeSync: atomically detect missing directories
+    * Handle not existing reference by volume name as an invalid path
+    * Improved startup responsiveness by checking dir/file existence asynchronously
+    * Fixed incorrect directory name loading when using multiple folder pairs
+    * Allow passing multiple configurations via command line
+    * Allow passing multiple directory names via command line
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 03 Nov 2011 21:45:45 +0100
+
+freefilesync (4.0-0ubuntu1~ppa1~oneiric1) oneiric; urgency=low
+
+  * New upstream version : FFS 4.0
+  * Changelog :
+    * Thumbnail list view
+    * Option to specify comparison settings at folder pair level
+    * Correctly update parent-child relationship when changing sync directions
+    * Show history list for additional folder pairs
+    * Switch between volume name and full path in directory history list
+    * Perf: shrinked folder matching CPU time by over 70%
+    * Show windows environment strings in directory history list
+    * Show windows special folder IDs in directory history list
+    * Fixed progress dialog going into background on heavy load
+    * Support creating old 8.3 directories
+    * Take over configuration name when creating new batch job
+    * Remember batch-specific settings when loading a ffs_batch file from main dialog
+    * Drag &amp; drop ffs_batch files on main dialog to test and edit batch settings
+    * Automatically resolve objects deleted externally after comparison
+    * Date column context menu: manual time range selector
+    * New categories for time span filter: today, this week, this month, this year
+    * Respect both sides when sorting by relative path
+    * Updated COM error message reporting resolving "Unknown error"
+    * Smarter configuration merge algorithm
+    * Correctly show existing folders on both sides when using include filter
+    * Fixed network access using WebDrive
+    * Update modification times during file copy to write current values to database 
+    * RealtimeSync: write name of changed file into environment variable "changed_file"
+    * RealtimeSync: fixed network drop incorrectly being handled as a failure
+    * Set default direction according to current configuration when deleting manually
+    * Plenty of GUI improvements
+    * Updated help file
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Sat, 01 Oct 2011 21:47:10 +0100
+
+freefilesync (3.21-0ubuntu1~ppa1) natty; urgency=low
+
+  * New upstream version : FFS 3.21
+  * Changelog :
+    * Fixed deleting to user-defined directory
+    * Fixed crash when using include filter
+    * New global option to disable transactional file copy
+    
+ -- Damien Lecan <dev@dlecan.com>  Thu, 18 Aug 2011 18:51:11 +0100
+
+freefilesync (3.20-0ubuntu1~ppa1) natty; urgency=low
+
+  * New upstream version : FFS 3.20
+  * Changelog :
+    * Scan multiple directories in parallel
+    * Automatically resolve disconnected network maps
+    * Fixed temporal hang when dropping large files on main dialog
+    * <Automatic> mode: Fixed issue regarding directory names differing in case during first sync
+    * Delete permanently if recycle bin is not available (Linux)
+    * Keep FreeFileSync responsive when trying to access non-existent network folder
+    * Support for Ubuntu Unity Launcher (Linux)
+    * RealtimeSync: Failure notification if command line is invalid (Linux)
+
+ -- Damien Lecan <dev@dlecan.com>  TUe, 16 Aug 2011 11:57:31 +0100
+
+freefilesync (3.19.1-0ubuntu1~ppa3) natty; urgency=low
+
+  * Try to fix 128x128 bug (bis)
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 7 Aug 2011 22:45:56 +0100
+
+freefilesync (3.19.1-0ubuntu1~ppa2) natty; urgency=low
+
+  * Try to fix 128x128 bug
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 7 Aug 2011 22:10:13 +0100
+
+freefilesync (3.19.1-0ubuntu1~ppa1) natty; urgency=low
+
+  * New upstream version : FFS 3.19.1
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 7 Aug 2011 21:40:45 +0100
+
+freefilesync (3.19-0ubuntu1~ppa2) natty; urgency=low
+
+  * Update dependencies
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 7 Aug 2011 21:14:17 +0100
+
+freefilesync (3.19-0ubuntu1~ppa1) natty; urgency=low
+
+  * Lucid and Maverick support is discontinued
+  * Change dependencies : gcc (>= 4:4.5) and libboost 1.46
+  * New upstream version : FFS 3.19
+    * Exclude directories from synchronization which cannot be accessed during comparison
+    * Warning if Recycle Bin is not available instead of deleting silently
+    * Adapted log message if missing recycler leads to permanent deletion (Windows)
+    * Revert to per file recycle bin handling if creating temp recycler folder fails
+    * Avoid orphaned deletion temp directories on network drives
+    * Quick-select comparison and synchronization options via double-click
+    * New right-click dropdown menu on comparison and synchronization settings button
+    * New database design: copying the database file does not lead to complications anymore
+    * Full support for "retry" while comparing
+    * Don't copy empty folders when filtering by timespan
+    * Allow loading/merging multiple configurations files via file open dialog
+    * Allow loading/merging multiple configurations in last used config list
+    * Fixed system shutdown interruption during batch mode
+    * Allow saving log files in both silent and non-silent batch jobs
+    * Reduced main dialog flicker when switching configurations
+    * Database and lock files created by FreeFileSync do not trigger RealtimeSync anymore
+    * Restrict maximum number of visible folder pairs to 6 (configurable via GlobalSettings.xml)
+    * New macros: %day%, %hour%, %min%, %sec%
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 7 Aug 2011 15:53:33 +0100
+
+freefilesync (3.18-0ubuntu1~ppa2) natty; urgency=low
+  
+  * Change ditribution (lucid -> natty) in order to use gcc 4.5
+
+ -- Damien Lecan <dev@dlecan.com>  Fri, 8 Jul 2011 10:31:41 +0100
+
+freefilesync (3.18-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.18
+  * Changelog :
+    * Launcher running synchronously and returning application error code
+    * Fixed sort by file extension
+    * Fixed drag and drop of SAMBA network folder
+    * Render (all) invalid file dates correctly on GUI
+    * Correct layout selection for RTL and LTR languages
+    * Correct GUI status texts while waiting for directory lock
+    * Properly set default directory when loading configuration
+    * New XML framework: zenXML
+    * Addded Hebrew language
+    * Addded Danish language
+    * Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Fri, 7 Jul 2011 15:47:27 +0100
+
+freefilesync (3.17.2-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.17.2
+
+ -- Damien Lecan <dev@dlecan.com>  Fri, 28 May 2011 17:20:13 +0100
+
+freefilesync (3.17.1-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.17.1
+
+ -- Damien Lecan <dev@dlecan.com>  Fri, 27 May 2011 18:51:58 +0100
+
+freefilesync (3.17-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.17
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 22 May 2011 12:33:21 +0100
+
+freefilesync (3.16-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.16
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 01 May 2011 16:10:04 +0100
+
+freefilesync (3.14-0ubuntu1~ppa3) lucid; urgency=low
+
+  * Fix bug with icon size (bis)
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 31 Mar 2011 14:56:27 +0100
+
+freefilesync (3.14-0ubuntu1~ppa2) lucid; urgency=low
+
+  * Fix bug with icon size
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 31 Mar 2011 14:38:48 +0100
+
+freefilesync (3.14-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.14
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 23 Mar 2011 21:48:07 +0100
+
+freefilesync (3.13-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.13
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 23 Jan 2011 18:34:39 +0100
+
+freefilesync (3.11-0ubuntu1~ppa2) lucid; urgency=low
+
+  * Build system is now patched
+
+ -- Damien Lecan <dev@dlecan.com>  Tue, 19 Oct 2010 21:05:41 +0100
+
+freefilesync (3.11-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version : FFS 3.11
+
+ -- Damien Lecan <dev@dlecan.com>  Tue, 12 Oct 2010 22:32:53 +0100
+
+freefilesync (3.9-0ubuntu1~ppa3) lucid; urgency=low
+
+  * Use backport of liboost 1.44
+
+ -- Damien Lecan <dev@dlecan.com>  Tue, 05 Oct 2010 22:51:46 +0100
+
+freefilesync (3.9-0ubuntu1~ppa2) lucid; urgency=low
+
+  * New tentative to use backport of liboost 1.42
+
+ -- Damien Lecan <dev@dlecan.com>  Sun, 19 Sep 2010 13:04:13 +0100
+
+freefilesync (3.9-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version (3.9)
+
+ -- Damien Lecan <dev@dlecan.com>  Fri, 03 Sep 2010 21:26:41 +0100
+ 
+freefilesync (3.8-0ubuntu1~ppa2) lucid; urgency=low
+
+  * Update .desktop files translations
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 23 Jun 2010 10:56:46 +0100
+ 
+freefilesync (3.8-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version (3.8)
+  * Upstream changelog
+    New options handling Symlinks: ignore/direct/follow => warning: new database format for <Automatic> mode
+    Fixed crash when starting sync for Windows XP SP2
+    Prevent tooltip from stealing focus
+    Show associated file icons (Linux)
+    Run folder existence checks in separate thread (faster network share access)
+    Write <Automatic> mode database file even if both sides are already in sync
+    Don't raise status dialog to the top after synchronisation
+    Embedded version information into executable (Windows)
+    Migrated Compiler to Visual C++ 2010 (Windows)
+    Avoid losing manual changes when excluding via context menu
+    Adjusted auto-updater web-address
+    Updated translation files
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 23 Jun 2010 09:40:27 +0100
+
+freefilesync (3.7.0-0ubuntu1~ppa2) lucid; urgency=low
+
+  * Prepare for new translations
+  * Update .desktop files translations
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 27 May 2010 11:40:31 +0100
+
+freefilesync (3.7.0-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version (3.7)
+
+ -- Damien Lecan <dev@dlecan.com>  Tue, 18 May 2010 18:20:07 +0100
+
+freefilesync (3.6.0-0ubuntu1~ppa5) lucid; urgency=low
+
+  * Update .desktop files translations
+
+ -- Damien Lecan <dev@dlecan.com>  Tue, 11 May 2010 13:47:26 +0100
+
+freefilesync (3.6.0-0ubuntu1~ppa4) lucid; urgency=low
+
+  * Add translations of .desktop files
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 05 May 2010 11:29:13 +0100
+ 
+freefilesync (3.6.0-0ubuntu1~ppa3) karmic; urgency=low
+
+  * Add missing installation of realtimesync.desktop file
+
+ -- Damien Lecan <dev@dlecan.com>  Fri, 30 Apr 2010 10:56:37 +0100
+ 
+freefilesync (3.6.0-0ubuntu1~ppa2) karmic; urgency=low
+
+  * Improve icon management of RealTimeSync
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 22 Apr 2010 13:44:21 +0100
+
+freefilesync (3.6.0-0ubuntu1~ppa1) karmic; urgency=low
+
+  * New upstream version (3.6)
+  * Improve package description
+
+ -- Damien Lecan <dev@dlecan.com>  Wed, 31 Mar 2010 13:21:43 +0100
+
+freefilesync (3.4.0-0ubuntu1~ppa2) karmic; urgency=low
+
+  * Add icons in Nautilus for *.ffs_gui files 
+  * Improve mime types declaration
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 15 Mar 2010 14:45:35 +0100
+
+freefilesync (3.4.0-0ubuntu1~ppa1) karmic; urgency=low
+ 
+  * New upstream version (3.4)
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 04 Mar 2010 14:32:36 +0100
+
+freefilesync (3.4rc2-0ubuntu1~ppa4) karmic; urgency=low
+ 
+  * Update version
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 01 Mar 2010 10:16:14 +0100
+
+freefilesync (3.4rc2-0ubuntu1~ppa3~karmic1) karmic; urgency=low
+
+  * Update version
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 15 Feb 2010 17:04:42 +0100
+
+freefilesync (3.4rc2-0ubuntu1~ppa2~karmic1) karmic; urgency=low
+
+  * Update version
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 15 Feb 2010 13:09:42 +0100
+
+freefilesync (3.4rc2-0ubuntu1~ppa1~karmic1) karmic; urgency=low
+
+  * Update version
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 15 Feb 2010 13:09:42 +0100
+
+freefilesync (3.4rc2-0ubuntu1~ppa12) karmic; urgency=low
+  
+  * Upgrade to 3.4rc2
+    - Integration RealTimeSync tool
+    - improve icon management
+
+ -- Damien Lecan <dev@dlecan.com>  Thu, 11 Feb 2010 14:41:19 +0100
+
+freefilesync (3.4rc1-0ubuntu1~ppa11) karmic; urgency=low
+
+  * Initial release
+
+  * Update packaging
+   - Provides .desktop file
+   
+  * Update packaging
+  
+  * Update packaging
+  
+  * Update freefilesync.desktop file
+  
+  * Update freefilesync.desktop file (again)
+  
+  * Add file association
+  
+  * Improve package building
+  
+  * Improve package building (again)
+  
+  * Improve package building (and again)
+
+ -- Damien Lecan <dev@dlecan.com>  Mon, 08 Feb 2010 15:47:16 +0100

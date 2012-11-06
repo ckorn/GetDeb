@@ -1,0 +1,5 @@
+filebot (0.0.0r465-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #784298)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 12 Jun 2011 18:11:32 +0200

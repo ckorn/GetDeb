@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/hartmath
+java -jar hartmath08pre2.jar

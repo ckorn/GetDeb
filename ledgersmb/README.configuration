@@ -1,0 +1,34 @@
+To finalize the ledgersmb installation:
+
+Enable local password autentication in PosgreSQL, leaving ident login for the
+postgres user:
+- Start PostgreSQL to create database instance (sudo service postgresql start)
+- Let /etc/postgresql/8.4/main/pg_hba.conf contain (may already be on bottom of the file):
+local   all         postgres                          ident
+local   all         all                               md5
+host    all         all         127.0.0.1/32          md5
+- Restart PostgreSQL to apply changes (sudo service postgresql restart)
+
+Create a password for the postgres user:
+sudo -u postgres psql
+\password postgres
+Enter password twice
+\q
+
+You may have to enable rewriting restart the apache server:
+sudo a2enmod rewrite
+sudo service apache2 restart
+
+Visit http://localhost/ledgersmb/setup.pl with the password of the postgres
+user and create an application database and users.
+
+Super-user login: postgres
+Password: the password you chose above
+Database: ledgersmb
+
+Create the database and visit http://localhost/ledgersmb/login.pl to login.
+
+You should be able to open the PDF documentation with this link:
+http://localhost/ledgersmb/doc/LedgerSMB-manual.pdf
+Else the documentation is here on your file system:
+/usr/share/doc/ledgersmb/LedgerSMB-manual.pdf

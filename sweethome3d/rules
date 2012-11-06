@@ -1,0 +1,54 @@
+#!/usr/bin/make -f
+
+VERSION   := $(shell dpkg-parsechangelog | egrep '^Version:' | cut -f2 -d' ' | cut -f1 -d-)
+JARFILE   := install/sweethome3d.jar
+TMPDIR    := get-orig-source-tmp
+ICONS     := debian/icons
+ABOUT     := src/com/eteks/sweethome3d/swing/resources/aboutIcon.png
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir -p lib libtest
+	ant jarExecutable
+
+override_dh_auto_install:
+	mv install/SweetHome3D-$(VERSION).jar $(JARFILE)
+	# icons
+	mkdir -p $(ICONS)/16 $(ICONS)/22 $(ICONS)/48 $(ICONS)/128
+	convert $(ABOUT) -resize 16x16 \
+		-background 'rgba(0,0,0,0)' -gravity center -extent 16x16 $(ICONS)/16/sweethome3d.png
+	convert $(ABOUT) -resize 22x22 \
+		-background 'rgba(0,0,0,0)' -gravity center -extent 22x22 $(ICONS)/22/sweethome3d.png
+	convert $(ABOUT) -resize 48x48 \
+		-background 'rgba(0,0,0,0)' -gravity center -extent 48x48 $(ICONS)/48/sweethome3d.png
+	convert $(ABOUT) -resize 128x128 \
+		-background 'rgba(0,0,0,0)' -gravity center -extent 128x128 $(ICONS)/128/sweethome3d.png
+	convert $(ABOUT) -resize 32x32 \
+		-background 'rgba(0,0,0,0)' -gravity center -extent 32x32 $(ICONS)/sweethome3d.xpm
+	dh_install
+
+override_dh_auto_clean:
+	find . -name *.class -print -exec rm -f {} \;
+	rm -rf $(JARFILE) $(ICONS)
+	dh_clean 
+
+SRCDIR=SweetHome3D-$(VERSION)-src
+get-orig-source:
+	uscan --verbose --download-version $(VERSION) --force-download --repack --rename
+	-mkdir -p $(TMPDIR) && tar -C $(TMPDIR) -zxf ../sweethome3d_$(VERSION).orig.tar.gz
+	rm -f ../sweethome3d_$(VERSION).orig.tar.gz
+	@echo "Getting ChangeLog from SW3D site..."
+	lynx -dump -nolist http://www.sweethome3d.com/history.jsp| \
+		sed -n 's/\[.*\]//g;/Version history/,/December 2006/p' >$(TMPDIR)/$(SRCDIR)/ChangeLog
+	@echo "To comply with DFSG, the following files will be removed from tarball:"
+	@cd $(TMPDIR) && find $(SRCDIR) -name '*.jar' -o -name '*.so' -o -name '*.jnilib' -o -name '*.dll' \
+		-o -name '*.zip' -o -path '*/src/com/eteks/sweethome3d/io/resources/contributions/*' \
+		-o -name JPEGImagesToVideo.java |sort|cut -d/ -f2-|awk '{print " - "$$0}'
+	cd $(TMPDIR) && tar --exclude *.jar --exclude *.so --exclude *.jnilib --exclude *.dll \
+		--exclude *.zip --exclude src/com/eteks/sweethome3d/io/resources/contributions \
+		--exclude JPEGImagesToVideo.java \
+		-zcf ../../sweethome3d_$(VERSION)+dfsg.orig.tar.gz $(SRCDIR)
+	rm -rf $(TMPDIR)

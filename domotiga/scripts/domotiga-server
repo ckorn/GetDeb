@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/domotiga
+gbr2 ./DomotiGaServer.gambas $@

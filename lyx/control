@@ -1,0 +1,76 @@
+Source: lyx
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+XSBC-Original-Maintainer: Debian LyX Maintainers <pkg-lyx-devel@lists.alioth.debian.org>
+Uploaders: Per Olofsson <pelle@debian.org>, Sven Hoexter <hoexter@debian.org>
+Section: editors
+Priority: optional
+Standards-Version: 3.9.3
+Vcs-Git: git://anonscm.debian.org/pkg-lyx/lyx.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-lyx/lyx.git
+Homepage: http://www.lyx.org/
+Build-Depends: python (>= 2.6.6-3), debhelper (>= 8.1.0~),
+ libz-dev, libx11-dev, libenchant-dev, libmythes-dev,
+ autotools-dev, libqt4-dev, libboost-dev,
+ libboost-filesystem-dev, libboost-signals-dev,
+ libboost-iostreams-dev, libboost-regex-dev, libboost-test-dev,
+ pkg-config, tex-common
+
+Package: lyx
+Architecture: any
+Pre-Depends: dpkg (>= 1.15.6)
+Depends: ${shlibs:Depends}, ${misc:Depends}, lyx-common (= ${source:Version}), xdg-utils
+Recommends: texlive-latex-recommended, texlive-latex-extra, texlive-science, texlive-generic-extra, texlive-fonts-recommended, preview-latex-style, dvipng, imagemagick, psutils, ghostscript, poppler-utils, ttf-lyx, evince-gtk | pdf-viewer, elyxer | tex4ht | hevea | tth | latex2html 
+Suggests: rcs, dvipost, groff, libtiff-tools, gnuhtml2latex, wv, chktex, noweb, sgmltools-lite, linuxdoc-tools, writer2latex, latex2rtf, librsvg2-bin | inkscape, texlive-xetex, etoolbox
+Description: document processor
+ LyX is an almost WYSIWYG-frontend for LaTeX. It makes the power and
+ typesetting quality of LaTeX available for people who are used to
+ word processors. Since LyX supports LaTeX's concept of general
+ mark-ups, it is even easier and faster to create professional quality
+ documents with it than with usual word processors. It is also
+ possible to use LaTeX commands within LyX, so nothing of LaTeX's
+ power is lost.
+ .
+ You can extend the functionality of LyX by installing these packages:
+  * chktex: check for typographical errors
+  * dvipost: display tracked changes in DVI format output
+  * gnuhtml2latex: import HTML documents
+  * groff: improved table formatting in plain text exports
+  * librsvg2-bin, inkscape: use the SVG image format in LyX documents
+  * linuxdoc-tools: export SGML LinuxDoc documents
+  * mythes-*: use the OpenOffice.org/LibreOffice Thesaurus
+  * noweb: import noweb files
+  * rcs: integrated version control
+  * sgmltools-lite: export SGML DocBook documents
+  * texlive-xetex, etoolbox: use the XeTeX typesetting system
+  * wv: import MS Word documents
+
+Package: lyx-common
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6)
+Depends: ${misc:Depends}, ${python:Depends}
+Recommends: lyx
+Description: architecture-independent files for LyX
+ This package contains LyX's common files which are not
+ architecture-dependent. See the lyx package for a description of LyX
+ itself.
+
+Package: ttf-lyx
+Architecture: all
+Section: fonts
+Pre-Depends: ${misc:Pre-Depends}, dpkg (>= 1.15.6)
+Depends: ${misc:Depends}
+Description: TrueType versions of some TeX fonts
+ These fonts are needed for the visual math symbol display in
+ LyX. They can also be used to display MathML in Gecko-based browsers
+ like Iceweasel.
+ .
+ The following fonts are included in this package:
+  * cmex10  - Computer Modern math extension
+  * cmmi10  - Computer Modern math italic
+  * cmr10   - Computer Modern Roman
+  * cmsy10  - Computer Modern math symbols
+  * esint10 - Alternate integrals
+  * eufm10  - Euler Fraktur (medium-weight)
+  * msam10  - Extra math symbols, first series
+  * msbm10  - Extra math symbols, second series, including Blackboard Bold
+  * wasy10  - Waldi symbol fonts

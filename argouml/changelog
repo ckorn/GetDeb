@@ -1,0 +1,99 @@
+argouml (0.34-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 18 Dec 2011 13:08:41 +0100
+
+argouml (0.32.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 06 Apr 2011 18:13:33 +0200
+
+argouml (0.32.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 25 Feb 2011 16:45:32 +0100
+
+argouml (0.32-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 14:41:20 +0100
+
+argouml (0.30.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Jul 2010 20:04:44 +0200
+
+argouml (0.30.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 21 May 2010 20:09:32 +0200
+
+argouml (0.30-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 09 Apr 2010 13:13:09 +0200
+
+argouml (0.28.1-1~getdeb1) jaunty; urgency=low
+
+  * New upstream version (LP: #459876)
+
+ -- Christoph Korn <c_korn@gmx.de>  Sat, 24 Oct 2009 19:11:49 +0200
+
+argouml (0.28-1~getdeb1) intrepid; urgency=low
+
+  * More than 150 bugs resolved 
+  * New Sequence Diagram implementation (old diagrams are converted) 
+  * Draggable labels 
+  * Reorganised critic for better classification 
+  * CSharp source code import 
+  * Java import/generation/critics are modules now (can be disabled) 
+  * New coloured set of diagram creation icons 
+  * More information displayed about loaded modules. 
+  * User manual: completion of the german translation
+
+ -- Christoph Korn <c_korn@gmx.de>  Wed, 08 Apr 2009 23:40:41 +0200
+
+argouml (0.26.2-1~getdeb2) intrepid; urgency=low
+
+  * Fix java dependency.
+  * Added menu icon.
+
+ -- Christoph Korn <c_korn@gmx.de>  Sat, 07 Mar 2009 22:27:12 +0100
+
+argouml (0.26.2-1~getdeb1) intrepid; urgency=low
+
+  * New upstream version.
+
+ -- Marco Rodrigues <gothicx@sapo.pt>  Tue, 24 Feb 2009 21:58:32 +0000
+
+argouml (0.26-1~getdeb1) intrepid; urgency=low
+
+  * Rebuild for Intrepid
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Fri, 24 Oct 2008 21:58:00 +0000
+
+argouml (0.26-0~getdeb1) hardy; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Wed, 08 Oct 2008 00:00:00 +0000
+
+argouml (0.24-1~getdeb1) hardy; urgency=low
+
+  * Repackage for Gutsy
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Mon, 28 Apr 2008 20:08:20 +0100
+
+argouml (0.24-1~getdeb1) gutsy; urgency=low
+
+  * New upstream version
+
+ -- Joao Pinto <joao.pinto@getdeb.net>  Tue, 30 Oct 2007 21:02:15 +0000
+

@@ -1,0 +1,4 @@
+version=3
+opts="uversionmangle=s/^/0r/" \
+http://code.google.com/p/twitlib/source/list \
+    (?:.*/)?detail\?r=([\d]+)

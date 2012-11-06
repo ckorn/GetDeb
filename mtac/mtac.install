@@ -1,0 +1,3 @@
+MTAC.jar			usr/share/mtac
+debian/scripts/mtac		usr/bin
+debian/mtac.desktop		usr/share/applications

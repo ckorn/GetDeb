@@ -1,0 +1,5 @@
+tide (2.06c-1~getdeb1) lucid; urgency=low
+
+  * Initial release (LP: #486890)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 May 2010 18:42:14 +0200

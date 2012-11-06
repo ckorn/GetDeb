@@ -1,0 +1,7 @@
+cslbuild/built/csl/csl			usr/lib/reduce-algebra
+cslbuild/built/csl/csl.img		usr/lib/reduce-algebra
+cslbuild/built/csl/reduce		usr/lib/reduce-algebra
+cslbuild/built/csl/reduce.img		usr/lib/reduce-algebra
+debian/scripts/reduce			usr/bin
+debian/scripts/csl			usr/bin
+debian/reduce-algebra.desktop		usr/share/applications

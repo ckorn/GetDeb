@@ -1,0 +1,2 @@
+include/*			usr/include/qtwit
+release/lib*.so			usr/lib

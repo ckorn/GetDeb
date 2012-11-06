@@ -1,0 +1,766 @@
+azureus (4.8.0.0-1~getdeb2) precise; urgency=low
+
+  * New upstream version
+    2012.10.24 | Vuze 4.8.0.0
+
+    FEATURE: Blog | See http://devblog.vuze.com/tagged/4800 for beta version
+    blog posts
+
+    FEATURE: Plug | Swarm Discoveries
+    FEATURE: Plug | The RSS Feed plugin now can filter on min+max file types
+    and also has a 'copy-filter' function [Parg+Community]
+    FEATURE: Core | Reduced resource usage mode on startup - still in a beta
+    state [Parg]
+    FEATURE: Core | 'Prevent Computer Sleep' options now available on OSX
+    [Parg]
+    FEATURE: Core | Added options to streaming and transcoding to prevent
+    computer sleep [Parg]
+    FEATURE: Core | Auto-preview for .nfo and .txt files (Quick View) option
+    added to Library and Files view [Parg]
+    FEATURE: Core | Analysis of .rar file content (indication of password
+    protected entries) added as a Quick View function [Parg]
+    FEATURE: UI   | Added 'edit as text' option to the tracker URL editor
+    dialog [Parg]
+    FEATURE: UI   | Added right-click menu to Sources tab to allow tracker
+    URL edits [Parg]
+    FEATURE: UI   | Extended the existing 'add tracker url' Library menu
+    option to accept multiple trackers [Parg]
+    FEATURE: UI   | Custom date format now applicable to ETA colums [Parg]
+    FEATURE: UI   | Added 'Torrent Creation Date' column to Library views
+    [Parg]
+    FEATURE: UI   | Added per-column date formats for the ETA columns [Parg]
+    FEATURE: UI   | Added aggregate stats view (e.g. aggregate share-ratio
+    for a number of downloads) to the 'Torrent Options' view [Parg]
+    FEATURE: UI   | Added plugin install and uninstall buttons to the plugin
+    configuration view [Parg]
+
+    CHANGE: Core  | The previous release disabled IPFilters for Vuze update
+    torrents, this has been reverted [Parg]
+    CHANGE: UI    | Plugin views now listed in View menu [TuxPaper]
+    CHANGE:       | 64 bit support [TuxPaper]
+    CHANGE: UI    | Absolute ETA display now separately configurable for ETA
+    and Progress column [Parg]
+    CHANGE: UI    | Ignore temporary 'incomplete' suffix when showing file
+    types [Parg]
+    CHANGE: UI    | Updated Catalan translation [GosGroc]
+
+    BUGFIX: Core  | Fixed bug whereby some transcodes were being incorrectly
+    failed as 'prematurely terminated' [Parg]
+    BUGFIX: Core  | Fixed race condition that occurred when auto-transcoding
+    from an RSS feed [Parg]
+    BUGFIX: Core  | Fixed error when creating manually-selected piece size
+    torrents [Parg] 
+    BUGFIX: UI    | Fix CTRL-PGDN/CTRL-END in Library [TuxPaper]
+    BUGFIX: UI    | Fix sidebar entries for categories not updating numbers
+    [TuxPaper]
+    BUGFIX: UI    | Fix sort column not refreshing sometimes [TuxPaper]
+    BUGFIX: UI    | Added some double buffering to fields that were
+    flickering on update [Parg]
+    BUGFIX: UI    | Fixed UI hang under some multi-select conditions [Parg]
+    BUGFIX: Plug  | Transcoding was sometimes reporting 'no disk space'
+    errors instead of the actual error [Parg]
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Oct 2012 18:59:58 +0200
+
+azureus (4.7.2.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    FEATURE: Blog | See http://devblog.vuze.com/tagged/vuze4720 for beta
+    version blog posts
+
+    FEATURE: Core | Option to randomize TCP/UDP listen ports on startup
+    [Parg]
+    FEATURE: Core | Window's user options to control computer sleep behaviour
+    while downloading/seeding [Parg]
+    FEATURE: Core | Ability to selectively disable tracker client protocols
+    [Parg]
+    FEATURE: Core | DNS Tracker Preferences
+    [http://bittorrent.org/beps/bep_0034.html] implemented [Parg]
+    FEATURE: Core | Added explicit application map to be used for launch
+    operations [Parg]
+    FEATURE: UI   | New column in Library views to show file extension [Parg]
+    FEATURE: UI   | File view columns for CRC-32 and MD5 file hashes [Parg]
+    FEATURE: UI   | Column-header right-click option on ETA/Progress columns
+    to show absolute ETA [Parg]
+    FEATURE: UI   | Torrent file index and torrent path columns added to File
+    view [Parg]
+    FEATURE: UI   | Keyboard accelerators added for Pause+Resume [Parg]
+    FEATURE: UI   | Torrent creation wizard now allows arbitrary selection of
+    files to be added to a torrent [Parg, TuxPaper]
+    FEATURE: UI   | If move-on-complete is enabled for downloads the progress
+    of this is now shown in the Status column [Parg]
+    FEATURE: UI   | Vuze remote connection status now shown in the status bar
+    [Parg]
+    FEATURE: UI   | Added custom date format for column display [TuxPaper]
+    FEATURE: UI   | Added option to disable 'backup complete' notification
+    [TuxPaper]
+    FEATURE: UI   | Number of unread blog posts shown in beta side-bar entry
+    [TuxPaper]
+    FEATURE: UI   | Option to specify table header height [TuxPaper]
+    FEATURE: Srch | Search templates can now do variable substitution (no UI
+    yet) [TuxPaper]
+    FEATURE: Inst | Installer customize option now permits the clearing of
+    config data [TuxPaper]
+    FEATURE: Inst | Custom install now lets you choose Classic or Vuze UI
+    [TuxPaper]
+    FEATURE: Plug | DVD Burn plugin now has Library context menus to create
+    new DVD and add content to existing [Parg]
+
+    CHANGE: CORE  | Added .mts and .m2ts to playable extensions [Parg]
+    CHANGE: UI    | Added visual feedback for device problems such as lack of
+    disk space [Parg]
+    CHANGE: UI    | Vuze sidebar entry can now be rolled up [TuxPaper]
+    CHANGE: UI    | Don't show 'all' and 'uncategorized' entries in sidebar
+    when no categories defined [TuxPaper]
+    CHANGE: UI    | 'Draw grid lines and fill blank areas' no longer fills
+    blank areas when unchecked [TuxPaper]
+
+    BUGFIX: Core  | Prevent recursive backup hell if backup location selected
+    in wrong location [Parg]
+    BUGFIX: Core  | Correctly handle invalid upload_only entries in
+    handshakes [Parg]
+    BUGFIX: UI    | Table headers now use system colors; IP filter on status
+    bar now obeys system colors [TuxPaper]
+    BUGFIX: UI    | Table scrollbars now have better page-scroll behaviour
+    [TuxPaper]
+    BUGFIX: UI    | Fixed ctrl+home/end not working in tables [TuxPaper]
+    BUGFIX: UI    | Fixed inability to scroll completely right [TuxPaper]
+    BUGFIX: UI    | Fix message texts not being resolved for sidebar entries
+    on occasion [Parg]
+    BUGFIX: UI    | Allow dropping .torrent files onto blank area of sidebar
+    [TuxPaper]
+    BUGFIX: Plug  | DVD Burn: fix bug that was preventing warnings such as
+    dual-layer, rw-disk blanking from showing [TuxPaper]
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 18 Sep 2012 18:07:22 +0200
+
+azureus (4.7.1.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    FEATURE: UI   | Added double-click -> Launch option to library options
+                    [Parg]
+
+    CHANGE: Core  | Exclude Vuze update torrents from IP filter rules [Parg]
+    CHANGE: UI    | Table Views now draw text in default Antialiasing
+                    (hoping that fixes some edge case bugs) [TuxPaper]
+
+    BUGFIX: UI    | Fixed subscription wizard column header text [Parg]
+    BUGFIX: UI    | *nix: Fix Plugins and Torrents menu not having any
+                    entries [TuxPaper]
+    BUGFIX: UI    | Fix scrolling issue after Library row gets removed while
+                    its subrows are displayed [TuxPaper]
+    BUGFIX: UI    | Ensure table row height can fit the default font size
+                    [TuxPaper] 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 20 Jul 2012 19:42:35 +0200
+
+azureus (4.7.1.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    FEATURE: Core | Added a 'low' file priority setting and the ability to
+    set negative priorities for various levels of 'low' [Parg]
+    FEATURE: Core | Support for metdata download based magnet link resolution
+    [Parg]
+    FEATURE: Core | Added means to backup and restore yoru Vuze config,
+    manually and automatically [Parg]
+    FEATURE: Core | Added per-download and per-category option to prioritise
+    uploading over other downloads [Parg]
+    FEATURE: Core | Added 'personal share' feature that auto-generates and
+    seeds files with unique torrents [Parg]
+    FEATURE: Core | Per-torrent IP Filter enabling [Parg]
+    FEATURE: Core | Added extra arguments to magnet exports (dn,tr,ws) [Parg]
+    FEATURE: Core | Added a basic 'speed limit' handler with support for
+    defining and scheduling various speed limit profiles [Parg]
+    FEATURE: Core | Added system property to set default timezone
+    (azureus.timezone)
+    FEATURE: Core | Detect some types of corrupt torrents and add Help menu
+    item to attempt a fix [Parg]
+    FEATURE: Core | Support for &fl arguments in magnet links
+    FEATURE: Core | Handle https->http redirects [Parg]
+    FEATURE: Core | Handle http redirects with http seeds [Parg]
+
+    FEATURE: UI   | Warning triangle at bottom right now flashes a number of
+    times when warnings are added [Parg]
+    FEATURE: UI   | Added to Devices configuration to allow 'play now'
+    buffering time to be configured [Parg]
+    FEATURE: UI   | Added ability for the Library filter to search on
+    comments (prefix with c:) and file names (prefix with f:) [Parg]
+    FEATURE: UI   | Extended Library filter search of tracker URLs (prefix
+    with t:) to consider all trackers [Parg]
+    FEATURE: UI   | Added negation to Library filter logic (prefix with !)
+    FEATURE: UI   | Made it clearer when Library filter in regular expression
+    mode and the regex is in error [Parg]
+    FEATURE: UI   | Added details of hidden generic devices to tooltip to
+    surface them [Parg]
+    FEATURE: UI   | Option to remove all devices that have been discovered
+    [Parg]
+    FEATURE: UI   | Added feature to allow devices to be explicitly tagged
+    and then the view restricted to only those devices [Parg]
+    FEATURE: UI   | Added the number of matches found to the Library title
+    information when filtering [Parg]
+    FEATURE: UI   | Added options to status bar IP Filter stats to get to IP
+    Filter options [Parg]
+    FEATURE: UI   | Added 'next ETA' and speed controls to the Transfer Bar
+    [Parg]
+    FEATURE: UI   | Added option to the torrent-add window to enable IP
+    Filters [Parg]
+    FEATURE: UI   | Added 'explore folder' for torrent files to advanced menu
+    [Parg]
+    FEATURE: UI   | Added magnet export to Shares view [Parg]
+    FEATURE: UI   | Added right-click torrent view menu to a torrent's detail
+    view header [Parg]
+    FEATURE: UI   | Extended search results header to include active total
+    [Parg]
+    FEATURE: UI   | Added menu option to remove a search template to the
+    right-click menu on search results [Parg]
+    FEATURE: UI   | Extended recognised clients [Parg]
+    FEATURE: UI   | Better error messaging for broken plugin installs [Parg]
+    FEATURE: UI   | Enhanced search box - allows for entry of magnet links,
+    torrent urls and hashes in the search box [Parg]
+    FEATURE: UI   | Support 'bits' based base-10 display unit [Parg]
+    FEATURE: UI   | Export magnet URI menu added to Share View [TuxPaper] 
+    FEATURE: UI   | Allow dragging stuff to Share View sidebar entry
+    [TuxPaper]
+    FEATURE: UI   | Added Tracker Name column header menu option to allow
+    specification of preferred trackers to display for multi-tracker torrents
+    [Parg]
+
+    FEATURE: Plug | New highcharts stats demo plugin [Parg]
+    FEATURE: Plug | New plugin to add tracker URLs to multiple torrent [Parg]
+    FEATURE: Plug | Added JSON request format to Vuze Web Remote along with
+    start-all and stop-all RPC support [Parg]
+    FEATURE: Plug | Added plugin ability to add rate limiters to downloads
+    and peers [Parg]
+    FEATURE: Plug | Added alerts to Vuze Web Remote if default folders not
+    configured [Parg]
+    FEATURE: Plug | Persist default media server name in UPnP Media Server
+    [Parg]
+
+    CHANGE: Core  | Fallback to 'DOT_ALL' matching when no results found.
+    This allows search templates to specify constructs such as .*? correctly
+    [parg]
+    CHANGE: Core  | Disable fast-extension for downloads with explicit speed
+    limits set as they aren't applied correctly [Parg]
+    CHANGE: Core  | Maintain seeding-only and downloading-only totals based
+    on real elapsed time to be consistent across computer sleeps [Parg]
+    CHANGE: Core  | Import &tr arguments from magnet links
+    CHANGE: Core  | Support some more (non-standard) RSS date formats [Parg]
+    CHANGE: Core  | Added support for Double values in BEncoder [Parg]
+    CHANGE: Core  | Handle common type in URL protocol in torrents [Parg]
+    CHANGE: Core  | Automatically retry failed torrent downloads with an
+    explicit referrer [Parg]
+    CHANGE: Core  | Don't auto-retry transcodes on permanent failures (such
+    as lack of disk space) [Parg]
+
+    CHANGE: Plug  | Try setting up user-level registry entries when iTunes
+    integration fails [Parg]
+
+    CHANGE: UI    | Disable 'show generic' devices option when there aren't
+    any [Parg]
+    CHANGE: UI    | Include torrent name in SSL certificate trust window
+    [Parg]
+    CHANGE: UI    | Changed %done torrents view item to excluded DND files
+    [Parg]
+    CHANGE: UI    | Improved error message on add-torrent fail to make the
+    cause more obvious [Parg]
+    CHANGE: UI    | Auto-open and scroll the details area on magnet add so
+    user sees error messages [Parg]
+    CHANGE: UI    | Extended update tracing for 64 bit windows SWT updates
+    [Parg]
+    CHANGE: UI    | OSX: Enable playing sound on completion [TuxPaper]
+    CHANGE: UI    | Replaced native OS tables with custom (faster, more
+    control) [TuxPaper]
+    CHANGE: UI    | 'All' and 'Uncategorized' are now shown in Sidebar when
+    categories in sidebar is enabled [TuxPaper]
+
+    BUGFIX: Core  | Fixed I2P Proxy support and updated the plugin to fix
+    issues with I2P network integration [Parg]
+    BUGFIX: Core  | Handle malformed XML entity escapes better [Parg]
+    BUGFIX: Core  | Support SSL certificate install for scrapes [Parg]
+    BUGFIX: Core  | Added code to detect potentially evil regex
+    (http://en.wikipedia.org/wiki/ReDoS) [Parg]
+    BUGFIX: Core  | Fixed edge-case file rechecking issue with
+    piece-reordering mode [Parg]
+    BUGFIX: Core  | Fixed ETA calc for Play-Now files in multi-file torrents
+    [Parg]
+    BUGFIX: Core  | Avoid enumerating USB drives if we crashed doing so last
+    time (happening with some encrypted volumes) [Parg]
+    BUGFIX: Core  | Handle existance of null entries in search template
+    column maps [Parg]
+    BUGFIX: Core  | Secondary lookup service URL was wrong [Parg]
+    BUGFIX: Core  | Work around for torrents with illegal characters in file
+    names [Parg]
+    BUGFIX: Core  | Work around for systems where ti is taking huge amounts
+    of CPU to enumerate network interfaces (mainly due to masses of borked
+    6to4 adapters) [Parg]
+    BUGFIX: Core  | Handle malformed 'upload only' values that are appearing
+    [Parg]
+    BUGFIX: Core  | Re-enable streaming of incomplete files [Parg]
+    BUGFIX: Core  | Only udp-probe the IP network [Parg]
+    BUGFIX: Core  | Handle truncated peer response from trackers [Parg]
+
+    BUGFIX: UI    | Update UI on subscription name change [Parg]
+    BUGFIX: UI    | Fixed null-pointer exception in remote pairing dialog
+    [Parg]
+    BUGFIX: UI    | Roll up some of the device stats correctly when tree
+    nodes not expanded [Parg]
+    BUGFIX: UI    | Fixed some forum links in the client [Parg]
+    BUGFIX: UI    | Ensure filter background is consistently drawn and
+    reverify regex when switching modes [Parg]
+    BUGFIX: UI    | Double buffer All Transfer and Mini Bars to reduce
+    flicker [Parg]
+    BUGFIX: UI    | Double buffer transfer-stats view [Parg]
+    BUGFIX: UI    | Re-enable the start/stop toolbar options for transcoding
+    view [Parg]
+    BUGFIX: UI    | Disable toolbar icons correctly when no selection [Parg]
+    BUGFIX: UI    | Fix drag+drop behaviour onto Shares view [Parg]
+    BUGFIX: UI    | Fixed table row consistency issue when downloads rapidly
+    removed and added [Parg]
+    BUGFIX: UI    | Fixed incorrect base-10 unit display [Parg]
+    BUGFIX: UI    | Fixed menu not showing on first right click on the
+    Torrent Details sidebar entry [TuxPaper]
+    BUGFIX: UI    | OSX: Fixed buttons in Column Setup not all being
+    displayed [TuxPaper] 
+
+    BUGFIX: Plug  | Various minor fixes to mlDHT [Parg]
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Jul 2012 18:12:35 +0200
+
+azureus (4.7.0.2-1~getdeb2~precise) precise; urgency=low
+
+  * Rebuild for precise.
+    FEATURE: Core | Initial support for portable Windows Vuze installs
+                    (see http://wiki.vuze.com/w/Portable_Vuze) [Parg]
+    FEATURE: UI   | Toggle Fullscreen mode using Command-Shift-F (Mac)
+                    or Control-Shift-F (Non-Mac) [TuxPaper]
+    FEATURE: UI   | Added filter mode to files view [Parg]
+    FEATURE: UI   | Added text-alignment option to column setup [Parg]
+
+    BUGFIX: Core  | Fixed version server check protocol fallback bug [Parg]
+    BUGFIX: UI	  | Fixed image management resource leak [Parg]
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 20:06:22 +0200
+
+azureus (4.3.0.6-5) unstable; urgency=low
+
+  * Team upload.
+  * Use default-jdk/jre. (Closes: #639954, 639955)
+
+ -- tony mancill <tmancill@debian.org>  Sun, 04 Dec 2011 11:36:51 -0800
+
+azureus (4.3.0.6-4) unstable; urgency=low
+
+  * Team upload.
+  * Update to build with latest swt-gtk.
+  * Allow webkit instead of xulrunner
+  * Fix debian/rules to clean icons.
+  * Bump standards version (no changes required).
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Fri, 01 Jul 2011 11:26:28 +0100
+
+azureus (4.3.0.6-3) unstable; urgency=low
+
+  * Team upload.
+  * Disable auto-updates by default. (Closes: #627567, #561968)
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Sat, 25 Jun 2011 13:06:49 +0100
+
+azureus (4.3.0.6-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/control: Bump dependencies on libswt to version 3.6.
+    (Closes: #627356)
+
+ -- tony mancill <tmancill@debian.org>  Thu, 19 May 2011 21:48:54 -0700
+
+azureus (4.3.0.6-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add upstream on SWT licence status to debian/copyright (Closes: #572982)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Thu, 25 Nov 2010 19:25:42 +0100
+
+azureus (4.3.0.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Bump dependencies on libswt to version 3.5.
+  * debian/copyright: Remove NClib [edu/harvard/*].
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Thu, 17 Dec 2009 16:18:25 -0500
+
+azureus (4.3.0.0-1) unstable; urgency=low
+
+  * New upstream release. 
+  * Use "3.0 (quilt)" source package format.
+  * debian/control: Allow uploads for Debian Maintainers.
+  * debian/azureus.1: Get rid of duplicate "azureus" around Synopsis.
+  * debian/patches: 
+    - Remove fixes/multi-announce-deadlock.diff. Reason: upstream.
+    - Remove fixes/utf8-encoding.diff. Reason: upstream.
+    - Remove fixes/encoding.diff. Reason: unneeded.
+    - Remove fixes/sunsecurity.diff. Reason: upstream dead code.
+  * debian/azureus.desktop: Improve Comment for Desktop Entry.
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Wed, 02 Dec 2009 11:18:34 -0500
+
+azureus (4.2.0.8-3) unstable; urgency=low
+
+  * debian/patches:
+    - Fix multi-announce torrent issues. Closes: #551363. 
+      Thanks: Arron Mogge. 
+    - Refresh patches now that DEP-3 is git-alike.
+  * debian/rules: Change new deprecated variable PATCHES_DIR by 
+    QUILT_PATCH_DIR.
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Fri, 23 Oct 2009 15:02:04 -0400
+
+azureus (4.2.0.8-2) unstable; urgency=low
+
+  * Fix filename encoding UTF8 issues. Closes: #502879.
+    Thanks: Arron Mogge (TuxPaper).
+  * debian/vuze.desktop:
+    - Improve Comment for Vuze description.
+    - Fix typo in GenericName.
+  * debian/control:
+    - Clean Vcs-Browser URL in control file.
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Mon, 21 Sep 2009 11:58:33 -0400
+
+azureus (4.2.0.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Update Standards-Version to 3.8.3.
+    - Add Vcs-* fields for Git repository.
+  * debian/copyright: Minor updates.
+  * debian/patches:
+    - Reorganize patches as per-feature patches.
+    - Disable authentication on SpeedTest. Thanks: upstream-dev Scott Wolchok.
+    - Disable Core Update Patcher updates.
+  * debian/rules:
+    - Optional use of TopGit in makefile.
+    - Developers recommend 512MB for building. Updated ANT_OPTS.
+
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Mon, 31 Aug 2009 18:24:02 -0400
+
+azureus (4.2.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Update maintainer.
+    - Update Standards-Version to 3.8.2.
+    - Add Homepage field.
+    - Update Vuze description to reflect some of it's new features and 
+      the package role.
+    - Build-Depends on ant, cdbs, quilt, debhelper (>= 7.0).
+    - Build-Depends-Indep on openjdk-6-jre | sun-java5-jre | 
+      sun-java6-jre. Closes: #515015, #398014.
+    - Drop fastjar build dependency.
+    - Add Vcs-Svn and Vcs-Browser fields.
+  * debian/rules:
+    - Use CDBS build system.
+    - ANT_OPTS=-Xmx256m. Closes: #516059, #409952.
+  * debian/patches:
+    - fix-chars-encoding.patch: Fix encoding in characters translation.
+    - fix-platform-code: Remove Win32 and MacOS-X imports and logic.
+    - fix-messagetext-dont-use-privileges: Don't use AccessController.
+      Thanks to Shaun Jackman.
+    - multiuser.patch: Import multiuser patch. Closes: #329018.
+      Thanks to Stefano Maioli.
+    - Disable component update patches: Closes: #455351.
+        + updater-dont-initialize-swt-updatechecker.patch: 
+          Prevent Azureus' updater from upgrading SWT libraries.  
+        + updater-dont-register-core-updatechecker.patch: 
+          Prevent Azureus' updater from upgrading the core version of Azureus.
+    - Add patch descriptions, with DEP-3 compliance.
+  * debian/copyright:
+    - Change to machine-readable format.
+    - Notice package adoption.
+    - Update copyright information and holders.
+  * debian/watch: Update file.
+  * debian/compat: Bump compatibility to 7.
+  * debian/docs: Remove reference to README.txt.
+  * debian/azureus.desktop: 
+    - Fix handling file associations. Closes: #491624.
+      Thanks to Stefano Maioli.
+  * debian/vuze.links: usr/bin/vuze is now a symbolic link to azureus.
+  * Import README.multiuser, which documents the multiuser patch.
+  * Use quilt patch system and add README.source documenting it.
+  * Update azureus and link vuze manpages.
+  * Create new PNG files for Vuze and Vuze torrents, uuencoded in debian/.
+  * Remove source.lintian-overrides, no longer necessary.
+  * Import gconf schema for magnet URLs. Closes: #412213.
+    Thanks to Stefano Maioli.
+  * Add debian/README.Debian: describe the user interface override and the
+    update patches.
+  * Add debian/NEWS.Debian.
+  * Remove debian/dirs since it's unnecessary.
+  * Use java-wrappers as launcher. Thanks to Onkar Shinde for the suggestion.
+  * debian/wrappers/azureus:
+    - Detect installed JVM and set classpath.
+    - User interface override applies only when vuze is not installed.
+  
+ -- Adrian Perez <adrianperez.deb@gmail.com>  Wed, 12 Aug 2009 11:35:24 -0400
+
+azureus (3.1.1.0-4) unstable; urgency=medium
+
+  * New executable: vuze. The azureus executable overrides the user's
+    configured preference and starts the classic interface. The vuze
+    executable starts the interface specified by the user's configured
+    preference. Closes: #509878.
+  * Azureus recommends Vuze.
+  * Modified the vuze description to describe its social-networking features.
+    Closes: #509881.
+  * Update the watch file.
+  * Acknowledge NMU. Closes: #495514. Thanks to Sebastien.
+
+ -- Shaun Jackman <sjackman@debian.org>  Thu, 01 Jan 2009 13:13:21 -0800
+
+azureus (3.1.1.0-3.1) unstable; urgency=low
+
+  * Tentative NMU.
+  * Build with openjdk-6-jdk by default (but allow for user rebuilds
+    using any JDK), and remove azureus-gcj altogether (Closes: #495514).
+  * Add a lintian override to signify that java and ant are indeed needed
+    as Build-Depends-Indep even though we do not build any arch-dependent
+    binary packages.
+  * In /usr/bin/azureus, enforce use of the JRE specified in Depends:.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 18 Aug 2008 19:36:05 -0700
+
+azureus (3.1.1.0-3) unstable; urgency=medium
+
+  * Remove the four non-latin characters in DateParserRegex.java.
+  Closes: #492800. Thanks to Jurij Smakov.
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon, 11 Aug 2008 08:10:34 -0700
+
+azureus (3.1.1.0-2) unstable; urgency=medium
+
+  * Move all Build-Depends-Indep to Build-Depends to build the native binary
+    using GCJ. Closes: #490025.
+  * Add libswt-cairo-gtk-3.4-jni to the dependencies of vuze.
+    Closes: #491201.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun, 27 Jul 2008 23:12:11 -0700
+
+azureus (3.1.1.0-1) unstable; urgency=low
+
+  * New upstream release. Closes: #487512.
+  * Enable plugins. Closes: #481011, #452321, #452326.
+  * Build using ant.
+  * Remove the dependency on libseda-java.
+  * Update the watch file.
+  * Update the policy to version 3.8.0.1. No changes were necessary.
+  * Use System.getProperty rather than sun.security.action.GetPropertyAction.
+
+ -- Shaun Jackman <sjackman@debian.org>  Wed, 16 Jul 2008 22:29:18 -0700
+
+azureus (3.0.5.0-2) unstable; urgency=low
+
+  * Depend on libswt-gtk-3.4-java instead of libswt-gtk-3.3-java.
+    Closes: #488348.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sat, 28 Jun 2008 15:00:24 -0700
+
+azureus (3.0.5.0-1) unstable; urgency=low
+
+  * New upstream release. Closes: #470235.
+  * New package, vuze, which depends on azureus as well as the necessary
+    gnome and mozilla JNI libraries. Closes: #469590.
+  * Do not create an empty ~/plugins directory. Closes: #471878.
+  * Update the policy to version 3.7.3.0. No changes were necessary.
+
+ -- Shaun Jackman <sjackman@debian.org>  Fri, 21 Mar 2008 09:02:34 -0700
+
+azureus (3.0.4.2-1) unstable; urgency=low
+
+  * New upstream release. Closes: #458263.
+  * Do not changing the current working directory. Closes: #459857.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun, 10 Feb 2008 18:58:49 -0800
+
+azureus (3.0.3.4-3) unstable; urgency=low
+
+  * Set the environment variable MOZILLA_FIVE_HOME to /usr/lib/xulrunner.
+    Closes: #452322.
+
+ -- Shaun Jackman <sjackman@debian.org>  Thu, 10 Jan 2008 23:40:35 -0800
+
+azureus (3.0.3.4-2) unstable; urgency=low
+
+  * The shell script should use SWT 3.3. Closes: #448253.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun,  4 Nov 2007 12:59:36 -0700
+
+azureus (3.0.3.4-1) unstable; urgency=low
+
+  * New upstream release. Closes: #443634.
+  * Move the Debian menu entry to the new "Applications/Network/File Transfer"
+    section.
+  * Do not check for SWT updates. Closes: #447679.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue, 16 Oct 2007 10:31:33 -0700
+
+azureus (2.5.0.4-1) unstable; urgency=low
+
+  * New upstream release. Closes: #406914.
+  * Disable auto-update. Closes: #405997.
+
+ -- Shaun Jackman <sjackman@debian.org>  Thu,  5 Jul 2007 11:32:18 -0600
+
+azureus (2.5.0.0+0-1) unstable; urgency=medium
+
+  * Bump the upstream version number due to a bug in dak (#232730).
+  * Launch ui.common instead of ui.swt. Allows using the
+    --ui=console option. Closes: #367110.
+  * Add -Xmx1024M to the java command line, which increases the size
+    of the heap. Closes: #386765.
+
+ -- Shaun Jackman <sjackman@debian.org>  Wed, 22 Nov 2006 13:17:40 -0700
+
+azureus (2.5.0.0-2) unstable; urgency=medium
+
+  * Move azureus to main. It runs very well now using java-gcj-compat.
+    Closes: #369376.
+  * Remove sun-java5-jre from the dependencies. Replace it with
+    java-gcj-compat. Closes: #365766, #395555.
+  * Update the policy to version 3.7.2.2. No changes were necessary.
+  * Minor updates to the manual page.
+  * Update manifest.mf.
+
+ -- Shaun Jackman <sjackman@debian.org>  Fri, 17 Nov 2006 10:56:04 -0700
+
+azureus (2.5.0.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Shaun Jackman <sjackman@debian.org>  Wed, 23 Aug 2006 16:41:25 -0600
+
+azureus (2.4.0.2-4) unstable; urgency=medium
+
+  * Source libswt-3.2-java instead of libswt-3.1-java. Closes: #380721.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue,  1 Aug 2006 09:42:24 -0600
+
+azureus (2.4.0.2-3) unstable; urgency=medium
+
+  * Depend on libswt-gtk-3.2-java instead of libswt-gtk-3.1-java.
+    Closes: #380312.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun, 30 Jul 2006 20:26:40 -0600
+
+azureus (2.4.0.2-2) unstable; urgency=low
+
+  * Fix `Unable to close Warning window' bug. Closes: #364706.
+  Thanks to Markus Schaber <debian-bugs@schabi.de>.
+  * Build using java-gcj-compat-dev and debhelper 5.
+  * Replace gij-4.1 dependency with sun-java5-jre or java-gcj-compat.
+  * Remove sun-j2re1.5 dependency.
+  * Update Debian policy to version 3.7.2.1. No changes necessary.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun, 16 Jul 2006 11:34:02 -0600
+
+azureus (2.4.0.2-1) unstable; urgency=low
+
+  * New upstream release. Closes: #353241.
+  * Add swt.jar to the classpath to aid updating SWT.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun, 16 Apr 2006 14:30:54 -0600
+
+azureus (2.3.0.6-4) unstable; urgency=low
+
+  * Add . to the java.library.path. Allows updating to 2.4.0.2.
+    Closes: #358615.
+  * Add gij-4.1 to the dependencies as an option. Closes: #349811, #350399.
+  * Enable the OK button of the donation request. Closes: #346362.
+  * Update the watch file to version 3.
+
+ -- Shaun Jackman <sjackman@debian.org>  Thu, 23 Mar 2006 15:10:56 -0700
+
+azureus (2.3.0.6-3) unstable; urgency=low
+
+  * Use SWT from the updated Azureus. Allows updates to 2.4.0.0.
+    Closes: #353456.
+  * Use the directory ~/.azureus if it exists and ~/.Azureus otherwise.
+    Azureus 2.4.0.0 uses the former, previous versions use the latter.
+  * Update policy version to 3.6.2.2. No changes necessary.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sat, 18 Feb 2006 10:18:50 -0700
+
+azureus (2.3.0.6-2) unstable; urgency=low
+
+  * Add /usr/lib/jni to java.library.path. Closes: #335740, #351750.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue,  7 Feb 2006 09:50:15 -0700
+
+azureus (2.3.0.6-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Shaun Jackman <sjackman@debian.org>  Fri, 25 Nov 2005 11:06:17 -0700
+
+azureus (2.3.0.4-3) unstable; urgency=low
+
+  * Add a build dependency on fastjar.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue, 13 Sep 2005 16:07:23 -0600
+
+azureus (2.3.0.4-2) unstable; urgency=low
+
+  * Change the build dependency on jikes-classpath to sun-j2sdk1.5.
+    Closes: #326254.
+  * Change the dependency on sun-j2sdk1.5 to sun-j2re1.5.
+  * Recommend java-package.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue, 13 Sep 2005 10:33:55 -0600
+
+azureus (2.3.0.4-1) unstable; urgency=low
+
+  * New upstream release. Closes: #316817.
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon,  4 Jul 2005 10:45:54 -0700
+
+azureus (2.3.0.2-1) unstable; urgency=low
+
+  * New upstream release. Closes: #311063.
+  * Depend on libseda-java.
+  * Use ~/.Azureus/Azureus2.jar if it exists.
+
+ -- Shaun Jackman <sjackman@debian.org>  Sun, 29 May 2005 12:42:19 -0700
+
+azureus (2.3.0.0-3) unstable; urgency=low
+
+  * Call update-desktop-database. Closes: #307332.
+
+ -- Shaun Jackman <sjackman@debian.org>  Thu, 19 May 2005 15:46:07 -0700
+
+azureus (2.3.0.0-2) unstable; urgency=low
+
+  * Target Java VM 1.4.2. Closes: #308545.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue, 10 May 2005 17:38:27 -0700
+
+azureus (2.3.0.0-1) unstable; urgency=low
+
+  * New upstream release. Closes: #308392.
+  * Support all architectures. Closes: #298112.
+  * Use Debian's SWT. Closes: #298104.
+  * Exec the Java binary. Closes: #308239.
+  * Compile Azureus from source.
+
+ -- Shaun Jackman <sjackman@debian.org>  Wed,  4 May 2005 16:19:04 -0700
+
+azureus (2.2.0.2-2) unstable; urgency=low
+
+  * Add a mime type to the desktop entry. Closes: #307332.
+  * Add a menu entry.
+
+ -- Shaun Jackman <sjackman@debian.org>  Tue,  3 May 2005 09:35:01 -0700
+
+azureus (2.2.0.2-1) unstable; urgency=low
+
+  * Initial release. Closes: #215127.
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon,  3 Jan 2005 11:05:57 -0800
+

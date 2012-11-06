@@ -1,0 +1,31 @@
+Encoding is deprecated.
+Index: wibom-gtk-0.12/usr/share/applications/wibom-bottle-chooser.desktop
+===================================================================
+--- wibom-gtk-0.12.orig/usr/share/applications/wibom-bottle-chooser.desktop	2011-07-28 12:01:52.219451009 +0200
++++ wibom-gtk-0.12/usr/share/applications/wibom-bottle-chooser.desktop	2011-07-28 12:01:55.819451011 +0200
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ Type=Application
+ Name=Wibom Bottle Chooser
+ Name[cs]=Vybírač lahví Wibom
+@@ -9,4 +8,4 @@
+ MimeType=application/x-ms-dos-executable;application/x-msi;application/x-win-lnk;
+ NoDisplay=true
+ StartupNotify=true
+-Terminal=false
+\ No newline at end of file
++Terminal=false
+Index: wibom-gtk-0.12/usr/share/applications/wibom-gtk.desktop
+===================================================================
+--- wibom-gtk-0.12.orig/usr/share/applications/wibom-gtk.desktop	2011-07-28 12:02:50.999451030 +0200
++++ wibom-gtk-0.12/usr/share/applications/wibom-gtk.desktop	2011-07-28 12:02:56.149451031 +0200
+@@ -1,7 +1,5 @@
+-
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ Name=Wine bottle management
+ Name[cs]=Správce Wine lahví
+ Name[en_GB]=Wine bottle management

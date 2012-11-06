@@ -1,0 +1,49 @@
+comex-base (0.1.8.5-1~getdeb1) oneiric; urgency=low
+
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Apr 2012 19:23:16 +0200
+
+comex-base (0.1.8.5-1~ppa1) natty; urgency=low
+
+  * release 0.1.8.5
+
+ -- Armando Basile <hmandevteam@gmail.com>  Mon, 24 Oct 2011 12:00:00 +0200
+
+
+comex-base (0.1.8.4-1~ppa1) natty; urgency=low
+
+  * readers classes use interface now
+  * fix: SCardConnect parameters on PCSC
+
+ -- Armando Basile <hmandevteam@gmail.com>  Tue, 04 Oct 2011 12:00:00 +0200
+
+
+comex-base (0.1.7.3-1~ppa1) natty; urgency=low
+
+  * removed exec permissions to xml language files
+
+ -- Armando Basile <hmandevteam@gmail.com>  Fri, 23 Sep 2011 12:00:00 +0200
+
+
+comex-base (0.1.7.2-1~ppa5) oneiric; urgency=low
+
+  * fix: removed libpcsclite1 as build deps in debian/control file
+  * fix: removed dh_clideps macro from debian/rules file
+
+ -- Armando Basile <hmandevteam@gmail.com>  Sat, 17 Sep 2011 16:20:00 +0200
+
+
+comex-base (0.1.7.2-1~ppa3) oneiric; urgency=low
+
+  * fix: added log4net deps info in debian/control file
+
+ -- Armando Basile <hmandevteam@gmail.com>  Sat, 17 Sep 2011 15:50:00 +0200
+
+
+comex-base (0.1.7.2-1~ppa2) oneiric; urgency=low
+
+  * fix: removed <a> tag not supported on GTK < 2.18
+
+ -- Armando Basile <hmandevteam@gmail.com>  Wed, 14 Sep 2011 20:00:00 +0200
+

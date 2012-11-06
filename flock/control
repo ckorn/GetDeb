@@ -1,0 +1,27 @@
+Source: flock
+Section: web
+Priority: optional
+Maintainer: João Pinto <joao.pinto@getdeb.net>
+Build-Depends: cdbs, debhelper (>= 5), 
+ libgtk2.0-0, 
+ libxt6,
+ libstdc++6
+Standards-Version: 3.9.1
+Homepage: http://www.flock.com
+
+Package: flock
+Architecture: any
+Depends: ${shlibs:Depends}, 
+	libgtk2.0-0,
+	libxt6,
+	libstdc++6,
+	ia32-libs [amd64], 
+        lib32nss-mdns [amd64],
+	fontconfig,
+	${misc:Depends}
+Description: the social web browser
+ Flock is an amazing new web browser that makes it easier to share media 
+ and connect to other people online. 
+ Share photos, automatically stay up-to-date with new content from your 
+ favorite sites, and search the Web with the most advanced Search Toolbar 
+ available today.

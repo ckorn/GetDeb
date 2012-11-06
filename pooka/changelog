@@ -1,0 +1,5 @@
+pooka (0.0+20080505-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #486766)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Nov 2009 23:03:38 +0100

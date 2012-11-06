@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=JDiskReport
+Comment=Check your disk usage
+Exec=jdiskreport
+Icon=jdiskreport
+Type=Application
+Terminal=false
+Categories=Utility;

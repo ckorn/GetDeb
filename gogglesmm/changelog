@@ -1,0 +1,216 @@
+gogglesmm (0.12.6-1~getdeb3~precise) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 20:36:23 +0200
+
+gogglesmm (0.12.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sun, 21 Aug 2011 23:51:45 +0200
+
+gogglesmm (0.12.2-9) unstable; urgency=low
+
+  * Updated copyright file.
+  * Fixed lintian warnings.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Thu, 14 Jul 2011 20:21:27 +0200
+
+gogglesmm (0.12.2-8) unstable; urgency=low
+
+  * Manpage installation added.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Wed, 13 Jul 2011 13:58:47 +0200
+
+gogglesmm (0.12.2-7) unstable; urgency=low
+
+  * Initial release (Closes: #633668)
+  * Fixed lintian warnings.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Tue, 12 Jul 2011 19:18:40 +0200
+
+gogglesmm (0.12.2-6) unstable; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * Updated copyright file.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Tue, 12 Jul 2011 17:17:20 +0200
+
+gogglesmm (0.12.2-5) unstable; urgency=low
+
+  * Further cleanups added.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 10 Jun 2011 13:24:33 +0200
+
+gogglesmm (0.12.2-4) unstable; urgency=low
+
+  * Build cleanup fixed.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 10 Jun 2011 13:16:25 +0200
+
+gogglesmm (0.12.2-3) unstable; urgency=low
+
+  * Source packing error fixed.
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 10 Jun 2011 13:04:14 +0200
+
+gogglesmm (0.12.2-2) unstable; urgency=low
+
+  * Fixed lintian warnings. 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 10 Jun 2011 12:31:18 +0200
+
+gogglesmm (0.12.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Thu, 09 Jun 2011 14:40:26 +0200
+
+gogglesmm (0.12.1-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Mon, 07 Mar 2011 15:38:17 +0100
+
+gogglesmm (0.10.24-4) unstable; urgency=low
+
+  * Menu fixed 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sat, 10 Jul 2010 15:06:21 +0200
+
+gogglesmm (0.10.24-3) unstable; urgency=low
+
+  * Menu fixed 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sat, 10 Jul 2010 14:40:28 +0200
+
+gogglesmm (0.10.24-2) unstable; urgency=low
+
+  * Menu fixed 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 09 Jul 2010 16:14:55 +0200
+
+gogglesmm (0.10.24-1) unstable; urgency=low
+
+  * New upstream release
+  * musicmanager renamed to gogglesmm
+  * Ported patch for internal TagLib to gogglesmm 0.10.24
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 09 Jul 2010 15:17:35 +0200
+
+musicmanager (0.10.22-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Thu, 13 May 2010 12:27:36 +0200
+
+musicmanager (0.10.19-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sat, 20 Mar 2010 15:32:26 +0100
+
+musicmanager (0.10.17-2) unstable; urgency=low
+
+  * Force removal of deprecated musicmanager-tray. 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Mon, 25 Jan 2010 20:47:52 +0100
+
+musicmanager (0.10.17-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Mon, 25 Jan 2010 20:27:55 +0100
+
+musicmanager (0.10.13-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Thu, 10 Dec 2009 16:10:20 +0100
+
+musicmanager (0.10.11-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sun, 22 Nov 2009 11:06:59 +0100
+
+musicmanager (0.10.9-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Wed, 28 Oct 2009 18:28:08 +0100
+
+musicmanager (0.10.7-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Wed, 02 Sep 2009 21:44:46 +0200
+
+musicmanager (0.10.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Tue, 28 Jul 2009 15:03:12 +0200
+
+musicmanager (0.10.3-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Fri, 19 Jun 2009 17:16:57 +0200
+
+musicmanager (0.10.2-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sat, 06 Jun 2009 16:26:31 +0200
+
+musicmanager (0.10.1-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Wed, 03 Jun 2009 14:00:13 +0200
+
+musicmanager (0.10.0-2) unstable; urgency=low
+
+  * Backport of a tray icon bugfix from svn 
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Tue, 02 Jun 2009 12:22:41 +0200
+
+musicmanager (0.10.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sun, 31 May 2009 22:17:53 +0200
+
+musicmanager (0.9.18-2) unstable; urgency=low
+
+  * Switched to dpatch for patching
+  * Included tray icon support as additional package
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Mon, 16 Mar 2009 20:48:11 +0100
+
+musicmanager (0.9.18-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Tue, 25 Nov 2008 19:19:31 +0100
+
+musicmanager (0.9.16-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Mon, 24 Nov 2008 11:16:36 +0100
+
+musicmanager (0.9.15-2) unstable; urgency=low
+
+  * Debian menu fix
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Wed, 17 Sep 2008 17:53:20 +0200
+
+musicmanager (0.9.15-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Hendrik Rittich <hendrik.rittich@gmx.de>  Sat, 16 Aug 2008 00:17:28 +0200
+

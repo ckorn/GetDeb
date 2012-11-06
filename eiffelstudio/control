@@ -1,0 +1,23 @@
+Source: eiffelstudio
+Section: devel
+Priority: optional
+Maintainer: Christoph Korn <c_korn@gmx.de>
+Build-Depends: debhelper (>= 6), libxtst6,
+ libgtk2.0-0
+Standards-Version: 3.8.3
+Homepage: http://www.eiffel.com/products/studio/
+
+Package: eiffelstudio
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, eiffelstudio-data (= ${source:Version})
+Description: Eiffel IDE
+ Eiffel Studio is a complete integrated
+ development environment for Eiffel language.
+
+Package: eiffelstudio-data
+Architecture: all
+Description: Eiffel IDE (data package)
+ Eiffel Studio is a complete integrated
+ development environment for Eiffel language.
+ .
+ (This package contains data files)

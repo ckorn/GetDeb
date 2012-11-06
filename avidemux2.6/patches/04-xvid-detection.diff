@@ -1,0 +1,13 @@
+Index: avidemux-2.6.0/cmake/admCheckXvid.cmake
+===================================================================
+--- avidemux-2.6.0.orig/cmake/admCheckXvid.cmake	2011-12-11 16:42:33.000000000 +0100
++++ avidemux-2.6.0/cmake/admCheckXvid.cmake	2012-09-07 18:08:55.024914767 +0200
+@@ -5,7 +5,7 @@
+ 		MESSAGE(STATUS "*****************")
+ 
+ 		IF (XVID)
+-			FIND_HEADER_AND_LIB(XVID xvid.h xvidcore xvid_plugin_single)
++			FIND_HEADER_AND_LIB(XVID xvid.h xvidcore)
+ 			PRINT_LIBRARY_INFO("Xvid" XVID_FOUND "${XVID_INCLUDE_DIR}" "${XVID_LIBRARY_DIR}")
+                         IF(XVID_FOUND)
+                                 SET(USE_XVID 1)

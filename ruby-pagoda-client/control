@@ -1,0 +1,20 @@
+Source: ruby-pagoda-client
+Section: ruby
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Christoph Korn <christoph.korn@getdeb.net>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 9),
+               gem2deb (>= 0.2.6~)
+Standards-Version: 3.9.3
+Homepage: http://www.pagodabox.com
+XS-Ruby-Versions: all
+
+Package: ruby-pagoda-client
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ruby | ruby-interpreter
+Description: Pagodabox API client
+ API client used to talk to pagodabox.

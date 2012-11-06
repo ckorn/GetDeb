@@ -1,0 +1,42 @@
+wikidpad (2.1-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 30 Nov 2011 19:41:41 +0100
+
+wikidpad (2.0-1~getdeb2) lucid; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 25 Sep 2011 19:33:57 +0200
+
+wikidpad (2.0-1~getdeb1) lucid; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Feb 2011 16:24:29 +0100
+
+wikidpad (1.9-1~getdeb2) karmic; urgency=low
+
+  * Fix debian/watch file (really)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Mar 2010 18:23:34 +0100
+
+wikidpad (1.9-1~getdeb1) karmic; urgency=low
+
+  * New upstream version
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Mar 2010 23:46:14 +0100
+
+wikidpad (1.8-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 13:36:11 +0100
+
+wikidpad (1.8-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #435549)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 Nov 2009 23:25:37 +0100

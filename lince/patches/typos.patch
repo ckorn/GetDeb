@@ -1,0 +1,127 @@
+Fix a typo.
+Index: lince-1.3/po/ca.po
+===================================================================
+--- lince-1.3.orig/po/ca.po	2012-06-29 17:04:22.000000000 +0200
++++ lince-1.3/po/ca.po	2012-06-29 17:05:19.818610502 +0200
+@@ -1127,11 +1127,11 @@
+ msgstr "a"
+ 
+ #: /home/toriet/po/lince/lincetorrent/src/OptionsWindows.cc:59
+-msgid "Add suppport for DHT. (*)"
++msgid "Add support for DHT. (*)"
+ msgstr "Afegir suport per a DHT.(*)"
+ 
+ #: /home/toriet/po/lince/lincetorrent/src/OptionsWindows.cc:60
+-msgid "Add suppport for UPNP. (*)"
++msgid "Add support for UPNP. (*)"
+ msgstr "Afegir suport per a UPNP.(*)"
+ 
+ #: /home/toriet/po/lince/lincetorrent/src/OptionsWindows.cc:61
+@@ -1139,7 +1139,7 @@
+ msgstr "Afegir suport per a buscar nodes en la xarxa local."
+ 
+ #: /home/toriet/po/lince/lincetorrent/src/OptionsWindows.cc:62
+-msgid "Adds suppport for exchanging metadata from peers. (*)"
++msgid "Adds support for exchanging metadata from peers. (*)"
+ msgstr "Afegir suport per a intercanviar metadades entre els clients."
+ 
+ #: /home/toriet/po/lince/lincetorrent/src/OptionsWindows.cc:63
+Index: lince-1.3/po/de.po
+===================================================================
+--- lince-1.3.orig/po/de.po	2012-06-29 17:04:22.000000000 +0200
++++ lince-1.3/po/de.po	2012-06-29 17:05:19.822610500 +0200
+@@ -798,11 +798,11 @@
+ msgstr "bis"
+ 
+ #: src/OptionsWindows.cc:59
+-msgid "Add suppport for DHT."
++msgid "Add support for DHT."
+ msgstr "DHT aktivieren"
+ 
+ #: src/OptionsWindows.cc:60
+-msgid "Add suppport for UPNP."
++msgid "Add support for UPNP."
+ msgstr "UPNP aktivieren"
+ 
+ #: src/OptionsWindows.cc:61
+@@ -810,7 +810,7 @@
+ msgstr "Suche Peers im lokalen Netzwerk"
+ 
+ #: src/OptionsWindows.cc:62
+-msgid "Adds suppport for exchanging metadata from peers. (*)"
++msgid "Adds support for exchanging metadata from peers. (*)"
+ msgstr "Metadata mit Peers austauschen (*)"
+ 
+ #: src/OptionsWindows.cc:63
+Index: lince-1.3/po/es.po
+===================================================================
+--- lince-1.3.orig/po/es.po	2012-06-29 17:04:22.000000000 +0200
++++ lince-1.3/po/es.po	2012-06-29 17:05:19.822610500 +0200
+@@ -798,11 +798,11 @@
+ msgstr "a"
+ 
+ #: src/OptionsWindows.cc:57
+-msgid "Add suppport for DHT."
++msgid "Add support for DHT."
+ msgstr "Añadir soporte para DHT. "
+ 
+ #: src/OptionsWindows.cc:58
+-msgid "Add suppport for UPNP."
++msgid "Add support for UPNP."
+ msgstr "Añadir soporte para UPNP. "
+ 
+ #: src/OptionsWindows.cc:59
+@@ -810,7 +810,7 @@
+ msgstr "Añadir soporte para buscar nodos en la red local. "
+ 
+ #: src/OptionsWindows.cc:60
+-msgid "Adds suppport for exchanging metadata from peers. (*)"
++msgid "Adds support for exchanging metadata from peers. (*)"
+ msgstr "Añadir soporte para intercambiar metadatos entre los clientes. (*)"
+ 
+ #: src/OptionsWindows.cc:61
+Index: lince-1.3/po/it.po
+===================================================================
+--- lince-1.3.orig/po/it.po	2012-06-29 17:04:22.000000000 +0200
++++ lince-1.3/po/it.po	2012-06-29 17:05:19.822610500 +0200
+@@ -906,11 +906,11 @@
+ msgstr "a"
+ 
+ #: src/OptionsWindows.cc:59
+-msgid "Add suppport for DHT. (*)"
++msgid "Add support for DHT. (*)"
+ msgstr "Aggiungi supporto per DHT. (*)"
+ 
+ #: src/OptionsWindows.cc:60
+-msgid "Add suppport for UPNP. (*)"
++msgid "Add support for UPNP. (*)"
+ msgstr "Aggiungi supporto per UPNP. (*)"
+ 
+ #: src/OptionsWindows.cc:61
+@@ -918,7 +918,7 @@
+ msgstr "Aggiungi supporto per la ricerca di nodi nella rete locale. (*)"
+ 
+ #: src/OptionsWindows.cc:62
+-msgid "Adds suppport for exchanging metadata from peers. (*)"
++msgid "Adds support for exchanging metadata from peers. (*)"
+ msgstr "Aggiungi supporto per lo scambio di metadati tra nodi. (*)"
+ 
+ #: src/OptionsWindows.cc:63
+Index: lince-1.3/src/OptionsWindows.cc
+===================================================================
+--- lince-1.3.orig/src/OptionsWindows.cc	2012-06-29 17:04:22.000000000 +0200
++++ lince-1.3/src/OptionsWindows.cc	2012-06-29 17:05:19.826610499 +0200
+@@ -54,10 +54,10 @@
+ 	tcpText1(_("Port range:")),
+ 	tcpText2(_("to")),
+ 	tcpRow(false, 5),
+-	dhtActivateButton(_("Add suppport for DHT.")),
+-	upnpActivateButton(_("Add suppport for UPNP.")),
++	dhtActivateButton(_("Add support for DHT.")),
++	upnpActivateButton(_("Add support for UPNP.")),
+ 	localDiscoveryActivateButton(_("Add support for searching peers in the local network.")),
+-	metadataActivateButton(_("Adds suppport for exchanging metadata from peers. (*)")),
++	metadataActivateButton(_("Adds support for exchanging metadata from peers. (*)")),
+ 	pexActivateButton(_("Adds support for uTorrent peer exchange. (*)")),
+ 	smartBanButton(_("Adds support for smart ban plugin. (*)")),
+ 	advancedBindToInterfaceLabel(_("(*) Bind to interface:")),

@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Gnaural Binaural-beat Generator
+Name[en_CA]=Gnaural Binaural-beat Generator
+Name[en_GB]=Gnaural Binaural-beat Generator
+Name[fr]=Générateur de battements binauraux Gnaural
+GenericName=Binaural-beat Generator
+GenericName[en_CA]=Binaural-beat Generator
+GenericName[en_GB]=Binaural-beat Generator
+GenericName[fr]=Générateur de battements binauraux
+Comment=Generate binaural beats
+Exec=gnaural
+Icon=gnaural-icon
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=AudioVideo

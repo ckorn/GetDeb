@@ -1,0 +1,40 @@
+Source: glclib
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), libqt4-dev,
+ libqt4-opengl-dev, qt4-qmake, zlib1g-dev
+Standards-Version: 3.9.1
+Section: libs
+Homepage: http://www.glc-lib.net
+
+Package: libglc2
+Replaces: glclib1
+Conflicts: glclib1
+Breaks: glclib1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: OpenGL library class
+ GLC_lib is a C++ class library that enables the
+ quick creation of an OpenGL application based on QT4.
+ .
+ GLC_lib is designed to render very complex 3D scene
+ ( 100.000 parts, 40.000.000 triangles).
+ .
+ The lastest features are disigned to use GLC_lib to view
+ heavy Digital Mockup very fast.
+
+Package: glclib-dev
+Section: libdevel
+Architecture: all
+Depends: libglc2 (>= ${source:Version}), ${misc:Depends}
+Description: OpenGL library class (header files)
+ GLC_lib is a C++ class library that enables the
+ quick creation of an OpenGL application based on QT4.
+ .
+ GLC_lib is designed to render very complex 3D scene
+ ( 100.000 parts, 40.000.000 triangles).
+ .
+ The lastest features are disigned to use GLC_lib to view
+ heavy Digital Mockup very fast.
+ .
+ (This package contains the headers)

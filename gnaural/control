@@ -1,0 +1,38 @@
+Source: gnaural
+Section: sound
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 5), cdbs, autotools-dev, pkg-config, libgtk2.0-dev, 
+	libpango1.0-dev,
+	libglade2-dev,
+	portaudio19-dev,
+	libsndfile1-dev
+Standards-Version: 3.9.1
+XS-Vcs-Browser: http://viewvc.tuxfamily.org/svn_pouit_pouitpkg/gnaural/trunk/
+Homepage: http://gnaural.sourceforge.net
+
+Package: gnaural
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A programmable binaural-beat audio generator
+ Gnaural is a programmable "binaural beat generator", based on the
+ principle first described in October 1973 Scientific American, Gerald
+ Oster, Auditory Beats in the Brain. There has been considerable
+ research done on this principle since that publication, and Gnaural's
+ predecessor, WinAural, has even been used as the audio stimulus
+ in a study published in the proceedings of Biomedical Engineering
+ 2004, "The Induced Rhythmic Oscillations of Neural Activity in the
+ Human Brain", D. Cvetkovic, D. Djuwari, I. Cosic (Australia), From
+ Proceeding (417) Biomedical Engineering - 2004.
+ .
+ The central idea of the Binaural Beat principle is that brain activity can
+ be entrained to the auditory beat frequencies created when each ear
+ is presented simultaneously with tones of slightly-differing frequency.
+ It has been proposed that entrainment can be used to target specific
+ mental states, ranging from restful and meditative to highly alert.
+ .
+ Gnaural can output directly to your computer's soundsystem, or to an
+ audio file (.WAV format), which you can then burn to an audio CD or
+ compress to MP3 to make available for portable use. Stereo
+ headphones are required to maintain the stereo separation of the
+ tones needed for your auditory system to create the binaural beats.

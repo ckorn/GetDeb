@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+# to re-generate debian/control, invoke
+# fakeroot debian/rules debian/control DEB_AUTO_UPDATE_DEBIAN_CONTROL:=yes
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/cmake.mk
+
+INSTROOT = $(CURDIR)/debian/chmsee
+DEB_CONFIGURE_SCRIPT_ENV += LDFLAGS=" -Wl,--as-needed"
+DEB_INSTALL_CHANGELOGS_ALL += ChangeLog
+
+# copy from /usr/share/cdbs/1/class/gnome.mk
+clean::
+	cd $(DEB_BUILDDIR) && \
+	  rm -f intltool-extract intltool-merge intltool-update po/.intltool-merge-cache; \
+	  if test -d doc; then find doc -name '*.omf.out' -exec rm -f \{\} \; ; fi; \
+	  if test -d help; then find help -name '*.omf.out' -exec rm -f \{\} \; ; fi

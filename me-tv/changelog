@@ -1,0 +1,231 @@
+me-tv (2.0.1-1~getdeb2) precise; urgency=low
+
+  * Remove debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Sep 2012 19:14:24 +0200
+
+me-tv (2.0.1-1~getdeb1) natty; urgency=low
+
+  * New upstream version (LP: #837910)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 01 Sep 2011 18:26:35 +0200
+
+me-tv (1.3.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Scott Evans <scott@vk7hse.hobby-site.org>  Sun, 23 Jan 2011 09:52:04 +1100
+
+me-tv (1.3.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Scott Evans <scott@vk7hse.hobby-site.org>  Mon, 13 Dec 2010 10:56:38 +1100
+
+me-tv (1.3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Updated Standards-Version to 3.9.1
+
+ -- Scott Evans <scott@vk7hse.hobby-site.org>  Thu, 11 Nov 2010 12:19:18 +1100
+
+me-tv (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Debian/patches
+    - Removed hyphen-used-as-minus-sign
+
+ -- Scott Evans <scott@vk7hse.hobby-site.org>  Thu, 15 Jul 2010 00:41:05 +1000
+
+me-tv (1.3.0-1) unstable; urgency=low
+
+  [ Scott Evans ]
+  * New upstream release
+  * Updated debian/control
+    - Maintainer change to Scott Evans
+    - Updated Standards-Version to 3.9.0
+  * Updated copyright debian/*
+  * Fixed hyphen-used-as-minus-sign in me-tv.1 & me-tv-player.1
+
+  [ Julian Andres Klode ]
+  * Really use dh_xine and depend on ${xine-ffmpeg:Depends} (Closes: #575122)
+
+ -- Scott Evans <scott@vk7hse.hobby-site.org>  Wed, 07 Jul 2010 03:49:26 +1000
+
+me-tv (1.2.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix "needs to depend on libxine1-x" updated control file to
+    depend on ${xine-x:Depends} (Closes: #575122)
+  * Fix "EPG texts with ampersands not shown" encoded XML strings
+    in GTK controls that use markup (Closes: #582613)
+  * Updated the description of the application to remove reference
+    to MythTV
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sun, 20 Jun 2010 21:51:41 +1000
+
+me-tv (1.2.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Maintainer change to Michael Lamothe
+  * Updated debian/control
+    - Added libunique-dev to Build-Depends
+    - Added libdbus-glib-1-dev to Build-Depends
+  * Added me-tv-player.1 to debian/me-tv.manpages
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sat, 22 May 2010 13:10:32 +1000
+
+me-tv (1.1.6-2) unstable; urgency=low
+
+  * Updated debian/control
+    - Removed libgnomem-2.6-dev and libgnomeuimm-2.6-dev
+      from Build-Depends (Closes: #568782)
+    - Added libgconfmm-2.6-dev to Build-Depends
+
+ -- Teis Dreijer <teis@dreijer.dk>  Sun, 14 Feb 2010 11:29:00 +0100
+
+me-tv (1.1.6-1) unstable; urgency=low
+
+  * New upstream release
+  * configure.ac, configure: Link against X11 (Closes: #555593)
+  * debian/control:
+    - Set Standards-Version to 3.8.4
+    - Drop libgnet-dev build dependency, and add one for libx11-dev
+
+ -- Julian Andres Klode <jak@debian.org>  Fri, 05 Feb 2010 21:31:56 +0100
+
+me-tv (1.1.2-1) unstable; urgency=low
+
+  [ Teis Dreijer ]
+  * New upstream release
+
+  [ Julian Andres Klode ]
+  * Stop deleting me-tv.schemas, fixed upstream now.
+
+ -- Teis Dreijer <teis@dreijer.dk>  Mon, 04 Jan 2010 18:48:17 +0100
+
+me-tv (1.0.2-1) unstable; urgency=low
+
+  [ Teis Dreijer ]
+  * New upstream release
+  
+  [ Julian Andres Klode ]
+  * Delete me-tv.schemas in the clean target (see upstream bug LP #493132).
+
+ -- Teis Dreijer <teis@dreijer.dk>  Sun, 06 Dec 2009 11:49:53 +0100
+
+me-tv (1.0.1-1) unstable; urgency=low
+
+  [ Teis Dreijer ]
+  * New upstream release
+
+  [ Julian Andres Klode ]
+  * Pass --disable-schemas-install to configure and require at least debhelper
+    7.0.50~.
+
+ -- Teis Dreijer <teis@dreijer.dk>  Sat, 05 Dec 2009 15:41:30 +0100
+
+me-tv (1.0.0-2) unstable; urgency=low
+
+  * Fix "me-tv quits early with error message" patch by mpitt 
+    fixes the issue introduced by new GTK behaviour. (Closes: #544695)
+
+ -- Teis Dreijer <teis@dreijer.dk>  Wed, 02 Sep 2009 21:01:28 +0200
+
+me-tv (1.0.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #539161)
+    - Fixed mute-issues (Closes: #527946)
+    - Now remembers window state from last session (Closes: #536300)
+    - Fixed failing scans under certain conditions (Closes: #540422)
+  * Updated debian/control
+    - Added dvb-apps to Recommends (Closes: #523871)
+    - Now wraps uploaders and Build-Depends
+    - Removed libglademm-2.4-dev and libxtst-dev from Build-Depends
+    - Removed libxml-parser-perl from Build-Depends
+    - Removed xine-ui and libxine1-x from Depends
+    - Section now "video" instead of "graphics"
+    - Priority now "extra" instead of "optional"
+    - Updated Standards-Version to 3.8.3
+  * Updated debian/copyright
+  * Updated debian/watch
+
+ -- Teis Dreijer (NOT the hoff) <teis@dreijer.dk>  Thu, 17 Aug 2009 16:26:50 +0200
+
+me-tv (0.7.16-1) unstable; urgency=low
+
+  * New upstream release
+  * problem with UTF-8 prevents channel-scan window from closing
+    (Closes: #510612)
+  * Me-TV behaves badly with more than one DVB adapter (Closes: #515847)
+  * Eats a lot of cpu and blocks gui (Closes: #466777)
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sun, 01 Mar 2009 00:03:13 +1100
+
+me-tv (0.7.14-1) unstable; urgency=low
+
+  * New upstream release
+  * Switched to dh 7
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sun, 15 Feb 2009 12:41:57 +1100
+
+me-tv (0.7.9-1) experimental; urgency=low
+
+  * New upstream release
+ 
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sun, 18 Jan 2009 01:56:05 +1100
+
+me-tv (0.6.4-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sun, 28 Sep 2008 20:32:35 +1000
+
+me-tv (0.5.33-3) unstable; urgency=low
+
+  * Fix xine-lib ffmpeg dependency.
+
+ -- Philipp Kern <pkern@debian.org>  Wed, 23 Jul 2008 14:03:56 +0200
+
+me-tv (0.5.33-2) unstable; urgency=low
+
+  * Added dvb-apps to Depends
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Mon, 21 Jul 2008 21:35:07 +1000
+
+me-tv (0.5.33-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Mon, 21 Jul 2008 10:04:26 +1000
+
+me-tv (0.5.32-1) unstable; urgency=low
+
+  * New upstream release
+  * Linking to new dvb-apps (Closes: #490252)
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Sat, 19 Jul 2008 23:31:11 +1000
+
+me-tv (0.5.30-1) unstable; urgency=low
+
+  [ Michael Lamothe ]
+  * New upstream release
+
+  [ Philipp Kern ]
+  * Trim libxine1 dependency in favour of the libxine1-x one.
+  * Demote dvb-utils to recommends as it is priority extra.
+
+ -- Philipp Kern <pkern@debian.org>  Sat, 17 May 2008 09:05:58 +1000
+
+me-tv (0.5.17-1) unstable; urgency=low
+
+  * New upstream release (Closes: #464922)
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Tue, 12 Feb 2008 21:56:59 +1100
+
+me-tv (0.4.19-1) unstable; urgency=low
+
+  * Initial Release (Closes: #435001).
+
+ -- Michael Lamothe <michael.lamothe@gmail.com>  Wed, 19 Dec 2007 23:30:16 +1100

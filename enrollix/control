@@ -1,0 +1,47 @@
+Source: enrollix
+Section: misc
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               fp-compiler-2.4.4,
+               lcl-gtk2-0.9.30.2,
+               lazarus-src-0.9.30.2,
+               lcl-units-0.9.30.2,
+               libsqlite3-dev,
+               lazarus-ide-0.9.30.2,
+               fp-docs-2.4.4,
+               fp-utils,
+               cups-common,
+               rng-tools,
+               gnutls-bin,
+               krb5-doc,
+               krb5-user,
+               librsvg2-common,
+               gvfs,
+               libjasper-runtime,
+               ttf-baekmuk,
+               ttf-arphic-gbsn00lp,
+               ttf-arphic-bsmi00lp,
+               ttf-arphic-gkai00mp,
+               ttf-arphic-bkai00mp,
+               sqlite3-doc,
+               fp-utils-2.4.4,
+               fpc,
+               lcl-0.9.30.2,
+               gdb,
+               hicolor-icon-theme,
+               libgtk2.0-bin,
+               krb5-locales
+Standards-Version: 3.9.3
+Homepage: https://sites.google.com/site/enrollix/home
+
+Package: enrollix
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Free software to manage enrollments
+ Enrollix is a free software for GNU/Linux, Windows
+ and OS X useful to manage enrollments of people
+ to associations, communities, groups, classes,
+ teams, magazines and events like meetings,
+ parties, etc.

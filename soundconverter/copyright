@@ -1,0 +1,36 @@
+Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=48
+Name: soundconverter
+Contact: Gautier Portet <kassoulet@gmail.com>
+Source: http://soundconverter.berlios.de/
+
+Files: *
+Copyright: 2004, Lars Wirzenius <liw@iki.fi>
+           2005-2008, Gautier Portet <kassoulet@gmail.com>
+License: GPL-3
+    On Debian systems the full text of the GNU General Public
+    License can be found in the `/usr/share/common-licenses/GPL-3'
+    file.
+
+Files: debian/*
+Copyright: 2006-2008, William Grant <william@qeuni.net>
+           2009, Jason Heeris <jason.heeris@gmail.com>
+License: GPL-3
+    On Debian systems the full text of the GNU General Public
+    License can be found in the `/usr/share/common-licenses/GPL-3'
+    file.
+
+        Copyright and acknowledgements
+        ------------------------------
+
+Copyright 2004 Lars Wirzenius
+Copyright 2005-2008 Gautier Portet
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; version 3 of the License.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.
+

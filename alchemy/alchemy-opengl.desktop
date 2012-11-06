@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Alchemy (OpenGL)
+Exec=/usr/bin/alchemy-opengl
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Viewer;

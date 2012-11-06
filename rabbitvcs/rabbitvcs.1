@@ -1,0 +1,36 @@
+.\"Created with GNOME Manpages Editor Wizard
+.\"http://sourceforge.net/projects/gmanedit2
+.TH rabbitvcs 1 "May 25, 2009" "" "rabbitvcs"
+
+.SH NAME
+rabbitvcs \- Integrated version control for Nautilus
+
+.SH SYNOPSIS
+.B rabbitvcs
+<module> [path1] [path2] ...
+.br
+
+.SH DESCRIPTION
+.B rabbitvcs
+provides integrated support for various version control version systems in
+the Nautilus file manager (currently only subversion). This command opens
+a new
+.B nautilus
+window and applies the given VCS command.
+
+.SH OPTIONS
+.B
+.IP module
+The VCS command to invoke. Available modules are: about, add, blame, checkout,
+cleanup, commit, create, delete, export, ignore, import, lock, log, merge,
+properties, relocate, rename, resolve, revert, settings, switch, unlock, update,
+updateto
+
+.B
+.IP path
+The file(s) or directory(\-ies) to apply the action to.
+
+.SH "SEE ALSO"
+.B nautilus(1)
+,
+.B svn(1)

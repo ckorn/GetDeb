@@ -1,0 +1,4 @@
+?package(y-ppa-manager):needs="X11" \
+ section="Applications/System/Package Management" \
+ title="Y PPA Manager" \
+ command="/usr/bin/y-ppa-manager"

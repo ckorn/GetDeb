@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian/tmp/usr/lib/*/ogmrip -name *.a | xargs rm
+	find debian/tmp/usr/lib -name *.la | xargs rm
+
+override_dh_auto_test:
+
+override_dh_makeshlibs:
+	dh_makeshlibs -a -V \
+		-Xaudio-plugins \
+		-Xcontainer-plugins \
+		-Xoptions-plugins \
+		-Xsubp-plugins \
+		-Xvideo-plugins
+
+override_dh_install:
+	dh_install --list-missing

@@ -1,0 +1,156 @@
+discwrapper (1.2.2-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #582654)
+  - PreviewOutput.cpp: Greatly improved preview rendering
+  - DiscWrapperMain.cpp: Bugfix fitting image horizontal/vertical do not
+    work properly
+  - ProjectFileHandling.cpp: Bugfix lists are not updated to current
+    syntax when opening old projects
+  - NewDialog.cpp: Bugfix error about ~HOME/.discwrapper/templates/
+    won't show up anymore(it was nonsense)
+  - Fixed some typos in German translation
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 May 2010 20:52:54 +0200
+
+discwrapper (1.2.1-1~getdeb1) jaunty; urgency=low
+
+  - New and more effective template project system
+  - Added new application icon
+  - Disc printing support for "hp Photosmart D5200"
+  - Updated translations: Hungarian, German, Spanish
+  - Added Polish translation
+
+ -- Christoph Korn <c_korn@gmx.de>  Fri, 12 Jun 2009 18:23:11 +0200
+
+discwrapper (1.2.0a-1~getdeb1) intrepid; urgency=low
+
+  - DiscWrapperMain.cpp: Redesigned and more modern left panel
+  - On-design label editing, rotating and image scaling
+  - Rewritten About an ImageStore dialog
+  - Redesigned class and varible hierarchy(Database.h, Database.cpp)
+  - Most procedures have been revised
+  - Upgraded ImageStore: from now on it checks given folders for images
+  - Lists can be added to disc design
+  - Size of files can be listed too
+  - Any textfiles can be imported as a list
+  - K3b projects can be imported as a list too
+  - Lists have columns and cells have aligment(left,centre,right)
+  - MouseHandling.cpp: Different cursors to indicate possibilities
+    editing your design
+  - UndoRedo.cpp: Fit image can be undone and redone now
+  - UndoRedo.cpp: Bugfix Undo and redo don't work properly when moving
+    images on top and bottom
+  - PreviewOutput.cpp: Bugfix fit option is wrong with rotated images
+  - Added dialogs: EditListDialog, ImportTextFileDialog,
+    ManageImageStoreDialog, AddListDialog
+  - Removed dialogs: LicenseDialog, ThanksToDialog
+
+ -- Christoph Korn <c_korn@gmx.de>  Wed, 15 Apr 2009 23:14:05 +0200
+
+discwrapper (1.2.0-1~getdeb1) intrepid; urgency=low
+
+  - DiscWrapperMain.cpp: Redesigned and more modern left panel
+  - On-design label editing, rotating and image scaling
+  - Rewritten About an ImageStore dialog
+  - Redesigned class and varible hierarchy(Database.h, Database.cpp)
+  - Most procedures have been revised
+  - Upgraded ImageStore: from now on it checks given folders for images
+  - Lists can be added to disc design
+  - Size of files can be listed too
+  - Any textfiles can be imported as a list
+  - K3b projects can be imported as a list too
+  - Lists have columns and cells have aligment(left,centre,right)
+  - MouseHandling.cpp: Different cursors to indicate possibilities
+    editing your design
+  - UndoRedo.cpp: Fit image can be undone and redone now
+  - UndoRedo.cpp: Bugfix Undo and redo don't work properly when moving
+    images on top and bottom
+  - PreviewOutput.cpp: Bugfix fit option is wrong with rotated images
+  - Added dialogs: EditListDialog, ImportTextFileDialog,
+    ManageImageStoreDialog, AddListDialog
+  - Removed dialogs: LicenseDialog, ThanksToDialog
+
+ -- Christoph Korn <c_korn@gmx.de>  Wed, 15 Apr 2009 21:51:03 +0200
+
+discwrapper (1.1.5-1~getdeb1) intrepid; urgency=low
+
+  - DiscWrapperMain.cpp: Unload project and set default state before
+    terminating
+  - PreviewOutput.cpp: Bent labels can be multilined now
+  - PreviewOutput.cpp: Multilined texts are aligned and rotated correctly
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 10 Mar 2009 01:00:28 +0100
+
+discwrapper (1.1.4-1~getdeb1) intrepid; urgency=low
+
+  - PrintDiscDialog.cpp: Disc-surface scaling option
+  - Disc printing support for "hp Photosmart D5460"
+  - New translations: Swedish, Spanish
+  - Updated translation: Danish
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 05 Mar 2009 22:30:40 +0100
+
+discwrapper (1.1.3-0~getdeb1) intrepid; urgency=low
+
+  * PreviewOutput.cpp: Bugfix Empty list is invisible
+  * CommonFunctions.cpp: Bugfix Class setup isn't processed
+  * DiscWrapperMain.cpp: Next object button in menu
+
+ -- Christoph Korn <c_korn@gmx.de>  Wed, 14 Jan 2009 20:15:34 +0100
+
+discwrapper (1.1.2b-0~getdeb1) intrepid; urgency=low
+
+  * PrintDiscDialog.cpp: Support printing on disc
+    (partially, has to be set manually in order to work
+    properly)
+  * DiscWrapperMain.cpp: New image scaling options
+  * DiscWrapperMain.cpp: Bugfix Adding project to recent
+    list, even if it's there already
+  * DiscWrapperMain.cpp: List tool has dynamic variable
+    management at last
+  * PreviewOutput.cpp: Improved preview refreshing
+    (reduced size of imported images)
+  * UndoRedo.cpp: Bugfix Undo and redo don't work
+    properly after deleting any kind of items
+  * PreviewOutput.cpp: Bugfix Image on Front layer can
+    cover the Inside when printing or exporting
+
+ -- Christoph Korn <c_korn@gmx.de>  Sun, 11 Jan 2009 21:42:34 +0100
+
+discwrapper (1.1.1a-0~getdeb1) intrepid; urgency=low
+
+  * I'm sorry to say that support of Windows has come to a
+    stop. Due to several extra issues which have been
+    ecountered. (flickering, unicode support,
+    ImageStore dialog fault)
+  * Bugfixes and little improvements
+  * New translations
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 11 Dec 2008 22:44:33 +0100
+
+discwrapper (1.1.0-0~getdeb1) intrepid; urgency=low
+
+  * Complete Undo-Redo feature for every tool
+  * Images can be added to ImageStore
+  * Bugfix Crash when rotating image on page Inside or Back
+  * Bugfix List editing Ctrl isn't updated when other list
+    has been selected
+  * Bugfix Some unicode characters aren't saved
+    correctly(Project files and locale)
+
+ -- Christoph Korn <c_korn@gmx.de>  Tue, 18 Nov 2008 15:37:48 +0100
+
+discwrapper (1.0.1-0~getdeb1) intrepid; urgency=low
+
+  * DiscWrapperMain.cpp: Bugfix crash when updating recent projects
+  * DiscWrapperMain.cpp: Bugfix misunderstanding project sintax??? this
+    is quite dark but may work
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 13 Nov 2008 23:50:50 +0100
+
+discwrapper (1.0.0-0~getdeb1) intrepid; urgency=low
+
+  * Initial release (Closes: LP #291237)
+
+ -- Christoph Korn <c_korn@gmx.de>  Thu, 30 Oct 2008 23:19:33 +0100
+

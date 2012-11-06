@@ -1,0 +1,391 @@
+grisbi (0.8.9-1~getdeb2~precise) precise; urgency=low
+
+  * New upstream version
+    - fixes bug 1432
+    - fixe a potential crash when closing Grisbi
+    - minor changes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 20:51:33 +0200
+
+grisbi (0.8.8-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 22 Sep 2011 16:14:01 +0200
+
+grisbi (0.8.7-2) unstable; urgency=low
+
+  * Tune and install upstream-generated grisbi.desktop (Closes: #632683)
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 23 Jul 2011 18:36:27 +0200
+
+grisbi (0.8.7-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/watch so that unstable series are ignored
+  * Bump debhelper compat level to 8
+  * Bump Standards-Version to 3.9.2
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 09 Jun 2011 09:20:54 +0200
+
+grisbi (0.8.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 27 May 2011 23:36:21 +0200
+
+grisbi (0.8.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 19 Apr 2011 11:45:14 +0200
+
+grisbi (0.8.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 17 Mar 2011 23:36:27 +0100
+
+grisbi (0.8.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 06 Mar 2011 18:34:26 +0100
+
+grisbi (0.8.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 24 Jan 2011 00:38:01 +0100
+
+grisbi (0.7.97-1) experimental; urgency=low
+
+  * New upstream unstable release
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 22 Dec 2010 08:21:17 +0100
+
+grisbi (0.7.95-1) experimental; urgency=low
+
+  * New upstream unstable release
+  * Reword package descriptions (LP: #155059)
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 11 Dec 2010 23:17:14 +0100
+
+grisbi (0.7.93-1) experimental; urgency=low
+
+  * New upstream unstable release
+    - remove all patches
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 07 Dec 2010 21:27:15 +0100
+
+grisbi (0.6.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #549452, #551794)
+  * Switch source package format to 3.0 (quilt)
+  * Upload to unstable
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 05 May 2010 21:11:05 +0200
+
+grisbi (0.6.0~rc2-1) experimental; urgency=low
+
+  * New upstream release candidate
+  * Bump Standards-Version to 3.8.4 (no changes)
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 07 Feb 2010 14:38:20 +0100
+
+grisbi (0.6.0~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 09 Jan 2010 17:40:30 +0100
+
+grisbi (0.6.0~pre+beta3+1-1) experimental; urgency=low
+
+  * New upstream beta release
+  * Install NEWS file as upstream changelog
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 15 Nov 2009 13:42:24 +0100
+
+grisbi (0.6.0~pre+beta1-1) experimental; urgency=low
+
+  * New upstream beta release:
+    - remove Use-x-www-browser-by-default-instead-of-mozilla.patch
+    - add dependency to xdg-utils
+    - add build-dependency to chrpath
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 20 Sep 2009 13:12:14 +0200
+
+grisbi (0.6.0~cvs20090901-2) experimental; urgency=low
+
+  * New upstream CVS snapshot (Closes: #480781)
+  * Update copyright file (OpenSSL is explicitly authorized in README)
+  * Build and install openssl plugin
+  * Update my e-mail address and remove DMUA
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 02 Sep 2009 19:23:38 +0200
+
+grisbi (0.6.0~cvs20090823-1) experimental; urgency=low
+
+  * New upstream CVS snapshot (Closes: #298644, #378992, LP: #395927)
+    - removed patch: Fix-freeze-when-using-combobox-with-keyboard
+    - do not install openssl plugin, because of licensing issue;
+      document it in README.Debian
+  * Update Standards-Version to 3.8.3 (no changes)
+
+ -- Stephane Glondu <steph@glondu.net>  Sun, 23 Aug 2009 23:39:38 +0200
+
+grisbi (0.5.9-4) unstable; urgency=low
+
+  * Add a patch to fix freeze when using keyboard in combobox
+    (LP: #399295)
+
+ -- Stephane Glondu <steph@glondu.net>  Sun, 02 Aug 2009 22:02:40 +0200
+
+grisbi (0.5.9-3) unstable; urgency=low
+
+  * Fix binary-arch build
+
+ -- Stephane Glondu <steph@glondu.net>  Wed, 08 Jul 2009 20:32:18 +0200
+
+grisbi (0.5.9-2) unstable; urgency=low
+
+  * Add Replaces and Conflicts to grisbi-common, which replaces files
+    previously shipped by grisbi (Closes: #520723)
+  * Use dh overrides in debian/rules
+  * Use quilt for patches
+  * Use x-www-browser by default (LP: #395925)
+  * Add suggestion to www-browser
+  * Update Standards-Version to 3.8.2 (no changes)
+
+ -- Stephane Glondu <steph@glondu.net>  Wed, 08 Jul 2009 18:12:12 +0200
+
+grisbi (0.5.9-1) unstable; urgency=low
+
+  [ Stephane Glondu ]
+  * New maintainer (Closes: #505570)
+  * Acknowledge non-maintainer uploads
+  * New upstream release (Closes: #390285)
+  * Add binary package grisbi-common with arch-indep files
+  * debian/control:
+    - add DM-Upload-Allowed header
+    - add Vcs-* headers
+    - fix typos in description (from Ubuntu, thanks Adrien Cunin)
+    - downgrade dependency to texlive from Recommends to Suggests
+  * debian/copyright: switch to machine-parsable format
+  * debian/rules: switch to debhelper 7
+  * Add debian/gbp.conf
+
+  [ Roberto C. Sanchez ]
+  * Update standards version to 3.8.1 (no changes)
+
+ -- Stephane Glondu <steph@glondu.net>  Sun, 15 Mar 2009 11:38:22 +0100
+
+grisbi (0.5.8-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Replaced obsolete Recommends latex-ucs and tetex-extra by texlive
+    (closes: #466100)
+  * Don't ignore errors from make distclean, per lintian
+  * Fixed spelling mistake in package description (closes: #363626)
+  * Converted debian/copyright to UTF-8
+  * Fixed/updated menu section
+  * Removed empty directories
+  * Updated to debhelper level 6
+  * Updated standards version
+  * Added watch file
+  * Corrected categories in desktop file (closes: #410193)
+  * Added support for StartupNotify in launcher (closes: #361529)
+  * Added Homepage control field
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 14 Jul 2008 17:59:03 +0200
+
+grisbi (0.5.8-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix an implicit pointer conversion of the return value from
+    file_selection_get_filename() that can lead to segfaults on some
+    64-bit architectures (closes: #348821)
+
+ -- dann frazier <dannf@debian.org>  Mon, 16 Jul 2007 12:51:26 -0600
+
+grisbi (0.5.8-1) unstable; urgency=low
+
+  * New upstream release (closes: #337866, #315905)
+  * Change column size option default (closes: #283242)
+
+ -- Benjamin Drieu <benj@debian.org>  Wed, 18 Jan 2006 11:18:57 +0000
+
+grisbi (0.5.7-4) unstable; urgency=low
+
+  * Build against libofx2 (close: #325099)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu,  1 Sep 2005 13:46:10 +0200
+
+grisbi (0.5.7-3) unstable; urgency=low
+
+  * Build against libofx0.8 (closes: #324955)
+
+ -- Benjamin Drieu <bdrieu@april.org>  Thu, 25 Aug 2005 16:56:39 +0200
+
+grisbi (0.5.7-2) unstable; urgency=low
+
+  * Dependency on libofx1c2, C++ transition is over for Grisbi (closes:
+    #322908)
+  * Register properly with Gnome MIME
+  * Fix menu issues (closes: #320436)
+  * Update German translation (closes: #313755)
+
+ -- Benjamin Drieu <bdrieu@april.org>  Sat, 13 Aug 2005 15:55:43 +0200
+
+grisbi (0.5.7-1) unstable; urgency=low
+
+  * New upstream release (closes: #30966).
+    + Added support for Ukraine Hryvnia (closes: #301596)
+    + Bug fixes (closes: #297538, #300415, #296067, #303696, #289964)
+
+ -- Benjamin Drieu <bdrieu@april.org>  Thu,  9 Jun 2005 12:51:19 +0200
+
+grisbi (0.5.5-2) unstable; urgency=low
+
+  * Fix a FTBFS on mipsel (closes: #298234)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 10 Mar 2005 14:21:58 +0100
+
+grisbi (0.5.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Benjamin Drieu <benj@debian.org>  Sat,  8 Jan 2005 16:12:37 +0000
+
+grisbi (0.5.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Benjamin Drieu <benj@debian.org>  Fri, 24 Dec 2004 11:58:37 +0100
+
+grisbi (0.5.3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Fri, 26 Nov 2004 11:45:57 +0100
+
+grisbi (0.5.2-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 14 Oct 2004 17:36:30 +0200
+
+grisbi (0.5.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 29 Jul 2004 16:44:49 +0200
+
+grisbi (0.5.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Tue, 29 Jul 2003 22:48:36 +0200
+
+grisbi (0.4.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 25 Mar 2004 15:37:24 +0100
+
+grisbi (0.4.3-3) unstable; urgency=low
+
+  * Removed includes of obsolete gnomeprint (closes: #226494)
+
+ -- Benjamin Drieu <benj@debian.org>  Wed,  7 Jan 2004 09:00:41 +0100
+
+grisbi (0.4.3-2) unstable; urgency=low
+
+  * Fix missing changelog.Debian.gz
+  * Fix a crash (closes: #202361)
+
+ -- Benjamin Drieu <benj@debian.org>  Tue,  6 Jan 2004 11:13:53 +0100
+
+grisbi (0.4.3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Sat,  3 Jan 2004 16:04:15 +0100
+
+grisbi (0.4.2-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Tue, 23 Dec 2003 09:23:27 +0100
+
+grisbi (0.4.1+0.4.2-pre2-1) unstable; urgency=low
+
+  * New upstream version (0.4.2-pre2).
+
+ -- Benjamin Drieu <benj@debian.org>  Tue, 16 Dec 2003 15:32:10 +0100
+
+grisbi (0.4.1+0.4.2-pre1-1) unstable; urgency=low
+
+  * New upstream version (0.4.2-pre1).
+
+ -- Benjamin Drieu <benj@debian.org>  Fri,  5 Dec 2003 13:18:04 +0100
+
+grisbi (0.4.1-2) unstable; urgency=low
+
+  * Add some upstream fixes.
+
+ -- Benjamin Drieu <benj@debian.org>  Mon, 24 Nov 2003 20:49:36 +0100
+
+grisbi (0.4.1-1) unstable; urgency=low
+
+  * New upstream version.  Grisbi is now fully i18ned ... hurrah!
+
+ -- Benjamin Drieu <benj@debian.org>  Fri,  4 Jul 2003 13:41:10 +0200
+
+grisbi (0.4.0-4) unstable; urgency=low
+
+  * Update configure stuff (Closes: #184765)
+
+ -- Benjamin Drieu <benj@debian.org>  Mon, 26 May 2003 19:00:29 +0200
+
+grisbi (0.4.0-3) unstable; urgency=low
+
+  * Update config.guess to help mipsel builds (Closes: #183528)
+  * Remove doc-base entry until I build a grisbi-doc package (Closes: #169374)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu,  6 Mar 2003 15:36:42 +0100
+
+grisbi (0.4.0-2) unstable; urgency=low
+
+  * Update missing build deps (closes: #182557).  Sigh.
+
+ -- Benjamin Drieu <benj@debian.org>  Wed, 26 Feb 2003 15:43:08 +0100
+
+grisbi (0.4.0-1) unstable; urgency=low
+
+  * New upstream version
+  * Fix doc-base path (Closes: #169374)
+  * Build without applet support as it is unsatisfiable with Gnome 1
+    (Closes: #182142)
+  * Some cleanup to make recent lintians happy
+
+ -- Benjamin Drieu <benj@debian.org>  Fri, 21 Feb 2003 14:58:36 +0100
+
+grisbi (0.3.3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Benjamin Drieu <benj@debian.org>  Sun,  3 Nov 2002 21:30:15 +0100
+
+grisbi (0.3.2-2) unstable; urgency=low
+
+  * Fix wrong build dependencies.  (Closes: #159239)
+  * Fix control file
+
+ -- Benjamin Drieu <benj@debian.org>  Mon,  9 Sep 2002 10:34:31 +0200
+
+grisbi (0.3.2-1) unstable; urgency=low
+
+  * Initial Release.  (Closes: #156667)
+
+ -- Benjamin Drieu <benj@debian.org>  Tue, 20 Aug 2002 20:52:28 +0200

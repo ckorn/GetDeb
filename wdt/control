@@ -1,0 +1,16 @@
+Source: wdt
+Section: utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), python-support
+Standards-Version: 3.9.1
+
+Package: wdt
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-gtk2,
+ python-webkit, python-imaging, python-feedparser, python-notify,
+ optipng (>= 0.6.2.1), advancecomp (>= 1.15), wget, mysql-client,
+ bzip2, lftp,python-gmenu
+Description: Web Developer Tools
+ Web Developer Tools is a suite of useful
+ tools for web developers

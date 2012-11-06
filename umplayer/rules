@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+QMAKE_OPTS = DEFINES+=NO_DEBUG_ON_CONSOLE
+MAKE_OPTS  = PREFIX=/usr QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 QMAKE_OPTS="$(QMAKE_OPTS)"
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	[ ! -f src/Makefile ] || dh_auto_clean
+
+override_dh_auto_build:
+	dh_auto_build -- $(MAKE_OPTS) DOC_PATH=\\\"/usr/share/doc/umplayer\\\"
+
+override_dh_auto_install:
+	dh_auto_install -- $(MAKE_OPTS) DOC_PATH=/usr/share/doc/umplayer
+	rm -f debian/tmp/usr/share/doc/umplayer/Copying.txt
+
+override_dh_install:
+	dh_install --list-missing

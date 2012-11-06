@@ -1,0 +1,18 @@
+rbutil (1.3.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 23 Sep 2012 14:02:12 +0200
+
+rbutil (1.2.11-1~getdeb1) lucid; urgency=low
+
+  * New upstream version (LP: #871517)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 07 Dec 2011 18:33:27 +0100
+
+rbutil (1.2.6-1~dooz2) maverick; urgency=low
+
+  * Initial release; see Debian #440111 and LP #192989.
+  * Snapshot to my PPA.
+
+ -- Loïc Minier <lool@debian.org>  Sat, 05 Jun 2010 15:17:52 +0200

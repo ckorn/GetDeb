@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=FreeFileSync
+_Comment=Keep files and folders synchronized
+Exec=FreeFileSync %f
+Terminal=false
+Type=Application
+Icon=freefilesync
+MimeType=application/x-freefilesync-ffs;application/x-freefilesync-batch
+Categories=Utility;FileTools;GTK;
+StartupWMClass=FreeFileSync
+StartupNotify=true

@@ -1,0 +1,26 @@
+Source: anomos
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 7.0.50), python-support
+Standards-Version: 3.9.1
+Homepage: http://anomos.info
+
+Package: anomos
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-gtk2, python-m2crypto
+Description: Anonymous and Encrypted BitTorrent
+ Anomos is a pseudonymous, encrypted multi-peer-to-peer
+ file distribution protocol. It is based on
+ the peer/tracker concept of BitTorrent in combination
+ with an onion routing anonymization layer, with the
+ added benefit of end-to-end encryption. By combining these
+ technologies, a platform has been created where by no
+ party outside of the trusted tracker will have any
+ information about who a peer is or what they are
+ downloading.
+ .
+ Anomos is designed to be easy to use - you won't even be
+ aware of the security that it provides. Anybody who is
+ already familiar with BitTorrent won't have to do
+ anything differently.

@@ -1,0 +1,17 @@
+Description: Do not check for updates on the Internet, updates will be provided via repositories.
+Origin: Debian
+Forwarded: not-needed
+
+Index: bleachbit-0.7.4/bleachbit/Common.py
+===================================================================
+--- bleachbit-0.7.4.orig/bleachbit/Common.py	2009-11-10 22:39:33.141073245 +0100
++++ bleachbit-0.7.4/bleachbit/Common.py	2009-11-10 22:43:22.609075670 +0100
+@@ -41,7 +41,7 @@
+ 
+ # Setting below value to false disables update notification (useful
+ # for packages in repositories).
+-online_update_notification_enabled = True
++online_update_notification_enabled = False
+ 
+ ###
+ ### Paths

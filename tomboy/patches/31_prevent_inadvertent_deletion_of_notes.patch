@@ -1,0 +1,43 @@
+Description: Prevents accidental deletion of notes in case user hits the
+             delete key when the focus is in the search box.
+Author: Abhinav Upadhyay <er.abhinav.upadhyay@gmail.com>
+Bug-Ubuntu: https://launchpad.net/bugs/757635
+Bug: https://bugzilla.gnome.org/647462
+Forwarded: yes 
+Index: tomboy-1.11.2/Tomboy/RecentChanges.cs
+===================================================================
+--- tomboy-1.11.2.orig/Tomboy/RecentChanges.cs	2012-06-05 14:27:24.919497844 +0200
++++ tomboy-1.11.2/Tomboy/RecentChanges.cs	2012-06-05 14:28:35.467495749 +0200
+@@ -105,6 +105,8 @@
+ 			find_combo.Changed += OnEntryChanged;
+ 			find_combo.Entry.ActivatesDefault = false;
+ 			find_combo.Entry.Activated += OnEntryActivated;
++			find_combo.Entry.FocusInEvent += OnSearchBoxFocused;
++			find_combo.Entry.FocusOutEvent += OnSearchBoxFocusedOut;
+ 			if (previous_searches != null) {
+ 				foreach (string prev in previous_searches) {
+ 					find_combo.AppendText (prev);
+@@ -1294,7 +1296,22 @@
+ 			PerformSearch ();
+ 			AddToPreviousSearches (SearchText);
+ 		}
+-
++		
++		// called when the user moves the focus in the search combo box
++		void OnSearchBoxFocused (object sender, EventArgs args)
++		{
++			// disable the Delete Note option in the menu bar (bug #647462)
++			Tomboy.ActionManager ["DeleteNoteAction"].Sensitive = false;
++		}
++		
++		// called when the focus moves out of the search combo box.
++		void OnSearchBoxFocusedOut (object sender, EventArgs args)
++		{
++			// Enable the Delete Note option in the menu bar, which might have been
++			// disabled in case the focus was in the search combo box perviously.
++			Tomboy.ActionManager ["DeleteNoteAction"].Sensitive = true;
++		}
++		
+ 		void AddToPreviousSearches (string text)
+ 		{
+ 			// Update previous searches, by adding a new term to the

@@ -1,0 +1,7 @@
+usr/share/doc
+usr/share/grisbi
+usr/share/icons
+usr/share/locale
+usr/share/mime-info
+usr/share/pixmaps
+debian/gnome-mime-application-grisbi.png   /usr/share/icons/gnome/48x48/mimetypes

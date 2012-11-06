@@ -1,0 +1,61 @@
+gravit (0.5.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #997991)
+        * First release in 7 years!
+        * New Logo (#57)
+        * Massive performance improvements, OpenMP, SSE (Frank Möhle #4 #7
+        #9 #10 #13 #14 #22)
+        * Free CPU when idle - helps to keep your laptops cool (Frank Möhle)
+        * User interface widgets with Agar (#1 #31 #41)
+        * Skybox rendering, currently only 2 skyboxes (#2 #39)
+        * International keyboard support fixed (Frank Möhle #11)
+        * Support for Lua 5.1 (Frank Möhle #16)
+        * Streaming music (OS X only, David Turnbull #5)
+        * Screenshot to PNG (Frank Möhle #13)
+        * Added stereomode 2 for red-cyan anaglyph glasses (Frank Möhle)
+        * Smooth auto-zoom when using zoomfitauto 2 (Frank Möhle)
+        * Detect number of processors when using OpenMP (Frank Möhle #4 #10)
+        * General operating and build system improvements and compatibility:
+            o Build systems improved/overhauled: MinGW, VC++, Xcode, autoconf
+            (Frank Möhle #7, #8, #29, #46)
+            o Better compatibility with Debian, Ubuntu, OS X, Windows XP,
+            Windows 7 (32/64bit) (#29)
+            o Tested and runs on a Raspberry Pi :)
+        * Windows Installer improvements: (Frank Möhle #52)
+            o 32bit and 64bit Windows installers
+            o Includes Visual C++ Redistributable Package
+            o Optional component for installing the screensaver instead of a
+            checkbox in the last step (#17)
+        * Fix for crash when memoryavailable is more than 2GB (Frank Möhle
+        #15 #19)
+        * Limit frame rate to 60fps (Frank Möhle #25)
+        * Seed the random number generator in Lua on startup (Frank Möhle
+        #26)
+        * Record until frame N by referencing a frame that doesn't exist yet
+        with the "frame" command (Frank Möhle #26)
+        * Infinite loop bug when running "framecompression 0" (Frank Möhle
+        #26)
+        * Reduce console verbosity (Frank Möhle #28)
+        * Detect memory available and automatically use a percentage of it
+        (50% by default, #40)
+        * Many other subtle features, speed improvements, bug fixes, etc.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 May 2012 18:53:59 +0200
+
+gravit (0.4.2-1~getdeb3) lucid; urgency=low
+
+  * Update debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 16 Apr 2012 19:48:33 +0200
+
+gravit (0.4.2-1~getdeb2) karmic; urgency=low
+
+  * Added debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Feb 2010 14:56:42 +0100
+
+gravit (0.4.2-1~getdeb1) karmic; urgency=low
+
+  * Initial release (LP: #478249)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Nov 2009 14:44:40 +0100

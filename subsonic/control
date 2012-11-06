@@ -1,0 +1,25 @@
+Source: subsonic
+Section: sound
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.subsonic.org
+
+Package: subsonic
+Architecture: all
+Depends: ${misc:Depends},
+         openjdk-6-jre | sun-java6-jre,
+         fontconfig,
+         lame,
+         flac,
+         faad,
+         vorbis-tools,
+         ffmpeg
+Description: Web-based music streamer, jukebox and Podcast receiver
+ Subsonic is a web-based music streamer, jukebox and Podcast receiver,
+ providing access to your music collection wherever you are. Use it
+ to share your music with friends, or to listen to your music while away
+ from home.
+ .
+ A Subsonic client for Android phones is also available.

@@ -1,0 +1,3 @@
+?package(grisbi):needs="X11" section="Applications/Office"\
+  longtitle="Grisbi finance manager" \
+  title="Grisbi" command="/usr/bin/grisbi" icon="/usr/share/pixmaps/grisbi/grisbi.xpm"

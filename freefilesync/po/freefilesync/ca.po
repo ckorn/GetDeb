@@ -1,0 +1,26 @@
+# Catalan translation for freefilesync
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the freefilesync package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: freefilesync\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-01-30 10:45+0000\n"
+"PO-Revision-Date: 2010-06-23 10:06+0000\n"
+"Last-Translator: FreeFileSync <Unknown>\n"
+"Language-Team: Catalan <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-01-31 05:19+0000\n"
+"X-Generator: Launchpad (build 14734)\n"
+
+#: realtimesync.desktop.in:3
+msgid "Start synchronization in real time"
+msgstr "Començar sincronització en temps real"
+
+#: freefilesync.desktop.in:3
+msgid "Keep files and folders synchronized"
+msgstr "Mantenir arxius i carpetes sincronitzades"

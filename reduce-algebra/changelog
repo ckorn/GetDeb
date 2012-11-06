@@ -1,0 +1,20 @@
+reduce-algebra (20110414-1~getdeb2) natty; urgency=low
+
+  * debian/scripts/csl, debian/scripts/reduce:
+    Start the executable directly without changing
+    to the directory. Allows opening files from the
+    command line in the same directory (LP: #820927)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 04 Aug 2011 16:41:08 +0200
+
+reduce-algebra (20110414-1~getdeb1) natty; urgency=low
+
+  * New upstream version (LP: #805266)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 06 Jul 2011 23:09:23 +0200
+
+reduce-algebra (20101007-1~getdeb1) maverick; urgency=low
+
+  * Initial release (LP: #450233)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 19 Dec 2010 21:31:48 +0100

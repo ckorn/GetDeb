@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MyNotex
+Comment=Take and manage textual notes
+Exec=env LIBOVERLAY_SCROLLBAR=0 /usr/bin/mynotex
+Terminal=false
+Type=Application
+Icon=mynotex
+Categories=Office;
+GenericName=MyNotex
