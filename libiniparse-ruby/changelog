@@ -1,3 +1,9 @@
+libiniparse-ruby (1.1.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 08 Nov 2012 19:08:28 +0100
+
 libiniparse-ruby (1.1.5-1~getdeb1) lucid; urgency=low
 
   * New upstream version
