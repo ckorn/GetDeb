@@ -1,3 +1,12 @@
+pac (4.4.1.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Fixed a bug with 'freerdp' that prevented some connections
+      from happening
+    . Added <Ctrl><Shift>Tab option to back on Tabs change
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 08 Nov 2012 19:17:54 +0100
+
 pac (4.4.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
