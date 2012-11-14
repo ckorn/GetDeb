@@ -2,7 +2,7 @@ Update plugin.
 Index: xvst-2.4.1/resources/services/youtube/youtube.js
 ===================================================================
 --- xvst-2.4.1.orig/resources/services/youtube/youtube.js	2010-09-04 15:48:02.000000000 +0200
-+++ xvst-2.4.1/resources/services/youtube/youtube.js	2012-09-17 20:07:20.456009847 +0200
++++ xvst-2.4.1/resources/services/youtube/youtube.js	2012-11-14 21:14:28.193489915 +0100
 @@ -3,7 +3,7 @@
  * This file is part of xVideoServiceThief,
  * an open-source cross-platform Video service download
@@ -17,7 +17,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  function RegistVideoService()
  {
 -	this.version = "2.1.5";
-+	this.version = "3.0.9";
++	this.version = "3.0.10";
  	this.minVersion = "2.0.0a";
 -	this.author = "Xesc & Technology 2009";
 +	this.author = "Xesc & Technology 2012";
@@ -32,7 +32,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  	// init result
  	var result = new VideoDefinition();
  	// default URL
-@@ -52,35 +51,122 @@
+@@ -52,35 +51,123 @@
  		embededID = strRemove(embededID, 0, embededID.lastIndexOf("/v/") + 3);
  		youTubeURL = strFormat(URL_YOUTBE, embededID);
  	}
@@ -48,8 +48,10 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
 +	// get cookies
 +	result.cookies = http.getCookies("|");
  	// get the video title
++	debugger;
  	result.title = copyBetween(html, "<title>", "</title>");
- 	result.title = normalizeSpaces(result.title);
+-	result.title = normalizeSpaces(result.title);
++	result.title = simplifyString(result.title);
 +	result.title = strReplace(result.title, "\n", "");
 +	result.title = strReplace(result.title, " - YouTube", "");
  	// check if this video need a login
@@ -171,7 +173,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  /* 
  	This function "normalizeSpaces(str)" will be deprecated on next xVST version
  	and replaced with the new "simplifyString(str)" function (added in xVST 2.3.1)
-@@ -99,9 +185,11 @@
+@@ -99,9 +186,11 @@
  function searchVideos(keyWord, pageIndex)
  {
  	const URL_SEARCH = "http://www.youtube.com/results?search_query=%1&page=%2&hl=%3";
@@ -186,7 +188,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  	// replace all spaces for "+"
  	keyWord = strReplace(keyWord, " ", "+");
  	// init search results object
-@@ -110,7 +198,7 @@
+@@ -110,7 +199,7 @@
  	var http = new Http();
  	var html = http.downloadWebpage(strFormat(URL_SEARCH, keyWord, pageIndex, searchResults.getUserLanguage()));
  	// get the search summary
@@ -195,7 +197,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  	searchResults.setSummary(cleanSummary(summary));
  	// get results html block
  	var htmlResults = copyBetween(html, HTML_SEARCH_START, HTML_SEARCH_FINISH);
-@@ -148,14 +236,17 @@
+@@ -148,14 +237,17 @@
  	var tmp, videoUrl, imageUrl, title, description, duration, rating;
  	// get video url
  	videoUrl = VIDEO_URL + copyBetween(html, 'href="', '"');
