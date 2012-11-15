@@ -1,3 +1,9 @@
+mynotex (1.2.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Nov 2012 17:51:44 +0100
+
 mynotex (1.2.1-1~getdeb1) precise; urgency=low
 
   * Initial release (LP: #1004823)
