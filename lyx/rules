@@ -32,9 +32,6 @@ override_dh_auto_install:
 	mv debian/lyx-common/usr/share/lyx/fonts \
 		debian/ttf-lyx/usr/share/fonts/truetype/ttf-lyx
 
-# remove empty directory
-	rmdir debian/lyx-common/usr/share/lyx/images/commands
-
 # move tex files to correct place
 	mkdir -p debian/lyx-common/usr/share/texmf/tex/latex
 	mv debian/lyx-common/usr/share/lyx/tex \
