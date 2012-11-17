@@ -43,7 +43,7 @@ Package: ncid-kpopup
 Architecture: all
 Depends: ${misc:Depends},
          ncid-speak (= ${source:Version}),
-         kdelibs4c2a,
+         kdelibs5,
          kmix,
          aumix
 Description: Network Caller ID client KDE popup module

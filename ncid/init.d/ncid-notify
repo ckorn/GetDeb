@@ -1,12 +1,12 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides:          ncid-yac
+# Provides:          ncid-notify
 # Required-Start:    $local_fs $remote_fs
 # Required-Stop:     $local_fs $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: NCID Client using the yac module
-# Description:       NCID client using the YAC Output Module
+# Short-Description: NCID Client using the notify module
+# Description:       NCID client using the NMA Output Module
 ### END INIT INFO
 
 # Author: John L. Chmielewski <jlc@users.sourceforge.net>
@@ -15,20 +15,20 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
-DESC="Network Caller ID YAC Client"
+DESC="Network Caller ID Notify My Android client"
 NAME=ncid
-MODULE=ncid-yac
+MODULE=ncid-notify
 DAEMON=/usr/bin/$NAME
 PIDFILE=/var/run/$MODULE.pid
 SCRIPTNAME=/etc/init.d/$MODULE
-
-DAEMON_ARGS="--no-gui -p $PIDFILE -P $MODULE"
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$MODULE ] && . /etc/default/$MODULE
+
+DAEMON_ARGS="--no-gui -p $PIDFILE -P $MODULE"
 
 # Load the VERBOSE setting and other rcS variables
 [ -f /etc/default/rcS ] && . /etc/default/rcS
@@ -164,7 +164,7 @@ case "$1" in
     log_daemon_msg "Conditional Restarting $DESC" "$NAME"
     do_stop
     case "$?" in
-      0)
+      1)
         do_start
         case "$?" in
             0) log_end_msg 0 ;;

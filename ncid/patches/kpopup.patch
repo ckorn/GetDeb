@@ -1,0 +1,13 @@
+E: ncid-kpopup: shell-script-fails-syntax-check usr/share/ncid/ncid-kpopup
+Index: ncid-0.85/modules/ncid-kpopup.sh
+===================================================================
+--- ncid-0.85.orig/modules/ncid-kpopup.sh	2012-10-13 20:32:56.000000000 +0200
++++ ncid-0.85/modules/ncid-kpopup.sh	2012-11-16 17:44:45.813510937 +0100
+@@ -63,6 +63,7 @@
+         esac
+         found=1
+         break
++    }
+ done
+ 
+ # Exit if $CIDTYPE not found

@@ -22,7 +22,7 @@ PIDFILE=/var/run/$NAME.pid
 DAEMON_ARGS="--pidfile /var/run/$NAME.pid"
 SCRIPTNAME=/etc/init.d/$NAME
 
-ConfigDir=/etc/ncid
+ConfigDir=/usr/local/etc/ncid
 ConfigFile=$ConfigDir/ncidsip.conf
 
 # Exit if the package is not installed
