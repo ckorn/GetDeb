@@ -1,3 +1,15 @@
+pac (4.4.1.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added an option to selectively force to always/never or use default
+      config for using or not Proxy to connect
+    . Moved the "start new local shell" keyboard shortcut from
+      <Ctrl>t to <Ctrl><Alt>t
+    . Moved <Ctrl>t/d shortcuts to <Ctrl><Shift>t/d (new terminal/duplicate),
+      in order to avoid WindowManager/connection conflicts
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 16 Nov 2012 22:32:48 +0100
+
 pac (4.4.1.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
