@@ -1,2 +1,3 @@
 usr/share/man/man1/ncid-kpopup.1
 usr/share/ncid/ncid-kpopup
+etc/ncid/conf.d/ncid-kpopup.conf

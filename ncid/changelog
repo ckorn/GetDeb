@@ -1,3 +1,167 @@
+ncid (0.85-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - README: updated
+    - Makefile: updated
+    - renamed cidgate/ to gateway/
+    - client/Makefile: updated
+    - client/ncid.sh:
+        added verbose levels 1-9
+        added doVerbose{}
+        changed all "if $Verbose" to "doVerbose <string> 1"
+        added test for $ProgDir == "" to correctly set $Program from $ProgName
+        updated comments for $ProgDir and $ProgName
+        added --alt-date|-A option to display date as dd/mm/yyyy
+        added country code for HR (Croatia)
+        fixed "call" array pronlem that crashed ncid if call
+            not found in the array.
+        added date separator ($DateSepar) so "-" or "." can be used
+            in place of "/" in displayed date
+        changed --message option to do nothing, messages always sent
+            to the output module
+        removed -M | --messages option from Usage:
+        added code to set ring indirectly from a module
+            name with "-" replaced by "_" in ncid.conf
+        getCID{}: removed verbose inside "if $Raw {"
+                  added line: if {$Program != ""} {doVerbose "$dataBlock" 1}
+    - client/ncid.conf-in:
+            added AltDate configuration variable
+            added ring number configuration
+    - debian/README.Debian: updated
+    - debian/Makefile: updated
+    - debian/ncid-*.init: updated
+    - debian/ncid-notify.init: new
+    - debian/postrm-client: updated
+    - debian/prerm-client: updated
+    - debian/rules: updated
+    - doc/INSTALL-andLinux: removed
+    - doc/INSTALL-Cygwin: added rebase and service documentation
+    - doc/INSTALL-Fedora: updated
+    - doc/INSTALL-Mac: added section to install using launchctl
+    - doc/INSTALL-TiVo: updated for the startncid script.
+    - doc/INSTALL-Ubuntu: added section to install from GetDeb
+    - doc/INSTALL-Win: updated
+    - doc/Verbose-ncidd: updated
+    - doc/NCID-SDK.odt: updated
+    - Fedora/Makefile: updated
+    - Fedora/ncid.spec: updated
+    - Fedora/ncid-notify.init: new
+    - Fedora/ncid-notify.service-in: new
+    - Fedora/ncidd.service-in: changed network.target to multi-user.target
+    - Fedora/ncid2ncid.service-in: changed network.target to multi-user.target
+    - Fedora/ncid2sip.service-in: changed network.target to multi-user.target
+    - Fedora/ncid2yac.service-in: changed network.target to multi-user.target
+    - FreeBSD/Makefile: updated
+    - FreeBSD/ncid-notify.rc: new
+    - gateway/Makefile: updated
+    - gateway/sip2ncid.c:
+        added print of command line options to logfile
+        doPCAP(): - changed  errorExit() call
+        getOptions(): - added "--osx-launchd" for Mac launchd
+        parseLines: fixed linenum[0] never populated
+    - gateway/sip2ncid.h: updated Usage: 
+    - gateway/ncid2ncid.c:
+        added "OUT: " & "HUP: " to lineType[]
+       added print of command line options to logfile
+       processPackets(): moved if (outcall) to inside above if statement
+       getOptions(): - added "--osx-launchd" for Mac launchd
+    - gateway/ncid2ncid.h: updated Usage: 
+    - Mac/*: new
+    - man/Makefile: updated
+    - man/ncid.1: updated
+    - man/notify.1: new
+    - man/ncid.conf.5: updated
+    - man/ncid2ncid.1: updated
+    - man/ncidd.8: updated
+    - man/ncidd.conf.5: Updated
+    - man/ncidd.blacklist.5: updated
+    - man/ncidd.whitelist.5: new
+    - man/ncidmodules.1: removed
+    - man/ncidmodules.conf.5: removed
+    - man/ncid-modules.7: new
+    - man/ncid-tivo.1: moved to TiVo/
+    - man/ncid-*.1: rewrote
+    - mancid*.1: rewrote
+    - man/ncidrotate.1: moved to scripts/
+    - man/ncidtoold.1: removed
+    - man/sip2ncid.conf.5: Updated
+    - modules/Makefile.modules: updated
+    - modules/README.modules: updated
+    - modules/ncid-initmodem.sh: modified comments
+    - modules/ncid-kpopup.sh: modified comments
+    - modules/ncid-mythtv.sh: modified comments
+    - modules/ncid-notify.sh: new
+    - modules/ncid-tivo.sh: moved to TiVo/
+    - modules/*.sh: lots of code minor changes in all modules
+    - modules/ncidmodules.conf-in: removed
+    - modules/ncid-*.conf: new
+    - scripts/README.scripts: updated
+    - scripts/README.scripts: renamed to README.logrotate
+    - scripts/Makefile: updated
+    - scripts/ncidrotate.1: moved from man/
+    - scripts/ncid.logrotate: updated to work with all service files & systemctl
+    - scripts/ncidrotate.sh: improved code a bit
+    - renamed scripts/ to logrotate/
+    - server/Makefile: updated
+    - server/README.server: updated
+    - server/ncidd.blacklist: added 4 area codes to block
+    - server/ncidd.whitelist: new
+    - server/ncidd.c:
+        changed ringline to infoline, initialize to ONELINE instead of "-"
+        Updated CIDINFO line comment for sendInfo(int mainsock)
+        main() - added: strncpy(infoline, lineid, CIDSIZE - 1);
+        removed extern void builtinAlias(), userAlias();
+        Moved position of command line printout in logfile
+        formatCID() - changed callout to calltype with values IN, OUT, and HUP
+                    - removed builtinAlias() & userAlias()
+                    - added test for "CALLHUP" in the CALL line from a gateway
+                    - added switch statement for linelabel value
+        main(): - added call whitelist lines under if (hangup)
+        getOptions(): - added whitelist option
+                      - added "--osx-launchd" for Mac launchd
+        reload(): - moved blacklist reload inside if (hangup)
+                  - added whitelist reload
+        main(): - added code to print total alias entries
+    - server/ncidd.conf-in: added whitelist variable
+    - server/ncidd.h: - added defines for IN, OUT, and HUP
+                      - added whitelist option to USAGE define
+                      - replaced HANGUPMSG define with BLMSG and WLMSG
+                      - updated Usage:
+    - server/nciddalias.c:idoAlias(): - added Alias Entries log message
+                           - added builtinAlias() & userAlias() was in ncidd.c 
+    - server/nciddconf.c: - added whitelist to setword[]
+    - server/nciddconf.h: removed: extern struct alias alias[];
+    - server/nciddhangup.c: - changed doBlacklist() to doList(),
+                              rmbl() to rmEntries(), addbl() to addEntry(),
+                              nextbl() to nextEntry(), *list[] to *blklist[]
+                            - added *whitelist, *whtlist[LISTSIZE]
+                            - changed functions to handle both blacklist and
+                              whitelist
+    - server/nciddhangup.h: - added #define WHITELIST, and new function names
+    - test/README.test: updated
+    - test/client-display.data: updated
+    - test/testclient.log: removed
+    - test/TestGWcalls.data: - added CALL and CALLINFO to test hangup lists
+    - test/TestMdmcalls: - fixed proplem looking only for "\n$"
+                         - added print statements inside while loop
+                         - removed select line inside while loop
+    - test/testserver: - added here-documents for T-config, T-blacklist
+                         and T-whitelist
+                       - removed command line options set in config file
+    - TiVo/README.TiVo: updated
+    - TiVo/Makefile: updated
+    - TiVo/startncid.sh: added ncid-notify module configuration
+                         changed logic for starting a module
+    - TiVo/stopncid.sh: updated list of programs to stop, and comments
+    - TiVo/ncid-tivo.sh: moved from modules/
+    - TiVo/ncid-tivo.conf: new
+    - TiVo/ncid-tivo.1: moved from man/
+    - tools/Makefile: updated
+    - tools/README.tools: updated
+    - Win/ncid.nsi: updated
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 27 Oct 2012 13:25:43 +0200
+
 ncid (0.84-1~getdeb1) precise; urgency=low
 
   * New upstream version

@@ -21,10 +21,6 @@ MODULE=ncid-mythtv
 DAEMON=/usr/bin/$NAME
 PIDFILE=/var/run/$MODULE.pid
 SCRIPTNAME=/etc/init.d/$MODULE
-MythMsg=-M
-
-ConfigDir=/etc/ncid
-ConfigFile=$ConfigDir/ncidmodules.conf
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
@@ -32,10 +28,7 @@ ConfigFile=$ConfigDir/ncidmodules.conf
 # Read configuration variable file if it is present
 [ -r /etc/default/$MODULE ] && . /etc/default/$MODULE
 
-# source config file
-[ -f $ConfigFile ] && . $ConfigFile
-
-DAEMON_ARGS="--no-gui -p $PIDFILE $MythMsg -P $MODULE"
+DAEMON_ARGS="--no-gui -p $PIDFILE -P $MODULE"
 
 # Load the VERBOSE setting and other rcS variables
 [ -f /etc/default/rcS ] && . /etc/default/rcS
