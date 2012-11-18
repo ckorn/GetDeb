@@ -1,0 +1,4 @@
+version=3
+opts="uversionmangle=s/_/\./g" \
+http://www.jgoodies.com/downloads/jdiskreport/ \
+    (?:.*/)?jdiskreport-([\d_]+)\.zip

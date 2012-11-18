@@ -1,11 +1,3 @@
 #!/usr/bin/make -f
-version=1.3.2
 %:
-	dh $@
-
-override_dh_auto_build:
-	unzip jdiskreport-$(version).zip
-	mv jdiskreport-$(version) jdiskreport
-
-override_dh_auto_clean:
-	rm -rf jdiskreport
+	dh $@ 
