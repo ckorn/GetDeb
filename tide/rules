@@ -1,3 +1,14 @@
 #!/usr/bin/make -f
 %:
 	dh $@
+
+override_dh_auto_clean:
+	find . -name "*.class" -delete
+
+override_dh_auto_build:
+	javac tide/Main.java
+
+override_dh_install:
+	dh_install
+	find debian/tide -type f -name "*.java" -delete
+	find debian/tide -type d -empty -delete
