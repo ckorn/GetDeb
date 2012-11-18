@@ -1,3 +1,14 @@
+invulgotracker (1.10-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - Fixed non-threadsafe directory read.
+      (Balance now works always).
+    - Added report for balance.
+    - Added ar.po and es_CL.po from translators. Also removed .png
+      extension from desktop.in as per request.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Nov 2012 22:47:36 +0100
+
 invulgotracker (0.61-1~getdeb1) karmic; urgency=low
 
   * Initial release (LP: #491674)
