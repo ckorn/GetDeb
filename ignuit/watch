@@ -1,0 +1,3 @@
+version=3
+http://homepages.ihug.co.nz/~trmusson/programs.html \
+     (?:.*/)?ignuit-([\d\.]+)\.tar\.(?:gz|bz2|xz)

@@ -2,17 +2,25 @@ Source: ignuit
 Section: misc
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50), autotools-dev,
- libglib2.0-dev, libgnomeui-dev, libgconf2-dev,
- libglade2-dev, libgtk2.0-dev, libxslt1-dev,
- libgstreamer0.10-dev, pkg-config, gnome-doc-utils,
- rarian-compat
-Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libglib2.0-dev,
+               libgnomeui-dev,
+               libgconf2-dev,
+               libglade2-dev,
+               libgtk2.0-dev,
+               libxslt1-dev,
+               libgstreamer0.10-dev,
+               pkg-config,
+               gnome-doc-utils,
+               rarian-compat
+Standards-Version: 3.9.3
 Homepage: http://homepages.ihug.co.nz/~trmusson/programs.html#ignuit
 
 Package: ignuit
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Memorization aid based on the Leitner flash card system
  Ignuit is a memorization aid based on the Leitner flash card system.
  .
