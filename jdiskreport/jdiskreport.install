@@ -1,3 +1,3 @@
-jdiskreport/*.jar usr/lib/jdiskreport
-debian/scripts/jdiskreport usr/bin
-debian/jdiskreport.desktop usr/share/applications
+*.jar				usr/share/jdiskreport
+debian/scripts/jdiskreport	usr/bin
+debian/jdiskreport.desktop	usr/share/applications

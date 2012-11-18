@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar /usr/lib/jdiskreport/jdiskreport*.jar
+java -jar /usr/share/jdiskreport/jdiskreport*.jar
