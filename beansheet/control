@@ -2,14 +2,16 @@ Source: beansheet
 Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50)
-Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
 Homepage: http://sourceforge.net/projects/bsheet/
 
 Package: beansheet
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-common | java-common,
- fontconfig
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         openjdk-6-jre | sun-java6-jre | java2-common | java-common,
+         fontconfig
 Description: Java spreadsheet
  Bean Sheet is an interpreted Java spreadsheet. At its core is
  Bean Shell, an open source Java interpreter. The potential of
