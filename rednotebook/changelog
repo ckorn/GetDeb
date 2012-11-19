@@ -1,3 +1,15 @@
+rednotebook (1.6.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Add option for automatically switching between
+      edit and preview mode to preferences.
+    * Since debian doesn't have a python2 symlink,
+      try to run python2.7 and python2.6 in the run script.
+    * Use PNG image in about dialog
+      (SVG support is broken in Windows version).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 19 Nov 2012 18:46:40 +0100
+
 rednotebook (1.6.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
