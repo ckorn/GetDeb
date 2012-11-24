@@ -1,11 +1,3 @@
-# Compulsory line, this is a version 3 file
 version=3
-
 opts=downloadurlmangle=s#.*(yad-([\d.]+)\.tar\.xz).*#http://yad.googlecode.com/files/$1#,filenamemangle=s#.*(yad-([\d.]+)\.tar\.xz).*#$1# \
     http://code.google.com/p/yad/downloads/list ^.*detail\?name=yad-([\d.]+)\.tar\.xz.*
-
-#opts=downloadurlmangle=s#.*(yad-([\d.]+)\.tar\.bz2).*#http://yad.googlecode.com/files/$1#,filenamemangle=s#.*(yad-([\d.]+)\.tar\.bz2).*#$1# \
-#    http://code.google.com/p/yad/downloads/list ^.*detail\?name=yad-([\d.]+)\.tar\.bz2.*
-
-#http://code.google.com/p/yad/downloads/list http://yad.googlecode.com/files/yad-(.*)\.tar\.bz2
-

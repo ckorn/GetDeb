@@ -1,3 +1,19 @@
+yad (0.18.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - add notebook dialog
+    - add --button-layout option
+    - use markup for bar labels in multiprogress dialog
+    - make --align works for multi-progress too
+    - fix --geometry behavior
+    - fix wrap for multiline text fields in form dialog
+    - add radio and hidden column types in list dialog
+    - add @disabled@ value to form dialog
+    - add precisions to form and entry numeric fields
+    - add --listen option to list and text dialogs
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 24 Nov 2012 13:10:14 +0100
+
 yad (0.17.1.1-1~getdeb1) oneiric; urgency=low
 
   * New upstream version
