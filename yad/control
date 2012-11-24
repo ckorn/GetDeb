@@ -2,15 +2,24 @@ Source: yad
 Section: x11
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50), autotools-dev,
- mime-support, gettext, intltool, libgtk2.0-dev, libcroco3,
- libxml-parser-perl, libxml2, libexpat1, gawk
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               mime-support,
+               gettext,
+               intltool,
+               libgtk2.0-dev,
+               libcroco3,
+               libxml-parser-perl,
+               libxml2,
+               libexpat1,
+               gawk
+Standards-Version: 3.9.3
 Homepage: http://code.google.com/p/yad/
 
 Package: yad
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Yet Another Dialog - dialogs for shell
  Yad (yet another dialog) is a fork of Zenity with many improvements, such
  as custom buttons, additional dialogs, pop-up menu in notification icon
