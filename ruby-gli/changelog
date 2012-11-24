@@ -1,3 +1,9 @@
+ruby-gli (2.5.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 24 Nov 2012 13:08:08 +0100
+
 ruby-gli (2.4.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
