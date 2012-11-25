@@ -1,0 +1,6 @@
+#!/usr/bin/make -f
+%:
+	dh $@ 
+
+override_dh_auto_clean:
+	# Fails because of missing Makefile.in.in in po/

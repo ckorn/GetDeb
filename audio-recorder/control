@@ -1,0 +1,40 @@
+Source: audio-recorder
+Section: utils
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               gettext,
+               intltool,
+               pkg-config,
+               libgtk-3-dev,
+               libglib2.0-dev,
+               libgstreamer1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libgnome-media-profiles-dev,
+               libpulse-dev,
+               libdbus-1-dev,
+               libdbus-glib-1-dev,
+               libappindicator3-dev,
+               libgconf2-dev
+Standards-Version: 3.9.3
+Homepage: https://launchpad.net/audio-recorder
+
+Package: audio-recorder
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         pulseaudio,
+         gstreamer1.0-pulseaudio,
+         libgnome-media-profiles-3.0-0,
+         gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good
+# Note: MP3-support requires gstreamer1.0-plugins-ugly packages.
+Description: Audio recorder for GNOME and Unity Desktops.
+ This program allows you to record your favourite music or audio to a file. 
+ It can record audio from your system soundcard, microphones, browsers and 
+ webcams. Put simply; if it plays out of your loudspeakers you can record it. 
+ This program has a timer that can start, stop or pause recording on certain 
+ conditions such as audio level, file size and clock time. This recorder can 
+ automatically record your Skype calls. It supports several audio (output) 
+ formats such as OGG audio, Flac, MP3 and WAV.

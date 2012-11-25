@@ -1,0 +1,170 @@
+audio-recorder (0.9.8-1~getdeb2~quantal) quantal; urgency=low
+
+  * Upload to GetDeb (LP: #1074293)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 25 Nov 2012 12:43:19 +0100
+
+audio-recorder (0.9.8~quantal) quantal; urgency=low
+
+  * Version 0.9.8
+  * Fixed bug #1074928. Audio-recorder could not find configuration values (in dconf) and exited. 
+
+ -- moma <osmoma@gmail.com>  Sun, 04 Nov 2012 10:00:00  +0200
+
+audio-recorder (0.9.7~quantal) quantal; urgency=low
+
+  * Version 0.9.7
+  * A.r will now remember lastly used media-players (dbus-player.c).
+  * New/changed key in data/org.gnome.audio-recorder.gschema.xml.
+
+ -- moma <osmoma@gmail.com>  Thu, 28 Oct 2012 10:00:00  +0200
+
+audio-recorder (0.9.6~quantal) quantal; urgency=low
+
+  * Version 0.9.6
+
+ -- moma <osmoma@gmail.com>  Fri, 19 Oct 2012 14:00:00  +0200
+
+audio-recorder (0.9.5~quantal) quantal; urgency=low
+
+  * Version 0.9.5
+  * Moving to Gstreamer 1.0.
+
+ -- moma <osmoma@gmail.com>  Fri, 19 Oct 2012 10:00:00  +0200
+
+audio-recorder (0.9.4~quantal) quantal; urgency=low
+
+  * Version 0.9.4
+  * Removed remaining deprecated functions from the code. Full GTK3 support.
+
+ -- moma <osmoma@gmail.com>  Mon, 01 Oct 2012 10:00:00  +0200
+
+audio-recorder (0.9.3~quantal) quantal; urgency=low
+
+  * Version 0.9.3
+  * Upgrade for Ubuntu 12.10 and F18. Improved timer and VAD-modules. Better gst-pipeline.
+
+ -- moma <osmoma@gmail.com>  Sun, 30 Sep 2012 10:00:00  +0200
+
+audio-recorder (0.9.1~precise) precise; urgency=low
+
+  * Version 0.9.1
+  * Improved MPRIS2 interface. VLC media player should now work with ar. 
+
+ -- moma <osmoma@gmail.com>  Thu, 26 Apr 2012 10:00:00  +0200
+
+audio-recorder (0.9~precise) precise; urgency=low
+
+  * Version 0.9
+  * MPRIS2 compliant media-player interface (dbus-mpris2.c)
+  * Removed fixed icons. Icons are now loaded from the current theme.  
+
+ -- moma <osmoma@gmail.com>  Sat, 22 Apr 2012 10:00:00  +0200
+
+audio-recorder (0.8.2~precise) precise; urgency=low
+
+  * Version 0.8.2
+  * Set right version number in .deb package.
+
+ -- moma <osmoma@gmail.com>  Mon, 04 Apr 2012 10:00:00  +0200
+
+audio-recorder (0.8.1~precise) precise; urgency=low
+
+  * Version 0.8.1
+  * Updated timer-syntax.html.
+
+ -- moma <osmoma@gmail.com>  Mon, 02 Apr 2012 11:00:00  +0200
+
+audio-recorder (0.8~precise) precise; urgency=low
+
+  * Version 0.8
+  * New, improved widget for the level bar.
+
+ -- moma <osmoma@gmail.com>  Mon, 02 Apr 2012 10:00:00  +0200
+
+audio-recorder (0.7~precise) precise; urgency=low
+
+  * Version 0.7
+  * Updated code for Fedora 16 and Ubuntu 12.04.
+  * Uses now GTK 3 libraries.
+
+ -- moma <osmoma@gmail.com>  Fri, 30 Mar 2012 08:00:00  +0200
+
+audio-recorder (0.6.2~oneiric) oneiric; urgency=low
+
+  * Version 0.6.2
+  * Fixing typo in debian/control file.
+  * Needs libappindicator3-dev instead of libappindicator-dev.
+
+ -- moma <osmoma@gmail.com>  Mon, 26 Sep 2011 16:00:00  +0200
+
+audio-recorder (0.6.1~oneiric) oneiric; urgency=low
+
+  * Version 0.6.1
+  * Fixing debian/control file.
+  * It seems that "libgnome-media-profiles-dev" (in Ubuntu 11.10 beta) still requires the "libgconf2-dev" package.
+  * I hope they will remove this dependency. But for now, add libgconf2-dev.
+
+ -- moma <osmoma@gmail.com>  Mon, 26 Sep 2011 15:00:00  +0200
+
+audio-recorder (0.6~oneiric) oneiric; urgency=low
+
+  * 26.september.2011 Version 0.6.
+  * Ported this application to GTK 3/GDK 3.
+  * Using now GSettings (and dconf) instead of GConf2.
+
+ -- moma <osmoma@gmail.com>  Mon, 26 Sep 2011 12:00:00  +0200
+
+audio-recorder (0.5.1~oneiric) oneiric; urgency=low
+
+  * 19.september.2011 Version 0.5.1.
+  * Small bug-fixes and changes in version 0.5.
+
+ -- moma <osmoma@gmail.com>  Mon, 19 Sep 2011 15:30:00  +0200
+
+audio-recorder (0.5~oneiric) oneiric; urgency=low
+
+  * 18.september.2011 Version 0.5
+  * Added simple DBus-service so recorder can be controlled from command line or other applications.
+  * See audio-recorder --help.
+  * Added support for Unity's launcher icon. audio-recorder.desktop file contains now static menu items 
+  * for "start recording", "stop recording", "pause" and "show window".
+
+ -- moma <osmoma@gmail.com>  Sun, 18 Sep 2011 23:10:00  +0200
+
+audio-recorder (0.4.4~maverick) maverick; urgency=low
+
+  * 21.march.2011 Version 0.4.4
+  * "About..." menu does not work right if started from AppIndicator (systray) menu.
+  * Hide "About..." menu if AppIndicators library present.
+
+ -- moma <osmoma@gmail.com>  Mon, 21 Mar 2011 10:00:00  +0200
+
+audio-recorder (0.4.1~natty) natty; urgency=low
+
+  * 19.march.2011 Version 0.4.1
+  * Removed package requirement (libappindicator-dev) from Ubuntu 10.10.
+
+ -- moma <osmoma@gmail.com>  Sat, 19 Mar 2011 14:04:15  +0200
+
+audio-recorder (0.4~natty) natty; urgency=low
+
+  * 18.march.2011 Version 0.4.
+  * Ability to record from multiple devices simultaneously, to a single file.
+
+ -- moma <osmoma@gmail.com>  Thu, 18 Mar 2011 14:04:15  +0200
+
+audio-recorder (0.3~natty) natty; urgency=low
+
+  * 08.feb.2011 Version 0.3.
+  * Renamed rec-applet to audio-recorder.
+  * Added new features.
+
+ -- moma <osmoma@gmail.com>  Tue, 05 Oct 2010 10:59:32  +0200
+
+rec-applet (0.2-0~maverick) maverick; urgency=low
+
+  * Initial Release.
+
+ -- moma <osmoma@gmail.com>  Thu, 17 Aug 2010 08:00:00 +0200
+
