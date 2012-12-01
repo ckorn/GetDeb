@@ -12,7 +12,8 @@ Homepage: http://www.rockbox.org
 
 Package: rbutil
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Rockbox installation utility
  This package contains the rockbox installation utility.
 
@@ -20,7 +21,8 @@ Package: rbutil-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: ${misc:Depends}, rbutil (= ${binary:Version})
+Depends: ${misc:Depends},
+         rbutil (= ${binary:Version})
 Description: Rockbox installation utility (debug package)
  This package contains the rockbox installation utility.
  .
