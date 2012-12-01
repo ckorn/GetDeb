@@ -1,3 +1,26 @@
+fotoxx (12.12-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + New false color tool: gradually shift selected colors to other colors.
+    + Slide Show: save selected images as a collection. Modify and re-use.
+    + Thumbnail gallery window now suppresses hidden subdirectories.
+    + Minor UI improvements for geotag dialogs using the world map.
+    + Select Area: additional selection method can speed-up some tasks.
+    + Paint Pixels: minor UI change to better conform with common practice.
+    + Batch convert/resize/move: optional resize, optional delete originals.
+    + Batch Rename: sequence number can be embedded anywhere in the base
+      name.
+    + New right-click menu convenience tools: rename, copy, move, trash ...
+    + Translation (.po) files are compressed, reducing package size 0.7 MB.
+    + Bugfix: Slide Show omitted file versions selected out of sequence.
+    + Bugfix: gallery file chooser: shift+click was sometimes ignored.
+    + Bugfix: Sync Files memory leak (significant for huge image library).
+    + Bugfix: EXIF edit history was not complete for re-edited images.
+    + Bugfix: Select Area finish failed if window auto focus from mouse.
+    + Bugfix: incorrect scaling of 16-bit PNG files.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Dec 2012 16:53:52 +0100
+
 fotoxx (12.11-1~getdeb1) precise; urgency=low
 
   * New upstream version
