@@ -1,3 +1,20 @@
+wxhexeditor (0.21-1~getdeb1) precise; urgency=low
+
+  [ Unit 193 ]
+  * New upstream version
+    * Device and Partition Backup/Restore and Erase tools.
+    * Customizeable hex panel formatting.
+    * Customizeable colours!
+    * Linux Process Memory Read/Write access.
+    * MultiLocale support with Turkish Language
+    * Options Panel
+    * Fixed Hex control input
+
+  [ Christoph Korn ]
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 04 Feb 2013 20:47:35 +0100
+
 wxhexeditor (0.20-1~getdeb1) lucid; urgency=low
 
   * New upstream version

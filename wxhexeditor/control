@@ -2,14 +2,19 @@ Source: wxhexeditor
 Section: editors
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50~), wx2.8-headers,
- libwxbase2.8-dev, libwxgtk2.8-dev, libtool, wx-common
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9),
+               wx2.8-headers,
+               libwxbase2.8-dev,
+               libwxgtk2.8-dev,
+               libtool,
+               wx-common
+Standards-Version: 3.9.3
 Homepage: http://sourceforge.net/projects/wxhexeditor
 
 Package: wxhexeditor
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Hex editor for massive files
  wxHexEditor is another Hex Editor, build because
  of there is no good hex editor for Linux system,

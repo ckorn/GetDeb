@@ -1,8 +1,8 @@
 Encoding is deprecated.
-Index: wxhexeditor-0.11/resources/wxHexEditor.desktop
+Index: wxhexeditor-0.21/resources/wxHexEditor.desktop
 ===================================================================
---- wxhexeditor-0.11.orig/resources/wxHexEditor.desktop	2011-07-01 22:48:12.223565861 +0200
-+++ wxhexeditor-0.11/resources/wxHexEditor.desktop	2011-07-01 22:48:18.043565861 +0200
+--- wxhexeditor-0.21.orig/resources/wxHexEditor.desktop	2013-02-04 20:42:45.509991839 +0100
++++ wxhexeditor-0.21/resources/wxHexEditor.desktop	2013-02-04 20:44:20.361989016 +0100
 @@ -1,6 +1,5 @@
  [Desktop Entry]
  Version=v1.0
