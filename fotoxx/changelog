@@ -1,3 +1,67 @@
+fotoxx (13.02-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    2013 Feb 01  v.13.02
+    + New: color space conversion via LCMS (e.g. Adobe RGB <--> sRGB).
+    + New: flatten a photo of a book page, stretching the print where needed.
+    + New art function: transform a photo into a cartoon-like drawing.
+    + Image date/time in the search index has 1 second resolution instead of 
+      1 day (index re-synch is required, which may need some time).
+    + Gallery view can be sorted by file name, file mod date, or photo date 
+      (from EXIF). Displayed date is determined by the sort.
+    + RAW files converted to tiff/png/jpeg retain all available metadata.
+    + Brightness distribution graph allows selection of the colors to show, 
+      and reflects only the visible area of a zoomed image.
+    + First startup after installing a new release shows the release notes
+      in a popup window, and keyboard shortcut differences are notified.
+    + The edit function summary table and other small help files can be 
+      viewed in the locale language if translations are available.
+    + The GUI translation method was slightly simplified, and the guide 
+      document "translations" was revised accordingly.
+    + Small popup texts ("tips") go away by themselves after a few seconds.
+    + Bugfix: PNG images with 16-bit color were being written with the bytes 
+      swapped, making them incompatible with Gimp and other editors.
+    + Bugfix: geotag search for city/country was not working if latitude
+      and longitude were left at "null" (i.e. values never input). 
+    + Bugfix: Open RAW from a gallery thumbnail left popup permanently open.
+    + Bugfix: Window width sometimes impossible to reduce without restart.
+
+    2013.01.11  v.13.01.2
+    + The Dutch translation was updated.
+    + Bugfix: If file sync is cancelled it may be impossible to quit. 
+
+    2013.01.03  v.13.01.1
+    + Bugfix: The Grid Lines menu and keyboard toggle was not working.
+
+    2013.01.01  v.13.01
+    + The French, Catalan and Netherlands translations were updated.
+    + Vertical menu/toolbar option for better utilization of wide monitors.
+    + Gallery view: image size and date were added to the view. 
+    + Gallery view: mouse hover on thumbnail shows a popup metadata report.
+    + Manage Collections: the UI has been reworked to make it easier to use.
+    + Icons for all edit functions were added for use in the Favorites menu.
+    + Gallery file selection: multiple images can be selected, inserted and
+      deleted, making re-arrangement of the sequence faster and easier.
+    + Favorites menu: ignore small inadvertent drags from flying mouse 
+      clicks which can cause accidental displacement of the menu entries.
+    + Brightness histogram: add "overall" graph to existing R/G/B graphs.
+    + Missing popup mini-explanations (tips) for some menus were added.
+    + Bugfix: some metadata functions crashed if index file sync disabled.
+
+    2012.12.20  v.12.12.2
+    + Bugfix: geotag latitude/longitude fractions were being truncated for 
+      locales using a comma decimal point.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Feb 2013 22:31:51 +0100
+
+fotoxx (12.12.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Spanish translation updated.
+    + Russian translation updated.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 04 Dec 2012 19:11:13 +0100
+
 fotoxx (12.12-1~getdeb1) precise; urgency=low
 
   * New upstream version

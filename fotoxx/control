@@ -6,6 +6,7 @@ Original-Maintainer: Santiago Torres Batan <santi73@gmail.com>
 Build-Depends: debhelper (>= 9),
                libgtk-3-dev,
                libtiff4-dev,
+               liblcms2-dev,
                xdg-utils
 Standards-Version: 3.9.3
 Homepage: http://kornelix.squarespace.com/downloads/
@@ -15,6 +16,7 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          libimage-exiftool-perl,
+         ufraw,
          ufraw-batch,
          xdg-utils,
          dcraw

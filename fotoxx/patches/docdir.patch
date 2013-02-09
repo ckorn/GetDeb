@@ -1,9 +1,9 @@
 We put the documentation in an own directory.
-Index: fotoxx-12.12/zfuncs.cc
+Index: fotoxx-13.02/zfuncs.cc
 ===================================================================
---- fotoxx-12.12.orig/zfuncs.cc	2012-12-01 14:22:24.000000000 +0100
-+++ fotoxx-12.12/zfuncs.cc	2012-12-01 16:59:21.162587141 +0100
-@@ -3279,7 +3279,7 @@
+--- fotoxx-13.02.orig/zfuncs.cc	2013-02-06 14:21:41.000000000 +0100
++++ fotoxx-13.02/zfuncs.cc	2013-02-08 22:33:35.146420952 +0100
+@@ -3560,7 +3560,7 @@
     strncatv(zdatadir,199,work,"/share/",zappname,"/data",null);            //  /prefix/share/appname/data
     strncatv(zicondir,199,work,"/share/",zappname,"/icons",null);           //  /prefix/share/appname/icons
     strncatv(zlocalesdir,199,work,"/share/",zappname,"/locales",null);      //  /prefix/share/appname/locales
