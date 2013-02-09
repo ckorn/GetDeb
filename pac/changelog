@@ -1,3 +1,38 @@
+pac (4.5.0.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - 4.5.0.3:
+    . Another modified installation code to deal with Vte 0.09 and 0.10
+    versions
+
+    - 4.5.0.2:
+    . Added "clipboard redirection" for "xfreerdp" connection method
+    . Modified installation code to deal with Vte 0.09 and 0.10 versions
+    . Fixed a bug that affected copy/pasting multiple nodes more than once
+    . Fixed a bug that made PAC die whe "Restar ALL terminals" was pressed on
+    PCC and some terminals where already disconnected
+    . Minor fixes
+
+    - 4.5.0.1:
+    . Added an option under "Preferences" -> "Terminal Options" -> "Look and
+    Feel" to allow hidding the bottom status bar
+    . Removed PAC main's bottom status bar ("too" many pixels just to know
+    how many terminals are open ;)
+    . Fixed a security bug that prevented using more than 8 characters for
+    PAC "lock/unlock GUI" feature. After update, *YOU NEED TO REACTIVATE THIS
+    FUNCTIONALITY* in order to use it again (sorry for this...)
+    . Fixed a bug that prevented saving confgs if "Infer from KeePass" is
+    checked but no username/password was introduced
+    . Fixed a bug that prevented the keyboard focus from being setup on
+    focused tabs
+    . Fixed a bug that prevented removing a cluster
+    . Added the possibility to temporary change "LOCAL - SHELL" label
+    (right-click mouse menu over terminao)
+    . Some aesthetic code changes
+    . Some minor code changes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Feb 2013 22:55:07 +0100
+
 pac (4.5-1~getdeb1) precise; urgency=low
 
   * New upstream version
