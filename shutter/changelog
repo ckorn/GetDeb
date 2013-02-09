@@ -1,3 +1,25 @@
+shutter (0.90-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+  * Fixed bugs / minor improvements
+    -- LP: #1035259
+       [No way to activate the main window when using the appindicator]
+    -- LP: #1081917
+       [Quicklist no more working]
+    -- LP: #1083033
+       [Needs a high contrast app icon]
+    -- LP: #1083586
+       [Remove keybinding code]
+    -- LP: #1083588
+       [Remove Simple Selection Tool]
+    -- LP: #1087367
+       [File extension .png]
+    -- LP: #1092054
+       [desktop-file-validate complains again]
+  * updated translations
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Feb 2013 22:23:11 +0100
+
 shutter (0.89.1-1~getdeb1) precise; urgency=low
 
   * New upstream version

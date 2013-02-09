@@ -5,8 +5,6 @@ Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.3
 Homepage: http://shutter-project.org/
-Vcs-Git: git://git.debian.org/git/collab-maint/shutter.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/shutter.git;a=summary
 
 Package: shutter
 Architecture: all
