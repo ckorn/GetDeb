@@ -14,7 +14,8 @@ LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 config.status: configure
 	dh_testdir
 	rm -rf .pc
-	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" ./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --with-help-dir=\$${prefix}/share/gnome/help --enable-libparted-dmraid
+	CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" ./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) \
+	  --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --with-help-dir=\$${prefix}/share/gnome/help --enable-libparted-dmraid
 
 build: build-arch build-indep
 build-arch: build-stamp
@@ -55,7 +56,7 @@ binary-arch: build install
 	dh_install
 	dh_link
 	cp debian/gparted.xpm debian/gparted/usr/share/pixmaps
-	# use translations of availible
+	# use translations if available
 	if dh -l | grep translations ; then dh_translations ; fi
 	dh_strip
 	dh_compress
