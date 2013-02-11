@@ -2,13 +2,15 @@ Source: abcl
 Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50)
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
 Homepage: http://common-lisp.net/project/armedbear
 
 Package: abcl
 Architecture: all
-Depends: ${misc:Depends}, openjdk-6-jre | sun-java6-jre, fontconfig
+Depends: ${misc:Depends},
+         openjdk-6-jre | sun-java6-jre,
+         fontconfig
 Description: Common Lisp on the JVM
  ABCL is a full implementation of the Common Lisp
  language featuring both an interpreter and a compiler,
