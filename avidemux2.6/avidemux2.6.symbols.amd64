@@ -42,9 +42,11 @@ libADM_UIGtk6.so avidemux2.6 #MINVER#
  _Z17gtkDestroyBitrateP7diaElem@Base 1:2.6.0
  _Z17gtkDestroyIntegerP7diaElem@Base 1:2.6.0
  _Z17gtkDestroyUSliderP7diaElem@Base 1:2.6.0
+ _Z18gtkCreateTimeStampPjPKcjj@Base 1:2.6.1
  _Z18gtkCreateToggleIntPjPKcPiS1_iiS1_@Base 1:2.6.0
  _Z18gtkDestroyUIntegerP7diaElem@Base 1:2.6.0
  _Z19gtkCreateToggleUintPjPKcS_S1_jjS1_@Base 1:2.6.0
+ _Z19gtkDestroyTimeStampP7diaElem@Base 1:2.6.1
  _Z19gtkDestroyToggleIntP7diaElem@Base 1:2.6.0
  _Z19gtk_register_dialogP10_GtkWidget@Base 1:2.6.0
  _Z20gtkCreateMenuDynamicPjPKcjPP19diaMenuEntryDynamicS1_@Base 1:2.6.0
@@ -230,6 +232,14 @@ libADM_UIGtk6.so avidemux2.6 #MINVER#
  _ZN14ADM_GtkFactory16diaElemDirSelectD0Ev@Base 1:2.6.0
  _ZN14ADM_GtkFactory16diaElemDirSelectD1Ev@Base 1:2.6.0
  _ZN14ADM_GtkFactory16diaElemDirSelectD2Ev@Base 1:2.6.0
+ _ZN14ADM_GtkFactory16diaElemTimeStamp17getRequiredLayoutEv@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStamp5getMeEv@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStamp5setMeEPvS1_j@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStampC1EPjPKcjj@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStampC2EPjPKcjj@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStampD0Ev@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStampD1Ev@Base 1:2.6.1
+ _ZN14ADM_GtkFactory16diaElemTimeStampD2Ev@Base 1:2.6.1
  _ZN14ADM_GtkFactory16diaElemToggleInt17getRequiredLayoutEv@Base 1:2.6.0
  _ZN14ADM_GtkFactory16diaElemToggleInt5getMeEv@Base 1:2.6.0
  _ZN14ADM_GtkFactory16diaElemToggleInt5setMeEPvS1_j@Base 1:2.6.0
@@ -353,6 +363,7 @@ libADM_UIGtk6.so avidemux2.6 #MINVER#
  _ZTIN14ADM_GtkFactory14diaElemUSliderE@Base 1:2.6.0
  _ZTIN14ADM_GtkFactory15diaElemUIntegerE@Base 1:2.6.0
  _ZTIN14ADM_GtkFactory16diaElemDirSelectE@Base 1:2.6.0
+ _ZTIN14ADM_GtkFactory16diaElemTimeStampE@Base 1:2.6.1
  _ZTIN14ADM_GtkFactory16diaElemToggleIntE@Base 1:2.6.0
  _ZTIN14ADM_GtkFactory17diaElemToggleUintE@Base 1:2.6.0
  _ZTIN14ADM_GtkFactory18diaElemMenuDynamicE@Base 1:2.6.0
@@ -385,6 +396,7 @@ libADM_UIGtk6.so avidemux2.6 #MINVER#
  _ZTSN14ADM_GtkFactory14diaElemUSliderE@Base 1:2.6.0
  _ZTSN14ADM_GtkFactory15diaElemUIntegerE@Base 1:2.6.0
  _ZTSN14ADM_GtkFactory16diaElemDirSelectE@Base 1:2.6.0
+ _ZTSN14ADM_GtkFactory16diaElemTimeStampE@Base 1:2.6.1
  _ZTSN14ADM_GtkFactory16diaElemToggleIntE@Base 1:2.6.0
  _ZTSN14ADM_GtkFactory17diaElemToggleUintE@Base 1:2.6.0
  _ZTSN14ADM_GtkFactory18diaElemMenuDynamicE@Base 1:2.6.0
@@ -417,6 +429,7 @@ libADM_UIGtk6.so avidemux2.6 #MINVER#
  _ZTVN14ADM_GtkFactory14diaElemUSliderE@Base 1:2.6.0
  _ZTVN14ADM_GtkFactory15diaElemUIntegerE@Base 1:2.6.0
  _ZTVN14ADM_GtkFactory16diaElemDirSelectE@Base 1:2.6.0
+ _ZTVN14ADM_GtkFactory16diaElemTimeStampE@Base 1:2.6.1
  _ZTVN14ADM_GtkFactory16diaElemToggleIntE@Base 1:2.6.0
  _ZTVN14ADM_GtkFactory17diaElemToggleUintE@Base 1:2.6.0
  _ZTVN14ADM_GtkFactory18diaElemMenuDynamicE@Base 1:2.6.0

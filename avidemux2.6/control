@@ -5,52 +5,50 @@ Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Homepage: http://avidemux.org
 Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 9),
- autotools-dev (>= 20100122.1~),
- cmake,
- gettext,
- libgtk2.0-dev,
- libaften-dev,
- libmp3lame-dev,
- libmad0-dev,
- liba52-dev,
- libvorbis-dev,
- libmjpegtools-dev,
- libxvidcore-dev,
- libfreetype6-dev,
- libxml2-dev,
- libasound2-dev,
- libsdl-dev,
- libxv-dev,
- libxmu-dev,
- libfaac-dev (>= 1.24),
- libfaad-dev,
- libx264-dev (>= 1:0.svn20090222),
- libvpx-dev,
- libqt4-dev,
- libqt4-opengl-dev,
- imagemagick,
- libsamplerate0-dev,
- libdca-dev,
- libjack-dev,
- libpulse-dev,
- yasm [i386 amd64],
- xsltproc,
- libopencore-amrnb-dev,
- libopencore-amrwb-dev,
- libsqlite3-dev,
- libgtk-3-dev,
- libvdpau-dev,
- libfontconfig1-dev
-Vcs-Git: git://git.debian.org/collab-maint/avidemux.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/avidemux.git
+               autotools-dev (>= 20100122.1~),
+               cmake,
+               gettext,
+               libgtk2.0-dev,
+               libaften-dev,
+               libmp3lame-dev,
+               libmad0-dev,
+               liba52-dev,
+               libvorbis-dev,
+               libmjpegtools-dev,
+               libxvidcore-dev,
+               libfreetype6-dev,
+               libxml2-dev,
+               libasound2-dev,
+               libsdl-dev,
+               libxv-dev,
+               libxmu-dev,
+               libfaac-dev (>= 1.24),
+               libfaad-dev,
+               libx264-dev (>= 1:0.svn20090222),
+               libvpx-dev,
+               libqt4-dev,
+               libqt4-opengl-dev,
+               imagemagick,
+               libsamplerate0-dev,
+               libdca-dev,
+               libjack-dev,
+               libpulse-dev,
+               yasm [i386 amd64],
+               xsltproc,
+               libopencore-amrnb-dev,
+               libopencore-amrwb-dev,
+               libsqlite3-dev,
+               libgtk-3-dev,
+               libvdpau-dev,
+               libfontconfig1-dev
 
 Package: avidemux2.6
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
- avidemux2.6-common,
- libavidemux2.6,
- avidemux2.6-jobs,
- ${misc:Depends}
+          avidemux2.6-common,
+          libavidemux2.6,
+          avidemux2.6-jobs,
+          ${misc:Depends}
 Recommends: avidemux2.6-plugins-gtk
 Description: Free video editor - GTK version
  Avidemux is a free video editor designed for simple cutting, filtering and
@@ -63,9 +61,9 @@ Description: Free video editor - GTK version
 Package: avidemux2.6-jobs
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
- avidemux2.6-common,
- libavidemux2.6,
- ${misc:Depends}
+         avidemux2.6-common,
+         libavidemux2.6,
+         ${misc:Depends}
 Description: Free video editor - Jobs
  Avidemux is a free video editor designed for simple cutting, filtering and
  encoding tasks. It supports many file types, including AVI, DVD compatible
@@ -77,10 +75,10 @@ Description: Free video editor - Jobs
 Package: avidemux2.6-qt
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
- avidemux2.6-common,
- libavidemux2.6,
- avidemux2.6-jobs,
- ${misc:Depends}
+         avidemux2.6-common,
+         libavidemux2.6,
+         avidemux2.6-jobs,
+         ${misc:Depends}
 Recommends: avidemux2.6-plugins-qt
 Provides: avidemux
 Description: Free video editor - QT version
@@ -94,9 +92,9 @@ Description: Free video editor - QT version
 Package: avidemux2.6-cli
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
- avidemux2.6-common,
- libavidemux2.6,
- ${misc:Depends}
+         avidemux2.6-common,
+         libavidemux2.6,
+         ${misc:Depends}
 Recommends: avidemux2.6-plugins-cli
 Provides: avidemux
 Description: Free video editor - command line version
@@ -123,7 +121,7 @@ Description: Free video editor - Internationalization files
 Package: avidemux2.6-plugins-common
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
- ${misc:Depends}
+         ${misc:Depends}
 Conflicts: avidemux-plugins
 Replaces: avidemux-plugins
 Description: Free video editor - common files for plugins
@@ -138,8 +136,8 @@ Description: Free video editor - common files for plugins
 Package: avidemux2.6-plugins-gtk
 Architecture: i386 amd64 powerpc
 Depends: avidemux2.6-plugins-common,
- ${shlibs:Depends},
- ${misc:Depends}
+         ${shlibs:Depends},
+         ${misc:Depends}
 Conflicts: avidemux-plugins
 Replaces: avidemux-plugins
 Description: Free video editor - GTK plugins
@@ -153,8 +151,8 @@ Description: Free video editor - GTK plugins
 Package: avidemux2.6-plugins-qt
 Architecture: i386 amd64 powerpc
 Depends: avidemux2.6-plugins-common,
- ${shlibs:Depends},
- ${misc:Depends}
+         ${shlibs:Depends},
+         ${misc:Depends}
 Conflicts: avidemux-plugins
 Replaces: avidemux-plugins
 Description: Free video editor - Qt plugins
@@ -168,8 +166,8 @@ Description: Free video editor - Qt plugins
 Package: avidemux2.6-plugins-cli
 Architecture: i386 amd64 powerpc
 Depends: avidemux2.6-plugins-common,
- ${shlibs:Depends},
- ${misc:Depends}
+         ${shlibs:Depends},
+         ${misc:Depends}
 Conflicts: avidemux-plugins
 Replaces: avidemux-plugins
 Description: Free video editor - CLI plugins
@@ -183,7 +181,7 @@ Description: Free video editor - CLI plugins
 Package: libavidemux2.6
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
- ${misc:Depends}
+         ${misc:Depends}
 Replaces: avidemux (<= 1:2.5.0-0.0ubuntu3)
 Recommends: mjpegtools, twolame, lame
 Description: Free video editor - shared libraries
