@@ -10,17 +10,22 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  av_bitstream_filter_filter@LIBAVCODEC_54 1:2.6.0
  av_bitstream_filter_init@LIBAVCODEC_54 1:2.6.0
  av_bitstream_filter_next@LIBAVCODEC_54 1:2.6.0
+ av_codec_get_codec_descriptor@LIBAVCODEC_54 1:2.6.1
+ av_codec_get_pkt_timebase@LIBAVCODEC_54 1:2.6.1
  av_codec_is_decoder@LIBAVCODEC_54 1:2.6.0
  av_codec_is_encoder@LIBAVCODEC_54 1:2.6.0
  av_codec_next@LIBAVCODEC_54 1:2.6.0
+ av_codec_set_codec_descriptor@LIBAVCODEC_54 1:2.6.1
+ av_codec_set_pkt_timebase@LIBAVCODEC_54 1:2.6.1
+ av_copy_packet@LIBAVCODEC_54 1:2.6.1
  av_dct_calc@LIBAVCODEC_54 1:2.6.0
  av_dct_end@LIBAVCODEC_54 1:2.6.0
  av_dct_init@LIBAVCODEC_54 1:2.6.0
  av_destruct_packet@LIBAVCODEC_54 1:2.6.0
- av_destruct_packet_nofree@LIBAVCODEC_54 1:2.6.0
  av_dup_packet@LIBAVCODEC_54 1:2.6.0
  av_fast_malloc@LIBAVCODEC_54 1:2.6.0
  av_fast_padded_malloc@LIBAVCODEC_54 1:2.6.0
+ av_fast_padded_mallocz@LIBAVCODEC_54 1:2.6.1
  av_fast_realloc@LIBAVCODEC_54 1:2.6.0
  av_fft_calc@LIBAVCODEC_54 1:2.6.0
  av_fft_end@LIBAVCODEC_54 1:2.6.0
@@ -28,10 +33,18 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  av_fft_permute@LIBAVCODEC_54 1:2.6.0
  av_frame_get_best_effort_timestamp@LIBAVCODEC_54 1:2.6.0
  av_frame_get_channel_layout@LIBAVCODEC_54 1:2.6.0
+ av_frame_get_channels@LIBAVCODEC_54 1:2.6.1
+ av_frame_get_decode_error_flags@LIBAVCODEC_54 1:2.6.1
+ av_frame_get_metadata@LIBAVCODEC_54 1:2.6.1
+ av_frame_get_pkt_duration@LIBAVCODEC_54 1:2.6.1
  av_frame_get_pkt_pos@LIBAVCODEC_54 1:2.6.0
  av_frame_get_sample_rate@LIBAVCODEC_54 1:2.6.0
  av_frame_set_best_effort_timestamp@LIBAVCODEC_54 1:2.6.0
  av_frame_set_channel_layout@LIBAVCODEC_54 1:2.6.0
+ av_frame_set_channels@LIBAVCODEC_54 1:2.6.1
+ av_frame_set_decode_error_flags@LIBAVCODEC_54 1:2.6.1
+ av_frame_set_metadata@LIBAVCODEC_54 1:2.6.1
+ av_frame_set_pkt_duration@LIBAVCODEC_54 1:2.6.1
  av_frame_set_pkt_pos@LIBAVCODEC_54 1:2.6.0
  av_frame_set_sample_rate@LIBAVCODEC_54 1:2.6.0
  av_free_packet@LIBAVCODEC_54 1:2.6.0
@@ -99,6 +112,9 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avcodec_default_get_format@LIBAVCODEC_54 1:2.6.0
  avcodec_default_reget_buffer@LIBAVCODEC_54 1:2.6.0
  avcodec_default_release_buffer@LIBAVCODEC_54 1:2.6.0
+ avcodec_descriptor_get@LIBAVCODEC_54 1:2.6.1
+ avcodec_descriptor_get_by_name@LIBAVCODEC_54 1:2.6.1
+ avcodec_descriptor_next@LIBAVCODEC_54 1:2.6.1
  avcodec_encode_audio2@LIBAVCODEC_54 1:2.6.0
  avcodec_encode_audio@LIBAVCODEC_54 1:2.6.0
  avcodec_encode_subtitle@LIBAVCODEC_54 1:2.6.0
@@ -107,11 +123,14 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avcodec_fill_audio_frame@LIBAVCODEC_54 1:2.6.0
  avcodec_find_best_pix_fmt2@LIBAVCODEC_54 1:2.6.0
  avcodec_find_best_pix_fmt@LIBAVCODEC_54 1:2.6.0
+ avcodec_find_best_pix_fmt_of_2@LIBAVCODEC_54 1:2.6.1
+ avcodec_find_best_pix_fmt_of_list@LIBAVCODEC_54 1:2.6.1
  avcodec_find_decoder@LIBAVCODEC_54 1:2.6.0
  avcodec_find_decoder_by_name@LIBAVCODEC_54 1:2.6.0
  avcodec_find_encoder@LIBAVCODEC_54 1:2.6.0
  avcodec_find_encoder_by_name@LIBAVCODEC_54 1:2.6.0
  avcodec_flush_buffers@LIBAVCODEC_54 1:2.6.0
+ avcodec_free_frame@LIBAVCODEC_54 1:2.6.1
  avcodec_get_chroma_sub_sample@LIBAVCODEC_54 1:2.6.0
  avcodec_get_class@LIBAVCODEC_54 1:2.6.0
  avcodec_get_context_defaults2@LIBAVCODEC_54 1:2.6.0
@@ -147,6 +166,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avpriv_check_timecode_rate@LIBAVCODEC_54 1:2.6.0
  avpriv_copy_bits@LIBAVCODEC_54 1:2.6.0
  avpriv_copy_pce_data@LIBAVCODEC_54 1:2.6.0
+ avpriv_dca_sample_rates@LIBAVCODEC_54 1:2.6.1
  avpriv_dv_codec_profile@LIBAVCODEC_54 1:2.6.0
  avpriv_dv_frame_profile2@LIBAVCODEC_54 1:2.6.0
  avpriv_dv_frame_profile@LIBAVCODEC_54 1:2.6.0
@@ -156,8 +176,16 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avpriv_frame_rate_tab@LIBAVCODEC_54 1:2.6.0
  avpriv_framenum_to_drop_timecode@LIBAVCODEC_54 1:2.6.0
  avpriv_framenum_to_smpte_timecode@LIBAVCODEC_54 1:2.6.0
+ avpriv_h264_has_num_reorder_frames@LIBAVCODEC_54 1:2.6.1
  avpriv_init_smpte_timecode@LIBAVCODEC_54 1:2.6.0
  avpriv_lock_avformat@LIBAVCODEC_54 1:2.6.0
+ avpriv_mjpeg_bits_ac_chrominance@LIBAVCODEC_54 1:2.6.1
+ avpriv_mjpeg_bits_ac_luminance@LIBAVCODEC_54 1:2.6.1
+ avpriv_mjpeg_bits_dc_chrominance@LIBAVCODEC_54 1:2.6.1
+ avpriv_mjpeg_bits_dc_luminance@LIBAVCODEC_54 1:2.6.1
+ avpriv_mjpeg_val_ac_chrominance@LIBAVCODEC_54 1:2.6.1
+ avpriv_mjpeg_val_ac_luminance@LIBAVCODEC_54 1:2.6.1
+ avpriv_mjpeg_val_dc@LIBAVCODEC_54 1:2.6.1
  avpriv_mpa_bitrate_tab@LIBAVCODEC_54 1:2.6.0
  avpriv_mpa_decode_header@LIBAVCODEC_54 1:2.6.0
  avpriv_mpa_freq_tab@LIBAVCODEC_54 1:2.6.0
@@ -165,6 +193,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avpriv_mpeg4audio_sample_rates@LIBAVCODEC_54 1:2.6.0
  avpriv_mpegaudio_decode_header@LIBAVCODEC_54 1:2.6.0
  avpriv_mpv_find_start_code@LIBAVCODEC_54 1:2.6.0
+ avpriv_put_string@LIBAVCODEC_54 1:2.6.1
  avpriv_split_xiph_headers@LIBAVCODEC_54 1:2.6.0
  avpriv_timecode_to_string@LIBAVCODEC_54 1:2.6.0
  avpriv_toupper4@LIBAVCODEC_54 1:2.6.0
@@ -175,6 +204,8 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  ff_dct32_fixed@LIBAVCODEC_54 1:2.6.0
  ff_dct32_float@LIBAVCODEC_54 1:2.6.0
  ff_dct_common_init@LIBAVCODEC_54 1:2.6.0
+ ff_dct_encode_init@LIBAVCODEC_54 1:2.6.1
+ ff_dct_encode_init_x86@LIBAVCODEC_54 1:2.6.1
  ff_dct_end@LIBAVCODEC_54 1:2.6.0
  ff_dct_init@LIBAVCODEC_54 1:2.6.0
  ff_dct_init_mmx@LIBAVCODEC_54 1:2.6.0
@@ -191,23 +222,22 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  ff_fdct_mmx2@LIBAVCODEC_54 1:2.6.0
  ff_fdct_mmx@LIBAVCODEC_54 1:2.6.0
  ff_fdct_sse2@LIBAVCODEC_54 1:2.6.0
- ff_fft_calc_3dn2@LIBAVCODEC_54 1:2.6.0
- ff_fft_calc_3dn@LIBAVCODEC_54 1:2.6.0
- ff_fft_calc_avx@LIBAVCODEC_54 1:2.6.0
- ff_fft_calc_sse@LIBAVCODEC_54 1:2.6.0
  ff_fft_end@LIBAVCODEC_54 1:2.6.0
  ff_fft_end_fixed@LIBAVCODEC_54 1:2.6.0
  ff_fft_init@LIBAVCODEC_54 1:2.6.0
  ff_fft_init_fixed@LIBAVCODEC_54 1:2.6.0
  ff_fft_init_mmx@LIBAVCODEC_54 1:2.6.0
- ff_fft_permute_sse@LIBAVCODEC_54 1:2.6.0
  ff_find_pix_fmt@LIBAVCODEC_54 1:2.6.0
  ff_framenum_to_drop_timecode@LIBAVCODEC_54 1:2.6.0
  ff_framenum_to_smtpe_timecode@LIBAVCODEC_54 1:2.6.0
  ff_golomb_vlc_len@LIBAVCODEC_54 1:2.6.0
  ff_h264_info@LIBAVCODEC_54 1:2.6.0
  ff_idct_xvid_mmx2@LIBAVCODEC_54 1:2.6.0
+ ff_idct_xvid_mmx2_add@LIBAVCODEC_54 1:2.6.1
+ ff_idct_xvid_mmx2_put@LIBAVCODEC_54 1:2.6.1
  ff_idct_xvid_mmx@LIBAVCODEC_54 1:2.6.0
+ ff_idct_xvid_mmx_add@LIBAVCODEC_54 1:2.6.1
+ ff_idct_xvid_mmx_put@LIBAVCODEC_54 1:2.6.1
  ff_idct_xvid_sse2@LIBAVCODEC_54 1:2.6.0
  ff_idct_xvid_sse2_add@LIBAVCODEC_54 1:2.6.0
  ff_idct_xvid_sse2_put@LIBAVCODEC_54 1:2.6.0
@@ -260,6 +290,7 @@ libADM6avformat.so.54 libavidemux2.6 #MINVER#
  av_find_input_format@LIBAVFORMAT_54 1:2.6.0
  av_find_program_from_stream@LIBAVFORMAT_54 1:2.6.0
  av_find_stream_info@LIBAVFORMAT_54 1:2.6.0
+ av_fmt_ctx_get_duration_estimation_method@LIBAVFORMAT_54 1:2.6.1
  av_get_frame_filename@LIBAVFORMAT_54 1:2.6.0
  av_get_output_timestamp@LIBAVFORMAT_54 1:2.6.0
  av_get_packet@LIBAVFORMAT_54 1:2.6.0
@@ -307,11 +338,13 @@ libADM6avformat.so.54 libavidemux2.6 #MINVER#
  avformat_get_riff_audio_tags@LIBAVFORMAT_54 1:2.6.0
  avformat_get_riff_video_tags@LIBAVFORMAT_54 1:2.6.0
  avformat_license@LIBAVFORMAT_54 1:2.6.0
+ avformat_match_stream_specifier@LIBAVFORMAT_54 1:2.6.1
  avformat_network_deinit@LIBAVFORMAT_54 1:2.6.0
  avformat_network_init@LIBAVFORMAT_54 1:2.6.0
  avformat_new_stream@LIBAVFORMAT_54 1:2.6.0
  avformat_open_input@LIBAVFORMAT_54 1:2.6.0
  avformat_query_codec@LIBAVFORMAT_54 1:2.6.0
+ avformat_queue_attached_pictures@LIBAVFORMAT_54 1:2.6.1
  avformat_seek_file@LIBAVFORMAT_54 1:2.6.0
  avformat_version@LIBAVFORMAT_54 1:2.6.0
  avformat_write_header@LIBAVFORMAT_54 1:2.6.0
@@ -386,13 +419,19 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_audio_fifo_write@LIBAVUTIL_51 1:2.6.0
  av_base64_decode@LIBAVUTIL_51 1:2.6.0
  av_base64_encode@LIBAVUTIL_51 1:2.6.0
+ av_blowfish_crypt@LIBAVUTIL_51 1:2.6.1
+ av_blowfish_crypt_ecb@LIBAVUTIL_51 1:2.6.1
+ av_blowfish_init@LIBAVUTIL_51 1:2.6.1
  av_bmg_get@LIBAVUTIL_51 1:2.6.0
+ av_bprint_channel_layout@LIBAVUTIL_51 1:2.6.1
  av_bprint_chars@LIBAVUTIL_51 1:2.6.0
  av_bprint_clear@LIBAVUTIL_51 1:2.6.0
  av_bprint_finalize@LIBAVUTIL_51 1:2.6.0
  av_bprint_init@LIBAVUTIL_51 1:2.6.0
+ av_bprint_init_for_buffer@LIBAVUTIL_51 1:2.6.1
  av_bprintf@LIBAVUTIL_51 1:2.6.0
  av_calloc@LIBAVUTIL_51 1:2.6.0
+ av_channel_layout_extract_channel@LIBAVUTIL_51 1:2.6.1
  av_compare_mod@LIBAVUTIL_51 1:2.6.0
  av_compare_ts@LIBAVUTIL_51 1:2.6.0
  av_crc@LIBAVUTIL_51 1:2.6.0
@@ -402,11 +441,13 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_d2str@LIBAVUTIL_51 1:2.6.0
  av_dbl2ext@LIBAVUTIL_51 1:2.6.0
  av_dbl2int@LIBAVUTIL_51 1:2.6.0
+ av_default_get_category@LIBAVUTIL_51 1:2.6.1
  av_default_item_name@LIBAVUTIL_51 1:2.6.0
  av_des_crypt@LIBAVUTIL_51 1:2.6.0
  av_des_init@LIBAVUTIL_51 1:2.6.0
  av_des_mac@LIBAVUTIL_51 1:2.6.0
  av_dict_copy@LIBAVUTIL_51 1:2.6.0
+ av_dict_count@LIBAVUTIL_51 1:2.6.1
  av_dict_free@LIBAVUTIL_51 1:2.6.0
  av_dict_get@LIBAVUTIL_51 1:2.6.0
  av_dict_set@LIBAVUTIL_51 1:2.6.0
@@ -444,9 +485,12 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_get_bits_per_pixel@LIBAVUTIL_51 1:2.6.0
  av_get_bits_per_sample_fmt@LIBAVUTIL_51 1:2.6.0
  av_get_bytes_per_sample@LIBAVUTIL_51 1:2.6.0
+ av_get_channel_description@LIBAVUTIL_51 1:2.6.1
  av_get_channel_layout@LIBAVUTIL_51 1:2.6.0
+ av_get_channel_layout_channel_index@LIBAVUTIL_51 1:2.6.1
  av_get_channel_layout_nb_channels@LIBAVUTIL_51 1:2.6.0
  av_get_channel_layout_string@LIBAVUTIL_51 1:2.6.0
+ av_get_channel_name@LIBAVUTIL_51 1:2.6.1
  av_get_cpu_flags@LIBAVUTIL_51 1:2.6.0
  av_get_default_channel_layout@LIBAVUTIL_51 1:2.6.0
  av_get_double@LIBAVUTIL_51 1:2.6.0
@@ -463,15 +507,20 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_get_sample_fmt@LIBAVUTIL_51 1:2.6.0
  av_get_sample_fmt_name@LIBAVUTIL_51 1:2.6.0
  av_get_sample_fmt_string@LIBAVUTIL_51 1:2.6.0
+ av_get_standard_channel_layout@LIBAVUTIL_51 1:2.6.1
  av_get_string@LIBAVUTIL_51 1:2.6.0
  av_get_token@LIBAVUTIL_51 1:2.6.0
+ av_gettime@LIBAVUTIL_51 1:2.6.1
  av_image_alloc@LIBAVUTIL_51 1:2.6.0
  av_image_check_size@LIBAVUTIL_51 1:2.6.0
  av_image_copy@LIBAVUTIL_51 1:2.6.0
  av_image_copy_plane@LIBAVUTIL_51 1:2.6.0
+ av_image_copy_to_buffer@LIBAVUTIL_51 1:2.6.1
+ av_image_fill_arrays@LIBAVUTIL_51 1:2.6.1
  av_image_fill_linesizes@LIBAVUTIL_51 1:2.6.0
  av_image_fill_max_pixsteps@LIBAVUTIL_51 1:2.6.0
  av_image_fill_pointers@LIBAVUTIL_51 1:2.6.0
+ av_image_get_buffer_size@LIBAVUTIL_51 1:2.6.1
  av_image_get_linesize@LIBAVUTIL_51 1:2.6.0
  av_init_lls@LIBAVUTIL_51 1:2.6.0
  av_int2dbl@LIBAVUTIL_51 1:2.6.0
@@ -516,6 +565,7 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_opt_next@LIBAVUTIL_51 1:2.6.0
  av_opt_ptr@LIBAVUTIL_51 1:2.6.0
  av_opt_set@LIBAVUTIL_51 1:2.6.0
+ av_opt_set_bin@LIBAVUTIL_51 1:2.6.1
  av_opt_set_defaults2@LIBAVUTIL_51 1:2.6.0
  av_opt_set_defaults@LIBAVUTIL_51 1:2.6.0
  av_opt_set_dict@LIBAVUTIL_51 1:2.6.0
@@ -560,6 +610,7 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_sha_init@LIBAVUTIL_51 1:2.6.0
  av_sha_size@LIBAVUTIL_51 1:2.6.0
  av_sha_update@LIBAVUTIL_51 1:2.6.0
+ av_small_strptime@LIBAVUTIL_51 1:2.6.1
  av_solve_lls@LIBAVUTIL_51 1:2.6.0
  av_strcasecmp@LIBAVUTIL_51 1:2.6.0
  av_strdup@LIBAVUTIL_51 1:2.6.0
@@ -575,7 +626,9 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_strtok@LIBAVUTIL_51 1:2.6.0
  av_sub_q@LIBAVUTIL_51 1:2.6.0
  av_tempfile@LIBAVUTIL_51 1:2.6.0
+ av_timecode_adjust_ntsc_framenum2@LIBAVUTIL_51 1:2.6.1
  av_timecode_adjust_ntsc_framenum@LIBAVUTIL_51 1:2.6.0
+ av_timecode_check_frame_rate@LIBAVUTIL_51 1:2.6.1
  av_timecode_get_smpte_from_framenum@LIBAVUTIL_51 1:2.6.0
  av_timecode_init@LIBAVUTIL_51 1:2.6.0
  av_timecode_init_from_string@LIBAVUTIL_51 1:2.6.0
@@ -589,11 +642,16 @@ libADM6avutil.so.51 libavidemux2.6 #MINVER#
  av_tree_insert@LIBAVUTIL_51 1:2.6.0
  av_tree_node_size@LIBAVUTIL_51 1:2.6.0
  av_update_lls@LIBAVUTIL_51 1:2.6.0
+ av_usleep@LIBAVUTIL_51 1:2.6.1
  av_vlog@LIBAVUTIL_51 1:2.6.0
  av_write_image_line@LIBAVUTIL_51 1:2.6.0
+ av_xtea_crypt@LIBAVUTIL_51 1:2.6.1
+ av_xtea_init@LIBAVUTIL_51 1:2.6.1
+ avpriv_float_dsp_init@LIBAVUTIL_51 1:2.6.1
  avutil_configuration@LIBAVUTIL_51 1:2.6.0
  avutil_license@LIBAVUTIL_51 1:2.6.0
  avutil_version@LIBAVUTIL_51 1:2.6.0
+ ff_float_dsp_init_x86@LIBAVUTIL_51 1:2.6.1
  ff_get_cpu_flags_x86@LIBAVUTIL_51 1:2.6.0
  ff_inverse@LIBAVUTIL_51 1:2.6.0
  ff_log2_tab@LIBAVUTIL_51 1:2.6.0
@@ -1166,6 +1224,14 @@ libADM_coreScript.so libavidemux2.6 #MINVER#
  _ZN25ADM_scriptDFIntegerHelperD0Ev@Base 1:2.6.0
  _ZN25ADM_scriptDFIntegerHelperD1Ev@Base 1:2.6.0
  _ZN25ADM_scriptDFIntegerHelperD2Ev@Base 1:2.6.0
+ _ZN27ADM_scriptDFTimeStampHelper10getControlEv@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelper5valueEv@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelper8setValueEj@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelperC1EPKcjj@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelperC2EPKcjj@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelperD0Ev@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelperD1Ev@Base 1:2.6.1
+ _ZN27ADM_scriptDFTimeStampHelperD2Ev@Base 1:2.6.1
  _ZN29ADM_scriptDialogFactoryHelper10addControlEP22ADM_scriptDFBaseHelper@Base 1:2.6.0
  _ZN29ADM_scriptDialogFactoryHelper11getControlsEPi@Base 1:2.6.0
  _ZN29ADM_scriptDialogFactoryHelper3runEv@Base 1:2.6.0
@@ -1179,14 +1245,17 @@ libADM_coreScript.so libavidemux2.6 #MINVER#
  _ZTI22ADM_scriptDFMenuHelper@Base 1:2.6.0
  _ZTI24ADM_scriptDFToggleHelper@Base 1:2.6.0
  _ZTI25ADM_scriptDFIntegerHelper@Base 1:2.6.0
+ _ZTI27ADM_scriptDFTimeStampHelper@Base 1:2.6.1
  _ZTS22ADM_ScriptEngineLoader@Base 1:2.6.0
  _ZTS22ADM_scriptDFMenuHelper@Base 1:2.6.0
  _ZTS24ADM_scriptDFToggleHelper@Base 1:2.6.0
  _ZTS25ADM_scriptDFIntegerHelper@Base 1:2.6.0
+ _ZTS27ADM_scriptDFTimeStampHelper@Base 1:2.6.1
  _ZTV22ADM_ScriptEngineLoader@Base 1:2.6.0
  _ZTV22ADM_scriptDFMenuHelper@Base 1:2.6.0
  _ZTV24ADM_scriptDFToggleHelper@Base 1:2.6.0
  _ZTV25ADM_scriptDFIntegerHelper@Base 1:2.6.0
+ _ZTV27ADM_scriptDFTimeStampHelper@Base 1:2.6.1
 libADM_coreSocket6.so libavidemux2.6 #MINVER#
  _ZN10ADM_socket14waitForConnectEj@Base 1:2.6.0
  _ZN10ADM_socket19createBindAndAcceptEPj@Base 1:2.6.0
@@ -1492,6 +1561,14 @@ libADM_coreUI6.so libavidemux2.6 #MINVER#
  _ZN16diaElemDirSelectD0Ev@Base 1:2.6.0
  _ZN16diaElemDirSelectD1Ev@Base 1:2.6.0
  _ZN16diaElemDirSelectD2Ev@Base 1:2.6.0
+ _ZN16diaElemTimeStamp17getRequiredLayoutEv@Base 1:2.6.1
+ _ZN16diaElemTimeStamp5getMeEv@Base 1:2.6.1
+ _ZN16diaElemTimeStamp5setMeEPvS0_j@Base 1:2.6.1
+ _ZN16diaElemTimeStampC1EPjPKcjj@Base 1:2.6.1
+ _ZN16diaElemTimeStampC2EPjPKcjj@Base 1:2.6.1
+ _ZN16diaElemTimeStampD0Ev@Base 1:2.6.1
+ _ZN16diaElemTimeStampD1Ev@Base 1:2.6.1
+ _ZN16diaElemTimeStampD2Ev@Base 1:2.6.1
  _ZN16diaElemToggleInt17getRequiredLayoutEv@Base 1:2.6.0
  _ZN16diaElemToggleInt5getMeEv@Base 1:2.6.0
  _ZN16diaElemToggleInt5setMeEPvS0_j@Base 1:2.6.0
@@ -1557,6 +1634,7 @@ libADM_coreUI6.so libavidemux2.6 #MINVER#
  _ZTI15diaElemUInteger@Base 1:2.6.0
  _ZTI16DIA_encodingBase@Base 1:2.6.0
  _ZTI16diaElemDirSelect@Base 1:2.6.0
+ _ZTI16diaElemTimeStamp@Base 1:2.6.1
  _ZTI16diaElemToggleInt@Base 1:2.6.0
  _ZTI17diaElemToggleUint@Base 1:2.6.0
  _ZTI18diaElemMenuDynamic@Base 1:2.6.0
@@ -1579,6 +1657,7 @@ libADM_coreUI6.so libavidemux2.6 #MINVER#
  _ZTS15diaElemUInteger@Base 1:2.6.0
  _ZTS16DIA_encodingBase@Base 1:2.6.0
  _ZTS16diaElemDirSelect@Base 1:2.6.0
+ _ZTS16diaElemTimeStamp@Base 1:2.6.1
  _ZTS16diaElemToggleInt@Base 1:2.6.0
  _ZTS17diaElemToggleUint@Base 1:2.6.0
  _ZTS18diaElemMenuDynamic@Base 1:2.6.0
@@ -1601,6 +1680,7 @@ libADM_coreUI6.so libavidemux2.6 #MINVER#
  _ZTV15diaElemUInteger@Base 1:2.6.0
  _ZTV16DIA_encodingBase@Base 1:2.6.0
  _ZTV16diaElemDirSelect@Base 1:2.6.0
+ _ZTV16diaElemTimeStamp@Base 1:2.6.1
  _ZTV16diaElemToggleInt@Base 1:2.6.0
  _ZTV17diaElemToggleUint@Base 1:2.6.0
  _ZTV18diaElemMenuDynamic@Base 1:2.6.0
@@ -2012,7 +2092,7 @@ libADM_coreVideoEncoder6.so libavidemux2.6 #MINVER#
  _ZN26ADM_coreVideoEncoderFFmpeg12loadStatFileEPKc@Base 1:2.6.0
  _ZN26ADM_coreVideoEncoderFFmpeg13presetContextEP15FFcodecSettings@Base 1:2.6.0
  _ZN26ADM_coreVideoEncoderFFmpeg17setPassAndLogFileEiPKc@Base 1:2.6.0
- _ZN26ADM_coreVideoEncoderFFmpeg5setupE7CodecID@Base 1:2.6.0
+ _ZN26ADM_coreVideoEncoderFFmpeg5setupE9AVCodecID@Base 1:2.6.1
  _ZN26ADM_coreVideoEncoderFFmpeg6prologEP8ADMImage@Base 1:2.6.0
  _ZN26ADM_coreVideoEncoderFFmpeg9encoderMTEv@Base 1:2.6.0
  _ZN26ADM_coreVideoEncoderFFmpeg9preEncodeEv@Base 1:2.6.0

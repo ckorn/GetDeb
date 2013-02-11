@@ -1,3 +1,19 @@
+avidemux2.6 (1:2.6.1-1~getdeb2~quantal) quantal; urgency=low
+
+  * New upstream version
+    * Various improvements to MP4, FLV and MPEG-PS/TS demuxers
+    * Improved handling of input PTS and DTS
+    * Improved external audio file support
+    * Improved video seeking in editor
+    * Fixed numerous memory leaks
+    * Updated FFmpeg libraries (version 1.0.1)
+    * Restored additional x264 options
+    * Restored non-blocking drag-and-drop support for Qt interface
+    * Restored Fade to Black video filter plugin
+    * SSA video filter plugin is available again on MS Windows
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 10 Feb 2013 16:05:42 +0100
+
 avidemux2.6 (1:2.6.0-1~getdeb2~quantal) quantal; urgency=low
 
   * Rebuild against new libx264-123 version.
