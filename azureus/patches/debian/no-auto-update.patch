@@ -1,11 +1,11 @@
 Disable auto-updates of the azureus platform, since we want to use debian packages
 to manage updates instead.
 
-Index: azureus-4.8.0.0/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults.java
+Index: azureus-4.8.1.2/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults.java
 ===================================================================
---- azureus-4.8.0.0.orig/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults.java	2012-10-24 20:26:08.000000000 +0200
-+++ azureus-4.8.0.0/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults.java	2012-10-25 19:00:57.233274155 +0200
-@@ -264,9 +264,9 @@
+--- azureus-4.8.1.2.orig/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults.java	2012-12-17 23:11:16.000000000 +0100
++++ azureus-4.8.1.2/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults.java	2013-02-13 18:55:16.800393621 +0100
+@@ -268,9 +268,9 @@
  	
  	def.put("Default save path", f.getAbsolutePath());
      
@@ -18,7 +18,7 @@ Index: azureus-4.8.0.0/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults
      def.put("update.autodownload", FALSE);
  
      def.put("Send Version Info", TRUE);
-@@ -461,7 +461,7 @@
+@@ -473,7 +473,7 @@
      def.put( "locale", Locale.getDefault().toString() );
      def.put( "locale.set.complete.count", ZERO);
      def.put( "Password Confirm", null );
@@ -27,10 +27,10 @@ Index: azureus-4.8.0.0/org/gudy/azureus2/core3/config/impl/ConfigurationDefaults
      def.put( "Alert on close", FALSE );
      def.put( "diskmanager.friendly.hashchecking", FALSE );
      def.put( "diskmanager.hashchecking.smallestfirst", TRUE );    
-Index: azureus-4.8.0.0/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.java
+Index: azureus-4.8.1.2/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.java
 ===================================================================
---- azureus-4.8.0.0.orig/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.java	2012-07-12 22:33:42.000000000 +0200
-+++ azureus-4.8.0.0/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.java	2012-10-25 19:00:57.237274155 +0200
+--- azureus-4.8.1.2.orig/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.java	2012-12-17 23:10:32.000000000 +0100
++++ azureus-4.8.1.2/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.java	2013-02-13 18:55:16.800393621 +0100
 @@ -93,7 +93,7 @@
  		
  		final PluginConfig	plugin_config = plugin_interface.getPluginconfig();
@@ -49,10 +49,10 @@ Index: azureus-4.8.0.0/org/gudy/azureus2/pluginsimpl/update/PluginUpdatePlugin.j
  				
  		plugin_interface.addEventListener(
  			new PluginEventListener()
-Index: azureus-4.8.0.0/com/aelitis/azureus/ui/swt/UIConfigDefaultsSWTv3.java
+Index: azureus-4.8.1.2/com/aelitis/azureus/ui/swt/UIConfigDefaultsSWTv3.java
 ===================================================================
---- azureus-4.8.0.0.orig/com/aelitis/azureus/ui/swt/UIConfigDefaultsSWTv3.java	2012-07-12 22:37:26.000000000 +0200
-+++ azureus-4.8.0.0/com/aelitis/azureus/ui/swt/UIConfigDefaultsSWTv3.java	2012-10-25 19:00:57.237274155 +0200
+--- azureus-4.8.1.2.orig/com/aelitis/azureus/ui/swt/UIConfigDefaultsSWTv3.java	2012-12-17 23:14:16.000000000 +0100
++++ azureus-4.8.1.2/com/aelitis/azureus/ui/swt/UIConfigDefaultsSWTv3.java	2013-02-13 18:55:16.800393621 +0100
 @@ -136,7 +136,7 @@
  
  			defaults.addParameter("window.maximized", true);
