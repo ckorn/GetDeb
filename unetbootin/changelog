@@ -1,3 +1,9 @@
+unetbootin (583-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Feb 2013 20:44:51 +0100
+
 unetbootin (581-1~getdeb1) precise; urgency=low
 
   * New upstream version
