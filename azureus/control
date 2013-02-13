@@ -13,8 +13,6 @@ Build-Depends-Indep: default-jdk,
                      libswt-gtk-3-java,
                      junit
 Standards-Version: 3.9.3
-Vcs-Git: git://git.debian.org/git/pkg-java/azureus.git
-Vcs-Browser: http://git.debian.org/?p=pkg-java/azureus.git
 Homepage: http://azureus.sourceforge.net
 
 Package: azureus
