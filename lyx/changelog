@@ -1,43 +1,41 @@
-lyx (2.0.5-1~getdeb2~quantal) quantal; urgency=low
+lyx (2.0.5.1-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 14 Nov 2012 21:50:55 +0100
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Feb 2013 18:29:12 +0100
 
-lyx (2.0.4-1~getdeb2) quantal; urgency=low
+lyx (2.0.3-3) unstable; urgency=low
 
-  * Rebuild for quantal
+  * Recommend texlive-generic-recommended, since ulem.sty was moved
+    there. Closes: #671749.
+  * Add debugging symbols package lyx-dbg. Closes: #438161.
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Oct 2012 20:53:20 +0200
+ -- Per Olofsson <pelle@debian.org>  Wed, 30 May 2012 18:06:22 +0200
 
-lyx (2.0.4-1~getdeb1) precise; urgency=low
+lyx (2.0.3-2) unstable; urgency=low
 
-  * New upstream version
+  * Create /usr/share/doc/fonts-lyx before moving the readme file there.
+    Fixes FTBFS when building binary-arch.
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Jun 2012 17:16:44 +0200
+ -- Per Olofsson <pelle@debian.org>  Tue, 06 Mar 2012 17:16:26 +0100
 
-lyx (2.0.3-1~getdeb2~precise) precise; urgency=low
+lyx (2.0.3-1) unstable; urgency=low
 
-  * New upstream version
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 21:03:06 +0200
-
-lyx (2.0.2-1ubuntu2) precise; urgency=low
-
+  * New upstream release.
   * Use maintscript support in dh_installdeb rather than writing out
-    dpkg-maintscript-helper commands by hand.  We now simply Pre-Depend on a
-    new enough version of dpkg rather than using 'dpkg-maintscript-helper
-    supports' guards, leading to more predictable behaviour on upgrades.
+    dpkg-maintscript-helper commands by hand.  We now simply Pre-Depend on
+    a new enough version of dpkg rather than using
+    'dpkg-maintscript-helper supports' guards, leading to more predictable
+    behaviour on upgrades. Thanks to Colin Watson. Closes: #659721.
+  * Use debhelper v9 mode.
+  * Use xz source tarballs.
+  * Make /usr/share/lyx/scripts/listerrors executable.
+  * Rename ttf-lyx to fonts-lyx.
+  * Bump Standards-Version to 3.9.3. No changes.
+  * Make a symlink from /usr/share/bash-completion/completions/lyx to
+    the installed completion file and remove /etc/bash_completion.d/lyx.
 
- -- Colin Watson <cjwatson@ubuntu.com>  Mon, 13 Feb 2012 12:51:30 +0000
-
-lyx (2.0.2-1ubuntu1) precise; urgency=low
-
-  * Merge from Debian testing.  Remaining changes:
-    - Pre-Depends: dpkg (>= 1.15.6) for xz compression support.  Needed until
-      after Ubuntu 12.04 LTS. 
-
- -- Micah Gersten <micahg@ubuntu.com>  Fri, 23 Dec 2011 00:36:36 -0600
+ -- Per Olofsson <pelle@debian.org>  Sun, 04 Mar 2012 17:12:53 +0100
 
 lyx (2.0.2-1) unstable; urgency=low
 
@@ -47,13 +45,6 @@ lyx (2.0.2-1) unstable; urgency=low
   * Remove menu from Suggests. Closes: #647373.
 
  -- Per Olofsson <pelle@debian.org>  Sun, 11 Dec 2011 14:36:17 +0100
-
-lyx (2.0.1-1ubuntu1) precise; urgency=low
-
-  * Pre-Depends: dpkg (>= 1.15.6) for xz compression support.  Needed until
-    after Ubuntu 12.04 LTS. 
-
- -- Micah Gersten <micahg@ubuntu.com>  Mon, 17 Oct 2011 23:05:33 -0500
 
 lyx (2.0.1-1) unstable; urgency=low
 

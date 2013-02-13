@@ -1,13 +1,8 @@
 Source: lyx
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-XSBC-Original-Maintainer: Debian LyX Maintainers <pkg-lyx-devel@lists.alioth.debian.org>
 Uploaders: Per Olofsson <pelle@debian.org>, Sven Hoexter <hoexter@debian.org>
 Section: editors
 Priority: optional
-Standards-Version: 3.9.3
-Vcs-Git: git://anonscm.debian.org/pkg-lyx/lyx.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-lyx/lyx.git
-Homepage: http://www.lyx.org/
 Build-Depends: python (>= 2.6.6-3),
                debhelper (>= 9),
                libz-dev,
@@ -24,10 +19,12 @@ Build-Depends: python (>= 2.6.6-3),
                libboost-test-dev,
                pkg-config,
                tex-common
+Standards-Version: 3.9.3
+Homepage: http://www.lyx.org
 
 Package: lyx
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6)
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          lyx-common (= ${source:Version}),
@@ -35,16 +32,18 @@ Depends: ${shlibs:Depends},
 Recommends: texlive-latex-recommended,
             texlive-latex-extra,
             texlive-science,
+            texlive-generic-recommended,
             texlive-generic-extra,
             texlive-fonts-recommended,
             preview-latex-style,
-            dvipng, imagemagick,
+            dvipng,
+            imagemagick,
             psutils,
             ghostscript,
             poppler-utils,
-            ttf-lyx,
+            fonts-lyx,
             evince-gtk | pdf-viewer,
-            elyxer | tex4ht | hevea | tth | latex2html 
+            elyxer | tex4ht | hevea | tth | latex2html
 Suggests: rcs,
           dvipost,
           groff,
@@ -59,7 +58,8 @@ Suggests: rcs,
           latex2rtf,
           librsvg2-bin | inkscape,
           texlive-xetex,
-          etoolbox
+          etoolbox,
+          lyx-dbg (= ${binary:Version})
 Description: document processor
  LyX is an almost WYSIWYG-frontend for LaTeX. It makes the power and
  typesetting quality of LaTeX available for people who are used to
@@ -85,7 +85,7 @@ Description: document processor
 
 Package: lyx-common
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6)
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends},
          ${python:Depends}
 Recommends: lyx
@@ -94,13 +94,22 @@ Description: architecture-independent files for LyX
  architecture-dependent. See the lyx package for a description of LyX
  itself.
 
-Package: ttf-lyx
+Package: lyx-dbg
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         lyx (= ${binary:Version})
+Section: debug
+Priority: extra
+Description: debugging symbols for LyX
+ This package contains debugging symbols for LyX.
+
+Package: fonts-lyx
 Architecture: all
 Section: fonts
-Pre-Depends: ${misc:Pre-Depends},
-             dpkg (>= 1.15.6)
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}
-Description: TrueType versions of some TeX fonts
+Description: TrueType versions of some TeX fonts used by LyX
  These fonts are needed for the visual math symbol display in
  LyX. They can also be used to display MathML in Gecko-based browsers
  like Iceweasel.
@@ -115,3 +124,15 @@ Description: TrueType versions of some TeX fonts
   * msam10  - Extra math symbols, first series
   * msbm10  - Extra math symbols, second series, including Blackboard Bold
   * wasy10  - Waldi symbol fonts
+
+Package: ttf-lyx
+Architecture: all
+Section: oldlibs
+Priority: extra
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         fonts-lyx
+Description: transitional package
+ This package only exists to facilitate the renaming of ttf-lyx to
+ fonts-lyx. You may safely remove this package once no other package
+ depends on it.
