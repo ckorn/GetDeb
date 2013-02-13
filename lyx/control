@@ -4,23 +4,61 @@ XSBC-Original-Maintainer: Debian LyX Maintainers <pkg-lyx-devel@lists.alioth.deb
 Uploaders: Per Olofsson <pelle@debian.org>, Sven Hoexter <hoexter@debian.org>
 Section: editors
 Priority: optional
+Build-Depends: python (>= 2.6.6-3),
+               debhelper (>= 9),
+               libz-dev,
+               libx11-dev,
+               libenchant-dev,
+               libmythes-dev,
+               autotools-dev,
+               libqt4-dev,
+               libboost-dev,
+               libboost-filesystem-dev,
+               libboost-signals-dev,
+               libboost-iostreams-dev,
+               libboost-regex-dev,
+               libboost-test-dev,
+               pkg-config,
+               tex-common
 Standards-Version: 3.9.3
-Vcs-Git: git://anonscm.debian.org/pkg-lyx/lyx.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-lyx/lyx.git
-Homepage: http://www.lyx.org/
-Build-Depends: python (>= 2.6.6-3), debhelper (>= 8.1.0~),
- libz-dev, libx11-dev, libenchant-dev, libmythes-dev,
- autotools-dev, libqt4-dev, libboost-dev,
- libboost-filesystem-dev, libboost-signals-dev,
- libboost-iostreams-dev, libboost-regex-dev, libboost-test-dev,
- pkg-config, tex-common
+Homepage: http://www.lyx.org
 
 Package: lyx
 Architecture: any
 Pre-Depends: dpkg (>= 1.15.6)
-Depends: ${shlibs:Depends}, ${misc:Depends}, lyx-common (= ${source:Version}), xdg-utils
-Recommends: texlive-latex-recommended, texlive-latex-extra, texlive-science, texlive-generic-extra, texlive-fonts-recommended, preview-latex-style, dvipng, imagemagick, psutils, ghostscript, poppler-utils, ttf-lyx, evince-gtk | pdf-viewer, elyxer | tex4ht | hevea | tth | latex2html 
-Suggests: rcs, dvipost, groff, libtiff-tools, gnuhtml2latex, wv, chktex, noweb, sgmltools-lite, linuxdoc-tools, writer2latex, latex2rtf, librsvg2-bin | inkscape, texlive-xetex, etoolbox
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         lyx-common (= ${source:Version}),
+         xdg-utils
+Recommends: texlive-latex-recommended,
+            texlive-latex-extra,
+            texlive-science,
+            texlive-generic-extra,
+            texlive-fonts-recommended,
+            preview-latex-style,
+            dvipng,
+            imagemagick,
+            psutils,
+            ghostscript,
+            poppler-utils,
+            ttf-lyx,
+            evince-gtk | pdf-viewer,
+            elyxer | tex4ht | hevea | tth | latex2html 
+Suggests: rcs,
+          dvipost,
+          groff,
+          libtiff-tools,
+          gnuhtml2latex,
+          wv,
+          chktex,
+          noweb,
+          sgmltools-lite,
+          linuxdoc-tools,
+          writer2latex,
+          latex2rtf,
+          librsvg2-bin | inkscape,
+          texlive-xetex,
+          etoolbox
 Description: document processor
  LyX is an almost WYSIWYG-frontend for LaTeX. It makes the power and
  typesetting quality of LaTeX available for people who are used to
@@ -47,7 +85,8 @@ Description: document processor
 Package: lyx-common
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6)
-Depends: ${misc:Depends}, ${python:Depends}
+Depends: ${misc:Depends},
+         ${python:Depends}
 Recommends: lyx
 Description: architecture-independent files for LyX
  This package contains LyX's common files which are not
@@ -57,7 +96,8 @@ Description: architecture-independent files for LyX
 Package: ttf-lyx
 Architecture: all
 Section: fonts
-Pre-Depends: ${misc:Pre-Depends}, dpkg (>= 1.15.6)
+Pre-Depends: ${misc:Pre-Depends},
+             dpkg (>= 1.15.6)
 Depends: ${misc:Depends}
 Description: TrueType versions of some TeX fonts
  These fonts are needed for the visual math symbol display in

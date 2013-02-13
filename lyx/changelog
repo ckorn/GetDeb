@@ -1,3 +1,9 @@
+lyx (2.0.5.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Feb 2013 17:58:59 +0100
+
 lyx (2.0.5-1~getdeb1) precise; urgency=low
 
   * New upstream version

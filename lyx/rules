@@ -42,6 +42,8 @@ override_dh_auto_install:
 	mv debian/lyx-common/usr/share/lyx/scripts/bash_completion \
 		debian/lyx-common/etc/bash_completion.d/lyx
 
+	chmod +x debian/lyx-common/usr/share/lyx/scripts/listerrors
+
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS
 
