@@ -1,3 +1,12 @@
+fotoxx (13.02.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    2013 Feb 11  v.13.02.1
+    + Italian translation updated.
+    + Bugfix: crash when switching tabs G to F (hopefully rare).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Feb 2013 17:51:54 +0100
+
 fotoxx (13.02-1~getdeb1) precise; urgency=low
 
   * New upstream version
