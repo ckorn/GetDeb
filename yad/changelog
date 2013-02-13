@@ -1,3 +1,19 @@
+yad (0.19.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Version 0.19.1
+        - use current path as a default folder for file selection dialogs
+        - fix parsing .desktop files in icons dialog
+
+    Version 0.19.0
+        - add preview to file dialog
+        - recognize link type in .desktop files for icon dialog
+        - make icon description selectable in icon browser
+        - fix quoting special characters when pass data to the command in
+        list and dnd dialogs
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 13 Feb 2013 19:58:35 +0100
+
 yad (0.18.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
