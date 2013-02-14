@@ -1,3 +1,9 @@
+codeslayer (3.0.0-1~getdeb1) quantal; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Feb 2013 17:52:33 +0100
+
 codeslayer (2.0.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
