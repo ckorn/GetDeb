@@ -1,3 +1,15 @@
+frostwire (5.5.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Feb 2013 18:10:12 +0100
+
+frostwire (5.5.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Dec 2012 19:48:38 +0100
+
 frostwire (5.3.9-1~getdeb2) precise; urgency=low
 
   * Update debian/watch file

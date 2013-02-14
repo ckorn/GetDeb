@@ -11,7 +11,8 @@ Architecture: any
 Depends: ${misc:Depends},
          openjdk-6-jre | java-runtime,
          fontconfig,
-         frostwire-data (= ${source:Version})
+         frostwire-data (= ${source:Version}),
+         mplayer
 Description: High quality, FREE peer-to-peer application
  It's core is based on LimeWire but it also supports bittorrent. 
  Peer-to-Peer file sharing program for the Gnutella network
