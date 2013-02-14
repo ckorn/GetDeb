@@ -1,3 +1,34 @@
+abcl (1.1.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Fixes
+    -----
+      * All reported errors with the MOP implementation have been addressed.
+      * An autoloader for SETF expansion functions has been implemented,
+        eliminating the errors associated with not being able to use (SETF
+        SYMBOL) without first invoking SYMBOL as a function. [#266
+      * All outstanding regressions in the ANSI test suite with respect to
+        abcl-1.0.1 have been fixed.
+      * The ability to resolve Maven components in ASDF system definitions
+      has been restored.
+
+    Issues Resolved
+    ---------------
+
+    [#266]     PSETF.47 ANSI regression     
+    [#284]     checks in ensure-generic-function-using-class should occur
+    later
+    [#296]     SLIME fails to initialize with (SETF DOCUMENTATION) undefined
+    [#198]     Hunchentoot run failure     
+    [#228]     Need to implement autoloader facility for SETF functions
+    [#288]     Control character names     
+    [#290]     Compiling (defvar *foo* '(quote . x)) throws an error 
+    [#293]     Loop and default value for of-type problem     
+    [#294]     Reader doesn't recognize terminating characters in some cases
+    [#299]     ABCL-ASDF:MVN components not loading 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Feb 2013 19:12:31 +0100
+
 abcl (1.1.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
