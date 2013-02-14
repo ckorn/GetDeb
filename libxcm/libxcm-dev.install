@@ -1,5 +1,5 @@
 usr/include
-#usr/lib/lib*.la
+usr/share/cmake
 usr/lib/lib*.so
 usr/lib/pkgconfig
 usr/share/man
