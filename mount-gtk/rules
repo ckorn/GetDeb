@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 %:
-	dh $@
+	dh $@ --with autoreconf
 
 
 override_dh_auto_configure:
@@ -10,7 +10,7 @@ endif
 ifneq "$(wildcard /usr/share/misc/config.guess)" ""
 	cp -f /usr/share/misc/config.guess config.guess
 endif
-	./configure --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs,--as-needed"
+	./configure --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CPPFLAGS=$(CPPFLAGS) CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs,--as-needed"
 
 override_dh_auto_build:
 	$(MAKE)

@@ -1,0 +1,16 @@
+## Description: GCC requires compile flag to enable C++0x/C++11 support.
+##              http://gcc.gnu.org/projects/cxx0x.html
+## Origin/Author: Christoph Korn <christoph.korn@getdeb.net>
+## Bug: https://sourceforge.net/projects/mount-gtk/forums/forum/910829/topic/6754975/index/page/1
+Index: mount-gtk-1.4.0/configure.ac
+===================================================================
+--- mount-gtk-1.4.0.orig/configure.ac	2013-02-16 00:03:23.291195443 +0100
++++ mount-gtk-1.4.0/configure.ac	2013-02-16 00:23:44.091185020 +0100
+@@ -27,6 +27,7 @@
+ AC_LANG_CPLUSPLUS dnl switch to C++
+ AC_TYPE_SIZE_T
+ AC_CHECK_TYPES(ssize_t)
++AX_CHECK_COMPILE_FLAG([-std=c++11], [CXXFLAGS="$CXXFLAGS -std=c++11"])
+ AC_CHECK_RANGE_FOR_SUPPORT
+ AC_CHECK_LAMBDA_SUPPORT
+ 
