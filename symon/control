@@ -2,14 +2,19 @@ Source: symon
 Section: utils
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50~), libnewlib-dev,
- libbind4-dev, linux-libc-dev, librrd-dev, pmake
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9),
+               libnewlib-dev,
+               libbind4-dev,
+               linux-libc-dev,
+               librrd-dev,
+               pmake
+Standards-Version: 3.9.3
 Homepage: http://www.xs4all.nl/~wpd/symon/
 
 Package: symon
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Lightweight system monitor
  symon is a lightweight system monitor for FreeBSD,
  NetBSD, OpenBSD and Linux. It can be used to obtain

@@ -1,3 +1,16 @@
+symon (2.86-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+   - platform/OpenBSD/sm_proc.c updated to new kinfo_proc interface
+
+   - platform/OpenBSD/sm_io.c hw.disknames was parsed wrong for devices with
+     no uuid (Raphaël Berbain)
+
+   - platform/FreeBSD/sm_smart.c updated to also support atacam (Alexander
+     Sheiko)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 18 Feb 2013 18:47:59 +0100
+
 symon (2.85-1~getdeb1) oneiric; urgency=low
 
   * New upstream version

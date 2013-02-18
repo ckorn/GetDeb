@@ -1,0 +1,20 @@
+Description: fix compiler errors
+ error: format not a string literal and no format arguments.
+ Just pass a "%s" to make gcc happy.
+Author: Christoph Korn <christoph.korn@getdeb.net>
+Origin: upstream
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: symon-2.86/lib/error.c
+===================================================================
+--- symon-2.86.orig/lib/error.c	2013-02-18 19:05:39.826624604 +0100
++++ symon-2.86/lib/error.c	2013-02-18 19:06:22.814623325 +0100
+@@ -93,7 +93,7 @@
+               __FILE__, __LINE__);
+ 
+     if (flag_daemon) {
+-        syslog(logmapping[loglevel].priority, msgbuf);
++        syslog(logmapping[loglevel].priority, "%s", msgbuf);
+     } else {
+         if (strlen(logmapping[loglevel].errtxt) > 0) {
+             fprintf(logmapping[loglevel].stream == SYMON_OUT_STDERR ? stderr : stdout, "%.200s: %.200s\n",
