@@ -1,3 +1,9 @@
+azureus (4.9.0.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 18 Feb 2013 16:26:18 +0100
+
 azureus (4.8.1.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
