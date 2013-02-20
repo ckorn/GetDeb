@@ -1,3 +1,10 @@
+tide (2.55-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Improvements and support of the checkers framework 1.5.0.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 19 Feb 2013 18:09:31 +0100
+
 tide (2.50-1~getdeb1) precise; urgency=low
 
   * New upstream version
