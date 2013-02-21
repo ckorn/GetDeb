@@ -1,8 +1,8 @@
 Update youporn plugin.
 Index: xvst-2.4.1/resources/services/youporn/youporn.js
 ===================================================================
---- xvst-2.4.1.orig/resources/services/youporn/youporn.js	2012-02-14 18:50:01.811915824 +0100
-+++ xvst-2.4.1/resources/services/youporn/youporn.js	2012-02-14 18:50:56.627914196 +0100
+--- xvst-2.4.1.orig/resources/services/youporn/youporn.js	2013-02-21 20:15:53.786926915 +0100
++++ xvst-2.4.1/resources/services/youporn/youporn.js	2013-02-21 20:16:31.526925793 +0100
 @@ -3,7 +3,7 @@
  * This file is part of xVideoServiceThief,
  * an open-source cross-platform Video service download
@@ -17,22 +17,24 @@ Index: xvst-2.4.1/resources/services/youporn/youporn.js
  function RegistVideoService()
  {
 -	this.version = "2.0.3";
-+	this.version = "2.0.5";
++	this.version = "2.0.6";
  	this.minVersion = "2.0.0a";
 -	this.author = "Xesc & Technology 2009 (thanks to Matze Ba)";
 +	this.author = "Xesc & Technology 2012 (thanks to Matze Ba)";
  	this.website = "http://www.youporn.com/";
  	this.ID = "youporn.com";
  	this.caption = "YouPorn";
-@@ -47,18 +47,21 @@
+@@ -47,18 +47,23 @@
  	// get video title
  	result.title = copyBetween(html, "<title>", "- Free Porn Videos");
  	// get the flv url
 -	result.URL = copyBetween(html, "<div id=\"download\">", "</div");
 -	result.URL = copyBetween(result.URL, "<a href=\"", "\"");
-+	var video_url = /'video_url'\s*:\s*'(.*?)'/
++	//var video_url = /'video_url'\s*:\s*encodeURIComponent\('(.*?)'\)/
++	var video_url = /<video\s*src="(.*?)"/
 +	result.URL = video_url.exec(html)[1];
 +	result.URL = strReplace(result.URL, "%26", "&");
++	result.URL = strReplace(result.URL, "&amp;", "&");
 +	// get cookies
 +	result.cookies = http.getCookies("|");
  	// return the video information
@@ -52,7 +54,7 @@ Index: xvst-2.4.1/resources/services/youporn/youporn.js
  	// replace all spaces for "+"
  	keyWord = strReplace(keyWord, " ", "+");
  	// init search results object
-@@ -66,16 +69,14 @@
+@@ -66,16 +71,14 @@
  	// init http object
  	var http = new Http();
  	var html = http.downloadWebpage(strFormat(URL_SEARCH, keyWord, pageIndex) + "&user_choice=Enter");
@@ -72,7 +74,7 @@ Index: xvst-2.4.1/resources/services/youporn/youporn.js
  		for (n = 0; n < blocks.length-1; n++)
  			parseResultItem(searchResults, blocks[n]);
  	}
-@@ -83,19 +84,6 @@
+@@ -83,19 +86,6 @@
  	return searchResults;
  }
  
@@ -92,7 +94,7 @@ Index: xvst-2.4.1/resources/services/youporn/youporn.js
  function parseResultItem(searchResults, html)
  {
  	const VIDEO_URL = "http://youporn.com";
-@@ -104,18 +92,18 @@
+@@ -104,18 +94,18 @@
  	// get video url
  	videoUrl = VIDEO_URL + copyBetween(html, 'href="', '"');
  	// get title and image url
