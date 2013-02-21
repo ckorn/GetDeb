@@ -1,3 +1,9 @@
+xvst (2.4.1-1~getdeb32) precise; urgency=low
+
+  * Update YouTube and YouPorn plugin.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 21 Feb 2013 20:17:33 +0100
+
 xvst (2.4.1-1~getdeb31) precise; urgency=low
 
   * Update YouTube plugin
