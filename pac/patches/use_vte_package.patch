@@ -1,32 +1,28 @@
 Use our own package for VTE instead of the included library
 and having to make pac arch-dependant.
-Index: pac-4.5.0.3/lib/PACTerminal.pm
+Index: pac-4.5.1/lib/PACTerminal.pm
 ===================================================================
---- pac-4.5.0.3.orig/lib/PACTerminal.pm	2013-02-04 19:35:00.000000000 +0100
-+++ pac-4.5.0.3/lib/PACTerminal.pm	2013-02-08 22:57:54.630377538 +0100
-@@ -45,9 +45,7 @@
- my $SOURCEVIEW = ! $@;
+--- pac-4.5.1.orig/lib/PACTerminal.pm	2013-02-22 11:14:11.000000000 +0100
++++ pac-4.5.1/lib/PACTerminal.pm	2013-02-22 17:20:24.157548540 +0100
+@@ -29,7 +29,7 @@
+ use warnings;
  
- # Gnome2 - VTE
--unshift( @INC, $RealBin . '/lib/ex/vte' . $PACUtils::ARCH );
--eval { require "$RealBin/lib/ex/vte" . $PACUtils::ARCH . "/Gnome2/Vte.pm"; };
--die "ERROR: Could not load Gnome2::Vte Perl module from $RealBin/lib/ex/vte${PACUtils::ARCH} directories! ($@)" if $@;
+ use FindBin qw ( $RealBin $Bin $Script );
+-use lib $RealBin . '/lib', $RealBin . '/lib/ex';
 +use Gnome2::Vte;
- 
- use PACUtils;
- 
-Index: pac-4.5.0.3/lib/PACShell.pm
+ use Storable qw ( dclone nstore nstore_fd fd_retrieve );
+ use POSIX qw ( strftime );
+ use File::Copy;
+Index: pac-4.5.1/lib/PACShell.pm
 ===================================================================
---- pac-4.5.0.3.orig/lib/PACShell.pm	2013-02-04 19:35:00.000000000 +0100
-+++ pac-4.5.0.3/lib/PACShell.pm	2013-02-08 22:56:47.966379521 +0100
-@@ -37,9 +37,7 @@
- use Gtk2 '-init';
+--- pac-4.5.1.orig/lib/PACShell.pm	2013-02-22 11:14:11.000000000 +0100
++++ pac-4.5.1/lib/PACShell.pm	2013-02-22 17:20:18.129548715 +0100
+@@ -29,7 +29,7 @@
+ use warnings;
  
- # Gnome2 - VTE
--unshift( @INC, $RealBin . '/lib/ex/vte' . $PACUtils::ARCH );
--require "$RealBin/lib/ex/vte" . $PACUtils::ARCH . "/Gnome2/Vte.pm";
--die "ERROR: Could not load Gnome2::Vte Perl module from $RealBin/lib/ex/vte${PACUtils::ARCH} directory! ($@)" if $@;
+ use FindBin qw ( $RealBin $Bin $Script );
+-use lib $RealBin . '/lib', $RealBin . '/lib/ex';
 +use Gnome2::Vte;
+ use YAML qw ( LoadFile DumpFile );
+ use POSIX qw ( strftime );
  
- # PAC modules
- use PACUtils;

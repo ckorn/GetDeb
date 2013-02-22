@@ -1,3 +1,30 @@
+pac (4.5.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added support for native Ubuntu's "application indicator" (tray
+    unavailable since 13.04) if "libgtk2-appindicator-perl" is installed
+    . Disabled tray icon for Gnome-shell (Gnome3) environment (no support by
+    now)
+    . Added "-N" option for 'SSH' connections
+    . Added shortcuts for "Reset Terminal" (<Shift><Ctrl>x) and "Reset and
+    Clear Terminal" (<Shift><Ctrl><Alt>x)
+    . Added an option to load "KeePass" DDBB "On demand" (off by default)
+    everytime it is required, instead of on menu creation (if 'off', faster
+    menu building)
+    . Modified "KeePass" code to offer a list when more than one strings
+    matches a regexp, with an option to always choose the first without
+    asking.
+    . Fixed a bug that prevented using "strange" characters for RDP
+    connections (like: $, @, etc.)
+    . Modified Black&White tray icon
+    . Fixed screenshots/statistics not being reset when copying/duplicating
+    connections
+    . RPM package bugfixing (conflict with "filesystem" package!)
+    . Nth change to detect Vte version 0.10 (Perl 5.16 w/o Fedora18??) with
+    cleaner code (and less problems!)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 22 Feb 2013 17:15:54 +0100
+
 pac (4.5.0.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
