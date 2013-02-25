@@ -7,10 +7,12 @@ override_dh_auto_clean:
 
 override_dh_install:
 ifeq ($(DEB_BUILD_ARCH),amd64)
-	tar xjf BlueGriffon-*-x86_64.tar.bz2
+	tar xjf bluegriffon-*-x86_64.tar.bz2
 else
-	tar xjf BlueGriffon-*-i686.tar.bz2
+	tar xjf bluegriffon-*-i686.tar.bz2
 endif
+
+	mv bluegriffon BlueGriffon
 
 	chmod -x BlueGriffon/distribution/extensions/*.xpi
 	chmod -x BlueGriffon/modules/devtools/*.jsm
