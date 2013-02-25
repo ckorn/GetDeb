@@ -1,3 +1,21 @@
+fotoxx (13.03-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Reduce Noise: better user interface, easier to combine methods.
+    + Warp Area: better mouse warp algorithm, easier to get desired result.
+    + Warp Curved: the radius of mouse/warp influence was made adjustable.
+    + Custom keyboard shortcuts: replace text file with a proper dialog.
+    + Save gallery position as bookmark, choose a bookmark and go there.
+    + Edit Translation: dialog remains open after each translation update.
+    + Improve detection and notification of insufficient memory problems.
+    + Menu rationalization: naming and ordering of the many edit functions.
+    + Bugfix: Rotate and Warp funcs: custom grid settings were getting lost.
+    + Bugfix: Detect outdated geotag data files and force a fresh download.
+    + Bugfix: Small flaws in large cutouts saved to disk and later pasted.
+    + Bugfix: Write Text altered the transparency when [apply] was clicked.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 25 Feb 2013 20:56:35 +0100
+
 fotoxx (13.02.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
