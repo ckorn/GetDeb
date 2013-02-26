@@ -1,3 +1,10 @@
+pac (4.5.1.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Fixed a bug for new tray code changes (shame on me...)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 26 Feb 2013 16:48:52 +0100
+
 pac (4.5.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
