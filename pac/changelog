@@ -1,3 +1,20 @@
+pac (4.5.1.2-1~getdeb2~quantal) quantal; urgency=low
+
+  * New upstream version
+    . Code changes for PACShell (now, part of PACTerminal), so better
+    intergration with PAC functionalities (clusters, search, etc.)
+    . Added options to KeePass to add "URL" searches
+    . Speed improvement on KeePass integration (right-click menus, startup
+    terminals, etc.)
+    . Added an option to no append group name to newly created connections
+    ("Preferences" -> "PAC Main Options" -> "Automatically append group name
+    to...")
+    . Added a "best effor" option to set title based on server hostname (you
+    know: *best effort*! No promises at all! :) <Shift><Ctrl>g and
+    right-click menu
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 28 Feb 2013 14:39:52 +0100
+
 pac (4.5.1.1-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
