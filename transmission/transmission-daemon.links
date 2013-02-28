@@ -1,0 +1,2 @@
+usr/share/doc/transmission-common usr/share/doc/transmission-daemon
+etc/transmission-daemon/settings.json var/lib/transmission-daemon/info/settings.json 

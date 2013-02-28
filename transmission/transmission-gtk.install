@@ -1,0 +1,4 @@
+usr/bin/transmission-gtk
+usr/share/locale
+usr/share/applications/transmission-gtk.desktop
+debian/lintian/transmission-gtk usr/share/lintian/overrides
