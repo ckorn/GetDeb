@@ -1,9 +1,9 @@
 Use our own package for VTE instead of the included library
 and having to make pac arch-dependant.
-Index: pac-4.5.1/lib/PACTerminal.pm
+Index: pac-4.5.1.2/lib/PACTerminal.pm
 ===================================================================
---- pac-4.5.1.orig/lib/PACTerminal.pm	2013-02-22 11:14:11.000000000 +0100
-+++ pac-4.5.1/lib/PACTerminal.pm	2013-02-22 17:20:24.157548540 +0100
+--- pac-4.5.1.2.orig/lib/PACTerminal.pm	2013-02-28 12:11:13.000000000 +0100
++++ pac-4.5.1.2/lib/PACTerminal.pm	2013-02-28 14:41:24.321355382 +0100
 @@ -29,7 +29,7 @@
  use warnings;
  
@@ -13,16 +13,3 @@ Index: pac-4.5.1/lib/PACTerminal.pm
  use Storable qw ( dclone nstore nstore_fd fd_retrieve );
  use POSIX qw ( strftime );
  use File::Copy;
-Index: pac-4.5.1/lib/PACShell.pm
-===================================================================
---- pac-4.5.1.orig/lib/PACShell.pm	2013-02-22 11:14:11.000000000 +0100
-+++ pac-4.5.1/lib/PACShell.pm	2013-02-22 17:20:18.129548715 +0100
-@@ -29,7 +29,7 @@
- use warnings;
- 
- use FindBin qw ( $RealBin $Bin $Script );
--use lib $RealBin . '/lib', $RealBin . '/lib/ex';
-+use Gnome2::Vte;
- use YAML qw ( LoadFile DumpFile );
- use POSIX qw ( strftime );
- 
