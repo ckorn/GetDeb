@@ -1,3 +1,9 @@
+bluegriffon (1.6.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 28 Feb 2013 14:49:24 +0100
+
 bluegriffon (1.6.1-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #1132897)
