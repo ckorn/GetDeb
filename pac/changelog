@@ -1,3 +1,14 @@
+pac (4.5.1.3-1~getdeb2~quantal) quantal; urgency=low
+
+  * New upstream version
+   . Oooops... I did it again... :( I forgot to add a couple of
+     fixes for KeePass...
+   . Fixed PACShell not respecting initial directory
+   . Added a... well...mmm...you know......errrr........ Hell! Yes!
+     I just put a "Dumb Easter Egg"(TM) ;)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Mar 2013 14:09:57 +0100
+
 pac (4.5.1.2-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
