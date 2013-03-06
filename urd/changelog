@@ -1,3 +1,36 @@
+urd (1.7.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - Updated search string parsing; now supports not and or as keywords, eg
+      foo or not bar
+    - When a new usenet server is added, it is set as an indexing server if
+      no other indexing server is set.
+    - Keep pop up open in case an error happens in the upload 
+    - Add defualt schedules after installation
+    - Fixed bug in selecting download path for spots
+    - Fixed bug in saved searches next and previous buttons
+    - Added quickmenu to spot details
+    - Fixed some minor issues with statistics about supply
+    - Added white list for spots
+    - Fixed some issues with DB updating
+    - Fixed error in statistics with regard to imported nzb file size
+    - Fixed issue with saved searches 
+    - Hide categories when no categories are present
+    - Added filter options to throw away too large sets
+    - Changes in basket are kept when changing between supply types
+    - Added mini download basket as an option
+    - Switch default style sheet to "light"
+    - Sets marked as x-rated are alse hidden when user is not permitted to
+      see adult sets
+    - Fixed bug in searching on tags in spots
+    - Added search buttons for MovieMeter
+    - Show size of the previewed file in preview
+    - Fix bug not showing (c) and pw images when ext set data is set for
+      spots
+    - Update to smarte 3.1.13
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 04 Mar 2013 21:16:59 +0100
+
 urd (1.6.1-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #1071917)
