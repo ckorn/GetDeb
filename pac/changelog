@@ -1,3 +1,29 @@
+pac (4.5.1.5-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Fixed a bug at PAC startup for some systems
+      (not all where affected...)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Mar 2013 17:49:13 +0100
+
+pac (4.5.1.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added the possibility to export ALL connections from right
+      click menu on "AVAILABLE CONNECTIONS" label
+    . Added button so un/select all lines for
+      "Full duplicate connection" window
+    . Fixed another little bug when "refreshing" KeePass preferences window
+    . Improvements "Copy/Paste/Export/Import" methods
+    . Fixed a bug for KeePass that prevented using "special Perl regexp"
+      characters for matching on fields
+    . Fixed a bug regarding "Favourites" and "Recent" connections not
+      starting correctly on "Clusters" with right click menu
+    . Fixed a little bug with renaming connections on root
+    . Small code fixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 07 Mar 2013 18:53:55 +0100
+
 pac (4.5.1.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
