@@ -1,3 +1,9 @@
+wakeonplan (0.0.0+bzr76-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Mar 2013 19:33:41 +0100
+
 wakeonplan (0.0.0+bzr72-1~getdeb1) precise; urgency=low
 
   * New upstream version
