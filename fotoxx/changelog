@@ -1,3 +1,12 @@
+fotoxx (13.03.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Translations for Spanish and Catalan were updated.
+    + Bugfix: add automatic change to tab F when the favorites menu is used.
+    + Bugfix: arrow keys for previous/next image work more consistently.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 09 Mar 2013 17:10:05 +0100
+
 fotoxx (13.03-1~getdeb1) precise; urgency=low
 
   * New upstream version
