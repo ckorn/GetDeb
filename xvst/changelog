@@ -1,3 +1,9 @@
+xvst (2.4.1-1~getdeb34) precise; urgency=low
+
+  * Update plugins.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 10 Mar 2013 14:02:12 +0100
+
 xvst (2.4.1-1~getdeb33) precise; urgency=low
 
   * Update YouTube plugin.
