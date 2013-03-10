@@ -1,3 +1,15 @@
+c++-gtk-utils (2.0.16-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 10 Mar 2013 13:04:36 +0100
+
+c++-gtk-utils (2.0.15-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 16 Feb 2013 23:25:32 +0100
+
 c++-gtk-utils (2.0.13-1~getdeb1) precise; urgency=low
 
   * New upstream version

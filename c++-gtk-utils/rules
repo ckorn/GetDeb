@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 %:
 	dh $@
 
@@ -8,16 +8,16 @@ override_dh_auto_clean:
 	rm -f c++-gtk-utils-2-2.0.pc
 
 override_dh_auto_configure:
-	CXXFLAGS="" LDFLAGS="" ./configure-gtk2 --prefix=/usr
+	./configure-gtk2 --prefix=/usr --disable-silent-rules
 
 override_dh_auto_build:
-	CXXFLAGS="" LDFLAGS="" $(MAKE)
+	$(MAKE)
 
 # Tests require a display
 override_dh_auto_test:
 
 override_dh_auto_install:
-	CXXFLAGS="" LDFLAGS="" $(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
 	rm debian/tmp/usr/share/doc/c++-gtk-utils/2.0/COPYING
 	rm debian/tmp/usr/lib/libcxx-gtk-utils-2-2.0.la
 

@@ -4,11 +4,8 @@ libcxx-gtk-utils-2-2.0.so.0 libcxx-gtk-utils-2-2.0-0 #MINVER#
  _ZN3Cgu10EmitterArgIIEE8ListItemD2Ev@Base 2.0.3
  _ZN3Cgu10EmitterArgIIEED1Ev@Base 2.0.3
  _ZN3Cgu10EmitterArgIIEED2Ev@Base 2.0.3
- _ZN3Cgu10GobjHandleI10_GdkPixbufE11unreferenceEv@Base 2.0.3
- _ZN3Cgu10GobjHandleI10_GtkWidgetE11unreferenceEv@Base 2.0.3
- _ZN3Cgu10GobjHandleI11_GDBusProxyED1Ev@Base 2.0.3
- _ZN3Cgu10GobjHandleI11_GDBusProxyED2Ev@Base 2.0.3
- _ZN3Cgu10GobjHandleI12_PangoLayoutE11unreferenceEv@Base 2.0.3
+ _ZN3Cgu10GobjHandleI10_GtkWidgetED1Ev@Base 2.0.15
+ _ZN3Cgu10GobjHandleI10_GtkWidgetED2Ev@Base 2.0.15
  _ZN3Cgu10GobjHandleI13_GtkPageSetupED1Ev@Base 2.0.3
  _ZN3Cgu10GobjHandleI13_GtkPageSetupED2Ev@Base 2.0.3
  _ZN3Cgu10GobjHandleI17_GtkPrintSettingsED1Ev@Base 2.0.3
@@ -138,6 +135,8 @@ libcxx-gtk-utils-2-2.0.so.0 libcxx-gtk-utils-2-2.0-0 #MINVER#
  _ZN3Cgu6Thread11TaskManager13set_idle_timeEj@Base 2.0.12
  _ZN3Cgu6Thread11TaskManager13set_stop_modeENS1_8StopModeE@Base 2.0.12
  _ZN3Cgu6Thread11TaskManager15set_max_threadsEj@Base 2.0.12
+ _ZN3Cgu6Thread11TaskManager18change_max_threadsEi@Base 2.0.15
+ _ZN3Cgu6Thread11TaskManager20set_max_threads_implEj@Base 2.0.15
  _ZN3Cgu6Thread11TaskManager7RefImpl8do_tasksEb@Base 2.0.12
  _ZN3Cgu6Thread11TaskManager7RefImplD0Ev@Base 2.0.12
  _ZN3Cgu6Thread11TaskManager7RefImplD1Ev@Base 2.0.12
@@ -233,15 +232,15 @@ libcxx-gtk-utils-2-2.0.so.0 libcxx-gtk-utils-2-2.0-0 #MINVER#
  _ZN3Cgu8Callback9Callback1ILb1ENS_8ReleaserERKNS0_14SafeFunctorArgIIEEEIPiEED1Ev@Base 2.0.3
  _ZN3Cgu8Callback9Callback1ILb1ENS_8ReleaserERKNS0_14SafeFunctorArgIIEEEIPiEED2Ev@Base 2.0.3
  _ZN3Cgu8Notifier10disconnectERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.0.3
- _ZN3Cgu8Notifier10object_setE@Base 2.0.3
  _ZN3Cgu8Notifier11initialisedE@Base 2.0.3
  _ZN3Cgu8Notifier11set_mutex_pE@Base 2.0.3
+ _ZN3Cgu8Notifier12object_set_pE@Base 2.0.15
  _ZN3Cgu8Notifier12read_pipe_cbERb@Base 2.0.3
  _ZN3Cgu8Notifier13write_mutex_pE@Base 2.0.3
  _ZN3Cgu8Notifier4emitEv@Base 2.0.3
  _ZN3Cgu8Notifier4initEv@Base 2.0.3
- _ZN3Cgu8Notifier4pipeE@Base 2.0.3
  _ZN3Cgu8Notifier5blockERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.0.3
+ _ZN3Cgu8Notifier6pipe_pE@Base 2.0.15
  _ZN3Cgu8Notifier7connectERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.0.3
  _ZN3Cgu8Notifier7connectERKNS_8Callback14SafeFunctorArgIIEEERNS_8ReleaserE@Base 2.0.3
  _ZN3Cgu8Notifier7unblockERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.0.3
@@ -266,8 +265,6 @@ libcxx-gtk-utils-2-2.0.so.0 libcxx-gtk-utils-2-2.0-0 #MINVER#
  _ZN3Cgu8PipeFifoC1Ev@Base 2.0.3
  _ZN3Cgu8PipeFifoC2ENS0_9Fifo_modeE@Base 2.0.3
  _ZN3Cgu8PipeFifoC2Ev@Base 2.0.3
- _ZN3Cgu8PipeFifoD1Ev@Base 2.0.3
- _ZN3Cgu8PipeFifoD2Ev@Base 2.0.3
  _ZN3Cgu8Releaser10try_removeERKNS_8Callback14SafeFunctorArgIIEEEPi@Base 2.0.3
  _ZN3Cgu8Releaser3addERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.0.3
  _ZN3Cgu8Releaser6removeERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.0.3
@@ -334,8 +331,6 @@ libcxx-gtk-utils-2-2.0.so.0 libcxx-gtk-utils-2-2.0-0 #MINVER#
  _ZNSt11_Deque_baseISt4pairISt10unique_ptrIKN3Cgu8Callback11CallbackArgIIEEESt14default_deleteIS6_EES9_ESaISA_EE17_M_initialize_mapEj@Base 2.0.12
  _ZNSt11_Deque_baseISt4pairISt10unique_ptrIKN3Cgu8Callback11CallbackArgIIEEESt14default_deleteIS6_EES9_ESaISA_EED1Ev@Base 2.0.12
  _ZNSt11_Deque_baseISt4pairISt10unique_ptrIKN3Cgu8Callback11CallbackArgIIEEESt14default_deleteIS6_EES9_ESaISA_EED2Ev@Base 2.0.12
- _ZNSt13unordered_setIPN3Cgu8NotifierESt4hashIS2_ESt8equal_toIS2_ESaIS2_EED1Ev@Base 2.0.3
- _ZNSt13unordered_setIPN3Cgu8NotifierESt4hashIS2_ESt8equal_toIS2_ESaIS2_EED2Ev@Base 2.0.3
  _ZNSt4listIN3Cgu14SafeEmitterArgII12GIOConditionRbEE8ListItemESaIS5_EEaSERKS7_@Base 2.0.3
  _ZNSt4listIN3Cgu14SafeEmitterArgIIEE8ListItemESaIS3_EEaSERKS5_@Base 2.0.3
  _ZNSt4listIN3Cgu14SafeEmitterArgIIRbEE8ListItemESaIS4_EEaSERKS6_@Base 2.0.3
