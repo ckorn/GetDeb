@@ -1,0 +1,3 @@
+usr/include
+usr/share/marble/cmake
+usr/lib/*.so
