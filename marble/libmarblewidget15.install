@@ -1,0 +1,3 @@
+usr/lib/*.so.*
+usr/lib/marble
+usr/lib/qt4
