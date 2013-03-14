@@ -1,3 +1,27 @@
+entangle (0.5.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+     * Update for compatibility with libgphoto 2.5 API
+       callbacks
+     * Avoid warnings about deprecated glib2 mutex
+       and condition variable APIs
+     * Directly disable viewfinder mode using config APIs
+     * Add support for triggering autofocus during preview
+       with 'a' key
+     * Add support for manual focus drive in/out using
+       '.' and ',' keys
+     * Refresh translations from transifex
+     * Import user contributed Italian translation
+     * Add missing translation markers on some strings
+
+    Known issues:
+
+     * Compile triggers deprecation warnings about Gdk
+       threads API usage and GtkTable API usage. Harmless
+       but to be addressed in next release.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 13 Mar 2013 18:23:11 +0100
+
 entangle (0.5.0-1~getdeb1) precise; urgency=low
 
   * New upstream version

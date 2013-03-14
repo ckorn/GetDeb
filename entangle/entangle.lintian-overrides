@@ -1,0 +1,2 @@
+# this is a false positive. blhc --all does not report anything.
+entangle: hardening-no-fortify-functions usr/bin/entangle
