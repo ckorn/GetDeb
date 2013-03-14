@@ -1,8 +1,36 @@
-ogmrip (0.13.8-1~getdeb1) precise; urgency=low
+ogmrip (1.0.0-1~getdeb1) precise; urgency=low
 
-  * New upstream version (LP: #1010286)
+  * New upstream version
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Jun 2012 13:09:59 +0200
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Mar 2013 19:39:32 +0100
+
+ogmrip (0.13.8-0ubuntu1) raring; urgency=low
+
+  * New upstream release (LP: #1019894).
+  * debian/patches:
+   - 03_use_new_combo_box.patch: Remove, merged upstream.
+   - 91_remove_G_CONST_RETURN.patch: Remove, merged upstream.
+   - 90_libnotify.patch: Remove, merged upstream.
+   - ogmrip-0.13-yadif.patch: Remove, merged upstream.
+   - ogmrip-0.13-threads.patch: Remove, merged upstream.
+   - ogmrip-0.13.6-lossless.patch: Remove, merged upstream.
+   - ogmrip-0.13.6-bframes.patch: Remove, merged upstream.
+   - ogmrip-0.13.6-audio-quality.patch: Remove, merged upstream.
+   - 01_libdvdread4.diff: Refreshed.
+   - 02_configure.diff: Refreshed.
+  * debian/control:
+   - Build-depends on libnotify-dev (>= 0.7) and zlib1g-dev.
+   - Remove the depend on ogmrip for the -doc package.
+  * debian/copyright:
+   - Update FSF address.
+
+ -- Julien Lavergne <gilir@ubuntu.com>  Mon, 19 Nov 2012 00:16:54 +0100
+
+ogmrip (0.13.6-0ubuntu5) quantal; urgency=low
+
+  * Build-depend on libtiff-dev rather than libtiff4-dev.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 10 Sep 2012 00:14:19 +0100
 
 ogmrip (0.13.6-0ubuntu4) oneiric; urgency=low
 

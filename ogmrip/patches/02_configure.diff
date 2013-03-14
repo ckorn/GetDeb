@@ -2,15 +2,44 @@
  configure |   95 --------------------------------------------------------------
  1 file changed, 95 deletions(-)
 
-Index: ogmrip-0.13.8/configure
+Index: ogmrip-1.0.0/configure.in
 ===================================================================
---- ogmrip-0.13.8.orig/configure	2012-05-17 11:55:22.000000000 +0200
-+++ ogmrip-0.13.8/configure	2012-06-14 13:14:12.837858304 +0200
-@@ -13773,97 +13773,6 @@
+--- ogmrip-1.0.0.orig/configure.in	2013-03-13 19:25:05.000000000 +0100
++++ ogmrip-1.0.0/configure.in	2013-03-14 19:41:13.678502561 +0100
+@@ -246,17 +246,17 @@
  
+ dnl **************************************************************
+ 
+-AC_PATH_PROG(MPLAYER_PROG, mplayer)
+-if test x"$MPLAYER_PROG" = x; then
+-  AC_MSG_ERROR(Unable to find mplayer in the PATH. You need mplayer to use OGMRip. Find it on http://www.mplayerhq.hu)
+-fi
++dnl AC_PATH_PROG(MPLAYER_PROG, mplayer)
++dnl if test x"$MPLAYER_PROG" = x; then
++dnl   AC_MSG_ERROR(Unable to find mplayer in the PATH. You need mplayer to use OGMRip. Find it on http://www.mplayerhq.hu)
++dnl fi
+ 
+ dnl **************************************************************
+ 
+-AC_PATH_PROG(MENCODER_PROG, mencoder)
+-if test x"$MENCODER_PROG" = x; then
+-  AC_MSG_ERROR(Unable to find mencoder in the PATH. You need mencoder to use OGMRip. Find it on http://www.mplayerhq.hu)
+-fi
++dnl AC_PATH_PROG(MENCODER_PROG, mencoder)
++dnl if test x"$MENCODER_PROG" = x; then
++dnl   AC_MSG_ERROR(Unable to find mencoder in the PATH. You need mencoder to use OGMRip. Find it on http://www.mplayerhq.hu)
++dnl fi
+ 
+ dnl **************************************************************
+ 
+Index: ogmrip-1.0.0/configure
+===================================================================
+--- ogmrip-1.0.0.orig/configure	2013-03-13 19:25:21.000000000 +0100
++++ ogmrip-1.0.0/configure	2013-03-14 19:41:13.686502561 +0100
+@@ -13777,96 +13777,6 @@
  fi
  
--
+ 
 -# Extract the first word of "mplayer", so it can be a program name with args.
 -set dummy mplayer; ac_word=$2
 -{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
@@ -104,33 +133,3 @@ Index: ogmrip-0.13.8/configure
  # Check whether --enable-ogm-support was given.
  if test "${enable_ogm_support+set}" = set; then :
    enableval=$enable_ogm_support; have_ogm_support="$enableval"
-Index: ogmrip-0.13.8/configure.in
-===================================================================
---- ogmrip-0.13.8.orig/configure.in	2012-05-17 11:55:14.000000000 +0200
-+++ ogmrip-0.13.8/configure.in	2012-06-14 13:12:11.937861899 +0200
-@@ -246,17 +246,17 @@
- 
- dnl **************************************************************
- 
--AC_PATH_PROG(MPLAYER_PROG, mplayer)
--if test x"$MPLAYER_PROG" = x; then
--  AC_MSG_ERROR(Unable to find mplayer in the PATH. You need mplayer to use OGMRip. Find it on http://www.mplayerhq.hu)
--fi
-+dnl AC_PATH_PROG(MPLAYER_PROG, mplayer)
-+dnl if test x"$MPLAYER_PROG" = x; then
-+dnl   AC_MSG_ERROR(Unable to find mplayer in the PATH. You need mplayer to use OGMRip. Find it on http://www.mplayerhq.hu)
-+dnl fi
- 
- dnl **************************************************************
- 
--AC_PATH_PROG(MENCODER_PROG, mencoder)
--if test x"$MENCODER_PROG" = x; then
--  AC_MSG_ERROR(Unable to find mencoder in the PATH. You need mencoder to use OGMRip. Find it on http://www.mplayerhq.hu)
--fi
-+dnl AC_PATH_PROG(MENCODER_PROG, mencoder)
-+dnl if test x"$MENCODER_PROG" = x; then
-+dnl   AC_MSG_ERROR(Unable to find mencoder in the PATH. You need mencoder to use OGMRip. Find it on http://www.mplayerhq.hu)
-+dnl fi
- 
- dnl **************************************************************
- 
