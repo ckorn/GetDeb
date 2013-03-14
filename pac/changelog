@@ -1,3 +1,29 @@
+pac (4.5.1.9-1~getdeb2~quantal) quantal; urgency=low
+
+  * New upstream version
+    - 4.5.1.9:
+    . Now fixed (for real!) a bug that prevented PAC from starting under rare
+    circumstances.. :(
+
+    - 4.5.1.8:
+    . Fixed a bug that prevented PAC from starting under rare circumstances..
+    :(
+
+    - 4.5.1.7:
+    . Fixed a bug that prevented PAC from starting under rare circumstances..
+    :(
+
+    - 4.5.1.6:
+    . Added an option to ask user for a "cluster" name when adding a terminal
+    to a cluster when no cluster is selected/exists
+    . Fixed a bug that prevented using non-UTF8 characters
+    . Fixed a bug that prevented saving per connection "Variables" correctly
+    (hmmm... looks like nobody uses this...)
+    . Fixed a minor bug regarding starting *many* connections at a time on
+    groups and subgroups
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Mar 2013 19:12:02 +0100
+
 pac (4.5.1.5-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
