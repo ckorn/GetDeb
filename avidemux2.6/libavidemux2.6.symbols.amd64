@@ -38,6 +38,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  av_frame_get_metadata@LIBAVCODEC_54 1:2.6.1
  av_frame_get_pkt_duration@LIBAVCODEC_54 1:2.6.1
  av_frame_get_pkt_pos@LIBAVCODEC_54 1:2.6.0
+ av_frame_get_pkt_size@LIBAVCODEC_54 1:2.6.2
  av_frame_get_sample_rate@LIBAVCODEC_54 1:2.6.0
  av_frame_set_best_effort_timestamp@LIBAVCODEC_54 1:2.6.0
  av_frame_set_channel_layout@LIBAVCODEC_54 1:2.6.0
@@ -46,6 +47,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  av_frame_set_metadata@LIBAVCODEC_54 1:2.6.1
  av_frame_set_pkt_duration@LIBAVCODEC_54 1:2.6.1
  av_frame_set_pkt_pos@LIBAVCODEC_54 1:2.6.0
+ av_frame_set_pkt_size@LIBAVCODEC_54 1:2.6.2
  av_frame_set_sample_rate@LIBAVCODEC_54 1:2.6.0
  av_free_packet@LIBAVCODEC_54 1:2.6.0
  av_get_audio_frame_duration@LIBAVCODEC_54 1:2.6.0
@@ -163,6 +165,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avpriv_ac3_channel_layout_tab@LIBAVCODEC_54 1:2.6.0
  avpriv_ac3_parse_header@LIBAVCODEC_54 1:2.6.0
  avpriv_align_put_bits@LIBAVCODEC_54 1:2.6.0
+ avpriv_bprint_to_extradata@LIBAVCODEC_54 1:2.6.2
  avpriv_check_timecode_rate@LIBAVCODEC_54 1:2.6.0
  avpriv_copy_bits@LIBAVCODEC_54 1:2.6.0
  avpriv_copy_pce_data@LIBAVCODEC_54 1:2.6.0
@@ -173,7 +176,6 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avpriv_flac_is_extradata_valid@LIBAVCODEC_54 1:2.6.0
  avpriv_flac_parse_block_header@LIBAVCODEC_54 1:2.6.0
  avpriv_flac_parse_streaminfo@LIBAVCODEC_54 1:2.6.0
- avpriv_frame_rate_tab@LIBAVCODEC_54 1:2.6.0
  avpriv_framenum_to_drop_timecode@LIBAVCODEC_54 1:2.6.0
  avpriv_framenum_to_smpte_timecode@LIBAVCODEC_54 1:2.6.0
  avpriv_h264_has_num_reorder_frames@LIBAVCODEC_54 1:2.6.1
@@ -208,7 +210,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  ff_dct_encode_init_x86@LIBAVCODEC_54 1:2.6.1
  ff_dct_end@LIBAVCODEC_54 1:2.6.0
  ff_dct_init@LIBAVCODEC_54 1:2.6.0
- ff_dct_init_mmx@LIBAVCODEC_54 1:2.6.0
+ ff_dct_init_x86@LIBAVCODEC_54 1:2.6.2
  ff_dct_quantize_c@LIBAVCODEC_54 1:2.6.0
  ff_faandct248@LIBAVCODEC_54 1:2.6.0
  ff_faandct@LIBAVCODEC_54 1:2.6.0
@@ -219,25 +221,25 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  ff_fdct248_islow_8@LIBAVCODEC_54 1:2.6.0
  ff_fdct_ifast248@LIBAVCODEC_54 1:2.6.0
  ff_fdct_ifast@LIBAVCODEC_54 1:2.6.0
- ff_fdct_mmx2@LIBAVCODEC_54 1:2.6.0
  ff_fdct_mmx@LIBAVCODEC_54 1:2.6.0
+ ff_fdct_mmxext@LIBAVCODEC_54 1:2.6.2
  ff_fdct_sse2@LIBAVCODEC_54 1:2.6.0
  ff_fft_end@LIBAVCODEC_54 1:2.6.0
  ff_fft_end_fixed@LIBAVCODEC_54 1:2.6.0
  ff_fft_init@LIBAVCODEC_54 1:2.6.0
  ff_fft_init_fixed@LIBAVCODEC_54 1:2.6.0
- ff_fft_init_mmx@LIBAVCODEC_54 1:2.6.0
+ ff_fft_init_x86@LIBAVCODEC_54 1:2.6.2
  ff_find_pix_fmt@LIBAVCODEC_54 1:2.6.0
  ff_framenum_to_drop_timecode@LIBAVCODEC_54 1:2.6.0
  ff_framenum_to_smtpe_timecode@LIBAVCODEC_54 1:2.6.0
  ff_golomb_vlc_len@LIBAVCODEC_54 1:2.6.0
  ff_h264_info@LIBAVCODEC_54 1:2.6.0
- ff_idct_xvid_mmx2@LIBAVCODEC_54 1:2.6.0
- ff_idct_xvid_mmx2_add@LIBAVCODEC_54 1:2.6.1
- ff_idct_xvid_mmx2_put@LIBAVCODEC_54 1:2.6.1
  ff_idct_xvid_mmx@LIBAVCODEC_54 1:2.6.0
  ff_idct_xvid_mmx_add@LIBAVCODEC_54 1:2.6.1
  ff_idct_xvid_mmx_put@LIBAVCODEC_54 1:2.6.1
+ ff_idct_xvid_mmxext@LIBAVCODEC_54 1:2.6.2
+ ff_idct_xvid_mmxext_add@LIBAVCODEC_54 1:2.6.2
+ ff_idct_xvid_mmxext_put@LIBAVCODEC_54 1:2.6.2
  ff_idct_xvid_sse2@LIBAVCODEC_54 1:2.6.0
  ff_idct_xvid_sse2_add@LIBAVCODEC_54 1:2.6.0
  ff_idct_xvid_sse2_put@LIBAVCODEC_54 1:2.6.0
@@ -352,6 +354,7 @@ libADM6avformat.so.54 libavidemux2.6 #MINVER#
  avio_check@LIBAVFORMAT_54 1:2.6.0
  avio_close@LIBAVFORMAT_54 1:2.6.0
  avio_close_dyn_buf@LIBAVFORMAT_54 1:2.6.0
+ avio_closep@LIBAVFORMAT_54 1:2.6.2
  avio_enum_protocols@LIBAVFORMAT_54 1:2.6.0
  avio_flush@LIBAVFORMAT_54 1:2.6.0
  avio_get_str16be@LIBAVFORMAT_54 1:2.6.0
@@ -400,263 +403,285 @@ libADM6avformat.so.54 libavidemux2.6 #MINVER#
  ffurl_size@LIBAVFORMAT_54 1:2.6.0
  ffurl_write@LIBAVFORMAT_54 1:2.6.0
  url_feof@LIBAVFORMAT_54 1:2.6.0
-libADM6avutil.so.51 libavidemux2.6 #MINVER#
- LIBAVUTIL_51@LIBAVUTIL_51 1:2.6.0
- av_add_q@LIBAVUTIL_51 1:2.6.0
- av_adler32_update@LIBAVUTIL_51 1:2.6.0
- av_aes_crypt@LIBAVUTIL_51 1:2.6.0
- av_aes_init@LIBAVUTIL_51 1:2.6.0
- av_aes_size@LIBAVUTIL_51 1:2.6.0
- av_asprintf@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_alloc@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_drain@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_free@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_read@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_realloc@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_reset@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_size@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_space@LIBAVUTIL_51 1:2.6.0
- av_audio_fifo_write@LIBAVUTIL_51 1:2.6.0
- av_base64_decode@LIBAVUTIL_51 1:2.6.0
- av_base64_encode@LIBAVUTIL_51 1:2.6.0
- av_blowfish_crypt@LIBAVUTIL_51 1:2.6.1
- av_blowfish_crypt_ecb@LIBAVUTIL_51 1:2.6.1
- av_blowfish_init@LIBAVUTIL_51 1:2.6.1
- av_bmg_get@LIBAVUTIL_51 1:2.6.0
- av_bprint_channel_layout@LIBAVUTIL_51 1:2.6.1
- av_bprint_chars@LIBAVUTIL_51 1:2.6.0
- av_bprint_clear@LIBAVUTIL_51 1:2.6.0
- av_bprint_finalize@LIBAVUTIL_51 1:2.6.0
- av_bprint_init@LIBAVUTIL_51 1:2.6.0
- av_bprint_init_for_buffer@LIBAVUTIL_51 1:2.6.1
- av_bprintf@LIBAVUTIL_51 1:2.6.0
- av_calloc@LIBAVUTIL_51 1:2.6.0
- av_channel_layout_extract_channel@LIBAVUTIL_51 1:2.6.1
- av_compare_mod@LIBAVUTIL_51 1:2.6.0
- av_compare_ts@LIBAVUTIL_51 1:2.6.0
- av_crc@LIBAVUTIL_51 1:2.6.0
- av_crc_get_table@LIBAVUTIL_51 1:2.6.0
- av_crc_init@LIBAVUTIL_51 1:2.6.0
- av_d2q@LIBAVUTIL_51 1:2.6.0
- av_d2str@LIBAVUTIL_51 1:2.6.0
- av_dbl2ext@LIBAVUTIL_51 1:2.6.0
- av_dbl2int@LIBAVUTIL_51 1:2.6.0
- av_default_get_category@LIBAVUTIL_51 1:2.6.1
- av_default_item_name@LIBAVUTIL_51 1:2.6.0
- av_des_crypt@LIBAVUTIL_51 1:2.6.0
- av_des_init@LIBAVUTIL_51 1:2.6.0
- av_des_mac@LIBAVUTIL_51 1:2.6.0
- av_dict_copy@LIBAVUTIL_51 1:2.6.0
- av_dict_count@LIBAVUTIL_51 1:2.6.1
- av_dict_free@LIBAVUTIL_51 1:2.6.0
- av_dict_get@LIBAVUTIL_51 1:2.6.0
- av_dict_set@LIBAVUTIL_51 1:2.6.0
- av_div_q@LIBAVUTIL_51 1:2.6.0
- av_dynarray_add@LIBAVUTIL_51 1:2.6.0
- av_eval_expr@LIBAVUTIL_51 1:2.6.0
- av_evaluate_lls@LIBAVUTIL_51 1:2.6.0
- av_expr_eval@LIBAVUTIL_51 1:2.6.0
- av_expr_free@LIBAVUTIL_51 1:2.6.0
- av_expr_parse@LIBAVUTIL_51 1:2.6.0
- av_expr_parse_and_eval@LIBAVUTIL_51 1:2.6.0
- av_ext2dbl@LIBAVUTIL_51 1:2.6.0
- av_fifo_alloc@LIBAVUTIL_51 1:2.6.0
- av_fifo_drain@LIBAVUTIL_51 1:2.6.0
- av_fifo_free@LIBAVUTIL_51 1:2.6.0
- av_fifo_generic_read@LIBAVUTIL_51 1:2.6.0
- av_fifo_generic_write@LIBAVUTIL_51 1:2.6.0
- av_fifo_grow@LIBAVUTIL_51 1:2.6.0
- av_fifo_realloc2@LIBAVUTIL_51 1:2.6.0
- av_fifo_reset@LIBAVUTIL_51 1:2.6.0
- av_fifo_size@LIBAVUTIL_51 1:2.6.0
- av_fifo_space@LIBAVUTIL_51 1:2.6.0
- av_file_map@LIBAVUTIL_51 1:2.6.0
- av_file_unmap@LIBAVUTIL_51 1:2.6.0
- av_find_info_tag@LIBAVUTIL_51 1:2.6.0
- av_find_nearest_q_idx@LIBAVUTIL_51 1:2.6.0
- av_find_opt@LIBAVUTIL_51 1:2.6.0
- av_flt2int@LIBAVUTIL_51 1:2.6.0
- av_force_cpu_flags@LIBAVUTIL_51 1:2.6.0
- av_free@LIBAVUTIL_51 1:2.6.0
- av_free_expr@LIBAVUTIL_51 1:2.6.0
- av_freep@LIBAVUTIL_51 1:2.6.0
- av_gcd@LIBAVUTIL_51 1:2.6.0
- av_get_alt_sample_fmt@LIBAVUTIL_51 1:2.6.0
- av_get_bits_per_pixel@LIBAVUTIL_51 1:2.6.0
- av_get_bits_per_sample_fmt@LIBAVUTIL_51 1:2.6.0
- av_get_bytes_per_sample@LIBAVUTIL_51 1:2.6.0
- av_get_channel_description@LIBAVUTIL_51 1:2.6.1
- av_get_channel_layout@LIBAVUTIL_51 1:2.6.0
- av_get_channel_layout_channel_index@LIBAVUTIL_51 1:2.6.1
- av_get_channel_layout_nb_channels@LIBAVUTIL_51 1:2.6.0
- av_get_channel_layout_string@LIBAVUTIL_51 1:2.6.0
- av_get_channel_name@LIBAVUTIL_51 1:2.6.1
- av_get_cpu_flags@LIBAVUTIL_51 1:2.6.0
- av_get_default_channel_layout@LIBAVUTIL_51 1:2.6.0
- av_get_double@LIBAVUTIL_51 1:2.6.0
- av_get_int@LIBAVUTIL_51 1:2.6.0
- av_get_media_type_string@LIBAVUTIL_51 1:2.6.0
- av_get_packed_sample_fmt@LIBAVUTIL_51 1:2.6.0
- av_get_picture_type_char@LIBAVUTIL_51 1:2.6.0
- av_get_pix_fmt@LIBAVUTIL_51 1:2.6.0
- av_get_pix_fmt_name@LIBAVUTIL_51 1:2.6.0
- av_get_pix_fmt_string@LIBAVUTIL_51 1:2.6.0
- av_get_planar_sample_fmt@LIBAVUTIL_51 1:2.6.0
- av_get_q@LIBAVUTIL_51 1:2.6.0
- av_get_random_seed@LIBAVUTIL_51 1:2.6.0
- av_get_sample_fmt@LIBAVUTIL_51 1:2.6.0
- av_get_sample_fmt_name@LIBAVUTIL_51 1:2.6.0
- av_get_sample_fmt_string@LIBAVUTIL_51 1:2.6.0
- av_get_standard_channel_layout@LIBAVUTIL_51 1:2.6.1
- av_get_string@LIBAVUTIL_51 1:2.6.0
- av_get_token@LIBAVUTIL_51 1:2.6.0
- av_gettime@LIBAVUTIL_51 1:2.6.1
- av_image_alloc@LIBAVUTIL_51 1:2.6.0
- av_image_check_size@LIBAVUTIL_51 1:2.6.0
- av_image_copy@LIBAVUTIL_51 1:2.6.0
- av_image_copy_plane@LIBAVUTIL_51 1:2.6.0
- av_image_copy_to_buffer@LIBAVUTIL_51 1:2.6.1
- av_image_fill_arrays@LIBAVUTIL_51 1:2.6.1
- av_image_fill_linesizes@LIBAVUTIL_51 1:2.6.0
- av_image_fill_max_pixsteps@LIBAVUTIL_51 1:2.6.0
- av_image_fill_pointers@LIBAVUTIL_51 1:2.6.0
- av_image_get_buffer_size@LIBAVUTIL_51 1:2.6.1
- av_image_get_linesize@LIBAVUTIL_51 1:2.6.0
- av_init_lls@LIBAVUTIL_51 1:2.6.0
- av_int2dbl@LIBAVUTIL_51 1:2.6.0
- av_int2flt@LIBAVUTIL_51 1:2.6.0
- av_lfg_init@LIBAVUTIL_51 1:2.6.0
- av_log@LIBAVUTIL_51 1:2.6.0
- av_log_default_callback@LIBAVUTIL_51 1:2.6.0
- av_log_format_line@LIBAVUTIL_51 1:2.6.0
- av_log_get_level@LIBAVUTIL_51 1:2.6.0
- av_log_set_callback@LIBAVUTIL_51 1:2.6.0
- av_log_set_flags@LIBAVUTIL_51 1:2.6.0
- av_log_set_level@LIBAVUTIL_51 1:2.6.0
- av_lzo1x_decode@LIBAVUTIL_51 1:2.6.0
- av_malloc@LIBAVUTIL_51 1:2.6.0
- av_mallocz@LIBAVUTIL_51 1:2.6.0
- av_max_alloc@LIBAVUTIL_51 1:2.6.0
- av_md5_final@LIBAVUTIL_51 1:2.6.0
- av_md5_init@LIBAVUTIL_51 1:2.6.0
- av_md5_size@LIBAVUTIL_51 1:2.6.0
- av_md5_sum@LIBAVUTIL_51 1:2.6.0
- av_md5_update@LIBAVUTIL_51 1:2.6.0
- av_memcpy_backptr@LIBAVUTIL_51 1:2.6.0
- av_mul_q@LIBAVUTIL_51 1:2.6.0
- av_nearer_q@LIBAVUTIL_51 1:2.6.0
- av_next_option@LIBAVUTIL_51 1:2.6.0
- av_opt_child_class_next@LIBAVUTIL_51 1:2.6.0
- av_opt_child_next@LIBAVUTIL_51 1:2.6.0
- av_opt_eval_double@LIBAVUTIL_51 1:2.6.0
- av_opt_eval_flags@LIBAVUTIL_51 1:2.6.0
- av_opt_eval_float@LIBAVUTIL_51 1:2.6.0
- av_opt_eval_int64@LIBAVUTIL_51 1:2.6.0
- av_opt_eval_int@LIBAVUTIL_51 1:2.6.0
- av_opt_eval_q@LIBAVUTIL_51 1:2.6.0
- av_opt_find2@LIBAVUTIL_51 1:2.6.0
- av_opt_find@LIBAVUTIL_51 1:2.6.0
- av_opt_flag_is_set@LIBAVUTIL_51 1:2.6.0
- av_opt_free@LIBAVUTIL_51 1:2.6.0
- av_opt_get@LIBAVUTIL_51 1:2.6.0
- av_opt_get_double@LIBAVUTIL_51 1:2.6.0
- av_opt_get_int@LIBAVUTIL_51 1:2.6.0
- av_opt_get_q@LIBAVUTIL_51 1:2.6.0
- av_opt_next@LIBAVUTIL_51 1:2.6.0
- av_opt_ptr@LIBAVUTIL_51 1:2.6.0
- av_opt_set@LIBAVUTIL_51 1:2.6.0
- av_opt_set_bin@LIBAVUTIL_51 1:2.6.1
- av_opt_set_defaults2@LIBAVUTIL_51 1:2.6.0
- av_opt_set_defaults@LIBAVUTIL_51 1:2.6.0
- av_opt_set_dict@LIBAVUTIL_51 1:2.6.0
- av_opt_set_double@LIBAVUTIL_51 1:2.6.0
- av_opt_set_int@LIBAVUTIL_51 1:2.6.0
- av_opt_set_q@LIBAVUTIL_51 1:2.6.0
- av_opt_show2@LIBAVUTIL_51 1:2.6.0
- av_parse_and_eval_expr@LIBAVUTIL_51 1:2.6.0
- av_parse_color@LIBAVUTIL_51 1:2.6.0
- av_parse_cpu_caps@LIBAVUTIL_51 1:2.6.0
- av_parse_cpu_flags@LIBAVUTIL_51 1:2.6.0
- av_parse_expr@LIBAVUTIL_51 1:2.6.0
- av_parse_ratio@LIBAVUTIL_51 1:2.6.0
- av_parse_time@LIBAVUTIL_51 1:2.6.0
- av_parse_video_rate@LIBAVUTIL_51 1:2.6.0
- av_parse_video_size@LIBAVUTIL_51 1:2.6.0
- av_pix_fmt_descriptors@LIBAVUTIL_51 1:2.6.0
- av_rc4_crypt@LIBAVUTIL_51 1:2.6.0
- av_rc4_init@LIBAVUTIL_51 1:2.6.0
- av_read_image_line@LIBAVUTIL_51 1:2.6.0
- av_realloc@LIBAVUTIL_51 1:2.6.0
- av_realloc_f@LIBAVUTIL_51 1:2.6.0
- av_reduce@LIBAVUTIL_51 1:2.6.0
- av_rescale@LIBAVUTIL_51 1:2.6.0
- av_rescale_q@LIBAVUTIL_51 1:2.6.0
- av_rescale_q_rnd@LIBAVUTIL_51 1:2.6.0
- av_rescale_rnd@LIBAVUTIL_51 1:2.6.0
- av_reverse@LIBAVUTIL_51 1:2.6.0
- av_sample_fmt_is_planar@LIBAVUTIL_51 1:2.6.0
- av_samples_alloc@LIBAVUTIL_51 1:2.6.0
- av_samples_copy@LIBAVUTIL_51 1:2.6.0
- av_samples_fill_arrays@LIBAVUTIL_51 1:2.6.0
- av_samples_get_buffer_size@LIBAVUTIL_51 1:2.6.0
- av_samples_set_silence@LIBAVUTIL_51 1:2.6.0
- av_set_cpu_flags_mask@LIBAVUTIL_51 1:2.6.0
- av_set_double@LIBAVUTIL_51 1:2.6.0
- av_set_int@LIBAVUTIL_51 1:2.6.0
- av_set_options_string@LIBAVUTIL_51 1:2.6.0
- av_set_q@LIBAVUTIL_51 1:2.6.0
- av_set_string3@LIBAVUTIL_51 1:2.6.0
- av_sha_final@LIBAVUTIL_51 1:2.6.0
- av_sha_init@LIBAVUTIL_51 1:2.6.0
- av_sha_size@LIBAVUTIL_51 1:2.6.0
- av_sha_update@LIBAVUTIL_51 1:2.6.0
- av_small_strptime@LIBAVUTIL_51 1:2.6.1
- av_solve_lls@LIBAVUTIL_51 1:2.6.0
- av_strcasecmp@LIBAVUTIL_51 1:2.6.0
- av_strdup@LIBAVUTIL_51 1:2.6.0
- av_strerror@LIBAVUTIL_51 1:2.6.0
- av_stristart@LIBAVUTIL_51 1:2.6.0
- av_stristr@LIBAVUTIL_51 1:2.6.0
- av_strlcat@LIBAVUTIL_51 1:2.6.0
- av_strlcatf@LIBAVUTIL_51 1:2.6.0
- av_strlcpy@LIBAVUTIL_51 1:2.6.0
- av_strncasecmp@LIBAVUTIL_51 1:2.6.0
- av_strstart@LIBAVUTIL_51 1:2.6.0
- av_strtod@LIBAVUTIL_51 1:2.6.0
- av_strtok@LIBAVUTIL_51 1:2.6.0
- av_sub_q@LIBAVUTIL_51 1:2.6.0
- av_tempfile@LIBAVUTIL_51 1:2.6.0
- av_timecode_adjust_ntsc_framenum2@LIBAVUTIL_51 1:2.6.1
- av_timecode_adjust_ntsc_framenum@LIBAVUTIL_51 1:2.6.0
- av_timecode_check_frame_rate@LIBAVUTIL_51 1:2.6.1
- av_timecode_get_smpte_from_framenum@LIBAVUTIL_51 1:2.6.0
- av_timecode_init@LIBAVUTIL_51 1:2.6.0
- av_timecode_init_from_string@LIBAVUTIL_51 1:2.6.0
- av_timecode_make_mpeg_tc_string@LIBAVUTIL_51 1:2.6.0
- av_timecode_make_smpte_tc_string@LIBAVUTIL_51 1:2.6.0
- av_timecode_make_string@LIBAVUTIL_51 1:2.6.0
- av_timegm@LIBAVUTIL_51 1:2.6.0
- av_tree_destroy@LIBAVUTIL_51 1:2.6.0
- av_tree_enumerate@LIBAVUTIL_51 1:2.6.0
- av_tree_find@LIBAVUTIL_51 1:2.6.0
- av_tree_insert@LIBAVUTIL_51 1:2.6.0
- av_tree_node_size@LIBAVUTIL_51 1:2.6.0
- av_update_lls@LIBAVUTIL_51 1:2.6.0
- av_usleep@LIBAVUTIL_51 1:2.6.1
- av_vlog@LIBAVUTIL_51 1:2.6.0
- av_write_image_line@LIBAVUTIL_51 1:2.6.0
- av_xtea_crypt@LIBAVUTIL_51 1:2.6.1
- av_xtea_init@LIBAVUTIL_51 1:2.6.1
- avpriv_float_dsp_init@LIBAVUTIL_51 1:2.6.1
- avutil_configuration@LIBAVUTIL_51 1:2.6.0
- avutil_license@LIBAVUTIL_51 1:2.6.0
- avutil_version@LIBAVUTIL_51 1:2.6.0
- ff_float_dsp_init_x86@LIBAVUTIL_51 1:2.6.1
- ff_get_cpu_flags_x86@LIBAVUTIL_51 1:2.6.0
- ff_inverse@LIBAVUTIL_51 1:2.6.0
- ff_log2_tab@LIBAVUTIL_51 1:2.6.0
- ff_set_systematic_pal2@LIBAVUTIL_51 1:2.6.0
- ff_sqrt_tab@LIBAVUTIL_51 1:2.6.0
+libADM6avutil.so.52 libavidemux2.6 #MINVER#
+ LIBAVUTIL_52@LIBAVUTIL_52 1:2.6.2
+ av_add_q@LIBAVUTIL_52 1:2.6.2
+ av_adler32_update@LIBAVUTIL_52 1:2.6.2
+ av_aes_alloc@LIBAVUTIL_52 1:2.6.2
+ av_aes_crypt@LIBAVUTIL_52 1:2.6.2
+ av_aes_init@LIBAVUTIL_52 1:2.6.2
+ av_aes_size@LIBAVUTIL_52 1:2.6.2
+ av_asprintf@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_alloc@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_drain@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_free@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_read@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_realloc@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_reset@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_size@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_space@LIBAVUTIL_52 1:2.6.2
+ av_audio_fifo_write@LIBAVUTIL_52 1:2.6.2
+ av_base64_decode@LIBAVUTIL_52 1:2.6.2
+ av_base64_encode@LIBAVUTIL_52 1:2.6.2
+ av_basename@LIBAVUTIL_52 1:2.6.2
+ av_blowfish_crypt@LIBAVUTIL_52 1:2.6.2
+ av_blowfish_crypt_ecb@LIBAVUTIL_52 1:2.6.2
+ av_blowfish_init@LIBAVUTIL_52 1:2.6.2
+ av_bmg_get@LIBAVUTIL_52 1:2.6.2
+ av_bprint_channel_layout@LIBAVUTIL_52 1:2.6.2
+ av_bprint_chars@LIBAVUTIL_52 1:2.6.2
+ av_bprint_clear@LIBAVUTIL_52 1:2.6.2
+ av_bprint_finalize@LIBAVUTIL_52 1:2.6.2
+ av_bprint_get_buffer@LIBAVUTIL_52 1:2.6.2
+ av_bprint_init@LIBAVUTIL_52 1:2.6.2
+ av_bprint_init_for_buffer@LIBAVUTIL_52 1:2.6.2
+ av_bprint_strftime@LIBAVUTIL_52 1:2.6.2
+ av_bprintf@LIBAVUTIL_52 1:2.6.2
+ av_calloc@LIBAVUTIL_52 1:2.6.2
+ av_channel_layout_extract_channel@LIBAVUTIL_52 1:2.6.2
+ av_compare_mod@LIBAVUTIL_52 1:2.6.2
+ av_compare_ts@LIBAVUTIL_52 1:2.6.2
+ av_crc@LIBAVUTIL_52 1:2.6.2
+ av_crc_get_table@LIBAVUTIL_52 1:2.6.2
+ av_crc_init@LIBAVUTIL_52 1:2.6.2
+ av_ctz@LIBAVUTIL_52 1:2.6.2
+ av_d2q@LIBAVUTIL_52 1:2.6.2
+ av_d2str@LIBAVUTIL_52 1:2.6.2
+ av_dbl2ext@LIBAVUTIL_52 1:2.6.2
+ av_dbl2int@LIBAVUTIL_52 1:2.6.2
+ av_default_get_category@LIBAVUTIL_52 1:2.6.2
+ av_default_item_name@LIBAVUTIL_52 1:2.6.2
+ av_des_crypt@LIBAVUTIL_52 1:2.6.2
+ av_des_init@LIBAVUTIL_52 1:2.6.2
+ av_des_mac@LIBAVUTIL_52 1:2.6.2
+ av_dict_copy@LIBAVUTIL_52 1:2.6.2
+ av_dict_count@LIBAVUTIL_52 1:2.6.2
+ av_dict_free@LIBAVUTIL_52 1:2.6.2
+ av_dict_get@LIBAVUTIL_52 1:2.6.2
+ av_dict_set@LIBAVUTIL_52 1:2.6.2
+ av_dirname@LIBAVUTIL_52 1:2.6.2
+ av_div_q@LIBAVUTIL_52 1:2.6.2
+ av_dynarray_add@LIBAVUTIL_52 1:2.6.2
+ av_evaluate_lls@LIBAVUTIL_52 1:2.6.2
+ av_expr_eval@LIBAVUTIL_52 1:2.6.2
+ av_expr_free@LIBAVUTIL_52 1:2.6.2
+ av_expr_parse@LIBAVUTIL_52 1:2.6.2
+ av_expr_parse_and_eval@LIBAVUTIL_52 1:2.6.2
+ av_ext2dbl@LIBAVUTIL_52 1:2.6.2
+ av_fifo_alloc@LIBAVUTIL_52 1:2.6.2
+ av_fifo_drain@LIBAVUTIL_52 1:2.6.2
+ av_fifo_free@LIBAVUTIL_52 1:2.6.2
+ av_fifo_generic_read@LIBAVUTIL_52 1:2.6.2
+ av_fifo_generic_write@LIBAVUTIL_52 1:2.6.2
+ av_fifo_grow@LIBAVUTIL_52 1:2.6.2
+ av_fifo_realloc2@LIBAVUTIL_52 1:2.6.2
+ av_fifo_reset@LIBAVUTIL_52 1:2.6.2
+ av_fifo_size@LIBAVUTIL_52 1:2.6.2
+ av_fifo_space@LIBAVUTIL_52 1:2.6.2
+ av_file_map@LIBAVUTIL_52 1:2.6.2
+ av_file_unmap@LIBAVUTIL_52 1:2.6.2
+ av_find_info_tag@LIBAVUTIL_52 1:2.6.2
+ av_find_nearest_q_idx@LIBAVUTIL_52 1:2.6.2
+ av_find_opt@LIBAVUTIL_52 1:2.6.2
+ av_flt2int@LIBAVUTIL_52 1:2.6.2
+ av_force_cpu_flags@LIBAVUTIL_52 1:2.6.2
+ av_free@LIBAVUTIL_52 1:2.6.2
+ av_freep@LIBAVUTIL_52 1:2.6.2
+ av_gcd@LIBAVUTIL_52 1:2.6.2
+ av_get_alt_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_get_bits_per_pixel@LIBAVUTIL_52 1:2.6.2
+ av_get_bits_per_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_get_bytes_per_sample@LIBAVUTIL_52 1:2.6.2
+ av_get_channel_description@LIBAVUTIL_52 1:2.6.2
+ av_get_channel_layout@LIBAVUTIL_52 1:2.6.2
+ av_get_channel_layout_channel_index@LIBAVUTIL_52 1:2.6.2
+ av_get_channel_layout_nb_channels@LIBAVUTIL_52 1:2.6.2
+ av_get_channel_layout_string@LIBAVUTIL_52 1:2.6.2
+ av_get_channel_name@LIBAVUTIL_52 1:2.6.2
+ av_get_cpu_flags@LIBAVUTIL_52 1:2.6.2
+ av_get_default_channel_layout@LIBAVUTIL_52 1:2.6.2
+ av_get_double@LIBAVUTIL_52 1:2.6.2
+ av_get_int@LIBAVUTIL_52 1:2.6.2
+ av_get_media_type_string@LIBAVUTIL_52 1:2.6.2
+ av_get_packed_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_get_padded_bits_per_pixel@LIBAVUTIL_52 1:2.6.2
+ av_get_picture_type_char@LIBAVUTIL_52 1:2.6.2
+ av_get_pix_fmt@LIBAVUTIL_52 1:2.6.2
+ av_get_pix_fmt_name@LIBAVUTIL_52 1:2.6.2
+ av_get_pix_fmt_string@LIBAVUTIL_52 1:2.6.2
+ av_get_planar_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_get_q@LIBAVUTIL_52 1:2.6.2
+ av_get_random_seed@LIBAVUTIL_52 1:2.6.2
+ av_get_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_get_sample_fmt_name@LIBAVUTIL_52 1:2.6.2
+ av_get_sample_fmt_string@LIBAVUTIL_52 1:2.6.2
+ av_get_standard_channel_layout@LIBAVUTIL_52 1:2.6.2
+ av_get_string@LIBAVUTIL_52 1:2.6.2
+ av_get_token@LIBAVUTIL_52 1:2.6.2
+ av_gettime@LIBAVUTIL_52 1:2.6.2
+ av_image_alloc@LIBAVUTIL_52 1:2.6.2
+ av_image_check_size@LIBAVUTIL_52 1:2.6.2
+ av_image_copy@LIBAVUTIL_52 1:2.6.2
+ av_image_copy_plane@LIBAVUTIL_52 1:2.6.2
+ av_image_copy_to_buffer@LIBAVUTIL_52 1:2.6.2
+ av_image_fill_arrays@LIBAVUTIL_52 1:2.6.2
+ av_image_fill_linesizes@LIBAVUTIL_52 1:2.6.2
+ av_image_fill_max_pixsteps@LIBAVUTIL_52 1:2.6.2
+ av_image_fill_pointers@LIBAVUTIL_52 1:2.6.2
+ av_image_get_buffer_size@LIBAVUTIL_52 1:2.6.2
+ av_image_get_linesize@LIBAVUTIL_52 1:2.6.2
+ av_init_lls@LIBAVUTIL_52 1:2.6.2
+ av_int2dbl@LIBAVUTIL_52 1:2.6.2
+ av_int2flt@LIBAVUTIL_52 1:2.6.2
+ av_lfg_init@LIBAVUTIL_52 1:2.6.2
+ av_log2@LIBAVUTIL_52 1:2.6.2
+ av_log2_16bit@LIBAVUTIL_52 1:2.6.2
+ av_log@LIBAVUTIL_52 1:2.6.2
+ av_log_default_callback@LIBAVUTIL_52 1:2.6.2
+ av_log_format_line@LIBAVUTIL_52 1:2.6.2
+ av_log_get_level@LIBAVUTIL_52 1:2.6.2
+ av_log_set_callback@LIBAVUTIL_52 1:2.6.2
+ av_log_set_flags@LIBAVUTIL_52 1:2.6.2
+ av_log_set_level@LIBAVUTIL_52 1:2.6.2
+ av_malloc@LIBAVUTIL_52 1:2.6.2
+ av_mallocz@LIBAVUTIL_52 1:2.6.2
+ av_max_alloc@LIBAVUTIL_52 1:2.6.2
+ av_md5_alloc@LIBAVUTIL_52 1:2.6.2
+ av_md5_final@LIBAVUTIL_52 1:2.6.2
+ av_md5_init@LIBAVUTIL_52 1:2.6.2
+ av_md5_size@LIBAVUTIL_52 1:2.6.2
+ av_md5_sum@LIBAVUTIL_52 1:2.6.2
+ av_md5_update@LIBAVUTIL_52 1:2.6.2
+ av_memcpy_backptr@LIBAVUTIL_52 1:2.6.2
+ av_mul_q@LIBAVUTIL_52 1:2.6.2
+ av_nearer_q@LIBAVUTIL_52 1:2.6.2
+ av_next_option@LIBAVUTIL_52 1:2.6.2
+ av_opt_child_class_next@LIBAVUTIL_52 1:2.6.2
+ av_opt_child_next@LIBAVUTIL_52 1:2.6.2
+ av_opt_eval_double@LIBAVUTIL_52 1:2.6.2
+ av_opt_eval_flags@LIBAVUTIL_52 1:2.6.2
+ av_opt_eval_float@LIBAVUTIL_52 1:2.6.2
+ av_opt_eval_int64@LIBAVUTIL_52 1:2.6.2
+ av_opt_eval_int@LIBAVUTIL_52 1:2.6.2
+ av_opt_eval_q@LIBAVUTIL_52 1:2.6.2
+ av_opt_find2@LIBAVUTIL_52 1:2.6.2
+ av_opt_find@LIBAVUTIL_52 1:2.6.2
+ av_opt_flag_is_set@LIBAVUTIL_52 1:2.6.2
+ av_opt_free@LIBAVUTIL_52 1:2.6.2
+ av_opt_freep_ranges@LIBAVUTIL_52 1:2.6.2
+ av_opt_get@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_double@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_image_size@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_int@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_key_value@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_pixel_fmt@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_q@LIBAVUTIL_52 1:2.6.2
+ av_opt_get_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_opt_next@LIBAVUTIL_52 1:2.6.2
+ av_opt_ptr@LIBAVUTIL_52 1:2.6.2
+ av_opt_query_ranges@LIBAVUTIL_52 1:2.6.2
+ av_opt_query_ranges_default@LIBAVUTIL_52 1:2.6.2
+ av_opt_set@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_bin@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_defaults2@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_defaults@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_dict@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_double@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_from_string@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_image_size@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_int@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_pixel_fmt@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_q@LIBAVUTIL_52 1:2.6.2
+ av_opt_set_sample_fmt@LIBAVUTIL_52 1:2.6.2
+ av_opt_show2@LIBAVUTIL_52 1:2.6.2
+ av_parse_color@LIBAVUTIL_52 1:2.6.2
+ av_parse_cpu_caps@LIBAVUTIL_52 1:2.6.2
+ av_parse_cpu_flags@LIBAVUTIL_52 1:2.6.2
+ av_parse_ratio@LIBAVUTIL_52 1:2.6.2
+ av_parse_time@LIBAVUTIL_52 1:2.6.2
+ av_parse_video_rate@LIBAVUTIL_52 1:2.6.2
+ av_parse_video_size@LIBAVUTIL_52 1:2.6.2
+ av_pix_fmt_desc_get@LIBAVUTIL_52 1:2.6.2
+ av_pix_fmt_desc_get_id@LIBAVUTIL_52 1:2.6.2
+ av_pix_fmt_desc_next@LIBAVUTIL_52 1:2.6.2
+ av_pix_fmt_descriptors@LIBAVUTIL_52 1:2.6.2
+ av_pix_fmt_get_chroma_sub_sample@LIBAVUTIL_52 1:2.6.2
+ av_rc4_crypt@LIBAVUTIL_52 1:2.6.2
+ av_rc4_init@LIBAVUTIL_52 1:2.6.2
+ av_read_image_line@LIBAVUTIL_52 1:2.6.2
+ av_realloc@LIBAVUTIL_52 1:2.6.2
+ av_realloc_f@LIBAVUTIL_52 1:2.6.2
+ av_reduce@LIBAVUTIL_52 1:2.6.2
+ av_rescale@LIBAVUTIL_52 1:2.6.2
+ av_rescale_delta@LIBAVUTIL_52 1:2.6.2
+ av_rescale_q@LIBAVUTIL_52 1:2.6.2
+ av_rescale_q_rnd@LIBAVUTIL_52 1:2.6.2
+ av_rescale_rnd@LIBAVUTIL_52 1:2.6.2
+ av_reverse@LIBAVUTIL_52 1:2.6.2
+ av_sample_fmt_is_planar@LIBAVUTIL_52 1:2.6.2
+ av_samples_alloc@LIBAVUTIL_52 1:2.6.2
+ av_samples_copy@LIBAVUTIL_52 1:2.6.2
+ av_samples_fill_arrays@LIBAVUTIL_52 1:2.6.2
+ av_samples_get_buffer_size@LIBAVUTIL_52 1:2.6.2
+ av_samples_set_silence@LIBAVUTIL_52 1:2.6.2
+ av_set_cpu_flags_mask@LIBAVUTIL_52 1:2.6.2
+ av_set_double@LIBAVUTIL_52 1:2.6.2
+ av_set_int@LIBAVUTIL_52 1:2.6.2
+ av_set_options_string@LIBAVUTIL_52 1:2.6.2
+ av_set_q@LIBAVUTIL_52 1:2.6.2
+ av_set_string3@LIBAVUTIL_52 1:2.6.2
+ av_sha_alloc@LIBAVUTIL_52 1:2.6.2
+ av_sha_final@LIBAVUTIL_52 1:2.6.2
+ av_sha_init@LIBAVUTIL_52 1:2.6.2
+ av_sha_size@LIBAVUTIL_52 1:2.6.2
+ av_sha_update@LIBAVUTIL_52 1:2.6.2
+ av_small_strptime@LIBAVUTIL_52 1:2.6.2
+ av_solve_lls@LIBAVUTIL_52 1:2.6.2
+ av_strcasecmp@LIBAVUTIL_52 1:2.6.2
+ av_strdup@LIBAVUTIL_52 1:2.6.2
+ av_strerror@LIBAVUTIL_52 1:2.6.2
+ av_stristart@LIBAVUTIL_52 1:2.6.2
+ av_stristr@LIBAVUTIL_52 1:2.6.2
+ av_strlcat@LIBAVUTIL_52 1:2.6.2
+ av_strlcatf@LIBAVUTIL_52 1:2.6.2
+ av_strlcpy@LIBAVUTIL_52 1:2.6.2
+ av_strncasecmp@LIBAVUTIL_52 1:2.6.2
+ av_strstart@LIBAVUTIL_52 1:2.6.2
+ av_strtod@LIBAVUTIL_52 1:2.6.2
+ av_strtok@LIBAVUTIL_52 1:2.6.2
+ av_sub_q@LIBAVUTIL_52 1:2.6.2
+ av_tempfile@LIBAVUTIL_52 1:2.6.2
+ av_timecode_adjust_ntsc_framenum2@LIBAVUTIL_52 1:2.6.2
+ av_timecode_check_frame_rate@LIBAVUTIL_52 1:2.6.2
+ av_timecode_get_smpte_from_framenum@LIBAVUTIL_52 1:2.6.2
+ av_timecode_init@LIBAVUTIL_52 1:2.6.2
+ av_timecode_init_from_string@LIBAVUTIL_52 1:2.6.2
+ av_timecode_make_mpeg_tc_string@LIBAVUTIL_52 1:2.6.2
+ av_timecode_make_smpte_tc_string@LIBAVUTIL_52 1:2.6.2
+ av_timecode_make_string@LIBAVUTIL_52 1:2.6.2
+ av_timegm@LIBAVUTIL_52 1:2.6.2
+ av_tree_destroy@LIBAVUTIL_52 1:2.6.2
+ av_tree_enumerate@LIBAVUTIL_52 1:2.6.2
+ av_tree_find@LIBAVUTIL_52 1:2.6.2
+ av_tree_insert@LIBAVUTIL_52 1:2.6.2
+ av_tree_node_alloc@LIBAVUTIL_52 1:2.6.2
+ av_tree_node_size@LIBAVUTIL_52 1:2.6.2
+ av_update_lls@LIBAVUTIL_52 1:2.6.2
+ av_usleep@LIBAVUTIL_52 1:2.6.2
+ av_vlog@LIBAVUTIL_52 1:2.6.2
+ av_write_image_line@LIBAVUTIL_52 1:2.6.2
+ av_xtea_crypt@LIBAVUTIL_52 1:2.6.2
+ av_xtea_init@LIBAVUTIL_52 1:2.6.2
+ avpriv_cga_font@LIBAVUTIL_52 1:2.6.2
+ avpriv_float_dsp_init@LIBAVUTIL_52 1:2.6.2
+ avpriv_set_systematic_pal2@LIBAVUTIL_52 1:2.6.2
+ avpriv_vga16_font@LIBAVUTIL_52 1:2.6.2
+ avutil_configuration@LIBAVUTIL_52 1:2.6.2
+ avutil_license@LIBAVUTIL_52 1:2.6.2
+ avutil_version@LIBAVUTIL_52 1:2.6.2
+ ff_float_dsp_init_x86@LIBAVUTIL_52 1:2.6.2
+ ff_get_cpu_flags_x86@LIBAVUTIL_52 1:2.6.2
+ ff_log2_tab@LIBAVUTIL_52 1:2.6.2
 libADM6postproc.so.52 libavidemux2.6 #MINVER#
  LIBPOSTPROC_52@LIBPOSTPROC_52 1:2.6.0
  postproc_configuration@LIBPOSTPROC_52 1:2.6.0
@@ -670,27 +695,6 @@ libADM6postproc.so.52 libavidemux2.6 #MINVER#
  pp_postprocess@LIBPOSTPROC_52 1:2.6.0
 libADM6swscale.so.2 libavidemux2.6 #MINVER#
  LIBSWSCALE_2@LIBSWSCALE_2 1:2.6.0
- ff_M24A@LIBSWSCALE_2 1:2.6.0
- ff_M24B@LIBSWSCALE_2 1:2.6.0
- ff_M24C@LIBSWSCALE_2 1:2.6.0
- ff_bgr2UCoeff@LIBSWSCALE_2 1:2.6.0
- ff_bgr2UVOffset@LIBSWSCALE_2 1:2.6.0
- ff_bgr2VCoeff@LIBSWSCALE_2 1:2.6.0
- ff_bgr2YCoeff@LIBSWSCALE_2 1:2.6.0
- ff_bgr2YOffset@LIBSWSCALE_2 1:2.6.0
- ff_dither4@LIBSWSCALE_2 1:2.6.0
- ff_dither8@LIBSWSCALE_2 1:2.6.0
- ff_getSwsFunc@LIBSWSCALE_2 1:2.6.0
- ff_get_unscaled_swscale@LIBSWSCALE_2 1:2.6.0
- ff_sws_init_input_funcs@LIBSWSCALE_2 1:2.6.0
- ff_sws_init_output_funcs@LIBSWSCALE_2 1:2.6.0
- ff_sws_init_swScale_mmx@LIBSWSCALE_2 1:2.6.0
- ff_sws_pb_64@LIBSWSCALE_2 1:2.6.0
- ff_w1111@LIBSWSCALE_2 1:2.6.0
- ff_yuv2rgb_c_init_tables@LIBSWSCALE_2 1:2.6.0
- ff_yuv2rgb_coeffs@LIBSWSCALE_2 1:2.6.0
- ff_yuv2rgb_get_func_ptr@LIBSWSCALE_2 1:2.6.0
- ff_yuv2rgb_init_mmx@LIBSWSCALE_2 1:2.6.0
  sws_addVec@LIBSWSCALE_2 1:2.6.0
  sws_allocVec@LIBSWSCALE_2 1:2.6.0
  sws_alloc_context@LIBSWSCALE_2 1:2.6.0
@@ -815,6 +819,12 @@ libADM_core6.so libavidemux2.6 #MINVER#
  _ZN12ADMBenchmark9getResultERfRiS1_@Base 1:2.6.0
  _ZN12ADMBenchmarkC1Ev@Base 1:2.6.0
  _ZN12ADMBenchmarkC2Ev@Base 1:2.6.0
+ _ZN12ADMCountdown4doneEv@Base 1:2.6.2
+ _ZN12ADMCountdown5resetEv@Base 1:2.6.2
+ _ZN12ADMCountdownC1Ej@Base 1:2.6.2
+ _ZN12ADMCountdownC2Ej@Base 1:2.6.2
+ _ZN12ADMCountdownD1Ev@Base 1:2.6.2
+ _ZN12ADMCountdownD2Ev@Base 1:2.6.2
  _ZN14ADM_LibWrapper10getSymbolsEiz@Base 1:2.6.0
  _ZN14ADM_LibWrapper11isAvailableEv@Base 1:2.6.0
  _ZN14ADM_LibWrapper11loadLibraryEPKc@Base 1:2.6.0
@@ -1811,7 +1821,6 @@ libADM_coreUtils6.so libavidemux2.6 #MINVER#
  _ZN12jsonChildren7doeraseEPP8JSONNodej@Base 1:2.6.0
  _ZN12jsonChildren8reserve2ERPS_j@Base 1:2.6.0
  _ZN12jsonChildren9deleteAllEv@Base 1:2.6.0
- _ZN14NumberToString5_itoaIxEESsT_@Base 1:2.6.0
  _ZN15ADM_threadQueue10stopThreadEv@Base 1:2.6.0
  _ZN15ADM_threadQueue11startThreadEv@Base 1:2.6.0
  _ZN15ADM_threadQueue3runEv@Base 1:2.6.0
