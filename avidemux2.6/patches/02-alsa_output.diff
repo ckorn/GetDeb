@@ -6,10 +6,10 @@ Author: http://avidemux.org/admForum/viewtopic.php?id=6739
  avidemux/prefs.in                              |    2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Index: avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2.conf
+Index: avidemux2.6-2.6.2/avidemux_core/ADM_coreUtils/src/prefs2.conf
 ===================================================================
---- avidemux-2.6.0.orig/avidemux_core/ADM_coreUtils/src/prefs2.conf	2012-07-25 09:18:58.000000000 +0200
-+++ avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2.conf	2012-09-07 18:06:02.140919911 +0200
+--- avidemux2.6-2.6.2.orig/avidemux_core/ADM_coreUtils/src/prefs2.conf	2013-02-24 13:12:18.000000000 +0100
++++ avidemux2.6-2.6.2/avidemux_core/ADM_coreUtils/src/prefs2.conf	2013-03-14 19:21:10.594538350 +0100
 @@ -51,7 +51,7 @@
  #
  audio_device{
@@ -19,10 +19,10 @@ Index: avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2.conf
  }
  uint32_t:videodevice,			0,	0,	10
  #
-Index: avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2_pref.h
+Index: avidemux2.6-2.6.2/avidemux_core/ADM_coreUtils/src/prefs2_pref.h
 ===================================================================
---- avidemux-2.6.0.orig/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2012-07-25 09:18:58.000000000 +0200
-+++ avidemux-2.6.0/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2012-09-07 18:06:31.060919052 +0200
+--- avidemux2.6-2.6.2.orig/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2013-02-24 13:12:18.000000000 +0100
++++ avidemux2.6-2.6.2/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2013-03-14 19:21:46.062537294 +0100
 @@ -38,7 +38,7 @@
  { LASTPROJECTS_FILE4,"lastprojects.file4"                             ,ADM_param_string  	,"",	0,	0},
  { MESSAGE_LEVEL,"message_level"                                       ,ADM_param_uint32_t	,"2",	0,	2},
