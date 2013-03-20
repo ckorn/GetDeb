@@ -1,3 +1,16 @@
+yad (0.20.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+        - default value for combo-box can be specified by --entry-text from
+          one of existings entries in list
+        - add --single-click option for icon dialog
+        - add log window to progress dialog
+        - fix geometry settings for unresizable windows
+        - fix layout on gtk3
+        - add custom signals for --kill-parent option
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 20 Mar 2013 18:39:45 +0100
+
 yad (0.19.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
