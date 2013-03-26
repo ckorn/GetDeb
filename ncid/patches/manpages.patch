@@ -1,16 +1,16 @@
 A manpage has a wrong section.
 Hyphens were used as minus signs.
-Index: ncid-0.85/man/ncid2ncid.1
+Index: ncid-0.86/man/ncid2ncid.1
 ===================================================================
---- ncid-0.85.orig/man/ncid2ncid.1	2012-09-22 21:18:58.000000000 +0200
-+++ ncid-0.85/man/ncid2ncid.1	2012-10-27 13:39:32.203669477 +0200
+--- ncid-0.86.orig/man/ncid2ncid.1	2013-02-05 07:39:57.000000000 +0100
++++ ncid-0.86/man/ncid2ncid.1	2013-03-26 19:22:49.897880601 +0100
 @@ -1,5 +1,5 @@
  .\" %W% %G%
 -.TH NCID2NCID 8
 +.TH NCID2NCID 1
  .SH NAME
  .B ncid2ncid
- - Connect multiple NCID servers to a single NCID server gateway
+ - Connect multiple NCID servers to a single NCID server
 @@ -48,16 +48,16 @@
  The configuration file for \fIncid2ncid\fR is /etc/ncid/ncid2ncid.conf.
  .SH "OPTIONS"
@@ -97,11 +97,11 @@ Index: ncid-0.85/man/ncid2ncid.1
  .fi
  .SH SEE ALSO
  ncid2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5, ncidd.blacklist
-Index: ncid-0.85/man/ncidd.8
+Index: ncid-0.86/man/ncidd.8
 ===================================================================
---- ncid-0.85.orig/man/ncidd.8	2012-10-13 06:48:20.000000000 +0200
-+++ ncid-0.85/man/ncidd.8	2012-10-27 13:39:32.203669477 +0200
-@@ -118,48 +118,48 @@
+--- ncid-0.86.orig/man/ncidd.8	2013-01-27 02:56:43.000000000 +0100
++++ ncid-0.86/man/ncidd.8	2013-03-26 19:22:49.897880601 +0100
+@@ -117,48 +117,48 @@
  .SH "OPTIONS"
  .PD 0
  .TP
@@ -159,7 +159,7 @@ Index: ncid-0.85/man/ncidd.8
  Generate a generic Caller ID at ring 2 if one is not received
  from the modem either because the telco is not sending it or
  because the modem does not support it.
-@@ -168,71 +168,71 @@
+@@ -167,71 +167,71 @@
  .br
  Default: gencid = 1
  .TP
@@ -244,7 +244,7 @@ Index: ncid-0.85/man/ncidd.8
  Send optional CID data to a client.
  Where \fIdatatype\fR is:
  .br
-@@ -246,22 +246,22 @@
+@@ -245,22 +245,22 @@
  .br
  Default: Optional CID DATA is not sent
  .TP
@@ -272,128 +272,10 @@ Index: ncid-0.85/man/ncidd.8
  Do not use level 9 unless there is a problem in poll().  It grows the
  logfile very fast.
  .br
-Index: ncid-0.85/man/ncidsip.8
+Index: ncid-0.86/man/sip2ncid.8
 ===================================================================
---- ncid-0.85.orig/man/ncidsip.8	2012-10-13 06:48:50.000000000 +0200
-+++ ncid-0.85/man/ncidsip.8	2012-10-27 13:39:32.203669477 +0200
-@@ -10,18 +10,18 @@
- .I Options:
- .PP
- .nf
--[-D                 | --debug]
--[-d <filename>      | --dumpfile <filename>]
--[-i <interface>     | --interface <interface>]
--[-h                 | --help]
--[-l                 | --list]
--[-n <host[:port]>   | --ncid <host[:port]>]
--[-s <[host][:port]> | --sip <[host][:port]>]
--[-p <filename>      | --pidfile <filename>]
--[-t                 | --test]
--[-u                 | --usage]
--[-V                 | --version]
--[-v                 | --verbose]
-+[\-D                 | \-\-debug]
-+[\-d <filename>      | \-\-dumpfile <filename>]
-+[\-i <interface>     | \-\-interface <interface>]
-+[\-h                 | \-\-help]
-+[\-l                 | \-\-list]
-+[\-n <host[:port]>   | \-\-ncid <host[:port]>]
-+[\-s <[host][:port]> | \-\-sip <[host][:port]>]
-+[\-p <filename>      | \-\-pidfile <filename>]
-+[\-t                 | \-\-test]
-+[\-u                 | \-\-usage]
-+[\-V                 | \-\-version]
-+[\-v                 | \-\-verbose]
- .fi
- .SH DESCRIPTION
- Snoops SIP Invites via libpcap and injects the caller id information
-@@ -32,7 +32,7 @@
- The configuration file for \fIncidsip\fR is /etc/ncid/ncidsip.conf.
- .SH "OPTIONS"
- .TP
--.B -s <[host][:port]> | --sip=<[host][:port]>
-+.B \-s <[host][:port]> | \-\-sip=<[host][:port]>
- Specifies the hostname of the SIP device to snoop.  You may also specify
- the UDP port by suffixing the hostname with :<port>, or if no hostname
- is wanted, just :<port>.  If you do not specify a host, it defaults to
-@@ -40,45 +40,45 @@
- <5061> (Vonage default).  Other Vonage ports are 5060 and 10000.  The
- new Vonage default appears to be <10000>.
- .TP
--.B -n <host[:port]> | --ncid=<host[:port]>
-+.B \-n <host[:port]> | \-\-ncid=<host[:port]>
- Specifies the NCID server to connect to.  Port may be specified by
- suffixing the hostname with :<port>.  By default it will connect to
- port 3333 on "localhost".
- .TP
--.B -i <interface> | --interface=<interface>
-+.B \-i <interface> | \-\-interface=<interface>
- Specifies the network interface to snoop on.  If this is not specified
- then libpcap will pick a network interface.  This will generally be
- the first Ethernet interface found.
- .TP
--.B -p <filename> | --pidfile=<filename>
-+.B \-p <filename> | \-\-pidfile=<filename>
- Specifies the pidfile name to write.
- Set to \fI/var/run/ncidsip.pid\fR in a rc or init script when used as a service.
- The program will still run if it does not have permission to write a pidfile.
- There is no default, if pidfile is not set, no pid file will be used.
- .TP
--.B -h | --help
-+.B \-h | \-\-help
- Prints this help
- .TP
--.B -D | --debug
-+.B \-D | \-\-debug
- Display the payload of all packets that matched the libpcap filter.
- .TP
--.B -d <filename> | --dumpfile <filename>
-+.B \-d <filename> | \-\-dumpfile <filename>
- Read packets from a libpcap capture file instead of the network.
- Mostly only useful for development purposes.
- .TP
--.B -u | --usage
-+.B \-u | \-\-usage
- Prints this help
- .TP
--.B -V | --version
-+.B \-V | \-\-version
- Displays the version
- .TP
--.B -v | --verbose
-+.B \-v | \-\-verbose
- Displays status.  Use this option to run interactive.
- .TP
--.B -l | --listdevs
-+.B \-l | \-\-listdevs
- Returns a list of all network device names that can be used.
- .TP
--.B -t | --test
-+.B \-t | \-\-test
- Test for SIP packets.  This option is used to check if SIP packets
- exist without starting the NCID server.  It will display the Caller
- ID line generated when a call comes in, and a CANCEL line if cancel
-@@ -96,13 +96,13 @@
- .SH EXAMPLES
- .nf
- # run ncidsip as root and view status:
--ncidsip -v
-+ncidsip \-v
- 
- # run ncidsip as root and list all network device names:
--ncidsip --listdevs
-+ncidsip \-\-listdevs
- 
- # run ncidsip as root and view SIP packets:
--ncidsip --debug
-+ncidsip \-\-debug
- 
- # run sip from the init file at boot:
- ncidsip
-Index: ncid-0.85/man/sip2ncid.8
-===================================================================
---- ncid-0.85.orig/man/sip2ncid.8	2012-09-22 21:21:04.000000000 +0200
-+++ ncid-0.85/man/sip2ncid.8	2012-10-27 13:39:32.207669477 +0200
+--- ncid-0.86.orig/man/sip2ncid.8	2012-09-22 21:21:04.000000000 +0200
++++ ncid-0.86/man/sip2ncid.8	2013-03-26 19:22:49.897880601 +0100
 @@ -42,48 +42,48 @@
  The configuration file for \fIsip2ncid\fR is /etc/ncid/sip2ncid.conf.
  .SH "OPTIONS"
@@ -541,10 +423,10 @@ Index: ncid-0.85/man/sip2ncid.8
  .fi
  .SH SEE ALSO
  sip2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5
-Index: ncid-0.85/man/yac2ncid.1
+Index: ncid-0.86/man/yac2ncid.1
 ===================================================================
---- ncid-0.85.orig/man/yac2ncid.1	2012-10-13 06:49:11.000000000 +0200
-+++ ncid-0.85/man/yac2ncid.1	2012-10-27 13:39:32.207669477 +0200
+--- ncid-0.86.orig/man/yac2ncid.1	2012-10-13 06:49:11.000000000 +0200
++++ ncid-0.86/man/yac2ncid.1	2013-03-26 19:22:49.897880601 +0100
 @@ -5,7 +5,7 @@
  - YAC server to NCID server gateway
  .SH SYNOPSIS
@@ -570,10 +452,10 @@ Index: ncid-0.85/man/yac2ncid.1
  Verbose mode.
  .PD
  .PD
-Index: ncid-0.85/man/ncid2ncid.conf.5
+Index: ncid-0.86/man/ncid2ncid.conf.5
 ===================================================================
---- ncid-0.85.orig/man/ncid2ncid.conf.5	2011-02-28 03:49:28.000000000 +0100
-+++ ncid-0.85/man/ncid2ncid.conf.5	2012-10-27 13:39:32.207669477 +0200
+--- ncid-0.86.orig/man/ncid2ncid.conf.5	2011-02-28 03:49:28.000000000 +0100
++++ ncid-0.86/man/ncid2ncid.conf.5	2013-03-26 19:22:49.897880601 +0100
 @@ -10,7 +10,7 @@
  The \fIncid2ncid.conf\fR file is used to set options.
  Options are set on a command line.
@@ -583,28 +465,3 @@ Index: ncid-0.85/man/ncid2ncid.conf.5
  between double quotes, or an equal sign.
  .PP
  The \fIncid2ncid.conf\fR file understands 3 types of lines:
-Index: ncid-0.85/man/ncidsip.conf.5
-===================================================================
---- ncid-0.85.orig/man/ncidsip.conf.5	2011-02-28 03:51:32.000000000 +0100
-+++ ncid-0.85/man/ncidsip.conf.5	2012-10-27 13:39:32.207669477 +0200
-@@ -19,17 +19,17 @@
- .PP
- There is only one variable to set: args.
- Args is expected to contain the command line options.  You should not set
--the "-v|--verbose", "-V|--version", "--debug", or the "-h|--help"  options
-+the "\-v|\-\-verbose", "\-V|\-\-version", "\-\-debug", or the "\-h|\-\-help"  options
- See ncidsip.8 for a complete list of variables to set and
- what the default values are.
- .SH EXAMPLES
- Set the SIP port to 5061
- .RS 0
--	args="--sip=:5061"
-+	args="\-\-sip=:5061"
- .RE
- Set PID file
- .RS 0
--	args="--pidfile=/var/run/ncidsip.pid"
-+	args="\-\-pidfile=/var/run/ncidsip.pid"
- .RE
- .SH SEE ALSO
- ncidd.8, ncidsip.8, sip2ncid.8
