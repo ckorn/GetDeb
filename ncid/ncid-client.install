@@ -2,6 +2,7 @@ debian/init.d/ncid-initmodem		etc/init.d
 debian/init.d/ncid-page			etc/init.d
 debian/init.d/ncid-yac			etc/init.d
 etc/ncid/ncid.conf
+etc/ncid/conf.d/ncid-alert.conf
 etc/ncid/conf.d/ncid-skel.conf
 etc/ncid/conf.d/ncid-page.conf
 etc/ncid/conf.d/ncid-notify.conf

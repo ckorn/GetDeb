@@ -1,3 +1,9 @@
+ncid (0.86-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 26 Mar 2013 19:13:28 +0100
+
 ncid (0.85-1~getdeb1) precise; urgency=low
 
   * New upstream version
