@@ -1,3 +1,9 @@
+avidemux2.6 (1:2.6.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 27 Mar 2013 18:26:00 +0100
+
 avidemux2.6 (1:2.6.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
