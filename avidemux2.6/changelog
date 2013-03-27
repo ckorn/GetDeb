@@ -1,3 +1,9 @@
+avidemux2.6 (1:2.6.3-1~getdeb2~quantal) quantal; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 27 Mar 2013 18:26:43 +0100
+
 avidemux2.6 (1:2.6.2-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
