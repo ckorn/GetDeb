@@ -1,8 +1,8 @@
 Update plugin.
 Index: xvst-2.4.1/resources/services/youtube/youtube.js
 ===================================================================
---- xvst-2.4.1.orig/resources/services/youtube/youtube.js	2013-02-25 15:11:14.758862022 +0100
-+++ xvst-2.4.1/resources/services/youtube/youtube.js	2013-02-25 15:11:31.794861518 +0100
+--- xvst-2.4.1.orig/resources/services/youtube/youtube.js	2013-03-29 14:13:52.530353275 +0100
++++ xvst-2.4.1/resources/services/youtube/youtube.js	2013-03-29 14:14:19.214353046 +0100
 @@ -3,7 +3,7 @@
  * This file is part of xVideoServiceThief,
  * an open-source cross-platform Video service download
@@ -17,7 +17,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  function RegistVideoService()
  {
 -	this.version = "2.1.5";
-+	this.version = "3.1.0";
++	this.version = "3.1.1";
  	this.minVersion = "2.0.0a";
 -	this.author = "Xesc & Technology 2009";
 +	this.author = "Xesc & Technology 2013";
@@ -83,7 +83,7 @@ Index: xvst-2.4.1/resources/services/youtube/youtube.js
  
 +function getVideoInformationJSON(html)
 +{
-+	var playerConfig = /yt.playerConfig\s*=\s*\{(.*?)\};/g;
++	var playerConfig = /ytplayer.config\s*=\s*\{(.*?)\};/g;
 +	return eval('({' + playerConfig.exec(html)[1] + '})');
 +}
 +
