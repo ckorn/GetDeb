@@ -1,3 +1,9 @@
+yad (0.20.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 30 Mar 2013 16:04:07 +0100
+
 yad (0.20.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
