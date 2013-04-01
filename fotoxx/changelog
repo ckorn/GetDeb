@@ -1,3 +1,19 @@
+fotoxx (13.04-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Most edit functions can be more rapidly applied to a bunch of images
+      (e.g. the initial processing of fresh images from a camera).
+    + Ubuntu launcher options: blank, last image, gallery of recent images.
+    + Rotate +90 and -90 can have user-defined keyboard shortcuts.
+    + The escape key can be used to cancel dialogs.
+    + The parameter "jpeq quality" is adjustable and saved across sessions.
+    + "installed size" in the debian control file was made more accurate.
+    + Bugfix: crash if [Next] button is clicked rapidly with View Metadata.
+    + Bugfix: search index was not always updated when an edited image file 
+      was saved back to itself.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 31 Mar 2013 23:30:08 +0200
+
 fotoxx (13.03.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
