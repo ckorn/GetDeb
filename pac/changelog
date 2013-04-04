@@ -1,3 +1,51 @@
+pac (4.5.2-1~getdeb2) precise; urgency=low
+
+  * New upstream version
+    . Added support for non UTF-8 encodings in KeePass!!
+    . Added the possibility to have BOTH "rdesktop" and "xfreerdp" connectors
+    at the same time, allowing user to choose which one to use! :)
+    . Added the possibility to "EMBED" RDP windows when using 'xfreerdp'
+    (only tested/working on Ubuntu/Unity). It doesn't always honour the "-X"
+    option :(
+    . Added the possibility to "EMBED" VNC when using 'xtightvnc' (only
+    tested/working on Ubuntu/Unity). It doesn't always provide/honour the
+    embedding option :(
+    . Added an option to not cipher text when exporting connections (more
+    compatibility when importing from another machine)
+    . Added "<KPXRE_GET_(title|username|password|url)
+    _WHERE_(title|username|password|url)==YourPerlRegExp==>" PAC variable to
+    choose a value from KeePass given a source and a Perl Regular Expression
+    ( i.e: <KPXRE_GET_username_WHERE_title==^.*local\d+$==> here,
+    '^.*local\d+$' is the Perl Regular Expression )!!
+    . Added command line option "--start-uuid=<uuid-of-connection-to-start>
+    [:<cluster-where-to-start-it>]"
+    . Added command line option "--edit-uuid=<uuid-of-connection-to-edit>" to
+    start PAC directly editing a connection
+    . Added command line option "--start-script=<script_name_to_start>" to
+    start given script directly on PAC startup
+    . Added command line option "--quick-conn" to start 'Quick Connect' GUI
+    dialog on PAC startup
+    . Added command line option "--preferences" to start 'Preferences' GUI
+    dialog on PAC startup
+    . Added conneciton's "UUID" information on Advanced options of
+    connections
+    . Added right-click populate menu to "Private key" authentication method
+    for both User and Passphrase
+    . Added an option to start/stop automatic string sending from right-click
+    submenu on connections
+    . Changed KeePassX infer behavior to allo using a Regular Expression to
+    match against a Title
+    . Changed PAC behavior when no Gnome2 or Unity are available, allowing
+    user to activate PAC's tray icon
+    . Fixed some bugs with TigerVNC authentications
+    . Fixed a bug with remote RDP forwardings not being correctly saved
+    . Fixed a bug tha tprevented starting RDP terminals with 'xfreerdp' under
+    some circumstances
+    . Fixed a bug with private SSH file not being correctly saved
+    . Other minor code changes / improvements
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 03 Apr 2013 21:21:13 +0200
+
 pac (4.5.1.9-1~getdeb1) precise; urgency=low
 
   * New upstream version
