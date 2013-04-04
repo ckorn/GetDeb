@@ -1,3 +1,9 @@
+soundconverter (2.1.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 02 Apr 2013 18:18:43 +0200
+
 soundconverter (2.0.4-1~getdeb1) precise; urgency=low
 
   * New upstream version
