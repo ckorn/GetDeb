@@ -1,0 +1,50 @@
+Always use wx-config to get the correct paths.
+Hardcoding paths is completely useless.
+Index: freefilesync-5.13/Makefile
+===================================================================
+--- freefilesync-5.13.orig/Makefile	2013-03-12 17:16:10.000000000 +0100
++++ freefilesync-5.13/Makefile	2013-04-04 18:20:45.681797179 +0200
+@@ -36,19 +36,8 @@
+ LINKFLAGS += `pkg-config --libs unity`
+ endif
+ 
+-ifeq ($(BUILD),Launchpad)
+-#default build/Launchpad
+ CPPFLAGS  += `wx-config --cxxflags      --debug=no`
+ LINKFLAGS += `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system
+-else
+-#static wxWidgets and boost library linkage for precompiled release
+-WX_CONFIG_BIN =$(HOME)/Desktop/wxGTK-2.8.12/lib/release/bin/wx-config
+-CPPFLAGS  += -I$(HOME)/Desktop/boost_1_53_0
+-BOOST_LIB_DIR =$(HOME)/Desktop/boost_1_53_0/stage/lib
+-
+-CPPFLAGS  += `$(WX_CONFIG_BIN) --cxxflags      --debug=no --static=yes`
+-LINKFLAGS += `$(WX_CONFIG_BIN) --libs std, aui --debug=no --static=yes` $(BOOST_LIB_DIR)/libboost_thread.a $(BOOST_LIB_DIR)/libboost_system.a
+-endif
+ 
+ endif
+ #################### OS X ############################
+Index: freefilesync-5.13/RealtimeSync/Makefile
+===================================================================
+--- freefilesync-5.13.orig/RealtimeSync/Makefile	2013-03-01 21:00:18.000000000 +0100
++++ freefilesync-5.13/RealtimeSync/Makefile	2013-04-04 18:30:17.185792301 +0200
+@@ -17,19 +17,9 @@
+ CPPFLAGS  += `pkg-config --cflags gtk+-2.0`
+ LINKFLAGS += `pkg-config --libs   gtk+-2.0`
+ 
+-ifeq ($(BUILD),Launchpad)
+ #default build/Launchpad
+ CPPFLAGS  += `wx-config --cxxflags --debug=no`
+ LINKFLAGS += `wx-config --libs     --debug=no` -lboost_thread -lboost_system
+-else
+-#static wxWidgets and boost library linkage for precompiled release
+-WX_CONFIG_BIN =$(HOME)/Desktop/wxGTK-2.8.12/lib/release/bin/wx-config
+-CPPFLAGS  += -I$(HOME)/Desktop/boost_1_53_0
+-BOOST_LIB_DIR =$(HOME)/Desktop/boost_1_53_0/stage/lib
+-
+-CPPFLAGS  += `$(WX_CONFIG_BIN) --cxxflags --debug=no --static=yes`
+-LINKFLAGS += `$(WX_CONFIG_BIN) --libs     --debug=no --static=yes` $(BOOST_LIB_DIR)/libboost_thread.a $(BOOST_LIB_DIR)/libboost_system.a
+-endif
+ 
+ endif
+ #################### OS X ############################

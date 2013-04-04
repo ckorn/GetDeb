@@ -19,7 +19,7 @@ export DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/chan
                                | sed -rne 's,^Version: ([^-]+).*,\1,p')
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_clean:
 	dh_auto_clean
