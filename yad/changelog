@@ -1,3 +1,12 @@
+yad (0.20.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - update slovak translation
+    - use double-ckick for selecting date in form dialog
+    - fix check field layout in form dialog for gtk3
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Apr 2013 18:21:51 +0200
+
 yad (0.20.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
