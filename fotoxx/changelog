@@ -1,3 +1,11 @@
+fotoxx (13.04.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Translation updates for Catalan, Dutch, Italian, Portuguese,
+      Russian, Spanish.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Apr 2013 15:57:08 +0200
+
 fotoxx (13.04-1~getdeb1) precise; urgency=low
 
   * New upstream version
