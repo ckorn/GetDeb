@@ -5,7 +5,7 @@ Description: Fixes FTBFS on GNU/Hurd
  on: http://www.gnu.org/software/hurd/hurd/porting/guidelines.html
 Bug:         https://bugzilla.gnome.org/show_bug.cgi?id=668926
 Bug-Debian:  http://bugs.debian.org/408583
-Author:      Sébastien Villemot <sebastien.villemot@ens.fr>
+Author:      Sébastien Villemot <sebastien@debian.org>
 Last-Update: 2012-02-06
 Applied-Upstream: commit: r21900
 --- a/src/backend/xml/gnc-backend-xml.c

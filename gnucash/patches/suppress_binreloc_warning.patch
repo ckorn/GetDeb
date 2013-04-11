@@ -17,7 +17,7 @@ Description: Suppress worthless console message.
 
 --- a/src/bin/gnucash-bin.c
 +++ b/src/bin/gnucash-bin.c
-@@ -816,8 +816,6 @@
+@@ -819,8 +819,6 @@
              g_error_free(binreloc_error);
          }
      }

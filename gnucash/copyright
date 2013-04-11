@@ -35,10 +35,11 @@ Copyright: 2001                     Almer S. Tigelaar <almer@gnome.org>
            2003,2005-2007           David Hampton <hampton@employees.org>
            2004                     David Montenegro <sunrise2000@comcast.net>
            2000-2003,2006           Derek Atkins <warlord@MIT.EDU>
-           2002-2005,2007-2008      Derek Atkins <derek@ihtfp.com>
+           2002-2005,2007-2008,2011 Derek Atkins <derek@ihtfp.com>
            2006                     Eskil Bylund <eskil.bylund@gmail.com>
            2006                     Florian Steinel
            2010                     Geert Janssens <janssens-geert@telenet.be>
+           2012                     Geert Janssens <geert@kobaltwit.be>
            1998                     Gerald Combs
            1999-2000                Heath Martin <martinh@pegasus.cc.ucf.edu>
            2000,2009                Herbert Thoma <herbie@hthoma.de>
@@ -82,7 +83,7 @@ Comment:
 
 Files: debian/*
 Copyright: 2009-2012 Micha Lenk <micha@debian.org>
-           2011-2012 Sébastien Villemot <sebastien.villemot@ens.fr>
+           2011-2012 Sébastien Villemot <sebastien@debian.org>
            2012      Dmitry Smirnov <onlyjob@member.fsf.org>
            2004-2009 Thomas Bushnell, BSG <tb@debian.org>
            2002-2004 James A. Treacy <treacy@debian.org>
@@ -98,22 +99,17 @@ License: GFDL-NIV-1.1
 Comment: 
  http://www.debian.org/vote/2006/vote_001#outcome
 
-Files: packaging/gnucash-2.1.x.ebuild
-Copyright: 1999-2007 Gentoo Foundation
-License: GPL-2
-
 Files: 
  src/import-export/csv/gnc-csv-gnumeric-popup.c
  src/import-export/csv/gnc-csv-gnumeric-popup.h
 Copyright: Gnumeric authors
-License: GPL-2+
-Comment: 
- Those files are from Gnumeric 1.7.8
- Because their copyright ownership is not established
- full list of Gnumeric authors is included in the files.
- .
- Also, the header of the files mentions only GPL-2, but since Gnumeric
- is GPL-2+ the files are actually GPL-2+.
+License: GPL-2 or GPL-3
+
+Files: src/import-export/csv/gnc-csv-import.c
+Copyright: 2001 Almer S. Tigelaar <almer@gnome.org>
+           2003 Morten Welinder <terra@gnome.org>
+           2007 Benny Sperisen <lasindi@gmail.com>
+License: GPL-2 or GPL-3
 
 Files: 
  src/app-utils/gnc-sx-instance-model.c
@@ -124,6 +120,7 @@ Files:
  src/gnome/dialog-sx-since-last-run.h
  src/gnome/gnc-plugin-page-sx-list.c
  src/gnome/gnc-plugin-page-sx-list.h
+ src/gnome-utils/gnc-dense-cal.h
  src/gnome-utils/gnc-sx-instance-dense-cal-adapter.c
  src/gnome-utils/gnc-sx-instance-dense-cal-adapter.h
  src/gnome-utils/gnc-sx-list-tree-model-adapter.c

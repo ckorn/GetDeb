@@ -1,5 +1,7 @@
 usr/lib/*/gnucash/
 usr/bin/gnucash
+usr/bin/gnucash-env
+usr/bin/gnucash-make-guids
 usr/bin/gnc-fq-check
 usr/bin/gnc-fq-helper
 usr/bin/gnc-fq-dump

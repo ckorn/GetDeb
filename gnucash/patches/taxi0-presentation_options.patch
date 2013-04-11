@@ -50,7 +50,7 @@ Description: improvements to taxinvoice presentation
        <?scm (if units? (begin ?>
 --- a/src/report/business-reports/taxinvoice.scm
 +++ b/src/report/business-reports/taxinvoice.scm
-@@ -88,6 +88,10 @@
+@@ -90,6 +90,10 @@
  (define displaypage  (N_ "Display"))
  (define generalpage  gnc:pagename-general)
  ; option names 
@@ -61,7 +61,7 @@ Description: improvements to taxinvoice presentation
  (define optname-report-title   (N_ "Report title"))
  (define optname-invoice-number (N_ "Invoice number"))
  (define optname-template-file  (N_ "Template file"))
-@@ -155,6 +159,9 @@
+@@ -157,6 +161,9 @@
                  ""))
    (add-option (gnc:make-string-option
                  displaypage optname-logo-width "f" (N_ "Width of the logo in CSS format, e.g. 10% or 32px.  Leave blank to display the logo at its natural width.  The height of the logo will be scaled accordingly.") ""))
@@ -71,7 +71,7 @@ Description: improvements to taxinvoice presentation
  
    ;; Heading options
    (add-option (gnc:make-string-option
-@@ -192,6 +199,8 @@
+@@ -194,6 +201,8 @@
                  ""))
                  ;(N_ "(Development version -- don't rely on the numbers on this report without double-checking them.<br>Change the 'Extra Notes' option to get rid of this message)")))
  
@@ -80,7 +80,7 @@ Description: improvements to taxinvoice presentation
    (gnc:options-set-default-section
      report-options generalpage)
  
-@@ -222,6 +231,9 @@
+@@ -224,6 +233,9 @@
                                        (opt-value displaypage optname-text-font)))
           (opt-logofile              (opt-value displaypage  optname-logofile)) 
           (opt-logo-width            (opt-value displaypage  optname-logo-width)) 
@@ -90,7 +90,7 @@ Description: improvements to taxinvoice presentation
           (opt-report-title          (opt-value headingpage  optname-report-title))
           (opt-units-heading         (opt-value headingpage  optname-units))
           (opt-qty-heading           (opt-value headingpage  optname-qty))
-@@ -235,6 +247,7 @@
+@@ -237,6 +249,7 @@
           (opt-subtotal-heading      (opt-value headingpage2 optname-subtotal))
           (opt-amount-due-heading    (opt-value headingpage2 optname-amount-due))
           (opt-payment-recd-heading  (opt-value headingpage2 optname-payment-recd))

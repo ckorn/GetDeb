@@ -1,8 +1,48 @@
-gnucash (1:2.4.11-1~getdeb1) precise; urgency=low
+gnucash (1:2.4.12-1~getdeb1) precise; urgency=low
 
-  * New upstream version (LP: #1030935)
+  * New upstream version (LP: #1164665)
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 30 Jul 2012 19:45:29 +0200
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Apr 2013 23:12:09 +0200
+
+gnucash (1:2.4.12-1) experimental; urgency=low
+
+  * Imported Upstream version 2.4.12
+    - correctly sort subaccounts when renumbering. (Closes: #472996)
+  * handle-xml-parse-failure.patch: remove patch, applied upstream
+  * Refresh other patches
+  * Add Build-Conflicts against guile-2.0, since it does not support SLIB (yet)
+    (Closes: #697720)
+  * Bump build-dependency on python-dev to >= 2.7.3-13. GnuCash configure
+    script needs the pkg-config script python.pc which is present in that
+    version
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 31 Mar 2013 14:59:43 +0200
+
+gnucash (1:2.4.11-2) experimental; urgency=low
+
+  * Use my @debian.org email address
+  * Drop obsolete DM-Upload-Allowed field
+  * Bump to Standards-Version 3.9.4, no changes needed
+  * regcomp-memory-leak.patch: new patch taken from upstream trunk
+    (Closes: #616515)
+  * Ship gnucash-env and gnucash-make-guids in /usr/bin (Closes: #691503)
+  * handle-xml-parse-failure.patch: new patch, fixes potential data loss when
+    XML parsing fails (Closes: #696282)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Thu, 03 Jan 2013 20:40:43 +0100
+
+gnucash (1:2.4.11-1) experimental; urgency=low
+
+  [ Sébastien Villemot ]
+  * Imported Upstream version 2.4.11
+  * debian/copyright: reflect upstream changes
+  * taxi1-customization_improvements.patch: refresh patch
+  * gnucash-tip.patch: remove patch, applied upstream
+
+  [ Dmitry Smirnov ]
+  * adding new hardening-fortification patch
+
+ -- Sébastien Villemot <sebastien.villemot@ens.fr>  Mon, 17 Sep 2012 20:28:03 +0000
 
 gnucash (1:2.4.10-5) unstable; urgency=low
 
