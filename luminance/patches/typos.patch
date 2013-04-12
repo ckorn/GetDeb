@@ -1,9 +1,9 @@
 Just a typo fix.
-Index: luminance-2.3.0/i18n/lang_cs.ts
+Index: luminance-2.3.1/i18n/lang_cs.ts
 ===================================================================
---- luminance-2.3.0.orig/i18n/lang_cs.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_cs.ts	2012-07-06 20:12:04.727275264 +0200
-@@ -496,7 +496,7 @@
+--- luminance-2.3.1.orig/i18n/lang_cs.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_cs.ts	2013-04-12 18:06:03.216359801 +0200
+@@ -443,7 +443,7 @@
          <translation type="unfinished"></translation>
      </message>
      <message>
@@ -12,12 +12,12 @@ Index: luminance-2.3.0/i18n/lang_cs.ts
          <translation type="unfinished"></translation>
      </message>
      <message>
-Index: luminance-2.3.0/i18n/lang_de.ts
+Index: luminance-2.3.1/i18n/lang_de.ts
 ===================================================================
---- luminance-2.3.0.orig/i18n/lang_de.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_de.ts	2012-07-06 20:12:04.895275259 +0200
-@@ -443,7 +443,7 @@
-         <translation>Speichere im Dateiformat: %1</translation>
+--- luminance-2.3.1.orig/i18n/lang_de.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_de.ts	2013-04-12 18:06:03.220359801 +0200
+@@ -446,7 +446,7 @@
+         <translation>Qualität des Ausgabebildes</translation>
      </message>
      <message>
 -        <source>Ouput Image Width:</source>
@@ -25,11 +25,11 @@ Index: luminance-2.3.0/i18n/lang_de.ts
          <translation>Breite des Ausgabebildes:</translation>
      </message>
      <message>
-Index: luminance-2.3.0/i18n/lang_es.ts
+Index: luminance-2.3.1/i18n/lang_es.ts
 ===================================================================
---- luminance-2.3.0.orig/i18n/lang_es.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_es.ts	2012-07-06 20:12:04.743275265 +0200
-@@ -496,7 +496,7 @@
+--- luminance-2.3.1.orig/i18n/lang_es.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_es.ts	2013-04-12 18:06:03.220359801 +0200
+@@ -443,7 +443,7 @@
          <translation type="unfinished"></translation>
      </message>
      <message>
@@ -38,97 +38,10 @@ Index: luminance-2.3.0/i18n/lang_es.ts
          <translation type="unfinished"></translation>
      </message>
      <message>
-Index: luminance-2.3.0/i18n/lang_fi.ts
+Index: luminance-2.3.1/i18n/lang_fi.ts
 ===================================================================
---- luminance-2.3.0.orig/i18n/lang_fi.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_fi.ts	2012-07-06 20:12:04.831275262 +0200
-@@ -501,7 +501,7 @@
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_fr.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_fr.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_fr.ts	2012-07-06 20:12:04.783275263 +0200
-@@ -500,7 +500,7 @@
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_hi.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_hi.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_hi.ts	2012-07-06 20:12:04.975275258 +0200
-@@ -479,7 +479,7 @@
-     </message>
-     <message>
-         <location filename="../src/BatchTM/BatchTMDialog.ui" line="297"/>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_hu.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_hu.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_hu.ts	2012-07-06 20:12:04.903275260 +0200
-@@ -496,7 +496,7 @@
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_id.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_id.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_id.ts	2012-07-06 20:12:04.951275258 +0200
-@@ -496,7 +496,7 @@
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_it.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_it.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_it.ts	2012-07-06 20:12:04.763275263 +0200
-@@ -531,7 +531,7 @@
-         <translation type="obsolete">R&amp;imuovi</translation>
-     </message>
-     <message>
--        <source>Ouput Image Width</source>
-+        <source>Output Image Width</source>
-         <translation type="obsolete">Larghezza immagine</translation>
-     </message>
-     <message>
-@@ -551,7 +551,7 @@
-         <translation type="obsolete">Da Data&amp;base</translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation>Larghezza Immagine:</translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_pl.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_pl.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_pl.ts	2012-07-06 20:12:04.803275263 +0200
+--- luminance-2.3.1.orig/i18n/lang_fi.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_fi.ts	2013-04-12 18:06:03.224359801 +0200
 @@ -444,7 +444,7 @@
          <translation type="unfinished"></translation>
      </message>
@@ -138,37 +51,11 @@ Index: luminance-2.3.0/i18n/lang_pl.ts
          <translation type="unfinished"></translation>
      </message>
      <message>
-Index: luminance-2.3.0/i18n/lang_ro.ts
+Index: luminance-2.3.1/i18n/lang_hi.ts
 ===================================================================
---- luminance-2.3.0.orig/i18n/lang_ro.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_ro.ts	2012-07-06 20:12:04.879275261 +0200
-@@ -517,7 +517,7 @@
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_ru.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_ru.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_ru.ts	2012-07-06 20:12:04.859275260 +0200
-@@ -508,7 +508,7 @@
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
--        <source>Ouput Image Width:</source>
-+        <source>Output Image Width:</source>
-         <translation type="unfinished"></translation>
-     </message>
-     <message>
-Index: luminance-2.3.0/i18n/lang_sk.ts
-===================================================================
---- luminance-2.3.0.orig/i18n/lang_sk.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_sk.ts	2012-07-06 20:12:04.815275262 +0200
-@@ -479,7 +479,7 @@
+--- luminance-2.3.1.orig/i18n/lang_hi.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_hi.ts	2013-04-12 18:06:03.232359801 +0200
+@@ -496,7 +496,7 @@
      </message>
      <message>
          <location filename="../src/BatchTM/BatchTMDialog.ui" line="297"/>
@@ -177,11 +64,102 @@ Index: luminance-2.3.0/i18n/lang_sk.ts
          <translation type="unfinished"></translation>
      </message>
      <message>
-Index: luminance-2.3.0/i18n/lang_zh.ts
+Index: luminance-2.3.1/i18n/lang_hu.ts
 ===================================================================
---- luminance-2.3.0.orig/i18n/lang_zh.ts	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/i18n/lang_zh.ts	2012-07-06 20:12:04.923275258 +0200
-@@ -535,7 +535,7 @@
+--- luminance-2.3.1.orig/i18n/lang_hu.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_hu.ts	2013-04-12 18:06:03.236359801 +0200
+@@ -443,7 +443,7 @@
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_id.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_id.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_id.ts	2013-04-12 18:06:03.240359802 +0200
+@@ -443,7 +443,7 @@
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_it.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_it.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_it.ts	2013-04-12 18:06:03.244359802 +0200
+@@ -455,7 +455,7 @@
+         <translation>Qualità immagine</translation>
+     </message>
+     <message>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation>Larghezza Immagine:</translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_pl.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_pl.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_pl.ts	2013-04-12 18:06:03.248359802 +0200
+@@ -443,7 +443,7 @@
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_ro.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_ro.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_ro.ts	2013-04-12 18:06:03.252359802 +0200
+@@ -444,7 +444,7 @@
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_ru.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_ru.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_ru.ts	2013-04-12 18:06:03.256359802 +0200
+@@ -451,7 +451,7 @@
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_sk.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_sk.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_sk.ts	2013-04-12 18:06:03.256359802 +0200
+@@ -496,7 +496,7 @@
+     </message>
+     <message>
+         <location filename="../src/BatchTM/BatchTMDialog.ui" line="297"/>
+-        <source>Ouput Image Width:</source>
++        <source>Output Image Width:</source>
+         <translation type="unfinished"></translation>
+     </message>
+     <message>
+Index: luminance-2.3.1/i18n/lang_zh.ts
+===================================================================
+--- luminance-2.3.1.orig/i18n/lang_zh.ts	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/i18n/lang_zh.ts	2013-04-12 18:06:03.264359802 +0200
+@@ -519,7 +519,7 @@
      </message>
      <message>
          <location filename="../src/BatchTM/BatchTMDialog.ui" line="297"/>
@@ -190,10 +168,10 @@ Index: luminance-2.3.0/i18n/lang_zh.ts
          <translation type="unfinished">输出图片宽度:</translation>
      </message>
      <message>
-Index: luminance-2.3.0/src/BatchTM/BatchTMDialog.ui
+Index: luminance-2.3.1/src/BatchTM/BatchTMDialog.ui
 ===================================================================
---- luminance-2.3.0.orig/src/BatchTM/BatchTMDialog.ui	2012-07-01 11:10:50.000000000 +0200
-+++ luminance-2.3.0/src/BatchTM/BatchTMDialog.ui	2012-07-06 20:12:39.491274231 +0200
+--- luminance-2.3.1.orig/src/BatchTM/BatchTMDialog.ui	2013-04-07 20:41:14.000000000 +0200
++++ luminance-2.3.1/src/BatchTM/BatchTMDialog.ui	2013-04-12 18:06:03.268359802 +0200
 @@ -294,7 +294,7 @@
              <item>
               <widget class="QLabel" name="label">

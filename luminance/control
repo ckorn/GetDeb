@@ -14,7 +14,8 @@ Build-Depends: debhelper (>= 9),
                libqt4-core,
                libqtwebkit-dev,
                libraw-dev,
-               libpng12-dev
+               libpng12-dev,
+               libboost1.49-dev
 Standards-Version: 3.9.3
 Homepage: http://qtpfsgui.sourceforge.net/
 
