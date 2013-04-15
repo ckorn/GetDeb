@@ -1,0 +1,23 @@
+Description: Patch mkinstalldirs to match version in automake 1.11.6
+ For dh-autoreconf to work correctly, mkinstalldirs needs to match the
+ version installed on the build system.
+ See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=670796
+ .
+ For Ubuntu Raring, this is currently 1.11.6.
+Author: Graham Inggs <graham@nerve.org.za>
+Forwarded: Not needed
+Last-Update: 2013-03-16
+--- a/mkinstalldirs
++++ b/mkinstalldirs
+@@ -81,9 +81,9 @@
+       echo "mkdir -p -- $*"
+       exec mkdir -p -- "$@"
+     else
+-      # On NextStep and OpenStep, the 'mkdir' command does not
++      # On NextStep and OpenStep, the `mkdir' command does not
+       # recognize any option.  It will interpret all options as
+-      # directories to create, and then abort because '.' already
++      # directories to create, and then abort because `.' already
+       # exists.
+       test -d ./-p && rmdir ./-p
+       test -d ./--version && rmdir ./--version
