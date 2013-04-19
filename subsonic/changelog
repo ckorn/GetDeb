@@ -1,3 +1,9 @@
+subsonic (4.8-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 19 Apr 2013 14:20:29 +0200
+
 subsonic (4.7-1~getdeb1) precise; urgency=low
 
   * New upstream version
