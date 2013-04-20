@@ -1,3 +1,10 @@
+gnucash (1:2.4.13-1~getdeb2~quantal) quantal; urgency=low
+
+  * New upstream version
+    2.4.13 is a bugfix release. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 20 Apr 2013 17:33:58 +0200
+
 gnucash (1:2.4.12-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version (LP: #1164665)
