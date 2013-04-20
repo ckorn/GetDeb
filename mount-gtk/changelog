@@ -1,3 +1,9 @@
+mount-gtk (1.4.1-1~getdeb1) quantal; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 20 Apr 2013 17:56:34 +0200
+
 mount-gtk (1.4.0-1~getdeb1) quantal; urgency=low
 
   * New upstream version
