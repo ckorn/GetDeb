@@ -1,3 +1,19 @@
+tvpvrd (4.4.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    User visible changes:
+        - None.
+
+    Bugs fixed:
+        - In rare occasions the CSS file was not sent back when the local
+        browser cache was
+          clean and no "IF-Modified-Since" header was found.
+
+    Internal changes:
+        - None.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 28 Apr 2013 19:39:20 +0200
+
 tvpvrd (4.4.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
