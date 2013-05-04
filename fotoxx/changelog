@@ -1,3 +1,28 @@
+fotoxx (13.05-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + The Fotoxx user guide is now available in Spanish. 
+    + Directory navigation was simplified for multiple top image directories.
+    + A Quick Start guide is shown at first startup (also Help > Quick
+    Start).
+    + The menu names and groupings for edit functions are more conventional. 
+    + User Guide addition: use an ImageMagick function as a Fotoxx function.
+    + New user setting: pan/scroll method: with or against mouse, 1x or
+    zoomed.
+    + New user setting: interpolation method used for image display.
+    + An anti-alias function was added (suppress pixelation or "jaggies").
+    + The Leverage Edits function was expanded to include contrast as a
+    lever.
+    + The popup window for auto file sync goes away by itself (stop
+    irritant).
+    + Workaround to ignore Unity KB shortcuts being sent to the active
+    window.
+    + New Fotoxx releases are now automatically notified at the next startup.
+    + Slide Show: compensate jerky transitions introduced with Ubuntu 13.04.
+    + Edit Geotags: Yahoo web lookup died. Now using MapQuest.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 01 May 2013 16:42:34 +0200
+
 fotoxx (13.04.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
