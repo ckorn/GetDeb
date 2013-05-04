@@ -7,10 +7,10 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
-Index: fotoxx-13.02/Makefile
+Index: fotoxx-13.05/Makefile
 ===================================================================
---- fotoxx-13.02.orig/Makefile	2013-02-06 14:21:41.000000000 +0100
-+++ fotoxx-13.02/Makefile	2013-02-08 22:33:28.650421147 +0100
+--- fotoxx-13.05.orig/Makefile	2013-05-01 09:22:29.000000000 +0200
++++ fotoxx-13.05/Makefile	2013-05-01 16:43:20.023401865 +0200
 @@ -13,9 +13,9 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -23,7 +23,7 @@ Index: fotoxx-13.02/Makefile
  
  CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-3.0`
  LIBS = `pkg-config --libs gtk+-3.0`
-@@ -83,8 +83,8 @@
+@@ -90,8 +90,8 @@
  	cp fotoxx.1.gz $(DESTDIR)$(MANDIR)
  	rm -f fotoxx.1.gz
  	# menu (desktop) file
