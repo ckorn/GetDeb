@@ -1,3 +1,9 @@
+lince (1.3-1~getdeb3~raring) raring; urgency=low
+
+  * Rebuild for raring.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 08 May 2013 16:07:14 +0200
+
 lince (1.3-1~getdeb2~quantal) quantal; urgency=low
 
   * Rebuild for quantal.

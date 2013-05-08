@@ -249,10 +249,8 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZN5boost13intrusive_ptrIN5Lince13AlertsManagerEED2Ev@Base 1.3
  _ZN5boost13intrusive_ptrIN5Lince14SessionManagerEED1Ev@Base 1.3
  _ZN5boost13intrusive_ptrIN5Lince14SessionManagerEED2Ev@Base 1.3
- _ZN5boost13intrusive_ptrIN5Lince14SessionManagerEEaSERKS3_@Base 1.3
  _ZN5boost13intrusive_ptrIN5Lince15TorrentsManagerEED1Ev@Base 1.3
  _ZN5boost13intrusive_ptrIN5Lince15TorrentsManagerEED2Ev@Base 1.3
- _ZN5boost13intrusive_ptrIN5Lince15TorrentsManagerEEaSERKS3_@Base 1.3
  _ZN5boost14checked_deleteIKN10libtorrent12torrent_infoEEEvPT_@Base 1.3
  _ZN5boost14checked_deleteIKN5Lince12SetupManagerEEEvPT_@Base 1.3
  _ZN5boost14checked_deleteIKN5Lince13AlertsManagerEEEvPT_@Base 1.3
@@ -362,7 +360,6 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZN5boost4asio6detail8op_queueINS1_25task_io_service_operationEED2Ev@Base 1.3
  _ZN5boost4asio6detail8op_queueINS1_7wait_opEED1Ev@Base 1.3
  _ZN5boost4asio6detail8op_queueINS1_7wait_opEED2Ev@Base 1.3
- _ZN5boost4bindIvN5Lince15TorrentsManagerERKSt4pairIibEPS2_NS_3argILi1EEEEENS_3_bi6bind_tIT_NS_4_mfi3mf1ISC_T0_T1_EENSA_9list_av_2IT2_T3_E4typeEEEMSF_FSC_SG_ESJ_SK_@Base 1.3
  _ZN5boost4slotINS_8functionIFvRN10libtorrent14torrent_handleEEEEEC1IS6_EERKT_@Base 1.3
  _ZN5boost4slotINS_8functionIFvRN10libtorrent14torrent_handleEEEEEC2IS6_EERKT_@Base 1.3
  _ZN5boost4slotINS_8functionIFvRN10libtorrent14torrent_handleEEEEED1Ev@Base 1.3
@@ -618,7 +615,6 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZNK5boost3any6holderINS_8functionIFvSt4pairIibEEEEE5cloneEv@Base 1.3
  _ZNK5boost3any6holderINS_8functionIFviEEEE4typeEv@Base 1.3
  _ZNK5boost3any6holderINS_8functionIFviEEEE5cloneEv@Base 1.3
- _ZNK5boost4_mfi3mf0IvN5Lince14SessionManagerEEclEPS3_@Base 1.3
  _ZNK5boost6system12system_error4whatEv@Base 1.3
  _ZNK5boost6system14error_category10equivalentERKNS0_10error_codeEi@Base 1.3
  _ZNK5boost6system14error_category10equivalentEiRKNS0_15error_conditionE@Base 1.3
@@ -662,6 +658,8 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPN5Lince11local_alertEEEPT_PKS6_S9_S7_@Base 1.3
  _ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPN5Lince7TorrentEEEPT_PKS6_S9_S7_@Base 1.3
  _ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIiEEPT_PKS3_S6_S4_@Base 1.3
+ _ZNSt11logic_errorC1ERKS_@Base 1.3
+ _ZNSt11logic_errorC2ERKS_@Base 1.3
  _ZNSt12_Destroy_auxILb0EE9__destroyIN9__gnu_cxx17__normal_iteratorIPSsSt6vectorISsSaISsEEEEEEvT_S9_@Base 1.3
  _ZNSt12_Destroy_auxILb0EE9__destroyIPN10libtorrent14announce_entryEEEvT_S5_@Base 1.3
  _ZNSt12_Destroy_auxILb0EE9__destroyIPN5Lince11local_alertEEEvT_S5_@Base 1.3
@@ -677,8 +675,6 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZNSt12_Vector_baseISt4pairISsiESaIS1_EED2Ev@Base 1.3
  _ZNSt12_Vector_baseIiSaIiEED1Ev@Base 1.3
  _ZNSt12_Vector_baseIiSaIiEED2Ev@Base 1.3
- _ZNSt12out_of_rangeC1ERKS_@Base 1.3
- _ZNSt12out_of_rangeC2ERKS_@Base 1.3
  _ZNSt15_Deque_iteratorIN5Lince7TorrentERS1_PS1_EpLEi@Base 1.3
  _ZNSt15_Deque_iteratorIN5Lince7TorrentERS1_PS1_EppEv@Base 1.3
  _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@Base 1.3
@@ -800,7 +796,6 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZTIN10libtorrent18intrusive_ptr_baseIN5Lince14SessionManagerEEE@Base 1.3
  _ZTIN10libtorrent18intrusive_ptr_baseIN5Lince15TorrentsManagerEEE@Base 1.3
  _ZTIN10libtorrent19storage_moved_alertE@Base 1.3
- _ZTIN10libtorrent20libtorrent_exceptionE@Base 1.3
  _ZTIN10libtorrent20torrent_paused_alertE@Base 1.3
  _ZTIN10libtorrent21metadata_failed_alertE@Base 1.3
  _ZTIN10libtorrent21torrent_checked_alertE@Base 1.3
@@ -868,7 +863,6 @@ liblince-1.so.0 liblince-1-0 #MINVER#
  _ZTSN10libtorrent18intrusive_ptr_baseIN5Lince14SessionManagerEEE@Base 1.3
  _ZTSN10libtorrent18intrusive_ptr_baseIN5Lince15TorrentsManagerEEE@Base 1.3
  _ZTSN10libtorrent19storage_moved_alertE@Base 1.3
- _ZTSN10libtorrent20libtorrent_exceptionE@Base 1.3
  _ZTSN10libtorrent20torrent_paused_alertE@Base 1.3
  _ZTSN10libtorrent21metadata_failed_alertE@Base 1.3
  _ZTSN10libtorrent21torrent_checked_alertE@Base 1.3
