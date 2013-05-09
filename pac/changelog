@@ -1,3 +1,26 @@
+pac (4.5.2.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added Regular Expressions to "Bulk Edit"
+    . Added options to let user choose what happens when last tab is closed:
+    nothing, close or hide (Preferences -> Terminal options -> Look&Feel)
+    . Added "-r scard" option to "rdesktop" method, in order to be able to
+    use SmartCard authentication
+    . Added SeamlessRDP options to 'RDP' backends
+    . Added options to define prompts for: unknown host key, remote host key
+    changed and pres any key to coninue
+    . Added "--start-shell" command line to auto start a local terminal on
+    PAC startup
+    . Added some "bash completion" for command line options
+    . Added "Clipboard redirection" option for 'xfreerdp' connections (off by
+    default: buggy!)
+    . Added some "love" to PAC man page
+    . Fixed a bug that prevented saving "Width" & "Height" value unless focus
+    out those entry boxes on RDP connections edit
+    . Fixed some minor gui glitches
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 09 May 2013 15:22:31 +0200
+
 pac (4.5.2-1~getdeb2) precise; urgency=low
 
   * New upstream version
