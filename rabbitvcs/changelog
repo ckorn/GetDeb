@@ -1,3 +1,9 @@
+rabbitvcs (0.15.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 05 May 2013 14:35:30 +0200
+
 rabbitvcs (0.15.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
