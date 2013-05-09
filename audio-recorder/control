@@ -17,7 +17,7 @@ Build-Depends: debhelper (>= 9),
                libdbus-glib-1-dev,
                libappindicator3-dev,
                libgconf2-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: https://launchpad.net/audio-recorder
 
 Package: audio-recorder
