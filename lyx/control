@@ -19,7 +19,7 @@ Build-Depends: python (>= 2.6.6-3),
                libboost-test-dev,
                pkg-config,
                tex-common
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://www.lyx.org
 
 Package: lyx
