@@ -1,3 +1,15 @@
+ubuntu-tweak (0.8.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+      * Bugs fixed
+        - Ubuntu 13.04 should upgrade the path of scripts (LP: #1155854)
+        - creating of a hard link to a directory crashes UT (LP: #1092086)
+        - Janitor only shows "System" (LP: #1101264)
+        - Window button tweak error in 13.04 (LP: #1114576)
+        - ubuntu tweak crashes on updating software list (LP: #1081235)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 09 May 2013 20:00:56 +0200
+
 ubuntu-tweak (0.8.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
