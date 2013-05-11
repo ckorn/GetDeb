@@ -1,0 +1,14 @@
+### We want the output seen in the log. Not written to a file.
+Index: avidemux2.6-2.6.4/bootStrap.bash
+===================================================================
+--- avidemux2.6-2.6.4.orig/bootStrap.bash	2013-05-10 18:59:27.132030442 +0200
++++ avidemux2.6-2.6.4/bootStrap.bash	2013-05-10 19:23:33.440018094 +0200
+@@ -34,7 +34,7 @@
+         mkdir $BUILDDIR || fail mkdir
+         cd $BUILDDIR 
+         cmake $PKG $FAKEROOT -DCMAKE_EDIT_COMMAND=vim -DAVIDEMUX_SOURCE_DIR=$TOP -DCMAKE_INSTALL_PREFIX=/usr $EXTRA $DEBUG -G "$BUILDER" $SOURCEDIR || fail cmakeZ
+-        make  $PARAL >& /tmp/log$BUILDDIR || fail "make, result in /tmp/log$BUILDDIR"
++        make  $PARAL || fail "make"
+ 	if  [ "x$PKG" != "x" ] ; then
+           $FAKEROOT_COMMAND make package DESTDIR=$FAKEROOT_DIR/tmp || fail package
+ 	fi

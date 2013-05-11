@@ -1,3 +1,22 @@
+avidemux2.6 (1:2.6.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Switched to mxe-octave for win32 build, that fixes most of the crashes
+    on win32
+    * Better compatibility with AAC in mpeg TS
+    * Translations re-enabled
+    * Fixed a bug in x264 which could make encoding abort right at the
+    beginning
+    * Fixed msharpen when width was not a multiple of 8
+    * Added camtasia codec support
+    * Fixed VC1 in TS indexing
+    * Properly clear things when loading a new video
+    * Report proper audio duration for mpeg PS/TS
+    * Report proper audio duration for mpeg PS/TS
+    * Ass/ssa filter re-enabled
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 10 May 2013 18:57:36 +0200
+
 avidemux2.6 (1:2.6.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
