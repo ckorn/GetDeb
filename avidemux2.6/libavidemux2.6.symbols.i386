@@ -543,6 +543,7 @@ libADM6avutil.so.52 libavidemux2.6 #MINVER#
  av_log_set_callback@LIBAVUTIL_52 1:2.6.2
  av_log_set_flags@LIBAVUTIL_52 1:2.6.2
  av_log_set_level@LIBAVUTIL_52 1:2.6.2
+ av_lzo1x_decode@LIBAVUTIL_52 1:2.6.4
  av_malloc@LIBAVUTIL_52 1:2.6.2
  av_mallocz@LIBAVUTIL_52 1:2.6.2
  av_max_alloc@LIBAVUTIL_52 1:2.6.2
@@ -739,7 +740,7 @@ libADM_audioParser6.so libavidemux2.6 #MINVER#
  _ZN12ADM_adts2aac11getChannelsEv@Base 1:2.6.0
  _ZN12ADM_adts2aac12getExtraDataEPjPPh@Base 1:2.6.0
  _ZN12ADM_adts2aac12getFrequencyEv@Base 1:2.6.0
- _ZN12ADM_adts2aac7convertEiPhPiS0_@Base 1:2.6.0
+ _ZN12ADM_adts2aac8convert2EiPhPiS0_@Base 1:2.6.4
  _ZN12ADM_adts2aacC1Ev@Base 1:2.6.0
  _ZN12ADM_adts2aacC2Ev@Base 1:2.6.0
  _ZN12ADM_adts2aacD1Ev@Base 1:2.6.0
@@ -776,16 +777,15 @@ libADM_core6.so libavidemux2.6 #MINVER#
  ADM_fwrite@Base 1:2.6.0
  ADM_info2@Base 1:2.6.0
  ADM_mkdir@Base 1:2.6.0
- ADM_realloc@Base 1:2.6.0
  ADM_setCrashHook@Base 1:2.6.0
  ADM_strdup@Base 1:2.6.0
  ADM_swap16@Base 1:2.6.0
  ADM_swap32@Base 1:2.6.0
+ ADM_translate@Base 1:2.6.4
  ADM_usleep@Base 1:2.6.0
  ADM_warning2@Base 1:2.6.0
  _Z10frame2timejjPjS_S_S_@Base 1:2.6.0
  _Z10time2framePjjjjjj@Base 1:2.6.0
- _Z11ADM_memStatv@Base 1:2.6.0
  _Z11TLK_getDateP8ADM_date@Base 1:2.6.0
  _Z12ADM_copyFilePKcS0_@Base 1:2.6.0
  _Z12ADM_us2plainy@Base 1:2.6.0
@@ -794,16 +794,15 @@ libADM_core6.so libavidemux2.6 #MINVER#
  _Z14ADM_InitMemcpyv@Base 1:2.6.0
  _Z14ADM_getAutoDirv@Base 1:2.6.0
  _Z14ADM_getBaseDirv@Base 1:2.6.0
- _Z14ADM_memStatEndv@Base 1:2.6.0
  _Z14ADM_renameFilePKcS0_@Base 1:2.6.0
  _Z15ADM_GetFileNamePKc@Base 1:2.6.0
  _Z15ADM_initBaseDirb@Base 1:2.6.0
- _Z15ADM_memStatInitv@Base 1:2.6.0
  _Z16ADM_PathCanonizePKc@Base 1:2.6.0
  _Z16ADM_getCustomDirv@Base 1:2.6.0
  _Z17ADM_PathStripNamePc@Base 1:2.6.0
  _Z17ADM_epochToStringy@Base 1:2.6.0
  _Z17installSigHandlerv@Base 1:2.6.0
+ _Z18ADM_InitTranslatorRFPKcS0_S0_E@Base 1:2.6.4
  _Z21buildDirectoryContentPjPKcPPciS1_@Base 1:2.6.0
  _Z21clearDirectoryContentjPPc@Base 1:2.6.0
  _Z22ADM_cpu_num_processorsv@Base 1:2.6.0
@@ -861,10 +860,6 @@ libADM_core6.so libavidemux2.6 #MINVER#
  _ZTI14ADM_LibWrapper@Base 1:2.6.0
  _ZTS14ADM_LibWrapper@Base 1:2.6.0
  _ZTV14ADM_LibWrapper@Base 1:2.6.0
- _ZdaPv@Base 1:2.6.0
- _ZdlPv@Base 1:2.6.0
- _Znaj@Base 1:2.6.0
- _Znwj@Base 1:2.6.0
  myAdmMemcpy@Base 1:2.6.0
 libADM_coreAudio6.so libavidemux2.6 #MINVER#
  _Z14printWavHeaderP9WAVHeader@Base 1:2.6.0
@@ -932,7 +927,9 @@ libADM_coreAudioDevice6.so libavidemux2.6 #MINVER#
 libADM_coreAudioEncoder6.so libavidemux2.6 #MINVER#
  ListOfAudioEncoder@Base 1:2.6.0
  _ZN16ADM_AudioEncoder12refillBufferEi@Base 1:2.6.0
- _ZN16ADM_AudioEncoder15reorderChannelsEPfjP12CHANNEL_TYPES2_@Base 1:2.6.0
+ _ZN16ADM_AudioEncoder15reorderToPlanarEPfS0_iP12CHANNEL_TYPES2_@Base 1:2.6.4
+ _ZN16ADM_AudioEncoder16reorderToPlanar2EPfPS0_iP12CHANNEL_TYPES3_@Base 1:2.6.4
+ _ZN16ADM_AudioEncoder7reorderEPfS0_iP12CHANNEL_TYPES2_@Base 1:2.6.4
  _ZN16ADM_AudioEncoderC1EP15AUDMAudioFilterP10CONFcouple@Base 1:2.6.0
  _ZN16ADM_AudioEncoderC2EP15AUDMAudioFilterP10CONFcouple@Base 1:2.6.0
  _ZN16ADM_AudioEncoderD0Ev@Base 1:2.6.0
@@ -995,6 +992,9 @@ libADM_coreDemuxerMpeg6.so libavidemux2.6 #MINVER#
  _ZN13ADMMpegPacketD0Ev@Base 1:2.6.0
  _ZN13ADMMpegPacketD1Ev@Base 1:2.6.0
  _ZN13ADMMpegPacketD2Ev@Base 1:2.6.0
+ _ZN14ADM_byteBufferD0Ev@Base 1:2.6.4
+ _ZN14ADM_byteBufferD1Ev@Base 1:2.6.4
+ _ZN14ADM_byteBufferD2Ev@Base 1:2.6.4
  _ZN14psPacketLinear11getConsumedEv@Base 1:2.6.0
  _ZN14psPacketLinear4readEjPh@Base 1:2.6.0
  _ZN14psPacketLinear4seekEyj@Base 1:2.6.0
@@ -1064,18 +1064,21 @@ libADM_coreDemuxerMpeg6.so libavidemux2.6 #MINVER#
  _ZN9indexFileD1Ev@Base 1:2.6.0
  _ZN9indexFileD2Ev@Base 1:2.6.0
  _ZTI13ADMMpegPacket@Base 1:2.6.0
+ _ZTI14ADM_byteBuffer@Base 1:2.6.4
  _ZTI14psPacketLinear@Base 1:2.6.0
  _ZTI21psPacketLinearTracker@Base 1:2.6.0
  _ZTI7BVectorI4fdIoE@Base 1:2.6.0
  _ZTI7BVectorIP8dmxTokenE@Base 1:2.6.0
  _ZTI8psPacket@Base 1:2.6.0
  _ZTS13ADMMpegPacket@Base 1:2.6.0
+ _ZTS14ADM_byteBuffer@Base 1:2.6.4
  _ZTS14psPacketLinear@Base 1:2.6.0
  _ZTS21psPacketLinearTracker@Base 1:2.6.0
  _ZTS7BVectorI4fdIoE@Base 1:2.6.0
  _ZTS7BVectorIP8dmxTokenE@Base 1:2.6.0
  _ZTS8psPacket@Base 1:2.6.0
  _ZTV13ADMMpegPacket@Base 1:2.6.0
+ _ZTV14ADM_byteBuffer@Base 1:2.6.4
  _ZTV14psPacketLinear@Base 1:2.6.0
  _ZTV21psPacketLinearTracker@Base 1:2.6.0
  _ZTV7BVectorI4fdIoE@Base 1:2.6.0
@@ -1156,6 +1159,12 @@ libADM_coreImage6.so libavidemux2.6 #MINVER#
 libADM_coreImageLoader6.so libavidemux2.6 #MINVER#
  _Z19createImageFromFilePKc@Base 1:2.6.0
  _Z21ADM_identifyImageFilePKcPjS1_@Base 1:2.6.0
+ _ZN14ADM_byteBufferD0Ev@Base 1:2.6.4
+ _ZN14ADM_byteBufferD1Ev@Base 1:2.6.4
+ _ZN14ADM_byteBufferD2Ev@Base 1:2.6.4
+ _ZTI14ADM_byteBuffer@Base 1:2.6.4
+ _ZTS14ADM_byteBuffer@Base 1:2.6.4
+ _ZTV14ADM_byteBuffer@Base 1:2.6.4
 libADM_coreJobs.so libavidemux2.6 #MINVER#
  _Z10ADM_jobAddRK6ADMJob@Base 1:2.6.0
  _Z10ADM_jobGetRSt6vectorI6ADMJobSaIS0_EE@Base 1:2.6.0
@@ -1251,6 +1260,8 @@ libADM_coreScript.so libavidemux2.6 #MINVER#
  _ZN29ADM_scriptDialogFactoryHelperD1Ev@Base 1:2.6.0
  _ZN29ADM_scriptDialogFactoryHelperD2Ev@Base 1:2.6.0
  _ZNSt6vectorIPcSaIS0_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS0_S2_EERKS0_@Base 1:2.6.0
+ _ZNSt6vectorIPcSaIS0_EED1Ev@Base 1:2.6.4
+ _ZNSt6vectorIPcSaIS0_EED2Ev@Base 1:2.6.4
  _ZTI22ADM_ScriptEngineLoader@Base 1:2.6.0
  _ZTI22ADM_scriptDFMenuHelper@Base 1:2.6.0
  _ZTI24ADM_scriptDFToggleHelper@Base 1:2.6.0
@@ -1835,6 +1846,8 @@ libADM_coreUtils6.so libavidemux2.6 #MINVER#
  _ZN15ADM_threadQueueD2Ev@Base 1:2.6.0
  _ZN15admJsonToCouple12readFromFileEPKc@Base 1:2.6.0
  _ZN15admJsonToCouple4scanEPvSs@Base 1:2.6.0
+ _ZN15admJsonToCouple6keyValD1Ev@Base 1:2.6.4
+ _ZN15admJsonToCouple6keyValD2Ev@Base 1:2.6.4
  _ZN16internalJSONNode10push_frontERK8JSONNode@Base 1:2.6.0
  _ZN16internalJSONNode2atERKSs@Base 1:2.6.0
  _ZN16internalJSONNode3SetERKSs@Base 1:2.6.0

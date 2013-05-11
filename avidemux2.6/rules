@@ -45,7 +45,7 @@ clean:
 	dh_testroot
 	rm -f build-stamp configure-stamp man/avidemux2.6.1 avidemux/qt4/common
 
-	rm -rf build plugins/build buildCli buildCore buildGtk buildPluginsCLI buildPluginsCommon buildPluginsGtk buildPluginsQt4 buildQt4
+	rm -rf build plugins/build buildCli buildCore buildGtk buildPluginsCLI buildPluginsCommon buildPluginsGtk buildPluginsQt4 buildQt4 buildPluginsSettings
 	rm -rf CMakeFiles
 	rm -rf avidemux/ADM_libraries/ffmpeg
 	dh_autotools-dev_restoreconfig
@@ -64,6 +64,8 @@ install: build
 
 	rm -rf debian/tmp/usr/bin/i18n
 	rm -rf debian/tmp/usr/include
+	rm -f debian/tmp/usr/share/ADM6_addons/avsfilter/avsload.exe
+	rm -f debian/tmp/usr/share/ADM6_addons/avsfilter/pipe_source.dll
 
 	for i in 16 22 24 32 36 48; do \
 	    mkdir -p debian/tmp/usr/share/icons/hicolor/$${i}x$${i}/apps || exit 1; \
