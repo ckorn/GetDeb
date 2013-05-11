@@ -1,11 +1,11 @@
 Encoding is deprecated.
-Index: wxhexeditor-0.21/resources/wxHexEditor.desktop
+Index: wxhexeditor-0.22/resources/wxHexEditor.desktop
 ===================================================================
---- wxhexeditor-0.21.orig/resources/wxHexEditor.desktop	2013-02-04 20:42:45.509991839 +0100
-+++ wxhexeditor-0.21/resources/wxHexEditor.desktop	2013-02-04 20:44:20.361989016 +0100
+--- wxhexeditor-0.22.orig/resources/wxHexEditor.desktop	2013-05-10 23:38:26.000000000 +0200
++++ wxhexeditor-0.22/resources/wxHexEditor.desktop	2013-05-10 23:40:40.019886390 +0200
 @@ -1,6 +1,5 @@
  [Desktop Entry]
- Version=v1.0
+ Version=1.0
 -Encoding=UTF-8
  Name=wxHexEditor
  GenericName=wxHexEditor
