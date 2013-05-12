@@ -1,3 +1,9 @@
+yad (0.21.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 11 May 2013 23:38:31 +0200
+
 yad (0.20.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
