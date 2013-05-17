@@ -12,11 +12,8 @@ Build-Depends-Indep: icedtea-netx-common,
                      libjava3d-java,
                      libsunflow-java (>= 0.07.2.svn396+dfsg-9),
                      libbatik-java,
-                     openjdk-6-jdk | sun-java6-jdk
+                     openjdk-6-jdk | openjdk-7-jdk | sun-java6-jdk
 Standards-Version: 3.9.3
-DM-Upload-Allowed: yes
-Vcs-Git: git://git.debian.org/pkg-java/sweethome3d.git
-Vcs-Browser: http://git.debian.org/?p=pkg-java/sweethome3d.git
 Homepage: http://www.sweethome3d.com/
 
 Package: sweethome3d
@@ -29,7 +26,7 @@ Depends: icedtea-netx-common | sun-java6-bin,
          libjava3d-java,
          libsunflow-java (>= 0.07.2.svn396+dfsg-9),
          libbatik-java,
-         openjdk-6-jre | sun-java6-jre,
+         openjdk-7-jre | openjdk-6-jre | sun-java6-jre,
          ${misc:Depends}
 Description: Interior 2D design application with 3D preview
  Sweet Home 3D is an interior design Java application for
