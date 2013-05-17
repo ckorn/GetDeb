@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=BlueGriffon
-Exec=/usr/bin/bluegriffon
+Exec=/usr/bin/bluegriffon %U
 Icon=bluegriffon
 Terminal=false
 Type=Application
