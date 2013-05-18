@@ -1,0 +1,3 @@
+version=3
+https://github.com/nitely/ochDownloader/tags \
+    (?:.*)?/archive/([\d\.]+)\.tar\.(?:gz|bz2|xz)

@@ -1,0 +1,5 @@
+ochdownloader (0.8.10-1~getdeb1) raring; urgency=low
+
+  * Initial release (LP: #1162241)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 18 May 2013 14:25:28 +0200

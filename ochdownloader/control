@@ -1,0 +1,32 @@
+Source: ochdownloader
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
+Homepage: http://ochdownloader.com/
+
+Package: ochdownloader
+Architecture: all
+Depends: libunrar0,
+         ${misc:Depends},
+         python-pyside.qtgui,
+         python-crypto
+Description: One Click Hoster Downloader
+ One Click Hoster Downloader with the following features:
+  *Download acceleration (AKA multi-part) whenever possible
+   (up to 40 connections per file).
+  *HTTP links support (direct download).
+  *Resume download support whenever possible.
+  *Global download speed limit.
+  *Slot limit (up to 20 slots) for simultaneous downloads.
+  *Automatic retry on download fail.
+  *File list Drag&Drop (Ctrl+Click, Shift+Click or Shift+up
+   and down arrow keys)
+  *Lightweight: you can add thousands of links.
+  *HTTP Proxy support.
+  *History.
+  *Automatic Extract/Uncompress files.
+  *IP Renewer.
+  *Automatic system shutdown.
+  *Clipboard monitor.

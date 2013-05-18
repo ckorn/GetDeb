@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/ochdownloader
+python starter.py $@

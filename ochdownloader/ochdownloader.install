@@ -1,0 +1,4 @@
+*.py addons core Locale media plugins qt		usr/share/ochdownloader
+debian/scripts/ochdownloader				usr/bin
+debian/ochdownloader.png				usr/share/pixmaps
+debian/ochdownloader.desktop				usr/share/applications
