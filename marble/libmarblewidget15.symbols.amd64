@@ -1,17 +1,19 @@
 libAprsPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
+ _ZN10QByteArray6detachEv@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN12QMutexLockerD1Ev@Base 1.5.0
- _ZN12QMutexLockerD2Ev@Base 1.5.0
+ _ZN12QMutexLocker6unlockEv@Base 1.5.0
  _ZN19Ui_AprsConfigWidget13retranslateUiEP7QDialog@Base 1.5.0
  _ZN19Ui_AprsConfigWidget7setupUiEP7QDialog@Base 1.5.0
  _ZN4QMapI5QCharbE13detach_helperEv@Base 1.5.0
  _ZN4QMapI5QCharbED1Ev@Base 1.5.0
  _ZN4QMapI5QCharbED2Ev@Base 1.5.0
+ _ZN4QMapI5QCharbEixERKS0_@Base 1.5.0
  _ZN4QMapI5QChariE13detach_helperEv@Base 1.5.0
  _ZN4QMapI5QChariED1Ev@Base 1.5.0
  _ZN4QMapI5QChariED2Ev@Base 1.5.0
+ _ZN4QMapI5QChariEixERKS0_@Base 1.5.0
  _ZN4QMapI5QPairI5QCharS1_E7QStringE13detach_helperEv@Base 1.5.0
  _ZN4QMapI5QPairI5QCharS1_E7QStringED1Ev@Base 1.5.0
  _ZN4QMapI5QPairI5QCharS1_E7QStringED2Ev@Base 1.5.0
@@ -19,9 +21,11 @@ libAprsPlugin.so libmarblewidget15 #MINVER#
  _ZN4QMapI7QStringPN6Marble10AprsObjectEE13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QStringPN6Marble10AprsObjectEED1Ev@Base 1.5.0
  _ZN4QMapI7QStringPN6Marble10AprsObjectEED2Ev@Base 1.5.0
+ _ZN4QMapI7QStringPN6Marble10AprsObjectEEixERKS0_@Base 1.5.0
  _ZN4QMapIi7QStringE13detach_helperEv@Base 1.5.0
  _ZN4QMapIi7QStringED1Ev@Base 1.5.0
  _ZN4QMapIi7QStringED2Ev@Base 1.5.0
+ _ZN4QMapIi7QStringEixERKi@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
@@ -29,12 +33,15 @@ libAprsPlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble18GeoAprsCoordinatesEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble18GeoAprsCoordinatesEE13detach_helperEv@Base 1.5.0
  _ZN5QListIN6Marble18GeoAprsCoordinatesEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble18GeoAprsCoordinatesEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble18GeoAprsCoordinatesEED1Ev@Base 1.5.0
@@ -82,6 +89,7 @@ libAprsPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble10NullDeviceD0Ev@Base 1.5.0
  _ZN6Marble10NullDeviceD1Ev@Base 1.5.0
  _ZN6Marble10NullDeviceD2Ev@Base 1.5.0
+ _ZN6Marble11MarbleDebug10nullDeviceEv@Base 1.5.0
  _ZN6Marble12AprsGatherer10dumpOutputEv@Base 1.5.0
  _ZN6Marble12AprsGatherer11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
  _ZN6Marble12AprsGatherer11qt_metacastEPKc@Base 1.5.0
@@ -125,16 +133,29 @@ libAprsPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble9AprsTCPIPD0Ev@Base 1.5.0
  _ZN6Marble9AprsTCPIPD1Ev@Base 1.5.0
  _ZN6Marble9AprsTCPIPD2Ev@Base 1.5.0
+ _ZN6QDebug6StreamD1Ev@Base 1.5.0
+ _ZN6QDebug6StreamD2Ev@Base 1.5.0
+ _ZN6QDebugC1E9QtMsgType@Base 1.5.0
+ _ZN6QDebugC1EP9QIODevice@Base 1.5.0
+ _ZN6QDebugC2E9QtMsgType@Base 1.5.0
+ _ZN6QDebugC2EP9QIODevice@Base 1.5.0
  _ZN6QDebugD1Ev@Base 1.5.0
  _ZN6QDebugD2Ev@Base 1.5.0
+ _ZN6QDebuglsEPKc@Base 1.5.0
+ _ZN6QMutex10lockInlineEv@Base 1.5.0
+ _ZN6QMutex12unlockInlineEv@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
  _ZN7QStringaSEPKc@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED2Ev@Base 1.5.0
+ _ZNK4QMapI5QCharbE15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
+ _ZNK4QMapI5QChariE15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
  _ZNK4QMapI5QPairI5QCharS1_E7QStringE15mutableFindNodeEPPN8QMapData4NodeERKS2_@Base 1.5.0
+ _ZNK4QMapI7QStringPN6Marble10AprsObjectEE15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
+ _ZNK4QMapI7QStringPN6Marble10AprsObjectEE8findNodeERKS0_@Base 1.5.0
+ _ZNK4QMapIi7QStringE15mutableFindNodeEPPN8QMapData4NodeERKi@Base 1.5.0
  _ZNK5QHashI7QString8QVariantE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QListIN6Marble18GeoAprsCoordinatesEE7indexOfERKS1_i@Base 1.5.0
  _ZNK6Marble10AprsObject19calculatePaintColorEPNS_10GeoPainterE@Base 1.5.0
  _ZNK6Marble10AprsObject19calculatePaintColorEPNS_10GeoPainterEiRK5QTimei@Base 1.5.0
  _ZNK6Marble10AprsPlugin10metaObjectEv@Base 1.5.0
@@ -206,7 +227,7 @@ libAprsPlugin.so libmarblewidget15 #MINVER#
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libAtmospherePlugin.so libmarblewidget15 #MINVER#
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -274,9 +295,11 @@ libAtmospherePlugin.so libmarblewidget15 #MINVER#
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libCachePlugin.so libmarblewidget15 #MINVER#
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -344,6 +367,8 @@ libCompassFloatItem.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -425,6 +450,8 @@ libCrosshairsPlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -611,6 +638,7 @@ libEarthquakePlugin.so libmarblewidget15 #MINVER#
  _ZpLI14QStringBuilderIA37_c7QStringEA14_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
  _ZpLI14QStringBuilderIA41_c7QStringEA11_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
  _ZpLI14QStringBuilderIA5_c7QStringEA11_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
+ _ZpLIA10_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  _ZpLIA7_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  _ZpLIA8_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  qCleanupResources_earthquake__dest_instance__@Base 1.5.0
@@ -618,20 +646,23 @@ libEarthquakePlugin.so libmarblewidget15 #MINVER#
  qt_plugin_query_verification_data@Base 1.5.0
 libElevationProfileFloatItem.so libmarblewidget15 #MINVER#
  _ZN5QListI7QPointFE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QPointFE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QPointFE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QPointFE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QPointFED1Ev@Base 1.5.0
  _ZN5QListI7QPointFED2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble8AxisTickEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble8AxisTickEE13detach_helperEv@Base 1.5.0
  _ZN5QListIN6Marble8AxisTickEE18detach_helper_growEii@Base 1.5.0
- _ZN5QListIN6Marble8AxisTickEE5clearEv@Base 1.5.0
  _ZN5QListIN6Marble8AxisTickEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble8AxisTickEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble8AxisTickEED2Ev@Base 1.5.0
@@ -643,6 +674,7 @@ libElevationProfileFloatItem.so libmarblewidget15 #MINVER#
  _ZN5QListIS_IiEE6appendERKS0_@Base 1.5.0
  _ZN5QListIS_IiEED1Ev@Base 1.5.0
  _ZN5QListIS_IiEED2Ev@Base 1.5.0
+ _ZN5QListIiE13detach_helperEi@Base 1.5.0
  _ZN5QListIiE13detach_helperEv@Base 1.5.0
  _ZN5QListIiE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIiE6appendERKi@Base 1.5.0
@@ -751,7 +783,7 @@ libElevationProfileMarker.so libmarblewidget15 #MINVER#
  _Z34qCleanupResources_elevationprofilev@Base 1.5.0
  _ZN48qCleanupResources_elevationprofile__dest_class__D1Ev@Base 1.5.0
  _ZN48qCleanupResources_elevationprofile__dest_class__D2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -831,12 +863,12 @@ libFlightGearPositionProviderPlugin.so libmarblewidget15 #MINVER#
  _Z11fixBadGPRMCR10QByteArray@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
- _ZN5QListI10QByteArrayE13detach_helperEi@Base 1.5.0
+ _ZN5QListI10QByteArrayE13detach_helperEv@Base 1.5.0
  _ZN5QListI10QByteArrayED1Ev@Base 1.5.0
  _ZN5QListI10QByteArrayED2Ev@Base 1.5.0
  _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1013,19 +1045,23 @@ libFoursquarePlugin.so libmarblewidget15 #MINVER#
  _ZThn16_NK6Marble16FoursquarePlugin7versionEv@Base 1.5.0
  _ZThn24_N6Marble16FoursquarePluginD0Ev@Base 1.5.0
  _ZThn24_N6Marble16FoursquarePluginD1Ev@Base 1.5.0
+ _ZpLIA12_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLIA16_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  _ZpLIA2_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  _ZpLIA5_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLIA8_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libGosmoreReverseGeocodingPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN4QMapIN6Marble14WaypointParser5FieldEiED1Ev@Base 1.5.0
+ _ZN4QMapIN6Marble14WaypointParser5FieldEiED2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1098,14 +1134,16 @@ libGosmoreRoutingPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
  _ZN4QMapI7QString10QByteArrayE13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QString10QByteArrayED1Ev@Base 1.5.0
  _ZN4QMapI7QString10QByteArrayED2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN4QMapIN6Marble14WaypointParser5FieldEiED1Ev@Base 1.5.0
+ _ZN4QMapIN6Marble14WaypointParser5FieldEiED2Ev@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1134,8 +1172,6 @@ libGosmoreRoutingPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble13GosmoreRunnerD2Ev@Base 1.5.0
  _ZN6Marble14WaypointParserD1Ev@Base 1.5.0
  _ZN6Marble14WaypointParserD2Ev@Base 1.5.0
- _ZN6Marble15RoutingWaypointD1Ev@Base 1.5.0
- _ZN6Marble15RoutingWaypointD2Ev@Base 1.5.0
  _ZN6Marble20GosmoreRunnerPrivate15m_partialRoutesE@Base 1.5.0
  _ZN6Marble20GosmoreRunnerPrivate24parseGosmoreInstructionsERK10QByteArray@Base 1.5.0
  _ZN6Marble20GosmoreRunnerPrivateC1Ev@Base 1.5.0
@@ -1144,6 +1180,7 @@ libGosmoreRoutingPlugin.so libmarblewidget15 #MINVER#
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble12RoutingPointEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED2Ev@Base 1.5.0
@@ -1151,8 +1188,11 @@ libGosmoreRoutingPlugin.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble15RoutingWaypointEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble15RoutingWaypointEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble15RoutingWaypointEED2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble18RoutingInstructionEE7reallocEii@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEED1Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEED2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -1198,6 +1238,8 @@ libGpsInfo.so libmarblewidget15 #MINVER#
  _ZN16Ui_GpsInfoPlugin7setupUiEP7QWidget@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1256,12 +1298,12 @@ libGpsInfo.so libmarblewidget15 #MINVER#
  qt_plugin_query_verification_data@Base 1.5.0
 libGpxPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN10QByteArrayD1Ev@Base 1.5.0
- _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN4QMapI7QStringS0_E13detach_helperEv@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1386,10 +1428,13 @@ libGpxPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble9GpxRunnerD2Ev@Base 1.5.0
  _ZN6QDebugD1Ev@Base 1.5.0
  _ZN6QDebugD2Ev@Base 1.5.0
+ _ZN7QStringC1EPKc@Base 1.5.0
+ _ZN7QStringC2EPKc@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED2Ev@Base 1.5.0
+ _ZNK4QMapI7QStringS0_E15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
  _ZNK6Marble3gpx15GPXhrTagHandler5parseERNS_9GeoParserE@Base 1.5.0
  _ZNK6Marble3gpx16GPXcmtTagHandler5parseERNS_9GeoParserE@Base 1.5.0
  _ZNK6Marble3gpx16GPXeleTagHandler5parseERNS_9GeoParserE@Base 1.5.0
@@ -1512,6 +1557,8 @@ libGraticulePlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1600,6 +1647,8 @@ libHostipPlugin.so libmarblewidget15 #MINVER#
  _ZN5QListI12QHostAddressED2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1630,7 +1679,7 @@ libHostipPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble12PluginAuthorD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -1668,11 +1717,11 @@ libJsonPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1747,9 +1796,11 @@ libJsonPlugin.so libmarblewidget15 #MINVER#
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libKmlPlugin.so libmarblewidget15 #MINVER#
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -1844,7 +1895,7 @@ libLatLonPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble12PluginAuthorD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -1881,7 +1932,11 @@ libLocalDatabasePlugin.so libmarblewidget15 #MINVER#
  _Z21qMetaTypeDeleteHelperIPN6Marble13GeoDataObjectEEvPT_@Base 1.5.0
  _Z24qMetaTypeConstructHelperIPN6Marble13GeoDataObjectEEPvPKT_@Base 1.5.0
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
+ _ZN10QByteArrayD1Ev@Base 1.5.0
+ _ZN10QByteArrayD2Ev@Base 1.5.0
+ _ZN11QMetaTypeIdIPN6Marble13GeoDataObjectEE14qt_metatype_idEv@Base 1.5.0
  _ZN5QListI11QModelIndexE13detach_helperEi@Base 1.5.0
+ _ZN5QListI11QModelIndexE13detach_helperEv@Base 1.5.0
  _ZN5QListI11QModelIndexED1Ev@Base 1.5.0
  _ZN5QListI11QModelIndexED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
@@ -1917,7 +1972,7 @@ libLocalDatabasePlugin.so libmarblewidget15 #MINVER#
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -1957,19 +2012,19 @@ libLocalDatabasePlugin.so libmarblewidget15 #MINVER#
  qt_plugin_query_verification_data@Base 1.5.0
 libLocalOsmSearchPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
+ _ZN10QByteArrayD1Ev@Base 1.5.0
+ _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN18QAlgorithmsPrivate11qSortHelperIPN6Marble12OsmPlacemarkES2_5qLessIS2_EEEvT_S6_RKT0_T1_@Base 1.5.0
  _ZN18QAlgorithmsPrivate11qSortHelperIPN6Marble12OsmPlacemarkES2_PFbRKS2_S5_EEEvT_S8_RKT0_T1_@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12OsmPlacemark11OsmCategoryEE13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12OsmPlacemark11OsmCategoryEED1Ev@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12OsmPlacemark11OsmCategoryEED2Ev@Base 1.5.0
+ _ZN4QMapI7QStringN6Marble12OsmPlacemark11OsmCategoryEEixERKS0_@Base 1.5.0
  _ZN4QMapIN6Marble12OsmPlacemark11OsmCategoryENS0_14GeoDataFeature21GeoDataVisualCategoryEE13detach_helperEv@Base 1.5.0
  _ZN4QMapIN6Marble12OsmPlacemark11OsmCategoryENS0_14GeoDataFeature21GeoDataVisualCategoryEED1Ev@Base 1.5.0
  _ZN4QMapIN6Marble12OsmPlacemark11OsmCategoryENS0_14GeoDataFeature21GeoDataVisualCategoryEED2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
- _ZN5QListI7QStringE5clearEv@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
  _ZN5QListI7QStringED2Ev@Base 1.5.0
@@ -2006,8 +2061,6 @@ libLocalOsmSearchPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble13DatabaseQuery17isPointOfInterestERK7QString@Base 1.5.0
  _ZN6Marble13DatabaseQueryC1EPNS_11MarbleModelERK7QStringRKNS_19GeoDataLatLonAltBoxE@Base 1.5.0
  _ZN6Marble13DatabaseQueryC2EPNS_11MarbleModelERK7QStringRKNS_19GeoDataLatLonAltBoxE@Base 1.5.0
- _ZN6Marble13DatabaseQueryD1Ev@Base 1.5.0
- _ZN6Marble13DatabaseQueryD2Ev@Base 1.5.0
  _ZN6Marble20LocalOsmSearchPlugin11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
  _ZN6Marble20LocalOsmSearchPlugin11qt_metacastEPKc@Base 1.5.0
  _ZN6Marble20LocalOsmSearchPlugin16staticMetaObjectE@Base 1.5.0
@@ -2026,6 +2079,7 @@ libLocalOsmSearchPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble20LocalOsmSearchRunnerD0Ev@Base 1.5.0
  _ZN6Marble20LocalOsmSearchRunnerD1Ev@Base 1.5.0
  _ZN6Marble20LocalOsmSearchRunnerD2Ev@Base 1.5.0
+ _ZN6Marble6mDebugEv@Base 1.5.0
  _ZN6QDebugD1Ev@Base 1.5.0
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
@@ -2036,12 +2090,15 @@ libLocalOsmSearchPlugin.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble12OsmPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12OsmPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12OsmPlacemarkEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED2Ev@Base 1.5.0
+ _ZNK4QMapI7QStringN6Marble12OsmPlacemark11OsmCategoryEE15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
+ _ZNK4QMapI7QStringN6Marble12OsmPlacemark11OsmCategoryEE8findNodeERKS0_@Base 1.5.0
+ _ZNK4QMapIN6Marble12OsmPlacemark11OsmCategoryENS0_14GeoDataFeature21GeoDataVisualCategoryEE15mutableFindNodeEPPN8QMapData4NodeERKS2_@Base 1.5.0
  _ZNK6Marble11OsmDatabase13wildcardQueryERK7QString@Base 1.5.0
  _ZNK6Marble11OsmDatabase14formatDistanceERKNS_18GeoDataCoordinatesES3_@Base 1.5.0
  _ZNK6Marble11OsmDatabase6uniqueER7QVectorINS_12OsmPlacemarkEE@Base 1.5.0
@@ -2097,14 +2154,18 @@ libLocalOsmSearchPlugin.so libmarblewidget15 #MINVER#
  _ZThn16_NK6Marble20LocalOsmSearchPlugin6nameIdEv@Base 1.5.0
  _ZThn16_NK6Marble20LocalOsmSearchPlugin7versionEv@Base 1.5.0
  _ZZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZpLI14QStringBuilderIA21_c7QStringEA2_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
+ _ZpLIA20_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLIA51_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLIA53_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libLogPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -2178,6 +2239,7 @@ libMapQuestPlugin.so libmarblewidget15 #MINVER#
  _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN4QMapIiiE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QString8QVariantED1Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
@@ -2187,6 +2249,8 @@ libMapQuestPlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashIN6Marble20RoutingProfilesModel15ProfileTemplateE15QHashDummyValueE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -2221,6 +2285,8 @@ libMapQuestPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble14MapQuestRunnerD0Ev@Base 1.5.0
  _ZN6Marble14MapQuestRunnerD1Ev@Base 1.5.0
  _ZN6Marble14MapQuestRunnerD2Ev@Base 1.5.0
+ _ZN6Marble14RoutingProfileD1Ev@Base 1.5.0
+ _ZN6Marble14RoutingProfileD2Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD0Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD1Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD2Ev@Base 1.5.0
@@ -2234,6 +2300,7 @@ libMapQuestPlugin.so libmarblewidget15 #MINVER#
  _ZN7QStringD2Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED2Ev@Base 1.5.0
+ _ZNK4QMapIiiE15mutableFindNodeEPPN8QMapData4NodeERKi@Base 1.5.0
  _ZNK5QHashI7QString8QVariantE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QStringS_IS0_8QVariantEE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK6Marble14MapQuestPlugin10metaObjectEv@Base 1.5.0
@@ -2286,6 +2353,8 @@ libMapQuestPlugin.so libmarblewidget15 #MINVER#
 libMapScaleFloatItem.so libmarblewidget15 #MINVER#
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -2379,6 +2448,7 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _Z15qmlRegisterTypeIN6Marble20VoiceNavigationModelEEiPKciiS3_@Base 1.5.0
  _Z17qRegisterMetaTypeI24QDeclarativeListPropertyI10CoordinateEEiPKcPT_@Base 1.5.0
  _Z17qRegisterMetaTypeI24QDeclarativeListPropertyI9PlacemarkEEiPKcPT_@Base 1.5.0
+ _Z17qRegisterMetaTypeIN6Marble18GeoDataCoordinatesEEiPKcPT_@Base 1.5.0
  _Z17qRegisterMetaTypeIP10CoordinateEiPKcPT_@Base 1.5.0
  _Z17qRegisterMetaTypeIP9PlacemarkEiPKcPT_@Base 1.5.0
  _Z21qMetaTypeDeleteHelperI24QDeclarativeListPropertyI10CoordinateEEvPT_@Base 1.5.0
@@ -2516,6 +2586,7 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _ZN10NavigationD2Ev@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
+ _ZN11QMetaTypeIdIN6Marble18GeoDataCoordinatesEE14qt_metatype_idEv@Base 1.5.0
  _ZN11QStringListD1Ev@Base 1.5.0
  _ZN11QStringListD2Ev@Base 1.5.0
  _ZN12MarbleWidget10coordinateEii@Base 1.5.0
@@ -2657,6 +2728,12 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _ZN17NavigationPrivate29updateNextInstructionDistanceEPKN6Marble12RoutingModelE@Base 1.5.0
  _ZN17NavigationPrivateC1Ev@Base 1.5.0
  _ZN17NavigationPrivateC2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble12RenderPluginEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble12RenderPluginEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble17AbstractFloatItemEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble17AbstractFloatItemEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI7QVectorIPN6Marble13GeoDataFolderEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI7QVectorIPN6Marble13GeoDataFolderEEED2Ev@Base 1.5.0
  _ZN17RelatedActivities11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
  _ZN17RelatedActivities11qt_metacastEPKc@Base 1.5.0
  _ZN17RelatedActivities16staticMetaObjectE@Base 1.5.0
@@ -2838,23 +2915,25 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _ZN28ZoomButtonInterceptorPrivateD2Ev@Base 1.5.0
  _ZN4QMapI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QStringN6Marble14RoutingProfileEE13detach_helperEv@Base 1.5.0
+ _ZN4QMapI7QStringN6Marble14RoutingProfileEED1Ev@Base 1.5.0
+ _ZN4QMapI7QStringN6Marble14RoutingProfileEED2Ev@Base 1.5.0
  _ZN4QMapIiP16QDeclarativeItemE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringS_IS0_8QVariantEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QStringS_IS0_8QVariantEE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QStringS_IS0_8QVariantEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashIi10QByteArrayE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashIi10QByteArrayE13detach_helperEv@Base 1.5.0
  _ZN5QHashIi10QByteArrayE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
- _ZN5QHashIi10QByteArrayED1Ev@Base 1.5.0
- _ZN5QHashIi10QByteArrayED2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
- _ZN5QListI7QStringE5clearEv@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
  _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEv@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED1Ev@Base 1.5.0
@@ -2863,7 +2942,6 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _ZN5QListIN6Marble14RoutingProfileEED2Ev@Base 1.5.0
  _ZN5QListIP16QDeclarativeItemE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIP16QDeclarativeItemE6appendERKS1_@Base 1.5.0
- _ZN5QListIP16QDeclarativeItemE7reserveEi@Base 1.5.0
  _ZN5QListIP16QDeclarativeItemED1Ev@Base 1.5.0
  _ZN5QListIP16QDeclarativeItemED2Ev@Base 1.5.0
  _ZN5QListIP21DeclarativeDataPluginE18detach_helper_growEii@Base 1.5.0
@@ -2878,16 +2956,18 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _ZN5QListIPKN6Marble22PositionProviderPluginEE13detach_helperEi@Base 1.5.0
  _ZN5QListIPKN6Marble22PositionProviderPluginEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble22PositionProviderPluginEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble12RenderPluginEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIPN6Marble12RenderPluginEE13detach_helperEv@Base 1.5.0
  _ZN5QListIPN6Marble12RenderPluginEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble12RenderPluginEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble17AbstractFloatItemEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIPN6Marble17AbstractFloatItemEE13detach_helperEv@Base 1.5.0
  _ZN5QListIPN6Marble17AbstractFloatItemEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble17AbstractFloatItemEED2Ev@Base 1.5.0
+ _ZN5QListIPN6Marble22AbstractDataPluginItemEE13detach_helperEi@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEE6appendERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEED2Ev@Base 1.5.0
+ _ZN5QListIPN6Marble26DeclarativeDataPluginModelEE13detach_helperEv@Base 1.5.0
  _ZN5QListIPN6Marble26DeclarativeDataPluginModelEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble26DeclarativeDataPluginModelEE6appendERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble26DeclarativeDataPluginModelEED1Ev@Base 1.5.0
@@ -2942,7 +3022,11 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
  _ZN7QStringD2Ev@Base 1.5.0
  _ZN7QVectorIN6Marble17TileCoordsPyramidEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble17TileCoordsPyramidEED2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble13GeoDataFolderEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEE7reallocEii@Base 1.5.0
+ _ZN7QVectorIPN6Marble13GeoDataFolderEED1Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble13GeoDataFolderEED2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -3330,7 +3414,7 @@ libMarbleDeclarativePlugin.so libmarblewidget15 #MINVER#
 libMeasureTool.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -3431,26 +3515,28 @@ libMonavPlugin.so libmarblewidget15 #MINVER#
  _ZN4QMapI7QStringS0_E13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QStringS0_ED1Ev@Base 1.5.0
  _ZN4QMapI7QStringS0_ED2Ev@Base 1.5.0
- _ZN4QSetI7QStringED1Ev@Base 1.5.0
- _ZN4QSetI7QStringED2Ev@Base 1.5.0
  _ZN5MoNav13RoutingResultD1Ev@Base 1.5.0
  _ZN5MoNav13RoutingResultD2Ev@Base 1.5.0
  _ZN5QHashI7QString15QHashDummyValueE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QString15QHashDummyValueE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString15QHashDummyValueE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
+ _ZN5QHashI7QString15QHashDummyValueED1Ev@Base 1.5.0
+ _ZN5QHashI7QString15QHashDummyValueED2Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QString8QVariantED1Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
  _ZN5QHashI7QStringS_IS0_8QVariantEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QStringS_IS0_8QVariantEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
- _ZN5QListI7QStringE5clearEv@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
- _ZN5QListI7QStringE9removeOneERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
  _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListI9QFileInfoE13detach_helperEi@Base 1.5.0
+ _ZN5QListI9QFileInfoE13detach_helperEv@Base 1.5.0
  _ZN5QListI9QFileInfoE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI9QFileInfoE6appendERKS0_@Base 1.5.0
  _ZN5QListI9QFileInfoED1Ev@Base 1.5.0
@@ -3570,9 +3656,11 @@ libMonavPlugin.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN5MoNav4NodeEED1Ev@Base 1.5.0
  _ZN7QVectorIN5MoNav4NodeEED2Ev@Base 1.5.0
  _ZN7QVectorIN5MoNav4NodeEEaSERKS2_@Base 1.5.0
+ _ZN7QVectorIN6Marble12RoutingPointEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble15MonavStuffEntryEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble15MonavStuffEntryEE6appendERKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble15MonavStuffEntryEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble15MonavStuffEntryEED1Ev@Base 1.5.0
@@ -3585,8 +3673,8 @@ libMonavPlugin.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble17GeoDataLinearRingEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble17GeoDataLinearRingEE6appendERKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble17GeoDataLinearRingEE7reallocEii@Base 1.5.0
- _ZN7QVectorIN6Marble17GeoDataLinearRingEED1Ev@Base 1.5.0
- _ZN7QVectorIN6Marble17GeoDataLinearRingEED2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble17GeoDataLinearRingEEaSERKS2_@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble18RoutingInstructionEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble8MonavMapEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble8MonavMapEE5eraseEPS1_S3_@Base 1.5.0
@@ -3594,7 +3682,7 @@ libMonavPlugin.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble8MonavMapEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble8MonavMapEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble8MonavMapEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -3605,7 +3693,6 @@ libMonavPlugin.so libmarblewidget15 #MINVER#
  _ZNK5QHashI7QString15QHashDummyValueE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QString8QVariantE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QStringS_IS0_8QVariantEE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QListI7QStringE7indexOfERKS0_i@Base 1.5.0
  _ZNK6Marble11MonavPlugin10metaObjectEv@Base 1.5.0
  _ZNK6Marble11MonavPlugin11descriptionEv@Base 1.5.0
  _ZNK6Marble11MonavPlugin12monavVersionEv@Base 1.5.0
@@ -3708,6 +3795,8 @@ libNavigationFloatItem.so libmarblewidget15 #MINVER#
  _ZN42qCleanupResources_navigation__dest_class__D2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -3779,6 +3868,8 @@ libNominatimReverseGeocodingPlugin.so libmarblewidget15 #MINVER#
  _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -3854,6 +3945,8 @@ libNominatimSearchPlugin.so libmarblewidget15 #MINVER#
  _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -3885,7 +3978,7 @@ libNominatimSearchPlugin.so libmarblewidget15 #MINVER#
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -3916,16 +4009,17 @@ libNominatimSearchPlugin.so libmarblewidget15 #MINVER#
  _ZThn16_NK6Marble15NominatimPlugin4nameEv@Base 1.5.0
  _ZThn16_NK6Marble15NominatimPlugin6nameIdEv@Base 1.5.0
  _ZThn16_NK6Marble15NominatimPlugin7versionEv@Base 1.5.0
- _ZpLI14QStringBuilderIS0_I7QStringA3_cES1_EA2_cERS1_S6_RKS0_IT_T0_E@Base 1.5.0
- _ZpLI14QStringBuilderIS0_IA11_c7QStringEA2_cES2_ERS2_S6_RKS0_IT_T0_E@Base 1.5.0
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libOSRMPlugin.so libmarblewidget15 #MINVER#
+ _Z23qStringComparisonHelperRK7QStringPKc@Base 1.5.0
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListI8QVariantE13detach_helperEi@Base 1.5.0
  _ZN5QListI8QVariantED1Ev@Base 1.5.0
  _ZN5QListI8QVariantED2Ev@Base 1.5.0
@@ -3992,7 +4086,6 @@ libOSRMPlugin.so libmarblewidget15 #MINVER#
  _ZNK6Marble10OSRMRunner14decodePolylineERK7QString@Base 1.5.0
  _ZNK6Marble10OSRMRunner6appendEP7QStringRKS1_S4_@Base 1.5.0
  _ZNK6Marble10OSRMRunner8categoryEv@Base 1.5.0
- _ZNK7QStringeqEPKc@Base 1.5.0
  _ZTIN6Marble10NullDeviceE@Base 1.5.0
  _ZTIN6Marble10OSRMPluginE@Base 1.5.0
  _ZTIN6Marble10OSRMRunnerE@Base 1.5.0
@@ -4119,6 +4212,8 @@ libOpenDesktopPlugin.so libmarblewidget15 #MINVER#
  _ZThn48_N6Marble17OpenDesktopPlugin12configDialogEv@Base 1.5.0
  _ZThn48_N6Marble17OpenDesktopPluginD0Ev@Base 1.5.0
  _ZThn48_N6Marble17OpenDesktopPluginD1Ev@Base 1.5.0
+ _ZpLIA11_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLIA12_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libOpenRouteServicePlugin.so libmarblewidget15 #MINVER#
@@ -4126,9 +4221,10 @@ libOpenRouteServicePlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
+ _ZN11QDomElementD1Ev@Base 1.5.0
+ _ZN11QDomElementD2Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QString8QVariantED1Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
@@ -4138,6 +4234,8 @@ libOpenRouteServicePlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashIN6Marble20RoutingProfilesModel15ProfileTemplateE15QHashDummyValueE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -4150,6 +4248,8 @@ libOpenRouteServicePlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble10NullDeviceD2Ev@Base 1.5.0
  _ZN6Marble12PluginAuthorD1Ev@Base 1.5.0
  _ZN6Marble12PluginAuthorD2Ev@Base 1.5.0
+ _ZN6Marble14RoutingProfileD1Ev@Base 1.5.0
+ _ZN6Marble14RoutingProfileD2Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD0Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD1Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD2Ev@Base 1.5.0
@@ -4240,7 +4340,6 @@ libOpenRouteServicePlugin.so libmarblewidget15 #MINVER#
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libOsmPlugin.so libmarblewidget15 #MINVER#
- _Z11qBinaryFindIN5QListI7QStringE14const_iteratorES1_ET_S4_S4_RKT0_@Base 1.5.0
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN11QStringListD1Ev@Base 1.5.0
  _ZN11QStringListD2Ev@Base 1.5.0
@@ -4255,6 +4354,7 @@ libOsmPlugin.so libmarblewidget15 #MINVER#
  _ZN4QMapIyPN6Marble17GeoDataLineStringEED1Ev@Base 1.5.0
  _ZN4QMapIyPN6Marble17GeoDataLineStringEED2Ev@Base 1.5.0
  _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -4266,7 +4366,6 @@ libOsmPlugin.so libmarblewidget15 #MINVER#
  _ZN5QListIN6Marble12PluginAuthorEED2Ev@Base 1.5.0
  _ZN5QListIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN5QListIPN6Marble16GeoDataPlacemarkEE18detach_helper_growEii@Base 1.5.0
- _ZN5QListIPN6Marble16GeoDataPlacemarkEE5clearEv@Base 1.5.0
  _ZN5QListIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -4441,6 +4540,8 @@ libOsmPlugin.so libmarblewidget15 #MINVER#
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libOverviewMap.so libmarblewidget15 #MINVER#
+ _ZN11QStringListD1Ev@Base 1.5.0
+ _ZN11QStringListD2Ev@Base 1.5.0
  _ZN26Ui_OverviewMapConfigWidget7setupUiEP7QDialog@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
@@ -4448,14 +4549,16 @@ libOverviewMap.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantED1Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
  _ZN5QHashI7QStringP10QSvgWidgetE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QStringP10QSvgWidgetE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QStringP10QSvgWidgetE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringP10QSvgWidgetED1Ev@Base 1.5.0
  _ZN5QHashI7QStringP10QSvgWidgetED2Ev@Base 1.5.0
  _ZN5QHashI7QStringS0_E11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QStringS0_E13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QStringS0_E13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringS0_ED1Ev@Base 1.5.0
  _ZN5QHashI7QStringS0_ED2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -4755,9 +4858,11 @@ libPlacemarkPositionProviderPlugin.so libmarblewidget15 #MINVER#
  qt_plugin_query_verification_data@Base 1.5.0
 libPntPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -4791,6 +4896,7 @@ libPntPlugin.so libmarblewidget15 #MINVER#
  _ZN6QDebugD1Ev@Base 1.5.0
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN6QDebuglsEPKc@Base 1.5.0
+ _ZN6QDebuglsERK7QString@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
@@ -4833,6 +4939,8 @@ libPositionMarker.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -4870,7 +4978,10 @@ libPositionMarker.so libmarblewidget15 #MINVER#
  _ZN7QVectorI7QPointFE13detach_helperEv@Base 1.5.0
  _ZN7QVectorI7QPointFE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI7QPointFE7reallocEii@Base 1.5.0
- _ZN7QVectorIN6Marble18GeoDataCoordinatesEE5eraseEPS1_S3_@Base 1.5.0
+ _ZN7QVectorI7QPointFED1Ev@Base 1.5.0
+ _ZN7QVectorI7QPointFED2Ev@Base 1.5.0
+ _ZN7QVectorI7QPointFEaSERKS1_@Base 1.5.0
+ _ZN7QVectorIN6Marble18GeoDataCoordinatesEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble18GeoDataCoordinatesEE6insertEPS1_iRKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble18GeoDataCoordinatesEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble18GeoDataCoordinatesEED1Ev@Base 1.5.0
@@ -5018,6 +5129,8 @@ libPostalCode.so libmarblewidget15 #MINVER#
 libProgressFloatItem.so libmarblewidget15 #MINVER#
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -5205,6 +5318,7 @@ libRouteSimulationPositionProviderPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble37RouteSimulationPositionProviderPluginD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -5261,12 +5375,13 @@ libRoutingPlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble22PositionProviderPluginEE13detach_helperEi@Base 1.5.0
  _ZN5QListIPKN6Marble22PositionProviderPluginEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble22PositionProviderPluginEED2Ev@Base 1.5.0
  _ZN6Marble11AudioOutput10setSpeakerERK7QString@Base 1.5.0
@@ -5370,10 +5485,11 @@ libRoutinoPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
  _ZN22Ui_RoutinoConfigWidget7setupUiEP7QWidget@Base 1.5.0
+ _ZN4QMapIN6Marble14WaypointParser5FieldEiED1Ev@Base 1.5.0
+ _ZN4QMapIN6Marble14WaypointParser5FieldEiED2Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
+ _ZN5QHashI7QString8QVariantE13detach_helperEv@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QString8QVariantED1Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
@@ -5381,11 +5497,14 @@ libRoutinoPlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QStringS_IS0_8QVariantEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashIN6Marble20RoutingProfilesModel15ProfileTemplateE15QHashDummyValueE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIN6Marble20RoutingProfilesModel15ProfileTemplateE15QHashDummyValueE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListI7QStringEpLERKS1_@Base 1.5.0
  _ZN5QListI9QFileInfoE13detach_helperEi@Base 1.5.0
+ _ZN5QListI9QFileInfoE13detach_helperEv@Base 1.5.0
  _ZN5QListI9QFileInfoED1Ev@Base 1.5.0
  _ZN5QListI9QFileInfoED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
@@ -5422,8 +5541,6 @@ libRoutinoPlugin.so libmarblewidget15 #MINVER#
  _ZN6Marble13RoutinoRunnerD2Ev@Base 1.5.0
  _ZN6Marble14WaypointParserD1Ev@Base 1.5.0
  _ZN6Marble14WaypointParserD2Ev@Base 1.5.0
- _ZN6Marble15RoutingWaypointD1Ev@Base 1.5.0
- _ZN6Marble15RoutingWaypointD2Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD0Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD1Ev@Base 1.5.0
  _ZN6Marble19RoutingRunnerPlugin12ConfigWidgetD2Ev@Base 1.5.0
@@ -5437,6 +5554,7 @@ libRoutinoPlugin.so libmarblewidget15 #MINVER#
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble12RoutingPointEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED2Ev@Base 1.5.0
@@ -5444,8 +5562,11 @@ libRoutinoPlugin.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble15RoutingWaypointEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble15RoutingWaypointEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble15RoutingWaypointEED2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble18RoutingInstructionEE7reallocEii@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEED1Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble18RoutingInstructionEED2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -5647,7 +5768,7 @@ libSatellitesPlugin.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QString8QVariantED2Ev@Base 1.5.0
  _ZN5QListI10QByteArrayED1Ev@Base 1.5.0
  _ZN5QListI10QByteArrayED2Ev@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringE9removeAllERKS0_@Base 1.5.0
@@ -5878,19 +5999,17 @@ libSatellitesPlugin.so libmarblewidget15 #MINVER#
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble17TrackerPluginItemEE13detach_helperEv@Base 1.5.0
- _ZN7QVectorIPN6Marble17TrackerPluginItemEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble17TrackerPluginItemEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble17TrackerPluginItemEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble17TrackerPluginItemEED2Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble28SatellitesConfigAbstractItemEE13detach_helperEv@Base 1.5.0
- _ZN7QVectorIPN6Marble28SatellitesConfigAbstractItemEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble28SatellitesConfigAbstractItemEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble28SatellitesConfigAbstractItemEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble28SatellitesConfigAbstractItemEED2Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED2Ev@Base 1.5.0
+ _ZNK4QMapI7QStringS0_E15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
  _ZNK5QHashI7QString8QVariantE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QListI7QStringE7indexOfERKS0_i@Base 1.5.0
  _ZNK6Marble15SatellitesModel10metaObjectEv@Base 1.5.0
  _ZNK6Marble16SatellitesPlugin10metaObjectEv@Base 1.5.0
  _ZNK6Marble16SatellitesPlugin10renderTypeEv@Base 1.5.0
@@ -6038,6 +6157,8 @@ libSatellitesPlugin.so libmarblewidget15 #MINVER#
 libSpeedometer.so libmarblewidget15 #MINVER#
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -6096,7 +6217,7 @@ libSpeedometer.so libmarblewidget15 #MINVER#
  qt_plugin_query_verification_data@Base 1.5.0
 libStarsPlugin.so libmarblewidget15 #MINVER#
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -6179,7 +6300,7 @@ libStarsPlugin.so libmarblewidget15 #MINVER#
  qt_plugin_instance@Base 1.5.0
  qt_plugin_query_verification_data@Base 1.5.0
 libSunPlugin.so libmarblewidget15 #MINVER#
- _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
@@ -6247,8 +6368,6 @@ libWeather.so libmarblewidget15 #MINVER#
  _Z21qMetaTypeDeleteHelperIN6Marble10BBCStationEEvPT_@Base 1.5.0
  _Z24qMetaTypeConstructHelperIN6Marble10BBCStationEEPvPKT_@Base 1.5.0
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN11QStringListD1Ev@Base 1.5.0
- _ZN11QStringListD2Ev@Base 1.5.0
  _ZN22Ui_WeatherConfigWidget13retranslateUiEP7QDialog@Base 1.5.0
  _ZN22Ui_WeatherConfigWidget7setupUiEP7QDialog@Base 1.5.0
  _ZN4QMapI5QDateN6Marble11WeatherDataEE13detach_helperEv@Base 1.5.0
@@ -6264,6 +6383,7 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QStringN6Marble11WeatherData10VisibilityEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData10VisibilityEED1Ev@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData10VisibilityEED2Ev@Base 1.5.0
+ _ZN5QHashI7QStringN6Marble11WeatherData10VisibilityEEixERKS0_@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData13WindDirectionEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData13WindDirectionEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData13WindDirectionEED1Ev@Base 1.5.0
@@ -6278,6 +6398,7 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZN5QHashI7QStringN6Marble11WeatherData19PressureDevelopmentEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData19PressureDevelopmentEED1Ev@Base 1.5.0
  _ZN5QHashI7QStringN6Marble11WeatherData19PressureDevelopmentEED2Ev@Base 1.5.0
+ _ZN5QHashI7QStringN6Marble11WeatherData19PressureDevelopmentEEixERKS0_@Base 1.5.0
  _ZN5QHashI7QStringiE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QStringiE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringiED1Ev@Base 1.5.0
@@ -6293,17 +6414,18 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZN5QHashIN6Marble11WeatherData16WeatherConditionE7QStringED1Ev@Base 1.5.0
  _ZN5QHashIN6Marble11WeatherData16WeatherConditionE7QStringED2Ev@Base 1.5.0
  _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE13detach_helperEv@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
  _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble10BBCStationEE13detach_helperEi@Base 1.5.0
- _ZN5QListIN6Marble10BBCStationEE5clearEv@Base 1.5.0
+ _ZN5QListIN6Marble10BBCStationEE13detach_helperEv@Base 1.5.0
  _ZN5QListIN6Marble10BBCStationEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble10BBCStationEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble11WeatherDataEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble11WeatherDataEE13detach_helperEv@Base 1.5.0
  _ZN5QListIN6Marble11WeatherDataEE18detach_helper_growEii@Base 1.5.0
- _ZN5QListIN6Marble11WeatherDataEE5clearEv@Base 1.5.0
  _ZN5QListIN6Marble11WeatherDataEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble11WeatherDataEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble11WeatherDataEED2Ev@Base 1.5.0
@@ -6319,6 +6441,7 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZN5QListIPN6Marble22AbstractDataPluginItemEE6appendERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEED2Ev@Base 1.5.0
+ _ZN5QListIPN6Marble22AbstractWeatherServiceEE13detach_helperEv@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractWeatherServiceEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractWeatherServiceEE6appendERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractWeatherServiceEED1Ev@Base 1.5.0
@@ -6574,8 +6697,11 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN6QStackIN6Marble13ScheduleEntryEED1Ev@Base 1.5.0
  _ZN6QStackIN6Marble13ScheduleEntryEED2Ev@Base 1.5.0
+ _ZN7QStringC1EPKc@Base 1.5.0
+ _ZN7QStringC2EPKc@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble11WeatherData13WindDirectionEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIN6Marble11WeatherData13WindDirectionEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble11WeatherData13WindDirectionEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble11WeatherData13WindDirectionEED2Ev@Base 1.5.0
@@ -6583,6 +6709,7 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble13ScheduleEntryEE7reallocEii@Base 1.5.0
  _ZN8QPointerI7QObjectED1Ev@Base 1.5.0
  _ZN8QPointerI7QObjectED2Ev@Base 1.5.0
+ _ZNK4QMapI5QDateN6Marble11WeatherDataEE15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
  _ZNK5QHashI7QString8QVariantE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QString8QVariantEeqERKS2_@Base 1.5.0
  _ZNK5QHashI7QStringN6Marble11WeatherData10VisibilityEE8findNodeERKS0_Pj@Base 1.5.0
@@ -6590,7 +6717,6 @@ libWeather.so libmarblewidget15 #MINVER#
  _ZNK5QHashI7QStringN6Marble11WeatherData16WeatherConditionEE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QStringN6Marble11WeatherData19PressureDevelopmentEE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QStringiE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QListI7QStringEeqERKS1_@Base 1.5.0
  _ZNK6Marble10BBCStation10coordinateEv@Base 1.5.0
  _ZNK6Marble10BBCStation4nameEv@Base 1.5.0
  _ZNK6Marble10BBCStation5bbcIdEv@Base 1.5.0
@@ -6901,6 +7027,8 @@ libYoursPlugin.so libmarblewidget15 #MINVER#
  _ZN10QByteArrayD2Ev@Base 1.5.0
  _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringED1Ev@Base 1.5.0
+ _ZN5QListI7QStringED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE6appendERKS1_@Base 1.5.0
@@ -6937,9 +7065,11 @@ libYoursPlugin.so libmarblewidget15 #MINVER#
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble13GeoDataFolderEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEED2Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -6990,6 +7120,7 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _Z21qMetaTypeDeleteHelperIPN6Marble13GeoDataObjectEEvPT_@Base 1.5.0
  _Z21qMetaTypeDeleteHelperIPN6Marble15GeoDataDocumentEEvPT_@Base 1.5.0
  _Z21qMetaTypeDeleteHelperIPN6Marble15GeoDataGeometryEEvPT_@Base 1.5.0
+ _Z23qStringComparisonHelperRK7QStringPKc@Base 1.5.0
  _Z24qCleanupResources_marblev@Base 1.5.0
  _Z24qInitResources_libmarblev@Base 1.5.0
  _Z24qMetaTypeConstructHelperI7QVectorIPN6Marble16GeoDataPlacemarkEEEPvPKT_@Base 1.5.0
@@ -7003,12 +7134,18 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _Z24qMetaTypeConstructHelperIPN6Marble15GeoDataGeometryEEPvPKT_@Base 1.5.0
  _Z27qCleanupResources_libmarblev@Base 1.5.0
  _ZGVZN6Marble11MarbleDebug10nullDeviceEvE6device@Base 1.5.0
- _ZN10QByteArray4dataEv@Base 1.5.0
+ _ZN10QByteArray6detachEv@Base 1.5.0
  _ZN10QByteArrayD1Ev@Base 1.5.0
  _ZN10QByteArrayD2Ev@Base 1.5.0
+ _ZN11QDomElementD1Ev@Base 1.5.0
+ _ZN11QDomElementD2Ev@Base 1.5.0
  _ZN11QMetaTypeIdIN6Marble13DownloadUsageEE14qt_metatype_idEv@Base 1.5.0
  _ZN11QMetaTypeIdIN6Marble18GeoDataCoordinatesEE14qt_metatype_idEv@Base 1.5.0
+ _ZN11QMetaTypeIdIPKN6Marble12GeoDataStyleEE14qt_metatype_idEv@Base 1.5.0
+ _ZN11QMetaTypeIdIPN6Marble13GeoDataFolderEE14qt_metatype_idEv@Base 1.5.0
+ _ZN11QMetaTypeIdIPN6Marble13GeoDataObjectEE14qt_metatype_idEv@Base 1.5.0
  _ZN11QMetaTypeIdIPN6Marble15GeoDataDocumentEE14qt_metatype_idEv@Base 1.5.0
+ _ZN11QMetaTypeIdIPN6Marble15GeoDataGeometryEE14qt_metatype_idEv@Base 1.5.0
  _ZN11QStringListD1Ev@Base 1.5.0
  _ZN11QStringListD2Ev@Base 1.5.0
  _ZN12KineticModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
@@ -7030,6 +7167,7 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN12KineticModelD0Ev@Base 1.5.0
  _ZN12KineticModelD1Ev@Base 1.5.0
  _ZN12KineticModelD2Ev@Base 1.5.0
+ _ZN12QMutexLocker6unlockEv@Base 1.5.0
  _ZN12QtConcurrent15RunFunctionTaskIvE3runEv@Base 1.5.0
  _ZN12QtConcurrent15RunFunctionTaskIvED0Ev@Base 1.5.0
  _ZN12QtConcurrent15RunFunctionTaskIvED1Ev@Base 1.5.0
@@ -7045,14 +7183,18 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN12QtConcurrent3runIvN6Marble20NewstuffModelPrivateEiiEE7QFutureIT_EPT0_MS6_FS4_T1_ERKT2_@Base 1.5.0
  _ZN12Ui_MapWizard13retranslateUiEP7QWizard@Base 1.5.0
  _ZN12Ui_MapWizard7setupUiEP7QWizard@Base 1.5.0
+ _ZN13QConcatenableI14QStringBuilderIS0_IA13_c7QStringEA5_cEE8appendToI5QCharEEvRKS5_RPT_@Base 1.5.0
+ _ZN13QConcatenableI14QStringBuilderIS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_IS0_I7QStringS1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_ES1_EE8appendToI5QCharEEvRKS12_RPT_@Base 1.5.0
  _ZN14QFutureWatcherIvE15futureInterfaceEv@Base 1.5.0
+ _ZN14QFutureWatcherIvEC1EP7QObject@Base 1.5.0
+ _ZN14QFutureWatcherIvEC2EP7QObject@Base 1.5.0
  _ZN14QFutureWatcherIvED0Ev@Base 1.5.0
  _ZN14QFutureWatcherIvED1Ev@Base 1.5.0
  _ZN14QFutureWatcherIvED2Ev@Base 1.5.0
- _ZN14QSharedPointerIN6Marble11TextureTileEED1Ev@Base 1.5.0
- _ZN14QSharedPointerIN6Marble11TextureTileEED2Ev@Base 1.5.0
- _ZN14QSharedPointerIN6Marble16GeoSceneDocumentEED1Ev@Base 1.5.0
- _ZN14QSharedPointerIN6Marble16GeoSceneDocumentEED2Ev@Base 1.5.0
+ _ZN14QItemSelectionD1Ev@Base 1.5.0
+ _ZN14QItemSelectionD2Ev@Base 1.5.0
+ _ZN15QtSharedPointer16ExternalRefCountIN6Marble11TextureTileEE5derefEPNS_20ExternalRefCountDataEPS2_@Base 1.5.0
+ _ZN15QtSharedPointer16ExternalRefCountIN6Marble16GeoSceneDocumentEE5derefEPNS_20ExternalRefCountDataEPS2_@Base 1.5.0
  _ZN15QtSharedPointer20ExternalRefCountData7destroyEv@Base 1.5.0
  _ZN15QtSharedPointer20ExternalRefCountDataD0Ev@Base 1.5.0
  _ZN15QtSharedPointer20ExternalRefCountDataD1Ev@Base 1.5.0
@@ -7063,8 +7205,56 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN16QFutureInterfaceIvED2Ev@Base 1.5.0
  _ZN16Ui_MapViewWidget7setupUiEP7QWidget@Base 1.5.0
  _ZN16Ui_RoutingWidget7setupUiEP7QWidget@Base 1.5.0
+ _ZN17QForeachContainerI11QStringListED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI11QStringListED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI4QSetIPN6Marble18MarbleGraphicsItemEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI4QSetIPN6Marble18MarbleGraphicsItemEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI11QModelIndexEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI11QModelIndexEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI6QRectFEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI6QRectFEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI7QPointFEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI7QPointFEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI9QFileInfoEEC1ERKS2_@Base 1.5.0
+ _ZN17QForeachContainerI5QListI9QFileInfoEEC2ERKS2_@Base 1.5.0
+ _ZN17QForeachContainerI5QListI9QFileInfoEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListI9QFileInfoEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble12GeoDataStyleEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble12GeoDataStyleEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble15GeoDataStyleMapEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble15GeoDataStyleMapEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble18GeoDataCoordinatesEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble18GeoDataCoordinatesEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble6TileIdEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIN6Marble6TileIdEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble12RenderPluginEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble12RenderPluginEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble14DownloadPolicyEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble14DownloadPolicyEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble15GeoScenePaletteEEEC1ERKS5_@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble15GeoScenePaletteEEEC2ERKS5_@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble22PositionProviderPluginEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPKN6Marble22PositionProviderPluginEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble10FileLoaderEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble10FileLoaderEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble12RenderPluginEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble12RenderPluginEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble17AbstractFloatItemEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble17AbstractFloatItemEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble22AbstractDataPluginItemEEED1Ev@Base 1.5.0
+ _ZN17QForeachContainerI5QListIPN6Marble22AbstractDataPluginItemEEED2Ev@Base 1.5.0
+ _ZN17QForeachContainerIK11QStringListEC1ERS1_@Base 1.5.0
+ _ZN17QForeachContainerIK11QStringListEC2ERS1_@Base 1.5.0
  _ZN17Ui_ExternalEditor7setupUiEP7QDialog@Base 1.5.0
- _ZN17Ui_FileViewWidget7setupUiEP7QWidget@Base 1.5.0
+ _ZN18QAlgorithmsPrivate11qSortHelperIN5QListI7QStringE8iteratorES2_PFbRKS2_S6_EEEvT_S9_RKT0_T1_@Base 1.5.0
+ _ZN18QAlgorithmsPrivate11qSortHelperIN5QListIN6Marble17SpeakersModelItemEE8iteratorES3_PFbRKS3_S7_EEEvT_SA_RKT0_T1_@Base 1.5.0
+ _ZN18QAlgorithmsPrivate11qSortHelperIN5QListIPN6Marble12RenderPluginEE8iteratorES4_PFbS4_S4_EEEvT_S9_RKT0_T1_@Base 1.5.0
+ _ZN18QAlgorithmsPrivate11qSortHelperIN5QListIPN6Marble14LayerInterfaceEE8iteratorES4_PFbPKS3_S8_EEEvT_SB_RKT0_T1_@Base 1.5.0
+ _ZN18QAlgorithmsPrivate11qSortHelperIN5QListIPN6Marble22AbstractDataPluginItemEE8iteratorES4_PFbPKS3_S8_EEEvT_SB_RKT0_T1_@Base 1.5.0
  _ZN18QAlgorithmsPrivate11qSortHelperIPN6Marble14GeoDataFeature21GeoDataVisualCategoryES3_5qLessIS3_EEEvT_S7_RKT0_T1_@Base 1.5.0
  _ZN18QStyleOptionButtonD1Ev@Base 1.5.0
  _ZN18QStyleOptionButtonD2Ev@Base 1.5.0
@@ -7093,6 +7283,9 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN22KDescendantsProxyModelD2Ev@Base 1.5.0
  _ZN22Ui_PlacemarkInfoDialog13retranslateUiEP7QDialog@Base 1.5.0
  _ZN22Ui_PlacemarkInfoDialog7setupUiEP7QDialog@Base 1.5.0
+ _ZN23KBiAssociativeContainerI5QHashI21QPersistentModelIndexiE4QMapIiS1_EE6insertES1_i@Base 1.5.0
+ _ZN23KBiAssociativeContainerI5QHashI21QPersistentModelIndexiE4QMapIiS1_EED1Ev@Base 1.5.0
+ _ZN23KBiAssociativeContainerI5QHashI21QPersistentModelIndexiE4QMapIiS1_EED2Ev@Base 1.5.0
  _ZN23Ui_TileLevelRangeWidget7setupUiEP7QWidget@Base 1.5.0
  _ZN23Ui_UiEditBookmarkDialog7setupUiEP7QDialog@Base 1.5.0
  _ZN24Ui_CurrentLocationWidget13retranslateUiEP7QWidget@Base 1.5.0
@@ -7134,10 +7327,13 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN4QMapI7QString5QPairI9QDateTimeyEED1Ev@Base 1.5.0
  _ZN4QMapI7QString5QPairI9QDateTimeyEED2Ev@Base 1.5.0
  _ZN4QMapI7QString7QPixmapE13detach_helperEv@Base 1.5.0
+ _ZN4QMapI7QString7QPixmapED1Ev@Base 1.5.0
+ _ZN4QMapI7QString7QPixmapED2Ev@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12GeoDataStyleEE13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12GeoDataStyleEE6removeERKS0_@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12GeoDataStyleEED1Ev@Base 1.5.0
  _ZN4QMapI7QStringN6Marble12GeoDataStyleEED2Ev@Base 1.5.0
+ _ZN4QMapI7QStringN6Marble14GeoDataFeature21GeoDataVisualCategoryEE13detach_helperEv@Base 1.5.0
  _ZN4QMapI7QStringN6Marble14GeoDataFeature21GeoDataVisualCategoryEED1Ev@Base 1.5.0
  _ZN4QMapI7QStringN6Marble14GeoDataFeature21GeoDataVisualCategoryEED2Ev@Base 1.5.0
  _ZN4QMapI7QStringN6Marble15GeoDataStyleMapEE13detach_helperEv@Base 1.5.0
@@ -7165,14 +7361,11 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN4QMapIN6Marble6TileIdE5QListIPKNS0_16GeoDataPlacemarkEEED1Ev@Base 1.5.0
  _ZN4QMapIN6Marble6TileIdE5QListIPKNS0_16GeoDataPlacemarkEEED2Ev@Base 1.5.0
  _ZN4QMapIN6Marble6TileIdE5QListIPNS0_15GeoGraphicsItemEEE13detach_helperEv@Base 1.5.0
- _ZN4QMapIN6Marble6TileIdE5QListIPNS0_15GeoGraphicsItemEEED1Ev@Base 1.5.0
- _ZN4QMapIN6Marble6TileIdE5QListIPNS0_15GeoGraphicsItemEEED2Ev@Base 1.5.0
  _ZN4QMapIN6Marble8Maneuver9DirectionE7QStringE13detach_helperEv@Base 1.5.0
+ _ZN4QMapIN6Marble8Maneuver9DirectionE7QStringE5clearEv@Base 1.5.0
  _ZN4QMapIN6Marble8Maneuver9DirectionE7QStringED1Ev@Base 1.5.0
  _ZN4QMapIN6Marble8Maneuver9DirectionE7QStringED2Ev@Base 1.5.0
- _ZN4QMapIN6Marble8Maneuver9DirectionE7QStringEixERKS2_@Base 1.5.0
  _ZN4QMapIPN6Marble22AbstractDataPluginItemEP16QDeclarativeItemE13detach_helperEv@Base 1.5.0
- _ZN4QMapIPN6Marble22AbstractDataPluginItemEP16QDeclarativeItemE6removeERKS2_@Base 1.5.0
  _ZN4QMapIPN6Marble22AbstractDataPluginItemEP16QDeclarativeItemED1Ev@Base 1.5.0
  _ZN4QMapIPN6Marble22AbstractDataPluginItemEP16QDeclarativeItemED2Ev@Base 1.5.0
  _ZN4QMapIi21QPersistentModelIndexE13detach_helperEv@Base 1.5.0
@@ -7197,6 +7390,9 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QHashI5QPairI7QStringS1_EPKN6Marble13GeoTagHandlerEE6removeERKS2_@Base 1.5.0
  _ZN5QHashI7QString15QHashDummyValueE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QString15QHashDummyValueE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
+ _ZN5QHashI7QString15QHashDummyValueE6removeERKS0_@Base 1.5.0
+ _ZN5QHashI7QString15QHashDummyValueED1Ev@Base 1.5.0
+ _ZN5QHashI7QString15QHashDummyValueED2Ev@Base 1.5.0
  _ZN5QHashI7QString8QVariantE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QString8QVariantE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QString8QVariantED1Ev@Base 1.5.0
@@ -7208,11 +7404,11 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QHashI7QStringPKN6Marble8BlendingEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QStringPKN6Marble8BlendingEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashI7QStringPKN6Marble8BlendingEE6insertERKS0_RKS4_@Base 1.5.0
+ _ZN5QHashI7QStringPKN6Marble8BlendingEE6removeERKS0_@Base 1.5.0
  _ZN5QHashI7QStringPKN6Marble8BlendingEED1Ev@Base 1.5.0
  _ZN5QHashI7QStringPKN6Marble8BlendingEED2Ev@Base 1.5.0
  _ZN5QHashI7QStringPN6Marble22AbstractDataPluginItemEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashI7QStringPN6Marble22AbstractDataPluginItemEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
- _ZN5QHashI7QStringPN6Marble22AbstractDataPluginItemEE5eraseENS4_8iteratorE@Base 1.5.0
  _ZN5QHashI7QStringPN6Marble22AbstractDataPluginItemEED1Ev@Base 1.5.0
  _ZN5QHashI7QStringPN6Marble22AbstractDataPluginItemEED2Ev@Base 1.5.0
  _ZN5QHashI7QStringPN6Marble22GeoDataSimpleArrayDataEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
@@ -7228,7 +7424,6 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QHashIN6Marble6TileIdE15QHashDummyValueE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
- _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEE5clearEv@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEE6removeERKS1_@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEED1Ev@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEED2Ev@Base 1.5.0
@@ -7244,6 +7439,7 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QHashIN6Marble6TileIdEN6QCacheIS1_NS0_11StackedTileEE4NodeEED2Ev@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEPNS0_11StackedTileEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEPNS0_11StackedTileEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
+ _ZN5QHashIN6Marble6TileIdEPNS0_11StackedTileEE4takeERKS1_@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEPNS0_11StackedTileEE6removeERKS1_@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEPNS0_11StackedTileEED1Ev@Base 1.5.0
  _ZN5QHashIN6Marble6TileIdEPNS0_11StackedTileEED2Ev@Base 1.5.0
@@ -7257,21 +7453,26 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QHashIPN6Marble18MarbleGraphicsItemE15QHashDummyValueE6removeERKS2_@Base 1.5.0
  _ZN5QHashIPN6Marble18ScreenGraphicsItemE6QFlagsIN2Qt13AlignmentFlagEEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIPN6Marble18ScreenGraphicsItemE6QFlagsIN2Qt13AlignmentFlagEEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
+ _ZN5QHashIPN6Marble18ScreenGraphicsItemE6QFlagsIN2Qt13AlignmentFlagEEED1Ev@Base 1.5.0
+ _ZN5QHashIPN6Marble18ScreenGraphicsItemE6QFlagsIN2Qt13AlignmentFlagEEED2Ev@Base 1.5.0
  _ZN5QHashIPN6Marble19RoutingRunnerPluginEPNS1_12ConfigWidgetEE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIPN6Marble19RoutingRunnerPluginEPNS1_12ConfigWidgetEE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashIPN6Marble19RoutingRunnerPluginEPNS1_12ConfigWidgetEED1Ev@Base 1.5.0
  _ZN5QHashIPN6Marble19RoutingRunnerPluginEPNS1_12ConfigWidgetEED2Ev@Base 1.5.0
  _ZN5QHashIi10QByteArrayE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIi10QByteArrayE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
+ _ZN5QHashIi10QByteArrayEixERKi@Base 1.5.0
  _ZN5QHashIi21QPersistentModelIndexE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIi21QPersistentModelIndexE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashIiiE11deleteNode2EPN9QHashData4NodeE@Base 1.5.0
  _ZN5QHashIiiE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.5.0
  _ZN5QHashIiiE6insertERKiS2_@Base 1.5.0
- _ZN5QListI10QByteArrayE13detach_helperEi@Base 1.5.0
+ _ZN5QHashIiiED1Ev@Base 1.5.0
+ _ZN5QHashIiiED2Ev@Base 1.5.0
  _ZN5QListI10QByteArrayED1Ev@Base 1.5.0
  _ZN5QListI10QByteArrayED2Ev@Base 1.5.0
  _ZN5QListI11QModelIndexE13detach_helperEi@Base 1.5.0
+ _ZN5QListI11QModelIndexE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI11QModelIndexE5clearEv@Base 1.5.0
  _ZN5QListI11QModelIndexE6appendERKS0_@Base 1.5.0
  _ZN5QListI11QModelIndexED1Ev@Base 1.5.0
@@ -7279,37 +7480,50 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QListI19QItemSelectionRangeED1Ev@Base 1.5.0
  _ZN5QListI19QItemSelectionRangeED2Ev@Base 1.5.0
  _ZN5QListI21QPersistentModelIndexE13detach_helperEi@Base 1.5.0
+ _ZN5QListI21QPersistentModelIndexE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI21QPersistentModelIndexE5clearEv@Base 1.5.0
+ _ZN5QListI21QPersistentModelIndexE6appendERKS0_@Base 1.5.0
  _ZN5QListI21QPersistentModelIndexED1Ev@Base 1.5.0
  _ZN5QListI21QPersistentModelIndexED2Ev@Base 1.5.0
  _ZN5QListI5QPairIN6Marble17DownloadPolicyKeyEPNS1_16DownloadQueueSetEEE13detach_helperEi@Base 1.5.0
+ _ZN5QListI5QPairIN6Marble17DownloadPolicyKeyEPNS1_16DownloadQueueSetEEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListI5QPairIN6Marble17DownloadPolicyKeyEPNS1_16DownloadQueueSetEEE6appendERKS5_@Base 1.5.0
  _ZN5QListI5QPairIN6Marble17DownloadPolicyKeyEPNS1_16DownloadQueueSetEEED1Ev@Base 1.5.0
  _ZN5QListI5QPairIN6Marble17DownloadPolicyKeyEPNS1_16DownloadQueueSetEEED2Ev@Base 1.5.0
  _ZN5QListI5QPairIiN6Marble20NewstuffModelPrivate10UserActionEEE13detach_helperEi@Base 1.5.0
+ _ZN5QListI5QPairIiN6Marble20NewstuffModelPrivate10UserActionEEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI5QPairIiN6Marble20NewstuffModelPrivate10UserActionEEE6appendERKS4_@Base 1.5.0
  _ZN5QListI5QPairIiN6Marble20NewstuffModelPrivate10UserActionEEE9removeAllERKS4_@Base 1.5.0
+ _ZN5QListI5QPairIiN6Marble20NewstuffModelPrivate10UserActionEEE9takeFirstEv@Base 1.5.0
+ _ZN5QListI5QSizeE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI6QRectFE13detach_helperEi@Base 1.5.0
+ _ZN5QListI6QRectFE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI6QRectFE6appendERKS0_@Base 1.5.0
  _ZN5QListI6QRectFED1Ev@Base 1.5.0
  _ZN5QListI6QRectFED2Ev@Base 1.5.0
  _ZN5QListI7QPointFE13detach_helperEi@Base 1.5.0
- _ZN5QListI7QPointFE5clearEv@Base 1.5.0
+ _ZN5QListI7QPointFE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QPointFE6appendERKS0_@Base 1.5.0
  _ZN5QListI7QPointFED1Ev@Base 1.5.0
  _ZN5QListI7QPointFED2Ev@Base 1.5.0
  _ZN5QListI7QStringE13detach_helperEi@Base 1.5.0
+ _ZN5QListI7QStringE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI7QStringE5clearEv@Base 1.5.0
  _ZN5QListI7QStringE6appendERKS0_@Base 1.5.0
+ _ZN5QListI7QStringE7prependERKS0_@Base 1.5.0
  _ZN5QListI7QStringE9removeAllERKS0_@Base 1.5.0
- _ZN5QListI7QStringE9removeOneERKS0_@Base 1.5.0
+ _ZN5QListI7QStringEC1ERKS1_@Base 1.5.0
+ _ZN5QListI7QStringEC2ERKS1_@Base 1.5.0
  _ZN5QListI7QStringED1Ev@Base 1.5.0
  _ZN5QListI7QStringED2Ev@Base 1.5.0
+ _ZN5QListI7QStringEpLERKS1_@Base 1.5.0
  _ZN5QListI8QVariantE13detach_helperEi@Base 1.5.0
+ _ZN5QListI8QVariantE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI8QVariantE6appendERKS0_@Base 1.5.0
  _ZN5QListI8QVariantED1Ev@Base 1.5.0
  _ZN5QListI8QVariantED2Ev@Base 1.5.0
  _ZN5QListI9QDateTimeE13detach_helperEi@Base 1.5.0
- _ZN5QListI9QDateTimeE5clearEv@Base 1.5.0
+ _ZN5QListI9QDateTimeE18detach_helper_growEii@Base 1.5.0
  _ZN5QListI9QDateTimeE6appendERKS0_@Base 1.5.0
  _ZN5QListI9QDateTimeED1Ev@Base 1.5.0
  _ZN5QListI9QDateTimeED2Ev@Base 1.5.0
@@ -7317,148 +7531,124 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN5QListI9QFileInfoED1Ev@Base 1.5.0
  _ZN5QListI9QFileInfoED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12GeoDataStyleEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble12GeoDataStyleEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble12GeoDataStyleEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble12GeoDataStyleEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble12GeoDataStyleEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble12PluginAuthorEE13detach_helperEi@Base 1.5.0
  _ZN5QListIN6Marble14RoutingProfileEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble14RoutingProfileEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble14RoutingProfileEE6appendERKS1_@Base 1.5.0
+ _ZN5QListIN6Marble14RoutingProfileEED1Ev@Base 1.5.0
+ _ZN5QListIN6Marble14RoutingProfileEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble15GeoDataStyleMapEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble15GeoDataStyleMapEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble15GeoDataStyleMapEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble15GeoDataStyleMapEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble15GeoDataStyleMapEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble17SpeakersModelItemEE13detach_helperEi@Base 1.5.0
- _ZN5QListIN6Marble17SpeakersModelItemEE5clearEv@Base 1.5.0
+ _ZN5QListIN6Marble17SpeakersModelItemEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble17SpeakersModelItemEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble17SpeakersModelItemEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble17SpeakersModelItemEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble18GeoDataCoordinatesEE13detach_helperEi@Base 1.5.0
- _ZN5QListIN6Marble18GeoDataCoordinatesEE5clearEv@Base 1.5.0
+ _ZN5QListIN6Marble18GeoDataCoordinatesEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble18GeoDataCoordinatesEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble18GeoDataCoordinatesEE9removeAllERKS1_@Base 1.5.0
  _ZN5QListIN6Marble18GeoDataCoordinatesEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble18GeoDataCoordinatesEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEE5clearEv@Base 1.5.0
+ _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEE6appendERKS4_@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexEEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEE13detach_helperEi@Base 1.5.0
- _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEE5clearEv@Base 1.5.0
+ _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEE6appendERKS3_@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble19RoutingLayerPrivate11PaintRegionIiEEED2Ev@Base 1.5.0
  _ZN5QListIN6Marble6TileIdEE13detach_helperEi@Base 1.5.0
+ _ZN5QListIN6Marble6TileIdEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIN6Marble6TileIdEE6appendERKS1_@Base 1.5.0
  _ZN5QListIN6Marble6TileIdEED1Ev@Base 1.5.0
  _ZN5QListIN6Marble6TileIdEED2Ev@Base 1.5.0
- _ZN5QListIP13QStandardItemE6appendERKS1_@Base 1.5.0
+ _ZN5QListIP13QStandardItemE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIP13QStandardItemED1Ev@Base 1.5.0
  _ZN5QListIP13QStandardItemED2Ev@Base 1.5.0
- _ZN5QListIP16QDeclarativeItemE6appendERKS1_@Base 1.5.0
- _ZN5QListIP16QDeclarativeItemE7reserveEi@Base 1.5.0
+ _ZN5QListIP16QDeclarativeItemE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIP16QDeclarativeItemED1Ev@Base 1.5.0
  _ZN5QListIP16QDeclarativeItemED2Ev@Base 1.5.0
- _ZN5QListIP7QActionE13detach_helperEi@Base 1.5.0
- _ZN5QListIP7QActionE6appendERKS1_@Base 1.5.0
+ _ZN5QListIP7QActionE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIP7QActionED1Ev@Base 1.5.0
  _ZN5QListIP7QActionED2Ev@Base 1.5.0
- _ZN5QListIP7QObjectE13detach_helperEi@Base 1.5.0
- _ZN5QListIPKN6Marble12RenderPluginEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPKN6Marble12RenderPluginEE6appendERKS3_@Base 1.5.0
- _ZN5QListIPKN6Marble12RenderPluginEED1Ev@Base 1.5.0
- _ZN5QListIPKN6Marble12RenderPluginEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble13NetworkPluginEE6appendERKS3_@Base 1.5.0
- _ZN5QListIPKN6Marble14DownloadPolicyEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPKN6Marble14DownloadPolicyEE6appendERKS3_@Base 1.5.0
- _ZN5QListIPKN6Marble14DownloadPolicyEED1Ev@Base 1.5.0
- _ZN5QListIPKN6Marble14DownloadPolicyEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble15GeoScenePaletteEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPKN6Marble15GeoScenePaletteEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPKN6Marble15GeoScenePaletteEE6appendERKS3_@Base 1.5.0
+ _ZN5QListIPKN6Marble12RenderPluginEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIPKN6Marble13NetworkPluginEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIPKN6Marble14DownloadPolicyEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIPKN6Marble15GeoScenePaletteEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPKN6Marble15GeoScenePaletteEE9removeAllERKS3_@Base 1.5.0
  _ZN5QListIPKN6Marble15GeoScenePaletteEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble15GeoScenePaletteEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble16GeoDataPlacemarkEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPKN6Marble16GeoDataPlacemarkEE6appendERKS3_@Base 1.5.0
+ _ZN5QListIPKN6Marble16GeoDataPlacemarkEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPKN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble16GeoDataPlacemarkEEpLERKS4_@Base 1.5.0
- _ZN5QListIPKN6Marble17ParseRunnerPluginEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPKN6Marble17ParseRunnerPluginEE6appendERKS3_@Base 1.5.0
+ _ZN5QListIPKN6Marble17ParseRunnerPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPKN6Marble17ParseRunnerPluginEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble17ParseRunnerPluginEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble18SearchRunnerPluginEE6appendERKS3_@Base 1.5.0
+ _ZN5QListIPKN6Marble18SearchRunnerPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPKN6Marble18SearchRunnerPluginEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble18SearchRunnerPluginEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble22PositionProviderPluginEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPKN6Marble22PositionProviderPluginEE6appendERKS3_@Base 1.5.0
+ _ZN5QListIPKN6Marble22PositionProviderPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPKN6Marble22PositionProviderPluginEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble22PositionProviderPluginEED2Ev@Base 1.5.0
- _ZN5QListIPKN6Marble28ReverseGeocodingRunnerPluginEE6appendERKS3_@Base 1.5.0
+ _ZN5QListIPKN6Marble28ReverseGeocodingRunnerPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPKN6Marble28ReverseGeocodingRunnerPluginEED1Ev@Base 1.5.0
  _ZN5QListIPKN6Marble28ReverseGeocodingRunnerPluginEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble10FileLoaderEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPN6Marble10FileLoaderEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble10FileLoaderEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble10FileLoaderEE9removeAllERKS2_@Base 1.5.0
- _ZN5QListIPN6Marble10FileLoaderEED1Ev@Base 1.5.0
- _ZN5QListIPN6Marble10FileLoaderEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble10RunnerTaskEE13detach_helperEv@Base 1.5.0
+ _ZN5QListIPN6Marble10RunnerTaskEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble10RunnerTaskEE5clearEv@Base 1.5.0
- _ZN5QListIPN6Marble10RunnerTaskEE6appendERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble10RunnerTaskEE9removeAllERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble10RunnerTaskEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble10RunnerTaskEED2Ev@Base 1.5.0
  _ZN5QListIPN6Marble12RenderPluginEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPN6Marble12RenderPluginEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble12RenderPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble12RenderPluginEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble12RenderPluginEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble13GeoDataObjectEE6appendERKS2_@Base 1.5.0
- _ZN5QListIPN6Marble14LayerInterfaceEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPN6Marble14LayerInterfaceEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble14LayerInterfaceEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIPN6Marble14LayerInterfaceEE9removeAllERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble14LayerInterfaceEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble14LayerInterfaceEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble15GeoDataDocumentEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPN6Marble15GeoDataDocumentEE6appendERKS2_@Base 1.5.0
- _ZN5QListIPN6Marble15GeoDataDocumentEED1Ev@Base 1.5.0
- _ZN5QListIPN6Marble15GeoDataDocumentEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble15GeoGraphicsItemEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPN6Marble15GeoGraphicsItemEE13detach_helperEv@Base 1.5.0
+ _ZN5QListIPN6Marble15GeoDataDocumentEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIPN6Marble15GeoGraphicsItemEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble15GeoGraphicsItemEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble15GeoGraphicsItemEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble17AbstractFloatItemEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPN6Marble17AbstractFloatItemEE6appendERKS2_@Base 1.5.0
- _ZN5QListIPN6Marble17AbstractFloatItemEED1Ev@Base 1.5.0
- _ZN5QListIPN6Marble17AbstractFloatItemEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble18AbstractDataPluginEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble15GeoGraphicsItemEEpLERKS3_@Base 1.5.0
+ _ZN5QListIPN6Marble17AbstractFloatItemEE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIPN6Marble18AbstractDataPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble18AbstractDataPluginEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble18AbstractDataPluginEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble18MarbleGraphicsItemEE6appendERKS2_@Base 1.5.0
- _ZN5QListIPN6Marble18MarbleGraphicsItemEE7reserveEi@Base 1.5.0
  _ZN5QListIPN6Marble18MarbleGraphicsItemEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble18MarbleGraphicsItemEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble19RoutingRunnerPluginEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPN6Marble19RoutingRunnerPluginEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPN6Marble19RoutingRunnerPluginEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble19RoutingRunnerPluginEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble19RoutingRunnerPluginEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble19RoutingRunnerPluginEED2Ev@Base 1.5.0
- _ZN5QListIPN6Marble22AbstractDataPluginItemEE13detach_helperEi@Base 1.5.0
- _ZN5QListIPN6Marble22AbstractDataPluginItemEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPN6Marble22AbstractDataPluginItemEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble22AbstractDataPluginItemEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEE9removeAllERKS2_@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEED2Ev@Base 1.5.0
  _ZN5QListIPN6Marble22AbstractDataPluginItemEEpLERKS3_@Base 1.5.0
- _ZN5QListIPN6Marble7HttpJobEE13detach_helperEv@Base 1.5.0
- _ZN5QListIPN6Marble7HttpJobEE5clearEv@Base 1.5.0
- _ZN5QListIPN6Marble7HttpJobEE6appendERKS2_@Base 1.5.0
+ _ZN5QListIPN6Marble7HttpJobEE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIPN6Marble7HttpJobEED1Ev@Base 1.5.0
  _ZN5QListIPN6Marble7HttpJobEED2Ev@Base 1.5.0
- _ZN5QListIdE6appendERKd@Base 1.5.0
- _ZN5QListIiE6appendERKi@Base 1.5.0
+ _ZN5QListIdE18detach_helper_growEii@Base 1.5.0
+ _ZN5QListIiE18detach_helper_growEii@Base 1.5.0
  _ZN5QListIiED1Ev@Base 1.5.0
  _ZN5QListIiED2Ev@Base 1.5.0
  _ZN5QPairI7QStringS0_ED1Ev@Base 1.5.0
  _ZN5QPairI7QStringS0_ED2Ev@Base 1.5.0
+ _ZN5QPairIN6Marble17DownloadPolicyKeyEPNS0_16DownloadQueueSetEED1Ev@Base 1.5.0
+ _ZN5QPairIN6Marble17DownloadPolicyKeyEPNS0_16DownloadQueueSetEED2Ev@Base 1.5.0
  _ZN6Marble10FileLoader11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
  _ZN6Marble10FileLoader11qt_metacastEPKc@Base 1.5.0
  _ZN6Marble10FileLoader14loaderFinishedEPS0_@Base 1.5.0
@@ -8039,6 +8229,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble12LonLatParser7initAllEv@Base 1.5.0
  _ZN6Marble12LonLatParserC1Ev@Base 1.5.0
  _ZN6Marble12LonLatParserC2Ev@Base 1.5.0
+ _ZN6Marble12LonLatParserD1Ev@Base 1.5.0
+ _ZN6Marble12LonLatParserD2Ev@Base 1.5.0
  _ZN6Marble12MarbleGlobal11getInstanceEv@Base 1.5.0
  _ZN6Marble12MarbleGlobal11setProfilesE6QFlagsINS0_7ProfileEE@Base 1.5.0
  _ZN6Marble12MarbleGlobal14detectProfilesEv@Base 1.5.0
@@ -8153,7 +8345,9 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble12MarbleWidgetD1Ev@Base 1.5.0
  _ZN6Marble12MarbleWidgetD2Ev@Base 1.5.0
  _ZN6Marble12NewstuffItem10deeperThanERK7QStringS3_@Base 1.5.0
+ _ZN6Marble12NewstuffItemC1ERKS0_@Base 1.5.0
  _ZN6Marble12NewstuffItemC1Ev@Base 1.5.0
+ _ZN6Marble12NewstuffItemC2ERKS0_@Base 1.5.0
  _ZN6Marble12NewstuffItemC2Ev@Base 1.5.0
  _ZN6Marble12NewstuffItemD1Ev@Base 1.5.0
  _ZN6Marble12NewstuffItemD2Ev@Base 1.5.0
@@ -9001,9 +9195,11 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble14VectorComposer11s_countriesE@Base 1.5.0
  _ZN6Marble14VectorComposer11s_usaStatesE@Base 1.5.0
  _ZN6Marble14VectorComposer12s_coastLinesE@Base 1.5.0
+ _ZN6Marble14VectorComposer12setLakeColorERK6QColor@Base 1.5.0
  _ZN6Marble14VectorComposer12setShowLakesEb@Base 1.5.0
  _ZN6Marble14VectorComposer13datasetLoadedEv@Base 1.5.0
  _ZN6Marble14VectorComposer13s_lakeislandsE@Base 1.5.0
+ _ZN6Marble14VectorComposer13setRiverColorERK6QColor@Base 1.5.0
  _ZN6Marble14VectorComposer13setShowRiversEb@Base 1.5.0
  _ZN6Marble14VectorComposer14drawTextureMapEPNS_10GeoPainterEPKNS_14ViewportParamsE@Base 1.5.0
  _ZN6Marble14VectorComposer14paintVectorMapEPNS_10GeoPainterEPKNS_14ViewportParamsE@Base 1.5.0
@@ -9014,6 +9210,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble14VectorComposer18paintBaseVectorMapEPNS_10GeoPainterEPKNS_14ViewportParamsE@Base 1.5.0
  _ZN6Marble14VectorComposer18s_coastLinesLoadedE@Base 1.5.0
  _ZN6Marble14VectorComposer18setShowWaterBodiesEb@Base 1.5.0
+ _ZN6Marble14VectorComposer19setStateBorderColorERK6QColor@Base 1.5.0
+ _ZN6Marble14VectorComposer21setCountryBorderColorERK6QColor@Base 1.5.0
  _ZN6Marble14VectorComposer7s_lakesE@Base 1.5.0
  _ZN6Marble14VectorComposer8s_riversE@Base 1.5.0
  _ZN6Marble14VectorComposer9s_islandsE@Base 1.5.0
@@ -9523,6 +9721,10 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble16KmlDataTagWriterD1Ev@Base 1.5.0
  _ZN6Marble16KmlDataTagWriterD2Ev@Base 1.5.0
  _ZN6Marble16MapWizardPrivate11pageEnteredEi@Base 1.5.0
+ _ZN6Marble16MapWizardPrivateC1Ev@Base 1.5.0
+ _ZN6Marble16MapWizardPrivateC2Ev@Base 1.5.0
+ _ZN6Marble16MapWizardPrivateD1Ev@Base 1.5.0
+ _ZN6Marble16MapWizardPrivateD2Ev@Base 1.5.0
  _ZN6Marble16MarbleControlBox11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
  _ZN6Marble16MarbleControlBox11qt_metacastEPKc@Base 1.5.0
  _ZN6Marble16MarbleControlBox11selectThemeERK7QString@Base 1.5.0
@@ -10461,8 +10663,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble19RoutingLayerPrivate11PaintRegionI11QModelIndexED2Ev@Base 1.5.0
  _ZN6Marble19RoutingLayerPrivate11renderRouteEPNS_10GeoPainterE@Base 1.5.0
  _ZN6Marble19RoutingLayerPrivate13setRouteDirtyEb@Base 1.5.0
+ _ZN6Marble19RoutingLayerPrivate15handleMouseMoveEP11QMouseEvent@Base 1.5.0
  _ZN6Marble19RoutingLayerPrivate15showContextMenuERK6QPoint@Base 1.5.0
- _ZN6Marble19RoutingLayerPrivate16renderPlacemarksEPNS_10GeoPainterE@Base 1.5.0
  _ZN6Marble19RoutingLayerPrivate17storeDragPositionERK6QPoint@Base 1.5.0
  _ZN6Marble19RoutingLayerPrivate22handleMouseButtonPressEP11QMouseEvent@Base 1.5.0
  _ZN6Marble19RoutingLayerPrivateC1EPNS_12RoutingLayerEPNS_12MarbleWidgetE@Base 1.5.0
@@ -10720,6 +10922,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble20NewstuffModelPrivate9uninstallEi@Base 1.5.0
  _ZN6Marble20NewstuffModelPrivateC1EPNS_13NewstuffModelE@Base 1.5.0
  _ZN6Marble20NewstuffModelPrivateC2EPNS_13NewstuffModelE@Base 1.5.0
+ _ZN6Marble20NewstuffModelPrivateD1Ev@Base 1.5.0
+ _ZN6Marble20NewstuffModelPrivateD2Ev@Base 1.5.0
  _ZN6Marble20PluginManagerPrivate11loadPluginsEv@Base 1.5.0
  _ZN6Marble20PluginManagerPrivateD1Ev@Base 1.5.0
  _ZN6Marble20PluginManagerPrivateD2Ev@Base 1.5.0
@@ -10872,18 +11076,23 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble21DgmlSettingsTagWriterD2Ev@Base 1.5.0
  _ZN6Marble21DownloadRegionPrivateC1Ev@Base 1.5.0
  _ZN6Marble21DownloadRegionPrivateC2Ev@Base 1.5.0
+ _ZN6Marble21GeoDataFeaturePrivate11createStyleEddRK6QColorS3_bbN2Qt10BrushStyleENS4_8PenStyleENS4_11PenCapStyleEbRK7QVectorIdE@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate13s_defaultFontE@Base 1.5.0
- _ZN6Marble21GeoDataFeaturePrivate14createWayStyleERK6QColorS3_bbN2Qt10BrushStyleE@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate14s_defaultStyleE@Base 1.5.0
+ _ZN6Marble21GeoDataFeaturePrivate17createOsmPOIStyleERK5QFontRK7QStringRK6QColorS9_@Base 1.5.0
+ _ZN6Marble21GeoDataFeaturePrivate18createHighwayStyleERK7QStringRK6QColorddN2Qt8PenStyleENS7_11PenCapStyleE@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate18s_visualCategoriesE@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate19s_defaultLabelColorE@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate23initializeDefaultStylesEv@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate25s_defaultStyleInitializedE@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate29initializeOsmVisualCategoriesEv@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivate4copyEv@Base 1.5.0
+ _ZN6Marble21GeoDataFeaturePrivateC1Ev@Base 1.5.0
+ _ZN6Marble21GeoDataFeaturePrivateC2Ev@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivateD0Ev@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivateD1Ev@Base 1.5.0
  _ZN6Marble21GeoDataFeaturePrivateD2Ev@Base 1.5.0
+ _ZN6Marble21GeoDataFeaturePrivateaSERKS0_@Base 1.5.0
  _ZN6Marble21GeoDataOverlayPrivateC1Ev@Base 1.5.0
  _ZN6Marble21GeoDataOverlayPrivateC2Ev@Base 1.5.0
  _ZN6Marble21GeoDataPolygonPrivate4copyEv@Base 1.5.0
@@ -11337,7 +11546,9 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble26MarbleRunnerManagerPrivate18cleanupRoutingTaskEPNS_10RunnerTaskE@Base 1.5.0
  _ZN6Marble26MarbleRunnerManagerPrivate25addReverseGeocodingResultERKNS_18GeoDataCoordinatesERKNS_16GeoDataPlacemarkE@Base 1.5.0
  _ZN6Marble26MarbleRunnerManagerPrivate27cleanupReverseGeocodingTaskEPNS_10RunnerTaskE@Base 1.5.0
+ _ZN6Marble26MarbleRunnerManagerPrivate7pluginsIKNS_18SearchRunnerPluginEEE5QListIPT_ERKS7_@Base 1.5.0
  _ZN6Marble26MarbleRunnerManagerPrivate7pluginsIKNS_28ReverseGeocodingRunnerPluginEEE5QListIPT_ERKS7_@Base 1.5.0
+ _ZN6Marble26MarbleRunnerManagerPrivate7pluginsINS_19RoutingRunnerPluginEEE5QListIPT_ERKS6_@Base 1.5.0
  _ZN6Marble26MarbleRunnerManagerPrivateC1EPNS_19MarbleRunnerManagerEPKNS_13PluginManagerE@Base 1.5.0
  _ZN6Marble26MarbleRunnerManagerPrivateC2EPNS_19MarbleRunnerManagerEPKNS_13PluginManagerE@Base 1.5.0
  _ZN6Marble26MarbleRunnerManagerPrivateD1Ev@Base 1.5.0
@@ -11619,15 +11830,23 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml15kmlTag_rotationE@Base 1.5.0
  _ZN6Marble3kml15kmlTag_screenXYE@Base 1.5.0
  _ZN6Marble3kml15kmlTag_styleUrlE@Base 1.5.0
+ _ZN6Marble3kml16KmlLodTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlLodTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml16KmlLodTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml16KmlLodTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml16KmlLodTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlendTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlendTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml16KmlendTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml16KmlendTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml16KmlendTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlkeyTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlkeyTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml16KmlkeyTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml16KmlkeyTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml16KmlkeyTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlpopTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml16KmlpopTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml16KmlpopTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml16KmlpopTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml16KmlpopTagHandlerD2Ev@Base 1.5.0
@@ -11648,39 +11867,63 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml16kmlTag_longitudeE@Base 1.5.0
  _ZN6Marble3kml16kmlTag_overlayXYE@Base 1.5.0
  _ZN6Marble3kml16kmlTag_textcolorE@Base 1.5.0
+ _ZN6Marble3kml17KmlDataTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlDataTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlDataTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlDataTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlDataTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlIconTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlIconTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlIconTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlIconTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlIconTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlPairTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlPairTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlPairTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlPairTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlPairTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlareaTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlareaTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlareaTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlareaTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlareaTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmleastTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmleastTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmleastTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmleastTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmleastTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlfillTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlfillTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlfillTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlfillTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlfillTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlhrefTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlhrefTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlhrefTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlhrefTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlhrefTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlnameTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlnameTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlnameTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlnameTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlnameTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlopenTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlopenTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlopenTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlopenTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlopenTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlroleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlroleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlroleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlroleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlroleTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlwestTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlwestTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlwestTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlwestTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlwestTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlwhenTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml17KmlwhenTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml17KmlwhenTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml17KmlwhenTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml17KmlwhenTagHandlerD2Ev@Base 1.5.0
@@ -11696,36 +11939,56 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml17kmlTag_tessellateE@Base 1.5.0
  _ZN6Marble3kml17kmlTag_viewFormatE@Base 1.5.0
  _ZN6Marble3kml17kmlTag_visibilityE@Base 1.5.0
+ _ZN6Marble3kml18KmlPointTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlPointTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlPointTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlPointTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlPointTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlStyleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlStyleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlStyleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlStyleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlStyleTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlTrackTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlTrackTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlTrackTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlbeginTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlbeginTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlbeginTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlbeginTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlbeginTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlcolorTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlcolorTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlcolorTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlcolorTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlcolorTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlnorthTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlnorthTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlnorthTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlnorthTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlnorthTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlrangeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlrangeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlrangeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlrangeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlrangeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlscaleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlscaleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlscaleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlscaleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlscaleTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlsouthTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlsouthTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlsouthTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlsouthTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlsouthTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlvalueTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlvalueTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlvalueTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlvalueTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlvalueTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlwidthTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml18KmlwidthTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml18KmlwidthTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml18KmlwidthTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml18KmlwidthTagHandlerD2Ev@Base 1.5.0
@@ -11745,15 +12008,23 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml18kmlTag_nameSpace22E@Base 1.5.0
  _ZN6Marble3kml18kmlTag_phoneNumberE@Base 1.5.0
  _ZN6Marble3kml18kmlTag_refreshModeE@Base 1.5.0
+ _ZN6Marble3kml19KmlFolderTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlFolderTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml19KmlFolderTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml19KmlFolderTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml19KmlFolderTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlLookAtTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlLookAtTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml19KmlLookAtTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml19KmlLookAtTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml19KmlLookAtTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlRegionTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlRegionTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml19KmlRegionTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml19KmlRegionTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml19KmlRegionTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlSchemaTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml19KmlSchemaTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml19KmlSchemaTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml19KmlSchemaTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml19KmlSchemaTagHandlerD2Ev@Base 1.5.0
@@ -11765,18 +12036,28 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml19kmlTag_listItemTypeE@Base 1.5.0
  _ZN6Marble3kml19kmlTag_maxLodPixelsE@Base 1.5.0
  _ZN6Marble3kml19kmlTag_minLodPixelsE@Base 1.5.0
+ _ZN6Marble3kml20KmlPolygonTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlPolygonTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml20KmlPolygonTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml20KmlPolygonTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml20KmlPolygonTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlextrudeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlextrudeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml20KmlextrudeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml20KmlextrudeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml20KmlextrudeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlheadingTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlheadingTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml20KmlheadingTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml20KmlheadingTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml20KmlheadingTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlhotSpotTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml20KmlhotSpotTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml20KmlhotSpotTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml20KmlhotSpotTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml20KmlhotSpotTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml20KmloutlineTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml20KmloutlineTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml20KmloutlineTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml20KmloutlineTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml20KmloutlineTagHandlerD2Ev@Base 1.5.0
@@ -11788,48 +12069,76 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml20kmlTag_maxFadeExtentE@Base 1.5.0
  _ZN6Marble3kml20kmlTag_minFadeExtentE@Base 1.5.0
  _ZN6Marble3kml20kmlTag_nameSpaceGx22E@Base 1.5.0
+ _ZN6Marble3kml21KmlDocumentTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlDocumentTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml21KmlDocumentTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml21KmlDocumentTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml21KmlDocumentTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlStyleMapTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlStyleMapTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml21KmlStyleMapTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml21KmlStyleMapTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml21KmlStyleMapTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlTimeSpanTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlTimeSpanTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml21KmlTimeSpanTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml21KmlTimeSpanTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml21KmlTimeSpanTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlaltitudeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlaltitudeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml21KmlaltitudeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml21KmlaltitudeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml21KmlaltitudeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml21KmllatitudeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml21KmllatitudeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml21KmllatitudeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml21KmllatitudeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml21KmllatitudeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlstyleUrlTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml21KmlstyleUrlTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml21KmlstyleUrlTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml21KmlstyleUrlTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml21KmlstyleUrlTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml21kmlTag_AddressDetailsE@Base 1.5.0
  _ZN6Marble3kml21kmlTag_nameSpaceOgc22E@Base 1.5.0
  _ZN6Marble3kml21kmlTag_viewBoundScaleE@Base 1.5.0
+ _ZN6Marble3kml22KmlIconStyleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlIconStyleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlIconStyleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlIconStyleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlIconStyleTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlLatLonBoxTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlLatLonBoxTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlLatLonBoxTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlLatLonBoxTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlLatLonBoxTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlLineStyleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlLineStyleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlLineStyleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlLineStyleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlLineStyleTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlPlacemarkTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlPlacemarkTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlPlacemarkTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlPlacemarkTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlPlacemarkTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlPolyStyleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlPolyStyleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlPolyStyleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlPolyStyleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlPolyStyleTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlTimeStampTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlTimeStampTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlTimeStampTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlTimeStampTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlTimeStampTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlcolorModeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmlcolorModeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmlcolorModeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmlcolorModeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmlcolorModeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml22KmllongitudeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml22KmllongitudeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml22KmllongitudeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml22KmllongitudeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml22KmllongitudeTagHandlerD2Ev@Base 1.5.0
@@ -11842,95 +12151,149 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble3kml22kmlTag_refreshIntervalE@Base 1.5.0
  _ZN6Marble3kml22kmlTag_viewRefreshModeE@Base 1.5.0
  _ZN6Marble3kml22kmlTag_viewRefreshTimeE@Base 1.5.0
+ _ZN6Marble3kml23KmlLabelStyleTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlLabelStyleTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLabelStyleTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLabelStyleTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLabelStyleTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlLineStringTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlLineStringTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLineStringTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLineStringTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLineStringTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlLinearRingTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlLinearRingTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLinearRingTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLinearRingTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmlLinearRingTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml23KmlMultiTrackTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmlMultiTrackTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmlMultiTrackTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlSchemaDataTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlSchemaDataTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml23KmlSchemaDataTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmlSchemaDataTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmlSchemaDataTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml23KmltessellateTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml23KmltessellateTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml23KmltessellateTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmltessellateTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmltessellateTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlvisibilityTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml23KmlvisibilityTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml23KmlvisibilityTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml23KmlvisibilityTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml23KmlvisibilityTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml23kmlTag_SimpleArrayFieldE@Base 1.5.0
  _ZN6Marble3kml23kmlTag_minRefreshPeriodE@Base 1.5.0
+ _ZN6Marble3kml24KmlSimpleFieldTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlSimpleFieldTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmlSimpleFieldTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmlSimpleFieldTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmlSimpleFieldTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlcoordinatesTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlcoordinatesTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmlcoordinatesTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmlcoordinatesTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmlcoordinatesTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlcountrycodeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlcountrycodeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmlcountrycodeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmlcountrycodeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmlcountrycodeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml24KmldescriptionTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmldescriptionTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmldescriptionTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmldescriptionTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmldescriptionTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml24KmldisplayNameTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmldisplayNameTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmldisplayNameTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmldisplayNameTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmldisplayNameTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlmaxAltitudeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlmaxAltitudeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmlmaxAltitudeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmlmaxAltitudeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmlmaxAltitudeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlminAltitudeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml24KmlminAltitudeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml24KmlminAltitudeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml24KmlminAltitudeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml24KmlminAltitudeTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml24kmlTag_refreshVisibilityE@Base 1.5.0
+ _ZN6Marble3kml25KmlExtendedDataTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlExtendedDataTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml25KmlExtendedDataTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml25KmlExtendedDataTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml25KmlExtendedDataTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlLatLonAltBoxTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlLatLonAltBoxTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml25KmlLatLonAltBoxTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml25KmlLatLonAltBoxTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml25KmlLatLonAltBoxTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlPhotoOverlayTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlPhotoOverlayTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml25KmlPhotoOverlayTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml25KmlPhotoOverlayTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml25KmlPhotoOverlayTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlaltitudeModeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlaltitudeModeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml25KmlaltitudeModeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml25KmlaltitudeModeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml25KmlaltitudeModeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlmaxLodPixelsTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlmaxLodPixelsTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml25KmlmaxLodPixelsTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml25KmlmaxLodPixelsTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml25KmlmaxLodPixelsTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlminLodPixelsTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml25KmlminLodPixelsTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml25KmlminLodPixelsTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml25KmlminLodPixelsTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml25KmlminLodPixelsTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml25kmlTag_GeometryCollectionE@Base 1.5.0
  _ZN6Marble3kml25kmlTag_NetworkLinkControlE@Base 1.5.0
+ _ZN6Marble3kml26KmlGroundOverlayTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlGroundOverlayTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml26KmlGroundOverlayTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml26KmlGroundOverlayTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml26KmlGroundOverlayTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlMultiGeometryTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlMultiGeometryTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml26KmlMultiGeometryTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml26KmlMultiGeometryTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml26KmlMultiGeometryTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlmaxFadeExtentTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlmaxFadeExtentTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml26KmlmaxFadeExtentTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml26KmlmaxFadeExtentTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml26KmlmaxFadeExtentTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlminFadeExtentTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml26KmlminFadeExtentTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml26KmlminFadeExtentTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml26KmlminFadeExtentTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml26KmlminFadeExtentTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlCountryNameCodeTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlCountryNameCodeTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml28KmlCountryNameCodeTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml28KmlCountryNameCodeTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml28KmlCountryNameCodeTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlMarblePlacemarkTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlMarblePlacemarkTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml28KmlMarblePlacemarkTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml28KmlMarblePlacemarkTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml28KmlMarblePlacemarkTagHandlerD2Ev@Base 1.5.0
  _ZN6Marble3kml28KmlSimpleArrayDataTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml28KmlSimpleArrayDataTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml28KmlSimpleArrayDataTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlinnerBoundaryIsTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlinnerBoundaryIsTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml28KmlinnerBoundaryIsTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml28KmlinnerBoundaryIsTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml28KmlinnerBoundaryIsTagHandlerD2Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlouterBoundaryIsTagHandlerC1Ev@Base 1.5.0
+ _ZN6Marble3kml28KmlouterBoundaryIsTagHandlerC2Ev@Base 1.5.0
  _ZN6Marble3kml28KmlouterBoundaryIsTagHandlerD0Ev@Base 1.5.0
  _ZN6Marble3kml28KmlouterBoundaryIsTagHandlerD1Ev@Base 1.5.0
  _ZN6Marble3kml28KmlouterBoundaryIsTagHandlerD2Ev@Base 1.5.0
@@ -12267,6 +12630,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6Marble9GeoWriter5writeEP9QIODevicePKNS_7GeoNodeE@Base 1.5.0
  _ZN6Marble9GeoWriterC1Ev@Base 1.5.0
  _ZN6Marble9GeoWriterC2Ev@Base 1.5.0
+ _ZN6Marble9GeoWriterD1Ev@Base 1.5.0
+ _ZN6Marble9GeoWriterD2Ev@Base 1.5.0
  _ZN6Marble9MapWizard11createFilesEPKNS_16GeoSceneDocumentE@Base 1.5.0
  _ZN6Marble9MapWizard11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.5.0
  _ZN6Marble9MapWizard11qt_metacastEPKc@Base 1.5.0
@@ -12387,38 +12752,49 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN6MarbleeqERKNS_19GeoDataLatLonAltBoxES2_@Base 1.5.0
  _ZN6MarblelsER11QTextStreamRKNS_12RoutingPointE@Base 1.5.0
  _ZN6MarblelsER11QTextStreamRKNS_18RoutingInstructionE@Base 1.5.0
- _ZN6QCacheIN6Marble6TileIdEK6QImageE4trimEi@Base 1.5.0
+ _ZN6QCacheIN6Marble6TileIdEK6QImageE6insertERKS1_PS3_i@Base 1.5.0
+ _ZN6QCacheIN6Marble6TileIdEK6QImageED1Ev@Base 1.5.0
+ _ZN6QCacheIN6Marble6TileIdEK6QImageED2Ev@Base 1.5.0
  _ZN6QCacheIN6Marble6TileIdEK7QPixmapED1Ev@Base 1.5.0
  _ZN6QCacheIN6Marble6TileIdEK7QPixmapED2Ev@Base 1.5.0
- _ZN6QCacheIN6Marble6TileIdENS0_11StackedTileEE4trimEi@Base 1.5.0
- _ZN6QCacheIN6Marble6TileIdENS0_11StackedTileEE6insertERKS1_PS2_i@Base 1.5.0
  _ZN6QCacheIN6Marble6TileIdENS0_11StackedTileEED1Ev@Base 1.5.0
  _ZN6QCacheIN6Marble6TileIdENS0_11StackedTileEED2Ev@Base 1.5.0
+ _ZN6QColorC1EPKc@Base 1.5.0
+ _ZN6QColorC2EPKc@Base 1.5.0
+ _ZN6QDebugC1E9QtMsgType@Base 1.5.0
+ _ZN6QDebugC2E9QtMsgType@Base 1.5.0
  _ZN6QDebugD1Ev@Base 1.5.0
  _ZN6QDebugD2Ev@Base 1.5.0
  _ZN6QDebuglsEPKc@Base 1.5.0
  _ZN6QDebuglsERK7QString@Base 1.5.0
  _ZN6QDebuglsEi@Base 1.5.0
- _ZN6QStackI7QStringED1Ev@Base 1.5.0
- _ZN6QStackI7QStringED2Ev@Base 1.5.0
  _ZN7QStringC1EPKc@Base 1.5.0
+ _ZN7QStringC1ERK10QByteArray@Base 1.5.0
  _ZN7QStringC2EPKc@Base 1.5.0
+ _ZN7QStringC2ERK10QByteArray@Base 1.5.0
  _ZN7QStringD1Ev@Base 1.5.0
  _ZN7QStringD2Ev@Base 1.5.0
+ _ZN7QStringaSEPKc@Base 1.5.0
+ _ZN7QStringaSERK10QByteArray@Base 1.5.0
  _ZN7QVectorI11QModelIndexE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI11QModelIndexE7reallocEii@Base 1.5.0
  _ZN7QVectorI14QSharedPointerIN6Marble11TextureTileEEE6appendERKS3_@Base 1.5.0
  _ZN7QVectorI14QSharedPointerIN6Marble11TextureTileEEE7reallocEii@Base 1.5.0
  _ZN7QVectorI14QSharedPointerIN6Marble11TextureTileEEED1Ev@Base 1.5.0
  _ZN7QVectorI14QSharedPointerIN6Marble11TextureTileEEED2Ev@Base 1.5.0
- _ZN7QVectorI21QPersistentModelIndexE5eraseEPS0_S2_@Base 1.5.0
  _ZN7QVectorI21QPersistentModelIndexE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI21QPersistentModelIndexE7reallocEii@Base 1.5.0
  _ZN7QVectorI21QPersistentModelIndexED1Ev@Base 1.5.0
  _ZN7QVectorI21QPersistentModelIndexED2Ev@Base 1.5.0
  _ZN7QVectorI4QUrlE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI4QUrlE7reallocEii@Base 1.5.0
+ _ZN7QVectorI4QUrlED1Ev@Base 1.5.0
+ _ZN7QVectorI4QUrlED2Ev@Base 1.5.0
+ _ZN7QVectorI5QIconE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI5QIconE7reallocEii@Base 1.5.0
+ _ZN7QVectorI6QPointED1Ev@Base 1.5.0
+ _ZN7QVectorI6QPointED2Ev@Base 1.5.0
+ _ZN7QVectorI7QPixmapE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI7QPixmapE7reallocEii@Base 1.5.0
  _ZN7QVectorI7QPointFE6appendERKS0_@Base 1.5.0
  _ZN7QVectorI7QPointFE7reallocEii@Base 1.5.0
@@ -12435,6 +12811,7 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble12GeoStackItemEE6appendERKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble12GeoStackItemEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12NewstuffItemEE5clearEv@Base 1.5.0
+ _ZN7QVectorIN6Marble12NewstuffItemEE6appendERKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble12NewstuffItemEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12NewstuffItemEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12NewstuffItemEED2Ev@Base 1.5.0
@@ -12442,6 +12819,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble12RouteSegmentEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12RouteSegmentEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12RouteSegmentEED2Ev@Base 1.5.0
+ _ZN7QVectorIN6Marble12RoutingPointEE6appendERKS1_@Base 1.5.0
+ _ZN7QVectorIN6Marble12RoutingPointEE6insertEPS1_iRKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble12RoutingPointEED2Ev@Base 1.5.0
@@ -12461,6 +12840,7 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble15RoutingWaypointEED2Ev@Base 1.5.0
  _ZN7QVectorIN6Marble16GeoDataPlacemarkEE5eraseEPS1_S3_@Base 1.5.0
  _ZN7QVectorIN6Marble16GeoDataPlacemarkEE6appendERKS1_@Base 1.5.0
+ _ZN7QVectorIN6Marble16GeoDataPlacemarkEE6insertEPS1_iRKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
@@ -12477,113 +12857,90 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZN7QVectorIN6Marble18GeoDataCoordinatesEED2Ev@Base 1.5.0
  _ZN7QVectorIN6Marble18RoutingInstructionEE6appendERKS1_@Base 1.5.0
  _ZN7QVectorIN6Marble18RoutingInstructionEE7reallocEii@Base 1.5.0
- _ZN7QVectorIP9QPolygonFE5eraseEPS1_S3_@Base 1.5.0
- _ZN7QVectorIP9QPolygonFE6appendERKS1_@Base 1.5.0
  _ZN7QVectorIP9QPolygonFE7reallocEii@Base 1.5.0
  _ZN7QVectorIP9QPolygonFED1Ev@Base 1.5.0
  _ZN7QVectorIP9QPolygonFED2Ev@Base 1.5.0
- _ZN7QVectorIPKN6Marble13GeoSceneTiledEE6appendERKS3_@Base 1.5.0
  _ZN7QVectorIPKN6Marble13GeoSceneTiledEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPKN6Marble13GeoSceneTiledEED1Ev@Base 1.5.0
  _ZN7QVectorIPKN6Marble13GeoSceneTiledEED2Ev@Base 1.5.0
- _ZN7QVectorIPKN6Marble15GeoSceneSectionEE6appendERKS3_@Base 1.5.0
  _ZN7QVectorIPKN6Marble15GeoSceneSectionEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPKN6Marble15GeoSceneSectionEED1Ev@Base 1.5.0
  _ZN7QVectorIPKN6Marble15GeoSceneSectionEED2Ev@Base 1.5.0
- _ZN7QVectorIPKN6Marble16GeoDataPlacemarkEE6appendERKS3_@Base 1.5.0
  _ZN7QVectorIPKN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPKN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPKN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
- _ZN7QVectorIPKN6Marble16GeoScenePropertyEE6appendERKS3_@Base 1.5.0
  _ZN7QVectorIPKN6Marble16GeoScenePropertyEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPKN6Marble16GeoScenePropertyEED1Ev@Base 1.5.0
  _ZN7QVectorIPKN6Marble16GeoScenePropertyEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble10GeoPolygonEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble10GeoPolygonEE7reallocEii@Base 1.5.0
- _ZN7QVectorIPN6Marble12GeoDataTrackEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble12GeoDataTrackEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble12GeoDataTrackEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble12GeoDataTrackEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble12GeoSceneItemEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble12GeoSceneItemEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble12GeoSceneItemEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble12GeoSceneItemEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble13GeoDataFolderEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoDataFolderEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble13GeoSceneGroupEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoSceneGroupEE7reallocEii@Base 1.5.0
- _ZN7QVectorIPN6Marble13GeoSceneLayerEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoSceneLayerEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoSceneLayerEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble13GeoSceneLayerEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble14GeoDataFeatureEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble14GeoDataFeatureEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble14GeoDataFeatureEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble14GeoDataFeatureEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble14GeoSceneFilterEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble14GeoSceneFilterEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble14GeoSceneFilterEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble14GeoSceneFilterEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble15GeoDataDocumentEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble15GeoDataDocumentEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble15GeoDataDocumentEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble15GeoDataDocumentEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble15GeoDataGeometryEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble15GeoDataGeometryEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble15GeoDataGeometryEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble15GeoDataGeometryEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoDataPlacemarkEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16GeoScenePropertyEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoScenePropertyEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoScenePropertyEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16GeoScenePropertyEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble16VisiblePlacemarkEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble16VisiblePlacemarkEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble16VisiblePlacemarkEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble16VisiblePlacemarkEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble17GeoDataLineStringEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble17GeoDataLineStringEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble17GeoDataLineStringEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble17GeoDataLineStringEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble18GeoDataCoordinatesEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble18GeoDataCoordinatesEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble18GeoDataCoordinatesEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble18GeoDataCoordinatesEED2Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble18RoutingInputWidgetEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble18RoutingInputWidgetEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble18RoutingInputWidgetEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble23GeoSceneAbstractDatasetEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble23GeoSceneAbstractDatasetEE7reallocEii@Base 1.5.0
  _ZN7QVectorIPN6Marble23GeoSceneAbstractDatasetEED1Ev@Base 1.5.0
  _ZN7QVectorIPN6Marble23GeoSceneAbstractDatasetEED2Ev@Base 1.5.0
- _ZN7QVectorIPN6Marble7HttpJobEE6appendERKS2_@Base 1.5.0
  _ZN7QVectorIPN6Marble7HttpJobEE7reallocEii@Base 1.5.0
+ _ZN7QVectorIPN6Marble7HttpJobEED1Ev@Base 1.5.0
+ _ZN7QVectorIPN6Marble7HttpJobEED2Ev@Base 1.5.0
  _ZN7QVectorIS_IPN6Marble16VisiblePlacemarkEEE7reallocEii@Base 1.5.0
  _ZN7QVectorIS_IPN6Marble16VisiblePlacemarkEEED1Ev@Base 1.5.0
  _ZN7QVectorIS_IPN6Marble16VisiblePlacemarkEEED2Ev@Base 1.5.0
- _ZN7QVectorIdE6appendERKd@Base 1.5.0
  _ZN7QVectorIdE7reallocEii@Base 1.5.0
  _ZN7QVectorIdED1Ev@Base 1.5.0
  _ZN7QVectorIdED2Ev@Base 1.5.0
- _ZN7QVectorIiE6appendERKi@Base 1.5.0
  _ZN7QVectorIiE7reallocEii@Base 1.5.0
  _ZN7QVectorIiED1Ev@Base 1.5.0
  _ZN7QVectorIiED2Ev@Base 1.5.0
  _ZN7QVectorIjE7reallocEii@Base 1.5.0
+ _ZN7QVectorIjEC1ERKS0_@Base 1.5.0
+ _ZN7QVectorIjEC2ERKS0_@Base 1.5.0
  _ZN7QVectorIjED1Ev@Base 1.5.0
  _ZN7QVectorIjED2Ev@Base 1.5.0
  _ZN7Ui_GoTo7setupUiEP7QDialog@Base 1.5.0
- _ZN8QPolygonD1Ev@Base 1.5.0
- _ZN8QPolygonD2Ev@Base 1.5.0
- _ZN9KHash2MapI21QPersistentModelIndexiED1Ev@Base 1.5.0
- _ZN9KHash2MapI21QPersistentModelIndexiED2Ev@Base 1.5.0
- _ZN9QPolygonFD1Ev@Base 1.5.0
- _ZN9QPolygonFD2Ev@Base 1.5.0
+ _ZN9QCheckBoxD0Ev@Base 1.5.0
+ _ZN9QCheckBoxD1Ev@Base 1.5.0
+ _ZN9QCheckBoxD2Ev@Base 1.5.0
+ _ZN9QComboBox7addItemERK7QStringRK8QVariant@Base 1.5.0
  _ZN9QRunnableD0Ev@Base 1.5.0
  _ZN9QRunnableD1Ev@Base 1.5.0
  _ZN9QRunnableD2Ev@Base 1.5.0
@@ -12592,8 +12949,16 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZNK12KineticModel8durationEv@Base 1.5.0
  _ZNK12KineticModel8positionEv@Base 1.5.0
  _ZNK14QFutureWatcherIvE15futureInterfaceEv@Base 1.5.0
+ _ZNK14QStringBuilderI7QStringA13_cE9convertToIS0_EET_v@Base 1.5.0
  _ZNK14QStringBuilderI7QStringS0_EcvS0_Ev@Base 1.5.0
+ _ZNK14QStringBuilderIA7_c7QStringE9convertToIS1_EET_v@Base 1.5.0
  _ZNK14QStringBuilderIS_I7QStringA16_cES0_E9convertToIS0_EET_v@Base 1.5.0
+ _ZNK14QStringBuilderIS_I7QStringA2_cES0_E9convertToIS0_EET_v@Base 1.5.0
+ _ZNK14QStringBuilderIS_I7QStringA7_cES0_E9convertToIS0_EET_v@Base 1.5.0
+ _ZNK14QStringBuilderIS_IA13_c7QStringEA5_cE9convertToIS1_EET_v@Base 1.5.0
+ _ZNK14QStringBuilderIS_IA9_c7QStringEA5_cE9convertToIS1_EET_v@Base 1.5.0
+ _ZNK14QStringBuilderIS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_IS_I7QStringS0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_ES0_E9convertToIS0_EET_v@Base 1.5.0
+ _ZNK15QListWidgetItem4textEv@Base 1.5.0
  _ZNK22KDescendantsProxyModel10headerDataEiN2Qt11OrientationEi@Base 1.5.0
  _ZNK22KDescendantsProxyModel10metaObjectEv@Base 1.5.0
  _ZNK22KDescendantsProxyModel11columnCountERK11QModelIndex@Base 1.5.0
@@ -12612,34 +12977,28 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZNK22KDescendantsProxyModel8rowCountERK11QModelIndex@Base 1.5.0
  _ZNK22KDescendantsProxyModel9mimeTypesEv@Base 1.5.0
  _ZNK29KDescendantsProxyModelPrivate29scheduleProcessPendingParentsEv@Base 1.5.0
- _ZNK4QMapI7QStringN6Marble12GeoDataStyleEE6valuesEv@Base 1.5.0
- _ZNK4QMapI7QStringN6Marble15GeoDataStyleMapEE6valuesEv@Base 1.5.0
+ _ZNK4QMapI7QStringN6Marble14GeoDataFeature21GeoDataVisualCategoryEE15mutableFindNodeEPPN8QMapData4NodeERKS0_@Base 1.5.0
+ _ZNK4QMapI7QStringN6Marble14GeoDataFeature21GeoDataVisualCategoryEE8findNodeERKS0_@Base 1.5.0
  _ZNK4QMapI7QStringS0_E3keyERKS0_@Base 1.5.0
+ _ZNK4QMapI7QStringS0_E3keyERKS0_S3_@Base 1.5.0
  _ZNK4QMapI7QStringS0_E6valuesEv@Base 1.5.0
+ _ZNK4QMapI7QStringS0_E8findNodeERKS0_@Base 1.5.0
  _ZNK4QMapI7QStringiE4keysEv@Base 1.5.0
+ _ZNK4QMapIN6Marble6TileIdE5QListIPKNS0_16GeoDataPlacemarkEEE15mutableFindNodeEPPN8QMapData4NodeERKS1_@Base 1.5.0
+ _ZNK4QMapIN6Marble6TileIdE5QListIPNS0_15GeoGraphicsItemEEE15mutableFindNodeEPPN8QMapData4NodeERKS1_@Base 1.5.0
  _ZNK4QMapIPN6Marble22AbstractDataPluginItemEP16QDeclarativeItemE4keysEv@Base 1.5.0
- _ZNK5QHashI21QPersistentModelIndexiE8findNodeERKS0_Pj@Base 1.5.0
+ _ZNK4QMapIPN6Marble22AbstractDataPluginItemEP16QDeclarativeItemE6valuesEv@Base 1.5.0
+ _ZNK4QSetIPN6Marble18MarbleGraphicsItemEE6toListEv@Base 1.5.0
  _ZNK5QHashI5QPairI7QStringS1_EPKN6Marble12GeoTagWriterEE8findNodeERKS2_Pj@Base 1.5.0
  _ZNK5QHashI5QPairI7QStringS1_EPKN6Marble13GeoTagHandlerEE8findNodeERKS2_Pj@Base 1.5.0
- _ZNK5QHashI7QString15QHashDummyValueE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QHashI7QString8QVariantE8findNodeERKS0_Pj@Base 1.5.0
+ _ZNK5QHashI7QString8QVariantE4keysEv@Base 1.5.0
  _ZNK5QHashI7QString8QVariantEeqERKS2_@Base 1.5.0
- _ZNK5QHashI7QStringN6Marble11GeoDataDataEE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QStringPKN6Marble8BlendingEE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QHashI7QStringPN6Marble22AbstractDataPluginItemEE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QHashI7QStringPN6Marble22GeoDataSimpleArrayDataEE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QHashI7QStringS_IS0_8QVariantEE8findNodeERKS0_Pj@Base 1.5.0
  _ZNK5QHashI7QStringS_IS0_8QVariantEEeqERKS3_@Base 1.5.0
- _ZNK5QHashI7QStringiE8findNodeERKS0_Pj@Base 1.5.0
- _ZNK5QHashIN6Marble6TileIdE15QHashDummyValueE8findNodeERKS1_Pj@Base 1.5.0
- _ZNK5QHashIN6Marble6TileIdEN6QCacheIS1_K6QImageE4NodeEE8findNodeERKS1_Pj@Base 1.5.0
- _ZNK5QHashIN6Marble6TileIdEN6QCacheIS1_K7QPixmapE4NodeEE8findNodeERKS1_Pj@Base 1.5.0
- _ZNK5QHashIN6Marble6TileIdEN6QCacheIS1_NS0_11StackedTileEE4NodeEE8findNodeERKS1_Pj@Base 1.5.0
  _ZNK5QHashIN6Marble6TileIdEPNS0_11StackedTileEE4keysEv@Base 1.5.0
- _ZNK5QHashIN6Marble6TileIdEPNS0_11StackedTileEE8findNodeERKS1_Pj@Base 1.5.0
- _ZNK5QListI5QPairIiN6Marble20NewstuffModelPrivate10UserActionEEE7indexOfERKS4_i@Base 1.5.0
+ _ZNK5QHashIPN6Marble19RoutingRunnerPluginEPNS1_12ConfigWidgetEE8findNodeERKS2_Pj@Base 1.5.0
  _ZNK5QListI7QStringE5toSetEv@Base 1.5.0
- _ZNK5QListI7QStringEeqERKS1_@Base 1.5.0
+ _ZNK5QListI7QStringE7indexOfERKS0_i@Base 1.5.0
  _ZNK6Marble10FileLoader10metaObjectEv@Base 1.5.0
  _ZNK6Marble10FileLoader4pathEv@Base 1.5.0
  _ZNK6Marble10FileLoader5errorEv@Base 1.5.0
@@ -13774,6 +14133,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZNK6Marble20NewstuffModelPrivate10canExecuteERK7QString@Base 1.5.0
  _ZNK6Marble20NewstuffModelPrivate10importNodeERK8QDomNode@Base 1.5.0
  _ZNK6Marble20NewstuffModelPrivate15isTransitioningEi@Base 1.5.0
+ _ZNK6Marble20NewstuffModelPrivate9readValueI4QUrlEEvRK8QDomNodeRK7QStringPT_@Base 1.5.0
+ _ZNK6Marble20NewstuffModelPrivate9readValueI7QStringEEvRK8QDomNodeRKS2_PT_@Base 1.5.0
  _ZNK6Marble20QtMarbleConfigDialog10metaObjectEv@Base 1.5.0
  _ZNK6Marble20QtMarbleConfigDialog10systemTimeEv@Base 1.5.0
  _ZNK6Marble20QtMarbleConfigDialog12dragLocationEv@Base 1.5.0
@@ -14203,7 +14564,6 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZNK6Marble9MarbleMap9showLakesEv@Base 1.5.0
  _ZNK6Marble9VectorMap12horizonPointEPKNS_14ViewportParamsERK7QPointFi@Base 1.5.0
  _ZNK6Marble9VectorMap14getDetailLevelEi@Base 1.5.0
- _ZNK7QStringeqEPKc@Base 1.5.0
  _ZTI12KineticModel@Base 1.5.0
  _ZTI14QFutureWatcherIvE@Base 1.5.0
  _ZTI15Ui_PrintOptions@Base 1.5.0
@@ -15786,6 +16146,8 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _ZThn16_N6Marble28RoutingProfileSettingsDialogD1Ev@Base 1.5.0
  _ZThn16_N6Marble9MapWizardD0Ev@Base 1.5.0
  _ZThn16_N6Marble9MapWizardD1Ev@Base 1.5.0
+ _ZThn16_N9QCheckBoxD0Ev@Base 1.5.0
+ _ZThn16_N9QCheckBoxD1Ev@Base 1.5.0
  _ZThn16_NK6Marble12GeoDataPoint4packER11QDataStream@Base 1.5.0
  _ZThn16_NK6Marble12GeoDataPoint8nodeTypeEv@Base 1.5.0
  _ZThn16_NK6Marble12RoutingLayer14renderPositionEv@Base 1.5.0
@@ -15977,11 +16339,11 @@ libmarblewidget.so.15 libmarblewidget15 #MINVER#
  _Zls6QDebugRKN6Marble10QuaternionE@Base 1.5.0
  _Zls6QDebugRKN6Marble6TileIdE@Base 1.5.0
  _ZlsI7QString8QVariantE6QDebugS2_RK5QHashIT_T0_E@Base 1.5.0
- _ZpLI11QLatin1Char7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
- _ZpLI14QStringBuilderIA31_c7QStringEA3_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
+ _ZpLI14QStringBuilderIA2_c7QStringEA5_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
+ _ZpLI14QStringBuilderIA4_c7QStringEA5_cERS2_S5_RKS0_IT_T0_E@Base 1.5.0
  _ZpLI14QStringBuilderIA5_c7QStringES1_ERS2_S4_RKS0_IT_T0_E@Base 1.5.0
- _ZpLI14QStringBuilderIS0_IA5_c7QStringES2_EA6_cERS2_S6_RKS0_IT_T0_E@Base 1.5.0
- _ZpLI5QChar7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLI7QString11QLatin1CharERS0_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
+ _ZpLIA2_c7QStringERS1_S2_RK14QStringBuilderIT_T0_E@Base 1.5.0
  _ZrsI7QString5QPairI9QDateTimeyEER11QDataStreamS5_R4QMapIT_T0_E@Base 1.5.0
  _ZrsI7QStringS0_ER11QDataStreamS2_R4QMapIT_T0_E@Base 1.5.0
  qCleanupResources_libmarble__dest_instance__@Base 1.5.0

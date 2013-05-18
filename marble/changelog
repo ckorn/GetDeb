@@ -1,3 +1,9 @@
+marble (1.5.0-1~getdeb4~raring) raring; urgency=low
+
+  * Rebuild for raring (LP: #1179467)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 18 May 2013 14:05:48 +0200
+
 marble (1.5.0-1~getdeb3) precise; urgency=low
 
   * Create the license link correctly (LP: #1011985)

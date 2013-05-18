@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9),
                cmake,
                libqt4-dev,
                libqtwebkit-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://edu.kde.org/marble/
 
 Package: marble-qt
