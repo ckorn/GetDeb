@@ -1,0 +1,39 @@
+From a8faf1b62bd5eb03fab95ae744fc32c3a74c7407 Mon Sep 17 00:00:00 2001
+From: nitely <ochdownloader@gmail.com>
+Date: Sat, 18 May 2013 20:21:08 -0300
+Subject: [PATCH] accounts save to home folder fixes issue #4
+
+---
+ addons/unrar/passwords_handler.py | 2 +-
+ core/accounts/manager.py          | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/addons/unrar/passwords_handler.py b/addons/unrar/passwords_handler.py
+index 1891062..5ca71a3 100644
+--- a/addons/unrar/passwords_handler.py
++++ b/addons/unrar/passwords_handler.py
+@@ -51,7 +51,7 @@ def load(self):
+             with open(PWD_FILE_PATH, "r", cons.FILE_BUFSIZE) as fh:
+                 passwords_set = {line.strip() for line in fh.readlines() if line.strip()}
+         except Exception as err:
+-            logger.exception(err)
++            logger.warning(err)
+         else:
+             self.__passwords_set = passwords_set
+ 
+diff --git a/core/accounts/manager.py b/core/accounts/manager.py
+index f0c00bf..da45df8 100644
+--- a/core/accounts/manager.py
++++ b/core/accounts/manager.py
+@@ -10,7 +10,7 @@
+ from checker import AccountChecker
+ 
+ HOST, STATUS, USER, PASSWORD, ENABLE = range(5)
+-PATH_FILE = os.path.join(cons.APP_PATH, "accounts")
++PATH_FILE = os.path.join(cons.HOME_APP_PATH, "accounts")
+ 
+ 
+ class _AccountManager:
+-- 
+1.8.1.6
+
