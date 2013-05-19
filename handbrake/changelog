@@ -1,3 +1,72 @@
+handbrake (0.9.9-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    General
+     - Improved HandBrake pineapple icon by Matt Johnson
+     - Improved Retina-resolution icons within the application, by Nik Pawlak
+        + http://nikpawlak.com
+    Core
+     - Blu-ray (PGS) subtitle support
+        + works with Foreign Audio Search
+        + can be Burned-In
+        + can be passed through to MKV (but not MP4)
+     - Additional video framerates
+        + 30, 50, 59.94, 60 fps
+     - Double framerate ("bob") mode for the deinterlace and decomb filters
+     - Better audio remix support
+        + additional mixdowns: 6.1, 7.1, 7.1 (5F/2R/LFE)
+            CLI users should note 6ch becomes 5point1
+        + better-than-Stereo sources can be upmixed to 5.1
+        + discard one channel from Stereo sources
+            Mono (Left Only), Mono (Right Only)
+     - Allow the selection of higher audio bitrates where appropriate
+     - Allow the selection of lower audio samplerates where appropriate
+        + 8, 11.025, 12, 16 kHz
+     - Audio dithering (TPDF) when converting to 16-bit FLAC
+     - Use libavcodec for DTS audio decoding (instead of libdca)
+        + DTS-ES 6.1 Discrete support
+     - All graphical interfaces: support for x264's preset, tune and
+       profile options
+        + alternative to the Advanced panel (which is still available)
+        + HandBrake-specific option to ensure compliance with a
+          specific H.264 level
+     - Updated built-in presets
+        + take advantage of x264 preset/tune/profile support
+        + removed increasingly suboptimal and irrelevant Legacy presets
+     - Assorted bug fixes and improvements to the core library (libhb)
+     - Updated libraries
+        + x264 r2273-b3065e6
+        + Libav v9.6
+        + libbluray 0.2.3
+    Windows
+     - User Interface has been re-written in WPF
+        + Includes many small UI enhancements
+     - Switched to .NET 4 Client Profile
+        + smaller download for those who don't have .NET 4 Full installed
+    Mac
+     - Assorted bug fixes
+        + including better support for Retina displays
+     - Prevent sleep during encoding and scanning for Mountain Lion
+     - Drag & Drop files onto the Main window or application icon to scan
+     - Nicer progress indication on the dock icon
+     - Preview window improvements and bugfixes
+     - Updated Growl to 2.0.1
+        + Notification Center support (when Growl is not installed)
+    Linux
+     - Assorted bug fixes and improvements
+     - Use some system libraries rather than bundling
+        + fontconfig, freetype, libxml2, libass, libogg, libvorbis,
+          libtheora and libsamplerate
+    Command Line Interface
+     - Audio option (-a) will ignore invalid input tracks and encode
+       with only the valid ones
+     - Allow use of hh:mm:ss format when specifying p-to-p start/stop time
+     - Advanced audio options
+        + enable level normalization when downmixing (disabled by default)
+        + disable audio dithering or select a specific algorithm
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 18 May 2013 22:13:05 +0200
+
 handbrake (0.9.8-1~getdeb1) precise; urgency=low
 
   * New upstream version

@@ -26,7 +26,11 @@ Build-Depends: debhelper (>= 9),
                libnotify-dev,
                libwebkit-dev,
                libgudev-1.0-dev,
-               libfribidi-dev
+               libfribidi-dev,
+               libass-dev,
+               libtheora-dev,
+               libvorbis-dev,
+               libsamplerate0-dev
 Standards-Version: 3.9.3
 Homepage: http://www.handbrake.fr
 
