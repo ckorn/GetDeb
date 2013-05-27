@@ -1,3 +1,9 @@
+xvst (2.5-1~getdeb1) raring; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 26 May 2013 23:48:46 +0200
+
 xvst (2.4.1-1~getdeb35) precise; urgency=low
 
   * Update YouTube plugin.

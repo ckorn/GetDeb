@@ -1,11 +1,22 @@
 #!/usr/bin/make -f
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+# somehow there is no qmake executable on the build server.
+ifeq ($(DEB_BUILD_ARCH),amd64)
+QMAKE_BIN:=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
+else
+QMAKE_BIN:=/usr/lib/i386-linux-gnu/qt5/bin/qmake
+endif
 %:
 	dh $@
-
-override_dh_auto_configure:
-	qmake -set build_mode dynamic_build
-	qmake
 
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf bin build
+
+override_dh_auto_configure:
+	$(QMAKE_BIN) -set build_mode dynamic_build
+	$(QMAKE_BIN) 
+
+override_dh_install:
+	dh_install
+	chmod -x debian/xvst/usr/share/xvst/plugins/*.js

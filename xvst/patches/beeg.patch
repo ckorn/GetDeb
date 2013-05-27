@@ -1,9 +1,9 @@
 New plugin.
-Index: xvst-2.4.1/resources/services/beeg/beeg.js
+Index: xvst-2.5/resources/services/beeg/beeg.js
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ xvst-2.4.1/resources/services/beeg/beeg.js	2012-08-03 20:10:04.465128741 +0200
-@@ -0,0 +1,119 @@
++++ xvst-2.5/resources/services/beeg/beeg.js	2013-03-29 17:01:19.486267000 +0100
+@@ -0,0 +1,122 @@
 +/*
 +*
 +* This file is part of xVideoServiceThief,
@@ -31,7 +31,7 @@ Index: xvst-2.4.1/resources/services/beeg/beeg.js
 +
 +function RegistVideoService()
 +{
-+	this.version = "3.0.0";
++	this.version = "3.1.0";
 +	this.minVersion = "2.0.0a";
 +	this.author = "Xesc & Technology 2009";
 +	this.website = "http://www.beeg.com/";
@@ -62,13 +62,12 @@ Index: xvst-2.4.1/resources/services/beeg/beeg.js
 +function searchVideos(keyWord, pageIndex)
 +{
 +	const URL_SEARCH = "http://beeg.com/section/home/%1/";
-+	const HTML_SEARCH_START = '<div id="thumbs">';
-+	const HTML_SEARCH_FINISH = '</div>';
-+	const HTML_SEARCH_SEPARATOR = "/></a>";
++	const HTML_SEARCH_ID = 'var tumbid  =[';
++	const HTML_SEARCH_ALT = 'var tumbalt =[';
++	const HTML_SEARCH_END = '];';
 +	const RESULTS_PER_PAGE = 5;
 +	var nCurrentPageIndex = 1;
 +	var nResultsToSkip = (pageIndex - 1) * RESULTS_PER_PAGE ;
-+	var nResultsSkipped = 0;
 +	var nCurrentResults = 0;
 +	// remember the first ID so if we find again we know we searched past the last site
 +	var nFirstId = -1;
@@ -79,22 +78,22 @@ Index: xvst-2.4.1/resources/services/beeg/beeg.js
 +		var http = new Http();
 +		var html = http.downloadWebpage(strFormat(URL_SEARCH, nCurrentPageIndex));
 +		// did we reach the end?
-+		if(strIndexOf(html, HTML_SEARCH_START, 0, false) == -1) {			
++		if(strIndexOf(html, HTML_SEARCH_ID, 0, false) == -1) {			
 +			break;
 +		}
-+		// get the search summary
-+		// get results html block
-+		var htmlResults = copyBetween(html, HTML_SEARCH_START, HTML_SEARCH_FINISH);
++		var IDs = copyBetween(html, HTML_SEARCH_ID, HTML_SEARCH_END);
++		var Alts = copyBetween(html, HTML_SEARCH_ALT, HTML_SEARCH_END);
 +		// if we found some results then...
-+		if (htmlResults != "")
++		if (IDs != "")
 +		{
-+			var blocks = splitString(htmlResults, HTML_SEARCH_SEPARATOR);
-+			for (n = 0; n < blocks.length-1; n++) {
-+				var title = copyBetween(blocks[n], 'alt="', '"');
-+				var videoURL = copyBetween(blocks[n], '<a href="', '">');
-+				var imageURL = copyBetween(blocks[n], '<img src="', '"');
-+				// get rid of 'http://beeg.com/'
-+				var imageId = strRemove(videoURL, 0, 16);
++			// the IDs and alt-texts are JavaScript arrays already
++			var IDblocks = eval('[' + IDs + ']');
++			var Altblocks = eval('[' + Alts + ']');
++			for (n = 0; n < IDblocks.length; n++) {
++				var title = Altblocks[n];
++				var videoURL = "http://beeg.com/" + IDblocks[n];
++				var imageURL = "http://cdn.anythumb.com/120x90/" + IDblocks[n] + ".jpg";
++				var imageId = IDblocks[n]
 +				if(nFirstId == -1) {
 +					nFirstId = imageId;
 +				} else if(nFirstId == imageId) {
@@ -102,12 +101,16 @@ Index: xvst-2.4.1/resources/services/beeg/beeg.js
 +					return searchResults;
 +				}
 +				if(strIndexOf(title, keyWord, 0, false) != -1) {
-+					if(nResultsSkipped < nResultsToSkip) {
-+						nResultsSkipped++;
++					//print('[' + nResultsToSkip + '][' + nCurrentResults + '] ' + title);
++					if(nResultsToSkip > 0) {
++						nResultsToSkip--;
 +					} else {
 +						if( nCurrentResults < RESULTS_PER_PAGE ) {
 +							searchResults.addSearchResult(videoURL, imageURL, title, title, 0, 0);
 +							nCurrentResults++;
++						}
++						if( nCurrentResults >= RESULTS_PER_PAGE ) {
++							break;
 +						}
 +					}
 +				}
