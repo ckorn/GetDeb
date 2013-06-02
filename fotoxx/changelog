@@ -1,3 +1,22 @@
+fotoxx (13.06-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Popup menus, tips, and information blocks are a little more friendly.
+    + Pano, HDR, etc. have greater latitude to warp images for better fit.
+    + Warp Area: area can be pulled outside its initial boundary.
+    + Quickstart page is an HTML file instead of a PNG image.
+    + Area Finish was made much faster.
+    + Add Text: (write text on image) optional drop shadows were added.
+    + Slide Show pause/resume: resume is immediate (no wait for timer).
+    + Slide Show: B key toggles image and blank screen and pauses the show.
+    + Bugfix: fix pan/scroll jerkiness with large image (bug from v.13.03).
+    + Bugfix: Trim/Crop: do not limit width/height to prior width/height -1.
+    + Bugfix: thumbnail generation: stop non-RAW files passed to dcraw.
+    + Bugfix: gallery display was ignoring symlinks to other directories.
+    + Bugfix: (Fedora) some popup tips were white text on white background.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Jun 2013 20:09:20 +0200
+
 fotoxx (13.05.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
