@@ -1,3 +1,10 @@
+fotoxx (13.06.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: Select Area Finish during an active edit causes a crash. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Jun 2013 21:33:02 +0200
+
 fotoxx (13.06-1~getdeb1) precise; urgency=low
 
   * New upstream version
