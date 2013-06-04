@@ -9,10 +9,10 @@ Build-Depends: debhelper (>= 9),
                libdbus-1-dev,
                libdbus-glib-1-dev,
                libpango1.0-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://cxx-gtk-utils.sourceforge.net
 
-Package: libcxx-gtk-utils-2-2.0-0
+Package: libcxx-gtk-utils-2-2.2-0
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends}
@@ -28,7 +28,7 @@ Description: Programming GTK+ programs using C++
 Package: libcxx-gtk-utils-dev
 Architecture: any
 Depends: ${misc:Depends},
-         libcxx-gtk-utils-2-2.0-0 (= ${binary:Version}),
+         libcxx-gtk-utils-2-2.2-0 (= ${binary:Version}),
          libcxx-gtk-utils-doc (= ${source:Version})
 Section: libdevel
 Description: Programming GTK+ programs using C++ (header files)

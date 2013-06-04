@@ -18,8 +18,8 @@ override_dh_auto_test:
 
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
-	rm debian/tmp/usr/share/doc/c++-gtk-utils/2.0/COPYING
-	rm debian/tmp/usr/lib/libcxx-gtk-utils-2-2.0.la
+	rm debian/tmp/usr/share/doc/c++-gtk-utils/2.2/COPYING
+	rm debian/tmp/usr/lib/libcxx-gtk-utils-2-2.2.la
 
 override_dh_install:
 	dh_install --list-missing

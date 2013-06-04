@@ -1,2 +1,0 @@
-# this is a false positive. blhc --all does not report anything.
-libcxx-gtk-utils-2-2.0-0: hardening-no-fortify-functions usr/lib/libcxx-gtk-utils-2-2.0.so.0.2.1
