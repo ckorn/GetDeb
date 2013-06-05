@@ -1,0 +1,5 @@
+qstopmotion (1.0.1-1~getdeb1) precise; urgency=low
+
+  * Initial release (LP: #1187151)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 05 Jun 2013 19:24:56 +0200
