@@ -1,0 +1,92 @@
+# do not access the debian directory with cmake.
+Index: qstopmotion-1.0.1/CMakeLists.txt
+===================================================================
+--- qstopmotion-1.0.1.orig/CMakeLists.txt	2012-05-08 09:42:20.000000000 +0200
++++ qstopmotion-1.0.1/CMakeLists.txt	2013-06-05 19:37:00.564782546 +0200
+@@ -240,12 +240,6 @@
+ #     qstopmotion.1         # Linux man page
+ )
+ 
+-set(DEBIAN_FILES
+-    debian/changelog             # changelog file
+-    debian/copyright             # copyright file
+-    debian/qstopmotion.menu      # .menu is installed in a separate step for Debian systems
+-)
+-
+ ###############################################################################
+ # GStreamer support
+ #
+@@ -411,8 +405,6 @@
+     file(COPY ${ICON_FILES} DESTINATION "share/qstopmotion/")
+     file(COPY ${GENERAL_FILES} DESTINATION "share/qstopmotion/")
+     file(COPY ${UNIX_FILES} DESTINATION "share/qstopmotion/")
+-    file(COPY ${DEBIAN_FILES} DESTINATION "share/qstopmotion/debian/")
+-    file(COPY ${FEDORA_FILES} DESTINATION "share/qstopmotion/rpm/")
+ 
+ ENDIF(WIN32)
+ 
+@@ -526,22 +518,6 @@
+     )
+ ENDIF(UNIX)
+ 
+-# installation on DEBIAN systems
+-IF(CPACK_BINARY_DEB)
+-    message("Special task for Debian package!")
+-    # installation of the icon file
+-    install(
+-        FILES "debian/qstopmotion.xpm"
+-        DESTINATION ${QSTOPMOTION_PIXMAP_INSTALL_DIR}
+-    )
+-
+-    # installation of the .menufile file
+-    install(
+-        FILES "debian/qstopmotion.menu"
+-        DESTINATION ${QSTOPMOTION_MENUFILE_INSTALL_DIR}
+-    )
+-ENDIF(CPACK_BINARY_DEB)
+-
+ # installation on Windows systems
+ IF(WIN32)
+     # installation of ffmpeg
+@@ -671,32 +647,6 @@
+ # SET(CPACK_NSIS_MUI_FINISHPAGE_RUN "qstopmotion.exe"
+ 
+ ###############################################################################
+-# DEB package - Linux only (Debian, OpenSuse, Ubuntu, ...)
+-###############################################################################
+-
+-# Mandatory
+-# CPACK_DEBIAN_PACKAGE_NAME = CPACK_PACKAGE_NAME
+-# CPACK_DEBIAN_PACKAGE_VERSION = CPACK_PACKAGE_VERSION
+-# CPACK_DEBIAN_PACKAGE_ARCHITECTURE = dpkg output       # dpkg --print-architecture ???
+-# CPACK_DEBIAN_PACKAGE_MAINTAINER = CPACK_PACKAGE_CONTACT
+-# CPACK_DEBIAN_PACKAGE_DESCRIPTION = CPACK_PACKAGE_DESCRIPTION_SUMMARY
+-SET(CPACK_DEBIAN_PACKAGE_SECTION "graphics")
+-SET(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
+-
+-
+-# Options
+-SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>=2.11), ffmpeg (>=0.5.2), gstreamer-tools (>=0.10.28), libqt4-core (>=4.6.2), libqt4-gui (>=4.6.2), libqt4-xml (>=4.6.2)")
+-SET(CPACK_DEBIAN_PACKAGE_HOMEPAGE ${QSTOPMOTION_HOMEPAGE})
+-# CPACK_DEBIAN_PACKAGE_SHLIBDEPS
+-# SET(CPACK_DEBIAN_PACKAGE_DEBUG "ON")
+-# CPACK_DEBIAN_PACKAGE_DEBUG
+-# CPACK_DEBIAN_PACKAGE_ENHANCES
+-# CPACK_DEBIAN_PACKAGE_BREAKS
+-# CPACK_DEBIAN_PACKAGE_CONFLICTS
+-# CPACK_DEBIAN_PACKAGE_PROVIDES
+-# CPACK_DEBIAN_PACKAGE_REPLACES
+-
+-###############################################################################
+ # RPM package - Linux only (Fedora, Red Hat, CentOS, Mandriva, ...)
+ ###############################################################################
+ 
+@@ -709,8 +659,6 @@
+ SET(CPACK_RPM_PACKAGE_GROUP "Applications/Multimedia")
+ # CPACK_RPM_PACKAGE_VENDOR = CPACK_PACKAGE_VENDOR
+ 
+-# CPACK_DEBIAN_PACKAGE_MAINTAINER = CPACK_PACKAGE_CONTACT
+-
+ # Options
+ # SET(CPACK_RPM_PACKAGE_ARCHITECTURE "noarch")
+ SET(CPACK_RPM_PACKAGE_URL ${QSTOPMOTION_HOMEPAGE})
