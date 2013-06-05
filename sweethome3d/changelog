@@ -1,3 +1,9 @@
+sweethome3d (4.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #1187365)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 04 Jun 2013 19:31:46 +0200
+
 sweethome3d (4.0-1~getdeb2) precise; urgency=low
 
   * Depend on openjdk-7-jre (LP: #1181204)
