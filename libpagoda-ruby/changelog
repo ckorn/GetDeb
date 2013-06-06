@@ -1,3 +1,9 @@
+libpagoda-ruby (0.7.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 Jun 2013 18:21:47 +0200
+
 libpagoda-ruby (0.7.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
