@@ -1,3 +1,26 @@
+pac (4.5.2.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added an option to allow copying or not mouse selection to global
+    clipboard
+    . Added an option to allow choosing whether sending or not a <INTRO>
+    keypress for remote commands/macros
+    . Added '--list-uuids' command line option to list current
+    connections/groups and their corresponding UUIDs
+    . Added '--no-splash' command line option to avoid presenting a splash
+    screen on startup
+    . Added '--iconified' command line option to make PAC go to tray once
+    started
+    . Added an option to open a file manager on current dir (pwd) for Local
+    Shells
+    . Added an option to PAC Scripts's function "$TERMINAL{send_get}" to
+    allow skipping <INTRO> from being sent
+    . Fixed the "star PAC on session startup" behavior
+    . Fixed a bug that prevented right-click menu from appearing when RDP
+    embedded windows were closed
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 11 Jun 2013 19:53:01 +0200
+
 pac (4.5.2.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
