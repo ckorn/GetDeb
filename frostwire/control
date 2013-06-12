@@ -9,7 +9,7 @@ Homepage: http://www.frostwire.com
 Package: frostwire
 Architecture: any
 Depends: ${misc:Depends},
-         openjdk-6-jre | java-runtime,
+         openjdk-7-jre | java-runtime,
          fontconfig,
          frostwire-data (= ${source:Version}),
          mplayer
