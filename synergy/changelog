@@ -1,81 +1,89 @@
-synergy (1.4.10-1~getdeb1) precise; urgency=low
-
-  * New upstream version
-    Bug #2799 - Right shift broken (Windows server, Mac OS X client)
-    Bug #3302 - GUI does not show/hide when tray icon is double clicked
-    (Windows)
-    Bug #3303 - Mac OS X IPC integ test fails intermittently
-    Feature #2974 - Gesture Support for Magic Mouse/Trackpad
-    Feature #3172 - Button to stop Synergy when in service mode
-    Feature #3241 - Option to elevate synergyc/s when in service mode
-    Feature #3242 - Show a list of available IP addresses and screen name on
-    the main screen
-    Feature #3296 - 64-bit Windows installer should display helpful message
-    on 32-bit Windows
-    Feature #3300 - Make service mode default mode (now that we have elevate
-    option)
-    Feature #3301 - Add process mode option to settings (remove startup
-    wizard page)
-    Feature #3306 - Gatekeeper compatibility on Mac OS X 10.8
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 31 Jul 2012 18:03:46 +0200
-
-synergy (1.4.9-1~getdeb1) precise; urgency=low
-
-  * New upstream version
-    Bug #3159 - In service mode, server doesn't start unless GUI is running
-    Bug #3214 - Client sometimes can't connect if GUI is closed
-    Bug #56 - Mac OS X server not sending keystrokes to client
-    Bug #3161 - First time GUI appears, service doesn't send logging
-    Bug #3164 - In service mode, you need to add a firewall exception
-    Bug #3166 - Service shutdown stalls when GUI is closed
-    Bug #3216 - Fatal error if plugins folder doesn't exist
-    Bug #3221 - ERROR: could not connect to service, error: 2
-    Feature #3192 - Add support for JOYINFOEX structure to poll
-                    game device info
-    Feature #3202 - Plugin support (sending for primary screen
-                    events on Windows only)
-    Feature #3155 - Cross-platform TCP IPC between GUI and service
-    Task #3177 - Fix Mac buildslave to build multiple versions
-    Task #3193 - Add Micro Synergy to repository
-    Task #3275 - Change hostname label to "IP address or hostname"
-    Task #3276 - Installation recovery mechanism for synrgyhk.dll
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Jul 2012 18:51:34 +0200
-
-synergy (1.4.8-1~getdeb2~precise) precise; urgency=low
-
-  * New upstream version
-    Bug #143: Cursor on Mac OS X goes to center when inactive
-    Bug #146: Screen Resize causes problems with moving off right-hand side
-              of screen
-    Bug #3058: Modifier keys not working on Mac OS X server
-    Bug #3139: Double click too strict (click, move, click should not count)
-    Bug #3195: Service install can fail first time
-    Bug #3196: Wizard buttons not visible
-    Bug #3197: GUI doesn't take focus after install
-    Bug #3202: Hook DLL (synrgyhk.dll) is not released
-    Feature #3143: Setup wizard for first time users
-    Feature #3145: Check for updates
-    Feature #3174: Startup mode wizard page
-    Feature #3184: New service for process management
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Apr 2012 22:16:42 +0200
-
-synergy (1.4.7-1~getdeb2~precise) precise; urgency=low
+synergy (1.4.12-1~getdeb1) precise; urgency=low
 
   * New upstream version
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 Apr 2012 21:41:51 +0200
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 11 Jun 2013 21:34:59 +0200
 
-synergy (1.3.8-1ubuntu1) precise; urgency=low
+synergy (1.4.12-3) unstable; urgency=low
 
-  * Import Feng Ye's patch from
-    http://synergy-foss.org/tracker/issues/3043 as a fix for upstream 3063
-    (original patcher in 3063 agreed 3043 fix was better, although the fix in
-    3063 is currently in upstream). LP: #908578
+  * Make GUI build and rest-of-synergy build separately targetable
+    (for testing on slow Debian build archs).
+  * Disable relro hardening flags on mips and mipsel, as it causes
+    the unit tests to segfault.
 
- -- Dr. David Alan Gilbert <dave@treblig.org>  Mon, 26 Dec 2011 09:51:48 +0100
+ -- Jeff Licquia <licquia@debian.org>  Mon, 10 Jun 2013 03:12:05 +0000
+
+synergy (1.4.12-2) unstable; urgency=low
+
+  * Fix build failure on gcc 4.6 archs by changing a parameter's type
+    on a private method.
+  * Update Standards-Version.
+  * Add lintian override for autotools-dev files (which the synergy
+    build doesn't use).
+  * Don't run the test suite if DEB_BUILD_OPTIONS=nocheck is set.
+  * Add the proper incantations to get qmake to recognize the
+    proper dpkg hardening flags.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 08 Jun 2013 00:12:44 +0000
+
+synergy (1.4.12-1) unstable; urgency=low
+
+  * New upstream version...
+  * ...which includes the new encryption layer.  Closes: #421512.
+  * Deal with new dependency on Crypto++:
+    - Add a rule to debian/rules for unpacking the embedded cryptopp
+      zip file if needed.
+    - Alter CMakeLists files, Python build system to detect and use
+      the system libcrypto++ (based on pkgconfig).
+    - Alter include paths in source to strip the version number from
+      the path.
+    - Build-Depend on libcrypto++-dev.
+  * Re-enable the integrity tests, but don't fail if they segfault.
+  * Enable the GUI.  Thanks to Mario Limonciello
+    <Mario_Limonciello@Dell.com> for the original patch, which I've
+    adapted.  Closes: #698291.
+  * Add man page for new synergy app (the GUI).
+  * Add missing options to the synergys and synergyc man pages.
+    Closes: #659883.
+
+ -- Jeff Licquia <licquia@debian.org>  Mon, 03 Jun 2013 05:10:19 +0000
+
+synergy (1.4.10-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 28 Oct 2012 16:35:08 -0400
+
+synergy (1.3.8-2) unstable; urgency=low
+
+  * Build with dpkg-buildflags hardening support.
+  * Update Standards-Version.
+  * Apply mutex initialization fix from upstream.  This seems
+    to fix a number of segfault issues.  Closes: #666896.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 07 Jul 2012 15:08:33 -0400
+
+synergy (1.4.8-1) experimental; urgency=low
+
+  * New upstream version.
+  * Add synergyd, a new daemon upstream is working on (more for
+    Windows, I think).
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 15 Apr 2012 20:40:40 -0400
+
+synergy (1.4.7-1) experimental; urgency=low
+
+  * New upstream version.
+  * Remove gnome3.patch (pulled in upstream).
+  * Update Standards-Version.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 01 Apr 2012 20:14:53 -0400
+
+synergy (1.4.5-1) experimental; urgency=low
+
+  * Move to upstream 1.4.x series.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 14 Jan 2012 13:59:27 -0500
 
 synergy (1.3.8-1) unstable; urgency=low
 

@@ -17,15 +17,15 @@ synergys.1: synergys.sgml
   -->
 
   <!-- Fill in your name for FIRSTNAME and SURNAME. -->
-  <!ENTITY dhfirstname "<firstname>Titus</firstname>">
-  <!ENTITY dhsurname   "<surname>Barik</surname>">
+  <!ENTITY dhfirstname "<firstname>Jeff</firstname>">
+  <!ENTITY dhsurname   "<surname>Licquia</surname>">
   <!-- Please adjust the date whenever revising the manpage. -->
-  <!ENTITY dhdate      "<date>October 31, 2003</date>">
+  <!ENTITY dhdate      "<date>June 2, 2013</date>">
   <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
        allowed: see man(7), man(1). -->
   <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
-  <!ENTITY dhemail     "<email>barik@ieee.org</email>">
-  <!ENTITY dhusername  "Titus Barik">
+  <!ENTITY dhemail     "<email>licquia@debian.org</email>">
+  <!ENTITY dhusername  "Jeff Licquia">
   <!ENTITY dhucpackage "<refentrytitle>SYNERGYS</refentrytitle>">
   <!ENTITY dhpackage   "synergys">
 
@@ -43,7 +43,7 @@ synergys.1: synergys.sgml
       &dhsurname;
     </author>
     <copyright>
-      <year>2002</year>
+      <year>2013</year>
       <holder>&dhusername;</holder>
     </copyright>
     &dhdate;
@@ -72,6 +72,12 @@ synergys.1: synergys.sgml
         <arg>--config <replaceable>pathname</replaceable></arg>
       </group>
       <group>
+        <arg>--crypto-mode <replaceable>mode</replaceable></arg>
+      </group>
+      <group>
+        <arg>--crypto-pass <replaceable>password</replaceable></arg>
+      </group>
+      <group>
         <arg>-d <replaceable>level</replaceable></arg>
         <arg>--debug <replaceable>level</replaceable></arg>
       </group>
@@ -83,8 +89,18 @@ synergys.1: synergys.sgml
         <arg>{ --no-daemon | -f }</arg>
       </group>
       <group>
+        <arg>-l <replaceable>log-file</replaceable></arg>
+        <arg>--log <replaceable>log-file</replaceable></arg>
+      </group>
+      <group>
         <arg>-n <replaceable>screen-name</replaceable></arg>
         <arg>--name <replaceable>screen-name</replaceable></arg>
+      </group>
+      <group>
+        <arg>--no-tray</arg>
+      </group>
+      <group>
+        <arg>--no-xinitthreads</arg>
       </group>
       <group>
         <arg>--restart</arg>
@@ -123,10 +139,7 @@ synergys.1: synergys.sgml
 
     <para>This manual page was written for the &debian; distribution
       because the original program does not have a manual page.
-      Slightly old documentation exists in 
-      <filename>/usr/share/doc/synergy/obsolete/index.html</filename>;
-      it is the most up-to-date information available, despite the
-      pathname.</para>
+    </para>
   </refsect1>
 
   <refsect1>
@@ -134,8 +147,7 @@ synergys.1: synergys.sgml
     
     <variablelist>
       <varlistentry>
-        <term>
-	  <option>-a <replaceable>address</replaceable></option>
+        <term><option>-a <replaceable>address</replaceable></option>
           <option>--address <replaceable>address</replaceable></option>
         </term>
 	
@@ -180,8 +192,30 @@ synergys.1: synergys.sgml
       </varlistentry>
 
       <varlistentry>
-        <term>
-	  <option>-d <replaceable>level</replaceable></option>
+        <term><option>--crypto-mode <replaceable>mode</replaceable></option>
+        </term>
+        <listitem>
+          <para>use <replaceable>mode</replaceable> as the encryption mode
+            for encrypting the connection.</para>
+          <para>If this parameter is not given, encryption is disabled.  See
+            below, under NETWORK SECURITY, for details on the available modes
+            and how they work.
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--crypto-pass <replaceable>password</replaceable></option>
+        </term>
+        <listitem>
+          <para>use <replaceable>password</replaceable> as the password for
+            authenticating to the synergy server.
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>-d <replaceable>level</replaceable></option>
           <option>--debug <replaceable>level</replaceable></option>
         </term>
         <listitem>
@@ -224,6 +258,17 @@ synergys.1: synergys.sgml
       </varlistentry>
       
       <varlistentry>
+        <term><option>-l <replaceable>log-file</replaceable></option>
+          <option>--log <replaceable>log-file</replaceable></option>
+        </term>
+	
+        <listitem>
+          <para>write log messages to <replaceable>log-file</replaceable>
+	  </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
         <term><option>-n <replaceable>screen-name</replaceable></option>
           <option>--name <replaceable>screen-name</replaceable></option>
         </term>
@@ -234,6 +279,23 @@ synergys.1: synergys.sgml
           configuration.</para> <para>This option lets the client use
           a name other than its hostname for its screen.
 	  </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term><option>--no-tray</option></term>
+        <listitem>
+          <para>disable the system tray icon.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--no-xinitthreads</option></term>
+	
+        <listitem>
+          <para>disable Xlib threading support.</para>
+          <para>This option may fix some crashing issues with Synergy.
+          </para>
         </listitem>
       </varlistentry>
       
@@ -647,25 +709,57 @@ synergys.1: synergys.sgml
 
   <refsect1>
     <title>NETWORK SECURITY</title>
-    
     <para>
-      Synergy has no built-in support for encryption or
-      authentication.  The server accepts connections from any
-      computer.  The server and clients send all data unencrypted
-      which means the clipboard and mouse and keyboard events
-      (e.g. typed passwords) are easily examined by anyone listening
-      on the network.  Therefore, do not run synergy on untrusted
-      networks except as follows.
+      By default, Synergy does not secure its communications in any
+      way.  This is dangerous, as all clipboard and mouse and keyboard
+      events (e.g. typed passwords) are easily examined by anyone
+      listening on the network.
     </para>
-
     <para>
-      You can use SSH (secure shell) to provide strong authentication
-      and encryption to synergy without modifying either SSH or synergy.
-      On Linux and Unix a free implementation of SSH called OpenSSH is
-      available at http://www.openssh.com/.  On Windows you can use the
-      Cygwin version of OpenSSH.     
+      To turn on encryption and authentication support, use
+      the <option>--crypto-mode</option>
+      and <option>--crypto-pass</option> options on both client and
+      server.  In this mode, the connection will be encrypted, and the
+      server will check the client's password against the one it was
+      started with.  Each crypto mode describes the relationship
+      between encrypted packets; the modes must match on both sides of
+      the connection for it to work.
     </para>
-
+    <para>Valid modes for <option>--crypto-mode</option> are:</para>
+    <variablelist>
+      <varlistentry>
+        <term>ofb</term>
+        <listitem>
+          <para>Output feedback mode.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>cfb</term>
+        <listitem>
+          <para>Cipher feedback mode.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>ctr</term>
+        <listitem>
+          <para>Counter mode.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>gcm</term>
+        <listitem>
+          <para>Galois/Counter mode.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para>
+      If this level of security is not sufficient for some reason, you
+      can use SSH (secure shell) to provide strong authentication and
+      encryption to synergy.  SSH is available on &debian; systems in
+      the "openssh-server" and "openssh-client" packages, or from
+      http://www.openssh.com/.  On Windows you can use the Cygwin
+      version of OpenSSH.
+    </para>
     <cmdsynopsis>
       <command>ssh </command>
       <arg choice="plain">-f</arg>
@@ -675,19 +769,17 @@ synergys.1: synergys.sgml
       </arg>
       <arg choice="plain"><replaceable>server-hostname</replaceable></arg>
     </cmdsynopsis>
-
     <para>
-where <replaceable>server-hostname</replaceable> is the name or
-address of the SSH and synergy server host.  24800 is the default
-synergy port; replace it with whichever port you use if you don't use
-the default.  Once ssh authenticates with the server, start the
-synergy client as usual except use `localhost' or `127.0.0.1' for the
-server address.  Synergy will then pass all communication through SSH
-which encrypts it, passes it over the network, decrypts it, and hands
-it back to synergy.  Authentication is provided by SSH's
-authentication.
+      where <replaceable>server-hostname</replaceable> is the name or
+      address of the SSH and synergy server host.  24800 is the
+      default synergy port; replace it with whichever port you use if
+      you don't use the default.  Once ssh authenticates with the
+      server, start the synergy client as usual except use `localhost'
+      or `127.0.0.1' for the server address.  Synergy will then pass
+      all communication through SSH which encrypts it, passes it over
+      the network, decrypts it, and hands it back to synergy.
+      Authentication is provided by SSH's authentication.
     </para>
-    
   </refsect1>
 
   <refsect1>
@@ -706,7 +798,8 @@ authentication.
     <title>AUTHOR</title>
 
     <para>This manual page was written by Daniel Lutz &lt;danlutz@debian.org&gt; for
-      the &debian; system. Edited by Titus Barik &lt;barik@ieee.org&gt;.</para>
+      the &debian; system. Edited by Titus Barik &lt;barik@ieee.org&gt;
+      and Jeff Licquia &lt;licquia@debian.org&gt;.</para>
   </refsect1>
 </refentry>
 

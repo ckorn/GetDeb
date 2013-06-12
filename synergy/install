@@ -1,0 +1,6 @@
+bin/synergy usr/bin
+bin/synergyd usr/bin
+bin/synergyc usr/bin
+bin/synergys usr/bin
+res/synergy.desktop usr/share/applications
+res/synergy.ico usr/share/icons
