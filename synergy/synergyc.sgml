@@ -17,15 +17,15 @@ synergyc.1: synergyc.sgml
   -->
 
   <!-- Fill in your name for FIRSTNAME and SURNAME. -->
-  <!ENTITY dhfirstname "<firstname>Daniel</firstname>">
-  <!ENTITY dhsurname   "<surname>Lutz</surname>">
+  <!ENTITY dhfirstname "<firstname>Jeff</firstname>">
+  <!ENTITY dhsurname   "<surname>Licquia</surname>">
   <!-- Please adjust the date whenever revising the manpage. -->
-  <!ENTITY dhdate      "<date>October 31, 2003</date>">
+  <!ENTITY dhdate      "<date>June 2, 2013</date>">
   <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
        allowed: see man(7), man(1). -->
   <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
-  <!ENTITY dhemail     "<email>danlutz@debian.org</email>">
-  <!ENTITY dhusername  "Daniel Lutz">
+  <!ENTITY dhemail     "<email>licquia@debian.org</email>">
+  <!ENTITY dhusername  "Jeff Licquia">
   <!ENTITY dhucpackage "<refentrytitle>SYNERGYC</refentrytitle>">
   <!ENTITY dhpackage   "synergyc">
 
@@ -43,7 +43,7 @@ synergyc.1: synergyc.sgml
       &dhsurname;
     </author>
     <copyright>
-      <year>2002</year>
+      <year>2013</year>
       <holder>&dhusername;</holder>
     </copyright>
     &dhdate;
@@ -64,6 +64,12 @@ synergyc.1: synergyc.sgml
     <cmdsynopsis>
       <command>&dhpackage;</command>
       <group>
+        <arg>--crypto-mode <replaceable>mode</replaceable></arg>
+      </group>
+      <group>
+        <arg>--crypto-pass <replaceable>password</replaceable></arg>
+      </group>
+      <group>
 	<arg>-d <replaceable>level</replaceable></arg>    
 	<arg>--debug <replaceable>level</replaceable></arg>   
       </group>
@@ -75,12 +81,25 @@ synergyc.1: synergyc.sgml
         <arg>{ --no-daemon | -f }</arg>
       </group>
       <group>
+        <arg>-l <replaceable>log-file</replaceable></arg>
+        <arg>--log <replaceable>log-file</replaceable></arg>
+      </group>
+      <group>
         <arg>-n <replaceable>name</replaceable></arg>
         <arg>--name <replaceable>name</replaceable></arg>
       </group>
       <group>
+        <arg>--no-tray</arg>
+      </group>
+      <group>
+        <arg>--no-xinitthreads</arg>
+      </group>
+      <group>
         <arg>--restart</arg>
         <arg>{ --no-restart | -1 }</arg>
+      </group>
+      <group>
+        <arg>--yscroll <replaceable>delta</replaceable></arg>
       </group>
       <arg choice="plain"><replaceable>address</replaceable></arg>
     </cmdsynopsis>
@@ -97,21 +116,40 @@ synergyc.1: synergyc.sgml
   <refsect1>
     <title>DESCRIPTION</title>
 
-    <para>Starts the <application>synergyc</application>
-    mouse/keyboard sharing client.</para>
+    <para>Starts the <application>synergyc</application> mouse/keyboard 
+      sharing client.</para>
 
     <para>This manual page was written for the &debian; distribution
       because the original program does not have a manual page.
-      Slightly old documentation exists in 
-      <filename>/usr/share/doc/synergy/obsolete/index.html</filename>;
-      it is the most up-to-date information available, despite the
-      pathname.</para>
+    </para>
   </refsect1>
 
   <refsect1>
     <title>OPTIONS</title>
 
     <variablelist>
+      <varlistentry>
+        <term><option>--crypto-mode <replaceable>mode</replaceable></option>
+        </term>
+        <listitem>
+          <para>use <replaceable>mode</replaceable> as the encryption mode
+            for encrypting the connection.</para>
+          <para>If this parameter is not given, encryption is disabled.  See
+            synergys(1) for details on the available modes and how they work.
+          </para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--crypto-pass <replaceable>password</replaceable></option>
+        </term>
+        <listitem>
+          <para>use <replaceable>password</replaceable> as the password for
+            authenticating to the synergy server.
+          </para>
+        </listitem>
+      </varlistentry>
+
       <varlistentry>
         <term><option>-d <replaceable>level</replaceable></option>
           <option>--debug <replaceable>level</replaceable></option>
@@ -150,6 +188,15 @@ synergyc.1: synergyc.sgml
         </listitem>
       </varlistentry>
       <varlistentry>
+        <term><option>-l <replaceable>log-file</replaceable></option>
+          <option>--log <replaceable>log-file</replaceable></option>
+        </term>
+        <listitem>
+          <para>write log messages to <replaceable>log-file</replaceable>
+	  </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
         <term><option>-n <replaceable>screen-name</replaceable></option>
           <option>--name <replaceable>screen-name</replaceable></option>
         </term>
@@ -160,6 +207,20 @@ synergyc.1: synergyc.sgml
 	  <para>This option lets the client use a name other than its
 	    hostname for its screen. This name is used when checking
 	    the configuration.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>--no-tray</option></term>
+        <listitem>
+          <para>disable the system tray icon.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>--no-xinitthreads</option></term>
+        <listitem>
+          <para>disable Xlib threading support.</para>
+          <para>This option may fix some crashing issues with Synergy.
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -176,6 +237,17 @@ synergyc.1: synergyc.sgml
         <listitem>
           <para>do not try to restart the client if it fails for some
           reason.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>
+          <option>--yscroll <replaceable>delta</replaceable></option>
+        </term>
+        <listitem>
+          <para>set the vertical scrolling delta to
+            <replaceable>delta</replaceable>.  If this option is not
+            given, the default vertical scrolling delta is 120.
+	  </para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -330,7 +402,8 @@ synergyc.1: synergyc.sgml
     <title>AUTHOR</title>
     
     <para>This manual page was written by Daniel Lutz &lt;danlutz@debian.org&gt; for
-      the &debian; system. Edited by Titus Barik &lt;barik@ieee.org&gt;.</para>
+      the &debian; system. Edited by Titus Barik &lt;barik@ieee.org&gt;
+      and Jeff Licquia &lt;licquia@debian.org&gt;.</para>
   </refsect1>
 </refentry>
 

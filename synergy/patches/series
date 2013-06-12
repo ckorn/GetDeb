@@ -1,1 +1,2 @@
-desktop.patch
+system-cryptopp.patch
+cprotocolutil-writef.patch

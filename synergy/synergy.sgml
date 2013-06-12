@@ -1,0 +1,95 @@
+<!doctype refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
+
+  <!-- Fill in your name for FIRSTNAME and SURNAME. -->
+  <!ENTITY dhfirstname "<firstname>Jeff</firstname>">
+  <!ENTITY dhsurname   "<surname>Licquia</surname>">
+  <!-- Please adjust the date whenever revising the manpage. -->
+  <!ENTITY dhdate      "<date>June 3, 2013</date>">
+  <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
+       allowed: see man(7), man(1). -->
+  <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
+  <!ENTITY dhemail     "<email>licquia@debian.org</email>">
+  <!ENTITY dhusername  "Jeff Licquia">
+  <!ENTITY dhucpackage "<refentrytitle>SYNERGY</refentrytitle>">
+  <!ENTITY dhpackage   "synergy">
+
+  <!ENTITY debian      "<productname>Debian</productname>">
+  <!ENTITY gnu         "<acronym>GNU</acronym>">
+]>
+
+<refentry>
+  <refentryinfo>
+    <address>
+      &dhemail;
+    </address>
+    <author>
+      &dhfirstname;
+      &dhsurname;
+    </author>
+    <copyright>
+      <year>2002</year>
+      <holder>&dhusername;</holder>
+    </copyright>
+    &dhdate;
+  </refentryinfo>
+  <refmeta>
+    &dhucpackage;
+    
+    &dhsection;
+  </refmeta>
+
+  <refnamediv>
+    <refname>&dhpackage;</refname>
+
+    <refpurpose>synergy setup GUI</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>DESCRIPTION</title>
+
+    <para>The <application>synergy</application> command starts
+      a graphical interface for setting up Synergy sessions, allowing
+      the mouse and keyboard from one computer to control multiple
+      computers as if they were a single multi-monitor system.</para>
+
+    <para>This manual page was written for the &debian; distribution
+      because the original program does not have a manual page.
+    </para>
+  </refsect1>
+
+  <refsect1>
+    <title>SEE ALSO</title>
+    
+    <para>synergys(1), synergyc(1)</para>
+  </refsect1>
+  
+  <refsect1>
+    <title>AUTHOR</title>
+    
+    <para>This manual page was written by Jeff Licquia &lt;licquia@debian.org&gt; for
+      the &debian; system.</para>
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:nil
+sgml-default-dtd-file:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

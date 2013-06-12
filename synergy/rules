@@ -9,15 +9,41 @@
 # Uncomment this to turn on verbose mode.
 # export DH_VERBOSE=1
 
+# Set build flags.  For wheezy+1, we will switch to using debhelper 9.
+# For now, preserve compatibility with squeeze.  Includes CMake workaround
+# (which, again, should not be necessary after wheezy).
+ifeq (mips,$(shell dpkg --print-architecture))
+DEB_BUILD_MAINT_OPTIONS = hardening=+all,-relro
+else ifeq (mipsel,$(shell dpkg --print-architecture))
+DEB_BUILD_MAINT_OPTIONS = hardening=+all,-relro
+else
+DEB_BUILD_MAINT_OPTIONS = hardening=+all
+endif
+export DEB_BUILD_MAINT_OPTIONS
+DPKG_EXPORT_BUILDFLAGS=1
+-include /usr/share/dpkg/buildflags.mk
+CFLAGS += $(CPPFLAGS)
+CXXFLAGS += $(CPPFLAGS)
 
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
+# Synergy needs libcrypto++.  We can attempt to use packaged libcrypto++,
+# or the embedded zip file of the libcrypto++ source.  To use the zip,
+# remove the Build-Depends on libcrypto++-dev, add one for unzip, and
+# uncomment the following line.
+#USE_CRYPTOPP_DIR = tools/cryptopp
 
-CFLAGS = -Wall -g
-LDFLAGS = -Wl,-z,defs
+# Run the test suite unless explicitly requested not to.
+ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
+TEST_TARGET = test
+endif
+
+CFLAGS += -Wall -g
+CXXFLAGS += -Wall -g
+LDFLAGS += -Wl,-z,defs
 
 ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
 	CFLAGS += -O0
@@ -30,31 +56,46 @@ CXXFLAGS = $(CFLAGS)
 builddir:
 	mkdir builddir
 
-config.h: CMakeLists.txt builddir
+config.h: CMakeLists.txt builddir $(USE_CRYPTOPP_DIR)
 	dh_testdir
 	(cd builddir && cmake ..)
-	cd src/gui ; CONFIG="-debug +release" qmake
+
+src/gui/Makefile:
+	(cd src/gui && qmake gui.pro "CONFIG+=release" "QMAKE_CFLAGS_RELEASE+=$(CFLAGS)" "QMAKE_CXXFLAGS_RELEASE+=$(CXXFLAGS)" "QMAKE_LFLAGS_RELEASE+=$(LDFLAGS)" -r)
+
+tools/cryptopp: tools/cryptopp562.zip
+	mkdir -p tools/cryptopp
+	cd tools/cryptopp && unzip -a ../cryptopp562.zip
+
+# Man page builders.  These are better than the upstream man pages
+# in doc.
+
+synergy.1: debian/synergy.sgml
+	docbook-to-man debian/synergy.sgml > synergy.1
+
+synergys.1: debian/synergys.sgml
+	docbook-to-man debian/synergys.sgml > synergys.1
+
+synergyc.1: debian/synergyc.sgml
+	docbook-to-man debian/synergyc.sgml > synergyc.1
+
+synergyd.1: debian/synergyd.sgml
+	docbook-to-man debian/synergyd.sgml > synergyd.1
+
+# Main targets.
+
+bin/unittests: builddir config.h
+	dh_testdir
+	(cd builddir && $(MAKE) VERBOSE=1)
+
+bin/synergy: builddir src/gui/Makefile
+	dh_testdir
+	(cd src/gui && $(MAKE))
 
 build: build-arch build-indep
 build-arch: build-stamp
 build-indep: build-stamp
-build-stamp: builddir config.h
-	dh_testdir
-
-	(cd builddir && $(MAKE))
-
-	$(MAKE) -C src/gui
-
-	# Upstream provides nearly-useless man pages.  If
-	# you want to use them, uncomment these and comment
-	# the docbook-to-man lines out.
-	#cp doc/synergys.man synergys.1
-	#cp doc/synergyc.man synergyc.1
-
-	# Use the man pages provided by a Debian user.
-	docbook-to-man debian/synergys.sgml > synergys.1
-	docbook-to-man debian/synergyc.sgml > synergyc.1
-
+build-stamp: bin/unittests bin/synergy synergy.1 synergys.1 synergyc.1 synergyd.1
 	touch build-stamp
 
 clean:
@@ -63,25 +104,21 @@ clean:
 
 	rm -f build-stamp 
 	rm -rf builddir bin lib
-	rm -f synergys.1 synergyc.1 config.h
+	rm -f synergy.1 synergys.1 synergyc.1 synergyd.1 config.h
 
 	find . -name \*.pyc -delete
 
-	[ ! -f Makefile ] || $(MAKE) clean
-
-	rm -f CMakeCache.txt Makefile cmake_install.cmake config.h bin/synergy src/gui/ui_*
+	$(MAKE) -C src/gui distclean || true
 	rm -rf src/gui/tmp
-	find . -name cmake_install.cmake -type f -delete
-	find . -name Makefile -type f -delete
-	find . -name "*.o" -type f -delete
-	find . -name CMakeFiles -type d -exec rm -rf {} \; || true
+
+	rm -rf tools/cryptopp
 
 	dh_clean 
 
 test: build-stamp
 	bin/unittests --gtest_color=no
-	# Disabled; seems to segfault often.
-	#bin/integtests --gtest_color=no
+	# Seems to segfault often, so don't fail
+	bin/integtests --gtest_color=no || true
 
 install: build
 	dh_testdir
@@ -89,22 +126,18 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	cp bin/synergyc bin/synergys bin/synergy $(CURDIR)/debian/synergy/usr/bin
-	cp res/synergy.desktop $(CURDIR)/debian/synergy/usr/share/applications
-	cp debian/synergy.xpm $(CURDIR)/debian/synergy/usr/share/pixmaps
-
 # Build architecture-independent files here.
 binary-indep: build install
 # We have nothing to do by default.
 
 # Build architecture-dependent files here.
-binary-arch: build install test
+binary-arch: build install $(TEST_TARGET)
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs ChangeLog
 	dh_installdocs
 	dh_installexamples
-#	dh_install
+	dh_install
 #	dh_installmenu
 #	dh_installdebconf	
 #	dh_installlogrotate
@@ -114,7 +147,7 @@ binary-arch: build install test
 #	dh_installinit
 #	dh_installcron
 #	dh_installinfo
-	dh_installman synergys.1 synergyc.1
+	dh_installman synergys.1 synergyc.1 synergyd.1 synergy.1
 	dh_link
 	dh_strip
 	dh_compress
@@ -122,6 +155,7 @@ binary-arch: build install test
 #	dh_perl
 #	dh_python
 #	dh_makeshlibs
+	dh_lintian
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol

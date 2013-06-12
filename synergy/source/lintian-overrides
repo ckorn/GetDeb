@@ -1,0 +1,4 @@
+# Synergy uses CMake, not autotools.  The autotools files found
+# in the source tree are from local copies of gtest and gmock,
+# and are not used in the build.
+synergy source: outdated-autotools-helper-file
