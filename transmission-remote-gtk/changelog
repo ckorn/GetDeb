@@ -1,3 +1,13 @@
+transmission-remote-gtk (1.1.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - fix file lists relying on being sorted (sometimes they are not) to fix
+      the tree being messed up with duplicate directories.
+    - fix using markup in comment.
+    - translations updated from launchpad. (NEW: Latvian, Sinhalese)
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 16 Jun 2013 20:11:40 +0200
+
 transmission-remote-gtk (1.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
