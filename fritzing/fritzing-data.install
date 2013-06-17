@@ -1,0 +1,4 @@
+bins/	/usr/share/fritzing/
+parts/  /usr/share/fritzing/
+sketches/       /usr/share/fritzing/
+translations/*.qm	/usr/share/fritzing/translations/

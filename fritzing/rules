@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+# some modifications have been made in phoenix.pro
+export DEB_BUILD_HARDENING=1
+
+DEBDIR=$(CURDIR)/debian
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/qmake.mk
+
+# Add here any variable or target overrides you need.
+
+binary-install/fritzing::
+	convert $(DEBDIR)/fritzing/usr/share/pixmaps/fritzing_icon.png -resize 32x32 \
+		$(DEBDIR)/fritzing/usr/share/pixmaps/fritzing_icon.xpm
+
+binary-install/fritzing-data::
+	find $(DEBDIR)/fritzing-data/ -type d -empty -delete
+	find $(DEBDIR)/fritzing-data/usr/share/fritzing/parts/ \
+		-type f -exec chmod -c -x {} \;
+	find $(DEBDIR)/fritzing-data/usr/share/fritzing/parts/svg/core/ \
+		-name LICENSE.txt -delete
+
+update-upstream-changelog:
+	w3m -dump http://fritzing.org/download/history-changes/ \
+	| sed '/^History of changes/,/First preview release/!d' > $(DEBDIR)/docs/changelog

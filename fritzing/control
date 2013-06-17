@@ -1,0 +1,50 @@
+Source: fritzing
+Section: electronics
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Georges Khaznadar <georgesk@debian.org>
+Build-Depends: cdbs,
+               debhelper (>= 9),
+               imagemagick,
+               libqt4-dev,
+               zlib1g-dev,
+               libboost-dev,
+               hardening-wrapper
+Standards-Version: 3.9.3
+Homepage: http://fritzing.org
+
+Package: fritzing
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         fritzing-data (= ${source:Version}),
+         libqt4-dbus,
+         libqt4-help,
+         libqt4-network,
+         libqt4-opengl,
+         libqt4-sql,
+         libqt4-svg,
+         libqt4-webkit,
+         libqt4-xml,
+         libqt4-xmlpatterns,
+         libqtcore4,
+         libqtgui4,
+         libqt4-sql-sqlite
+Description: Easy-to-use electronic design software
+ Fritzing is an open source project designed to help one transition from a
+ prototype to a finished project. Aimed at users who want to produce or document
+ circuits and experiments, one starts by building a physical prototype, then
+ recreating it with Fritzing’s graphical editor. From there one can generate a
+ schematic, PCB artwork, and PCB production files.
+
+Package: fritzing-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Easy-to-use electronic design software (data files)
+ Fritzing is an open source project designed to help one transition from a
+ prototype to a finished project. Aimed at users who want to produce or document
+ circuits and experiments, one starts by building a physical prototype, then
+ recreating it with Fritzing’s graphical editor. From there one can generate a
+ schematic, PCB artwork, and PCB production files.
+ .
+ This package contains the architecture independent data files for Fritzing.
