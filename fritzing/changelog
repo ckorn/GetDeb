@@ -1,0 +1,119 @@
+fritzing (0.8.0b-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 17 Jun 2013 19:01:46 +0200
+
+fritzing (0.7.12b-2) unstable; urgency=low
+
+  * applied Jeremy Bicha's and Scott Kitterman's patches. Closes: #702674
+
+ -- Georges Khaznadar <georgesk@debian.org>  Sat, 25 May 2013 23:46:11 +0200
+
+fritzing (0.7.12b-1) unstable; urgency=low
+
+  * Changed my Debemail
+  * Upgraded to the newest source version
+  * Upgraded compat, debhelper build-dependency, Standards-Version.
+  * applied Scott Kitterman's patch. Closes: #702674 (Fails to
+    build on arm*)
+  * Included boost libraries in build-dependencies. Closes: #702672
+  * Closes: #698891 as the package already depends on
+    libqt4-sql-sqlite
+  * added a build-dependency on hardening-wrapper and enabled its
+    use in debian/rules
+
+ -- Georges Khaznadar <georgesk@debian.org>  Thu, 25 Apr 2013 16:28:29 +0200
+
+fritzing (0.7.10b-1) unstable; urgency=low
+
+  * New upstream version. Closes: #661495, #692998
+  * Removed useless patches.
+  * Removed SetupAPI.lib from sourceless files.
+  * Skip dfsg tarball creation if there are no sourceless files.
+  * Added libqt4-sql-sqlite to dependencies. Thanks to Tom Hummel <tom@bluespice.org>.
+
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Sun, 11 Nov 2012 21:38:56 +0000
+
+fritzing (0.7.7b+dfsg-1) unstable; urgency=low
+
+  * upgraded to the newer upstream version
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Sun, 19 Aug 2012 10:31:20 +0200
+
+fritzing (0.7.4b+dfsg-5) unstable; urgency=low
+
+  * applied a patch from peter green. Closes: #679588
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Thu, 19 Jul 2012 20:00:05 +0200
+
+fritzing (0.7.4b+dfsg-3) unstable; urgency=low
+
+  * applied a second patch from Jonathan Cohen.
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Fri, 29 Jun 2012 17:11:07 +0200
+
+fritzing (0.7.4b+dfsg-2) unstable; urgency=low
+
+  * applied Jonathan Cohen's patch, which should fix the compilation
+    issue for armel.
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Wed, 13 Jun 2012 19:41:31 +0200
+
+fritzing (0.7.4b+dfsg-1) unstable; urgency=low
+
+  * New upstream version (Closes: #661495, #660628)
+  * Added script to repack original tarball without sourceless files.
+  * Updated regular expression of Debian watch file.
+  * Deleted ftbfs_fix_for_armel_sh4.patch.
+  * Updated Standards-Version to 3.9.3
+  * Changed Vcs-Browser url in control file.
+
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Thu, 19 Apr 2012 15:38:29 +0100
+
+fritzing (0.6.3b+dfsg-4) UNRELEASED; urgency=low
+
+  * Refreshed ftbfs_fix_for_armel_sh4.patch with an extra modification
+    for armel (Closes: #639771)
+
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Sat, 03 Sep 2011 02:33:04 +0100
+
+fritzing (0.6.3b+dfsg-3) unstable; urgency=low
+
+  * Removed redundant build-dependencies.
+  * Repackaged the upstream source to remove sourceless binaries:
+    SetupAPI.Lib and a handful of PDF files.
+  * Applies ftbfs_fix_for_armel_sh4.patch (Closes: #639771)
+
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Tue, 30 Aug 2011 15:04:30 +0100
+
+fritzing (0.6.3b-2) unstable; urgency=low
+
+  * removed unneed build-dependencies on lbc6 and libstdc++6
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Fri, 26 Aug 2011 23:44:41 +0200
+
+fritzing (0.6.3b-1) unstable; urgency=low
+
+  * upgrapded to the newer upstream version
+  * parameters of the function GraphicsUtils::distanceFromLine in 
+    src/svg/groundplanegenerator.cpp:767 are now declared as doubles,
+    which Closes: #636441
+  * the new version fixes src/utils/folderutils.cpp, which
+    Closes: #636061
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Fri, 26 Aug 2011 10:11:05 +0200
+
+fritzing (0.6.2b-2) unstable; urgency=low
+
+  * modified debian/control to add myself as an uploader
+  * Initial release (Closes: #601230) (LP: #230390) (Closes: #635155)
+  * fixed a template-stance in debian/copyright: Author(s) => Authors
+
+ -- Georges Khaznadar <georgesk@ofset.org>  Sat, 23 Jul 2011 15:49:31 +0200
+
+fritzing (0.6.2b-1) unstable; urgency=low
+
+  * Initial release (Closes: #601230) (LP: #230390)
+
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Thu, 21 Jul 2011 13:07:49 +0100

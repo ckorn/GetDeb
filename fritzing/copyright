@@ -1,0 +1,69 @@
+This work was packaged for Debian by:
+
+    Enrique Hernández Bello <ehbello@gmail.com> on Sun, 03 Oct 2010 15:05:26 +0100
+
+It was downloaded from:
+
+    <http://www.fritzing.org/download>
+
+Upstream Authors:
+
+	Prof. Reto Wettach <reto@driftingfriends.de>
+	Andre Knoerig <andre.knoerig@fh-potsdam.de>
+	Myriel Milicevic <myriel@neighbourhoodsatellites.com>
+	Zach Eveland <zeveland@blacklabel-development.com>
+	Dirk van Oosterbosch <dirk@fritzing.org>
+	Jonathan Cohen <jonathan@fritzing.org>
+	Marcus Paeschke <marcus@neotoxic.de>
+	Omer Yosha <contact@airpiano.de>
+	Travis Robertson <travoso@dnai.com>
+	Stefan Hermann <stefanhermann79@gmail.com>
+	Brendan Howell <brendan@fritzing.org>
+	Mariano Crowe <merunga@fritzing.org>
+	Johannes Landstorfer <johannes.landstorfer@gmail.com>
+	Jenny Chowdhury <jennylc@jennylc.com>
+	Lionel Michel 
+	Jannis Leidel <jannis@leidel.info>
+	Daniel Tzschentke <daniel.tzschentke@ixds.de>
+
+Copyright:
+
+    <Copyright (C) 2007-2011 University of Applied Sciences Potsdam>
+
+License:
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+On Debian systems, the complete text of the GNU General
+Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
+
+The documentation and part designs are licensed under Creative Commons 3.0
+BY-SA Unported. You can get a copy of this at:
+<http://www.creativecommons.org/licenses/by-sa/3.0/>.
+
+This means that you can create your own variation of Fritzing, as long as you 
+credit us and also publish it under GPL. Similarly, you may re-publish our 
+documentation, as long as you credit us, and publish it under the same 
+license. 
+
+You may publish circuits and diagrams that you create with 
+Fritzing and that use our graphics, again as long as you credit us, and 
+publish your works under the same license.  A credit can be as simple as 
+"this image was created with Fritzing."
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Enrique Hernández Bello <ehbello@gmail.com>
+
+and is licensed under the GPL version 3, see above.

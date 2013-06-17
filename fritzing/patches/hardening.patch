@@ -1,0 +1,17 @@
+Index: fritzing-0.8.0b/phoenix.pro
+===================================================================
+--- fritzing-0.8.0b.orig/phoenix.pro	2013-06-17 19:02:20.245775057 +0200
++++ fritzing-0.8.0b/phoenix.pro	2013-06-17 19:03:14.005773457 +0200
+@@ -53,6 +53,12 @@
+         LIBS += /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+ }
+ unix {
++    # hardening flags
++    QMAKE_CPPFLAGS *=$(shell dpkg-buildflags --get CPPFLAGS)
++    QMAKE_CFLAGS *= $(shell dpkg-buildflags --get CFLAGS)
++    QMAKE_CXXFLAGS *=$(shell dpkg-buildflags --get CXXFLAGS)
++    QMAKE_LDFLAGS *=$(shell dpkg-buildflags --get LDFLAGS)
++
+     !macx { # unix is defined on mac
+         HARDWARE_PLATFORM = $$system(uname -m)
+         contains( HARDWARE_PLATFORM, x86_64 ) {
