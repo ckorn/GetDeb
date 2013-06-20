@@ -1,3 +1,9 @@
+bluegriffon (1.7.2-1~getdeb2~raring) raring; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 19 Jun 2013 18:25:01 +0200
+
 bluegriffon (1.7.1-1~getdeb2~raring) raring; urgency=low
 
   * New upstream version
