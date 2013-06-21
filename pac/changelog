@@ -1,3 +1,11 @@
+pac (4.5.2.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Fixed a bug that prevented PAC from starting when a connection was
+    autostarted and "hide to systray" was checked
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Jun 2013 18:37:27 +0200
+
 pac (4.5.2.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
