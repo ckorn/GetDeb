@@ -1,0 +1,4 @@
+# No real watch provided.
+# Upstream is not always available in unix format and includes components that
+# we normally remove for licence reasons.
+# Upstream is packaged from bzr with some tweaks, see README.source.
