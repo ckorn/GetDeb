@@ -1,0 +1,8 @@
+library/library/contrib_symbols_dl1eic/Makefile
+library/library/contrib_symbols_dl1eic/cmake_install.cmake
+library/template/Makefile
+library/template/cmake_install.cmake
+pcbnew/pcad2kicadpcb_plugin/Makefile
+pcbnew/pcad2kicadpcb_plugin/cmake_install.cmake
+tools/Makefile
+tools/cmake_install.cmake

@@ -1,0 +1,141 @@
+This package was debianized by Richard A Burton <richardaburton@gmail.com> on
+Tue, 27 Jun 2006 10:48:13 +0100.
+
+It was downloaded from http://iut-tice.ujf-grenoble.fr/cao/
+
+Upstream Author: Jean-Pierre Charras <jean-pierre.charras@inpg.fr>
+
+--------------------------------------------------------------------------------
+
+Copyright: 2000-2008, Jean-Pierre Charras
+License:
+ Software: GPL v2
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; version 2 dated June, 1991.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with the Debian system in the file /usr/share/common-licenses/GPL-2.
+
+--------------------------------------------------------------------------------
+
+files 3d-viewer/trackball.{h,cpp}:
+Copyright 1993, 1994, Silicon Graphics, Inc.
+ *
+ * (c) Copyright 1993, 1994, Silicon Graphics, Inc.
+ * ALL RIGHTS RESERVED
+ * Permission to use, copy, modify, and distribute this software for
+ * any purpose and without fee is hereby granted, provided that the above
+ * copyright notice appear in all copies and that both the copyright notice
+ * and this permission notice appear in supporting documentation, and that
+ * the name of Silicon Graphics, Inc. not be used in advertising
+ * or publicity pertaining to distribution of the software without specific,
+ * written prior permission.
+ *
+ * THE MATERIAL EMBODIED ON THIS SOFTWARE IS PROVIDED TO YOU "AS-IS"
+ * AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR
+ * FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL SILICON
+ * GRAPHICS, INC.  BE LIABLE TO YOU OR ANYONE ELSE FOR ANY DIRECT,
+ * SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY
+ * KIND, OR ANY DAMAGES WHATSOEVER, INCLUDING WITHOUT LIMITATION,
+ * LOSS OF PROFIT, LOSS OF USE, SAVINGS OR REVENUE, OR THE CLAIMS OF
+ * THIRD PARTIES, WHETHER OR NOT SILICON GRAPHICS, INC.  HAS BEEN
+ * ADVISED OF THE POSSIBILITY OF SUCH LOSS, HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE
+ * POSSESSION, USE OR PERFORMANCE OF THIS SOFTWARE.
+ *
+ * US Government Users Restricted Rights
+ * Use, duplication, or disclosure by the Government is subject to
+ * restrictions set forth in FAR 52.227.19(c)(2) or subparagraph
+ * (c)(1)(ii) of the Rights in Technical Data and Computer Software
+ * clause at DFARS 252.227-7013 and/or in similar or successor
+ * clauses in the FAR or the DOD or NASA FAR Supplement.
+ * Unpublished-- rights reserved under the copyright laws of the
+ * United States.  Contractor/manufacturer is Silicon Graphics,
+ * Inc., 2011 N.  Shoreline Blvd., Mountain View, CA 94039-7311.
+ *
+ * OpenGL(TM) is a trademark of Silicon Graphics, Inc.
+ */
+
+--------------------------------------------------------------------------------
+
+files in kicad/polygon/kbool/:
+Copyright: 2001-2004 (C) Probably Klaas Holwerda
+Licence: wxWidgets Licence
+
+--------------------------------------------------------------------------------
+
+Copyright: 2000-2008, Jean-Pierre Charras
+License:
+ Documentation: 
+                KiCad Free Documentation Licence
+                ================================
+
+  Copyright (c) jean-pierre Charras
+
+  Everyone is permitted to copy and distribute verbatim copies
+  of this licence document, but changing it is not allowed.
+   
+                   KICAD FREE DOCUMENTATION LICENCE
+     TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  1. Permission is granted to make and distribute verbatim copies of this
+  manual or piece of documentation provided any copyright notice and this
+  permission notice are preserved on all copies.
+
+  2. Permission is granted to process this file or document through a
+  document processing system and, at your option and the option of any third
+  party, print the results, provided a printed document carries a copying
+  permission notice identical to this one.
+
+  3. Permission is granted to copy and distribute modified versions of this
+  manual or piece of documentation under the conditions for verbatim
+  copying, provided also that any sections describing licensing conditions
+  for this manual, such as, in particular, the GNU General Public Licence,
+  the GNU Library General Public Licence, and any wxWindows Licence are
+  included exactly as in the original, and provided that the entire
+  resulting derived work is distributed under the terms of a permission
+  notice identical to this one.
+
+  4. Permission is granted to copy and distribute translations of this
+  manual or piece of documentation into another language, under the above
+  conditions for modified versions, except that sections related to
+  licensing, including this paragraph, may also be included in translations
+  approved by the copyright holders of the respective licence documents in
+  addition to the original French or English.
+
+                            WARRANTY DISCLAIMER
+
+  5. BECAUSE THIS MANUAL OR PIECE OF DOCUMENTATION IS LICENSED FREE OF CHARGE,
+  THERE IS NO WARRANTY FOR IT, TO THE EXTENT PERMITTED BY APPLICABLE LAW. 
+  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER
+  PARTIES PROVIDE THIS MANUAL OR PIECE OF DOCUMENTATION "AS IS" WITHOUT
+  WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF
+  THE MANUAL OR PIECE OF DOCUMENTATION IS WITH YOU.  SHOULD THE MANUAL OR
+  PIECE OF DOCUMENTATION PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
+  NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  6. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL
+  ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+  REDISTRIBUTE THE MANUAL OR PIECE OF DOCUMENTATION AS PERMITTED ABOVE, BE
+  LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+  CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE
+  MANUAL OR PIECE OF DOCUMENTATION (INCLUDING BUT NOT LIMITED TO LOSS OF
+  DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+  PARTIES OR A FAILURE OF A PROGRAM BASED ON THE MANUAL OR PIECE OF
+  DOCUMENTATION TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR
+  OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+--------------------------------------------------------------------------------
+
+The Debian packaging is (C)2006-2010 Richard A Burton <richardaburton@gmail.com>
+and is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.
