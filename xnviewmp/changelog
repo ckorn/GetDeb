@@ -1,3 +1,53 @@
+xnviewmp (0.56-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - UI fix 
+    - Info not restored in Compare
+    - Exiftool & unicode
+    - Reset 'message dialog reminders'
+    - 'Open in file explorer' in view mode
+    - Comment in fullscreen
+    - Line in view
+    - Gamma not used in exr thumbnail
+    - Sometimes on Mac, menu is greyed
+    - Copy/Move dialog problems
+    - IPTC/XMP encoding
+    - Sometimes session is not saved correctly
+    - Favorites & subfolder
+    - Date not refreshed after 'change timestamp'
+    - # in iptc on batch convert
+    - Editing must start on click filename
+    - Image with big height 
+    - long filename in statusbar
+    - clipboard and quit 
+    - No metadata printed
+    - Clean DB can remove files with categories 
+    - Tag info not updated 
+    - Print in view mode 
+    - JPEG2000 Export
+    - Show always selection information
+    - Sort by folder 
+    - Export and extension
+    - Ratio 
+    - Watermark percentage 
+    - Fullscreen show info
+    - Mouse wheel & click on video
+    - Hide rating from preview panel
+    - Restore from maximized state 
+    - Cache>Add folder 
+    - Message if file can't be found or loaded 
+    - Capture and shortcut 
+    - Change timestamp can create EXIF date 
+    - Band in batch convert
+    - about dialog 
+    - PDF not working on MAC 
+    - ICC profile 
+    - settings for scroll thumbnail
+    - further detail in
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28133
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 22 Jun 2013 23:16:15 +0200
+
 xnviewmp (0.51-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #1017412)
