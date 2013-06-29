@@ -2,5 +2,5 @@
 %:
 	dh $@
 
-override_dh_installchangelogs:
-	dh_installchangelogs NEWS
+#override_dh_installchangelogs:
+#	dh_installchangelogs NEWS
