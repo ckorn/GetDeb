@@ -1,3 +1,16 @@
+yad (0.22.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - add scale field to form dialog
+    - fix form layout on gtk+-3.0
+    - fix borders around child dialogs in notebook
+    - fix handle stdin for icons dialog in compact mode
+    - fix dialog text alignment
+    - add italian translation
+    - update man page
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 29 Jun 2013 13:48:10 +0200
+
 yad (0.21.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
