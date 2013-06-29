@@ -1,0 +1,32 @@
+Source: uget
+Section: net
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               intltool,
+               dh-autoreconf,
+               libnotify-dev,
+               libgstreamer0.10-dev,
+               autotools-dev,
+               libgtk-3-dev,
+               libcurl4-openssl-dev
+Standards-Version: 3.9.3
+Homepage: http://urlget.sourceforge.net/
+
+Package: uget
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: easy-to-use download manager written in GTK+
+ Uget (formerly urlgfe) is a simple, lightweight and easy-to-use
+ download manager.
+ It provides the following features:
+  * Resume downloads.
+  * Queue downloads.
+  * Classify downloads in categories.
+  * Mozilla Firefox integration (through Flashgot plugin).
+  * Clipboard monitoring.
+  * Import downloads import from HTML files.
+  * Batch download.
+ .
+ It also can be launched from the command line.
