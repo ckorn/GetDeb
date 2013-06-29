@@ -1,0 +1,60 @@
+Description: Correct linking order to prevent FTBFS with newest toolchain.
+Author: Alessio Treglia <quadrispro@ubuntu.com>
+Forwarded: no
+---
+ Makefile.am          |    1 -
+ configure.ac         |    3 ++-
+ uget-cmd/Makefile.am |    5 +++--
+ uget-gtk/Makefile.am |    5 +++--
+ 4 files changed, 8 insertions(+), 6 deletions(-)
+
+--- uget.orig/uget-gtk/Makefile.am
++++ uget/uget-gtk/Makefile.am
+@@ -5,8 +5,9 @@ FOR_GTK3_CFLAGS = -DGDK_DISABLE_DEPRECAT
+ # set the include path found by configure
+ uget_gtk_CPPFLAGS = -DDATADIR='"$(datadir)"' -I$(top_srcdir)/uglib -I$(top_srcdir)/uget-gtk $(FOR_GTK3_CFLAGS)
+ uget_gtk_CFLAGS   = @LFS_CFLAGS@  @GTK_CFLAGS@ @GIO_CFLAGS@ @GTHREAD_CFLAGS@ @CURL_CFLAGS@ @LIBNOTIFY_CFLAGS@ @GSTREAMER_CFLAGS@ @LIBPWMD_CFLAGS@
+-uget_gtk_LDFLAGS  = @LFS_LDFLAGS@ @GTK_LIBS@   @GIO_LIBS@   @GTHREAD_LIBS@   @CURL_LIBS@   @LIBNOTIFY_LIBS@   @GSTREAMER_LIBS@   @LIBPWMD_LIBS@
+-uget_gtk_LDADD    = $(top_builddir)/uglib/libuglib.a
++uget_gtk_LDFLAGS  = @LDFLAGS@
++uget_gtk_LDADD    = $(top_builddir)/uglib/libuglib.a \
++	@LFS_LDFLAGS@ @GTK_LIBS@   @GIO_LIBS@   @GTHREAD_LIBS@   @CURL_LIBS@   @LIBNOTIFY_LIBS@   @GSTREAMER_LIBS@   @LIBPWMD_LIBS@
+ 
+ uget_gtk_SOURCES  = \
+ 	UgSelector.c  UgSummary.c  UgSettingForm.c \
+--- uget.orig/uget-cmd/Makefile.am
++++ uget/uget-cmd/Makefile.am
+@@ -3,8 +3,9 @@ noinst_PROGRAMS = uget-cmd
+ # set the include path found by configure
+ uget_cmd_CPPFLAGS = -DDATADIR='"$(datadir)"' -I$(top_srcdir)/uglib -I$(top_srcdir)/uget-cmd
+ uget_cmd_CFLAGS   = @LFS_CFLAGS@  @GIO_CFLAGS@ @GTHREAD_CFLAGS@ @CURL_CFLAGS@ @GSTREAMER_CFLAGS@ @LIBPWMD_CFLAGS@
+-uget_cmd_LDFLAGS  = @LFS_LDFLAGS@ @GIO_LIBS@   @GTHREAD_LIBS@   @CURL_LIBS@   @GSTREAMER_LIBS@   @LIBPWMD_LIBS@
+-uget_cmd_LDADD    = $(top_builddir)/uglib/libuglib.a
++uget_cmd_LDFLAGS  = @LDFLAGS@
++uget_cmd_LDADD    = $(top_builddir)/uglib/libuglib.a \
++	@LFS_LDFLAGS@ @GIO_LIBS@   @GTHREAD_LIBS@   @CURL_LIBS@   @GSTREAMER_LIBS@   @LIBPWMD_LIBS@
+ 
+ uget_cmd_SOURCES  = \
+ 	UgCategory-cmd.c \
+--- uget.orig/Makefile.am
++++ uget/Makefile.am
+@@ -3,7 +3,6 @@ SUBDIRS =		\
+ 	uglib		\
+ 	uget-gtk	\
+ 	uget-cmd	\
+-	tests		\
+ 	pixmaps		\
+ 	sounds		\
+ 	po			\
+--- uget.orig/configure.ac
++++ uget/configure.ac
+@@ -36,7 +36,8 @@ AM_GLIB_GNU_GETTEXT
+ AM_GLIB_DEFINE_LOCALEDIR(LOCALEDIR)
+ ## Use AM_GLIB_DEFINE_LOCALEDIR with AC_CONFIG_HEADERS
+ 
+-
++LDFLAGS="$LDFLAGS"
++AC_SUBST(LDFLAGS)
+ ## ----------------------------------------------
+ ## checks for requirements.
+ PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.18)
