@@ -1,3 +1,23 @@
+urd (1.8.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - Added initial usenet configuration to installer
+    - Added support for PDO_mysql and PDO_pgsql database interface
+    - highlighted actions menu in light/darkness stylesheet (like other css)
+    - enabled inline images to be shown
+    - added php implementation of yydecode to replace the binary (alpha
+    release)
+    - Improved user interface a bit
+    - Enabling authentication in usenet overview now uses a popup to ask for
+    credentials
+    - added #, // and ; as comments to urdd interface
+    - Fixed bug in parsing set sizes from RSS feeds
+    - Added spots statistics per spot subcategory
+    - Fixed a bug in creating NZB files from spots
+    - Show text files and images in a popup 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 30 Jun 2013 00:13:40 +0200
+
 urd (1.7.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
