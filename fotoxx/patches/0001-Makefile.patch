@@ -7,10 +7,8 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
-Index: fotoxx-13.05/Makefile
-===================================================================
---- fotoxx-13.05.orig/Makefile	2013-05-01 09:22:29.000000000 +0200
-+++ fotoxx-13.05/Makefile	2013-05-01 16:43:20.023401865 +0200
+--- a/Makefile
++++ b/Makefile
 @@ -13,9 +13,9 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -23,7 +21,15 @@ Index: fotoxx-13.05/Makefile
  
  CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-3.0`
  LIBS = `pkg-config --libs gtk+-3.0`
-@@ -90,8 +90,8 @@
+@@ -76,7 +76,6 @@
+ 	rm -f -R  $(DESTDIR)$(SHAREDIR)
+ 	rm -f -R  $(DESTDIR)$(DOCDIR)
+ 	rm -f  $(DESTDIR)$(MANDIR)/fotoxx.1.gz
+-	xdg-desktop-menu uninstall $(DESTDIR)$(MENUFILE)
+ 	rm -f  $(DESTDIR)$(MENUFILE)
+ 	mkdir -p  $(DESTDIR)$(BINDIR)
+ 	mkdir -p  $(DESTDIR)$(DATADIR)
+@@ -96,15 +95,14 @@
  	cp fotoxx.1.gz $(DESTDIR)$(MANDIR)
  	rm -f fotoxx.1.gz
  	# menu (desktop) file
@@ -34,3 +40,10 @@ Index: fotoxx-13.05/Makefile
  
  uninstall:
  	rm -f  $(DESTDIR)$(BINDIR)/fotoxx
+ 	rm -f -R  $(DESTDIR)$(SHAREDIR)
+ 	rm -f -R  $(DESTDIR)$(DOCDIR)
+ 	rm -f  $(DESTDIR)$(MANDIR)/fotoxx.1.gz
+-	xdg-desktop-menu uninstall $(DESTDIR)$(MENUFILE)
+ 	rm -f  $(DESTDIR)$(MENUFILE)
+ 
+ clean: 

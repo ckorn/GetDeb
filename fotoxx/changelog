@@ -1,3 +1,30 @@
+fotoxx (13.07-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Gallery navigation was made more flexible.
+    + Effects > Drawing and Outline functions were combined.
+    + New: Effects > Sketch: Transform a photo into a simulated sketch.
+    + New: Tools > Missing Translations: report missing translations.
+    + Batch Add Tags and Delete Tags were combined into a more flexible tool.
+    + Edit Collections was made easier (add/delete/cut/copy/paste images).
+    + New startup option: show newest image files added to the database.
+    + Ascending/descending option was added to the gallery sort button.
+    + Write Text: [apply] button goes to disk as well as memory image.
+    + Gallery File Selection: [clear] button was added.
+    + Flatten and Expand Brightness Range: new buttons for popup histogram.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 30 Jun 2013 17:01:51 +0200
+
+fotoxx (13.06.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: Expand Brightness - If brightness retention range is zero and
+    the brightness distribution graph is activated, a crash resulted.
+    + Bugfix: Edit Metadata + Cancel + Open a new image:  this caused a
+    crash.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 22 Jun 2013 21:53:06 +0200
+
 fotoxx (13.06.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
