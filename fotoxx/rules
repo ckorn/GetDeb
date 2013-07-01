@@ -41,6 +41,7 @@ install: build
 	rm -f $(CURDIR)/debian/fotoxx/usr/share/doc/fotoxx/extras/COPYING
 	rm -f $(CURDIR)/debian/fotoxx/usr/share/doc/fotoxx/extras/fotoxx.man
 	rm -f $(CURDIR)/debian/fotoxx/usr/share/doc/fotoxx/extras/copyright
+	chmod -x $(CURDIR)/debian/fotoxx/usr/share/fotoxx/data/quickstart-it.html
 
 binary-indep: install
 
