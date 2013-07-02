@@ -1,3 +1,18 @@
+ruby-gli (2.6.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Redesign of how subcommands are handled to enable each subcommand to
+    have its own space of arguments and options.
+    + --version now just shows the version, courtesy @brianknight10
+    + Synopsis is now more honest - doesn't show [command options] if there
+    aren't any, courtesy @calestar
+    + A falsey exit from pre will now cause the app to exit nonzero (or with
+    an exception if GLI_DEBUG is set)
+    + Support for terminal detection on solaris
+    + Further detail in https://github.com/davetron5000/gli/wiki/Changelog
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Mon, 01 Jul 2013 22:09:36 +0200
+
 ruby-gli (2.5.6-1~getdeb1) precise; urgency=low
 
   * New upstream version
