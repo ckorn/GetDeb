@@ -1,3 +1,15 @@
+ruby-gli (2.6.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+   + When the pre block returns a falsey value, it now does so via a 
+   special-purpose exception and also provides a message that the 
+   preconditions failed
+   + Previously, doing app --help command would execute command. Now, 
+   it acts the same as app help command, i.e. gets help for that command
+   + Default values now being copied to aliases in options hashes
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Thu, 04 Jul 2013 22:49:06 +0200
+
 ruby-gli (2.6.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
