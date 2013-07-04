@@ -1,3 +1,9 @@
+c++-gtk-utils (2.2.1-1~getdeb1) raring; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 03 Jul 2013 19:18:51 +0200
+
 c++-gtk-utils (2.2.0-1~getdeb1) raring; urgency=low
 
   * New upstream version
