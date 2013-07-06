@@ -1,3 +1,9 @@
+unetbootin (585-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 06 Jul 2013 10:33:41 +0200
+
 unetbootin (584-1~getdeb1) precise; urgency=low
 
   * New upstream version
