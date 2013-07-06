@@ -17,9 +17,9 @@ Depends: ${misc:Depends},
          mtools,
          p7zip-full,
          syslinux,
-         udev
-Recommends: extlinux,
-            unetbootin-translations
+         udev,
+         extlinux
+Recommends: unetbootin-translations
 Description: installer of Linux/BSD distributions to a partition or USB drive
  UNetbootin allows for the installation of various Linux/BSD distributions to a
  partition or USB drive, so it's no different from a standard install, only it
