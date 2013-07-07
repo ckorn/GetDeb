@@ -1,9 +1,9 @@
 A manpage has a wrong section.
 Hyphens were used as minus signs.
-Index: ncid-0.86/man/ncid2ncid.1
+Index: ncid-0.87/man/ncid2ncid.1
 ===================================================================
---- ncid-0.86.orig/man/ncid2ncid.1	2013-02-05 07:39:57.000000000 +0100
-+++ ncid-0.86/man/ncid2ncid.1	2013-03-26 19:22:49.897880601 +0100
+--- ncid-0.87.orig/man/ncid2ncid.1	2013-07-06 22:49:50.680356042 +0200
++++ ncid-0.87/man/ncid2ncid.1	2013-07-06 23:45:49.232256134 +0200
 @@ -1,5 +1,5 @@
  .\" %W% %G%
 -.TH NCID2NCID 8
@@ -11,6 +11,37 @@ Index: ncid-0.86/man/ncid2ncid.1
  .SH NAME
  .B ncid2ncid
  - Connect multiple NCID servers to a single NCID server
+@@ -10,18 +10,18 @@
+ .I Options:
+ .PP
+ .nf
+-[-C <filename>      | --config <filename>]
+-[-D                 | --debug]
+-[-f <[host][:port]> | --fromhost <[host][:port>]
+-[-h                 | --help]
+-[-L <filename>      | --logfile <filename>]
+-[-t <[host][:port]> | --tohost <[host][:port>]
+-[-P <filename>      | --pidfile <filename>]
+-[-u                 | --usage]
+-[-V                 | --version]
+-[-v <1-9>           | --verbose <1-9>]
+-[-W <1/0>           | --warn <1/0>]
+-[--osx-launchd]
++[\-C <filename>      | \-\-config <filename>]
++[\-D                 | \-\-debug]
++[\-f <[host][:port]> | \-\-fromhost <[host][:port>]
++[\-h                 | \-\-help]
++[\-L <filename>      | \-\-logfile <filename>]
++[\-t <[host][:port]> | \-\-tohost <[host][:port>]
++[\-P <filename>      | \-\-pidfile <filename>]
++[\-u                 | \-\-usage]
++[\-V                 | \-\-version]
++[\-v <1-9>           | \-\-verbose <1-9>]
++[\-W <1/0>           | \-\-warn <1/0>]
++[\-\-osx-launchd]
+ .fi
+ .SH DESCRIPTION
+ This gateway obtains the current Caller ID or message from  one or more
 @@ -48,16 +48,16 @@
  The configuration file for \fIncid2ncid\fR is /etc/ncid/ncid2ncid.conf.
  .SH "OPTIONS"
@@ -73,6 +104,37 @@ Index: ncid-0.86/man/ncid2ncid.1
  LEVEL2 will give a warning every time it fails to connect with a NCID server.
  LEVEL8 will print the logfiles from every server, and
  LEVEL9 will add the socket of the received logfile.
+@@ -106,26 +106,26 @@
+ .br
+ Default: warn = 0
+ .TP
+-.B --osx-launchd
++.B \-\-osx\-launchd
+ This option is only for OSX when using launchd to control ncidd.  It
+ prevents \fBncidd\fR from entering daemon mode.  It is like debug
+ mode, but nothing is printed to the screen.
+ .SH EXAMPLES
+ Forward Caller ID information or message from localhost:3334 to localhost:3333
+ .RS 0
+-    ncid2ncid --fromhost localhost:3334
++    ncid2ncid \-\-fromhost localhost:3334
+ .RE
+ .PP
+ Forward Caller ID information or message from localhost:3334 to localhost:3333
+ in debug mode using verbose level 1.
+ .RS 0
+-    ncid2ncid -D -f localhost:3334
++    ncid2ncid \-D \-f localhost:3334
+ .RE
+ .PP
+ Forward Caller ID information or message from localhost:3334 to localhost:3333
+ in debug mode and display all logfiles.
+ .RS 0
+-    ncid2ncid -Dv8 -f localhost:3334
++    ncid2ncid \-Dv8 \-f localhost:3334
+ .RE
+ .SH FILES
+ /etc/ncid/ncid2ncid.conf
 @@ -137,15 +137,15 @@
  .SH DIAGNOSTICS
  .nf
@@ -97,10 +159,80 @@ Index: ncid-0.86/man/ncid2ncid.1
  .fi
  .SH SEE ALSO
  ncid2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5, ncidd.blacklist
-Index: ncid-0.86/man/ncidd.8
+Index: ncid-0.87/man/ncidd.8
 ===================================================================
---- ncid-0.86.orig/man/ncidd.8	2013-01-27 02:56:43.000000000 +0100
-+++ ncid-0.86/man/ncidd.8	2013-03-26 19:22:49.897880601 +0100
+--- ncid-0.87.orig/man/ncidd.8	2013-07-06 22:49:50.680356042 +0200
++++ ncid-0.87/man/ncidd.8	2013-07-06 23:32:03.528280697 +0200
+@@ -10,33 +10,33 @@
+ .I Options:
+ .PP
+ .nf
+-[-A <file>       | --alias <aliasfile>]
+-[-B <file>       | --blacklist <file>]
+-[-C <file>       | --config <configfile>]
+-[-c <file>       | --cidlog <logfile>]
+-[-D              | --debug]
+-[-d <file>       | --datalog <logfile>]
+-[-e <identifier> | --lineid <identifier>]
+-[-g <0|1>        | --gencid <0|1>]
+-[-H <0|1>        | --hangup <0|1>]
+-[-h              | --help]
+-[-I <modemstr>   | --initstr <modemstr>]
+-[-i <cidstr>     | --initcid <cidstr>]
+-[-L <file>       | --logfile <logfile>]
+-[-l <file>       | --lockfile <lockfile>]
+-[-M <MaxBytes>   | --cidlogmax <MaxBytes>]
+-[-N <0|1>        | --noserial <0|1>]
+-[-n <0|1>        | --nomodem <0|1>]
+-[-P <pidfile>    | --pidfile <pidfile>]
+-[-p <portnumber> | --port <portnumber>]
+-[-S <0|1>        | --ttyclocal <0|1]
+-[-s <datatype>   | --send <datatype>]
+-[-T <ttyspeed>   | --ttyspeed <ttyspeed>]
+-[-t <ttyport>    | --ttyport <ttyport>]
+-[-V              | --version]
+-[-v <1-9>        | --verbose <1-9>]
+-[-W <file>       | --whitelist <file>]
+-[--osx-launchd]
++[\-A <file>       | \-\-alias <aliasfile>]
++[\-B <file>       | \-\-blacklist <file>]
++[\-C <file>       | \-\-config <configfile>]
++[\-c <file>       | \-\-cidlog <logfile>]
++[\-D              | \-\-debug]
++[\-d <file>       | \-\-datalog <logfile>]
++[\-e <identifier> | \-\-lineid <identifier>]
++[\-g <0|1>        | \-\-gencid <0|1>]
++[\-H <0|1>        | \-\-hangup <0|1>]
++[\-h              | \-\-help]
++[\-I <modemstr>   | \-\-initstr <modemstr>]
++[\-i <cidstr>     | \-\-initcid <cidstr>]
++[\-L <file>       | \-\-logfile <logfile>]
++[\-l <file>       | \-\-lockfile <lockfile>]
++[\-M <MaxBytes>   | \-\-cidlogmax <MaxBytes>]
++[\-N <0|1>        | \-\-noserial <0|1>]
++[\-n <0|1>        | \-\-nomodem <0|1>]
++[\-P <pidfile>    | \-\-pidfile <pidfile>]
++[\-p <portnumber> | \-\-port <portnumber>]
++[\-S <0|1>        | \-\-ttyclocal <0|1]
++[\-s <datatype>   | \-\-send <datatype>]
++[\-T <ttyspeed>   | \-\-ttyspeed <ttyspeed>]
++[\-t <ttyport>    | \-\-ttyport <ttyport>]
++[\-V              | \-\-version]
++[\-v <1-9>        | \-\-verbose <1-9>]
++[\-W <file>       | \-\-whitelist <file>]
++[\-\-osx\-launchd]
+ .fi
+ .SH DESCRIPTION
+ The \fBncidd\fR server collects Caller ID data from:
+@@ -105,7 +105,7 @@
+ .PP
+ Gateways also send \fBncidd\fR \fICALLINFO text lines\fR.
+ A SIP gateway will send a CALLINFO line when it receives a CANCEL or
+-BYE command.  The server then sends a ring count of -1 to its clients
++BYE command.  The server then sends a ring count of \-1 to its clients
+ to indicate a hangup with no answer.
+ .PP
+ The NCID gateway sends \fBncidd\fR CID and CIDINFO text lines instead
 @@ -117,48 +117,48 @@
  .SH "OPTIONS"
  .PD 0
@@ -272,10 +404,90 @@ Index: ncid-0.86/man/ncidd.8
  Do not use level 9 unless there is a problem in poll().  It grows the
  logfile very fast.
  .br
-Index: ncid-0.86/man/sip2ncid.8
+@@ -349,21 +349,21 @@
+     Return Code    Meaning
+     -----------    -------
+          0         Successful
+-      -100         Usage
+-      -101         Invalid port number
+-      -102         TTY lockfile exists
+-      -103         Unable to set modem for Caller ID
+-      -104         Configuration file error
+-      -105         No modem found
+-      -106         Invalid data type.
+-      -107         Invalid number
+-      -108         Invalid tty port speed [set in config file]
+-      -109         Alias file error
+-      -110         PID file already exists
+-      -111         Cannot init TTY
+-      -112         Serial device error
+-      -113         string too long
+-      -114         Blacklist or whitelist file error
++      \-100         Usage
++      \-101         Invalid port number
++      \-102         TTY lockfile exists
++      \-103         Unable to set modem for Caller ID
++      \-104         Configuration file error
++      \-105         No modem found
++      \-106         Invalid data type.
++      \-107         Invalid number
++      \-108         Invalid tty port speed [set in config file]
++      \-109         Alias file error
++      \-110         PID file already exists
++      \-111         Cannot init TTY
++      \-112         Serial device error
++      \-113         string too long
++      \-114         Blacklist or whitelist file error
+         -?         System error
+ .fi
+ .SH SEE ALSO
+Index: ncid-0.87/man/sip2ncid.8
 ===================================================================
---- ncid-0.86.orig/man/sip2ncid.8	2012-09-22 21:21:04.000000000 +0200
-+++ ncid-0.86/man/sip2ncid.8	2013-03-26 19:22:49.897880601 +0100
+--- ncid-0.87.orig/man/sip2ncid.8	2013-07-06 22:49:50.680356042 +0200
++++ ncid-0.87/man/sip2ncid.8	2013-07-06 23:36:56.920271969 +0200
+@@ -10,24 +10,24 @@
+ .I Options:
+ .PP
+ .nf
+-[-C <filename>      | --config <filename>]
+-[-D                 | --debug]
+-[-h                 | --help]
+-[-i <interface>     | --interface <interface>]
+-[-l                 | --list]
+-[-L <filename>      | --logfile <filename>]
+-[-n <[host][:port]> | --ncid <[host][:port>]
+-[-P <filename>      | --pidfile <filename>]
+-[-r <dumpfile>      | --readfile <dumpfile>]
+-[-s <[host][:port]> | --sip <[host][:port]>]
+-[-T                 | --testall]
+-[-t                 | --testudp]
+-[-u                 | --usage]
+-[-V                 | --version]
+-[-v <1-9>           | --verbose <1-9>]
+-[-W <1/0>           | --warn <1/0>]
+-[-w <dumpfile>      | --writefile <dumpfile>]
+-[--osx-launchd]
++[\-C <filename>      | \-\-config <filename>]
++[\-D                 | \-\-debug]
++[\-h                 | \-\-help]
++[\-i <interface>     | \-\-interface <interface>]
++[\-l                 | \-\-list]
++[\-L <filename>      | \-\-logfile <filename>]
++[\-n <[host][:port]> | \-\-ncid <[host][:port>]
++[\-P <filename>      | \-\-pidfile <filename>]
++[\-r <dumpfile>      | \-\-readfile <dumpfile>]
++[\-s <[host][:port]> | \-\-sip <[host][:port]>]
++[\-T                 | \-\-testall]
++[\-t                 | \-\-testudp]
++[\-u                 | \-\-usage]
++[\-V                 | \-\-version]
++[\-v <1-9>           | \-\-verbose <1-9>]
++[\-W <1/0>           | \-\-warn <1/0>]
++[\-w <dumpfile>      | \-\-writefile <dumpfile>]
++[\-\-osx\-launchd]
+ .fi
+ .SH DESCRIPTION
+ Snoops SIP Invites via libpcap and injects the caller id information
 @@ -42,48 +42,48 @@
  The configuration file for \fIsip2ncid\fR is /etc/ncid/sip2ncid.conf.
  .SH "OPTIONS"
@@ -423,10 +635,10 @@ Index: ncid-0.86/man/sip2ncid.8
  .fi
  .SH SEE ALSO
  sip2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5
-Index: ncid-0.86/man/yac2ncid.1
+Index: ncid-0.87/man/yac2ncid.1
 ===================================================================
---- ncid-0.86.orig/man/yac2ncid.1	2012-10-13 06:49:11.000000000 +0200
-+++ ncid-0.86/man/yac2ncid.1	2013-03-26 19:22:49.897880601 +0100
+--- ncid-0.87.orig/man/yac2ncid.1	2013-07-06 22:49:50.680356042 +0200
++++ ncid-0.87/man/yac2ncid.1	2013-07-06 22:49:50.672356043 +0200
 @@ -5,7 +5,7 @@
  - YAC server to NCID server gateway
  .SH SYNOPSIS
@@ -452,10 +664,10 @@ Index: ncid-0.86/man/yac2ncid.1
  Verbose mode.
  .PD
  .PD
-Index: ncid-0.86/man/ncid2ncid.conf.5
+Index: ncid-0.87/man/ncid2ncid.conf.5
 ===================================================================
---- ncid-0.86.orig/man/ncid2ncid.conf.5	2011-02-28 03:49:28.000000000 +0100
-+++ ncid-0.86/man/ncid2ncid.conf.5	2013-03-26 19:22:49.897880601 +0100
+--- ncid-0.87.orig/man/ncid2ncid.conf.5	2013-07-06 22:49:50.680356042 +0200
++++ ncid-0.87/man/ncid2ncid.conf.5	2013-07-06 22:49:50.672356043 +0200
 @@ -10,7 +10,7 @@
  The \fIncid2ncid.conf\fR file is used to set options.
  Options are set on a command line.
@@ -465,3 +677,445 @@ Index: ncid-0.86/man/ncid2ncid.conf.5
  between double quotes, or an equal sign.
  .PP
  The \fIncid2ncid.conf\fR file understands 3 types of lines:
+Index: ncid-0.87/man/ncid-alert.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-alert.1	2013-03-27 21:44:49.000000000 +0100
++++ ncid-0.87/man/ncid-alert.1	2013-07-06 23:09:33.000320871 +0200
+@@ -6,11 +6,11 @@
+ .SH SYNOPSIS
+ .B
+ ncid
+---no-gui --program
++\-\-no\-gui \-\-program
+ .B ncid-alert
+ .br
+ .B ncid
+---program
++\-\-program
+ .B ncid-alert
+ .SH DESCRIPTION
+ The
+@@ -21,7 +21,7 @@
+ .P
+ If you want ncid in GUI mode along with ncid-alert:
+ .RS
+-\fBncid\fR --program \fBncid-alert\fR
++\fBncid\fR \-\-program \fBncid-alert\fR
+ .RE
+ .SH REQUIREMENTS
+ libnotify
+Index: ncid-0.87/man/ncid-notify.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-notify.1	2013-03-27 21:46:41.000000000 +0100
++++ ncid-0.87/man/ncid-notify.1	2013-07-06 23:23:39.748295683 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-notify
+ - send a NCID notification to your Android or iOS device
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no-gui \-\-program
+ .B ncid-notify
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid-wakeup.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-wakeup.1	2013-03-27 21:47:36.000000000 +0100
++++ ncid-0.87/man/ncid-wakeup.1	2013-07-06 23:57:16.456235691 +0200
+@@ -1,9 +1,9 @@
+-.\" %W% %G%
+ .TH NCID-WAKEUP 1
+ .SH NAME
+ .B ncid-wakeup
++\- output module
+ .SH SYNOPSIS
+-ncid --wakeup
++ncid \-\-wakeup
+ .B ncid-wakeup
+ .SH DESCRIPTION
+ The
+@@ -17,7 +17,7 @@
+ .SH REQUIREMENTS
+ This module only works with X-windows and Gnome.
+ .br
+-Do not set the ncid "--program | -P" option.
++Do not set the ncid "\-\-program | \-P" option.
+ .SH FILES
+ /etc/ncid/ncid.conf
+ .br
+Index: ncid-0.87/man/ncid-initmodem.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-initmodem.1	2013-03-27 21:45:41.000000000 +0100
++++ ncid-0.87/man/ncid-initmodem.1	2013-07-06 23:39:36.884267211 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-initmodem
+ - use ncidd to reinitialize modem to Caller ID mode
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no\-gui \-\-program
+ .B ncid-initmodem
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid-kpopup.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-kpopup.1	2013-03-27 21:46:12.000000000 +0100
++++ ncid-0.87/man/ncid-kpopup.1	2013-07-06 23:38:21.432269455 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-kpopup
+ - popup Caller ID using KDE
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no-gui \-\-program
+ .B ncid-kpopup
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid-mythtv.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-mythtv.1	2013-03-27 21:46:30.000000000 +0100
++++ ncid-0.87/man/ncid-mythtv.1	2013-07-06 23:38:38.884268936 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-mythtv
+ - display Caller ID on MythTV using mythtvosd
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no\-gui \-\-program
+ .B ncid-mythtv
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid-page.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-page.1	2013-03-27 21:46:49.000000000 +0100
++++ ncid-0.87/man/ncid-page.1	2013-07-07 00:07:33.788217327 +0200
+@@ -1,9 +1,9 @@
+-.\" %W% %G%
+ .TH NCID-PAGE 1
+ .SH NAME
+ .B ncid-page
++\- output module
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no-gui \-\-program
+ .B ncid-page
+ .SH DESCRIPTION
+ The
+@@ -36,15 +36,15 @@
+ .RS 0
+ ncid command line options to call ncid-page at ring number 4
+ 
+-    ncid --no-gui --program ncid-page --ring 4
++    ncid \-\-no-gui \-\-program ncid-page \-\-ring 4
+ 
+-ncid.conf line and ncid command line to call ncid-page if no answer
++ncid.conf line and ncid command line to call ncid\-page if no answer
+ 
+-    uncomment the ncid_page line in ncid.conf and change 4 to -1
+-    set ncid_page {set Ring -1}
++    uncomment the ncid_page line in ncid.conf and change 4 to \-1
++    set ncid_page {set Ring \-1}
+ 
+-    ncid command to call ncid-page if no answer
+-    ncid --no-gui --program  ncid-page
++    ncid command to call ncid\-page if no answer
++    ncid \-\-no-gui \-\-program  ncid-page
+ .RE
+ .PP
+ .SH FILES
+Index: ncid-0.87/man/ncid-samba.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-samba.1	2013-03-27 21:47:02.000000000 +0100
++++ ncid-0.87/man/ncid-samba.1	2013-07-06 23:39:05.548268143 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-samba
+ - send Caller ID to samba to create a popup
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no-gui \-\-program
+ .B ncid-samba
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid-skel.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-skel.1	2013-03-27 21:47:14.000000000 +0100
++++ ncid-0.87/man/ncid-skel.1	2013-07-07 00:00:15.292230371 +0200
+@@ -2,8 +2,9 @@
+ .TH NCID-SKEL 1
+ .SH NAME
+ .B ncid-skel
++\- output module
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no\-gui \-\-program
+ .B ncid-skel
+ .SH DESCRIPTION
+ The
+@@ -14,7 +15,7 @@
+ .SH REQUIREMENTS
+ run ncid-skel with ncid in a terminal window to view output:
+ .br
+-ncid --no-gui --program ncid-skel
++ncid \-\-no-gui \-\-program ncid\-skel
+ .SH FILES
+ /etc/ncid/conf.d/ncid-skel.conf
+ .br
+Index: ncid-0.87/man/ncid-speak.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-speak.1	2013-03-27 21:47:26.000000000 +0100
++++ ncid-0.87/man/ncid-speak.1	2013-07-06 23:37:57.528270166 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-speak
+ - send Caller ID to a text-to-speech program
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no-gui \-\-program
+ .B ncid-speak
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid-yac.1
+===================================================================
+--- ncid-0.87.orig/man/ncid-yac.1	2013-03-27 21:47:44.000000000 +0100
++++ ncid-0.87/man/ncid-yac.1	2013-07-06 23:41:13.856264326 +0200
+@@ -4,7 +4,7 @@
+ .B ncid-yac
+ - send Caller ID to YAC listeners
+ .SH SYNOPSIS
+-ncid --no-gui --program
++ncid \-\-no\-gui \-\-program
+ .B ncid-yac
+ .SH DESCRIPTION
+ The
+Index: ncid-0.87/man/ncid.1
+===================================================================
+--- ncid-0.87.orig/man/ncid.1	2013-03-27 21:40:31.000000000 +0100
++++ ncid-0.87/man/ncid.1	2013-07-07 00:00:58.476229087 +0200
+@@ -2,7 +2,7 @@
+ .TH NCID 1
+ .SH NAME
+ .B ncid
+-- Network Caller ID Client
++\- Network Caller ID Client
+ .SH SYNOPSIS
+ .B ncid\^
+ [options] [arguments]
+@@ -16,18 +16,18 @@
+ .I Options:\^
+ .PP
+ .nf
+-[--no-gui]
+-[--alt-date               | -A]
+-[--delay <seconds>        | -D <seconds>]
+-[--help                   | -h]
+-[--noexit                 | -X]
+-[--pidfile <file name>    | -p <file name>]
+-[--PopupTime <seconds>    | -t <seconds>]
+-[--program <program name> | -P <program name>]
+-[--ring <count>           | -r <count>]
+-[--tivo                   | -T]
+-[--verbose                | -v]
+-[--version                | -V]
++[\-\-no\-gui]
++[\-\-alt\-date               | \-A]
++[\-\-delay <seconds>        | \-D <seconds>]
++[\-\-help                   | \-h]
++[\-\-noexit                 | \-X]
++[\-\-pidfile <file name>    | \-p <file name>]
++[\-\-PopupTime <seconds>    | \-t <seconds>]
++[\-\-program <program name> | \-P <program name>]
++[\-\-ring <count>           | \-r <count>]
++[\-\-tivo                   | \-T]
++[\-\-verbose                | \-v]
++[\-\-version                | \-V]
+ .fi
+ .PP
+ .I Arguments:\^
+@@ -75,10 +75,10 @@
+ runs on Linux and Windows 98, ME, XP, 2000, NT and Mac OS X.  In the 
+ GUI mode, it will pop up, and go on top whenever a call comes in.
+ In addition, it will display itself on whatever desktop is active in 
+-Linux.  If \fIncid\fR is given the --no-gui option, it will run
++Linux.  If \fIncid\fR is given the \-\-no\-gui option, it will run
+ without a GUI.
+ .PP
+-If \fIncid\fR is given the --program <module> option, it will
++If \fIncid\fR is given the \-\-program <module> option, it will
+ output to either a external program or output module.  The
+ .B ncid
+ client can be configured to call any one module.  It cannot call
+@@ -127,54 +127,54 @@
+ .SH "OPTIONS"
+ .PD
+ .TP
+-.B --no-gui
++.B \-\-no\-gui
+ Do not display CID information using a GUI.
+ .IP
+ Default: display CID using a GUI, unless called as \fBtivocid\fR
+ or \fBtivoncid\fR.
+ .TP
+-.B --alt-date | -A
++.B \-\-alt\-date | \-A
+ Display the date in a alternate format.
+ Assuming the date separator is a "/",
+ the date is displayed as dd/mm/yyyy.
+ .IP
+ Default: display the date as mm/dd/yyyy
+ .TP
+-.B --delay SECONDS | -D SECONDS
++.B \-\-delay SECONDS | \-D SECONDS
+ Delay SECONDS between server connection attempts if SECONDS > 0.
+ .br
+ Only one attempt to connect to server if SECONDS = 0.
+ .IP
+ Default: 60 seconds
+ .TP
+-.B --help | -h
++.B \-\-help | \-h
+ Display usage.
+ .TP
+-.B --noexit | -X
++.B \-\-noexit | \-X
+ Configure ncid to to ignore the close window button.
+ .TP
+-.B --pidfile | -p
++.B \-\-pidfile | \-p
+ Name of PID file to create.
+ Set to \fI/var/run/ncid.pid\fR in a rc or init script when used as a service.
+ Set to \fI/var/run/OUTPUTMODULE.pid\fR in a rc or init script when used as
+ a service and when using a output module.
+ There is no default.  If pidfile is not set, no pid file will be used.
+ .TP
+-.B --program PROGRAM | -P PROGRAM
++.B \-\-program PROGRAM | \-P PROGRAM
+ Output the Caller ID information to the external program or output module.
+ PROGRAM is the name of the output module (program) to use.
+ The selected module is sent all calls and messages.
+ .IP
+ Default module PATH: /usr/share/ncid
+ .TP
+-.B --ring count | -r count
++.B \-\-ring count | \-r count
+ Call output module on specific ring count.
+ .br
+-All count values: -9 -2 -1 0 2 3 4 5 6 7 8 9
++All count values: \-9 \-2 \-1 0 2 3 4 5 6 7 8 9
+ .IP
+-For modems that indicate RING, count is: -9 0 2 3 4 5 6 7 8 9
++For modems that indicate RING, count is: \-9 0 2 3 4 5 6 7 8 9
+ .br
+-A count of -9 indicates call on each ring.
++A count of \-9 indicates call on each ring.
+ .br
+ A count of 0 indicates call when ringing stops.
+ .br
+@@ -184,33 +184,33 @@
+ .br
+ A count greater than 9 is not useful.
+ .IP
+-For VoIP, using a SIP or wc2ncid gateway, count is: -2 -1
++For VoIP, using a SIP or wc2ncid gateway, count is: \-2 \-1
+ .br
+-A count of -1 indicates call on hangup with no answer.
++A count of \-1 indicates call on hangup with no answer.
+ .br
+-A count of -2 indicates call on hangup after answer.
++A count of \-2 indicates call on hangup after answer.
+ .IP
+ Default: output module called as soon as CID received
+ .TP
+-.B --Tivo | -T
++.B \-\-Tivo | \-T
+ This option is for a TiVo using out2osd or text2osd
+ .br
+ Changes output to 2 lines: name number line.
+ .IP
+ Default output is 5 lines: date time number name line.
+ .TP
+-.B --PopupTime seconds | -t seconds
++.B \-\-PopupTime seconds | \-t seconds
+ Time for the popup to stay on top of all windows.
+ Range is 1 second to 99 seconds.
+ .IP
+ Default popup time os 5 seconds.
+ .TP
+-.B --verbose | -v
++.B \-\-verbose | \-v
+ Display formatted CID information, including CID log file.
+ .IP
+ Default: silent
+ .TP
+-.B --version | -V
++.B \-\-version | \-V
+ Display version and quit.
+ .PD
+ .SS "Arguments"
+@@ -233,19 +233,19 @@
+ .SH EXAMPLES
+ .nf
+ # Display the date as dd/mm/yyyy
+-ncid --alt-date
++ncid \-\-alt\-date
+ 
+ # run ncid in a terminal window, server on remote host
+-ncid --no-gui tardis.drwho.home
++ncid \-\-no\-gui tardis.drwho.home
+ 
+ # only speak Caller ID
+-ncid --no-gui --program ncid-speak
++ncid \-\-no\-gui \-\-program ncid\-speak
+ 
+ # send CID output to GUI and speak it
+-ncid --program /usr/local/bin/ncid-speak
++ncid \-\-program /usr/local/bin/ncid-speak
+ 
+ # send CID output to a cell phone
+-ncid --no-gui --program ncid-page
++ncid \-\-no\-gui \-\-program ncid-page
+ 
+ # run ncid on a TiVo using out2osd, server on remote host
+ tivocid 192.168.0.1
+Index: ncid-0.87/man/ncid-modules.7
+===================================================================
+--- ncid-0.87.orig/man/ncid-modules.7	2013-02-11 18:31:29.000000000 +0100
++++ ncid-0.87/man/ncid-modules.7	2013-07-06 23:47:58.336252294 +0200
+@@ -12,7 +12,7 @@
+ .PP
+ Modules are normally called by the client using the command line:
+ .RS
+-    ncid --no-gui --program ncid-<name>
++    ncid \-\-no-gui \-\-program ncid\-<name>
+ .RE
+ .PP
+ The client can only call one module at a time, but multiple clients
+Index: ncid-0.87/tools/wct.pl
+===================================================================
+--- ncid-0.87.orig/tools/wct.pl	2013-04-30 20:26:07.000000000 +0200
++++ ncid-0.87/tools/wct.pl	2013-07-07 00:04:10.716223368 +0200
+@@ -1122,7 +1122,7 @@
+ 
+ It automatically sets the beginning line number for the WC device which
+ is used as a line label prefixed with "WC".  Each device gets a beginning
+-line number that is the ending line number plus one from the preceeding
++line number that is the ending line number plus one from the preceding
+ device, for example; device 1 (WC01 WC02) device 2 (WC03 WC04 WC05 WC06).
+ 
+ NOTE: All devices are automatically configured to send call information
+@@ -1244,7 +1244,7 @@
+ =item X
+ 
+ Show unit#, serial#, network settings. This command can be used
+-to discover all powered-on WC devices. It is the same as runnning 
++to discover all powered-on WC devices. It is the same as running 
+ wct with the --discover command line option.
+ 
+ =item Z
+Index: ncid-0.87/gateway/wc2ncid.pl
+===================================================================
+--- ncid-0.87.orig/gateway/wc2ncid.pl	2013-04-30 20:35:06.000000000 +0200
++++ ncid-0.87/gateway/wc2ncid.pl	2013-07-07 00:07:06.084218151 +0200
+@@ -1111,7 +1111,7 @@
+ 
+ It automatically sets the beginning line number for the WC device which
+ is used as a line label prefixed with "WC".  Each device gets a beginning
+-line number that is the ending line number plus one from the preceeding
++line number that is the ending line number plus one from the preceding
+ device, for example; device 1 (WC01 WC02) device 2 (WC03 WC04 WC05 WC06).
+ 
+ NOTE: All devices are automatically configured to send call information

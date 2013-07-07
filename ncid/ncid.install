@@ -13,6 +13,7 @@ etc/ncid/ncidrotate.conf
 etc/ncid/sip2ncid.conf
 etc/ncid/wc2ncid.conf
 etc/ncid/yac2ncid.conf
+etc/ncid/rn2ncid.conf
 usr/bin/cidalias
 usr/bin/cidcall
 usr/bin/cidupdate
@@ -20,6 +21,7 @@ usr/bin/ncid2ncid
 usr/bin/wct
 usr/bin/wc2ncid
 usr/bin/yac2ncid
+usr/bin/rn2ncid
 usr/sbin/ncidd
 usr/sbin/sip2ncid
 usr/share/man/man1/cidalias.1
@@ -33,6 +35,7 @@ usr/share/man/man1/wct.1
 usr/share/man/man1/wc2ncid.1
 usr/share/man/man1/yac2ncid.1
 usr/share/man/man1/ncid-notify.1
+usr/share/man/man1/rn2ncid.1
 usr/share/man/man5/ncid2ncid.conf.5
 usr/share/man/man5/ncidd.alias.5
 usr/share/man/man5/ncidd.blacklist.5
@@ -42,6 +45,7 @@ usr/share/man/man5/ncidrotate.conf.5
 usr/share/man/man5/sip2ncid.conf.5
 usr/share/man/man5/wc2ncid.conf.5
 usr/share/man/man5/yac2ncid.conf.5
+usr/share/man/man5/rn2ncid.conf.5
 usr/share/man/man7/ncid-modules.7
 usr/share/man/man7/ncidgateways.7
 usr/share/man/man7/ncidtools.7
