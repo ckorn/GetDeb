@@ -1,3 +1,19 @@
+ruby-gli (2.7.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - Can now re-open commands later on, which can allow commands_from
+    extensions. See #152 (which fixes #144 more or less). Thanks @jonhnl for
+    the fix!
+    - When a custom on_error block evaluates to false, and GLI_DEBUG is set,
+    GLI will output a message explaining that custom error handling has been
+    skipped. See #151
+    - When a user requests help via --help on the command line, the exception
+    used to make that work will not cause the on_error block to be called.
+    See #150
+    - further details in https://github.com/davetron5000/gli/releases
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Fri, 12 Jul 2013 22:27:42 +0200
+
 ruby-gli (2.6.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
