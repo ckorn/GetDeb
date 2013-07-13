@@ -1,3 +1,11 @@
+yad (0.22.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - fix resize of dialog text
+    - fix usage of stock items in popup menu of notification icon
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Fri, 12 Jul 2013 21:27:05 +0200
+
 yad (0.22.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
