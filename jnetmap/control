@@ -2,13 +2,15 @@ Source: jnetmap
 Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50)
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
 Homepage: http://www.rakudave.ch/?q=jnetmap
 
 Package: jnetmap
 Architecture: all
-Depends: ${misc:Depends}, openjdk-6-jre | sun-java6-jre, fontconfig
+Depends: ${misc:Depends},
+         openjdk-6-jre | openjdk-7-jre | sun-java6-jre,
+         fontconfig
 Description: Advanced network scanner
  jNetMap will ping all registered devices every x minutes,
  updating it's status according to the result of the ping.
