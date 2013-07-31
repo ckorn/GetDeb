@@ -1,8 +1,8 @@
 Just fix some typos.
-Index: 2mandvd-1.8.4/2mandvd_en.ts
+Index: 2mandvd-1.8.5/2mandvd_en.ts
 ===================================================================
---- 2mandvd-1.8.4.orig/2mandvd_en.ts	2012-06-19 05:32:36.000000000 +0200
-+++ 2mandvd-1.8.4/2mandvd_en.ts	2012-10-30 14:13:59.000000000 +0100
+--- 2mandvd-1.8.5.orig/2mandvd_en.ts	2013-07-30 21:40:39.509092393 +0200
++++ 2mandvd-1.8.5/2mandvd_en.ts	2013-07-30 21:40:39.497092393 +0200
 @@ -666,7 +666,7 @@
          <location filename="mainfrm.cpp" line="1838"/>
          <source>ATTENTION ! il manque certaines dependances pour le bon fonctionnement de l&apos;application. Liste des dependances manquantes : 
@@ -21,11 +21,11 @@ Index: 2mandvd-1.8.4/2mandvd_en.ts
      </message>
      <message>
          <location filename="mainfrm.ui" line="3282"/>
-Index: 2mandvd-1.8.4/mainfrm.cpp
+Index: 2mandvd-1.8.5/mainfrm.cpp
 ===================================================================
---- 2mandvd-1.8.4.orig/mainfrm.cpp	2012-06-22 13:59:54.000000000 +0200
-+++ 2mandvd-1.8.4/mainfrm.cpp	2012-10-30 17:09:18.994744796 +0100
-@@ -1518,7 +1518,7 @@
+--- 2mandvd-1.8.5.orig/mainfrm.cpp	2013-07-30 21:40:39.509092393 +0200
++++ 2mandvd-1.8.5/mainfrm.cpp	2013-07-30 21:40:39.497092393 +0200
+@@ -1519,7 +1519,7 @@
          connect(bt_cancel_drawing_menu, SIGNAL(clicked()),this, SLOT(f_cancel_pencil_menu()));
  
  	// *** TEST DES DEPENDANCES ***
@@ -34,7 +34,7 @@ Index: 2mandvd-1.8.4/mainfrm.cpp
          splash.setPixmap(pixmap3);
  	QFile wmyficext;
  	QTextStream outext(&wmyficext);
-@@ -1537,7 +1537,7 @@
+@@ -1538,7 +1538,7 @@
  	outext << "mpeg2enc" << endl;
      outext << "convert" << endl;
          outext << "jpegtopnm /dev/null" << endl;
@@ -43,7 +43,7 @@ Index: 2mandvd-1.8.4/mainfrm.cpp
          outext << "rm -f " << homeDir.path() << "/.mdvdep.sh" << endl;
  	outext << "exit" << endl;
  	wmyficext.close();
-@@ -2140,7 +2140,7 @@
+@@ -2141,7 +2141,7 @@
  		}
  		else
  		{
@@ -52,10 +52,10 @@ Index: 2mandvd-1.8.4/mainfrm.cpp
  			QMessageBox::information(this, name_application, tr("Impossible de créer les dossiers de travail"));
  		}
  
-Index: 2mandvd-1.8.4/project.cpp
+Index: 2mandvd-1.8.5/project.cpp
 ===================================================================
---- 2mandvd-1.8.4.orig/project.cpp	2012-06-12 05:45:20.000000000 +0200
-+++ 2mandvd-1.8.4/project.cpp	2012-10-30 14:13:59.000000000 +0100
+--- 2mandvd-1.8.5.orig/project.cpp	2013-07-30 21:40:39.509092393 +0200
++++ 2mandvd-1.8.5/project.cpp	2013-07-30 21:40:39.501092393 +0200
 @@ -725,7 +725,7 @@
  			}
  			else
@@ -65,11 +65,11 @@ Index: 2mandvd-1.8.4/project.cpp
  				QMessageBox::information(this, name_application, tr("Impossible de créer les dossiers de travail"));
  				this->setEnabled(true);
  			}
-Index: 2mandvd-1.8.4/diaporama.cpp
+Index: 2mandvd-1.8.5/diaporama.cpp
 ===================================================================
---- 2mandvd-1.8.4.orig/diaporama.cpp	2012-06-25 09:31:26.000000000 +0200
-+++ 2mandvd-1.8.4/diaporama.cpp	2012-10-30 17:13:14.098737803 +0100
-@@ -3344,11 +3344,11 @@
+--- 2mandvd-1.8.5.orig/diaporama.cpp	2013-07-30 21:40:39.509092393 +0200
++++ 2mandvd-1.8.5/diaporama.cpp	2013-07-30 21:40:39.501092393 +0200
+@@ -3359,11 +3359,11 @@
          {
              if ( dvd_format == "4/3" )
              {
@@ -83,7 +83,7 @@ Index: 2mandvd-1.8.4/diaporama.cpp
              }
          }
          else
-@@ -3357,11 +3357,11 @@
+@@ -3372,11 +3372,11 @@
              {
                  if ( dvd_format == "4/3" )
                  {
@@ -97,7 +97,7 @@ Index: 2mandvd-1.8.4/diaporama.cpp
                  }
              }
              else
-@@ -3370,7 +3370,7 @@
+@@ -3385,7 +3385,7 @@
  
                  int cropy = (sizy-1080)/2;
  
@@ -106,10 +106,10 @@ Index: 2mandvd-1.8.4/diaporama.cpp
              }
          }
          outext << "rm -f *.wav" << endl;
-Index: 2mandvd-1.8.4/rendering.cpp
+Index: 2mandvd-1.8.5/rendering.cpp
 ===================================================================
---- 2mandvd-1.8.4.orig/rendering.cpp	2012-06-13 11:14:12.000000000 +0200
-+++ 2mandvd-1.8.4/rendering.cpp	2012-10-30 17:14:18.118735899 +0100
+--- 2mandvd-1.8.5.orig/rendering.cpp	2013-07-30 21:40:39.509092393 +0200
++++ 2mandvd-1.8.5/rendering.cpp	2013-07-30 21:40:39.505092393 +0200
 @@ -1866,16 +1866,16 @@
  						{
  							if ( combo_format_dvd->currentIndex() < 2 )
