@@ -1,3 +1,32 @@
+fotoxx (13.08.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    2013 Aug 09  v.13.08.1
+    + The Italian and Portuguese translations were updated.
+    + Bugfix: crash in Fix Stuck Pixels function.
+
+    2013 Aug 01  v.13.08
+    + White Balance: a direct adjustment for color temperature was added.
+    + Search Images: apply criteria iteratively to expand/reduce results.
+    + Date format (gallery, metadata reports) is world standard YYYY-MM-DD.
+    + Default jpeg save quality was added to the user settings.
+    + New function: Graduated Blur: emphasizes lower-contrast pixels
+      (can make faces look younger, cartoon effect when taken to extremes)
+    + Sketch: a 2nd algorithm is provided which works better for some images.
+    + Sketch: responds much faster to changes in dialog controls.
+    + Tools > Missing Translations: omit text deliberately left as English.
+    + Manage Tags: new popup report of unused tags (potentially deletable).
+    + Auto Trim was made much faster.
+    + Trim/Crop and Rotate dialogs have minor UI improvements. 
+    + New demo videos are available on YouTube and the Fotoxx web site.
+    + Bugfix: loss of correct KB Ctrl/Alt state if changed outside app focus.
+    + Bugfix: right-click popup menu for main window could name a wrong file.
+    + Bugfix: image rename function was not updating the gallery page.
+    + Minor bugfixes: area finish, dots convert, prev/next file, KB
+    shortcuts.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Aug 2013 19:15:04 +0200
+
 fotoxx (13.07-1~getdeb1) precise; urgency=low
 
   * New upstream version
