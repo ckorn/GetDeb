@@ -1,3 +1,9 @@
+jnetmap (0.5.3-1~getdeb2) precise; urgency=low
+
+  * Fix path to jar file.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 14 Aug 2013 21:54:33 +0200
+
 jnetmap (0.5.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
