@@ -1,8 +1,8 @@
-Index: fritzing-0.8.0b/phoenix.pro
+Index: fritzing-0.8.3b/phoenix.pro
 ===================================================================
---- fritzing-0.8.0b.orig/phoenix.pro	2013-06-17 19:02:20.245775057 +0200
-+++ fritzing-0.8.0b/phoenix.pro	2013-06-17 19:03:14.005773457 +0200
-@@ -53,6 +53,12 @@
+--- fritzing-0.8.3b.orig/phoenix.pro	2013-08-15 20:23:42.566572415 +0200
++++ fritzing-0.8.3b/phoenix.pro	2013-08-15 20:23:42.562572415 +0200
+@@ -59,6 +59,12 @@
          LIBS += /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
  }
  unix {
