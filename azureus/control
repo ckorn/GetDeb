@@ -3,7 +3,6 @@ Section: net
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Adrian Perez <adrianperez.deb@gmail.com>
-DM-Upload-Allowed: yes
 Build-Depends: ant,
                cdbs,
                debhelper (>= 9)
@@ -12,7 +11,7 @@ Build-Depends-Indep: default-jdk,
                      liblog4j1.2-java, 
                      libswt-gtk-3-java,
                      junit
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://azureus.sourceforge.net
 
 Package: azureus
