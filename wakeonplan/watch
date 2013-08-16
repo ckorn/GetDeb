@@ -1,4 +1,0 @@
-version=3
-opts="dversionmangle=s/0\.0\.0\+bzr//" \
-http://zulu309.server4you.de/redirectors/wakeonplan.html \
-    (?:.*/)?([\d]+)
