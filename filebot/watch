@@ -1,3 +1,0 @@
-version=3
-opts="dversionmangle=s/0\.0\.0r//" \
-http://sf.net/filebot/filebot-r([\d]+)-src\.zip
