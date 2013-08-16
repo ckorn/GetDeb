@@ -1,3 +1,0 @@
-usr/bin/transmission-daemon
-debian/settings.json etc/transmission-daemon
-debian/README.json etc/transmission-daemon
