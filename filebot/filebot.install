@@ -1,4 +1,0 @@
-dist/FileBot.jar		usr/share/filebot
-filebot.png			usr/share/pixmaps
-filebot.desktop			usr/share/applications
-debian/scripts/filebot		usr/bin
