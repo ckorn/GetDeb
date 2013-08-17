@@ -1,34 +1,44 @@
-This package was debianized by Christoph Korn <c_korn@gmx.de> on
-Fri, 19 Dec 2008 20:55:13 +0100.
+Format-Specification: http://dep.debian.net/deps/dep5
+Upstream-Name: webcamstudio
+Upstream-Contact: WebcamStudio Team <webcamstudio@lists.launchpad.net>
+Maintainer: PhobosK <phobosk@kbfx.net>
+Source: https://code.google.com/p/webcamstudio/source/checkout
 
-It was downloaded from http://sourceforge.net/projects/webcamstudio/files/
+Files: *
+Copyright:	2009-2012, Patrick Balleux <patrick.balleux@gmail.com>
+			2013, WebcamStudio Team <webcamstudio@lists.launchpad.net>
+License: GPL-3.0+
 
-Upstream Author:
+Files: debian/*
+       dist-helpers/windows/*
+       dist-helpers/*.spec
+       dist-helpers/*.sh
+       dist-helpers/*.bat
+Copyright: 2013, PhobosK <phobosk@kbfx.net>
+License: GPL-3.0+
 
-    Patrick Balleux <patrick.balleux@gmail.com>
+Files: vloopback/webcamstudio.c
+Copyright: 	2005-2009, Vasily Levin (vasaka@gmail.com)
+			2010-2012, IOhannes m zmoelnig (zmoelnig@iem.at)
+			2011, Stefan Diewald (stefan.diewald@mytum.de)
+			2012, Anton Novikov (random.plant@gmail.com)
+			2009-2012, Patrick Balleux (patrick.balleux@gmail.com)
+License: GPL-3.0+
 
-Copyright:
+License: GPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
-    Copyright (C) 2010 Patrick Balleux
-
-License:
-
-    This package is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this package; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
-
-On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL-2'.
-
-The Debian packaging is Copyright (C) 2008, Christoph Korn <c_korn@gmx.de> and
-is licensed under the GPL, see above.

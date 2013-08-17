@@ -1,2 +1,6 @@
+# Compulsory line, this is a version 3 file
 version=3
-http://sf.net/webcamstudio/WebcamStudio_([\d\.]+)\.tar\.gz
+
+# Download from googlecode.com
+https://code.google.com/p/webcamstudio/downloads/list \
+    (?:.*/)?webcamstudio_([\d\.]+)\.tar\.(?:bz2|xz|gz)
