@@ -1,3 +1,109 @@
+xnviewmp (0.61-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #1213263)
+    XnViewMP v0.61:
+
+    * Windows 7/8 association -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28282
+    * Paste in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28247&p=112787
+    * Restore from maximized state -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=26172&start=15
+    * Detail view & popup menu -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28332&p=112535
+    * exiftool & utf8 -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28142
+    * histogram in levels -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28310
+    * rename in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28305
+    * Linux, better way to delete files/folders -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28138&p=112555
+    * Levels dialog - http://newsgroup.xnview.com/viewtopic.php?f=62&t=28310
+    * Rating crash -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28308&p=112562
+    * XMP/IPTC import problem
+    * Crash on Mac 10.6.8
+    * Properties - http://newsgroup.xnview.com/viewtopic.php?f=60&t=28299
+    * Folder thumbnail -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28315
+    * No more rating menu after drag&drop -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28329
+    * Shortcut - http://newsgroup.xnview.com/viewtopic.php?f=60&t=28325
+    * DB category can't not always be changed
+    * Bookmark menu crash -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28195
+
+
+    XnViewMP v0.60:
+
+    * Very slow folder loading
+    * Some improvment on database
+    * XnView use now 2 databases
+    * SQLite 3.7.17
+    * 'Save selection as' in crop toolbar
+    * Drag&Drop in thumbnail pane -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28275
+    * Shortcut not changed before next startup
+    * Browse with XnViewMP -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28280&p=112353
+    * Folder not added in Batch convert -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28277
+    * Lossless crop - http://newsgroup.xnview.com/viewtopic.php?f=62&t=28050
+    * When view is closed, folder is changed in browser -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28248&p=112236
+    * Drag&Drop into folder tree -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28147#p111735
+    * No rebuild of thumbnails when you change thumbnail width/height, now
+    use Options>database>width/height
+    * Move folder issue -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28252
+    * Cut folder - http://newsgroup.xnview.com/viewtopic.php?f=60&t=28274
+    * Crop orientation
+    * Compare window layout + copy/move to
+    * Cache_size for database can be changed in ini [Start]/dbCacheSize (in
+    KB)
+    * Search dialog on rating
+    * Copy in clipboard EXIF/IPTC/Properties values
+    * File cop/move -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28203&p=112238
+    * Crop selection - http://newsgroup.xnview.com/viewtopic.php?f=60&t=28144
+    * Default settings for histogram -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28194
+    * Counter-clockwise rotate doenst update exif values -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28189
+    * Adjustment dialog now use full resolution pictures, you can disable it
+    by adding fullRes=false in the .ini -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28136&p=111760
+    * Folder srting -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28177&p=111915
+    * some crash on tiff files -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28173
+    * If lr>hierarchicalSubject doesn't exists, use ms>LastKeywordXMP
+    * View information opacity + text opacity -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28163&p=111883
+    * delete crash - http://newsgroup.xnview.com/viewtopic.php?f=62&t=27799
+    * renaming - http://newsgroup.xnview.com/viewtopic.php?f=60&t=27396
+    * Delete folder on linux use recycle bin -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28138
+    * Restored size -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=26172&p=111741
+    * Print - http://newsgroup.xnview.com/viewtopic.php?f=60&t=27606
+    * Open in explorer -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28134
+    * long filenamne in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=27450
+    * Crash drag & drop replace tab -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=26138#p111675 
+    * Selection - http://newsgroup.xnview.com/viewtopic.php?f=62&t=27546
+    * UTF8 encoding for IPTC -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28142&p=111752
+    * IPTC apply all - http://newsgroup.xnview.com/viewtopic.php?f=62&t=28158
+    * Neutralhazer registration -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=26912
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Aug 2013 01:32:24 +0200
+
 xnviewmp (0.56-1~getdeb1) precise; urgency=low
 
   * New upstream version
