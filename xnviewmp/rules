@@ -8,11 +8,11 @@ override_dh_auto_clean:
 override_dh_auto_build:
 ifeq ($(DEB_BUILD_ARCH), amd64)
 	tar xzf XnViewMP-linux-x64.tgz
+	rm XnView/Plugins/Xjp2.so
 else
 	tar xzf XnViewMP-linux.tgz
 endif 
 	rm XnView/Plugins/IlmImf.so
-	rm XnView/Plugins/Xjp2.so
 
 	chrpath -d XnView/lib/codecs/libqcncodecs.so
 	chrpath -d XnView/lib/codecs/libqjpcodecs.so
