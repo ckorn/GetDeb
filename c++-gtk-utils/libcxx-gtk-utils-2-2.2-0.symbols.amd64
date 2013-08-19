@@ -40,11 +40,14 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu13start_timeoutEjPKNS_8Callback11CallbackArgIIRbEEEiP13_GMainContext@Base 2.1.0
  _ZN3Cgu13start_timeoutEjPKNS_8Callback11CallbackArgIJRbEEERNS_8ReleaserEiP13_GMainContext@Base 2.1.0
  _ZN3Cgu13start_timeoutEjPKNS_8Callback11CallbackArgIJRbEEEiP13_GMainContext@Base 2.1.0
+ _ZN3Cgu14MainWidgetBaseC1EOS0_@Base 2.2.2
  _ZN3Cgu14MainWidgetBaseC1EP10_GtkWidget@Base 2.1.0
+ _ZN3Cgu14MainWidgetBaseC2EOS0_@Base 2.2.2
  _ZN3Cgu14MainWidgetBaseC2EP10_GtkWidget@Base 2.1.0
  _ZN3Cgu14MainWidgetBaseD0Ev@Base 2.1.0
  _ZN3Cgu14MainWidgetBaseD1Ev@Base 2.1.0
  _ZN3Cgu14MainWidgetBaseD2Ev@Base 2.1.0
+ _ZN3Cgu14MainWidgetBaseaSEOS0_@Base 2.2.2
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEE19tracking_disconnectERKNS_8Callback14SafeFunctorArgIIS1_S2_EEE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEE7connectERKNS_8Callback14SafeFunctorArgIIS1_S2_EEE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEE7connectERKNS_8Callback14SafeFunctorArgIIS1_S2_EEERNS_8ReleaserE@Base 2.1.0
@@ -349,9 +352,12 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu8PipeFifo5writeEPKc@Base 2.1.0
  _ZN3Cgu8PipeFifo5writeEPKcm@Base 2.1.0
  _ZN3Cgu8PipeFifoC1ENS0_9Fifo_modeE@Base 2.1.0
+ _ZN3Cgu8PipeFifoC1EOS0_@Base 2.2.2
  _ZN3Cgu8PipeFifoC1Ev@Base 2.1.0
  _ZN3Cgu8PipeFifoC2ENS0_9Fifo_modeE@Base 2.1.0
+ _ZN3Cgu8PipeFifoC2EOS0_@Base 2.2.2
  _ZN3Cgu8PipeFifoC2Ev@Base 2.1.0
+ _ZN3Cgu8PipeFifoaSEOS0_@Base 2.2.2
  _ZN3Cgu8Releaser10try_removeERKNS_8Callback14SafeFunctorArgIIEEEPi@Base 2.1.0
  _ZN3Cgu8Releaser10try_removeERKNS_8Callback14SafeFunctorArgIJEEEPi@Base 2.1.0
  _ZN3Cgu8Releaser3addERKNS_8Callback14SafeFunctorArgIIEEE@Base 2.1.0
