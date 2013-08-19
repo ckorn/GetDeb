@@ -1,3 +1,28 @@
+entangle (0.5.2-1~getdeb2~raring) raring; urgency=low
+
+  * New upstream version
+     * Split histogram into RGB colour channels
+     * Fix aperture / shutter speed calculations in status bar
+     * Only import files with known image extensions
+     * Use case insensitive file extension check to detect raw files
+     * Set saner defaults for processing raw files to fix Canon
+       raw display
+     * Set preferences before loading session to fix settings
+       for initial image load
+     * Apply orientation from EXIF images if image file has none
+     * Remove left over debug prints
+     * Add support for linear histogram display mode
+     * Support 'h' key to toggle linear/log histogram mode
+     * Ensure all events are emitted in main thread
+     * Remove use of deprecated GDK thread APIs
+     * Use GtkGrid instead of deprecated GtkTable
+     * Ensure status bar is constant size when scaling image
+     * Preserve scrollbar offsets when switching images
+     * Make metadata extraction more robust wrt missing fields
+     * Updated translations from transifex
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 18 Aug 2013 19:56:36 +0200
+
 entangle (0.5.1-1~getdeb2~raring) raring; urgency=low
 
   * Rebuild for raring.
