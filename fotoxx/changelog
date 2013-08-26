@@ -1,3 +1,20 @@
+fotoxx (13.09-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + New edit function Mashup: arrange multiple images and text in a layout
+      (move around using mouse, resize, rotate, transparency, font effects). 
+    + Metadata edit functions were combined: tags/ratings/captions/comments.
+    + File save options: interface revised for clarity and error avoidance.
+    + Window tabs have icons instead of "F/G/W" letters.
+    + Menus and toolbars have visual feedback and popup descriptions.
+    + Paste a selected area: adjust brightness to better match background.
+    + Fix Stuck Pixels: user feedback and responsiveness was improved.
+    + File Synch: output image file counts for each subdirectory processed.
+    + Bugfix: crash if menus clicked during generation of a large gallery.
+    + Bugfix: Gallery file selection: select low-high range not working.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 25 Aug 2013 21:19:44 +0200
+
 fotoxx (13.08.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
