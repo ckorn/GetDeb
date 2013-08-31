@@ -1,3 +1,18 @@
+entangle (0.5.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Move file name of image thumbnails to tooltip popup
+    * Add --disable-schemas-compile configure arg to
+      disable schema compilation
+    * Remove "Encoding" key from desktop file
+    * Fix massive memory leak in pixbuf loading
+    * Fix thread safety in camera control updates which caused
+      hangs in GTK
+    * Fix updating of control readonly state when camera modes
+      change
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 30 Aug 2013 23:37:59 +0200
+
 entangle (0.5.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
