@@ -1,3 +1,23 @@
+avidemux2.6 (1:2.6.5-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    *libva hardware decoding
+    *xvba hardware decoding, ported from xbmc, experimental
+    *Re-enabled 64bits windows build using octave
+    *Only lock job database when adding a job
+    *Fixed the doubled fps bug on mpeg ts
+    *Fixed positive and negative audio shift having the same effect
+    *Windows : Better drag n drop support
+    *Added back save/load video filter set
+    *Dv encoding
+    *Fast, superfast and ultrafast x264 preset by bernd_b
+    *Support for 10bits h264 decoding
+    *Much improved speed for downmixing
+    *Updated libav*
+    *Plenty of bugs fixed
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 30 Aug 2013 23:43:59 +0200
+
 avidemux2.6 (1:2.6.4-1~getdeb1) precise; urgency=low
 
   * New upstream version
