@@ -1,4 +1,4 @@
 version=3
 
 http://www.kornelix.com/tarballs.html \
-    (?:.*/)?fotoxx-(.*)\.tar\.(?:gz|bz2|xz)
+    (?:.*/)?fotoxx-([\d\.]+)\.tar\.(?:gz|bz2|xz)
