@@ -1,6 +1,7 @@
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_xvid4.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffMpeg2.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffMpeg4.so
+usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffDv.so
 #usr/lib/ADM_plugins6/videoEncoders/mpeg2enc
 #usr/lib/ADM_plugins6/videoEncoders/x264/Apple*
 #usr/lib/ADM_plugins6/videoEncoders/x264/Sony*

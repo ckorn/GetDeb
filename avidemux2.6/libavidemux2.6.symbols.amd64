@@ -167,12 +167,14 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  avpriv_align_put_bits@LIBAVCODEC_54 1:2.6.0
  avpriv_bprint_to_extradata@LIBAVCODEC_54 1:2.6.2
  avpriv_check_timecode_rate@LIBAVCODEC_54 1:2.6.0
+ avpriv_color_frame@LIBAVCODEC_54 1:2.6.5
  avpriv_copy_bits@LIBAVCODEC_54 1:2.6.0
  avpriv_copy_pce_data@LIBAVCODEC_54 1:2.6.0
  avpriv_dca_sample_rates@LIBAVCODEC_54 1:2.6.1
  avpriv_dv_codec_profile@LIBAVCODEC_54 1:2.6.0
  avpriv_dv_frame_profile2@LIBAVCODEC_54 1:2.6.0
  avpriv_dv_frame_profile@LIBAVCODEC_54 1:2.6.0
+ avpriv_find_pix_fmt@LIBAVCODEC_54 1:2.6.5
  avpriv_flac_is_extradata_valid@LIBAVCODEC_54 1:2.6.0
  avpriv_flac_parse_block_header@LIBAVCODEC_54 1:2.6.0
  avpriv_flac_parse_streaminfo@LIBAVCODEC_54 1:2.6.0
@@ -212,6 +214,7 @@ libADM6avcodec.so.54 libavidemux2.6 #MINVER#
  ff_dct_init@LIBAVCODEC_54 1:2.6.0
  ff_dct_init_x86@LIBAVCODEC_54 1:2.6.2
  ff_dct_quantize_c@LIBAVCODEC_54 1:2.6.0
+ ff_dsputil_init@LIBAVCODEC_54 1:2.6.5
  ff_faandct248@LIBAVCODEC_54 1:2.6.0
  ff_faandct@LIBAVCODEC_54 1:2.6.0
  ff_faanidct@LIBAVCODEC_54 1:2.6.0
@@ -282,6 +285,7 @@ libADM6avformat.so.54 libavidemux2.6 #MINVER#
  av_append_packet@LIBAVFORMAT_54 1:2.6.0
  av_close_input_file@LIBAVFORMAT_54 1:2.6.0
  av_codec_get_id@LIBAVFORMAT_54 1:2.6.0
+ av_codec_get_tag2@LIBAVFORMAT_54 1:2.6.5
  av_codec_get_tag@LIBAVFORMAT_54 1:2.6.0
  av_convert_lang_to@LIBAVFORMAT_54 1:2.6.0
  av_demuxer_open@LIBAVFORMAT_54 1:2.6.0
@@ -393,6 +397,7 @@ libADM6avformat.so.54 libavidemux2.6 #MINVER#
  avio_write@LIBAVFORMAT_54 1:2.6.0
  avpriv_new_chapter@LIBAVFORMAT_54 1:2.6.0
  avpriv_set_pts_info@LIBAVFORMAT_54 1:2.6.0
+ ff_codec_get_id@LIBAVFORMAT_54 1:2.6.5
  ffio_open_dyn_packet_buf@LIBAVFORMAT_54 1:2.6.0
  ffio_set_buf_size@LIBAVFORMAT_54 1:2.6.0
  ffurl_close@LIBAVFORMAT_54 1:2.6.0
@@ -431,6 +436,7 @@ libADM6avutil.so.52 libavidemux2.6 #MINVER#
  av_bprint_channel_layout@LIBAVUTIL_52 1:2.6.2
  av_bprint_chars@LIBAVUTIL_52 1:2.6.2
  av_bprint_clear@LIBAVUTIL_52 1:2.6.2
+ av_bprint_escape@LIBAVUTIL_52 1:2.6.5
  av_bprint_finalize@LIBAVUTIL_52 1:2.6.2
  av_bprint_get_buffer@LIBAVUTIL_52 1:2.6.2
  av_bprint_init@LIBAVUTIL_52 1:2.6.2
@@ -458,10 +464,12 @@ libADM6avutil.so.52 libavidemux2.6 #MINVER#
  av_dict_count@LIBAVUTIL_52 1:2.6.2
  av_dict_free@LIBAVUTIL_52 1:2.6.2
  av_dict_get@LIBAVUTIL_52 1:2.6.2
+ av_dict_parse_string@LIBAVUTIL_52 1:2.6.5
  av_dict_set@LIBAVUTIL_52 1:2.6.2
  av_dirname@LIBAVUTIL_52 1:2.6.2
  av_div_q@LIBAVUTIL_52 1:2.6.2
  av_dynarray_add@LIBAVUTIL_52 1:2.6.2
+ av_escape@LIBAVUTIL_52 1:2.6.5
  av_evaluate_lls@LIBAVUTIL_52 1:2.6.2
  av_expr_eval@LIBAVUTIL_52 1:2.6.2
  av_expr_free@LIBAVUTIL_52 1:2.6.2
@@ -519,6 +527,12 @@ libADM6avutil.so.52 libavidemux2.6 #MINVER#
  av_get_string@LIBAVUTIL_52 1:2.6.2
  av_get_token@LIBAVUTIL_52 1:2.6.2
  av_gettime@LIBAVUTIL_52 1:2.6.2
+ av_hmac_alloc@LIBAVUTIL_52 1:2.6.5
+ av_hmac_calc@LIBAVUTIL_52 1:2.6.5
+ av_hmac_final@LIBAVUTIL_52 1:2.6.5
+ av_hmac_free@LIBAVUTIL_52 1:2.6.5
+ av_hmac_init@LIBAVUTIL_52 1:2.6.5
+ av_hmac_update@LIBAVUTIL_52 1:2.6.5
  av_image_alloc@LIBAVUTIL_52 1:2.6.2
  av_image_check_size@LIBAVUTIL_52 1:2.6.2
  av_image_copy@LIBAVUTIL_52 1:2.6.2
@@ -647,6 +661,7 @@ libADM6avutil.so.52 libavidemux2.6 #MINVER#
  av_strlcatf@LIBAVUTIL_52 1:2.6.2
  av_strlcpy@LIBAVUTIL_52 1:2.6.2
  av_strncasecmp@LIBAVUTIL_52 1:2.6.2
+ av_strnstr@LIBAVUTIL_52 1:2.6.5
  av_strstart@LIBAVUTIL_52 1:2.6.2
  av_strtod@LIBAVUTIL_52 1:2.6.2
  av_strtok@LIBAVUTIL_52 1:2.6.2
@@ -674,8 +689,14 @@ libADM6avutil.so.52 libavidemux2.6 #MINVER#
  av_xtea_crypt@LIBAVUTIL_52 1:2.6.2
  av_xtea_init@LIBAVUTIL_52 1:2.6.2
  avpriv_cga_font@LIBAVUTIL_52 1:2.6.2
+ avpriv_emms_yasm@LIBAVUTIL_52 1:2.6.5
+ avpriv_evaluate_lls@LIBAVUTIL_52 1:2.6.5
  avpriv_float_dsp_init@LIBAVUTIL_52 1:2.6.2
+ avpriv_init_lls@LIBAVUTIL_52 1:2.6.5
+ avpriv_scalarproduct_float_c@LIBAVUTIL_52 1:2.6.5
  avpriv_set_systematic_pal2@LIBAVUTIL_52 1:2.6.2
+ avpriv_solve_lls@LIBAVUTIL_52 1:2.6.5
+ avpriv_update_lls@LIBAVUTIL_52 1:2.6.5
  avpriv_vga16_font@LIBAVUTIL_52 1:2.6.2
  avutil_configuration@LIBAVUTIL_52 1:2.6.2
  avutil_license@LIBAVUTIL_52 1:2.6.2
@@ -1124,11 +1145,13 @@ libADM_coreImage6.so libavidemux2.6 #MINVER#
  _ZN6ADM_PPD2Ev@Base 1:2.6.0
  _ZN8ADMImage11copyToAlphaEPS_jjj@Base 1:2.6.0
  _ZN8ADMImage11printStringEjjPKc@Base 1:2.6.0
+ _ZN8ADMImage13convertToNV12EPhS0_ii@Base 1:2.6.5
  _ZN8ADMImage13duplicateFullEPS_@Base 1:2.6.0
  _ZN8ADMImage13hwDecRefCountEv@Base 1:2.6.0
  _ZN8ADMImage13hwIncRefCountEv@Base 1:2.6.0
  _ZN8ADMImage14copyLeftSideToEPS_@Base 1:2.6.0
  _ZN8ADMImage14duplicateMacroEPS_b@Base 1:2.6.0
+ _ZN8ADMImage15convertFromNV12EPhS0_ii@Base 1:2.6.5
  _ZN8ADMImage17convertFromYUV444EPh@Base 1:2.6.0
  _ZN8ADMImage17hwDownloadFromRefEv@Base 1:2.6.0
  _ZN8ADMImage5blendEPS_S0_@Base 1:2.6.0
@@ -1166,12 +1189,18 @@ libADM_coreImageLoader6.so libavidemux2.6 #MINVER#
  _ZTS14ADM_byteBuffer@Base 1:2.6.4
  _ZTV14ADM_byteBuffer@Base 1:2.6.4
 libADM_coreJobs.so libavidemux2.6 #MINVER#
- _Z10ADM_jobAddRK6ADMJob@Base 1:2.6.0
- _Z10ADM_jobGetRSt6vectorI6ADMJobSaIS0_EE@Base 1:2.6.0
- _Z11ADM_jobInitv@Base 1:2.6.0
- _Z13ADM_jobDeleteRK6ADMJob@Base 1:2.6.0
- _Z13ADM_jobUpdateRK6ADMJob@Base 1:2.6.0
- _Z15ADM_jobShutDownv@Base 1:2.6.0
+ _ZN6ADMJob11jobShutDownEv@Base 1:2.6.5
+ _ZN6ADMJob14jobDropAllJobsEv@Base 1:2.6.5
+ _ZN6ADMJob6jobAddERKS_@Base 1:2.6.5
+ _ZN6ADMJob6jobGetERSt6vectorIS_SaIS_EE@Base 1:2.6.5
+ _ZN6ADMJob7jobDumpERKS_@Base 1:2.6.5
+ _ZN6ADMJob7jobInitEv@Base 1:2.6.5
+ _ZN6ADMJob9jobDeleteERKS_@Base 1:2.6.5
+ _ZN6ADMJob9jobUpdateERKS_@Base 1:2.6.5
+ _ZN6ADMJobD1Ev@Base 1:2.6.5
+ _ZN6ADMJobD2Ev@Base 1:2.6.5
+ _ZNSt12_Destroy_auxILb0EE9__destroyIP6ADMJobEEvT_S4_@Base 1:2.6.5
+ _ZNSt6vectorI6ADMJobSaIS0_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS0_S2_EERKS0_@Base 1:2.6.5
 libADM_coreMuxer6.so libavidemux2.6 #MINVER#
  ListOfMuxers@Base 1:2.6.0
  _Z10rescaleFpsjP10AVRational@Base 1:2.6.0
