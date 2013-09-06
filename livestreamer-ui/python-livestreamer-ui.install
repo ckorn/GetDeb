@@ -1,0 +1,3 @@
+*.py					usr/share/livestreamer-ui
+debian/scripts/livestreamer-ui		usr/bin
+debian/livestreamer-ui.desktop		usr/share/applications

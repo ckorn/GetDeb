@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/livestreamer-ui
+python3 main.py
