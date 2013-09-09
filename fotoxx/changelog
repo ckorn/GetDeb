@@ -1,3 +1,12 @@
+fotoxx (13.09.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Russian translation updated.
+    + Crash in Edit Metadata. I was unable to reproduce this error,
+      but I found and fixed a potential cause, so I hope it is fixed.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 08 Sep 2013 20:19:59 +0200
+
 fotoxx (13.09.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
