@@ -1,3 +1,18 @@
+tvpvrd (4.4.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    User visible changes:
+        - Missing CSS style sheets for themes "night" and "deep" ar now
+        included in distribution
+
+    Bugs fixed:
+        - The build scripts did not install the two themes "night" and "deep"
+
+    Internal changes:
+        - Updated build scripts
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Sep 2013 19:18:31 +0200
+
 tvpvrd (4.4.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
