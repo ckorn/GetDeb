@@ -1,3 +1,11 @@
+fotoxx (13.09.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Spanish and Catalan translations updated.
+    + Bugfix: For some locales the gallery Zoom buttons did not work.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Sep 2013 20:34:14 +0200
+
 fotoxx (13.09.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
