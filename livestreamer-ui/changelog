@@ -1,3 +1,9 @@
+livestreamer-ui (1.0-1~getdeb2) precise; urgency=low
+
+  * Add patch to set background color of status cell.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 20 Sep 2013 16:03:09 +0200
+
 livestreamer-ui (1.0-1~getdeb1) precise; urgency=low
 
   * Initial release
