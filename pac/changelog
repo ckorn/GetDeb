@@ -1,3 +1,25 @@
+pac (4.5.3.1-1~getdeb2~raring) raring; urgency=low
+
+  * New upstream version
+    . Added "Vte.o" library for RASPBERRY "Raspbian" support!! ;)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 20 Sep 2013 14:49:31 +0200
+
+pac (4.5.3-1~getdeb2~raring) raring; urgency=low
+
+  * New upstream version
+    . Added support for SOCKs proxies!
+    . Added support for defining proxies configuration PER CONNECTION! :)
+    . Added an option to "Auto save" every PAC change in realtime, without
+    user interaction
+    . Added preliminary date/time information on disconnections
+    . Added support for Perl 5.18
+    . Fixed a minor bug with PAC <ASK:...> substitution variables
+    . Changed PAC's behaviour to prevent password from appearing on "ps"
+    command for RDP (both rdesktop and xfreerdp commands)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 18 Sep 2013 22:57:37 +0200
+
 pac (4.5.2.3-1~getdeb2~raring) raring; urgency=low
 
   * New upstream version
