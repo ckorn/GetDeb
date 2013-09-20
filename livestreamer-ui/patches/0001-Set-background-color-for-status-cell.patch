@@ -1,0 +1,67 @@
+From 680a5be0e4fe821feec48c631bafaab0c3327c9d Mon Sep 17 00:00:00 2001
+From: Christoph Korn <c_korn@gmx.de>
+Date: Fri, 20 Sep 2013 16:00:22 +0200
+Subject: [PATCH] Set background color for status cell
+
+Additionally to setting the texts "On" and "Off" make use
+of red and green color to distinguish offline from online more easily.
+---
+ stream.py | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/stream.py b/stream.py
+index 9694e81..3798066 100644
+--- a/stream.py
++++ b/stream.py
+@@ -1,6 +1,7 @@
+ import json
+ 
+-from PySide.QtCore import QProcess
++from PySide.QtCore import QProcess, Qt
++from PySide.QtGui import QColor, QBrush
+ 
+ 
+ class Stream:
+@@ -44,6 +45,10 @@ class Stream:
+         process.start( 'livestreamer', arguments )
+         process.readyReadStandardOutput.connect( self.is_online_callback )
+ 
++        brush=QBrush(Qt.SolidPattern)
++        color=QColor(255,255,255) #white
++        brush.setColor(color)
++        tableWidgetItem.setBackground( brush )
+         tableWidgetItem.setText( 'Checking..' )
+ 
+         Stream.ALL_STREAMS.append( self )
+@@ -62,16 +67,19 @@ class Stream:
+             print( errorMessage )
+             return
+ 
+-
++        brush=QBrush(Qt.SolidPattern)
+         if outputObject.get( 'error' ):
+-
++            color=QColor(255,0,0) #red
+             onlineStatus = 'Off'
+         else:
++            color=QColor(0,255,0) #green
+             onlineStatus = 'On'
++        brush.setColor(color)
+ 
+ 
+         itemWidget = self.table_widget_item
+ 
++        itemWidget.setBackground( brush )
+         itemWidget.setText( onlineStatus )
+ 
+ 
+@@ -101,4 +109,4 @@ class Stream:
+                 streams.append( stream )
+ 
+ 
+-        Stream.ALL_STREAMS = streams
+\ No newline at end of file
++        Stream.ALL_STREAMS = streams
+-- 
+1.8.1.2
+
