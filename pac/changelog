@@ -1,3 +1,12 @@
+pac (4.5.3.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Fixed a bug that prevented PAC from using a proxy under some
+    circumstances (no ip/port defined on Global Preferences)
+    . Fixed some minor glitch
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 20 Sep 2013 18:57:26 +0200
+
 pac (4.5.3.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
