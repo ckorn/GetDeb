@@ -134,6 +134,7 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu18AsyncQueuePopErrorD0Ev@Base 2.1.0
  _ZN3Cgu18AsyncQueuePopErrorD1Ev@Base 2.1.0
  _ZN3Cgu18AsyncQueuePopErrorD2Ev@Base 2.1.0
+ _ZN3Cgu20IntrusiveLockCounter5unrefEv@Base 2.2.3
  _ZN3Cgu20IntrusiveLockCounterD0Ev@Base 2.1.0
  _ZN3Cgu20IntrusiveLockCounterD1Ev@Base 2.1.0
  _ZN3Cgu20IntrusiveLockCounterD2Ev@Base 2.1.0
@@ -170,7 +171,7 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu6Thread11TaskManager13set_stop_modeENS1_8StopModeE@Base 2.1.0
  _ZN3Cgu6Thread11TaskManager15set_max_threadsEj@Base 2.1.0
  _ZN3Cgu6Thread11TaskManager18change_max_threadsEi@Base 2.1.0
- _ZN3Cgu6Thread11TaskManager20set_max_threads_implEj@Base 2.1.0
+ _ZN3Cgu6Thread11TaskManager20set_max_threads_implEjRNS0_5Mutex9TrackLockE@Base 2.2.3
  _ZN3Cgu6Thread11TaskManager7RefImpl8do_tasksEb@Base 2.1.0
  _ZN3Cgu6Thread11TaskManager7RefImplD0Ev@Base 2.1.0
  _ZN3Cgu6Thread11TaskManager7RefImplD1Ev@Base 2.1.0
@@ -199,10 +200,15 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu6Thread14JoinableHandleaSEOS1_@Base 2.1.0
  _ZN3Cgu6Thread4Cond12get_abs_timeER8timespecj@Base 2.1.0
  _ZN3Cgu6Thread4Cond20have_monotonic_clockEv@Base 2.1.0
+ _ZN3Cgu6Thread4Cond9broadcastEv@Base 2.2.3
  _ZN3Cgu6Thread4CondC1Ev@Base 2.1.0
  _ZN3Cgu6Thread4CondC2Ev@Base 2.1.0
  _ZN3Cgu6Thread5Mutex4LockD1Ev@Base 2.1.0
  _ZN3Cgu6Thread5Mutex4LockD2Ev@Base 2.1.0
+ _ZN3Cgu6Thread5Mutex9TrackLock4lockEv@Base 2.2.3
+ _ZN3Cgu6Thread5Mutex9TrackLock6unlockEv@Base 2.2.3
+ _ZN3Cgu6Thread5Mutex9TrackLockD1Ev@Base 2.2.3
+ _ZN3Cgu6Thread5Mutex9TrackLockD2Ev@Base 2.2.3
  _ZN3Cgu6Thread6Thread5startEPKNS_8Callback11CallbackArgIIEEEb@Base 2.1.0
  _ZN3Cgu6Thread6Thread5startEPKNS_8Callback11CallbackArgIJEEEb@Base 2.1.0
  _ZN3Cgu6Thread8RecMutex12test_supportEv@Base 2.1.0
