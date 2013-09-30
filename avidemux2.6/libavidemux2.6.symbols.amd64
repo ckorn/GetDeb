@@ -892,6 +892,7 @@ libADM_coreAudio6.so libavidemux2.6 #MINVER#
  _Z24ADM_audioReorderChannelsjPfjP12CHANNEL_TYPES1_@Base 1:2.6.0
  _Z8dither16Pfjh@Base 1:2.6.0
  _ZN15ADM_audioStream12getExtraDataEPjPPh@Base 1:2.6.0
+ _ZN15ADM_audioStream13isLanguageSetEv@Base 1:2.6.6
  _ZN15ADM_audioStream18advanceDtsBySampleEj@Base 1:2.6.0
  _ZN15ADM_audioStream24advanceDtsByCustomSampleEjj@Base 1:2.6.0
  _ZN15ADM_audioStream6setDtsEm@Base 1:2.6.0
@@ -947,6 +948,7 @@ libADM_coreAudioDevice6.so libavidemux2.6 #MINVER#
  _ZTV19audioDeviceThreaded@Base 1:2.6.0
 libADM_coreAudioEncoder6.so libavidemux2.6 #MINVER#
  ListOfAudioEncoder@Base 1:2.6.0
+ _ZN16ADM_AudioEncoder11getLanguageEv@Base 1:2.6.6
  _ZN16ADM_AudioEncoder12refillBufferEi@Base 1:2.6.0
  _ZN16ADM_AudioEncoder15reorderToPlanarEPfS0_iP12CHANNEL_TYPES2_@Base 1:2.6.4
  _ZN16ADM_AudioEncoder16reorderToPlanar2EPfPS0_iP12CHANNEL_TYPES3_@Base 1:2.6.4
@@ -1762,6 +1764,7 @@ libADM_coreUtils6.so libavidemux2.6 #MINVER#
  _Z18extractH263FLVInfoPhjPjS0_@Base 1:2.6.0
  _Z18isMpeg12Compatiblej@Base 1:2.6.0
  _Z19ADM_UsecFromFps1000j@Base 1:2.6.0
+ _Z19ADM_getLanguageListv@Base 1:2.6.6
  _Z19getCoupleFromStringPP10CONFcouplePKcPK13ADM_paramList@Base 1:2.6.0
  _Z19isMSMpeg4Compatiblej@Base 1:2.6.0
  _Z19stringsToConfCoupleiPP10CONFcouplePPKc@Base 1:2.6.0
@@ -1771,9 +1774,12 @@ libADM_coreUtils6.so libavidemux2.6 #MINVER#
  _Z20getCodecIdFromFourccj@Base 1:2.6.0
  _Z21ADM_findH264StartCodePhS_S_Pj@Base 1:2.6.0
  _Z21ADM_findMpegStartCodePhS_S_Pj@Base 1:2.6.0
+ _Z21ADM_getIndexForIso639PKc@Base 1:2.6.6
  _Z22ADM_probeSequencedFilePKc@Base 1:2.6.0
  _Z22ADM_splitSequencedFilePKcPPcS2_PjS3_@Base 1:2.6.0
  _Z23ADM_codecIdFindByFourccPKc@Base 1:2.6.0
+ _Z23ADM_getLanguageListSizev@Base 1:2.6.6
+ _Z23ADM_iso639b_toPlaintextPKc@Base 1:2.6.6
  _Z26ADM_convertFromAnnexBToMP4PhjS_j@Base 1:2.6.0
  _Z30ADM_getH264SpsPpsFromExtraDatajPhPjPS_S0_S1_@Base 1:2.6.0
  _Z37ADM_computeAverageBitrateFromDurationmjPj@Base 1:2.6.0
