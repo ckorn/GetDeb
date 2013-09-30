@@ -1,3 +1,16 @@
+avidemux2.6 (1:2.6.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Windows : Fixed MP4 muxer
+    * Windows : Patched x264 to use utf8, that should
+      solve most of the bitrate too low errors
+    * All : Bumped x264 preset to v2 to make sure
+      invalid Qp from older versions are not used any longer
+    * Mov : Fixed PCM/LPCM management
+    * Languages support for audio tracks
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 29 Sep 2013 21:22:25 +0200
+
 avidemux2.6 (1:2.6.5-1~getdeb1) precise; urgency=low
 
   * New upstream version
