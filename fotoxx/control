@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9),
                libtiff4-dev,
                liblcms2-dev,
                xdg-utils
-Standards-Version: 3.9.4
+Standards-Version: 3.9.3
 Homepage: http://kornelix.squarespace.com/downloads/
 
 Package: fotoxx

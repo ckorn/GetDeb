@@ -1,3 +1,31 @@
+fotoxx (13.10-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Mashup: move/resize/rotate layout images/text by dragging the mouse.
+    + Trim/crop and Rotate were combined as one function to improve workflow.
+    + Rotate: click image position to add vertical and horizontal guidelines.
+    + Rotate: the automatic trim option was reinstated.
+    + Flatten and Expand brightness distribution were combined as one
+    function.
+    + Paint/Clone: new option to paint/erase gradually or fully in one
+    stroke.
+    + Gallery thumbnail popup menu: rotate +/-90 degrees was added.
+    + Gallery [Top] button: new option to choose a named collection.
+    + World map zoom: use full-size/fit-window without intermediate steps.
+    + Slide Show: allow pause and resume at a selected image position.
+    + Slide Show: an image with "pause" tag will beep and pause until
+    resumed.
+    + View Metadata: menu to show captions and comments (e.g. for slide
+    show).
+    + Making a collection from search results (or any gallery) was
+    simplified.
+    + CMYK function: the user interface was simplified.
+    + Warp Linear/Curved/Affine use multiple threads for faster response.
+    + Bugfix: clickable tabular reports would not scroll with mouse wheel.
+    + Bugfix: the interactive translation update function was broken.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 Oct 2013 20:13:43 +0200
+
 fotoxx (13.09.4-1~getdeb1) precise; urgency=low
 
   * New upstream version
