@@ -1,0 +1,5 @@
+remotebox (1.5-1~getdeb1) raring; urgency=low
+
+  * Initial release (LP: #1235212)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 Oct 2013 14:26:20 +0200

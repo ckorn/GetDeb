@@ -1,0 +1,54 @@
+Source: remotebox
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
+Homepage: http://knobgoblin.org.uk/
+
+Package: remotebox
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libgtk2-perl,
+         libsoap-lite-perl,
+         rdesktop
+Description: Open Source VirtualBox Client with Remote Management
+ RemoteBox allows you to administer an installation of
+ VirtualBox residing on another machine such as a server,
+ as if it was installed locally. You can also interact with
+ the displays of the guests. This allows you to treat
+ VirtualBox much more like an installation of Xen,
+ KVM or VMware ESX. A summary of some of the features of
+ RemoteBox are listed below:
+ .
+  * Open source VirtualBox client with a graphical (GTK+)
+    interface
+  * Remote management of VirtualBox and its guests
+  * No web server such as Apache or IIS is required to run
+    RemoteBox
+  * No compilation is required - written entirely in Perl
+  * View and interact with the guest's display via RDP,
+    including sound.
+  * Create and edit guests
+  * Configure processor, display, input devices,
+    audio, I/O ports, and shared folders
+  * Set the guest BIOS configuration including the
+    BIOS image
+  * Set advanced options such as HPET, Page Fusion,
+    Large Pages, CPU Hotplugging, CPU Throttling etc
+  * Attach USB devices and set USB device filters
+  * Stop, start, pause and save guest states
+  * Provision and attach storage including hard disks,
+    CDs/DVDs and floppy disks
+  * Configure networking including host only networks
+    with DHCP servers
+  * Supports guest snapshots
+  * Compatible with VirtualBox running on Linux, Windows,
+    Mac OS X and Solaris
+  * RemoteBox runs on Linux, *BSD and Mac OS X
+  * Use RemoteBox as an alternative GUI for managing local
+    guests if desired
+ .
+ For more information have a look in:
+ /usr/share/doc/remotebox

@@ -1,0 +1,3 @@
+version=3
+http://knobgoblin.org.uk/downloads.cgi \
+    (?:.*/)?RemoteBox-([\d\.]+)\.tar\.bz2
