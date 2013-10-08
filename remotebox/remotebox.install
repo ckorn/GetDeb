@@ -1,2 +1,4 @@
-remotebox		usr/bin
-share			usr
+remotebox					usr/bin
+share						usr
+share/remotebox/icons/remotebox.png		usr/share/pixmaps
+debian/remotebox.desktop			usr/share/applications
