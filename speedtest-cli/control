@@ -12,8 +12,7 @@ Vcs-Browser: https://github.com/sivel/speedtest-cli
 
 Package: python-speedtest-cli
 Architecture: all
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${python:Depends}
 Provides: ${python:Provides}
 X-Python-Version: ${python:Versions}
