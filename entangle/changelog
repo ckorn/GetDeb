@@ -1,3 +1,9 @@
+entangle (0.5.3-1~getdeb3~saucy) saucy; urgency=low
+
+  * Rebuild for saucy.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Oct 2013 13:23:35 +0200
+
 entangle (0.5.3-1~getdeb2~raring) raring; urgency=low
 
   * New upstream version

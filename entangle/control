@@ -5,7 +5,7 @@ Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Build-Depends: debhelper (>= 9),
                libglib2.0-dev,
                libgdk-pixbuf2.0-dev,
-               libgphoto2-2-dev,
+               libgphoto2-6-dev,
                libgexiv2-dev,
                libgudev-1.0-dev,
                libpeas-dev,
