@@ -1,3 +1,9 @@
+luminance (2.3.1-1~getdeb3~saucy) saucy; urgency=low
+
+  * Rebuild for saucy.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 11 Oct 2013 22:45:38 +0200
+
 luminance (2.3.1-1~getdeb2~quantal) quantal; urgency=low
 
   * New upstream version
