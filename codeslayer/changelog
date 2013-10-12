@@ -1,3 +1,15 @@
+codeslayer (3.0.1-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 11 Oct 2013 23:46:14 +0200
+
+codeslayer (3.0.0-1~getdeb2~saucy) saucy; urgency=low
+
+  * Rebuild for saucy.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 11 Oct 2013 22:32:06 +0200
+
 codeslayer (3.0.0-1~getdeb1) quantal; urgency=low
 
   * New upstream version

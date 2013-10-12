@@ -3,13 +3,16 @@ Section: devel
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               libtool,
+               gtk-doc-tools,
                autotools-dev,
                libgtk2.0-dev,
                libglib2.0-dev,
                libgtksourceview2.0-dev,
                libgtk-3-dev,
                libgtksourceview-3.0-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://code.google.com/p/codeslayer/
 
 Package: codeslayer

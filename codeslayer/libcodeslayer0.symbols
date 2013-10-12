@@ -16,6 +16,8 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_add_to_project_properties@Base 1.2.1
  codeslayer_add_to_projects_popup@Base 1.2.1
  codeslayer_add_to_side_pane@Base 1.2.1
+ codeslayer_application_get_type@Base 3.0.1
+ codeslayer_application_new@Base 3.0.1
  codeslayer_bottom_pane_get_type@Base 1.2.1
  codeslayer_bottom_pane_new@Base 1.2.1
  codeslayer_completion_add_provider@Base 2.0.1
