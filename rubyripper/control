@@ -3,15 +3,24 @@ Section: sound
 Priority: optional
 Maintainer: Joao Pinto <joao.pinto@getdeb.net>
 Uploaders: Marco Rodrigues <gothicx@sapo.pt>
-Build-Depends: cdbs, debhelper (>= 5), ruby, libgettext-ruby-util,
- cdparanoia
-Standards-Version: 3.9.1
+Build-Depends: cdbs,
+               debhelper (>= 9),
+               ruby,
+               ruby-gettext,
+               cdparanoia
+Standards-Version: 3.9.4
 Homepage: http://wiki.hydrogenaudio.org/index.php?title=Rubyripper
 
 Package: rubyripper
 Architecture: all
-Depends: ruby, libgtk2-ruby1.8, cdparanoia, eject, gedit | kwrite | mousepad,
- libgettext-ruby-util, vorbis-tools, ${misc:Depends}
+Depends: ruby,
+         libgtk2-ruby1.8,
+         cdparanoia,
+         eject,
+         gedit | kwrite | mousepad,
+         ruby-gettext,
+         vorbis-tools,
+         ${misc:Depends}
 Description: Digital audio extraction algorithm 
  It uses cdparanoia in a sophisticated way to make sure that a CD rip is done 
  successfully and accurately. It is very similar to and inspired by EAC. 

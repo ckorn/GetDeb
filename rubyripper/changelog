@@ -1,3 +1,9 @@
+rubyripper (0.6.2-1~getdeb2~saucy) saucy; urgency=low
+
+  * Rebuild for saucy
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Oct 2013 15:58:54 +0200
+
 rubyripper (0.6.2-1~getdeb1) lucid; urgency=low
 
   * New upstream version
