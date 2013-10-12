@@ -5,9 +5,8 @@ Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                ruby-pkg-tools,
                ruby1.8,
-               librspec-ruby,
                gem2deb (>= 0.2.6~)
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://www.pagodabox.com
 XS-Ruby-Versions: all
 
@@ -19,9 +18,9 @@ Depends: ${misc:Depends},
          libruby1.8,
          libpassword-ruby,
          librestclient-ruby,
-         libjson-ruby,
+         ruby-json,
          libiniparse-ruby,
-         libhighline-ruby,
+         ruby-highline,
          ruby1.8,
          libopenssl-ruby,
          ruby-gli,
