@@ -1141,16 +1141,11 @@ liboyranos_lraw_cmm_module.so.0.4.0 liboyranos0 #MINVER#
  _Z21lrawWidget_EventDummyPKc16oyWIDGET_EVENT_e@Base 0.4.0
  _Z31lrawFilterPlug_ImageInputRAWRunP14oyFilterPlug_sP15oyPixelAccess_s@Base 0.4.0
  _Z33lrawFilterNode_LibrawContextToMemP14oyFilterNode_sPjPFPvjE@Base 0.4.0
-#MISSING: 0.4.0# _Z33lrawFilterNode_LibrawContextToMemP14oyFilterNode_sPmPFPvmE@Base 0.4.0
  _Z33oyraApi4UiImageInputLibrawGetTextPKc8oyNAME_eP10oyStruct_s@Base 0.4.0
  _Z39lrawFilter_ImageInputRAWValidateOptionsP14oyFilterCore_sP11oyOptions_siPj@Base 0.4.0
  _Z5wreadPhjjPjS0_@Base 0.4.0
-#MISSING: 0.4.0# _Z5wreadPhmmPmS0_@Base 0.4.0
  _Z9lrawUiGetP11oyOptions_sPPcPFPvjE@Base 0.4.0
-#MISSING: 0.4.0# _Z9lrawUiGetP11oyOptions_sPPcPFPvmE@Base 0.4.0
  _ZN6LibRaw17output_params_ptrEv@Base 0.4.0
- _ZN6LibRawD1Ev@Base 0.4.0
- _ZN6LibRawD2Ev@Base 0.4.0
  lrawCMMWarnFunc@Base 0.4.0
  lraw_api4_image_input_libraw@Base 0.4.0
  lraw_api7_image_input_libraw@Base 0.4.0
@@ -1496,7 +1491,6 @@ liboyranos_oyRE_cmm_module.so.0.4.0 liboyranos0 #MINVER#
  _Z17DeviceFromContextPP10oyConfig_sP22libraw_output_params_t@Base 0.4.0
  _Z17oyREApi8UiGetTextPKc8oyNAME_eP10oyStruct_s@Base 0.4.0
  _Z19oyRECMMallocateFuncj@Base 0.4.0
-#MISSING: 0.4.0# _Z19oyRECMMallocateFuncm@Base 0.4.0
  _Z20DeviceFromHandle_optP10oyConfig_sP10oyOption_s@Base 0.4.0
  _Z21oyRECMMMessageFuncSetPFiiPvPKczE@Base 0.4.0
  _Z21oyRECMMdeallocateFuncPv@Base 0.4.0
