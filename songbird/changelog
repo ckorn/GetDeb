@@ -1,3 +1,9 @@
+songbird (2.0.0-1~getdeb2~saucy) saucy; urgency=low
+
+  * Rebuild for saucy.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Oct 2013 16:11:52 +0200
+
 songbird (2.0.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
