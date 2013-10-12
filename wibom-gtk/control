@@ -2,15 +2,17 @@ Source: wibom-gtk
 Section: utils
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50)
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
 Homepage: http://wibom.sourceforge.net
 
 Package: wibom-gtk
 Architecture: all
-Depends: ${misc:Depends}, ruby,
- libgtk2-ruby, libgettext-ruby1.8 | libgettext-ruby1.9
-Recommends: wine1.2
+Depends: ${misc:Depends},
+         ruby,
+         libgtk2-ruby,
+         ruby-gettext
+Recommends: wine
 Conflicts: wibom
 Description: Wine bottle management
  Wine is the program for running applications for Microsoft Windows on

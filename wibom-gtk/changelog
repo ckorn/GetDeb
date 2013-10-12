@@ -1,3 +1,9 @@
+wibom-gtk (0.12-1~getdeb2~saucy) saucy; urgency=low
+
+  * Rebuild for saucy
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Oct 2013 17:14:43 +0200
+
 wibom-gtk (0.12-1~getdeb1) lucid; urgency=low
 
   * New upstream version
