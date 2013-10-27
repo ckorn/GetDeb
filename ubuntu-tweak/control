@@ -9,12 +9,13 @@ Build-Depends: debhelper (>= 9),
                python-dev,
                python-setuptools,
                python-distutils-extra
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://ubuntu-tweak.com
 
 Package: ubuntu-tweak
 Architecture: all
-Depends: python-apt,
+Depends: gksu,
+         python-apt,
          python-dbus,
          python-xdg,
          python-lxml,
@@ -23,12 +24,12 @@ Depends: python-apt,
          policykit-1-gnome | policykit-1-qt,
          python-defer,
          python-compizconfig,
-         gir1.2-unique-3.0,
          gir1.2-vte-2.90,
          gir1.2-gtk-3.0,
          gir1.2-gconf-2.0,
          gir1.2-notify-0.7,
          gir1.2-webkit-3.0,
+         gir1.2-soup-2.4,
          ${misc:Depends},
          ${python:Depends}
 Description: Ubuntu Configuration Tool
