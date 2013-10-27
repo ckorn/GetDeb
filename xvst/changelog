@@ -1,3 +1,9 @@
+xvst (2.5-1~getdeb3~saucy) saucy; urgency=low
+
+  * Update plugins.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 27 Oct 2013 04:54:56 +0100
+
 xvst (2.5-1~getdeb2) raring; urgency=low
 
   * Update Screen Yahoo plugin
