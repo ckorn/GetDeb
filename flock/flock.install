@@ -1,4 +1,0 @@
-flock				usr/share
-debian/scripts/flock-browser	usr/bin
-debian/flock.xpm		usr/share/pixmaps
-debian/flock.desktop		usr/share/applications
