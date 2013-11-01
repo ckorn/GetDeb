@@ -1,0 +1,28 @@
+Source: qrcode
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               python-setuptools (>= 0.6b3),
+               python-all (>= 2.6.6-3)
+Standards-Version: 3.9.3
+Homepage: https://pypi.python.org/pypi/qrcode
+
+Package: python-qrcode
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends}
+Provides: ${python:Provides}
+X-Python-Versions: ${python:Versions}
+Description: QR Code image generator
+ This module uses image libraries, Python Imaging Library (PIL) by default, to
+ generate QR Codes.
+ .
+ What is a QR Code?
+ ==================
+ .
+ A Quick Response code is a two-dimensional pictographic code used for its fast
+ readability and comparatively large storage capacity. The code consists of
+ black modules arranged in a square pattern on a white background. The
+ information encoded can be made up of any kind of data (e.g., binary,
+ alphanumeric, or Kanji symbols)
