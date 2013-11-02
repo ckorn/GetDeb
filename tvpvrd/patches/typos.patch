@@ -1,8 +1,8 @@
 Fix some typos.
-Index: tvpvrd-4.4.3/README
+Index: tvpvrd-4.4.5/README
 ===================================================================
---- tvpvrd-4.4.3.orig/README	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/README	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/README	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/README	2013-11-02 16:17:08.839361658 +0100
 @@ -107,7 +107,7 @@
    build will most likely be different)
  
@@ -12,11 +12,11 @@ Index: tvpvrd-4.4.3/README
    Since each recording can also be transcoded (from the original MP2 format to
    a more efficient MP4 formst using ffmpeg) the profile to use for this
    transcoding is by default the 'normal' profile. This profile determines the
-Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1
+Index: tvpvrd-4.4.5/docs/manpages/tvpvrd.1
 ===================================================================
---- tvpvrd-4.4.3.orig/docs/manpages/tvpvrd.1	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/docs/manpages/tvpvrd.1	2013-09-13 19:19:16.760329308 +0200
-@@ -2592,7 +2592,7 @@
+--- tvpvrd-4.4.5.orig/docs/manpages/tvpvrd.1	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/docs/manpages/tvpvrd.1	2013-11-02 16:17:08.843361658 +0100
+@@ -2635,7 +2635,7 @@
  .nf
  0 = Add date, e\&.g\&. "myrec_2012\-11\-22"
  1 = Number and total number of recordings, e\&.g\&. "myrec_02\-12"
@@ -25,7 +25,7 @@ Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1
  .fi
  .if n \{\
  .RE
-@@ -2881,7 +2881,7 @@
+@@ -2928,7 +2928,7 @@
  .PP
  \*(Aq\fBwt\fR\*(Aq \- \fBList all transcoding waiting to start\fR
  .RS 4
@@ -34,10 +34,10 @@ Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1
  .sp
  The listing uses the same format as the
  \fBot\fR
-Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1.html
+Index: tvpvrd-4.4.5/docs/manpages/tvpvrd.1.html
 ===================================================================
---- tvpvrd-4.4.3.orig/docs/manpages/tvpvrd.1.html	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/docs/manpages/tvpvrd.1.html	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/docs/manpages/tvpvrd.1.html	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/docs/manpages/tvpvrd.1.html	2013-11-02 16:17:08.843361658 +0100
 @@ -1130,7 +1130,7 @@
                                  card number is specified. The information shown is the name of the
                                  card, driver and driver version.</p><p><span class="bold"><strong>Output example:</strong></span></p><pre class="screen">Card 00: Hauppauge WinTV PVR-350, driver=ivtv v1.4.1
@@ -47,10 +47,10 @@ Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1.html
                                  This command will generate a list of all transcoding that are
                                  waiting..</p><p>The listing uses the same format as the <span class="command"><strong>ot</strong></span>
                              command and contains (in order from left to right)</p><p>1. Sequence number</p><p>2. Time when item was enqueued</p><p>3. How long (hh:mm) the item has been waiting to be
-Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1.xml
+Index: tvpvrd-4.4.5/docs/manpages/tvpvrd.1.xml
 ===================================================================
---- tvpvrd-4.4.3.orig/docs/manpages/tvpvrd.1.xml	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/docs/manpages/tvpvrd.1.xml	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/docs/manpages/tvpvrd.1.xml	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/docs/manpages/tvpvrd.1.xml	2013-11-02 16:17:08.843361658 +0100
 @@ -2446,7 +2446,7 @@
                                  role="bold">List all transcoding waiting to start</emphasis></term>
                          <listitem>
@@ -60,11 +60,11 @@ Index: tvpvrd-4.4.3/docs/manpages/tvpvrd.1.xml
                                  This command will generate a list of all transcoding that are
                                  waiting..</para>
                              <para>The listing uses the same format as the <command>ot</command>
-Index: tvpvrd-4.4.3/src/libsmtpmail/mailclientlib.c
+Index: tvpvrd-4.4.5/src/libsmtpmail/mailclientlib.c
 ===================================================================
---- tvpvrd-4.4.3.orig/src/libsmtpmail/mailclientlib.c	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/src/libsmtpmail/mailclientlib.c	2013-09-13 19:19:16.760329308 +0200
-@@ -353,7 +353,7 @@
+--- tvpvrd-4.4.5.orig/src/libsmtpmail/mailclientlib.c	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/src/libsmtpmail/mailclientlib.c	2013-11-02 16:17:08.843361658 +0100
+@@ -395,7 +395,7 @@
  }
  
  /**
@@ -73,10 +73,10 @@ Index: tvpvrd-4.4.3/src/libsmtpmail/mailclientlib.c
   * in the supplied reply list
   * @param handle
   * @param cmd Command
-Index: tvpvrd-4.4.3/src/transc.c
+Index: tvpvrd-4.4.5/src/transc.c
 ===================================================================
---- tvpvrd-4.4.3.orig/src/transc.c	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/src/transc.c	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/src/transc.c	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/src/transc.c	2013-11-02 16:17:08.847361658 +0100
 @@ -114,7 +114,7 @@
  
  /**
@@ -122,10 +122,10 @@ Index: tvpvrd-4.4.3/src/transc.c
  
              pthread_mutex_lock(&recs_mutex);
              forget_waiting_transcoding(rid);
-Index: tvpvrd-4.4.3/src/tvpowerd/tvpowerd.c
+Index: tvpvrd-4.4.5/src/tvpowerd/tvpowerd.c
 ===================================================================
---- tvpvrd-4.4.3.orig/src/tvpowerd/tvpowerd.c	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/src/tvpowerd/tvpowerd.c	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/src/tvpowerd/tvpowerd.c	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/src/tvpowerd/tvpowerd.c	2013-11-02 16:17:08.847361658 +0100
 @@ -4,7 +4,7 @@
   *              from the tvpvrd. This watcher daemon communicates with
   *              the tvpvrd and if the server running tvpvrd has nothing
@@ -135,10 +135,10 @@ Index: tvpvrd-4.4.3/src/tvpowerd/tvpowerd.c
   *              down the server. Since this watcher knows when the next
   *              recording starts it will then wake up the server at an
   *              appropriate time.
-Index: tvpvrd-4.4.3/src/tvpowerd/tvpowerd.h
+Index: tvpvrd-4.4.5/src/tvpowerd/tvpowerd.h
 ===================================================================
---- tvpvrd-4.4.3.orig/src/tvpowerd/tvpowerd.h	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/src/tvpowerd/tvpowerd.h	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/src/tvpowerd/tvpowerd.h	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/src/tvpowerd/tvpowerd.h	2013-11-02 16:17:08.847361658 +0100
 @@ -4,7 +4,7 @@
   *              from the tvpvrd. This watcher daemon communicates with
   *              the tvpvrd and if the server running tvpvrd has nothing
@@ -148,10 +148,10 @@ Index: tvpvrd-4.4.3/src/tvpowerd/tvpowerd.h
   *              down the server. Since this watcher knows when the next
   *              recording starts it will then wake up the server at an
   *              appropriate time.
-Index: tvpvrd-4.4.3/src/vctrl.c
+Index: tvpvrd-4.4.5/src/vctrl.c
 ===================================================================
---- tvpvrd-4.4.3.orig/src/vctrl.c	2013-09-13 19:19:16.760329308 +0200
-+++ tvpvrd-4.4.3/src/vctrl.c	2013-09-13 19:19:16.760329308 +0200
+--- tvpvrd-4.4.5.orig/src/vctrl.c	2013-11-02 16:17:08.851361658 +0100
++++ tvpvrd-4.4.5/src/vctrl.c	2013-11-02 16:17:08.847361658 +0100
 @@ -925,11 +925,11 @@
  
      // First some sanity check on the parameters
