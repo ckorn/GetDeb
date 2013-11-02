@@ -2,10 +2,10 @@ Description: Removing jarfiles which contain MacOSX-related classes, build
 fails looking for missing classes. This patch fixes it.
 Author: Gabriele Giacone <1o5g4r8o@gmail.com>
 
-Index: sweethome3d-4.1/src/com/eteks/sweethome3d/tools/OperatingSystem.java
+Index: sweethome3d-4.2/src/com/eteks/sweethome3d/tools/OperatingSystem.java
 ===================================================================
---- sweethome3d-4.1.orig/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2013-06-04 19:32:37.430569303 +0200
-+++ sweethome3d-4.1/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2013-06-04 19:32:37.426569303 +0200
+--- sweethome3d-4.2.orig/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2013-11-02 15:36:24.591382526 +0100
++++ sweethome3d-4.2/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2013-11-02 15:36:24.583382526 +0100
 @@ -33,7 +33,7 @@
  import java.util.TimerTask;
  import java.util.UUID;
@@ -15,7 +15,7 @@ Index: sweethome3d-4.1/src/com/eteks/sweethome3d/tools/OperatingSystem.java
  import com.eteks.sweethome3d.model.Home;
  
  /**
-@@ -388,9 +388,10 @@
+@@ -410,9 +410,10 @@
     */
    public static File getDefaultApplicationFolder() throws IOException {
      File userApplicationFolder; 
@@ -28,7 +28,7 @@ Index: sweethome3d-4.1/src/com/eteks/sweethome3d/tools/OperatingSystem.java
        userApplicationFolder = new File(System.getProperty("user.home"), "Application Data");
        // If user Application Data directory doesn't exist, use user home
        if (!userApplicationFolder.exists()) {
-@@ -411,10 +412,10 @@
+@@ -433,10 +434,10 @@
     * This class requires some classes of <code>com.apple.eio</code> package  
     * to compile.
     */
@@ -41,11 +41,11 @@ Index: sweethome3d-4.1/src/com/eteks/sweethome3d/tools/OperatingSystem.java
 -  }
 +  } */
  }
-Index: sweethome3d-4.1/src/com/eteks/sweethome3d/SweetHome3D.java
+Index: sweethome3d-4.2/src/com/eteks/sweethome3d/SweetHome3D.java
 ===================================================================
---- sweethome3d-4.1.orig/src/com/eteks/sweethome3d/SweetHome3D.java	2013-06-04 19:32:37.430569303 +0200
-+++ sweethome3d-4.1/src/com/eteks/sweethome3d/SweetHome3D.java	2013-06-04 19:32:37.426569303 +0200
-@@ -460,7 +460,6 @@
+--- sweethome3d-4.2.orig/src/com/eteks/sweethome3d/SweetHome3D.java	2013-11-02 15:36:24.591382526 +0100
++++ sweethome3d-4.2/src/com/eteks/sweethome3d/SweetHome3D.java	2013-11-02 15:36:24.587382526 +0100
+@@ -466,7 +466,6 @@
      }
      if (OperatingSystem.isMacOSX()) {
        // Bind to application menu at last
