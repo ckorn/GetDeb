@@ -1,3 +1,11 @@
+libgnome2-vte-perl (0.11-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+  * RT#89113 - Use v2 of CPAN::Meta::Spec in Makefile.PL; this adds the "nice
+    bits" to MetaCPAN (git clone URL, project homepage URL, etc.)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 02 Nov 2013 14:51:47 +0100
+
 libgnome2-vte-perl (0.10-1~getdeb2~precise) precise; urgency=low
 
   * Rebuild for precise.
