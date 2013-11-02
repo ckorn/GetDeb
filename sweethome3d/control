@@ -12,7 +12,8 @@ Build-Depends-Indep: icedtea-netx-common,
                      libjava3d-java,
                      libsunflow-java (>= 0.07.2.svn396+dfsg-9),
                      libbatik-java,
-                     openjdk-6-jdk | openjdk-7-jdk | sun-java6-jdk
+                     openjdk-6-jdk | openjdk-7-jdk | sun-java6-jdk,
+                     default-jre-headless
 Standards-Version: 3.9.3
 Homepage: http://www.sweethome3d.com/
 
