@@ -1,3 +1,57 @@
+remotebox (1.6-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+    - This version brings VirtualBox 4.3.x support and drops support for the
+      VirtualBox 4.2.x branch
+    - Rebased from GTK 2.22 to GTK 2.24 as a minimum requirement
+    - Default rdesktop preference now enables guest sound support and
+    clipboard
+      sharing.
+      rdesktop -r sound:local -r clipboard:PRIMARYCLIPBOARD -T "%n -
+      RemoteBox" %h:%p
+    - Added preference to automatically add the VBoxAdditions.iso to the
+    Virtual
+      Media Manager when connecting to a server.
+    - Added USB Multi-Touch pointing device support
+    - Added RemoteBox preference to set the default RDP Port range for new
+    guests
+    - Added Discard Saved State toolbutton and menu option
+    - Added Clear Connection History menu item to the File menu
+    - Added configuration evaulation option to the tools menu of the edit
+    settings
+      dialog. It evaluates the current guest settings and makes
+      recommendations.
+    - Added support for attaching SCSI and SAS CD/DVDs to guests
+    - Added auto-hint resolution option to preferences
+    - Refreshed guest operating system icons
+    - Now sets the default RDP port range for new guests created with
+    RemoteBox to
+      3389-4389, instead of a random port. This makes firewall configuration
+      easier
+      and VirtualBox will automatically use the next free port to avoid
+      conflicts
+    - Fixed exception when reading an empty or non-existant guest log
+    - Fixed double-line spacing when showing huest logs from Windows servers
+    - Fixed a bug when releasing DVD or Floppy media from the VMM. It no
+    longer
+      removes the virtual floppy or dvd drive, but just ejects the floppy or
+      dvd
+      image.
+    - Fixed several bugs when editing the host-only networks - some outdated
+    API
+      calls were being used which generated an exception
+    - Fixed some path handling bugs affecting Windows
+    - Moved hardware virtualization exlusive option from guest settings to
+    the
+      VirtualBox preferences as it's now a global option in VirtualBox
+    - Dropped WinMM audio. Guests using this will automatically be mapped to
+    the
+      Null audio driver and can't be manually changed to DirectSound if
+      required
+    - Various GUI tweaks and code optimisations
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 02 Nov 2013 15:10:55 +0100
+
 remotebox (1.5-1~getdeb2) raring; urgency=low
 
   * Add missing desktop file and icon

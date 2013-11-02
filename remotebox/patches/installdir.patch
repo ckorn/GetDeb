@@ -1,121 +1,22 @@
 # patch the source to find the installation directory
-Index: remotebox-1.5/remotebox
+Index: remotebox-1.6/remotebox
 ===================================================================
---- remotebox-1.5.orig/remotebox	2012-11-25 13:31:21.000000000 +0100
-+++ remotebox-1.5/remotebox	2013-10-05 14:51:14.434287788 +0200
-@@ -8,7 +8,7 @@
- use File::Basename;
+--- remotebox-1.6.orig/remotebox	2013-11-02 15:14:26.791393777 +0100
++++ remotebox-1.6/remotebox	2013-11-02 15:17:59.703391959 +0100
+@@ -9,13 +9,13 @@
  use File::Spec;
  use MIME::Base64;
+ # *** PACKAGERS MAY WISH TO PATCH THIS LOCATION ***
 -use lib "$Bin/share/remotebox";
 +use lib "/usr/share/remotebox";
+ # *************************************************
  use vboxService qw($endpoint $fault :all);
+ 
+ # *** PACKAGERS MAY WISH TO PATCH THESE LOCATIONS ***
+-our $sharedir = "$Bin/share/remotebox";
+-our $docdir   = "$Bin/docs";
++our $sharedir = "/usr/share/remotebox";
++our $docdir   = "/usr/share/doc/remotebox";
+ # ***************************************************
+ 
  require 'vboxserializers.pl';
- require 'rbox_lists.pl';
-@@ -581,7 +581,7 @@
-         if (!defined($osfamily{$$type{familyId}})) {
-             $osfamily{$$type{familyId}} = {};
-             $osfamily{$$type{familyId}}{verids} = ();
--            $osfamily{$$type{familyId}}{icon} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/os/$$type{familyId}.png");
-+            $osfamily{$$type{familyId}}{icon} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/os/$$type{familyId}.png");
-         }
- 
-         $osfamily{$$type{familyId}}{description} = $$type{familyDescription};
-@@ -612,7 +612,7 @@
-         $osversion{$$type{id}}{recommended2DVideoAcceleration} = $$type{recommended2DVideoAcceleration};
-         $osversion{$$type{id}}{recommendedAudioController} = $$type{recommendedAudioController};
-         $osversion{$$type{id}}{familyId} = $$type{familyId};
--        if (-e "$Bin/share/remotebox/icons/os/$$type{id}.png") { $osversion{$$type{id}}{icon} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/os/$$type{id}.png"); }
-+        if (-e "$Bin/share/remotebox/icons/os/$$type{id}.png") { $osversion{$$type{id}}{icon} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/os/$$type{id}.png"); }
-         else { $osversion{$$type{id}}{icon} = $gui{img}{OtherOS}; }
-     }
- }
-Index: remotebox-1.5/share/remotebox/rbox_gui_init.pl
-===================================================================
---- remotebox-1.5.orig/share/remotebox/rbox_gui_init.pl	2012-09-18 06:33:58.000000000 +0200
-+++ remotebox-1.5/share/remotebox/rbox_gui_init.pl	2013-10-05 14:57:39.238284502 +0200
-@@ -4,7 +4,7 @@
- use Gtk2 -init;
- 
- my $builder = Gtk2::Builder->new;
--$builder->add_from_file("$Bin/share/remotebox/remotebox.xml");
-+$builder->add_from_file("/usr/share/remotebox/remotebox.xml");
- $builder->connect_signals();
- 
- our %gui = (textbufferEditGenDescription         => $builder->get_object('textbufferEditGenDescription'),
-@@ -20,42 +20,42 @@
-             websn                                => undef);
- 
- # Guest Status
--$gui{img}{Aborted} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Aborted.png");
--$gui{img}{Discarding} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Discarding.png");
--$gui{img}{Error} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Error.png");
--$gui{img}{FaultTolerantSyncing} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Misc.png");
--$gui{img}{LiveSnapshotting} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Misc.png");
--$gui{img}{Paused} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Paused.png");
--$gui{img}{PoweredOff} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/PoweredOff.png");
--$gui{img}{Restoring} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Restoring.png");
--$gui{img}{Running} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
--$gui{img}{Saved} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Saved.png");
--$gui{img}{Saving} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Saving.png");
--$gui{img}{Starting} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
--$gui{img}{Stuck} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Stuck.png");
--$gui{img}{Teleported} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/PoweredOff.png");
--$gui{img}{TeleportIn} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Misc.png");
--$gui{img}{TeleportingPausedVM} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Paused.png");
--$gui{img}{DeletingSnapshotOnline} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Misc.png");
--$gui{img}{DeletingSnapshotPaused} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Misc.png");
--$gui{img}{RestoringSnapshot} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Restoring.png");
--$gui{img}{DeletingSnapshot} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Misc.png");
--$gui{img}{SettingUp} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
--$gui{img}{FirstOnline} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
--$gui{img}{LastOnline} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
--$gui{img}{FirstTransient} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
--$gui{img}{LastTransient} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{Aborted} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Aborted.png");
-+$gui{img}{Discarding} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Discarding.png");
-+$gui{img}{Error} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Error.png");
-+$gui{img}{FaultTolerantSyncing} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Misc.png");
-+$gui{img}{LiveSnapshotting} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Misc.png");
-+$gui{img}{Paused} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Paused.png");
-+$gui{img}{PoweredOff} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/PoweredOff.png");
-+$gui{img}{Restoring} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Restoring.png");
-+$gui{img}{Running} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{Saved} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Saved.png");
-+$gui{img}{Saving} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Saving.png");
-+$gui{img}{Starting} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{Stuck} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Stuck.png");
-+$gui{img}{Teleported} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/PoweredOff.png");
-+$gui{img}{TeleportIn} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Misc.png");
-+$gui{img}{TeleportingPausedVM} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Paused.png");
-+$gui{img}{DeletingSnapshotOnline} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Misc.png");
-+$gui{img}{DeletingSnapshotPaused} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Misc.png");
-+$gui{img}{RestoringSnapshot} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Restoring.png");
-+$gui{img}{DeletingSnapshot} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Misc.png");
-+$gui{img}{SettingUp} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{FirstOnline} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{LastOnline} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{FirstTransient} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
-+$gui{img}{LastTransient} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/gueststatus/Running.png");
- # Storage Icons
--$gui{img}{HardDisk} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/hd_16px.png");
--$gui{img}{DVD} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/cd_16px.png");
--$gui{img}{Floppy} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/fd_16px.png");
--$gui{img}{ctr}{IDE} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/ide_16px.png");
--$gui{img}{ctr}{SATA} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/sata_16px.png");
-+$gui{img}{HardDisk} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/hd_16px.png");
-+$gui{img}{DVD} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/cd_16px.png");
-+$gui{img}{Floppy} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/fd_16px.png");
-+$gui{img}{ctr}{IDE} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/ide_16px.png");
-+$gui{img}{ctr}{SATA} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/sata_16px.png");
- $gui{img}{ctr}{SAS} = $gui{img}{ctr}{SATA};
--$gui{img}{ctr}{SCSI} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/scsi_16px.png");
--$gui{img}{ctr}{Floppy} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/floppy_16px.png");
-+$gui{img}{ctr}{SCSI} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/scsi_16px.png");
-+$gui{img}{ctr}{Floppy} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/floppy_16px.png");
- # OS Icons
--$gui{img}{OtherOS} = Gtk2::Gdk::Pixbuf->new_from_file("$Bin/share/remotebox/icons/os/Other.png");
-+$gui{img}{OtherOS} = Gtk2::Gdk::Pixbuf->new_from_file("/usr/share/remotebox/icons/os/Other.png");
- 
- our %prefs;
- 
