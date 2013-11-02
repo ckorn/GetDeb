@@ -7,10 +7,10 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
-Index: fotoxx-13.10/Makefile
+Index: fotoxx-13.11/Makefile
 ===================================================================
---- fotoxx-13.10.orig/Makefile	2013-10-05 20:16:02.978121405 +0200
-+++ fotoxx-13.10/Makefile	2013-10-05 20:16:02.974121405 +0200
+--- fotoxx-13.11.orig/Makefile	2013-11-02 13:47:15.715438437 +0100
++++ fotoxx-13.11/Makefile	2013-11-02 13:47:15.707438437 +0100
 @@ -13,7 +13,7 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -20,7 +20,7 @@ Index: fotoxx-13.10/Makefile
  MANDIR = $(PREFIX)/share/man/man1
  MENUFILE = $(PREFIX)/share/applications/fotoxx.desktop
  
-@@ -76,7 +76,6 @@
+@@ -77,7 +77,6 @@
  	rm -f -R  $(DESTDIR)$(SHAREDIR)
  	rm -f -R  $(DESTDIR)$(DOCDIR)
  	rm -f  $(DESTDIR)$(MANDIR)/fotoxx.1.gz
@@ -28,7 +28,7 @@ Index: fotoxx-13.10/Makefile
  	rm -f  $(DESTDIR)$(MENUFILE)
  	mkdir -p  $(DESTDIR)$(BINDIR)
  	mkdir -p  $(DESTDIR)$(DATADIR)
-@@ -98,14 +97,12 @@
+@@ -99,14 +98,12 @@
  	rm -f fotoxx.1.gz
  	# menu (desktop) file
  	cp -f desktop $(DESTDIR)$(MENUFILE)

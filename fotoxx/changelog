@@ -1,3 +1,31 @@
+fotoxx (13.11-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + File Sync: image navigation and viewing is now allowed, but not
+    editing.
+    + Batch Convert: upright "sideways" photos made with camera turned 90
+    deg.
+    + Slide Show: improved capability for automatic pause at designated
+    images.
+    + Warp Linear: algorithm was revised to better approximate linearity.
+    + New: Highlight darkest/brightest image areas with adjustable
+    threshholds.
+    + Select Area: expand or contract a finished area in 1-pixel steps.
+      (can reduce edge effects when editing areas selected by color
+      matching).
+    + Mashup: interface improved to simplify and speed up image positioning. 
+    + Mashup: mouse can "paint" variable transparency on images in the
+    layout.
+    + User Settings: new option to include hidden files in the gallery pages.
+    + Trim/Rotate: grid lines match the trim rectangle (rule of thirds
+    works).
+    + Zoom state is retained for Open Previous File, but reset otherwise.
+    + Bugfix: Trim/Rotate removed black rotate margins that were intentional.
+    + Bugfix: Trim/Rotate failed to reinstate its prior grid settings.
+    + Bugfix: Auto-Trim caused an endless loop under certain circumstances.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 02 Nov 2013 13:46:05 +0100
+
 fotoxx (13.10-1~getdeb1) precise; urgency=low
 
   * New upstream version
