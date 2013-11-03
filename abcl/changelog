@@ -1,3 +1,66 @@
+abcl (1.2.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Version 1.2.1
+    =============
+    http//abcl.org/svn/tags/abcl/1.2.1/CHANGES
+    27 June 2013
+    http://abcl.org/releases/1.2.1
+
+    *  Tested:  orcl-jdk-1.7.0_21 orcl-jdk-1.6.0_43
+
+    ** ansi tests rc-2 failing 11-13 of 21708 total.  
+       Some regressions since 1.1.1
+
+    *  Stablility fixes; additional Quicklisp compatibility
+
+    ** Fix (make-instance 'standard-generic-function)
+
+
+    Version 1.2.0
+    =============
+    http//abcl.org/svn/tags/1.2.0/abcl/CHANGES
+    released at ECLM 2013 Madrid, ES // 01 June 2013 
+
+       * Package local nicknames to behave like SBCL
+
+       * ASDF 3.0.1 is now shipped with the implementation
+
+       * a more robust MOP implementation
+
+       * Common cases of creating purely synthetic JAVA:JNEW-RUNTIME-CLASS
+         now (mostly) work.  Please report corner cases for fixing.
+
+       * the system autoloader has been extended to cover functions bound to
+         symbol properties
+
+    Issues Resolved
+    ---------------
+
+    [#200]   ABCL compiler fails to produce loadable fasl for XPATH          
+               
+    [#321]   ASDF 3.01 
+    [#256]   Compilation failure in com.informatimago
+    [#274]   compiling "com.informatimago.common-lisp.cesarum") hangs [> 10
+    minutes]
+    [#153]
+     [#32]   Modify the currently disabled runtime-class.lisp code to not
+     require ASM
+    [#152]   ql:closer-mop doesn't work
+    [#203]   Failure as build host for SBCL            
+    [#300]   Gray streams aren't streams
+    [#302]   Symbols fail to autoload
+    [#303]   CL:LOAD ignores :EXTERNAL-FORMAT argument
+    [#304]   Stack abstraction inconsistency between Java and Lisp frames
+    [#308]   Compiled FLET exhausts the stack
+    [#309]   Printer should obey package-local nicknames   
+    [#310]   Invocation of tests from from build.xml broken
+    [#311]   UIOP fails to upgrade
+    [#312]   BORDEAUX-THREADS-TEST::CONDITION-VARIABLE hangs
+    [#282]   Spurious macros redefinition warnings
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 03 Nov 2013 12:35:08 +0100
+
 abcl (1.1.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
