@@ -9,7 +9,7 @@ Homepage: http://common-lisp.net/project/armedbear
 Package: abcl
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-6-jre | sun-java6-jre,
+         openjdk-7-jre | openjdk-6-jre | sun-java6-jre,
          fontconfig
 Description: Common Lisp on the JVM
  ABCL is a full implementation of the Common Lisp
