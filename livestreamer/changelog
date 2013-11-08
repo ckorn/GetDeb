@@ -1,3 +1,54 @@
+livestreamer (1.7.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    CLI:
+     - Added a ``--player-no-close`` option.
+     - Added options to use HTTP proxies with ``--http-proxy`` and
+     ``--https-proxy``.
+     - It's now possible to specify multiple streams as a comma-separated
+       list. If a stream is not available the next one in the list will be
+       tried.
+     - Now only resolves synonyms once when using
+     ``--player-continuous-http``.
+     - Removed the ``-u`` shortcut for ``--plugins``. This is a response to
+     someone
+       spreading the misinformation that ``-url`` is a sane parameter to use.
+       It's technically valid, but due to the ``-u`` shortcut it would be
+       interpreted by Python's argparse as ``--plugins --rtmpdump l`` which
+       would cause livestreamer to look for a non-existing rtmpdump
+       executable,
+       thus disabling any RTMP streams. (#193)
+
+    Plugins:
+     - Added Afreeca.tv plugin.
+     - dailymotion: Fixed incorrect RTMP parameters. (#201)
+     - filmon: Updated after service changes. Patch by Athanasios Oikonomou.
+     (#205)
+     - ilive: Updated after service changes. (#200)
+     - livestream: Added support for HLS streams.
+     - livestream: Updated after service changes. (#195)
+     - mips: Updated after service changes. (#200)
+     - svtplay: Fixed some broken HDS streams. (#200)
+     - twitch: Updated to use the new HLS API.
+     - weeb: Updated after service changes. Patch by Athanasios Oikonomou.
+     (#207)
+     - youtube: Now handles 3D streams properly. (#202)
+
+    Stream:
+     - hds: Added support for global bootstraps.
+     - hls: Rewrote the playlist parser from scratch to be more solid and
+     correct
+       in accordance to the latest M3U8 spec.
+     - hls: Now supports playlists using EXT-X-BYTERANGE.
+     - hls: Now supports playlists using multiple EXT-X-KEY tags.
+     - hls: Now accepts extra requests parameters to be used when doing
+       HTTP requests.
+
+    Bug fixes:
+     - Fixed bytes-serialization when using ``--json``.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Nov 2013 18:58:42 +0100
+
 livestreamer (1.6.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
