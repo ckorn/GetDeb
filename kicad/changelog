@@ -1,3 +1,9 @@
+kicad (0.20130707+bzr4024-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 10 Nov 2013 00:02:37 +0100
+
 kicad (0.20130624+bzr4021-1~getdeb1) precise; urgency=low
 
   * New upstream version
