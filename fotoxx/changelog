@@ -1,3 +1,10 @@
+fotoxx (13.11.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: flatten brightness distribution not working for large images.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 11 Nov 2013 19:11:18 +0100
+
 fotoxx (13.11-1~getdeb1) precise; urgency=low
 
   * New upstream version
