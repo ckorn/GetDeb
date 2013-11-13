@@ -1,3 +1,9 @@
+songbird (2.0.0-1~getdeb3~saucy) saucy; urgency=low
+
+  * Remove debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 13 Nov 2013 18:40:44 +0100
+
 songbird (2.0.0-1~getdeb2~saucy) saucy; urgency=low
 
   * Rebuild for saucy.
