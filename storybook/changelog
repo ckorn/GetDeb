@@ -1,3 +1,9 @@
+storybook (4.0.9-1~getdeb2) precise; urgency=low
+
+  * Remove debian/watch file.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Nov 2013 18:31:23 +0100
+
 storybook (4.0.9-1~getdeb1) precise; urgency=low
 
   * New upstream version
