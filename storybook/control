@@ -9,7 +9,7 @@ Homepage: http://www.novelist.ch/joomla/
 Package: storybook
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-6-jre | sun-java5-jre | sun-java6-jre | java2-common
+         openjdk-7-jre | openjdk-6-jre | sun-java5-jre | sun-java6-jre | java2-common
 Description: Open Source Novel Writing Software
  Storybook is a scene-based software for all creative
  writers that helps to organize your story.
