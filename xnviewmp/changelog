@@ -1,3 +1,10 @@
+xnviewmp (0.61-1~getdeb2) precise; urgency=low
+
+  * Fix parameter expansion with $@
+  * Add mime types to desktop file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Nov 2013 18:28:26 +0100
+
 xnviewmp (0.61-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #1213263)

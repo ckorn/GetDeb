@@ -25,6 +25,6 @@ export LD_LIBRARY_PATH
 QT_PLUGIN_PATH=/usr/lib/xnviewmp:/usr/lib/xnviewmp/lib:/usr/lib/xnviewmp/lib/codecs:/usr/lib/xnviewmp/lib/imageformats:/usr/lib/xnviewmp/lib/phonon_backend:/usr/lib/xnviewmp/Plugins
 export QT_PLUGIN_PATH
 
-/usr/lib/xnviewmp/XnView $@
+/usr/lib/xnviewmp/XnView "$@"
 
 exit 0
