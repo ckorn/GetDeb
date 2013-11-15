@@ -1,3 +1,15 @@
+yad (0.24.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - add --auto-close option for multi-progress dialog
+    - add --image-path option
+    - add --no-clict option to list dialog
+    - allow clear text in text-info dialog with ^L
+    - new translations
+    - bug fixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 15 Nov 2013 18:51:43 +0100
+
 yad (0.23.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
