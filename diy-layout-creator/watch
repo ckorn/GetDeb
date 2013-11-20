@@ -1,0 +1,4 @@
+version=3
+opts="dversionmangle=s/0\.0\.0\+svn//" \
+https://code.google.com/p/diy-layout-creator/source/list \
+    (?:.*/)?detail\?r=([\d]+)

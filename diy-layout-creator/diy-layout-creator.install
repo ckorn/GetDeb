@@ -1,0 +1,8 @@
+diylc-swing/build/jar/lib/*.jar			usr/share/diy-layout-creator/lib
+diylc-swing/build/jar/library/main.jar		usr/share/diy-layout-creator/library
+diylc-swing/build/jar/diylc.jar			usr/share/diy-layout-creator
+diylc-swing/update.xml				usr/share/diy-layout-creator
+diylc-swing/themes				usr/share/diy-layout-creator
+diylc-swing/templates				usr/share/diy-layout-creator
+debian/scripts/diy-layout-creator		usr/bin
+debian/diy-layout-creator.desktop		usr/share/applications

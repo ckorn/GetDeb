@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#Start in user configuration directory 
+cd $HOME/.config/diylc
+
+#Create any missing user configuration directories
+if [ ! -d $HOME/.config/diylc ]
+then
+	mkdir ~/.config/diylc
+fi
+
+#themes
+if [ ! -d $HOME/.config/diylc/themes ]
+then
+	cp -a /usr/share/diy-layout-creator/themes $HOME/.config/diylc/themes
+fi
+
+#Move a mising update.xml file
+if [ ! -f $HOME/.config/diylc/update.xml ]
+then
+	cp /usr/share/diy-layout-creator/update.xml $HOME/.config/diylc/update.xml
+fi
+
+#Start DIYLC with parameter of diylc program directory
+java -Xms512m -Xmx2048m -Dorg.diylc.scriptRun=true -Duser.dir=/usr/share/diy-layout-creator -cp diylc.jar:lib org.diylc.DIYLCStarter 
+

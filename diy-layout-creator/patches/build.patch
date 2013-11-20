@@ -1,0 +1,18 @@
+# build a jar. not for mac.
+Index: diy-layout-creator-0.0.0+svn969/diylc-swing/build.xml
+===================================================================
+--- diy-layout-creator-0.0.0+svn969.orig/diylc-swing/build.xml	2013-11-20 19:23:44.112693314 +0100
++++ diy-layout-creator-0.0.0+svn969/diylc-swing/build.xml	2013-11-20 19:35:52.512687096 +0100
+@@ -1,4 +1,4 @@
+-<project name="diylc-swing" basedir="." default="mac">	
++<project name="diylc-swing" basedir="." default="jar">	
+ 	
+ 	<property name="src.dir" value="src" />
+ 
+@@ -108,4 +108,4 @@
+ 		</javadoc>
+ 	</target>
+ 
+-</project>
+\ No newline at end of file
++</project>

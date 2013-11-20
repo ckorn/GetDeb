@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=DIY Layout Creator
+Version=1.0
+Exec=/usr/bin/diy-layout-creator
+Comment=Electronic circuit layout designer for stripboards.
+Icon=diy-layout-creator
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=Graphics;
