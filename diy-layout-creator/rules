@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_build:
+	cd DIYLC && ant
+	cd diylc-core && ant
+	cd diylc-library && ant
+	cd diylc-swing && ant
+	cd Library && ant
+
+override_dh_install:
+	dh_install
+	cp diylc-swing/icons/drawing_utensils_48.png debian/diy-layout-creator/usr/share/pixmaps/diy-layout-creator.png

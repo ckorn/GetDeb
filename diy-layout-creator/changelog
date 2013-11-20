@@ -1,0 +1,5 @@
+diy-layout-creator (0.0.0+svn969-1~getdeb1) precise; urgency=low
+
+  * Initial release (LP: #1252003)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 20 Nov 2013 19:26:38 +0100

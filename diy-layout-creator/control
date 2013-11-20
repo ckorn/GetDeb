@@ -1,0 +1,25 @@
+Source: diy-layout-creator
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               ant,
+               openjdk-6-jdk
+Standards-Version: 3.9.3
+Homepage: https://code.google.com/p/diy-layout-creator/
+
+Package: diy-layout-creator
+Architecture: all
+Depends: openjdk-7-jre | openjdk-6-jre | java-runtime,
+         ${misc:Depends}
+Description: Free multi-platform schematic, layout and
+ guitar wiring diagram editor DIY Layout Creator (DIYLC in
+ short) is freeware drawing tool developed with help of a
+ large online community of DIY electronics enthusiasts. It
+ incorporates many ideas that came from people using older
+ versions of the application. The goal is to provide a
+ simple interface and enough power to let the user draw
+ schematics, board/chassis layouts and guitar wiring
+ diagrams quickly and without a steep learning curve.
+ Also, it is build around the flexible open source
+ framework that may be used to draw pretty much anything.
