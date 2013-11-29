@@ -1,3 +1,9 @@
+drawpile (0.7.0-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Nov 2013 18:15:24 +0100
+
 drawpile (0.6.0-1~getdeb4) karmic; urgency=low
 
   * Added debian/watch file

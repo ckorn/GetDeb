@@ -1,0 +1,14 @@
+# add missing includes and compile with position independent code
+Index: drawpile-0.7.0/CMakeLists.txt
+===================================================================
+--- drawpile-0.7.0.orig/CMakeLists.txt	2013-11-28 20:39:26.000000000 +0100
++++ drawpile-0.7.0/CMakeLists.txt	2013-11-29 18:53:02.857920074 +0100
+@@ -49,7 +49,7 @@
+ find_package ( ZLIB REQUIRED )
+ 
+ # Enable C++11
+-list(APPEND CMAKE_CXX_FLAGS "-std=c++11")
++list(APPEND CMAKE_CXX_FLAGS "-std=c++11 -fPIC -I/usr/include/qt5/QtNetwork/ -I/usr/include/qt5 -I/usr/include/qt5/QtCore/")
+ # GCC <4.7 may need this instead:
+ #list(APPEND CMAKE_CXX_FLAGS "-std=c++0x")
+ 

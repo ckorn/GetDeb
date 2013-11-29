@@ -2,13 +2,16 @@ Source: drawpile
 Section: graphics
 Priority: optional
 Maintainer: Christoph Korn <c_korn@gmx.de>
-Build-Depends: debhelper (>= 6),
- cmake, libqt4-dev, sharutils
-Standards-Version: 3.8.4
+Build-Depends: debhelper (>= 9),
+               cmake,
+               qtbase5-dev,
+               zlib1g-dev
+Standards-Version: 3.9.4
 Homepage: http://drawpile.sourceforge.net/
 
 Package: drawpile
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: OpenCanvas similar drawing program
  DrawPile is a collaborative drawing program, similar to OpenCanvas.
