@@ -1,3 +1,10 @@
+yad (0.24.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - fix parsing menu in notification dialog
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Nov 2013 21:39:18 +0100
+
 yad (0.24.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
