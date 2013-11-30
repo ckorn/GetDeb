@@ -16,6 +16,8 @@ Package: libcxx-gtk-utils-2-2.2-0
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: Programming GTK+ programs using C++
  c++-gtk-utils is a lightweight library containing a number
  of classes and functions for programming GTK+ programs
@@ -30,7 +32,9 @@ Architecture: any
 Depends: ${misc:Depends},
          libcxx-gtk-utils-2-2.2-0 (= ${binary:Version}),
          libcxx-gtk-utils-doc (= ${source:Version})
+Pre-Depends: ${misc:Pre-Depends}
 Section: libdevel
+Multi-Arch: same
 Description: Programming GTK+ programs using C++ (header files)
  c++-gtk-utils is a lightweight library containing a number
  of classes and functions for programming GTK+ programs
@@ -46,6 +50,7 @@ Package: libcxx-gtk-utils-doc
 Architecture: all
 Section: doc
 Depends: ${misc:Depends}
+Multi-Arch: foreign
 Description: Programming GTK+ programs using C++ (documentation)
  c++-gtk-utils is a lightweight library containing a number
  of classes and functions for programming GTK+ programs
