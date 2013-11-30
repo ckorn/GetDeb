@@ -1,0 +1,18 @@
+Author: Dmitry Shachnev <mitya57@gmail.com>
+Description: use system python-markdown
+Forwarded: not-needed
+Last-Update: 2013-04-04
+
+Index: calibre/src/calibre/library/comments.py
+===================================================================
+--- calibre.orig/src/calibre/library/comments.py	2013-10-14 11:55:06.400012719 +0200
++++ calibre/src/calibre/library/comments.py	2013-10-14 11:56:04.672012560 +0200
+@@ -12,7 +12,7 @@
+         CData, Comment, Declaration, ProcessingInstruction
+ from calibre import prepare_string_for_xml
+ from calibre.utils.html2text import html2text
+-from calibre.ebooks.markdown import Markdown
++from markdown import Markdown
+ 
+ # Hackish - ignoring sentences ending or beginning in numbers to avoid
+ # confusion with decimal points.

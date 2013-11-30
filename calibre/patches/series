@@ -1,0 +1,11 @@
+# cherrypicked from/accepted into trunk:
+
+# sent upstream
+
+# local packaging fixes
+no_updates_dialog.patch
+disable_plugins.py
+use-system-feedparser.patch
+python_multiarch_inc.patch
+use_system_markdown.patch
+dont_build_unrar_plugin.patch
