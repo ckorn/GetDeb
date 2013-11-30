@@ -1,3 +1,11 @@
+chmsee (1.3.1.1-1~getdeb2) precise; urgency=low
+
+  * Update debian/watch file to only look for a new
+    1.x version. The project is not maintained any more
+    and 2.x is not compatible because of missing xulrunner.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 30 Nov 2013 21:52:12 +0100
+
 chmsee (1.3.1.1-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #993597)
