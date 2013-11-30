@@ -1,3 +1,10 @@
+virt-manager (0.10.0-1~getdeb2) saucy; urgency=low
+
+  * Add patch "Switch AppIndicator code to use GObject introspection.":
+    https://git.fedorahosted.org/cgit/virt-manager.git/commit/?id=b9cb73ec472cd74687cb090424099bf888832208
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 30 Nov 2013 19:13:06 +0100
+
 virt-manager (0.10.0-1~getdeb1) saucy; urgency=low
 
   * New upstream version (LP: #1175076)

@@ -2,3 +2,4 @@
 more_helpful_error_message.patch
 use_ubuntu_package_names.patch
 uefi_support.patch
+b9cb73ec472cd74687cb090424099bf888832208.patch
