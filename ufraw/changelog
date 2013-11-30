@@ -1,3 +1,9 @@
+ufraw (0.19.2-1~getdeb2) precise; urgency=low
+
+  * Build with FITS support (LP: #1198398)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 30 Nov 2013 22:49:38 +0100
+
 ufraw (0.19.2-1~getdeb1) precise; urgency=low
 
   * Upload to GetDeb

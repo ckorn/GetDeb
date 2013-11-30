@@ -14,7 +14,8 @@ Build-Depends: debhelper (>= 9),
                liblensfun-dev (>= 0.2.5),
                libtiff-dev,
                perl,
-               zlib1g-dev
+               zlib1g-dev,
+               libcfitsio3-dev
 Standards-Version: 3.9.3
 Homepage: http://ufraw.sourceforge.net/
 
@@ -38,7 +39,8 @@ Description: standalone importer for raw camera images
 
 Package: ufraw-batch
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Suggests: ufraw
 Replaces: ufraw (<< 0.16-2)
 Description: batch importer for raw camera images
@@ -55,7 +57,9 @@ Description: batch importer for raw camera images
 
 Package: gimp-ufraw
 Architecture: any
-Depends: gimp (>= 2.2), ${misc:Depends}, ${shlibs:Depends}
+Depends: gimp (>= 2.2),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Conflicts: gimp-dcraw
 Suggests: ufraw
 Description: gimp importer for raw camera images
