@@ -1,0 +1,51 @@
+Source: virt-manager
+Section: admin
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+XSBC-Original-Maintainer: Debian Libvirt Maintainers <pkg-libvirt-
+Uploaders: Guido Günther <agx@sigxcpu.org>, Laurent Léonard <laurent@open-minds.org>
+Build-Depends: debhelper (>= 9),
+               python-all (>= 2.6.6-3~),
+               scrollkeeper,
+               intltool,
+               libglib2.0-bin
+Standards-Version: 3.9.4
+Homepage: http://virt-manager.et.redhat.com/
+
+Package: virt-manager
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-gtk2,
+         python-glade2,
+         python-gnome2,
+         python-dbus,
+         python-urlgrabber,
+         python-vte,
+         librsvg2-common,
+         python-libvirt (>= 0.7.1),
+         python-gtk-vnc (>= 0.3.8),
+         python-appindicator,
+         gir1.2-libvirt-glib-1.0,
+         python-ipaddr,
+         gir1.2-gtk-vnc-2.0,
+         python-spice-client-gtk,
+         gir1.2-spice-client-gtk-3.0
+Recommends: libvirt-bin (>= 0.4.6),
+            gnome-icon-theme
+Replaces: virtinst
+Conflicts: virtinst
+Suggests: virt-viewer,
+          ssh-askpass,
+          gnome-keyring,
+          python-gnomekeyring,
+          python-guestfs
+Description: desktop application for managing virtual machines
+ It presents a summary view of running domains and their live performance &
+ resource utilization statistics. A detailed view presents graphs showing
+ performance & utilization over time. Ultimately it will allow creation of new
+ domains, and configuration & adjustment of a domain's resource allocation &
+ virtual hardware.  Finally an embedded VNC client viewer presents a full
+ graphical console to the guest domain.
+ .
+ NOTE: the GUI is still considered experimental.

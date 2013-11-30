@@ -1,0 +1,239 @@
+Description: ugly hack to add a UEFI firmware option
+ This patch is an ugly hack to add an option in virt-manager for
+ installing a VM with the OVMF UEFI firmware. Ideally, for this to be
+ done in a clean way:
+ 1- qemu needs to be able to report what firmware it locates and supports
+ 2- the libvirt qemu driver needs to report that as capabilities
+ 3- virt-manager needs to probe for firmware via capabilities, and display
+    a dynamic list
+Author: Marc Deslauriers <marc.deslauriers@canonical.com>
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/virt-manager/+bug/1074207
+Forwarded: no, not ready
+
+Index: virt-manager-0.10.0/virtManager/create.py
+===================================================================
+--- virt-manager-0.10.0.orig/virtManager/create.py	2013-11-30 01:02:12.857938989 +0100
++++ virt-manager-0.10.0/virtManager/create.py	2013-11-30 01:02:55.405937723 +0100
+@@ -317,6 +317,13 @@
+         archList.add_attribute(text, 'text', 0)
+         archList.set_model(archModel)
+ 
++        loaderModel = Gtk.ListStore(str)
++        loaderList = self.widget("config-loader")
++        text = Gtk.CellRendererText()
++        loaderList.pack_start(text, True)
++        loaderList.add_attribute(text, 'text', 0)
++        loaderList.set_model(loaderModel)
++
+         hyperModel = Gtk.ListStore(str, str, str, bool)
+         hyperList = self.widget("config-hv")
+         text = Gtk.CellRendererText()
+@@ -699,6 +706,16 @@
+ 
+         arch_list.set_active(default)
+ 
++    def populate_loader(self):
++        loader_list = self.widget("config-loader")
++        model = loader_list.get_model()
++        model.clear()
++
++        model.append(['Default'])
++        model.append(['UEFI'])
++        default = 0
++        loader_list.set_active(default)
++
+     def populate_conn_list(self, urihint=None):
+         conn_list = self.widget("create-conn")
+         model = conn_list.get_model()
+@@ -1044,6 +1061,21 @@
+ 
+         return net_type, net_src, macaddr.strip()
+ 
++    def get_config_loader(self):
++        loader_list = self.widget("config-loader")
++        model = loader_list.get_model()
++
++        idx = loader_list.get_active()
++        if idx < 0:
++            return None
++
++        loader = model[idx][0]
++
++        if loader == 'UEFI':
++            return 'OVMF.fd'
++        else:
++            return None
++
+     def get_config_graphics_type(self):
+         return self.config.get_graphics_type()
+ 
+@@ -1404,9 +1436,10 @@
+         self.widget("create-finish").grab_focus()
+         self.populate_summary()
+ 
+-        # Repopulate the HV list, so we can make install method relevant
+-        # changes
++        # Repopulate the HV and loader lists, so we can make install method
++        # relevant changes
+         self.populate_hv()
++        self.populate_loader()
+ 
+         # Make sure the networking selection takes into account
+         # the install method, so we can warn if trying to PXE boot with
+@@ -1753,6 +1786,7 @@
+         self.guest.installer.type = self.capsdomain.hypervisor_type
+         self.guest.installer.os_type = self.capsguest.os_type
+         self.guest.installer.arch = self.capsguest.arch
++        self.guest.installer.loader = self.get_config_loader()
+ 
+         nettype, devname, macaddr = self.get_config_network_info()
+ 
+Index: virt-manager-0.10.0/virtManager/details.py
+===================================================================
+--- virt-manager-0.10.0.orig/virtManager/details.py	2013-11-30 01:02:12.857938989 +0100
++++ virt-manager-0.10.0/virtManager/details.py	2013-11-30 01:02:12.853938989 +0100
+@@ -2640,8 +2640,12 @@
+         self.widget("overview-hv").set_text(self.vm.get_pretty_hv_type())
+         arch = self.vm.get_arch() or _("Unknown")
+         emu = self.vm.get_emulator() or _("None")
++        loader = self.vm.get_loader() or _("Default")
++        if loader == "OVMF.fd":
++            loader = "UEFI"
+         self.widget("overview-arch").set_text(arch)
+         self.widget("overview-emulator").set_text(emu)
++        self.widget("overview-loader").set_text(loader)
+ 
+         # Operating System (ie. inspection data)
+         hostname = self.vm.inspection.hostname
+Index: virt-manager-0.10.0/virtManager/domain.py
+===================================================================
+--- virt-manager-0.10.0.orig/virtManager/domain.py	2013-11-30 01:02:12.857938989 +0100
++++ virt-manager-0.10.0/virtManager/domain.py	2013-11-30 01:02:12.853938989 +0100
+@@ -970,6 +970,8 @@
+         return self._get_guest().installer.init
+     def get_emulator(self):
+         return self._get_guest().emulator
++    def get_loader(self):
++        return self._get_guest().installer.loader
+     def get_acpi(self):
+         return self._get_guest().features["acpi"]
+     def get_apic(self):
+Index: virt-manager-0.10.0/ui/vmm-create.ui
+===================================================================
+--- virt-manager-0.10.0.orig/ui/vmm-create.ui	2013-11-30 01:02:12.857938989 +0100
++++ virt-manager-0.10.0/ui/vmm-create.ui	2013-11-30 01:02:12.853938989 +0100
+@@ -2475,7 +2475,7 @@
+                                       <object class="GtkTable" id="table6">
+                                         <property name="visible">True</property>
+                                         <property name="can_focus">False</property>
+-                                        <property name="n_rows">2</property>
++                                        <property name="n_rows">3</property>
+                                         <property name="n_columns">3</property>
+                                         <property name="column_spacing">6</property>
+                                         <property name="row_spacing">6</property>
+@@ -2507,6 +2507,20 @@
+                                           </packing>
+                                         </child>
+                                         <child>
++                                          <object class="GtkLabel" id="label148">
++                                            <property name="visible">True</property>
++                                            <property name="can_focus">False</property>
++                                          </object>
++                                          <packing>
++                                            <property name="left_attach">2</property>
++                                            <property name="right_attach">3</property>
++                                            <property name="top_attach">2</property>
++                                            <property name="bottom_attach">3</property>
++                                            <property name="x_options"></property>
++                                            <property name="y_options"></property>
++                                          </packing>
++                                        </child>
++                                        <child>
+                                           <object class="GtkComboBox" id="config-arch">
+                                             <property name="visible">True</property>
+                                             <property name="can_focus">False</property>
+@@ -2535,6 +2549,20 @@
+                                           </packing>
+                                         </child>
+                                         <child>
++                                          <object class="GtkComboBox" id="config-loader">
++                                            <property name="visible">True</property>
++                                            <property name="can_focus">False</property>
++                                          </object>
++                                          <packing>
++                                            <property name="left_attach">1</property>
++                                            <property name="right_attach">2</property>
++                                            <property name="top_attach">2</property>
++                                            <property name="bottom_attach">3</property>
++                                            <property name="x_options">GTK_FILL</property>
++                                            <property name="y_options"></property>
++                                          </packing>
++                                        </child>
++                                        <child>
+                                           <object class="GtkLabel" id="label30">
+                                             <property name="visible">True</property>
+                                             <property name="can_focus">False</property>
+@@ -2564,6 +2592,21 @@
+                                             <property name="y_options">GTK_FILL</property>
+                                           </packing>
+                                         </child>
++                                        <child>
++                                          <object class="GtkLabel" id="label149">
++                                            <property name="visible">True</property>
++                                            <property name="can_focus">False</property>
++                                            <property name="xalign">1</property>
++                                            <property name="label" translatable="yes">_Firmware:</property>
++                                            <property name="use_underline">True</property>
++                                            <property name="mnemonic_widget">config-loader</property>
++                                          </object>
++                                          <packing>
++                                            <property name="top_attach">2</property>
++                                            <property name="bottom_attach">3</property>
++                                            <property name="x_options">GTK_FILL</property>
++                                          </packing>
++                                        </child>
+                                       </object>
+                                       <packing>
+                                         <property name="expand">True</property>
+Index: virt-manager-0.10.0/ui/vmm-details.ui
+===================================================================
+--- virt-manager-0.10.0.orig/ui/vmm-details.ui	2013-11-30 01:02:12.857938989 +0100
++++ virt-manager-0.10.0/ui/vmm-details.ui	2013-11-30 01:02:12.857938989 +0100
+@@ -1397,6 +1397,37 @@
+                                                 <property name="y_options">GTK_FILL</property>
+                                               </packing>
+                                             </child>
++                                            <child>
++                                              <object class="GtkLabel" id="overview-loader">
++                                                <property name="visible">True</property>
++                                                <property name="can_focus">False</property>
++                                                <property name="xalign">0</property>
++                                                <property name="label">foo</property>
++                                                <property name="selectable">True</property>
++                                              </object>
++                                              <packing>
++                                                <property name="left_attach">1</property>
++                                                <property name="right_attach">2</property>
++                                                <property name="top_attach">3</property>
++                                                <property name="bottom_attach">4</property>
++                                                <property name="x_options">GTK_FILL</property>
++                                                <property name="y_options">GTK_FILL</property>
++                                              </packing>
++                                            </child>
++                                            <child>
++                                              <object class="GtkLabel" id="label188">
++                                                <property name="visible">True</property>
++                                                <property name="can_focus">False</property>
++                                                <property name="xalign">1</property>
++                                                <property name="label" translatable="yes">Firmware:</property>
++                                              </object>
++                                              <packing>
++                                                <property name="top_attach">3</property>
++                                                <property name="bottom_attach">4</property>
++                                                <property name="x_options">GTK_FILL</property>
++                                                <property name="y_options">GTK_FILL</property>
++                                              </packing>
++                                            </child>
+                                           </object>
+                                         </child>
+                                       </object>

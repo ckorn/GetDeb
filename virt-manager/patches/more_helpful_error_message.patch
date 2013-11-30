@@ -1,0 +1,17 @@
+=== modified file 'virtManager/manager.py'
+Index: virt-manager-0.10.0/virtManager/manager.py
+===================================================================
+--- virt-manager-0.10.0.orig/virtManager/manager.py	2013-11-29 23:47:27.586072414 +0100
++++ virt-manager-0.10.0/virtManager/manager.py	2013-11-29 23:47:27.574072415 +0100
+@@ -726,7 +726,10 @@
+                           "regular user. Try running as root.")
+                 show_errmsg = False
+             elif re.search(r"libvirt-sock", tb):
+-                hint += _("Verify that the 'libvirtd' daemon is running.")
++                hint += _("Verify that:\n" +
++                         " - The 'libvirt-bin' package is installed\n" +
++                         " - The 'libvirtd' daemon has been started" +
++                         (conn.is_qemu_system() and "\n - You are member of the 'libvirtd' group" or ''))
+                 show_errmsg = False
+ 
+         msg = _("Unable to connect to libvirt.")

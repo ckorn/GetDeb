@@ -1,0 +1,63 @@
+Description: fork earlier to work around global menu and appindicator issue
+Author: Marc Deslauriers <marc.deslauriers@ubuntu.com>
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/overlay-scrollbar/+bug/965318
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/virt-manager/+bug/973585
+Forwarded: No, needs a better fix before sending upstream
+
+Index: virt-manager-0.9.5/src/virt-manager.py.in
+===================================================================
+--- virt-manager-0.9.5.orig/src/virt-manager.py.in	2013-05-21 11:52:33.859135775 -0400
++++ virt-manager-0.9.5/src/virt-manager.py.in	2013-05-21 11:53:19.255136938 -0400
+@@ -261,6 +261,17 @@
+     gtk_error = None
+     origargs = " ".join(sys.argv[:])
+ 
++    # We need to fork before importing gtk so global menus and appindicator
++    # support works. Unfortunately, that means we need to parse the command
++    # line before gtk can strip out it's own options.
++    (options, ignore) = parse_commandline()
++    if not options.nofork and not options.debug:
++        drop_tty()
++        drop_stdio()
++
++        # Ignore SIGHUP, otherwise a serial console closing drops the whole app
++        signal.signal(signal.SIGHUP, signal.SIG_IGN)
++
+     # Urgh, pygtk merely logs a warning when failing to open
+     # the X11 display connection, and lets everything carry
+     # on as if all were fine. Ultimately bad stuff happens,
+@@ -285,9 +296,6 @@
+         gtk_error = e
+     warnings.resetwarnings()
+ 
+-    # Need to parse CLI after import gtk, since gtk strips --sync
+-    (options, ignore) = parse_commandline()
+-
+     # Only raise this error after parsing the CLI, so users at least
+     # get --help output and CLI validation
+     if gtk_error:
+@@ -324,9 +332,6 @@
+     dbus.mainloop.glib.threads_init()
+     import dbus.service
+ 
+-    # Specifically init config/gconf before the fork, so that pam
+-    # doesn't think we closed the app, therefor robbing us of
+-    # display access
+     import virtManager.config
+     import virtManager.util
+     config = virtManager.config.vmmConfig(appname, appversion, ui_dir,
+@@ -343,14 +348,6 @@
+     import virtManager.guidiff
+     virtManager.guidiff.is_gui(True)
+ 
+-    # Now we've got basic environment up & running we can fork
+-    if not options.nofork and not options.debug:
+-        drop_tty()
+-        drop_stdio()
+-
+-        # Ignore SIGHUP, otherwise a serial console closing drops the whole app
+-        signal.signal(signal.SIGHUP, signal.SIG_IGN)
+-
+     # Add our icon dir to icon theme
+     icon_theme = gtk.icon_theme_get_default()
+     icon_theme.prepend_search_path(icon_dir)

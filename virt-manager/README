@@ -1,0 +1,9 @@
+Access Control
+==============
+Access to the libvirt socket is controlled by membership in the "libvirt"
+group. If you want to manage virtual machines as non root you need to add your
+user to that group or you have to use the session uris like qemu:///session.
+
+See also /usr/share/doc/libvirt-bin/README.Debian.
+
+ -- Guido Guenther <agx@sigxcpu.org>  Thu, 04 Jun 2010 11:46:03 +0100

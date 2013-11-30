@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with python2
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	rm -rf build
+
+override_dh_auto_configure:
+	dh_auto_configure -- qemu-user=libvirt-qemu preferred-distros=ubuntu kvm-package-names=qemu-system libvirt-package-names=libvirt-bin askpass-package-names=ssh-askpass-gnome
+
