@@ -1,3 +1,29 @@
+fotoxx (13.12-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + The user interface has better flexibility for faster workflow:
+      + An edit function can be started without closing a prior function.
+        The prior edit status is used and an undo/redo position is added.
+      + Step through a series of new images with an open edit function. 
+        Apply the function to an image or pass over with the [next] button.
+      + Brightness and color functions can recall prior settings for faster 
+        application to other photos made under the same lighting conditions.
+    + RAW files now work like all other image files. Auto-copy to tiff-16
+      is no longer done. Edit as usual and save in the desired format. 
+    + Add Text: new option: retrieve and edit metadata caption/comments.
+    + Captions: new option: show metadata caption/comments above each image.
+    + Move Collections more flexible: any pathname segment can be replaced.
+    + Some intermediate files now use ramdisk for a small performance gain.
+    + Mashup: layout images can be moved in 1-pixel steps with KB arrow keys.
+    + Mashup: internal speedups, especially when painting transparency.
+    + New Slide Show transition type: double doors open from the middle.
+    + Log file output was made always current, like a terminal session.
+    + Bugfix: unsaved edits lost if [next] button used beyond the last file.
+    + Bugfix: curve nodes lost when reloading saved complex edit curves.
+    + Bugfix: Mashup: sometimes erratic overlay image corner drag behavior.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 Dec 2013 13:41:16 +0100
+
 fotoxx (13.11.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
