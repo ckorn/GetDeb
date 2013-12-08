@@ -1,3 +1,52 @@
+audio-recorder (1.4-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+    2013-12-06  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.4
+      * Replaced fixed size icons 16x16,...,64x64 with scalable svg images.
+      * Modified also also pixmap/audio-recorder-off-dot.svg,
+      audio-recorder-on-dot.svg, audio-recorder-paused-dot.svg. 
+
+    2013-11-23  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.3-3
+      * Language updates on Ukrainian(uk) and Chinese Simplified(zh_CN)
+      texts.
+      * Preliminary test on getting device list from GStreamer 1.x instead of
+      PulseAudio.
+      * Note: bumped version to 1.3-3. Build of version 1.3-2 failed.
+
+    2013-10-18  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.3-1
+      * zh_TW translation updates.
+
+    2013-10-12  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.3
+      * Final release for Ubuntu 13.10 (Saucy Salamander). 
+      * Some new translations.
+
+    2013-08-04  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.2
+      * First build for Ubuntu 13.10 (Saucy Salamander). 
+      * Renamed configure.in to configure.ac.
+
+    2013-05-11  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.1.2
+      * Updated audio-recorder.spec file for Fedora 19.
+      * Some language updates from Launchpad.net.
+
+    2013-05-11  Osmo Antero <osmoma@gmail.com>
+
+      * Version 1.1.1
+      * Fixed bug #1159341. Systray icon popped ON after reboot or logout.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Dec 2013 15:13:50 +0100
+
 audio-recorder (1.1-1~getdeb1) raring; urgency=low
 
   * New upstream version
