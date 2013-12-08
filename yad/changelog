@@ -1,3 +1,13 @@
+yad (0.25.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - add --menu option for notification icon
+    - add --maximized and --fullscreen options
+    - unify --listen option for different kind of dialogs
+    - replace --stdin option by --listen in icon dialog 
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Wed, 04 Dec 2013 20:15:13 +0100
+
 yad (0.24.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
