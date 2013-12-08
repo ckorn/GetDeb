@@ -1,3 +1,11 @@
+yad (0.25.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - use normal window hints for dialog windows
+    - fix menu in notification icon (issue #196)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Dec 2013 18:46:43 +0100
+
 yad (0.25.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
