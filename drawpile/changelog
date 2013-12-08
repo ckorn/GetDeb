@@ -1,3 +1,17 @@
+drawpile (0.7.1-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+     * Redesigned layer & user list boxes
+     * Redesigned chat box
+     * Support for layer blending modes
+     * Indirect drawing mode
+     * Text based file format (mainly for testing)
+     * Color picker history
+     * Right mouse button paints with background color
+     * Various bugfixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Dec 2013 15:34:34 +0100
+
 drawpile (0.7.0-1~getdeb1) saucy; urgency=low
 
   * New upstream version

@@ -1,9 +1,9 @@
 # add missing includes and compile with position independent code
-Index: drawpile-0.7.0/CMakeLists.txt
+Index: drawpile-0.7.1/CMakeLists.txt
 ===================================================================
---- drawpile-0.7.0.orig/CMakeLists.txt	2013-11-28 20:39:26.000000000 +0100
-+++ drawpile-0.7.0/CMakeLists.txt	2013-11-29 18:53:02.857920074 +0100
-@@ -49,7 +49,7 @@
+--- drawpile-0.7.1.orig/CMakeLists.txt	2013-12-08 15:35:20.030677946 +0100
++++ drawpile-0.7.1/CMakeLists.txt	2013-12-08 15:35:20.026677946 +0100
+@@ -48,7 +48,7 @@
  find_package ( ZLIB REQUIRED )
  
  # Enable C++11
