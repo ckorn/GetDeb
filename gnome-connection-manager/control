@@ -2,15 +2,20 @@ Source: gnome-connection-manager
 Section: gnome
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 7.0.50),
- python-support
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 9),
+               python-support
+Standards-Version: 3.9.3
 Homepage: http://kuthulu.com/gcm/
 
 Package: gnome-connection-manager
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, expect, python-gtk2,
- python-vte, python-gobject, python-glade2
+Depends: ${misc:Depends},
+         ${python:Depends},
+         expect,
+         python-gtk2,
+         python-vte,
+         python-gobject,
+         python-glade2
 Description: Tabbed ssh connection manager
  GNOME Connection Manager is a tabbed
  ssh connection manager for GTK+ environments.
