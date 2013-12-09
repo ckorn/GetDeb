@@ -1,3 +1,17 @@
+avidemux2.6 (1:2.6.7-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * [MKV] Fix seeking in h264
+    * [TS/H264] Split on NALU boundaries, it was off by one byte
+    * [TS/AAC] Add support for AAC/LC/SBR
+    * [MOV/MP4] Correct management of PCM/8Bits audio track
+    * [Images] Fixed import of bmp and jpg
+    * [Build] Support for newer cmake (ajschult)
+    * [Build] Better RPM generation (mit)
+    * [Auto/PSP] Fixed scripts (LJ)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 09 Dec 2013 18:19:02 +0100
+
 avidemux2.6 (1:2.6.6-1~getdeb1) precise; urgency=low
 
   * New upstream version

@@ -891,6 +891,11 @@ libADM_coreAudio6.so libavidemux2.6 #MINVER#
  _Z23ADM_identifyAudioStreamiPKhR9WAVHeaderRj@Base 1:2.6.0
  _Z24ADM_audioReorderChannelsjPfjP12CHANNEL_TYPES1_@Base 1:2.6.0
  _Z8dither16Pfjh@Base 1:2.6.0
+ _ZN10audioClock15advanceBySampleEj@Base 1:2.6.7
+ _ZN10audioClock9getTimeUsEv@Base 1:2.6.7
+ _ZN10audioClock9setTimeUsEm@Base 1:2.6.7
+ _ZN10audioClockC1Ej@Base 1:2.6.7
+ _ZN10audioClockC2Ej@Base 1:2.6.7
  _ZN15ADM_audioStream12getExtraDataEPjPPh@Base 1:2.6.0
  _ZN15ADM_audioStream13isLanguageSetEv@Base 1:2.6.6
  _ZN15ADM_audioStream18advanceDtsBySampleEj@Base 1:2.6.0
@@ -1217,11 +1222,6 @@ libADM_coreMuxer6.so libavidemux2.6 #MINVER#
  _Z22ADM_MuxerIndexFromNamePKc@Base 1:2.6.0
  _Z23ADM_MuxerSpawnFromIndexi@Base 1:2.6.0
  _Z28ADM_MuxerGetDefaultExtensioni@Base 1:2.6.0
- _ZN10audioClock15advanceBySampleEj@Base 1:2.6.0
- _ZN10audioClock9getTimeUsEv@Base 1:2.6.0
- _ZN10audioClock9setTimeUsEm@Base 1:2.6.0
- _ZN10audioClockC1Ej@Base 1:2.6.0
- _ZN10audioClockC2Ej@Base 1:2.6.0
  _ZN11muxerFFmpeg10closeMuxerEv@Base 1:2.6.0
  _ZN11muxerFFmpeg10setupMuxerEPKcS1_@Base 1:2.6.0
  _ZN11muxerFFmpeg11writePacketEP8AVPacket@Base 1:2.6.0
