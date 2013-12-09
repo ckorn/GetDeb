@@ -1,7 +1,8 @@
-Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
+# use english as the default language
+Index: gnome-connection-manager-1.1.0/gnome-connection-manager.glade
 ===================================================================
---- gnome-connection-manager-0.9.2.orig/gnome-connection-manager.glade	2010-10-27 18:29:44.435476004 +0200
-+++ gnome-connection-manager-0.9.2/gnome-connection-manager.glade	2010-10-27 18:30:06.925475998 +0200
+--- gnome-connection-manager-1.1.0.orig/gnome-connection-manager.glade	2012-06-26 03:19:13.000000000 +0200
++++ gnome-connection-manager-1.1.0/gnome-connection-manager.glade	2013-12-09 19:58:29.192744399 +0100
 @@ -38,7 +38,7 @@
  	  <child>
  	    <widget class="GtkMenuItem" id="menuitem1">
@@ -44,25 +45,133 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		      <property name="use_underline">True</property>
  		      <signal name="activate" handler="on_exportar_servidores1_activate" last_modification_time="Thu, 04 Feb 2010 20:24:04 GMT"/>
  
-@@ -132,7 +132,7 @@
+@@ -119,7 +119,7 @@
+ 		  <child>
+ 		    <widget class="GtkImageMenuItem" id="salir1">
+ 		      <property name="visible">True</property>
+-		      <property name="label" translatable="yes">_Salir</property>
++		      <property name="label" translatable="yes">_Quit</property>
+ 		      <property name="use_underline">True</property>
+ 		      <signal name="activate" handler="on_salir1_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+ 
+@@ -144,7 +144,7 @@
+ 	  <child>
+ 	    <widget class="GtkMenuItem" id="menuitem7">
+ 	      <property name="visible">True</property>
+-	      <property name="label" translatable="yes">_Editar</property>
++	      <property name="label" translatable="yes">_Edit</property>
+ 	      <property name="use_underline">True</property>
+           <child>
+             <widget class="GtkMenu" id="menuitem5_menu">
+@@ -152,7 +152,7 @@
+               <child>
+                 <widget class="GtkImageMenuItem" id="menuCopy">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Copiar</property>
++                  <property name="label" translatable="yes">Copy</property>
+                   <signal name="activate" handler="on_menuCopy_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+                   <child internal-child="image">
+                     <widget class="GtkImage" id="image36">
+@@ -171,7 +171,7 @@
+               <child>
+                 <widget class="GtkImageMenuItem" id="menuPaste">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Pegar</property>
++                  <property name="label" translatable="yes">Paste</property>
+                   <signal name="activate" handler="on_menuPaste_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+                   <child internal-child="image">
+                     <widget class="GtkImage" id="image36">
+@@ -190,7 +190,7 @@
+               <child>
+                 <widget class="GtkImageMenuItem" id="menuCopyPaste">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Copiar y Pegar</property>
++                  <property name="label" translatable="yes">Copy and Paste</property>
+                   <signal name="activate" handler="on_menuCopyPaste_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+                   <child internal-child="image">
+                     <widget class="GtkImage" id="image36">
+@@ -209,7 +209,7 @@
+               <child>
+                 <widget class="GtkImageMenuItem" id="menuSelectAll">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Seleccionar todo</property>
++                  <property name="label" translatable="yes">Select all</property>
+                   <signal name="activate" handler="on_menuSelectAll_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+                   <child internal-child="image">
+                     <widget class="GtkImage" id="image36">
+@@ -228,7 +228,7 @@
+               <child>
+                 <widget class="GtkImageMenuItem" id="menuCopyAll">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Copiar todo</property>
++                  <property name="label" translatable="yes">Copy all</property>
+                   <signal name="activate" handler="on_menuCopyAll_activate"  last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+                   <child internal-child="image">
+                     <widget class="GtkImage" id="image36">
+@@ -254,7 +254,7 @@
+               <child>
+                 <widget class="GtkMenuItem" id="menuitem9">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Comandos personalizados</property>
++                  <property name="label" translatable="yes">Custom commands</property>
+                   
+                   <child>
+                     <widget class="GtkMenu" id="menuCustomCommands"></widget>
+@@ -271,7 +271,7 @@
+ 	  <child>
+ 	    <widget class="GtkMenuItem" id="menuitem5">
+ 	      <property name="visible">True</property>
+-	      <property name="label" translatable="yes">_Ver</property>
++	      <property name="label" translatable="yes">_View</property>
+ 	      <property name="use_underline">True</property>
+           
+ 	      <child>
+@@ -279,7 +279,7 @@
+               <child>
+                 <widget class="GtkCheckMenuItem" id="show_toolbar">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Mostrar Toolbar</property>
++                  <property name="label" translatable="yes">Show Toolbar</property>
+                   <property name="active">True</property>
+                   <property name="use_underline">True</property>
+                   <signal name="toggled" handler="on_show_toolbar_toggled" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+@@ -289,7 +289,7 @@
+               <child>
+                 <widget class="GtkCheckMenuItem" id="show_panel">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">Mostrar Panel</property>
++                  <property name="label" translatable="yes">Show Panel</property>
+                   <property name="active">False</property>
+                   <property name="use_underline">True</property>
+                   <signal name="toggled" handler="on_show_panel_toggled" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+@@ -305,7 +305,7 @@
+ 	  <child>
+ 	    <widget class="GtkMenuItem" id="menuitem6">
+ 	      <property name="visible">True</property>
+-	      <property name="label" translatable="yes">_Servidores</property>
++	      <property name="label" translatable="yes">_Servers</property>
+ 	      <property name="use_underline">True</property>
+           <child>
+              <widget class="GtkMenu" id="menuServers"> 
+@@ -317,7 +317,7 @@
  	  <child>
  	    <widget class="GtkMenuItem" id="menuitem4">
  	      <property name="visible">True</property>
 -	      <property name="label" translatable="yes">Ay_uda</property>
 +	      <property name="label" translatable="yes">_Help</property>
  	      <property name="use_underline">True</property>
- 
  	      <child>
-@@ -141,7 +141,7 @@
- 		  <child>
- 		    <widget class="GtkMenuItem" id="acerca_de1">
- 		      <property name="visible">True</property>
--		      <property name="label" translatable="yes">A_cerca de</property>
-+		      <property name="label" translatable="yes">_About</property>
- 		      <property name="use_underline">True</property>
- 		      <signal name="activate" handler="on_acerca_de1_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
- 		    </widget>
-@@ -177,7 +177,7 @@
+               
+@@ -325,7 +325,7 @@
+               <child>
+                 <widget class="GtkMenuItem" id="acerca_de1">
+                   <property name="visible">True</property>
+-                  <property name="label" translatable="yes">A_cerca de</property>
++                  <property name="label" translatable="yes">_About</property>
+                   <property name="use_underline">True</property>
+                   <signal name="activate" handler="on_acerca_de1_activate" last_modification_time="Fri, 17 Jul 2009 21:52:05 GMT"/>
+                 </widget>
+@@ -363,7 +363,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnLocal">
  		  <property name="visible">True</property>
@@ -71,7 +180,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -265,7 +265,7 @@
+@@ -451,7 +451,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnConnect">
  		  <property name="visible">True</property>
@@ -80,7 +189,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -311,7 +311,7 @@
+@@ -497,7 +497,7 @@
  			  <child>
  			    <widget class="GtkLabel" id="label10">
  			      <property name="visible">True</property>
@@ -89,7 +198,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			      <property name="use_underline">True</property>
  			      <property name="use_markup">False</property>
  			      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -355,7 +355,7 @@
+@@ -541,7 +541,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnAdd">
  		  <property name="visible">True</property>
@@ -98,7 +207,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -400,7 +400,7 @@
+@@ -586,7 +586,7 @@
  			  <child>
  			    <widget class="GtkLabel" id="label8">
  			      <property name="visible">True</property>
@@ -107,7 +216,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			      <property name="use_underline">True</property>
  			      <property name="use_markup">False</property>
  			      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -444,7 +444,7 @@
+@@ -630,7 +630,7 @@
  	      <child>
  		<widget class="GtkButton" id="bntEdit">
  		  <property name="visible">True</property>
@@ -116,7 +225,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -489,7 +489,7 @@
+@@ -675,7 +675,7 @@
  			  <child>
  			    <widget class="GtkLabel" id="label9">
  			      <property name="visible">True</property>
@@ -125,7 +234,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			      <property name="use_underline">True</property>
  			      <property name="use_markup">False</property>
  			      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -533,7 +533,7 @@
+@@ -719,7 +719,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnDel">
  		  <property name="visible">True</property>
@@ -134,7 +243,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -578,7 +578,7 @@
+@@ -764,7 +764,7 @@
  			  <child>
  			    <widget class="GtkLabel" id="label7">
  			      <property name="visible">True</property>
@@ -143,7 +252,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			      <property name="use_underline">True</property>
  			      <property name="use_markup">False</property>
  			      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -636,7 +636,7 @@
+@@ -822,7 +822,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnHSplit">
  		  <property name="visible">True</property>
@@ -152,7 +261,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -672,7 +672,7 @@
+@@ -858,7 +858,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnVSplit">
  		  <property name="visible">True</property>
@@ -161,7 +270,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -708,7 +708,7 @@
+@@ -894,7 +894,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnUnsplit">
  		  <property name="visible">True</property>
@@ -170,7 +279,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -758,7 +758,7 @@
+@@ -944,7 +944,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnConfig">
  		  <property name="visible">True</property>
@@ -179,7 +288,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -814,7 +814,7 @@
+@@ -1000,7 +1000,7 @@
  		  <property name="editable">True</property>
  		  <property name="visibility">True</property>
  		  <property name="max_length">0</property>
@@ -188,7 +297,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="has_frame">True</property>
  		  <property name="invisible_char">●</property>
  		  <property name="activates_default">False</property>
-@@ -923,7 +923,7 @@
+@@ -1109,7 +1109,7 @@
  	      <child>
  		<widget class="GtkButton" id="btnCluster">
  		  <property name="visible">True</property>
@@ -197,7 +306,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -1163,7 +1163,7 @@
+@@ -1349,7 +1349,7 @@
  
  <widget class="GtkDialog" id="wHost">
    <property name="visible">True</property>
@@ -206,7 +315,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
    <property name="type">GTK_WINDOW_TOPLEVEL</property>
    <property name="window_position">GTK_WIN_POS_NONE</property>
    <property name="modal">True</property>
-@@ -1249,7 +1249,7 @@
+@@ -1435,7 +1435,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label2">
  		  <property name="visible">True</property>
@@ -215,7 +324,16 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1277,7 +1277,7 @@
+@@ -1463,7 +1463,7 @@
+ 	      <child>
+ 		<widget class="GtkComboBoxEntry" id="cmbGroup">
+ 		  <property name="visible">True</property>
+-          <property name="tooltip" translatable="yes">Usar formato grupo1/grupo2/grupo3 para crear subgrupos</property>
++          <property name="tooltip" translatable="yes">To create subgroups use format group1/group2/group3</property>
+ 		  <property name="items" translatable="no">dummy</property>
+ 		  <property name="add_tearoffs">False</property>
+ 		  <property name="has_frame">True</property>
+@@ -1481,7 +1481,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label3">
  		  <property name="visible">True</property>
@@ -224,7 +342,16 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1420,7 +1420,7 @@
+@@ -1530,7 +1530,7 @@
+ 	      <child>
+ 		<widget class="GtkLabel" id="label54">
+ 		  <property name="visible">True</property>
+-		  <property name="label" translatable="yes">Descripción</property>
++		  <property name="label" translatable="yes">Description</property>
+ 		  <property name="use_underline">False</property>
+ 		  <property name="use_markup">False</property>
+ 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+@@ -1656,7 +1656,7 @@
  	      <child>
  		<widget class="GtkEntry" id="txtPassword">
  		  <property name="visible">True</property>
@@ -233,7 +360,16 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="editable">True</property>
  		  <property name="visibility">False</property>
-@@ -1484,7 +1484,7 @@
+@@ -1678,7 +1678,7 @@
+ 	      <child>
+ 		<widget class="GtkLabel" id="label52">
+ 		  <property name="visible">True</property>
+-		  <property name="label" translatable="yes">Clave Privada</property>
++		  <property name="label" translatable="yes">Private key</property>
+ 		  <property name="use_underline">False</property>
+ 		  <property name="use_markup">False</property>
+ 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+@@ -1816,7 +1816,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label5">
  		  <property name="visible">True</property>
@@ -242,7 +378,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1512,7 +1512,7 @@
+@@ -1844,7 +1844,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label11">
  		  <property name="visible">True</property>
@@ -251,7 +387,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1540,7 +1540,7 @@
+@@ -1872,7 +1872,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label34">
  		  <property name="visible">True</property>
@@ -260,7 +396,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1611,7 +1611,7 @@
+@@ -1944,7 +1944,7 @@
  		<widget class="GtkSpinButton" id="txtKeepAlive">
  		  <property name="visible">True</property>
  		  <property name="sensitive">False</property>
@@ -269,7 +405,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="can_focus">True</property>
  		  <property name="climb_rate">1</property>
  		  <property name="digits">0</property>
-@@ -1633,7 +1633,7 @@
+@@ -1966,7 +1966,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label43">
  		  <property name="visible">True</property>
@@ -278,7 +414,52 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1689,7 +1689,7 @@
+@@ -2016,7 +2016,7 @@
+ 	      <child>
+ 		<widget class="GtkLabel" id="label44">
+ 		  <property name="visible">True</property>
+-		  <property name="label" translatable="yes">Redirigir Agente</property>
++		  <property name="label" translatable="yes">Agent Forwarding</property>
+ 		  <property name="use_underline">False</property>
+ 		  <property name="use_markup">False</property>
+ 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+@@ -2067,7 +2067,7 @@
+         <widget class="GtkCheckButton" id="chkCompression">
+           <property name="visible">True</property>
+           <property name="can_focus">True</property>
+-          <property name="label" translatable="yes">Compresión</property>
++          <property name="label" translatable="yes">Compression</property>
+           <property name="use_underline">True</property>
+           <property name="relief">GTK_RELIEF_NORMAL</property>
+           <property name="focus_on_click">True</property>
+@@ -2115,7 +2115,7 @@
+  	      <child>
+ 		<widget class="GtkLabel" id="label56">
+ 		  <property name="visible">True</property>
+-		  <property name="label" translatable="yes">Opciones extra</property>
++		  <property name="label" translatable="yes">Extra arguments</property>
+ 		  <property name="use_underline">False</property>
+ 		  <property name="use_markup">False</property>
+ 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+@@ -2151,7 +2151,7 @@
+ 		  <property name="has_frame">True</property>
+ 		  <property name="invisible_char">●</property>
+ 		  <property name="activates_default">False</property>
+-          <property name="tooltip" translatable="yes">Parámetros extra a pasar a la línea de comandos</property>
++          <property name="tooltip" translatable="yes">Extra arguments to pass to command line</property>
+ 		</widget>
+ 		<packing>
+ 		  <property name="left_attach">1</property>
+@@ -2165,7 +2165,7 @@
+ 	      <child>
+ 		<widget class="GtkLabel" id="label45">
+ 		  <property name="visible">True</property>
+-		  <property name="label" translatable="yes">Habilitar Log</property>
++		  <property name="label" translatable="yes">Enable Logging</property>
+ 		  <property name="use_underline">False</property>
+ 		  <property name="use_markup">False</property>
+ 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+@@ -2221,7 +2221,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label11">
  	      <property name="visible">True</property>
@@ -287,7 +468,18 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1771,7 +1771,7 @@
+@@ -2304,8 +2304,8 @@
+                 <widget class="GtkCheckButton" id="chkDynamic">
+                   <property name="visible">True</property>
+                   <property name="can_focus">True</property>
+-                  <property name="label" translatable="yes">Dinámico</property>
+-                  <property name="tooltip" translatable="yes">Crear redirección dinámica de puertos</property>
++                  <property name="label" translatable="yes">Dynamic</property>
++                  <property name="tooltip" translatable="yes">Create dynamic port forwarding</property>
+                   <property name="use_underline">True</property>
+                   <property name="relief">GTK_RELIEF_NORMAL</property>
+                   <property name="focus_on_click">True</property>
+@@ -2327,7 +2327,7 @@
  		      <child>
  			<widget class="GtkLabel" id="label14">
  			  <property name="visible">True</property>
@@ -296,7 +488,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			  <property name="use_underline">False</property>
  			  <property name="use_markup">False</property>
  			  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1799,7 +1799,7 @@
+@@ -2355,7 +2355,7 @@
  		      <child>
  			<widget class="GtkLabel" id="label15">
  			  <property name="visible">True</property>
@@ -305,7 +497,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			  <property name="use_underline">False</property>
  			  <property name="use_markup">False</property>
  			  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1827,7 +1827,7 @@
+@@ -2383,7 +2383,7 @@
  		      <child>
  			<widget class="GtkLabel" id="label16">
  			  <property name="visible">True</property>
@@ -314,7 +506,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			  <property name="use_underline">False</property>
  			  <property name="use_markup">False</property>
  			  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -1976,7 +1976,7 @@
+@@ -2532,7 +2532,7 @@
  				  <child>
  				    <widget class="GtkLabel" id="label17">
  				      <property name="visible">True</property>
@@ -323,7 +515,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  				      <property name="use_underline">True</property>
  				      <property name="use_markup">False</property>
  				      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2055,7 +2055,7 @@
+@@ -2611,7 +2611,7 @@
  				  <child>
  				    <widget class="GtkLabel" id="label18">
  				      <property name="visible">True</property>
@@ -332,7 +524,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  				      <property name="use_underline">True</property>
  				      <property name="use_markup">False</property>
  				      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2114,7 +2114,7 @@
+@@ -2670,7 +2670,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label12">
  	      <property name="visible">True</property>
@@ -341,7 +533,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2144,7 +2144,7 @@
+@@ -2700,7 +2700,7 @@
  		<widget class="GtkCheckButton" id="chkCommands">
  		  <property name="visible">True</property>
  		  <property name="can_focus">True</property>
@@ -350,7 +542,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -2206,7 +2206,7 @@
+@@ -2789,7 +2789,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label36">
  	      <property name="visible">True</property>
@@ -359,7 +551,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2238,7 +2238,7 @@
+@@ -2821,7 +2821,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label41">
  		  <property name="visible">True</property>
@@ -368,7 +560,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2266,7 +2266,7 @@
+@@ -2849,7 +2849,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label42">
  		  <property name="visible">True</property>
@@ -377,7 +569,16 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2316,7 +2316,7 @@
+@@ -2894,7 +2894,7 @@
+ 		  <property name="use_underline">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
+ 		  <property name="focus_on_click">True</property>
+-          <property name="title" translatable="yes">Seleccione el color de fondo</property>
++          <property name="title" translatable="yes">Select background color</property>
+ 		  <signal name="color-set" handler="on_btnBColor_clicked" last_modification_time="Fri, 26 Mar 2010 20:50:02 GMT"/>
+ 		</widget>
+         </child>
+@@ -2914,7 +2914,7 @@
  		<widget class="GtkCheckButton" id="chkDefaultColors">
  		  <property name="visible">True</property>
  		  <property name="can_focus">True</property>
@@ -386,18 +587,36 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -2365,7 +2365,7 @@
+@@ -2953,7 +2953,7 @@
+ 		  <property name="use_underline">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
+ 		  <property name="focus_on_click">True</property>
+-          <property name="title" translatable="yes">Seleccione el color del texto</property>
++          <property name="title" translatable="yes">Select foreground color</property>
+ 		  <signal name="color-set" handler="on_btnFColor_clicked" last_modification_time="Fri, 26 Mar 2010 20:49:56 GMT"/>
+ 		</widget>
+         </child>
+@@ -2987,7 +2987,7 @@
+     <child>
+ 		<widget class="GtkLabel" id="label70">
+ 		  <property name="visible">True</property>
+-		  <property name="label" translatable="yes">Sequencias de Teclas:</property>
++		  <property name="label" translatable="yes">Key sequences</property>
+ 		  <property name="use_underline">False</property>
+ 		  <property name="use_markup">False</property>
+ 		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+@@ -3125,7 +3125,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label40">
  	      <property name="visible">True</property>
--	      <property name="label" translatable="yes">Colores</property>
-+	      <property name="label" translatable="yes">Colors</property>
+-	      <property name="label" translatable="yes">Colores y Teclas</property>
++	      <property name="label" translatable="yes">Colors and Keys</property>
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2403,14 +2403,14 @@
-   <property name="copyright" translatable="yes">Renzo Bertuzzi L. (kuthulu@gmail.com) - Chile</property>
-   <property name="comments" translatable="yes">A simple ssh connection manager for gnome</property>
+@@ -3182,14 +3182,14 @@
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</property>
+   <property name="comments" translatable="no">A simple ssh connection manager for gnome</property>
    <property name="wrap_license">False</property>
 -  <property name="translator_credits" translatable="yes" comments="TRANSLATORS: Replace this string with your names, one name per line.">translator-credits</property>
 +  <property name="translator_credits" translatable="yes" comments="TRANSLATORS: Replace this string with your names, one name per line.">kuthulu</property>
@@ -412,7 +631,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
    <property name="type">GTK_WINDOW_TOPLEVEL</property>
    <property name="window_position">GTK_WIN_POS_NONE</property>
    <property name="modal">True</property>
-@@ -2535,7 +2535,7 @@
+@@ -3314,7 +3314,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label33">
  		  <property name="visible">True</property>
@@ -421,7 +640,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2563,7 +2563,7 @@
+@@ -3342,7 +3342,7 @@
  	      <child>
  		<widget class="GtkLabel" id="label32">
  		  <property name="visible">True</property>
@@ -430,7 +649,25 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2632,7 +2632,7 @@
+@@ -3374,7 +3374,7 @@
+ 		  <property name="use_underline">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
+ 		  <property name="focus_on_click">True</property>
+-          <property name="title" translatable="yes">Seleccione el color de fondo</property>
++          <property name="title" translatable="yes">Select background color</property>
+ 		  <signal name="color-set" handler="on_btnBColor_clicked" last_modification_time="Thu, 06 Aug 2009 22:11:19 GMT"/>
+ 		</widget>
+ 		<packing>
+@@ -3394,7 +3394,7 @@
+ 		  <property name="use_underline">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
+ 		  <property name="focus_on_click">True</property>
+-          <property name="title" translatable="yes">Seleccione el color del texto</property>
++          <property name="title" translatable="yes">Select foreground color</property>
+ 		  <signal name="color-set" handler="on_btnFColor_clicked" last_modification_time="Thu, 06 Aug 2009 22:11:12 GMT"/>
+ 		</widget>
+ 		<packing>
+@@ -3411,7 +3411,7 @@
  		<widget class="GtkCheckButton" id="chkDefaultColors">
  		  <property name="visible">True</property>
  		  <property name="can_focus">True</property>
@@ -439,7 +676,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -2655,7 +2655,7 @@
+@@ -3434,7 +3434,7 @@
  		<widget class="GtkCheckButton" id="chkDefaultFont">
  		  <property name="visible">True</property>
  		  <property name="can_focus">True</property>
@@ -448,7 +685,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">True</property>
  		  <property name="relief">GTK_RELIEF_NORMAL</property>
  		  <property name="focus_on_click">True</property>
-@@ -2678,7 +2678,7 @@
+@@ -3457,7 +3457,7 @@
  		<widget class="GtkLabel" id="lblFont">
  		  <property name="visible">True</property>
  		  <property name="sensitive">False</property>
@@ -457,7 +694,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  		  <property name="use_underline">False</property>
  		  <property name="use_markup">False</property>
  		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2761,7 +2761,7 @@
+@@ -3540,7 +3540,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label31">
  	      <property name="visible">True</property>
@@ -466,7 +703,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2804,7 +2804,7 @@
+@@ -3583,7 +3583,7 @@
  		      <child>
  			<widget class="GtkLabel" id="label38">
  			  <property name="visible">True</property>
@@ -475,7 +712,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			  <property name="use_underline">False</property>
  			  <property name="use_markup">False</property>
  			  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2861,7 +2861,7 @@
+@@ -3640,7 +3640,7 @@
  		      <child>
  			<widget class="GtkLabel" id="label39">
  			  <property name="visible">True</property>
@@ -484,7 +721,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  			  <property name="use_underline">False</property>
  			  <property name="use_markup">False</property>
  			  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -2916,7 +2916,7 @@
+@@ -3695,7 +3695,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label37">
  	      <property name="visible">True</property>
@@ -493,7 +730,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -3007,7 +3007,7 @@
+@@ -3786,7 +3786,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label51">
  	      <property name="visible">True</property>
@@ -502,7 +739,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -3119,7 +3119,7 @@
+@@ -3898,7 +3898,7 @@
  			      <child>
  				<widget class="GtkLabel" id="label47">
  				  <property name="visible">True</property>
@@ -511,7 +748,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  				  <property name="use_underline">True</property>
  				  <property name="use_markup">False</property>
  				  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -3198,7 +3198,7 @@
+@@ -3977,7 +3977,7 @@
  			      <child>
  				<widget class="GtkLabel" id="label48">
  				  <property name="visible">True</property>
@@ -520,7 +757,7 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  				  <property name="use_underline">True</property>
  				  <property name="use_markup">False</property>
  				  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -3277,7 +3277,7 @@
+@@ -4056,7 +4056,7 @@
  			      <child>
  				<widget class="GtkLabel" id="label49">
  				  <property name="visible">True</property>
@@ -529,12 +766,12 @@ Index: gnome-connection-manager-0.9.2/gnome-connection-manager.glade
  				  <property name="use_underline">True</property>
  				  <property name="use_markup">False</property>
  				  <property name="justify">GTK_JUSTIFY_LEFT</property>
-@@ -3338,7 +3338,7 @@
+@@ -4117,7 +4117,7 @@
  	  <child>
  	    <widget class="GtkLabel" id="label50">
  	      <property name="visible">True</property>
 -	      <property name="label" translatable="yes">Ingrese el texto a enviar a las consolas: </property>
-+	      <property name="label" translatable="yes">Enter text to send: </property>
++	      <property name="label" translatable="yes">Enter text to send to hosts: </property>
  	      <property name="use_underline">False</property>
  	      <property name="use_markup">False</property>
  	      <property name="justify">GTK_JUSTIFY_LEFT</property>
