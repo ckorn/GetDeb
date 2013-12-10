@@ -1,10 +1,10 @@
 Description: add pkexec policy file
 Author: Marc Deslauriers <marc.deslauriers@canonical.com>
 
-Index: gparted-0.15.0/data/Makefile.am
+Index: gparted-0.17.0/data/Makefile.am
 ===================================================================
---- gparted-0.15.0.orig/data/Makefile.am	2010-05-28 23:18:25.000000000 +0200
-+++ gparted-0.15.0/data/Makefile.am	2013-03-20 18:36:09.840792115 +0100
+--- gparted-0.17.0.orig/data/Makefile.am	2013-12-10 18:32:39.624886678 +0100
++++ gparted-0.17.0/data/Makefile.am	2013-12-10 18:32:39.624886678 +0100
 @@ -1 +1,10 @@
  SUBDIRS = icons
 +
@@ -16,10 +16,10 @@ Index: gparted-0.15.0/data/Makefile.am
 +@INTLTOOL_POLICY_RULE@
 +
 +EXTRA_DIST = $(dist_polkit_policy_in_files)
-Index: gparted-0.15.0/data/Makefile.in
+Index: gparted-0.17.0/data/Makefile.in
 ===================================================================
---- gparted-0.15.0.orig/data/Makefile.in	2013-03-19 16:26:44.000000000 +0100
-+++ gparted-0.15.0/data/Makefile.in	2013-03-20 18:36:09.840792115 +0100
+--- gparted-0.17.0.orig/data/Makefile.in	2013-12-10 18:32:39.624886678 +0100
++++ gparted-0.17.0/data/Makefile.in	2013-12-10 18:32:39.624886678 +0100
 @@ -14,6 +14,7 @@
  # PARTICULAR PURPOSE.
  
@@ -165,10 +165,10 @@ Index: gparted-0.15.0/data/Makefile.in
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
-Index: gparted-0.15.0/data/com.ubuntu.pkexec.gparted.policy
+Index: gparted-0.17.0/data/com.ubuntu.pkexec.gparted.policy
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gparted-0.15.0/data/com.ubuntu.pkexec.gparted.policy	2013-03-20 18:36:09.840792115 +0100
++++ gparted-0.17.0/data/com.ubuntu.pkexec.gparted.policy	2013-12-10 18:32:39.624886678 +0100
 @@ -0,0 +1,19 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE policyconfig PUBLIC
@@ -189,10 +189,10 @@ Index: gparted-0.15.0/data/com.ubuntu.pkexec.gparted.policy
 +  </action>
 +
 +</policyconfig>
-Index: gparted-0.15.0/data/com.ubuntu.pkexec.gparted.policy.in
+Index: gparted-0.17.0/data/com.ubuntu.pkexec.gparted.policy.in
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gparted-0.15.0/data/com.ubuntu.pkexec.gparted.policy.in	2013-03-20 18:36:09.840792115 +0100
++++ gparted-0.17.0/data/com.ubuntu.pkexec.gparted.policy.in	2013-12-10 18:32:39.624886678 +0100
 @@ -0,0 +1,19 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE policyconfig PUBLIC
@@ -213,14 +213,14 @@ Index: gparted-0.15.0/data/com.ubuntu.pkexec.gparted.policy.in
 +  </action>
 +
 +</policyconfig>
-Index: gparted-0.15.0/po/POTFILES.in
+Index: gparted-0.17.0/po/POTFILES.in
 ===================================================================
---- gparted-0.15.0.orig/po/POTFILES.in	2013-03-17 17:58:11.000000000 +0100
-+++ gparted-0.15.0/po/POTFILES.in	2013-03-20 18:36:09.840792115 +0100
+--- gparted-0.17.0.orig/po/POTFILES.in	2013-12-10 18:32:39.624886678 +0100
++++ gparted-0.17.0/po/POTFILES.in	2013-12-10 18:33:16.844885571 +0100
 @@ -1,5 +1,6 @@
  # List of source files containing translatable strings.
  # Please keep this file sorted alphabetically.
 +data/com.ubuntu.pkexec.gparted.policy.in
+ gparted.appdata.xml.in
  gparted.desktop.in.in
  include/Utils.h
- src/Copy_Blocks.cc
