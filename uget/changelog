@@ -1,3 +1,9 @@
+uget (1.10.3-1~getdeb2) precise; urgency=low
+
+  * Add support for appindicator (LP: #1260706)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Dec 2013 18:50:37 +0100
+
 uget (1.10.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
