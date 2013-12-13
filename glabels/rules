@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+
+# ====================================================================
+# debian/rules for gLabels
+# Common Debian Build System: (C) 2002 Colin Walters
+#
+# Author: Andrew Lau <netsnipe@users.sourceforge.net>
+# $Id: rules 23938 2010-04-21 17:43:11Z didrocks-guest $
+# ====================================================================
+
+# Remove excess dependencies
+export DEB_LDFLAGS_MAINT_APPEND += -Wl,--as-needed
+
+# Hardening flags
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND = -Wall
+include /usr/share/dpkg/buildflags.mk
+
+# CDBS classes & rules
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/utils.mk
+
+# Compilation options
+DEB_CONFIGURE_EXTRA_FLAGS := --with-libebook
+
+# Debhelper arguments
+DEB_DH_INSTALL_ARGS := --sourcedir=debian/tmp --list-missing
+
+post-patches::
+	mkdir -p m4
+	autoreconf -i
