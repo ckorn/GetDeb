@@ -1,3 +1,16 @@
+rednotebook (1.8.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Add font selection for edit mode (Philip Akesson).
+    * Allow changing preview and cloud font in preferences.
+    * Only allow opening RedNotebook minimized on Windows since other systems
+    may lack a system tray.
+    * Fix: Display tags starting with "SEP" in preview (lp:1255582).
+    * Write scripts to cross-compile RedNotebook Windows exe and installer on
+    Linux.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Dec 2013 18:59:47 +0100
+
 rednotebook (1.7.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
