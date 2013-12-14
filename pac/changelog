@@ -1,3 +1,31 @@
+pac (4.5.3.3-1~getdeb2~saucy) saucy; urgency=low
+
+  * New upstream version
+    . Added "$TERMINAL{get_prompt}" to PAC Scripts' API, in order to "try" to
+    guess connection's prompt with minimal effort
+    . Added an option to allow starting more than one PAC instance (only
+    first instance allows modifying PAC configuration)
+    . Added option "--readonly" to command line to allow starting PAC in READ
+    ONLY mode (no config changes allowed)
+    . Much more love given to PAC Scripts (engine and gui)
+    . Added DONATORS list to PAC on "About" -> "License". To all of you:
+    THANK YOU SO MUCH!!!!!!!!
+    . Added an option to allow to remove or not CONTROL chars when automatinc
+    log saving is active (on both global/pero connection preferences)
+    . Added "--dump-uuid=>uuid>" command line option to dump information
+    about a connection
+    . Added "--scripts" command line option to auto-start PAC Scripts window
+    . Added an option under "Preferences" -> "Terminal Options" -> "Look &
+    Feel" to allow switching TABs with ALT-Left/Right instead of
+    CTRL-PgUp/PgDown
+    . Added shortcut <CTRL><ALT>r to easily remove a Terminal from it's
+    current Cluster
+    . Added $PAC{start_uuid} and $PAC{start_uuid_manual} to Scripting to
+    allow starting sessions based on UUIDs instead of names
+    . Fixed a minor bug for autostarting PAC at session startup
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Dec 2013 01:49:49 +0100
+
 pac (4.5.3.2-1~getdeb2~raring) raring; urgency=low
 
   * New upstream version
