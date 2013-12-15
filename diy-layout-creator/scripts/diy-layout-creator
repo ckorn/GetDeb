@@ -22,5 +22,4 @@ then
 fi
 
 #Start DIYLC with parameter of diylc program directory
-java -Xms512m -Xmx2048m -Dorg.diylc.scriptRun=true -Duser.dir=/usr/share/diy-layout-creator -cp diylc.jar:lib org.diylc.DIYLCStarter 
-
+java -Xms512m -Xmx2048m -Dorg.diylc.scriptRun=true -Duser.dir=/usr/share/diy-layout-creator -cp diylc.jar:lib org.diylc.DIYLCStarter "$@"
