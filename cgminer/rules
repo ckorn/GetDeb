@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-avalon --enable-bflsc --enable-bitforce --enable-bitfury --enable-hashfast \
+	                     --enable-icarus --enable-knc --enable-bab --enable-klondike --enable-modminer
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian/cgminer/usr/lib -name "libjansson.so.4" -delete
+	find debian/cgminer/usr/lib -name "libjansson.so.4.5.0" -delete
+
+override_dh_install:
+	dh_install
+	rm -rf debian/cgminer/usr/include debian/cgminer/usr/bin/bitstreams
+	find debian/cgminer/usr/lib -name "pkgconfig" -type d -exec rm -rf {} \; || /bin/true
+	find debian/cgminer/usr/lib -name "*.a" -type f -delete
+	find debian/cgminer/usr/lib -name "*.la" -type f -delete
+	find debian/cgminer/usr/lib -name "*.so" -delete

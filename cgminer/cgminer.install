@@ -1,0 +1,3 @@
+debian/cgminer/usr/bin/cgminer		usr/lib/cgminer
+debian/cgminer/usr/bin/bitstreams	usr/share/cgminer
+debian/scripts/cgminer	usr/bin

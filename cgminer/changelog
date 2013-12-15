@@ -1,0 +1,5 @@
+cgminer (3.8.5-1~getdeb1) saucy; urgency=low
+
+  * Initial release (LP: #1257439)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Dec 2013 22:16:59 +0100

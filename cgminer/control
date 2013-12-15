@@ -1,0 +1,35 @@
+Source: cgminer
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libusb-1.0-0-dev,
+               libcurl4-openssl-dev,
+               libjansson-dev,
+               libudev-dev,
+               linux-libc-dev,
+               libncurses5-dev,
+               libjansson-dev
+Standards-Version: 3.9.4
+Homepage: http://ck.kolivas.org/apps/cgminer/
+
+Package: cgminer
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Multi-threaded multi-pool FPGA and ASIC miner for bitcoin
+ This is a multi-threaded multi-pool FPGA and ASIC miner for bitcoin.
+ .
+ Compiled with support for:
+  - Avalon
+  - BFL ASICs
+  - BitForce FPGAs
+  - BitFury ASICs
+  - Hashfast
+  - Icarus
+  - KnC miners
+  - BlackArrow Bitfury
+  - Klondike
+  - ModMiner FPGAs
