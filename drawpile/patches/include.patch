@@ -1,0 +1,15 @@
+# fix include
+Index: drawpile-0.7.2/src/client/ora/qzip.cpp
+===================================================================
+--- drawpile-0.7.2.orig/src/client/ora/qzip.cpp	2013-12-15 19:00:48.062576972 +0100
++++ drawpile-0.7.2/src/client/ora/qzip.cpp	2013-12-15 19:06:59.786565914 +0100
+@@ -44,7 +44,8 @@
+ #include "zipreader.h"
+ #include "zipwriter.h"
+ #include <qdatetime.h>
+-#include <qplatformdefs.h>
++#include <fcntl.h>
++#include <sys/stat.h>
+ #include <qendian.h>
+ #include <qdebug.h>
+ #include <qdir.h>

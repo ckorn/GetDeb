@@ -1,3 +1,18 @@
+drawpile (0.7.2-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+     * Per-user layer locking
+     * Improved brush shape
+     * Copy & paste support
+     * Improved annotation editing
+     * Visible annotations are now included in saved images
+     * Ability to look up the external IP address using ipecho.net
+     * Menu bar is now hidden in fullscreen mode and floating docks remain
+     visible
+     * Option to pick color from current layer only
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 15 Dec 2013 18:38:07 +0100
+
 drawpile (0.7.1-1~getdeb1) saucy; urgency=low
 
   * New upstream version
