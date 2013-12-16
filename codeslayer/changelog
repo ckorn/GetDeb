@@ -1,3 +1,9 @@
+codeslayer (4.0.0-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 16 Dec 2013 19:35:27 +0100
+
 codeslayer (3.0.1-1~getdeb1) saucy; urgency=low
 
   * New upstream version
