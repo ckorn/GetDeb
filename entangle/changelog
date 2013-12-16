@@ -1,3 +1,23 @@
+entangle (0.5.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * Ensure thumbnail directory exists when saving thumbnails
+    * Fix memory leak generating thumbnails from raw images
+    * Add an appdata XML file for GNOME software center
+    * Create a dedicated camera actions menu
+    * Fix include of gexiv2 header files
+    * Fix image selection for onion skinning in preview mode
+    * Display selected image when cancelling preview
+    * Fix empty tooltips on capture/preview buttons
+    * Fix scaling for preview image in onion skinning mode
+    * Increase emphasis of top image in onion skinning mode
+    * Improve granularity of manual focus and add extra
+      '<' and '>' key accelerators for coarse focus
+    * Fix leak of image exiting preview mode
+    * Make progress toolbar button permanently visible
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 16 Dec 2013 19:48:20 +0100
+
 entangle (0.5.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
