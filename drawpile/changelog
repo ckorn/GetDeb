@@ -1,3 +1,17 @@
+drawpile (0.8.0-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+     * Undo and redo support
+     * Bugfix: pop up "save as" dialog when trying to save a file in an
+     unsupported format
+     * Added "paste from file" action
+     * Added upload progress bar
+     * Host dialog fixes
+     * Paste images by drag&drop
+     * Fix loading of tall images
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 Dec 2013 21:31:37 +0100
+
 drawpile (0.7.2-1~getdeb1) saucy; urgency=low
 
   * New upstream version
