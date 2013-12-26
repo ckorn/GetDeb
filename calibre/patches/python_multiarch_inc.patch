@@ -2,11 +2,11 @@ Description: Use python-config instead of sysconfig.get_python_inc(), as the lat
 Author: Martin Pitt <mpitt@debian.org>
 Bug-Ubuntu: https://launchpad.net/bugs/1094246
 
-Index: calibre-1.14.0/setup/extensions.py
+Index: calibre-1.17.0/setup/extensions.py
 ===================================================================
---- calibre-1.14.0.orig/setup/extensions.py	2013-12-08 15:24:12.154683648 +0100
-+++ calibre-1.14.0/setup/extensions.py	2013-12-08 15:24:12.150683648 +0100
-@@ -286,7 +286,11 @@
+--- calibre-1.17.0.orig/setup/extensions.py	2013-12-26 02:14:28.914501680 +0100
++++ calibre-1.17.0/setup/extensions.py	2013-12-26 02:14:28.906501681 +0100
+@@ -295,7 +295,11 @@
  if islinux:
      cflags.append('-pthread')
      ldflags.append('-shared')
