@@ -1,14 +1,18 @@
 # add missing includes and compile with position independent code
-Index: drawpile-0.7.1/CMakeLists.txt
+Index: drawpile-0.8.1/CMakeLists.txt
 ===================================================================
---- drawpile-0.7.1.orig/CMakeLists.txt	2013-12-08 15:35:20.030677946 +0100
-+++ drawpile-0.7.1/CMakeLists.txt	2013-12-08 15:35:20.026677946 +0100
-@@ -48,7 +48,7 @@
- find_package ( ZLIB REQUIRED )
- 
- # Enable C++11
--list(APPEND CMAKE_CXX_FLAGS "-std=c++11")
-+list(APPEND CMAKE_CXX_FLAGS "-std=c++11 -fPIC -I/usr/include/qt5/QtNetwork/ -I/usr/include/qt5 -I/usr/include/qt5/QtCore/")
- # GCC <4.7 may need this instead:
- #list(APPEND CMAKE_CXX_FLAGS "-std=c++0x")
- 
+--- drawpile-0.8.1.orig/CMakeLists.txt	2013-12-31 15:24:24.182095114 +0100
++++ drawpile-0.8.1/CMakeLists.txt	2013-12-31 15:25:36.962092949 +0100
+@@ -53,10 +53,10 @@
+         COMMAND ${CMAKE_CXX_COMPILER} -dumpversion OUTPUT_VARIABLE GCC_VERSION)
+     if (GCC_VERSION VERSION_LESS 4.7)
+         # GCC < 4.7
+-        set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
++        set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -fPIC -I/usr/include/qt5/QtNetwork/ -I/usr/include/qt5 -I/usr/include/qt5/QtCore/")
+     else ()
+         # GCC >= 4.7 (set instead of append, because it needs to be first)
+-        set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
++        set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS} -fPIC -I/usr/include/qt5/QtNetwork/ -I/usr/include/qt5 -I/usr/include/qt5/QtCore/")
+     endif ()
+ elseif ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+     # Clang++
