@@ -1,3 +1,25 @@
+fotoxx (14.01-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Adjustments for brightness, contrast, color, gamma, and white balance 
+      were combined into a single dialog function for faster workflow.
+    + Select area: automatically finish areas selected by mouse painting and 
+      color matching (process "swiss cheese" selections faster and easier). 
+    + Select Area: follow-edge method can better follow edges when mouse
+      edge-following is less than perfect.
+    + New special effect: add textured surface to an image or selected area.
+    + Kuwahara sharpen method added: very effective for some special cases.
+    + All sharpen methods were made multithreaded (typical 2x speedup).
+    + Slide Show transitions can optionally happen in random sequence.
+    + Slide Show transition speeds can be adjusted for CPU/GPU performance.
+    + Show RGB: update RGB values live as the mouse is moved over an image.
+    + The user guide was audited and many minor corrections were made.
+    + Bugfix: Mashup: preserve transparency when using saved cutout images.
+    + Bugfix: Image edits were losing some special application XMP metadata.
+    + Bugfix: HDR crash if input images are not exactly the same size.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 01 Jan 2014 16:11:28 +0100
+
 fotoxx (13.12-1~getdeb1) precise; urgency=low
 
   * New upstream version
