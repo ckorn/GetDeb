@@ -1,9 +1,9 @@
 New plugin.
-Index: xvst-2.4.1/resources/services/vid2c/vid2c.js
+Index: xvst-2.5/resources/services/vid2c/vid2c.js
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ xvst-2.4.1/resources/services/vid2c/vid2c.js	2011-10-15 22:36:09.658367758 +0200
-@@ -0,0 +1,127 @@
++++ xvst-2.5/resources/services/vid2c/vid2c.js	2014-01-04 00:21:29.112788887 +0100
+@@ -0,0 +1,193 @@
 +/*
 +*
 +* This file is part of xVideoServiceThief,
@@ -31,7 +31,7 @@ Index: xvst-2.4.1/resources/services/vid2c/vid2c.js
 +
 +function RegistVideoService()
 +{
-+	this.version = "1.0.0";
++	this.version = "1.0.1";
 +	this.minVersion = "2.0.0a";
 +	this.author = "crapmaster & Xesc & Technology 2011";
 +	this.website = "http://www.vid2c.com/";
@@ -53,18 +53,84 @@ Index: xvst-2.4.1/resources/services/vid2c/vid2c.js
 +	// get video title
 +	result.title = copyBetween(html, '<meta name="description" content="', '" />');
 +
-+	// get config xml
-+	var cfgUrl = copyBetween(html, "so.addVariable('config', '", "t='+sid());");
-+	var cfg = http.downloadWebpage(cfgUrl);
-+
-+	// get the movie url
-+	var tmp = copyBetween(cfg, "file=", "</VID>");
-+
-+	// get url
-+	result.URL = strReplace(tmp, "%26", "&");
++	// get video url
++	var video_url = /'file': '(.*?)'/;
++	if (video_url.test(html)) {
++		result.URL = video_url.exec(html)[1];
++	}
 +
 +	// return the video information
 +	return result;
++}
++
++function searchVideos(keyWord, pageIndex)
++{
++	const URL_SEARCH = "http://www.vid2c.com/search?search_query=%1&search_type=videos&page=%2";
++	const HTML_SEARCH_START = 'Showing ';
++	const HTML_SEARCH_FINISH = '</html>';
++	const HTML_SEARCH_SEPARATOR = '<div class="video_box">';
++	// replace all spaces for "+"
++	keyWord = strReplace(keyWord, " ", "+");
++	// init search results object
++	var searchResults = new SearchResults();
++	// init http object
++	var http = new Http();
++	var html = http.downloadWebpage(strFormat(URL_SEARCH, keyWord, pageIndex) + "&user_choice=Enter");
++	// no summary avaiable
++	searchResults.setSummary("");
++	// get results html block
++	var htmlResults = copyBetween(html, HTML_SEARCH_START, HTML_SEARCH_FINISH);
++	// if we found some results then...
++	if (htmlResults != "") {
++		var blocks = splitString(htmlResults, HTML_SEARCH_SEPARATOR);
++		// Have to skip n=0 since that entry only contains crap!
++		for (n = 1; n < blocks.length-1; n++)
++			parseResultItem(searchResults, blocks[n]);
++	}
++	// return search results
++	return searchResults;
++}
++
++function parseResultItem(searchResults, html)
++{
++	const VIDEO_URL = "http://www.vid2c.com";
++	// vars
++	var tmp, videoUrl, imageUrl, title, description, duration, rating;
++
++	// get video url
++	videoUrl = VIDEO_URL + copyBetween(html, '<a href=\"', '\">');
++
++	// get title and image url
++	title = copyBetween(html, 'title=\"', '\"');
++	imageUrl = copyBetween(html, '<img src=\"', '\"');
++
++	// video description not available
++	description = "";
++
++	// get video duration
++	tmp = copyBetween(html, '<div class=\"box_left\">', '<br />');
++	duration = convertToSeconds(tmp); 
++
++	// skip rating
++	rating = 0;
++
++	// add to results list
++	searchResults.addSearchResult(videoUrl, imageUrl, title, description, duration, rating);
++}
++
++function convertToSeconds(text)
++{
++	//Clean
++	var tmp2 = strReplace(text, "<span>", "");
++	var tmp2 = strReplace(tmp2, "</span>", "");
++	// how many ":" exists?
++	var count = getTokenCount(tmp2, ":");
++	// get mins and seconds
++	var h = new Number(h = count == 3 ? getToken(tmp2, ":", 0) * 3600 : 0);
++	var m = new Number(getToken(tmp2, ":", count - 2) * 60);
++	var s = new Number(getToken(tmp2, ":", count - 1));
++	// convert h:m:s to seconds
++	return h + m + s;
 +}
 +
 +function getVideoServiceIcon()
