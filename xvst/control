@@ -15,7 +15,6 @@ Build-Depends: debhelper (>= 9),
                libglib2.0-dev,
                libgstreamer-plugins-base0.10-dev,
                libgstreamer0.10-dev,
-               libglib2.0-dev,
                libxml2-dev,
                libsqlite3-dev
 Standards-Version: 3.9.4

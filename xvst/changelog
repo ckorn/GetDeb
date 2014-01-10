@@ -1,3 +1,9 @@
+xvst (2.5.1-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 10 Jan 2014 20:21:18 +0100
+
 xvst (2.5-1~getdeb4) saucy; urgency=low
 
   * Update plugins.
