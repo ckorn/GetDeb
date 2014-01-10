@@ -1,15 +1,178 @@
-gnucash (1:2.4.13-1~getdeb1) precise; urgency=low
+gnucash (1:2.6.0-1~getdeb2) precise; urgency=low
 
-  * New upstream version
-    2.4.13 is a bugfix release. 
+  * Rebuild for precise (LP: #1266243)
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 20 Apr 2013 17:33:58 +0200
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 10 Jan 2014 19:39:27 +0100
 
-gnucash (1:2.4.12-1~getdeb1) precise; urgency=low
+gnucash (1:2.6.0-1~getdeb1) saucy; urgency=low
 
-  * New upstream version (LP: #1164665)
+  * New upstream version (LP: #1265469)
+    The GnuCash development team proudly announces GnuCash 2.6.0,
+    the latest stable release of the GnuCash Free Accounting
+    Software. GnuCash Users can experience the following new features:
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Apr 2013 23:12:09 +0200
+    * Preferences have been migrated from GConf to GSettings. This
+         is a simpler and more robust backend which writes to the OS's
+         native prefs -- defaults on OS X and the Registry on
+         MSWindows -- and allows us to remove several troublesome
+         dependencies including GConf, ORBit, and DBus. The change
+         includes a migration script that will run at Gnucash startup.
+
+    * New date handling which allows GnuCash to use dates after March 2038.
+
+    * Guile-2 compatibility: GnuCash now requires either Guile-1.8
+      or Guile-2.0
+
+    * Documents outside of GnuCash, images of receipts for example,
+      can now be linked to transactions, with the facility of
+      opening them in the default application for the document
+      type.
+
+    * Cutsom Reports can now be saved without renaming the report,
+      and modifications can overwrite an existing report.
+
+    * The import assistant now finishes much more quickly after
+      assigning contra-accounts.
+
+    * GnuCash now requires Gtk+-2.24.0 and GLib-2.26.0. Most of the
+      dependencies on obsolete libraries have been removed; only
+      libgnomecanvas remains. Unfortunately the effort to rewrite
+      the register code to use GtkTreeModel wasn't completed in
+      time, so GnuCash is not on the cusp of converting to Gtk3.
+
+    * The Business Module has been substantially revamped,
+      including support for Credit Notes and import of customers
+      and vendors from a CSV file.
+
+    * The Num field in the register display is now optionally
+      per-split, so for example a check number can be entered for
+      the checking account split and an invoice number for the
+      expense account split.
+
+    * GnuCash can now open locked books read-only so that more than
+      one user can view a file. GnuCash still does not support
+      multiple simultaneous writers.
+
+    * By agreement of all authors, GnuCash is now licensed under
+      the GNU General Public License Version 2 or later rather than
+      simply Version 2. This allows derivative works to be licensed
+      under the GPL Version 3 if the author of such a work so
+      desires.
+
+    * Fixed more than 500 bugs.
+
+    For those keeping score, the following changes have occurred
+    since 2.5.10:
+
+    Bug Fixes:
+
+    Bug 157247 - Asset account's "total" value should use most
+          recent transaction prices
+    Bug 710823 - libofx can supply broken UTF-8 for account id
+    Bug 710824 - GnuCash should sanitise UTF-8 before serialising files
+          to avoid writing broken unparseable XML.
+    Bug 720555 - General Ledger - Can't Enter Transaction Amounts
+    Bug 720556 - The Tip of the Day preference isn't getting saved
+    Bug 720646 - New Book Tabs on Windows
+
+    Other Changes:
+
+    * Don't create a second account hierarchy page when cancelling
+      the Hierarchy Assistant or when using Actions->New Account
+      Hierarchy on an already open book.
+
+    * Reset Warnings dialog: show translated warnings
+
+    * The locale-names for Help and the Tutorial and Concepts Guide
+      have been renamed to language-only so that, for example,
+      someone using the Swiss-German locale will be shown help in
+      German instead of English.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 02 Jan 2014 22:10:09 +0100
+
+gnucash (1:2.6.0-1) unstable; urgency=medium
+
+  * New upstream stable release.
+  * debian/copyright: reflect upstream changes.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Wed, 01 Jan 2014 12:08:40 +0100
+
+gnucash (1:2.5.10-1) experimental; urgency=medium
+
+  * Imported Upstream version 2.5.10
+  * Stop generating manpages for gnc-fq-{dump,helper}, they are in the tarball.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 17 Dec 2013 21:12:30 +0100
+
+gnucash (1:2.5.9-1) experimental; urgency=medium
+
+  * New upstream development release.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Thu, 05 Dec 2013 22:26:58 +0100
+
+gnucash (1:2.5.8-1) experimental; urgency=low
+
+  * New upstream development release.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 19 Nov 2013 19:53:18 +0100
+
+gnucash (1:2.5.7-1) experimental; urgency=low
+
+  * New upstream development release.
+    - no longer crashes at startup when there is no old gconf settings to
+      migrate (Closes: #727767).
+  * debian/copyright: reflect upstream changes.
+  * dont-clean-gnucash-core-c.patch: remove patch, applied upstream.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 05 Nov 2013 21:01:24 +0100
+
+gnucash (1:2.5.6-1) experimental; urgency=low
+
+  [ Sébastien Villemot ]
+  * New upstream development release
+    + Uses GSettings instead GConf (Closes: #596231)
+    + Fixes SIGSEGV in qof_instance_get_editlevel()
+      (Closes: #722725, LP: #1224455)
+  * debian/copyright: reflect upstream changes
+  * Remove patches applied upstream.
+    + gnc-fq-check_2pod.patch
+    + gnc-fq-helper_2pod.patch
+    + hurd-ftbfs.patch
+    + regcomp-memory-leak.patch
+    + suppress_binreloc_warning.patch
+    + taxi0-presentation_options.patch
+    + taxi1-customization_improvements.patch
+  * dont-clean-gnucash-core-c.patch: new patch.
+    Ensures that package builds twice in a row
+  * Switch to guile-2.0, stop depending on slib
+  * Remove obsolete README.debian
+  * Use libjs-jquery package instead of shipping an embedded copy of jquery.js
+  * Add lintian overrides for private libraries with an rpath
+
+  [ Micha Lenk ]
+  * debian/control: Remove myself from Uploaders:
+    Time flew by, and as I am not using Gnucash anymore for already several
+    years, I have way too little incentives left to contribute to its packaging.
+    Sébastien, Dmitry, thanks for keeping up the work.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 20 Oct 2013 12:06:21 +0200
+
+gnucash (1:2.4.13-1) unstable; urgency=low
+
+  [ Sébastien Villemot ]
+  * Imported Upstream version 2.4.13
+  * Remove version on python-dev B-D.
+    The gnucash configure script is again able to deal with the absence of a
+    pkg-config script for python
+
+  [ Dmitry Smirnov ]
+  * Re-format (expand) list of Build-Depends
+  * removing unnecessary versioned dependencies
+  * updating my email address; bumping copyright years
+  * use canonical Vcs URLs
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sat, 04 May 2013 16:58:51 +0200
 
 gnucash (1:2.4.12-1) experimental; urgency=low
 

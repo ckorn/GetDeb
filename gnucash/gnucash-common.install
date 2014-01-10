@@ -1,4 +1,4 @@
-usr/share/gconf
+usr/share/glib-2.0/schemas
 usr/share/gnucash
 usr/share/icons
 usr/share/locale

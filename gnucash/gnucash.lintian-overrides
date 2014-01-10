@@ -1,1 +1,11 @@
 gnucash: hardening-no-fortify-functions *
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-app-utils.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-backend-dbi.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-business-gnome.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-gnome-utils.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-html.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-locale-reports-us.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-python.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-register-core.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-report-gnome.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash
+gnucash: binary-or-shlib-defines-rpath usr/lib/*/gnucash/gnucash/libgncmod-report-system.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash

@@ -1,0 +1,1 @@
+python-gnucash: binary-or-shlib-defines-rpath usr/lib/python*/dist-packages/gnucash/_gnucash_core_c.so /usr/lib/*/gnucash:/usr/lib/*/gnucash/gnucash

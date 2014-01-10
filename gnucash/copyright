@@ -6,13 +6,12 @@ Comment:
     Tyson Dowd <trd@cs.mu.oz.au> on Wed, 10 Mar 1999 13:00:52 +1100
  The packaging was completely revamped for gnucash 2.4.0-1 by:
     Micha Lenk <micha@debian.org> on Sun, 26 Dec 2010 15:23:56 +0100
-Copyright: 1994,1995,1996,1999,2000,2001,2002,2004,2005,2006,2007,2008,2009 Free Software Foundation, Inc.
-License: GPL-3+
 
 Files: *
 Copyright: 2001                     Almer S. Tigelaar <almer@gnome.org>
            2003                     Andreas J. Guelzow <aguelzow@taliesin.ca>
            2006-2008                Andreas Koehler <andi5.py@gmx.net>
+           2011                     Andy Clayton
            1991-1993,1996,1999-2001 Aubrey Jaffer and Radey Shouman
            2003,2009                Andy Wingo <wingo@pobox.com>
            2009                     Andrew Sackville-West <andrew@swclan.homelinux.org>
@@ -26,7 +25,7 @@ Copyright: 2001                     Almer S. Tigelaar <almer@gnome.org>
            2009                     Chris Dennis chris@starsoftanalysis.co.uk
            2005-2006                Chris Shoemaker <c.shoemaker@cox.net>
            2001-2005,2007,2011      Christian Stimming <stimming@tuhh.de>
-           2010-2011                Christian Stimming <christian@cstimming.de>
+           2010-2012                Christian Stimming <christian@cstimming.de>
            2001                     Christian Stimming <stimming@tu-harburg.de>
            2010                     Cristian KLEIN
            2003                     Darin Willits <darin@willits.ca>
@@ -39,7 +38,7 @@ Copyright: 2001                     Almer S. Tigelaar <almer@gnome.org>
            2006                     Eskil Bylund <eskil.bylund@gmail.com>
            2006                     Florian Steinel
            2010                     Geert Janssens <janssens-geert@telenet.be>
-           2012                     Geert Janssens <geert@kobaltwit.be>
+           2011-2013                Geert Janssens <geert@kobaltwit.be>
            1998                     Gerald Combs
            1999-2000                Heath Martin <martinh@pegasus.cc.ucf.edu>
            2000,2009                Herbert Thoma <herbie@hthoma.de>
@@ -48,32 +47,39 @@ Copyright: 2001                     Almer S. Tigelaar <almer@gnome.org>
            2001                     James LewisMoss <dres@debian.org>
            2004                     James Strandboge <jstrand1@rochester.rr.com>
            1998-1999,2001           Jeremy Collins
-           2011                     John Ralls <jralls@ceridwen.us>
+           2011-2013                John Ralls <jralls@ceridwen.us>
            2001-2002,2004-2007      Joshua Sled <jsled@asynchronous.org>
            1997-2004                Linas Vepstas <linas@linas.org>
            1991                     Marc Feeley
            1997                     Martin Jones <mjones@kde.org>
+           2001-2002                Mikael Hallendal <micke@imendio.com>
            2003                     Morten Welinder <terra@gnome.org>
+           2011                     Muslim Chochlov <muslim.chochlov@gmail.com>
            2004-2006                Neil Williams <linux@codehelp.co.uk>
            2006-2010                Phil Longstaff <plongstaff@rogers.com>
+           2012-2013                Phil Longstaff <phil.longstaff@yahoo.ca>
            1998                     Radey Shouman
+           2001-2002                Richard Hult <richard@imendio.com>
            1998-2001                Rob Browning <rlb@cs.utexas.edu>
+           2011-2012                Robert Fewell
            2000-2001                Robert Merkel <rgmerk@mira.net>
            1997                     Robin D. Clark <rclark@cs.hmc.edu>
            2009                     Sebastian Held <sebastian.held@gmx.de>
            2008                     Sven Henkel <shenkel@gmail.com>
            1990-2000                Terry D. Boldt
            1997                     Torben Weis <weis@kde.org>
+           2001-2002                CodeFactory AB
            2001                   Free Software Foundation
-           1995-2001,2003-2008    Free Software Foundation, Inc
+           1994-2012              Free Software Foundation, Inc
            2000-2001              Gnumatic Incorporated
            2005                   GnuCash team
            1999                   Helix Code, Inc
+           2005                   Imendio AB
            2001                   Linux Developers Group
            2001                   Linux Developers Group, Inc.
            2008-2010              ParIT Worker Co-operative <paritinfo@parit.ca>
            2010                   ParIT Worker Co-operative <transparency@parit.ca>
-License: GPL-3+
+License: GPL-2+
 Comment: 
  Other contributors are listed in file AUTHORS
  .
@@ -83,8 +89,8 @@ Comment:
 
 Files: debian/*
 Copyright: 2009-2012 Micha Lenk <micha@debian.org>
-           2011-2012 Sébastien Villemot <sebastien@debian.org>
-           2012      Dmitry Smirnov <onlyjob@member.fsf.org>
+           2011-2014 Sébastien Villemot <sebastien@debian.org>
+           2012-2013 Dmitry Smirnov <onlyjob@debian.org>
            2004-2009 Thomas Bushnell, BSG <tb@debian.org>
            2002-2004 James A. Treacy <treacy@debian.org>
            2000-2001 John Goerzen <jgoerzen@complete.org>
@@ -93,22 +99,16 @@ License: GPL-3+
 
 Files: 
  src/doc/design/gnucash-design.info
- src/doc/design/gnucash-design.texinfo
+ src/doc/design/gnucash-design.texi
 Copyright: 2000 Gnumatic Incorporated
 License: GFDL-NIV-1.1
 Comment: 
  http://www.debian.org/vote/2006/vote_001#outcome
 
 Files: 
- src/import-export/csv/gnc-csv-gnumeric-popup.c
- src/import-export/csv/gnc-csv-gnumeric-popup.h
+ src/import-export/csv-imp/gnc-csv-gnumeric-popup.c
+ src/import-export/csv-imp/gnc-csv-gnumeric-popup.h
 Copyright: Gnumeric authors
-License: GPL-2 or GPL-3
-
-Files: src/import-export/csv/gnc-csv-import.c
-Copyright: 2001 Almer S. Tigelaar <almer@gnome.org>
-           2003 Morten Welinder <terra@gnome.org>
-           2007 Benny Sperisen <lasindi@gmail.com>
 License: GPL-2 or GPL-3
 
 Files: 
@@ -116,6 +116,8 @@ Files:
  src/app-utils/gnc-sx-instance-model.h
  src/gnome/dialog-sx-editor.c
  src/gnome/dialog-sx-editor.h
+ src/gnome/dialog-sx-editor2.c
+ src/gnome/dialog-sx-editor2.h
  src/gnome/dialog-sx-since-last-run.c
  src/gnome/dialog-sx-since-last-run.h
  src/gnome/gnc-plugin-page-sx-list.c
@@ -127,14 +129,6 @@ Files:
  src/gnome-utils/gnc-sx-list-tree-model-adapter.h
 Copyright: 2001-2002,2006 Joshua Sled <jsled@asynchronous.org>
 License: GPL-2 or GPL-3
-
-Files: 
- src/core-utils/core-utils.scm
- src/gnome-utils/test/test-gnc-dialog.c
- src/gnome-utils/test/test-gnc-recurrence.c
-Copyright: 2005-2006 Chris Shoemaker <c.shoemaker@cox.net>
-License: GPL-3+
-Comment: see COPYING for details
 
 Files: 
  lib/libc/strptime.c
@@ -171,11 +165,52 @@ Copyright: 2001 Mohammad Toossi <mohammad@bamdad.org>
            2001 Roozbeh Pournader <roozbeh@sharif.edu>
 License: LGPL-2.1+
 
+Files: src/optional/gtkmm/gncmm/wrap_init.hpp
+Copyright: 2007 The gtkmm development team
+License: LGPL-2.1+
+
+Files: src/python/pycons/__init__.py
+       src/python/pycons/console.py
+       src/python/pycons/ishell.py
+       src/python/pycons/pycons
+       src/python/pycons/setup.py
+       src/python/pycons/shell.py
+Copyright: 2008 Nicolas Rougier
+           2007 IBM Corporation
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+     * Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+     * Neither the name of the University of California, Berkeley nor the
+       names of its contributors may be used to endorse or promote products
+       derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE AUTHOR AND CONTRIBUTORS BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: src/report/jqplot/plugins/*
+Copyright: 2009-2013 Chris Leonello
+License: GPL-2
+
 Files: 
  src/app-utils/gfec.c
  src/app-utils/gfec.h
 Copyright: not applicable
 License: public-domain
+ This code is in the public domain.
 
 Files: packaging/win32/pi.sh
 Copyright: Earnie Boyd <earnie@users.sf.net>
@@ -189,7 +224,7 @@ Copyright: 1995-1997 Ulrich Drepper <drepper@gnu.ai.mit.edu>
            2004-2008 Rodney Dawes <dobey.pwns@gmail.com>
 License: other
  This file may be copied and used freely without restrictions.  It may
- be used in projects which are not available under a GNU Public License,
+ be used in projects which are not available under a GNU General Public License,
  but which still want to provide support for the GNU gettext functionality.
 
 License: GFDL-NIV-1.1
@@ -674,7 +709,3 @@ License: LGPL-2.1+
  On Debian systems, the complete text of the GNU Lesser General
  Public License version 2.1 can be found in
  "/usr/share/common-licenses/LGPL-2.1".
-
-License: public-domain
- This code is in the public domain.
-
