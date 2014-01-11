@@ -1,3 +1,14 @@
+drawpile (0.8.2-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+     * New application icon
+     * Session recording and playback support
+     * Adjustable server session history size limit
+     * Video export (image sequence only at the moment)
+     * Improved dab and line drawing
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 11 Jan 2014 14:46:25 +0100
+
 drawpile (0.8.1-1~getdeb1) saucy; urgency=low
 
   * New upstream version
