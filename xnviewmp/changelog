@@ -1,3 +1,204 @@
+xnviewmp (0.64-1~getdeb1) precise; urgency=low
+
+  * New upstream version (LP: #1263974)
+    - 0000187: [Bugs] 'Cut' missing on linux -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29157 
+    - 0000186: [Bugs] Linux deb install in sbin -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=29138 
+    - 0000183: [Bugs] Switch mode & Return/Enter -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29129 
+    - 0000182: [Requests] Square selection -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29112 
+    - 0000177: [Bugs] Capture + save -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29117 
+    - 0000176: [Bugs] Linux renaming -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29131 
+    - 0000175: [Requests] Reset in Rotate dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29118 
+    - 0000174: [Bugs] Float percent -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=29028 
+    - 0000173: [Bugs] Up/down key -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29073 .
+    - 0000172: [Requests] Switch Tabs -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29047 
+    - 0000167: [Bugs] Rating&Color disappear -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28484 
+    - 0000159: [Bugs] The width of the foldername field -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=27635&start=15 
+    - 0000162: [Bugs] Crop issue -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=29014 .
+    - 0000150: [Bugs] How to crash XnViewMP in few seconds -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28673&p=115164 .
+    - 0000115: [Requests] Thumbnail resizing (admin)
+    - 0000164: [Requests] Free thumbnail size -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=27022 
+    - 0000161: [Requests] File Association on linux -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29006&p=115559 
+    - 0000086: [TODO] New JPEG XR
+    - 0000152: [Requests] ZIP compression -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28966 .
+    - 0000151: [Bugs] GPS location -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28917 .
+    - 0000110: [Requests] Offset grid -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28503 .
+    - 0000118: [Requests] Grid line -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=17557 .
+    - 0000146: [TODO] WebP 0.3.1
+    - 0000148: [TODO] zlib 1.2.8
+    - 0000147: [TODO] libpng 1.6.6
+    - 0000154: [TODO] QT 4.8.5
+    - 0000134: [Bugs] Always (Copying...) (admin)
+    - 0000001: [Requests] Watermark stretched -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28699 
+    - 0000126: [Requests] Import and copy feature
+    - 0000144: [Bugs] Change categories & quit -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=28921 
+    - 0000143: [Bugs] "Properties" don't work on folders -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28934 
+    - 0000135: [Bugs] Disappearing Checkboxes - with the fix
+    - 0000117: [Bugs] Preset descriptions incorrect -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28860 
+    - 0000002: [Bugs] On Windows, when dragging a file into folder treeview,
+    use Move by default if same partition (admin)
+    - 0000003: [Requests] Open in compare window -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28304 .
+    - 0000004: [Bugs] Zoom to selected area -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28419 .
+    - 0000005: [Bugs] Mouse zooming -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28321 .
+    - 0000006: [Bugs] Resize selection -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28323 .
+    - 0000007: [Bugs] Transparent line -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28316 .
+    - 0000008: [Requests] Compare, be able to hide some view -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28374 .
+    - 0000009: [Bugs] Batch convert and folder with only subfolder -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28383 .
+    - 0000010: [Bugs] Line in EXIF pane -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28359 .
+    - 0000011: [Requests] Pathname or filename in window title -
+    http://newsgroup.xnview.com/viewtopic.php?f=74&t=28382 .
+    - 0000012: [Bugs] Associate tools on Xp hangs -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28389&p=112894 .
+    - 0000013: [Bugs] Random order quick slideshow -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28407 .
+    - 0000014: [Bugs] Copy path in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28415 .
+    - 0000015: [Bugs] Save selection -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28429 .
+    - 0000016: [Bugs] 'Select All' doesn't change crop values -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28440 .
+    - 0000017: [Bugs] DB infos get lost with rename in conflict dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28457 .
+    - 0000018: [Bugs] Conflict dialog when rename file -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28458 .
+    - 0000019: [Bugs] Selection Left/Right + Shift -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28461 .
+    - 0000020: [Requests] Paste on selected folder -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28470, [^]
+    http://newsgroup.xnview.com/viewtopic.php?f=6 .
+    - 0000021: [Bugs] 'Filter' not saved (admin)
+    - 0000022: [Bugs] No readable file -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28444 .
+    - 0000023: [Bugs] 'Copy To' on a existing folder -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28466 .
+    - 0000024: [Bugs] Pan tool -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28492 .
+    - 0000025: [Bugs] Mouse button -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28489 .
+    - 0000026: [Bugs] Horizontal scrollbar in Category view -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28501 .
+    - 0000027: [Bugs] Time in IPTC/XMP -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28080&p=114812 .
+    - 0000028: [Bugs] Association -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28577 .
+    - 0000029: [Bugs] Indicator when saving -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28536 .
+    - 0000030: [Requests] View mode cursor position in status bar (admin)
+    - 0000031: [Bugs] W&B quality -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28537&p=113508 .
+    - 0000032: [Bugs] Wrong data in information pane -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28549 .
+    - 0000033: [Bugs] Button menu missing -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28773 .
+    - 0000034: [Requests] File listing -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28698 .
+    - 0000035: [Bugs] Hidden folder not shown on linux -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28724 .
+    - 0000036: [Bugs] Right-click on folder tree doesn't select -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28685 .
+    - 0000037: [Bugs] 8 bits on linux -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28639 .
+    - 0000038: [Requests] IPTC Dialog, load template from XnView -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28680&p=114057 .
+    - 0000039: [Bugs] Description/comment in fullscreen -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28690 .
+    - 0000040: [Requests] Sort by filename no numeric (admin)
+    - 0000041: [Requests] 'remove from all categories' can be removed -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28656&p=113890 .
+    - 0000042: [Bugs] XMP/ExifTool pane slow with long XMP data -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28651&p=114650 .
+    - 0000043: [Bugs] Selection in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28637 .
+    - 0000044: [Requests] User filter (admin)
+    - 0000045: [Bugs] Capture Active window & Window -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28473 .
+    - 0000046: [Bugs] Filter dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28493 .
+    - 0000047: [Bugs] Browser can't be closed with mouse click -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28474 .
+    - 0000048: [Requests] Rating/label shortcut can be modified now -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28303 .
+    - 0000049: [Bugs] JBIG2 -
+    http://newsgroup.xnview.com/viewtopic.php?f=35&t=28795&p=114574 .
+    - 0000050: [Bugs] Cut -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28613 .
+    - 0000051: [Bugs] IPTC Dialog sort items -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28647 .
+    - 0000052: [Requests] Export dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28662&p=114487 .
+    - 0000053: [Bugs] IPTC dialog resizing -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28738 .
+    - 0000054: [Bugs] Sort by extension -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28785 .
+    - 0000055: [Requests] Layout saved now contains thumbnail size (admin)
+    - 0000056: [Bugs] Blurred thumbnails -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28595 .
+    - 0000057: [Bugs] Change "EXIF: Date Modified" -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28552 .
+    - 0000058: [Bugs] Crash with large image (admin)
+    - 0000059: [Requests] Lastest WebP -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=26215 .
+    - 0000060: [Bugs] Different issues in batch convert (admin)
+    - 0000061: [Bugs] Thumbnail quality if caching is disable -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28460 .
+    - 0000062: [Bugs] Rating menu -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28329 .
+    - 0000063: [Requests] Convert in view mode (admin)
+    - 0000064: [Bugs] Subfolder can be used in folder field -
+    http://newsgroup.xnview.com/viewtopic.php?f=74&t=28641 .
+    - 0000065: [Bugs] Alpha in thumbnail -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=25499&p=113049 .
+    - 0000066: [Bugs] Windows associations -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28282 .
+    - 0000067: [Bugs] Search crash -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28438 .
+    - 0000068: [Bugs] Comment in search dialog (admin)
+    - 0000069: [Bugs] Duplicated comment -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28586&p=113586 .
+    - 0000070: [Requests] Color label string can be edited (admin)
+    - 0000071: [Requests] XMP in RAW -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28600 .
+    - 0000072: [Bugs] Rebuild thumbnail / Lossless crop -
+    http://newsgroup.xnview.com/viewtopic.php?p=113309 .
+    - 0000073: [Requests] Filters and adjustements use current selected area
+    (admin)
+    - 0000074: [Requests] Keyboard/mouse settings in Interface pane (admin)
+    - 0000075: [Requests] Synchronize with files (to reload Metadata) (admin)
+    - 0000127: [Bugs] Browse from view mode click - closed.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 14 Jan 2014 19:26:38 +0100
+
 xnviewmp (0.61-1~getdeb2) precise; urgency=low
 
   * Fix parameter expansion with $@
