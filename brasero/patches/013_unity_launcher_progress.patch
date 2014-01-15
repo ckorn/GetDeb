@@ -1,0 +1,119 @@
+Description: Show burn progress in Unity launcher
+ This patch makes Brasero show burn progress in the
+ Unity launcher. The support is disabled by default,
+ to enable it, brasero should be configured with --enable-unity
+Author: Bilal Akhtar <bilalakhtar@ubuntu.com>
+Forwarded: https://bugzilla.gnome.org/show_bug.cgi?id=655161
+Index: brasero-3.10.0/configure.ac
+===================================================================
+--- brasero-3.10.0.orig/configure.ac	2013-12-17 13:14:14.279531051 +1300
++++ brasero-3.10.0/configure.ac	2013-12-17 13:14:14.271531052 +1300
+@@ -392,6 +392,21 @@
+ fi
+ AM_CONDITIONAL(HAVE_APP_INDICATOR, test x"$enable_appindicator" = xyes)
+ 
++dnl *************** check for unity ***********************
++
++AC_ARG_ENABLE(unity,
++            AS_HELP_STRING([--enable-unity],[Build support for integration in Unity launcher [[default=no]]]),
++            [enable_unity=$enableval],
++            [enable_unity="no"])
++
++if test x"$enable_unity" = "xyes"; then
++    PKG_CHECK_MODULES(UNITY, unity >= 4.0.2)
++    AC_SUBST(UNITY_CFLAGS)
++    AC_SUBST(UNITY_LIBS)
++    AC_DEFINE(HAVE_UNITY, 1, [Unity launcher support])
++fi
++AM_CONDITIONAL(HAVE_UNITY, test x"$enable_unity" = xyes)
++
+ TRACKER_REQUIRED=0.10.0
+ 
+ AC_ARG_ENABLE(search,
+Index: brasero-3.10.0/libbrasero-burn/Makefile.am
+===================================================================
+--- brasero-3.10.0.orig/libbrasero-burn/Makefile.am	2013-12-17 13:14:14.279531051 +1300
++++ brasero-3.10.0/libbrasero-burn/Makefile.am	2013-12-17 13:14:14.275531051 +1300
+@@ -204,6 +204,11 @@
+ AM_CPPFLAGS += -DHAVE_APP_INDICATOR @APP_INDICATOR_CFLAGS@
+ endif
+ 
++if HAVE_UNITY
++libbrasero_burn3_la_LIBADD += @UNITY_LIBS@
++AM_CPPFLAGS += -DHAVE_UNITY @UNITY_CFLAGS@
++endif
++
+ EXTRA_DIST =			\
+ 	libbrasero-marshal.list
+ #	libbrasero-burn.symbols
+Index: brasero-3.10.0/libbrasero-burn/brasero-burn-dialog.c
+===================================================================
+--- brasero-3.10.0.orig/libbrasero-burn/brasero-burn-dialog.c	2013-12-17 13:14:14.279531051 +1300
++++ brasero-3.10.0/libbrasero-burn/brasero-burn-dialog.c	2013-12-17 13:14:14.275531051 +1300
+@@ -49,6 +49,10 @@
+ #include <canberra-gtk.h>
+ #include <libnotify/notify.h>
+ 
++#ifdef HAVE_UNITY
++#include <unity.h>
++#endif
++
+ #include "brasero-burn-dialog.h"
+ 
+ #ifdef HAVE_APP_INDICATOR
+@@ -123,6 +127,10 @@
+ 
+ 	guint is_writing:1;
+ 	guint is_creating_image:1;
++
++#ifdef HAVE_UNITY
++    UnityLauncherEntry *launcher_entry;
++#endif
+ };
+ 
+ #define BRASERO_BURN_DIALOG_PRIVATE(o)  (G_TYPE_INSTANCE_GET_PRIVATE ((o), BRASERO_TYPE_BURN_DIALOG, BraseroBurnDialogPrivate))
+@@ -1305,6 +1313,11 @@
+ 						   media);
+ 	if ((priv->is_writing || priv->is_creating_image) && isosize > 0)
+ 		priv->total_size = isosize;
++
++#ifdef HAVE_UNITY
++    unity_launcher_entry_set_progress(priv->launcher_entry, task_progress);
++    unity_launcher_entry_set_progress_visible(priv->launcher_entry, TRUE);
++#endif
+ }
+ 
+ static void
+@@ -1492,6 +1505,10 @@
+ 					    0.0,
+ 					    -1);
+ #endif
++
++#ifdef HAVE_UNITY
++    unity_launcher_entry_set_progress_visible(priv->launcher_entry, TRUE);
++#endif
+ }
+ 
+ static void
+@@ -1530,6 +1547,10 @@
+ 	brasero_app_indicator_hide (priv->indicator);
+ #endif
+ 
++#ifdef HAVE_UNITY
++    unity_launcher_entry_set_progress_visible(priv->launcher_entry, FALSE);
++#endif
++
+ 	/* Restore title */
+ 	if (priv->initial_title)
+ 		gtk_window_set_title (GTK_WINDOW (dialog), priv->initial_title);
+@@ -2629,6 +2650,10 @@
+ 			  obj);
+ #endif
+ 
++#ifdef HAVE_UNITY
++    priv->launcher_entry = unity_launcher_entry_get_for_desktop_id("brasero.desktop");
++#endif
++
+ 	alignment = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
+ 	gtk_widget_show (alignment);
+ 	gtk_alignment_set_padding (GTK_ALIGNMENT (alignment), 6, 8, 6, 6);
