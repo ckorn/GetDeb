@@ -1,3 +1,9 @@
+tide (2.62-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 15 Jan 2014 19:45:44 +0100
+
 tide (2.56-1~getdeb1) precise; urgency=low
 
   * New upstream version
