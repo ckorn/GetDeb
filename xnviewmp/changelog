@@ -1,3 +1,9 @@
+xnviewmp (0.64-1~getdeb2) precise; urgency=low
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 14 Jan 2014 23:02:32 +0100
+
 xnviewmp (0.64-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #1263974)
