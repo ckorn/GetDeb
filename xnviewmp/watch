@@ -2,5 +2,3 @@ version=3
 opts="dversionmangle=s/\.//" \
 http://www.wubijacq.com/xnviewmp/index.html \
     (?:.*/)?xnviewmp-([\d]+)-x64\.deb
-
-livestreamer "http://www.twitch.tv/speeddemosarchivesda/b/493969129?t=205m0s"  source
