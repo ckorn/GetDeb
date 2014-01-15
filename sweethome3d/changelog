@@ -1,3 +1,9 @@
+sweethome3d (4.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 15 Jan 2014 19:38:20 +0100
+
 sweethome3d (4.2-1~getdeb1) precise; urgency=low
 
   * New upstream version

@@ -2,11 +2,11 @@ Description: Removes refs to macosx build and forces java libraries
  search path to Debian one (/usr/share/java)
 Author: Gabriele Giacone <1o5g4r8o@gmail.com>
 
-Index: sweethome3d-3.7/build.xml
+Index: sweethome3d-4.3/build.xml
 ===================================================================
---- sweethome3d-3.7.orig/build.xml	2012-10-24 18:48:02.000000000 +0200
-+++ sweethome3d-3.7/build.xml	2012-10-27 00:31:14.927815137 +0200
-@@ -47,11 +47,14 @@
+--- sweethome3d-4.3.orig/build.xml	2014-01-15 19:38:58.255867408 +0100
++++ sweethome3d-4.3/build.xml	2014-01-15 19:38:58.251867408 +0100
+@@ -49,11 +49,14 @@
        <!-- Use lib as an extension directory to override default Java 3D libraries -->
        <extdirs>
          <pathelement location="lib"/>
