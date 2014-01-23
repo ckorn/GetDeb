@@ -1,8 +1,8 @@
-Index: fritzing-0.8.4b/src/partseditor/pemainwindow.cpp
+Index: fritzing-0.8.6b/src/partseditor/pemainwindow.cpp
 ===================================================================
---- fritzing-0.8.4b.orig/src/partseditor/pemainwindow.cpp	2013-12-15 19:44:29.750498984 +0100
-+++ fritzing-0.8.4b/src/partseditor/pemainwindow.cpp	2013-12-15 19:44:29.746498984 +0100
-@@ -2410,10 +2410,10 @@
+--- fritzing-0.8.6b.orig/src/partseditor/pemainwindow.cpp	2014-01-22 19:58:51.566025669 +0100
++++ fritzing-0.8.6b/src/partseditor/pemainwindow.cpp	2014-01-22 19:58:51.562025670 +0100
+@@ -2420,10 +2420,10 @@
  
      QPointF p = pegi->terminalPoint();
      if (coord == "x") {
@@ -15,10 +15,10 @@ Index: fritzing-0.8.4b/src/partseditor/pemainwindow.cpp
      }
      
      terminalPointChangedAux(pegi, pegi->terminalPoint(), p);
-Index: fritzing-0.8.4b/src/partsbinpalette/graphicsflowlayout.cpp
+Index: fritzing-0.8.6b/src/partsbinpalette/graphicsflowlayout.cpp
 ===================================================================
---- fritzing-0.8.4b.orig/src/partsbinpalette/graphicsflowlayout.cpp	2013-12-15 19:44:29.750498984 +0100
-+++ fritzing-0.8.4b/src/partsbinpalette/graphicsflowlayout.cpp	2013-12-15 19:44:29.746498984 +0100
+--- fritzing-0.8.6b.orig/src/partsbinpalette/graphicsflowlayout.cpp	2014-01-22 19:58:51.566025669 +0100
++++ fritzing-0.8.6b/src/partsbinpalette/graphicsflowlayout.cpp	2014-01-22 19:58:51.562025670 +0100
 @@ -81,7 +81,7 @@
  
  		x = nextX;
