@@ -32,7 +32,6 @@ Architecture: any
 Depends: ${misc:Depends},
          libcxx-gtk-utils-2-2.2-0 (= ${binary:Version}),
          libcxx-gtk-utils-doc (= ${source:Version})
-Pre-Depends: ${misc:Pre-Depends}
 Section: libdevel
 Multi-Arch: same
 Description: Programming GTK+ programs using C++ (header files)
