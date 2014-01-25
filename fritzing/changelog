@@ -1,3 +1,9 @@
+fritzing (0.8.7b-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 24 Jan 2014 22:44:09 +0100
+
 fritzing (0.8.6b-1~getdeb1) precise; urgency=low
 
   * New upstream version
