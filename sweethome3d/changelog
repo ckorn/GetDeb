@@ -1,3 +1,11 @@
+sweethome3d (4.3-1~getdeb2) precise; urgency=low
+
+  * Use freehep-graphicsio-svg from the JAR because
+    it contains a bugfix:
+    https://sourceforge.net/p/sweethome3d/bugs/338/
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Jan 2014 18:27:44 +0100
+
 sweethome3d (4.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
