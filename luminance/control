@@ -4,19 +4,26 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                cmake,
-               libqt4-dev,
+               qtbase5-dev,
                libtiff4-dev,
                libopenexr-dev,
                libexiv2-dev,
                libgsl0-dev,
                libfftw3-dev,
-               qt4-dev-tools,
-               libqt4-core,
-               libqtwebkit-dev,
+               libqt5webkit5-dev,
                libraw-dev,
                libpng12-dev,
-               libboost1.49-dev
-Standards-Version: 3.9.3
+               libboost1.49-dev,
+               libcfitsio3-dev,
+               libccfits-dev,
+               qt5-default,
+               qtquick1-5-dev,
+               qtscript5-dev,
+               qtdeclarative5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               libboost-program-options1.49-dev
+Standards-Version: 3.9.4
 Homepage: http://qtpfsgui.sourceforge.net/
 
 Package: luminance
