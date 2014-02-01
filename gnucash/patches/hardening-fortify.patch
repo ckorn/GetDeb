@@ -10,9 +10,11 @@ Description: Disable supression of fortify hardening flag.
  fortify flag is present there are still some real false-positives
  from lintian i.e. W:hardening-no-fortify-functions.
 
---- a/configure.ac
-+++ b/configure.ac
-@@ -671,10 +671,6 @@
+Index: gnucash-2.6.1/configure.ac
+===================================================================
+--- gnucash-2.6.1.orig/configure.ac	2014-02-01 00:22:01.288380856 +0100
++++ gnucash-2.6.1/configure.ac	2014-02-01 00:22:01.284380856 +0100
+@@ -694,10 +694,6 @@
  AC_ARG_ENABLE( debug,
    [AS_HELP_STRING([--enable-debug],[compile with debugging flags set])],
    [
