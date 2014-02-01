@@ -1,3 +1,30 @@
+fotoxx (14.02-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Index Image Files (aka Synchronize) is faster. Intermixing image files 
+      with 100K other files under /home/user/... has little effect on speed.
+      Startup time is also faster for the normal case of few new image files.
+    + Retouch Combo: sliders were added for fast adjustment of overall 
+      brightness and contrast. The curves can then be hand-tuned if needed.
+    + Slide Show: a new transition type simulates turning a book page.
+    + Slide Show: images are clipped to exactly fit the monitor if the 
+      difference in aspect ratio is less than an adjustable limit. 
+    + Slide Show: optionally show captions/comments at top of each image.
+    + The batch Rename and Convert functions were combined for convenience.
+    + Batch Convert has a new option to automatically sharpen images.
+    + Paint/Clone: a "shadow" paintbrush tracks the source of copied pixels.
+    + Retouch Combo, Trim/Rotate and Resize can recall prior settings
+      for easier application to multiple images needing similar treatments.
+    + Mashup: resizing/rotating an overlay image with the mouse is smoother.
+    + Editing a selected area: edge blending was made a bit smoother. 
+    + Search Images: select gallery report or tabular report for metadata.
+    + Block metadata edits for inappropriate image types (e.g. bmp, gif).
+    + Bugfix: Texture function converted RGB 0/0/0 pixels to illegal values.
+    + Bugfix: Bogus error message about exceeding geotag limits.
+    + Bugfix: Trim function left temporary image remnants on the window.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Feb 2014 16:24:24 +0100
+
 fotoxx (14.01.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
