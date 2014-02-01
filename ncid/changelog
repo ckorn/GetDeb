@@ -1,3 +1,59 @@
+ncid (0.88-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    - Makefile: - MFLAGS line: removed -W from Mflags, -Wmissing-declarations
+    - added to DOC define, added docdir to local-base
+    - created docdir:, added $(DOCDIR) to some install commands
+    - README: - updated
+    - client/ncid.sh:
+    - added server menu and code to make changes to the
+    alias, blacklist, and whitelist files using the server
+    - added new verbose statements
+    - doc/Makefile: new
+    README.doc: new
+    *: except for CHANGES, LICENSE, and ReleaseNotes, all text
+     files were replaced by md files.
+    NCID-SDK.odt: updated
+    doc/NCID-SDK.odt: updated
+    - gateway/Makefile: added warning for unused variables
+    ncid2ncid.c: removed unused variables
+    sip2ncid.c: removed unused variables
+    - man/Makefile: updated
+    README.man: new
+    moved: ncidrotate.conf.5 to logtotate/ncidrotate.conf.5
+    new: index.md index-add.md
+    ncid.1: updated
+    ncidrotate.conf.5 moved to logrotate/ncidrotate.conf.5 
+    - screenshots/ncid-call.png: updated
+    - screenshots/ncid-mesg.png: updated
+    - server/ncidd.c: writeLog(): changed msgbuf to logbuf for write
+    to server log
+    - added "char *fnptr" to point to a open file that
+    can be alias, conf, blacklist, or whitelist
+    - added fnptr as first parameter passwd to getWord()
+    - removed unused variables
+
+    getWord() added a new passwd parameter: char *nameptr
+     ncidd.h: added extern char *fnptr;
+    added more service messages, changed 300 message name
+     nciddalias.c: added fnptr as first parameter passwd to getWord()
+     nciddalias.h: updated
+     nciddconf.c: added fnptr as first parameter passwd to getWord()
+     nciddhangup.c: added fnptr as first parameter passwd to getWord()
+     nciddhangup.h: updated
+     ncidd.conf-in: added new modem information
+    - test/test-client-screenshot.data: updated
+     test-client.data: updated
+     test-modem-calls.data: updated
+    - tools/Makefile: updated
+    cidupdate.pl: * fixed changing a name to "NO NAME"
+    if not in ncidd.alias
+    * Removed accept/reject message if no changes to
+    cidcall.log
+    ncidutil.pl: new
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Feb 2014 00:02:56 +0100
+
 ncid (0.87-1~getdeb1) precise; urgency=low
 
   * New upstream version
