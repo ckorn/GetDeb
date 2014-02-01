@@ -12,7 +12,8 @@ Depends: ${perl:Depends},
          ${misc:Depends},
          libgtk2-perl,
          libsoap-lite-perl,
-         rdesktop
+         freerdp-x11
+Recommends: rdesktop
 Description: Open Source VirtualBox Client with Remote Management
  RemoteBox allows you to administer an installation of
  VirtualBox residing on another machine such as a server,

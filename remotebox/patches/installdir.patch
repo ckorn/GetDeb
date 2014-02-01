@@ -1,10 +1,10 @@
 # patch the source to find the installation directory
-Index: remotebox-1.6/remotebox
+Index: remotebox-1.7/remotebox
 ===================================================================
---- remotebox-1.6.orig/remotebox	2013-11-02 15:14:26.791393777 +0100
-+++ remotebox-1.6/remotebox	2013-11-02 15:17:59.703391959 +0100
-@@ -9,13 +9,13 @@
- use File::Spec;
+--- remotebox-1.7.orig/remotebox	2014-02-01 00:10:17.932386860 +0100
++++ remotebox-1.7/remotebox	2014-02-01 00:10:17.924386861 +0100
+@@ -7,13 +7,13 @@
+ use POSIX qw(ceil);
  use MIME::Base64;
  # *** PACKAGERS MAY WISH TO PATCH THIS LOCATION ***
 -use lib "$Bin/share/remotebox";

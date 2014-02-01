@@ -1,3 +1,49 @@
+remotebox (1.7-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+    - Added Video Capture support for the guest's display
+    - FreeRDP (aka xfreerdp) is now the default and recommended RDP client.
+    If you
+      used rdesktop previously, your preferences will follow however you can
+      update your preferences if you desire. Go to File->RemoteBox
+      Preferences and under RDP client, change it to:
+      xfreerdp -g %Xx%Y --plugin cliprdr --plugin rdpsnd -T "%n - RemoteBox"
+      %h:%p
+      NOTE: You may need to install the freerdp package for your operating
+      system.
+    - Added additional substitutions for use with the RDP Client preference.
+    These are:
+        %X - The Auto-Hint Resolution width
+        %Y - The Auto-Hint Resolution height
+        %D - The Auto-Hint Resolution depth
+      These can be used for specifying desired resolutions with your RDP
+      client.
+    - Fixed a bug where cached information (which was potentially invalid)
+    was not flushed completely across a new connection to a server
+    - Fixed a guest cloning bug where the machine reference was being used
+    before the guest was fully cloned, causing GUI deadlock until the clone
+    had completed
+    - Fixed adding a host only network interfaces where the new interface
+    would not immediately show up. Primarily only affected windows hosts
+    - Fixed a bug preventing logging in when using Perl 5.18
+      (Fedora 20, OpenSUSE 13.1, NetBSD 6, FreeBSD etc)
+    - Improved remote file path handling across disparate operating systems
+    (again)
+    - Improved remote file dialogs
+    - Improved progress dialogs. They show time remaining where available and
+    can be cancelled where VirtualBox allows.
+    - Spin boxes now accept case insensitive unit qualifiers where
+    applicable:
+      (eg MB, GB, TB) for specifying memory and disk sizes
+      (eg ms, secs, mins) for specifying time
+    - Worked around a bug where VirtualBox strips the leading path of a
+    location on a reload when a double / is found in the path. This could
+    cause disks to be inaccessible (due to incorrect path) when
+    VirtualBox is reloaded.
+    - Various GUI tweaks
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Feb 2014 00:05:17 +0100
+
 remotebox (1.6-1~getdeb1) saucy; urgency=low
 
   * New upstream version
