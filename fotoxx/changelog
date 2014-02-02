@@ -1,3 +1,10 @@
+fotoxx (14.02.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: stop spurious "low memory" warning.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 02 Feb 2014 15:22:17 +0100
+
 fotoxx (14.02-1~getdeb1) precise; urgency=low
 
   * New upstream version
