@@ -1,0 +1,16 @@
+# change config directory to $HOME/.config/chatty
+Index: chatty-0.5.1/src/chatty/Chatty.java
+===================================================================
+--- chatty-0.5.1.orig/src/chatty/Chatty.java	2013-12-17 17:07:34.000000000 +0100
++++ chatty-0.5.1/src/chatty/Chatty.java	2014-02-02 00:09:56.290004431 +0100
+@@ -115,7 +115,9 @@
+         }
+         String dir = System.getProperty("user.home")
+                 + File.separator 
+-                + ".chatty" 
++                + ".config" 
++                + File.separator 
++                + "chatty" 
+                 + File.separator;
+         new File(dir).mkdirs();
+         return dir;

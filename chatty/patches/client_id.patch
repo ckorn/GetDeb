@@ -1,0 +1,15 @@
+# set client ID. taken from the auth URL of the precompiled jar.
+# is this a secret?
+Index: chatty-0.5.1/src/chatty/Chatty.java
+===================================================================
+--- chatty-0.5.1.orig/src/chatty/Chatty.java	2014-02-02 00:09:56.290004431 +0100
++++ chatty-0.5.1/src/chatty/Chatty.java	2014-02-02 01:05:38.025905023 +0100
+@@ -20,7 +20,7 @@
+     /**
+      * The Twitch client id of this program.
+      */
+-    public static final String CLIENT_ID = <...>;
++    public static final String CLIENT_ID = "spyiu9jqdnfjtwv6l1xjk5zgt8qb91l";
+     
+     /**
+      * The redirect URI for getting a token.

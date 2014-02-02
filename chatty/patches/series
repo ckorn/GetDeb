@@ -1,0 +1,6 @@
+config_dir.patch
+client_id.patch
+manifest.patch
+disable_version_check.patch
+disable_global_hotkey.patch
+build.patch
