@@ -1,0 +1,29 @@
+# disable version check. updates come via apt-get
+Index: chatty-0.5.1/src/chatty/Version.java
+===================================================================
+--- chatty-0.5.1.orig/src/chatty/Version.java	2013-12-17 02:42:03.000000000 +0100
++++ chatty-0.5.1/src/chatty/Version.java	2014-02-02 02:16:24.061778715 +0100
+@@ -32,8 +32,8 @@
+     }
+     
+     private void checkForNewVersion() {
+-        LOGGER.info("Checking for new version..");
+-        new Thread(new VersionChecker()).start();
++        //LOGGER.info("Checking for new version..");
++        //new Thread(new VersionChecker()).start();
+     }
+     
+     /**
+Index: chatty-0.5.1/src/chatty/TwitchClient.java
+===================================================================
+--- chatty-0.5.1.orig/src/chatty/TwitchClient.java	2013-12-17 02:42:03.000000000 +0100
++++ chatty-0.5.1/src/chatty/TwitchClient.java	2014-02-02 02:24:04.345765022 +0100
+@@ -170,7 +170,7 @@
+         g.loadSettings();
+         g.showGui();
+         
+-        checkNewVersion();
++        //checkNewVersion();
+         
+         // Connect or open connect dialog
+         if (settings.getBoolean("connectOnStartup")) {
