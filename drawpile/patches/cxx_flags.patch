@@ -1,9 +1,9 @@
 # add missing includes and compile with position independent code
-Index: drawpile-0.8.2/CMakeLists.txt
+Index: drawpile-0.8.4/CMakeLists.txt
 ===================================================================
---- drawpile-0.8.2.orig/CMakeLists.txt	2014-01-11 14:51:08.282355291 +0100
-+++ drawpile-0.8.2/CMakeLists.txt	2014-01-11 14:51:08.278355291 +0100
-@@ -52,10 +52,10 @@
+--- drawpile-0.8.4.orig/CMakeLists.txt	2014-02-04 18:18:07.355192601 +0100
++++ drawpile-0.8.4/CMakeLists.txt	2014-02-04 18:18:07.351192601 +0100
+@@ -53,10 +53,10 @@
          COMMAND ${CMAKE_CXX_COMPILER} -dumpversion OUTPUT_VARIABLE GCC_VERSION)
      if (GCC_VERSION VERSION_LESS 4.7)
          # GCC < 4.7

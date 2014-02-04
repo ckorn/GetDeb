@@ -1,3 +1,19 @@
+drawpile (0.8.4-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+     * Bugfix: stop scene rectangle from growing when lines or annotations
+     are dragged beyond boundaries
+     * Color picker: right mouse click now picks background color
+     * Improved interval recording: time between intervals is no longer
+     accumulated
+     * New feature: Laser pointer tool
+     * New feature: constrain rectangle and line drawing to squares and
+     straight lines with shift key
+     * New feature: Ellipse drawing tool
+     * New feature: Preview stroke style is now selectable
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 04 Feb 2014 18:17:28 +0100
+
 drawpile (0.8.3-1~getdeb1) saucy; urgency=low
 
   * New upstream version
