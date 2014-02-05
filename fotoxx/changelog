@@ -1,3 +1,10 @@
+fotoxx (14.02.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: fix memory corruption causing a crash (seldom). 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 05 Feb 2014 19:17:38 +0100
+
 fotoxx (14.02.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
