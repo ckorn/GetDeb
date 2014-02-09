@@ -1,3 +1,9 @@
+cgminer (3.12.3-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 09 Feb 2014 17:52:03 +0100
+
 cgminer (3.12.1-1~getdeb1) saucy; urgency=low
 
   * New upstream version
