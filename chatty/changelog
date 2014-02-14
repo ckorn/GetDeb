@@ -1,3 +1,46 @@
+chatty (0.6-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    New features:
+    - New more flexible notifications that replace the system tray
+    notifications
+      (you can still switch back to them though)
+    - Added chat logging to record messages and stream/chat infos to file
+    - Added Spam Protection
+    - Admin Dialog: Relative times, use own channel when no channel is
+    joined, last commercial run time, improved several channels support,
+    dialog not modal anymore, configurable commercial run delay, added help
+    - Added message sound, load sound file names from sounds folder, improved
+      sound settings, changed volume values (you may need to adjust your
+      volumes)
+    - Check if connection was lost a bit faster depending on previous
+    activity
+    - Added new error dialog
+    - Show important release information on first startup of new version
+
+    Changes:
+    - Changed shutdown process
+    - Improved settings dialog (help, icons, components, restart required
+      warning)
+    - Remove additional whitespace from incoming messages
+    - Replace some special html character codes in incoming messages
+    - Default userlist width setting, userlist width 0 now possible
+    - Always output stream status on join (not only if it's new)
+    - Improved help
+    - Added setting to enable (and thus disable) open url prompts
+    - Added Copy URL option to url prompt
+    - Added setting to highlight own messages (always enabled before)
+    - Added setting to change the tabs order (join order/alphabetical)
+    - Added context menu item to clear the highlights dialog
+    - Fixed bug in ViewerHistory when item was still hovered when channel
+      was changed
+    - Added help window icon
+    - Count number of mods on /mods-command response
+    - Prevent auto-scrolling when search is active
+    - Added speedrun.tv option for stream urls
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 14 Feb 2014 17:49:08 +0100
+
 chatty (0.5.1-1~getdeb2) precise; urgency=low
 
   * Update client ID.

@@ -1,11 +1,11 @@
 # set client ID. Generated own ID from twitch
-Index: chatty-0.5.1/src/chatty/Chatty.java
+Index: chatty-0.6/src/chatty/Chatty.java
 ===================================================================
---- chatty-0.5.1.orig/src/chatty/Chatty.java	2014-02-06 19:21:36.000000000 +0100
-+++ chatty-0.5.1/src/chatty/Chatty.java	2014-02-06 19:23:38.021259642 +0100
-@@ -20,7 +20,7 @@
-     /**
-      * The Twitch client id of this program.
+--- chatty-0.6.orig/src/chatty/Chatty.java	2014-02-14 17:49:18.643728226 +0100
++++ chatty-0.6/src/chatty/Chatty.java	2014-02-14 17:49:18.639728226 +0100
+@@ -35,7 +35,7 @@
+      * If you compile this program yourself, you should create your own client
+      * id on http://www.twitch.tv/kraken/oauth2/clients/new
       */
 -    public static final String CLIENT_ID = <...>;
 +    public static final String CLIENT_ID = "q1b6bqsamkie9jl3917hsvaq388psra";

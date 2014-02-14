@@ -1,8 +1,8 @@
 # disable version check. updates come via apt-get
-Index: chatty-0.5.1/src/chatty/Version.java
+Index: chatty-0.6/src/chatty/Version.java
 ===================================================================
---- chatty-0.5.1.orig/src/chatty/Version.java	2013-12-17 02:42:03.000000000 +0100
-+++ chatty-0.5.1/src/chatty/Version.java	2014-02-02 02:16:24.061778715 +0100
+--- chatty-0.6.orig/src/chatty/Version.java	2014-02-14 17:50:18.307726451 +0100
++++ chatty-0.6/src/chatty/Version.java	2014-02-14 17:50:18.303726451 +0100
 @@ -32,8 +32,8 @@
      }
      
@@ -14,16 +14,47 @@ Index: chatty-0.5.1/src/chatty/Version.java
      }
      
      /**
-Index: chatty-0.5.1/src/chatty/TwitchClient.java
+Index: chatty-0.6/src/chatty/TwitchClient.java
 ===================================================================
---- chatty-0.5.1.orig/src/chatty/TwitchClient.java	2013-12-17 02:42:03.000000000 +0100
-+++ chatty-0.5.1/src/chatty/TwitchClient.java	2014-02-02 02:24:04.345765022 +0100
-@@ -170,7 +170,7 @@
-         g.loadSettings();
-         g.showGui();
+--- chatty-0.6.orig/src/chatty/TwitchClient.java	2014-02-14 17:50:18.307726451 +0100
++++ chatty-0.6/src/chatty/TwitchClient.java	2014-02-14 17:51:47.459723799 +0100
+@@ -187,7 +187,7 @@
          
--        checkNewVersion();
-+        //checkNewVersion();
+         // Check version, if enabled in this build
+         if (Chatty.VERSION_CHECK_ENABLED) {
+-            checkNewVersion();
++            //checkNewVersion();
+         }
          
          // Connect or open connect dialog
-         if (settings.getBoolean("connectOnStartup")) {
+@@ -235,7 +235,7 @@
+      * Checks for a new version if the last check was long enough ago.
+      */
+     private void checkNewVersion() {
+-        if (!settings.getBoolean("checkNewVersion")) {
++        /*if (!settings.getBoolean("checkNewVersion")) {
+             return;
+         }
+         long ago = System.currentTimeMillis() - settings.getLong("versionLastChecked");
+@@ -259,7 +259,7 @@
+                     g.printSystem("You already have the newest version.");
+                 }
+             }
+-        });
++        });*/
+     }
+     
+ 
+Index: chatty-0.6/src/chatty/Chatty.java
+===================================================================
+--- chatty-0.6.orig/src/chatty/Chatty.java	2014-02-14 17:49:18.639728226 +0100
++++ chatty-0.6/src/chatty/Chatty.java	2014-02-14 17:52:15.143722976 +0100
+@@ -51,7 +51,7 @@
+      * Enable Version Checker (if you compile and distribute this yourself, you
+      * may want to disable this)
+      */
+-    public static final boolean VERSION_CHECK_ENABLED = true;
++    public static final boolean VERSION_CHECK_ENABLED = false;
+     
+     /**
+      * The regular URL of the textfile where the most recent version is stored.
