@@ -1,14 +1,11 @@
 #!/usr/bin/make -f
+%:
+	dh $@ --with python2
 
-override_dh_auto_install:
+override_dh_auto_clean:
+	rm -rf debian/addons
 
 override_dh_auto_build:
 	[ -d debian/addons ] || (cd debian && tar xzf addons.tar.gz)
 
-override_dh_auto_clean:
-	rm -rf debian/addons debian/addons.tar.gz
-
-override_dh_auto_configure:
-	cd debian && uudecode addons.tar.gz.uue
-%:
-	dh --with python-support $@
+override_dh_auto_install:
