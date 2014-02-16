@@ -2,10 +2,8 @@ The given /etc/init.d script indicates it should be started at one of
 the runlevels 2-5 but not at all of them. This is a mistake. The system
 administrators should be given the opportunity to customize the
 runlevels at their will.
-Index: tvpvrd-3.3.1/scripts/deb.init.d.tvpvrd
-===================================================================
---- tvpvrd-3.3.1.orig/scripts/deb.init.d.tvpvrd	2011-08-13 12:57:09.906353982 +0200
-+++ tvpvrd-3.3.1/scripts/deb.init.d.tvpvrd	2011-08-13 12:57:51.646353997 +0200
+--- a/scripts/deb.init.d.tvpvrd
++++ b/scripts/deb.init.d.tvpvrd
 @@ -3,7 +3,7 @@
  # Provides:          tvpvrd
  # Required-Start:    $remote_fs $syslog
@@ -14,4 +12,4 @@ Index: tvpvrd-3.3.1/scripts/deb.init.d.tvpvrd
 +# Default-Start:     2 3 4 5
  # Default-Stop:      0 1 6
  # Short-Description: Manage the TV recording/transcoding daemon
- # Description:       .  This script can be used to start and and stop the tvpvrd daemon. This daemon will turn your
+ # Description:       This script can be used to start and and stop the tvpvrd daemon. This daemon will turn your
