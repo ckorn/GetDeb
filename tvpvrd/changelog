@@ -1,3 +1,103 @@
+tvpvrd (4.5.0-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+   -- User visible changes:
+    - The station list is no longer sorted alphabetically. Instead
+      the order from the channel file is preserved since that might
+      have some logic for the user that makes more sense than plain
+      alphabetical sort.
+    - Added persistent history to the tvpvrd shell (tvpsh) so that
+      history is remembered between usages on a user-by-user level.
+      History is stored in "~/.tvpsh_history".
+    - For the Web-UI new themes can be added dynamically. Just add
+      new themes in the daemons config www directory and restart.
+    - The new Web-UI theme "grey" (which is a clean no-frills "flat"
+      theme) is now the default. 
+    - Some minor UI tweaks/improvements in the Web-UI.
+      ... deletion list disabled if there are no more recordings (as
+      well as submit button)
+    - New format for arguments in transcoding profiles.
+      The way to specify transcoding parameters have changed. Since
+      both ffmpeg and avconv (that is used for transcoding) is
+      constantly evolving its argument format the old way of
+      simplifying for end users by creating the command line
+      programatically in the daemon is too inflexible. 
+      Instead the new way is to specify the complete command line in
+      the profile setting. This makes it easier to keep the daemon
+      and still upgrade to newer version of ffmpeg/avconv and just
+      updated the setting in the config file and not having to wait
+      for a new version of tvpvrd to catch up with the latest command
+      format.
+      This also caters better for advanced users that wants to
+      specify more complex encoding options in the transcoding
+      process.
+    - Added configuration for modern style Upstart init script for
+      system that uses initctl to start daemons (e.g. newer version
+      of Debian, Ubuntu, Linux Mint etc)
+      This is configured automatically depending on the system
+    - Re-enable the user setting for deciding if a user login when
+      using the Web-UI should be required or not. This was previously
+      ignored and a login was always required.
+    - If an XML DB files is specified on the command line the full
+      path is now used. 
+      The previous behavior was to use the daemons working directory
+    - The default templates for the tvpvrd.conf file has been
+      slightly adjusted to enable the Web-UI by default.
+    - Support for "avconv" as transcoding program. This will make the
+      daemon work out-of-the-box with many debian based systems
+      (incl. Ubuntu/Linux Mint) since they ship with "avconv" as
+      default and not "ffmpeg". 
+    - The setup process detects if either "ffmpeg" or "avconv" is
+      installed and adjusts the template for tvpvrd.conf accordingly.
+      Since "ffmpeg" and "avconv" have different command line
+      arguments there are also two profile directories. The old one
+      is used with ffmpeg and the new "profiles-avconv" is used with
+      avconv.
+      However, ffmpeg is still the recommended transcoder and in case
+      both are available the template will be initialized with ffmpeg
+      . 
+    - libreadline-dev is now required dependency to configure and
+      build the daemon (This is a very common library used by many
+      utilities so it is not unreasonable)
+    - "configure" will now use "/usr" as default prefix and "/etc"
+      for default sysconfdir so no need to use
+      "configure --prefix=/usr --sysconfdir=/etc".
+
+   -- Bugs fixed:
+    - Prototype mismatch for xstrtolower()
+    - Web-UI did always require a login and did not adhere to the
+      config setting of require_web_password which could be set to
+      not requiring a login
+    - Only 8 command line argument was allowed when starting the
+      daemon
+    - Fixed compatibility with recent versions of ffmpeg for two pass
+      transcodings
+    - Fixed a potential memory leak in SMTP library in regards to
+      faulty attachments
+    - 64 bit adaption of backtrace stack print in case of SIGSEGV
+      (previous code only worked on a 32bit kernel)
+
+   -- Internal changes:
+    - Some internal cleanup of the autotools setup
+    - Some minor refactoring in how to handle a non-existent XML DB
+      file
+    - Added some bootstrap scripts to make it easier to create a
+      build environment from a repository download. This will now
+      setup a complete autotools environment from scratch. This is
+      only meant to be used by developers. End users just installing
+      the daemon from the tar-balls will not see these scripts. 
+      The scripts are "bootstrap.sh" and its inverse "autoclean.sh"
+    - Added ubuntu/debian setup script to install all necessary
+      components to build the server. Will make it very easy for
+      developers to get a working build environment. Files
+      bootstrap.sh and bootstrap-deb.sh
+    - Added script to completely clean up a build environment to
+      pristine state after build and autotools setup. This will
+      completely remove all generated files by autotools or the
+      build process. Files autoclean.sh
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 16 Feb 2014 14:35:27 +0100
+
 tvpvrd (4.4.5-1~getdeb1) precise; urgency=low
 
   * New upstream version
