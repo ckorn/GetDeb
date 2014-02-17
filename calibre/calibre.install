@@ -10,3 +10,4 @@ usr/lib/calibre/regex
 usr/share/
 ../local/*.desktop usr/share/applications
 ../local/mime/*.xml usr/share/mime/packages/
+usr/etc/bash_completion.d/calibre etc/bash_completion.d
