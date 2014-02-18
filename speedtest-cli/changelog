@@ -1,3 +1,9 @@
+speedtest-cli (0.2.5-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Tue, 18 Feb 2014 21:00:40 +0100
+
 speedtest-cli (0.2.4-1~getdeb1) precise; urgency=low
 
   * New upstream version
