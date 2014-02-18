@@ -1,3 +1,20 @@
+tvpvrd (4.5.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+   -- User visible changes:
+    - None.
+   -- Bugs fixed:
+    - All warnings given by static code analyzing through Coverity was fixed.
+      Most warning where harmless but there were 6 potential resource leaks on
+      error conditions, 2 potential serious crashes, 1 endless-loop
+      and 6 potential off-by-one mem overwrite errors in corner cases.
+      All in all a very good and humbling exercise to run the code base through
+      coverity.
+   -- Internal changes:
+    - None.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Tue, 18 Feb 2014 20:38:52 +0100
+
 tvpvrd (4.5.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
