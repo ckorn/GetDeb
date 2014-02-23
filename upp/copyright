@@ -1,59 +1,24 @@
-This package was debianized by Christoph Korn <christoph.korn@getdeb.net> on
-Fri, 30 Oct 2009 02:13:39 +0100.
+Copyright © 1999-2012 Ultimate++ team (http://ultimatepp.org)
+Authors: Mirek Fídler, Koldo Ramirez, Tomáš Rylek, Daniel Kos
 
-It was downloaded from http://sourceforge.net/projects/upp/files/upp/1659/upp-x11-src-1659.tar.gz/download
+License: 
 
-Upstream Authors:
+Redistribution and use in source and binary forms, with or without modification, are permitted
+provided that the following conditions are met:
 
-    Authors:	
-    Mirek Fídler, Tomáš Rylek, Daniel Kos
+  1. Redistributions of source code must retain the above copyright notice, this list of
+     conditions and the following disclaimer.
 
-    Contributors:	
-    Sandor Hojtsy, Zsolt Debre, Guido Schimmels, Augusto Roman, Arijus Bernotas, Michael Albert , Marcus Mauhart,
-    Jan Wilmans, Graeme Prentice, Victor Berchet, Ivica Puljic, Mathiass Sund, Andrew Barilla, Michal Mierzejewski,
-    Damien Porquet, Werner Wenzel, Bas Wegh, Fabio Busetto, Michal Pekař, Darrin Scott, Damien Porquet, James Thomas,
-    Sritharan Sivaguru, Artur Bać, Ralf Schneider, Pavel Ostapenko, Raul Ionitoiu, Norbert Hofer, Tomasz Pajak,
-    Benoit Cousson, Trey Van Riper, Peter Berger, Sergey Nikitin, Massimo Del Fedele, Irenkov Alexander,
-    Gabriel Schmotzer, Domingo Alvarez Duarte, Andrei Cosma, Koldo Ramirez, Tom Olá, George Brink, Zbigniew Czapiga,
-    Konstantin Hartwich, Didier Quenouillere, Anthony Paul
+  2. Redistributions in binary form must reproduce the above copyright notice, this list of
+     conditions and the following disclaimer in the documentation and/or other materials
+     provided with the distribution.
 
-    Translators:	
-    Mauro Bottizzo, Miklós Somogyi, Arlen Albert, Ivica Puljic, Richard Gill, Werner Wenzel, Tom Olá, Sergey Nikitin,
-    Luis Ramirez, Gabriel Schmotzer
-
-    PR & SEO:	
-    Pavel Stratil
-
-    U++ Logo:	
-    Pavel Ostapenko, Robert Vroemisse,
-
-Copyright:
-
-    Copyright (C) 1999-2008 Ultimate++ team
-
-License:
-
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted under the terms of the BSD License.
-
-    THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-    ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-    OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-    OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-    SUCH DAMAGE.
-
-On Debian systems, the complete text of the BSD License can be
-found in `/usr/share/common-licenses/BSD'.
-
-The Debian packaging is:
-
-    Copyright (C) 2009 Christoph Korn <christoph.korn@getdeb.net>
-
-and is licensed under the GPL version 3, 
-see `/usr/share/common-licenses/GPL-3'.
+THIS SOFTWARE IS PROVIDED BY THE U++ PROJECT ``AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FREEBSD PROJECT OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGE.

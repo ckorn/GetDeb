@@ -1,11 +1,12 @@
 [Desktop Entry]
 Version=1.0
-Name=Ultimate++
+Name=TheIDE
+GenericName=TheIDE
 Comment=IDE for cross-platform C++ development
-Exec=upp
-Icon=upp
+MimeType=application/x-upp;
+Exec=theide
+Icon=theide.png
 Terminal=false
 Type=Application
-Categories=Application;Development;
+Categories=Development;IDE;GUIDesigner;
 StartupNotify=false
-MimeType=application/x-upp;

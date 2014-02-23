@@ -1,2 +1,6 @@
-debian/upp.desktop	usr/share/applications
-debian/upp.xpm		usr/share/pixmaps
+bazaar			usr/share/upp
+examples		usr/share/upp
+reference		usr/share/upp
+tutorial		usr/share/upp
+uppsrc			usr/share/upp
+debian/copyright	usr/share/doc/upp
