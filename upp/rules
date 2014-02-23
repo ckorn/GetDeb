@@ -1,46 +1,12 @@
 #!/usr/bin/make -f
 
-override_dh_auto_clean:
-	rm -rf uppsrc/_out
-	rm -f uppsrc/ide.out
+DH_VERBOSE=1
 
-override_dh_auto_install:
-	cp uppsrc/ide.out debian/upp/usr/bin/upp
+override_dh_strip:
+	for P in $$(sed -n 's/^Package: \(.*\)-dbg$$/\1/p' debian/control); do \
+	  dh_strip -v -p $${P} --dbg-package=$${P}-dbg; \
+	done
+	dh_strip -v --remaining-packages
 
-binary:
-	dh --until dh_install --with quilt $@
-	cd debian/upp-data/usr/share/upp/uppsrc/ && rm -rf _out ide.out Makefile
-
-	# license files don't belong here
-	rm debian/upp-data/usr/share/upp/bazaar/PixRaster/lib/leptonica-license.txt
-	find debian/upp-data/usr/share/upp/ -type f -name Copying -delete
-	find debian/upp-data/usr/share/upp/ -type f -name COPYING -delete
-	find debian/upp-data/usr/share/upp/ -type f -name LICENSE -delete
-
-	# remove Windows files
-	rm debian/upp-data/usr/share/upp/bazaar/PixRaster/lib/leptonlib.dsp
-	rm debian/upp-data/usr/share/upp/bazaar/PixRaster/lib/leptonlib.dsw
-	rm debian/upp-data/usr/share/upp/bazaar/PixRaster/lib/leptonlib.sln
-	rm debian/upp-data/usr/share/upp/bazaar/PixRaster/lib/leptonlib.vcproj
-	rm debian/upp-data/usr/share/upp/uppsrc/Crypto/Crypto.dsp
-
-	# remove arch dependent files
-	cd debian/upp-data/ && rm usr/share/upp/bazaar/Tcc/lib/tcctest.ref
-
-	# make scripts executable
-	cd debian/upp-data/usr/share/upp/bazaar/ && chmod +x Tcc/lib/configure Tcc/lib/gcctestsuite.sh \
-	  Tcc/lib/texi2pod.pl maxpdf_frontend/maxpdf
-
-	dh --remaining --with quilt $@
-
-build:
-	dh --with quilt $@
-
-clean:
-	dh --with quilt $@
-
-binary-indep:
-	dh --with quilt $@
-
-binary-arch:
-	dh --with quilt $@
+%:
+	dh $@ -v

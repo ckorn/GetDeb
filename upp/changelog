@@ -1,3 +1,11 @@
+upp (5485-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+   - See http://www.ultimatepp.org/redmine/projects/upp/repository for complete
+     and detailed list of changes.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 22 Feb 2014 14:35:51 +0100
+
 upp (0.0r1668-1~getdeb1) karmic; urgency=low
 
   * Initial release (LP: #456359)

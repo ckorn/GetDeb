@@ -19,7 +19,7 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-	rm -f /usr/share/upp/GCC*.bm
+        rm -f /usr/share/upp/*.bm
     ;;
 
     failed-upgrade)

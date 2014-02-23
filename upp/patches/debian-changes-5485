@@ -1,0 +1,49 @@
+--- a/Makefile
++++ b/Makefile
+@@ -1,11 +1,34 @@
+-.PHONY: all install clean
++build: ide ide-nogtk umk
+ 
+-all:
+-	sh domake
++ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
++    JOBS:=$(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
++else
++    JOBS:=1
++endif
++
++SERIES:="`dpkg-parsechangelog -c1 | sed -n 's/^Distribution: //p;'`"
++ARCH:="`dpkg-architecture -qDEB_HOST_ARCH`"
++OPTS:=CC="cc -g" CXX="c++ -g" CFLAGS="-g" CXXFLAGS="-g" LDFLAGS="-Wl,--gc-sections -Wl,-O,2" TIME= COLOR=0 USEMAINCFG=0
++
++ide:
++	sed -i -e 's/IDE_VERSION[ \t]*"\([0-9]*\)[^"]*"/IDE_VERSION    "\1-'$(SERIES)-$(ARCH)'"/' $(CURDIR)/uppsrc/ide/version.h
++	export CCACHE_DISABLE=1; $(MAKE) -f debian/mkfile JOBS=$(JOBS) PKG=ide "NESTS=uppsrc" $(OPTS) "FLAGS=GUI GCC DEBUG DEBUG_FULL" TARGET=`pwd`/$@
++	sed -i -e 's/IDE_VERSION[ \t]*"\([0-9]*\)[^"]*"/IDE_VERSION    "\1"/' $(CURDIR)/uppsrc/ide/version.h
++
++ide-nogtk:
++	sed -i -e 's/IDE_VERSION[ \t]*"\([0-9]*\)[^"]*"/IDE_VERSION    "\1-'$(SERIES)-$(ARCH)'-nogtk"/' $(CURDIR)/uppsrc/ide/version.h
++	export CCACHE_DISABLE=1; $(MAKE) -f debian/mkfile JOBS=$(JOBS) PKG=ide "NESTS=uppsrc" $(OPTS) "FLAGS=GUI NOGTK GCC" TARGET=`pwd`/$@
++	sed -i -e 's/IDE_VERSION[ \t]*"\([0-9]*\)[^"]*"/IDE_VERSION    "\1"/' $(CURDIR)/uppsrc/ide/version.h
++
++umk:
++	export CCACHE_DISABLE=1; $(MAKE) -f debian/mkfile JOBS=$(JOBS) PKG=umk "NESTS=uppsrc" $(OPTS) "FLAGS=GCC" TARGET=`pwd`/$@
+ 
+ install:
+-	sh doinstall
+-	
++	# this is just a trick to rename files
++	install -D ide $(DESTDIR)/theide
++	install -D ide-nogtk $(DESTDIR)/nogtk/theide
++	install -D -m 644 uppsrc/ide/theide-48.png $(DESTDIR)/theide.png
++
+ clean:
+-	rm -r uppsrc/_out
+-	rm uppsrc/ide.out
++	rm -rf _out
++	rm -f ide ide-nogtk umk
+--- a/uppsrc/ide/version.h
++++ b/uppsrc/ide/version.h
+@@ -1 +1 @@
+-#define IDE_VERSION    ""
++#define IDE_VERSION    "5485"

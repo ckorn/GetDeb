@@ -1,0 +1,7 @@
+version=3
+
+# nightly builds
+#http://ultimatepp.org/downloads/upp-x11-src-(.*)\.tar\.gz
+
+# stable release
+http://sf.net/upp/upp-x11-src-(.*)\.tar\.gz
