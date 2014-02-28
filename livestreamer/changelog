@@ -1,3 +1,32 @@
+livestreamer (1.7.4-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    Plugins:
+     - Added plugin for MLG.tv. (#275)
+     - Added plugin for DMCloud, patch by Athanasios Oikonomou. (#297)
+     - Added plugin for NRK TV, patch by Jon Bergli Heier. (#309)
+     - Added plugin for GOMeXP.com.
+     - Removed GOMTV.net plugin as the service no longer exists.
+     - mips: Fixed issue with case sensitive playpath. (#306)
+     - ilive: Added missing app parameter. (#293)
+     - ustreamtv: Added support for password protected streams via
+     ``--ustream-password``.
+     - youtube: Now handles youtu.be shortcuts, patch by Andy Mikhailenko.
+     (#288)
+     - youtube: Use first available stream found on channel pages, patch by
+     "unintended". (#291)
+
+    Streams:
+     - hds: Fixed segmented streams logic, patch by Moritz Blanke.
+
+    Bug fixes:
+     - Fixed buffer overwriting issue when passing a memoryview, patch by
+     Martin Panter. (#295)
+     - Avoid a ResourceWarning when using ``--player-continuous-http``, patch
+     by Martin Panter. (#296)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 28 Feb 2014 18:07:07 +0100
+
 livestreamer (1.7.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
