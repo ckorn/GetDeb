@@ -1,0 +1,3 @@
+version=3
+https://github.com/MaartenBaert/ssr/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz
