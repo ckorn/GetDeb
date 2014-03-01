@@ -1,3 +1,28 @@
+fotoxx (14.03-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Gallery view: highlight the current image with a red frame.
+    + Gallery thumbnail right-click menu: new entry to pop-up a large 
+      resizable movable image. View multiple images within the gallery. 
+    + Mosaic: new function to convert an image into a mosaic with tiles made 
+      from all available images. Click a tile to pop-up the underlying image.
+    + Pattern: new function to add a semi-transparent pattern to an image 
+      background (e.g. make an image seem painted on canvas or a brick wall).
+    + New slide show transition: Ken Burns effect (slow zoom-in).
+    + Mashup transparencies can be adjusted instantly as well as gradually.
+    + Several small user interface changes were made for convenience and 
+      consistency with common practices. Speed was also improved.
+    + Keyboard shortcuts editing was simplified.
+    + Leverage Edits was removed (this is more easily done with Paint Edits).
+    + Edit Translations was removed (unused AFAIK, and slightly buggy).
+    + Bugfix: Paint/Clone: ignore source pixels beyond image edge [crash
+    risk].
+    + Bugfix: Fix memory allocation thread contention [crash risk].
+    + Bugfix: If a collection once contained images that are now deleted, 
+      copy/cut/paste operations could move the wrong images.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Mar 2014 14:15:08 +0100
+
 fotoxx (14.02.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
