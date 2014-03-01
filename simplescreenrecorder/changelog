@@ -1,3 +1,9 @@
+simplescreenrecorder (0.2.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Mar 2014 15:31:33 +0100
+
 simplescreenrecorder (0.2.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
