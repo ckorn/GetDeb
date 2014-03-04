@@ -1,3 +1,12 @@
+fotoxx (14.03.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    + Bugfix: Makefile references a file not in the tarball.
+    + Translation updates: French
+    + Improve positioning of "no more images" notification.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 04 Mar 2014 19:16:20 +0100
+
 fotoxx (14.03-1~getdeb1) precise; urgency=low
 
   * New upstream version
