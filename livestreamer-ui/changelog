@@ -1,3 +1,9 @@
+livestreamer-ui (1.0-1~getdeb3) precise; urgency=low
+
+  * Add patch to check with F5.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 Mar 2014 18:34:44 +0100
+
 livestreamer-ui (1.0-1~getdeb2) precise; urgency=low
 
   * Add patch to set background color of status cell.
