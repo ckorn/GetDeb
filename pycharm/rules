@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	rm debian/pycharm/usr/lib/pycharm/bin/fsnotifier
+else
+	rm debian/pycharm/usr/lib/pycharm/bin/fsnotifier64
+endif
+	rm -rf debian/pycharm-data/usr/share/pycharm/lib/libpty
+	rm -f debian/pycharm/usr/lib/pycharm/bin/pycharm.png
+	rm -f debian/pycharm-data/usr/share/pycharm/helpers/python-skeletons/LICENSE.txt
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/ANTLR-LICENSE
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/COPYING
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/GANYMED-LICENSE
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/JAVAHL-LICENSE
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/LICENSE.txt
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/SEQUENCE-LICENSE
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/SQLJET-LICENSE
+	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/TRILEAD-LICENSE
