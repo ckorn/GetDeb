@@ -1,0 +1,5 @@
+help		usr/share/pycharm
+helpers		usr/share/pycharm
+lib		usr/share/pycharm
+plugins		usr/share/pycharm
+bin/pycharm.png	usr/share/pycharm

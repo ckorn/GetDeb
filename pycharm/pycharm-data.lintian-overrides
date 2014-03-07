@@ -1,0 +1,11 @@
+# precompiled
+embedded-javascript-library usr/share/pycharm/helpers/coverage/htmlfiles/jquery.tablesorter.min.js
+codeless-jar usr/share/pycharm/help/pycharmhelp.jar
+codeless-jar usr/share/pycharm/lib/icons.jar
+codeless-jar usr/share/pycharm/lib/resources.jar
+codeless-jar usr/share/pycharm/lib/resources_en.jar
+codeless-jar usr/share/pycharm/plugins/cvsIntegration/lib/resources_en.jar
+codeless-jar usr/share/pycharm/plugins/git4idea/lib/resources_en.jar
+codeless-jar usr/share/pycharm/plugins/hg4idea/lib/resources_en.jar
+codeless-jar usr/share/pycharm/plugins/rest/lib/resources_en.jar
+codeless-jar usr/share/pycharm/plugins/svn4idea/lib/resources_en.jar

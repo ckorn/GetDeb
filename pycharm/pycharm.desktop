@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=PyCharm
+Exec=pycharm
+Icon=pycharm
+Terminal=false
+Type=Application
+Categories=Application;Development;
+Keywords=ide;python;charm;

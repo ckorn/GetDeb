@@ -1,0 +1,45 @@
+Source: pycharm
+Section: editors
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+Homepage: http://www.jetbrains.com/pycharm/
+
+Package: pycharm
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         java-openjdk7-jre | java7-runtime | java6-runtime | java5-runtime | java2-runtime | java-runtime,
+         pycharm-data (= ${source:Version}),
+         python
+Description: Python IDE
+ Intelligent Python IDE with unique code assistance and analysis,
+ for productive Python development on all levels.
+ .
+  - Intelligent Editor, with code completion, on-the-fly error
+    highlighting, auto-fixes, etc.
+  - Automated code refactorings and rich navigation capabilities
+  - Integrated debugger and unit testing support
+  - Native VCS integrations
+  - Customizable UI and key-bindings, with VIM
+  - emulation available
+  - And much more, all available under the Apache 2 license
+
+Package: pycharm-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Python IDE (data package)
+ Intelligent Python IDE with unique code assistance and analysis,
+ for productive Python development on all levels.
+ .
+  - Intelligent Editor, with code completion, on-the-fly error
+    highlighting, auto-fixes, etc.
+  - Automated code refactorings and rich navigation capabilities
+  - Integrated debugger and unit testing support
+  - Native VCS integrations
+  - Customizable UI and key-bindings, with VIM
+  - emulation available
+  - And much more, all available under the Apache 2 license
+ .
+ (This package contains the arch-independent data files).

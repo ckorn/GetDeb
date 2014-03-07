@@ -1,0 +1,5 @@
+pycharm (3.1.1-1~getdeb1) precise; urgency=low
+
+  * Initial release (LP: #1289196)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 07 Mar 2014 19:49:29 +0100

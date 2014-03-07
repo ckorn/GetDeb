@@ -1,0 +1,3 @@
+usr/lib/pycharm/bin			usr/share/pycharm/bin
+usr/share/pycharm/pycharm.png		usr/lib/pycharm/bin/pycharm.png
+usr/lib/pycharm/bin/libpty.so		usr/share/pycharm/lib/libpty/linux/x86_64/libpty.so
