@@ -1,12 +1,12 @@
 Use our own package for VTE instead of the included library
 and having to make pac arch-dependant.
-Index: pac-4.5.1.2/lib/PACTerminal.pm
+Index: pac-4.5.3.5/lib/PACTerminal.pm
 ===================================================================
---- pac-4.5.1.2.orig/lib/PACTerminal.pm	2013-02-28 12:11:13.000000000 +0100
-+++ pac-4.5.1.2/lib/PACTerminal.pm	2013-02-28 14:41:24.321355382 +0100
-@@ -29,7 +29,7 @@
- use warnings;
+--- pac-4.5.3.5.orig/lib/PACTerminal.pm	2014-03-12 19:15:11.313603874 +0100
++++ pac-4.5.3.5/lib/PACTerminal.pm	2014-03-12 19:15:11.309603874 +0100
+@@ -30,7 +30,7 @@
  
+ use v5.10;
  use FindBin qw ( $RealBin $Bin $Script );
 -use lib $RealBin . '/lib', $RealBin . '/lib/ex';
 +use Gnome2::Vte;

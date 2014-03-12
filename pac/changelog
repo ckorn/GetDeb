@@ -1,3 +1,18 @@
+pac (4.5.3.5-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added "Run with 'sudo'" under "Method". Password and prompt is defined
+    in "Preferences -> PAC Main Options -> Advanced"
+    . Modified the "autoreconnect on disconnection" to handle better
+    disconnections, and distinguish between correct (manual) and forced
+    disconnections
+    . Minor GUI improvements
+    . Fixed a bug that prevented PAC from using "autossh"
+    . Little GUI change to make more visible SSH/SFTP's "Advanced options"
+    entry box
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 12 Mar 2014 19:10:40 +0100
+
 pac (4.5.3.4-1~getdeb1) precise; urgency=low
 
   * New upstream version
