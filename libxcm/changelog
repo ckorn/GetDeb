@@ -1,3 +1,30 @@
+libxcm (0.5.3-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    * [core]: Patch for transposed EDID red y bits
+    * [build]: remove all libtool files from RPM
+    * [core]: fix conditional compiling of XcmDummy
+    * [build]: fix spec packaging issues
+    * [core]: call split libraries in libXcm
+    * [build]: sync spec file with obs
+    * [core]: add XcmDummy.c file
+    * [build]: add xcm-edid xcm-x11 xcm-ddc pkg-config files
+    * [build]: reorder building of libraries
+    * [build]: split EDID parsing library out
+    * [core]: XcmeContext_InLoop return meaningful value
+    * [core]: Fix window name print
+    * [conf]: update debian changelog
+    * [docu]: update man pages
+    * [core]: omit XmuClientWindow()
+    * [conf]: bump version
+    * [core]: initialy observe windows
+    * [docu]: fix link
+    * [build]: update autotools files
+    * [build]: remove libtool
+    * [build]: add missed automake script
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 15 Mar 2014 13:20:50 +0100
+
 libxcm (0.5.2-1~getdeb1) precise; urgency=low
 
   * New upstream version
