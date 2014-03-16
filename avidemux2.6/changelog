@@ -1,3 +1,32 @@
+avidemux2.6 (1:2.6.8-1~getdeb2~saucy) saucy; urgency=low
+
+  * New upstream version
+    * Image/export: Proper initialization of Qz for jpeg export
+    * UI : Add an override menu to force language
+    * tinypy : Add support for os.environ
+    * x264 : Improved settings (tobias)
+    * Win32 : Fix crash when having an audio problem
+    * Win32 : Re-add mp4v2 to installer files
+    * Audio/FAAC : Fix channel mapping when source is mono
+    * Audio/AMR : Re-enabled AMR
+    * Audio/lavc : Fixed encoding for codec not supporting planar (MP2)
+    * Audio : Fixed importing MP2 audio detected as MP3
+    * Editor : Fix deleting chunks of the video leading to seek errors
+    * Editor : Initial copy/paste support
+    * Editor/audio: Fix issue when source has more than 4 tracks
+    * Editor : Better detection of double fps input files
+    * TS/Demux : Brute force eac3 probe
+    * TS/Demux : Better initialization, avoid dropping audio
+    * MP4/Demux : Fix management of PCM audio
+    * Mkv/Demux : Proper re-indexing for mpeg2 in mkv
+    * Mp4v2/Mux : Add fast start mode back
+    * OpenSolaris : Some fixes by pfelecan
+    * Subtitles : Update libass + very simple srt2ssa converter
+    * OsX : Enables more optional codecs...
+    * avsfilte : Performance Improvements (fahr)
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Fri, 14 Mar 2014 21:25:48 +0100
+
 avidemux2.6 (1:2.6.7-1~getdeb2~saucy) saucy; urgency=low
 
   * New upstream version
