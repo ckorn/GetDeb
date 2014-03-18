@@ -1,0 +1,11 @@
+makehuman/makehuman		usr/bin
+makehuman/apps			usr/share/makehuman
+makehuman/core			usr/share/makehuman
+makehuman/icons			usr/share/makehuman
+makehuman/lib			usr/share/makehuman
+makehuman/plugins		usr/share/makehuman
+makehuman/shared		usr/share/makehuman
+makehuman/makehuman.py		usr/share/makehuman
+blendertools			usr/share/makehuman
+debian/makehuman.svg		usr/share/pixmaps
+debian/makehuman.desktop	usr/share/applications
