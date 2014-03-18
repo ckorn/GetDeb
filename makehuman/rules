@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with python2
+
+override_dh_install:
+	dh_install
+	rm -f debian/makehuman/usr/share/makehuman/blendertools/copy2blender.bat
