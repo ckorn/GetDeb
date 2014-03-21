@@ -43,7 +43,6 @@ override_dh_install:
 	pod2man -s1 --stderr --utf8 debian/tmp/usr/bin/gnc-fq-check debian/tmp/gnc-fq-check.1
 	find debian/tmp/usr/lib -name \*.la -exec rm -v \{\} \;
 	dh_install
-	f=debian/gnucash-common/usr/share/gnucash/python/pycons/pycons ; [ ! -f $$f ] || chmod +x $$f
 
 override_dh_auto_test:
 

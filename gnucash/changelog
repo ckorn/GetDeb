@@ -1,163 +1,26 @@
-gnucash (1:2.6.2-1~getdeb2~saucy) saucy; urgency=low
+gnucash (1:2.6.2-1~getdeb3~saucy) saucy; urgency=low
 
-  * New upstream version
-    The GnuCash development team proudly announces GnuCash 2.6.1,
-    the latest stable release of the GnuCash Free Accounting
-    Software. 
+  * Sync with debian package.
+  * Depend on python-gnucash to prevent a crash on start.
 
-    This is a maintenance release; there are no new features, but
-    Mike Alexander has extensively reworked the Advanced Portfolio
-    Report.
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Mar 2014 18:46:51 +0100
 
-    Mike Alexander has completed his extensive reworking of the
-    Advanced Portfolio Report.
+gnucash (1:2.6.1-2) unstable; urgency=medium
 
-    Bugs Fixed:
-    497831 - Can't change the date of a transaction with certain locales
-    721472 - Fix Reconcile description column.
-    721677 - Customer Summary does not include inactive customers
-    722123 - Zero price entry added to price database on stock purchase
-    722903 - Poor performance of account hierarchy, budgets, reconcile
-      window,...
-    723051 Implement gncCustomerNextID in Python bindings.
-    723373 -  Don't create any sx in the since-last-run dialog if this is
-          a read-only file
-    723644 - Make sure that gnc_search_invoice_on_id() returns the
-         correct type of object.
-    724211 - Can't select march 6 date on register
-    724426 - Errors in account plan
-    724427 - New account plan for Sweden
-    724578 - Problems clearing incompletely paid invoices
-    724753 - Saved Multicolumn Report Error
-    725131 - Adding Payments to Fancy Invoice
+  * libdbd-multiarch.patch: new patch.
+    Fixes FTBFS following multiarchification of libdbi-drivers.
 
-    Translations Updated: Catalan, Italian
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 09 Feb 2014 16:20:56 +0100
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Mar 2014 19:28:40 +0100
+gnucash (1:2.6.1-1) unstable; urgency=medium
 
-gnucash (1:2.6.1-1~getdeb2~saucy) saucy; urgency=low
+  * New upstream release.
+    + tarball now includes the source of minified javascript file
+      src/report/jqplot/jquery.min.js. (Closes: #736434)
+    + column widths of the list of accounts are now correctly remembered.
+      (Closes: #734148)
 
-  * New upstream version
-    454827 - Reports: Incorrect share value of stocks in foreign currency
-    553020 - Reports: Incorrect share value of stocks in foreign currency
-    555182 - Security Type template hidden
-    605991 - Help button on New and Edit Job dialogs brings up wrong
-        help page.
-    677489 - Critical error reported when initializing an Invoice
-    721211 - Reconciliation checkboxes fail to sync for split
-        transactions across sub-accounts
-    721251 - Incorrect Transaction Dates
-    721260 - Crash on startup: gnucash cannot handle default locale
-    721290 - SX Editor: Pressing "Enter" too soon hides transaction
-    721306 - Account hierarchy column widths are reset when restarting
-        a second time without changing the widths
-    721447 - Entries with values of ,50 are imported as ,51
-    721464 - Program won’t open the website link
-    721576 - Gnucash can not work with files, that have russian symbols
-        in path.
-    721600 - Segmentation fault on startup if report Income/Expense Chart
-        was opened since last running
-    721607 - fix GnuCash version numbers and remove/update links.
-    721667 - Accelerator key map loaded from one file and saved
-    721770 - "Choose accounts to create" has no effect
-    721791 - Segmentation fault when correcting invalid date
-    721825 - Online prices displayed as unreadable fractions in 2.6.0
-    721913 - Fetch Rate crashes application
-    721929 - Importing a customer list causes a crash.
-    721954 - Multiple Scheduled Transaction Editors
-    721966 - --add-price-quotes ignoring compress files preference
-    722035 - Missing space in the Spanish translation of msgid "Total For "
-    722123 - Zero price entry added to price database on stock purchase
-
-    Translations updated: Catalan, Danish, German, Italian
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Feb 2014 00:15:58 +0100
-
-gnucash (1:2.6.0-1~getdeb1) saucy; urgency=low
-
-  * New upstream version (LP: #1265469)
-    The GnuCash development team proudly announces GnuCash 2.6.0,
-    the latest stable release of the GnuCash Free Accounting
-    Software. GnuCash Users can experience the following new features:
-
-    * Preferences have been migrated from GConf to GSettings. This
-         is a simpler and more robust backend which writes to the OS's
-         native prefs -- defaults on OS X and the Registry on
-         MSWindows -- and allows us to remove several troublesome
-         dependencies including GConf, ORBit, and DBus. The change
-         includes a migration script that will run at Gnucash startup.
-
-    * New date handling which allows GnuCash to use dates after March 2038.
-
-    * Guile-2 compatibility: GnuCash now requires either Guile-1.8
-      or Guile-2.0
-
-    * Documents outside of GnuCash, images of receipts for example,
-      can now be linked to transactions, with the facility of
-      opening them in the default application for the document
-      type.
-
-    * Cutsom Reports can now be saved without renaming the report,
-      and modifications can overwrite an existing report.
-
-    * The import assistant now finishes much more quickly after
-      assigning contra-accounts.
-
-    * GnuCash now requires Gtk+-2.24.0 and GLib-2.26.0. Most of the
-      dependencies on obsolete libraries have been removed; only
-      libgnomecanvas remains. Unfortunately the effort to rewrite
-      the register code to use GtkTreeModel wasn't completed in
-      time, so GnuCash is not on the cusp of converting to Gtk3.
-
-    * The Business Module has been substantially revamped,
-      including support for Credit Notes and import of customers
-      and vendors from a CSV file.
-
-    * The Num field in the register display is now optionally
-      per-split, so for example a check number can be entered for
-      the checking account split and an invoice number for the
-      expense account split.
-
-    * GnuCash can now open locked books read-only so that more than
-      one user can view a file. GnuCash still does not support
-      multiple simultaneous writers.
-
-    * By agreement of all authors, GnuCash is now licensed under
-      the GNU General Public License Version 2 or later rather than
-      simply Version 2. This allows derivative works to be licensed
-      under the GPL Version 3 if the author of such a work so
-      desires.
-
-    * Fixed more than 500 bugs.
-
-    For those keeping score, the following changes have occurred
-    since 2.5.10:
-
-    Bug Fixes:
-
-    Bug 157247 - Asset account's "total" value should use most
-          recent transaction prices
-    Bug 710823 - libofx can supply broken UTF-8 for account id
-    Bug 710824 - GnuCash should sanitise UTF-8 before serialising files
-          to avoid writing broken unparseable XML.
-    Bug 720555 - General Ledger - Can't Enter Transaction Amounts
-    Bug 720556 - The Tip of the Day preference isn't getting saved
-    Bug 720646 - New Book Tabs on Windows
-
-    Other Changes:
-
-    * Don't create a second account hierarchy page when cancelling
-      the Hierarchy Assistant or when using Actions->New Account
-      Hierarchy on an already open book.
-
-    * Reset Warnings dialog: show translated warnings
-
-    * The locale-names for Help and the Tutorial and Concepts Guide
-      have been renamed to language-only so that, for example,
-      someone using the Swiss-German locale will be shown help in
-      German instead of English.
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 02 Jan 2014 22:10:09 +0100
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 28 Jan 2014 20:17:00 +0100
 
 gnucash (1:2.6.0-1) unstable; urgency=medium
 

@@ -224,7 +224,7 @@ Copyright: 1995-1997 Ulrich Drepper <drepper@gnu.ai.mit.edu>
            2004-2008 Rodney Dawes <dobey.pwns@gmail.com>
 License: other
  This file may be copied and used freely without restrictions.  It may
- be used in projects which are not available under a GNU General Public License,
+ be used in projects which are not available under a GNU Public License,
  but which still want to provide support for the GNU gettext functionality.
 
 License: GFDL-NIV-1.1

@@ -12,8 +12,8 @@ Description: Disable supression of fortify hardening flag.
 
 Index: gnucash-2.6.2/configure.ac
 ===================================================================
---- gnucash-2.6.2.orig/configure.ac	2014-03-03 19:29:22.489031192 +0100
-+++ gnucash-2.6.2/configure.ac	2014-03-03 19:29:22.485031192 +0100
+--- gnucash-2.6.2.orig/configure.ac	2014-03-20 18:47:49.206945616 +0100
++++ gnucash-2.6.2/configure.ac	2014-03-20 18:47:49.202945616 +0100
 @@ -701,10 +701,6 @@
  AC_ARG_ENABLE( debug,
    [AS_HELP_STRING([--enable-debug],[compile with debugging flags set])],
