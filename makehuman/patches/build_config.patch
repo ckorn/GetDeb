@@ -1,0 +1,10 @@
+# create build config file required by build_prepare.py
+Index: makehuman-1.0.0/buildscripts/build.conf
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ makehuman-1.0.0/buildscripts/build.conf	2014-03-22 00:42:44.048123810 +0100
+@@ -0,0 +1,4 @@
++[BuildPrepare]
++hgRev = 220:ca26a926e754
++isRelease = True
++skipHg = True

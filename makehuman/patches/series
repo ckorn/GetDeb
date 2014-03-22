@@ -1,2 +1,3 @@
 exe.patch
-version.patch
+build_config.patch
+build_prepare.patch

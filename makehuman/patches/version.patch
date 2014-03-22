@@ -1,7 +1,0 @@
-# take version from upstream deb file
-Index: makehuman-1.0.0/makehuman/data/VERSION
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ makehuman-1.0.0/makehuman/data/VERSION	2014-03-18 20:27:45.332518063 +0100
-@@ -0,0 +1 @@
-+220:ca26a926e754
