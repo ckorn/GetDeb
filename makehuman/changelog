@@ -1,3 +1,12 @@
+makehuman (1.0.0-1~getdeb2) precise; urgency=low
+
+  * Add missing files.
+  * Remove dependency
+  * Fix license
+  * use build script
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 22 Mar 2014 03:27:37 +0100
+
 makehuman (1.0.0-1~getdeb1) precise; urgency=low
 
   * New upstream version (LP: #1293106)
