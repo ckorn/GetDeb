@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=ClipGrab
+Exec=clipgrab
+Icon=clipgrab
+Terminal=false
+Type=Application
+Categories=Application;Network;
+Keywords=youtube;grab;

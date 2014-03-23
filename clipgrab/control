@@ -1,0 +1,21 @@
+Source: clipgrab
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               libqt4-dev,
+               libqt4-webkit,
+               libqtwebkit-dev,
+               qt4-qmake
+Standards-Version: 3.9.3
+Homepage: http://clipgrab.org/
+
+Package: clipgrab
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Friendly downloader for YouTube and other sites
+ ClipGrab is a free downloader and converter for YouTube,
+ Vimeo, Metacafe, Dailymotion and many other online video sites.
+ It converts downloaded videos to MPEG4, MP3 or other formats
+ in just one easy step.
