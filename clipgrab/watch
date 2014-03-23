@@ -1,0 +1,3 @@
+version=3
+http://clipgrab.org/ \
+    (?:.*/)?clipgrab-([\d\.]+)\.tar\.bz2

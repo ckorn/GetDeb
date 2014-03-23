@@ -1,0 +1,3 @@
+clipgrab			usr/bin
+debian/clipgrab.png		usr/share/pixmaps
+debian/clipgrab.desktop		usr/share/applications
