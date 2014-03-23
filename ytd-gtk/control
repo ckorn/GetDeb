@@ -1,0 +1,17 @@
+Source: ytd-gtk
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               python-all-dev
+Standards-Version: 3.9.3
+Homepage: https://code.google.com/p/ytd-gtk/
+
+Package: ytd-gtk
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         youtube-dl,
+         python-gtk2
+Description: GTK+ frontend for youtube-dl
+ GUI for youtube-dl script for downloading youtube videos.
