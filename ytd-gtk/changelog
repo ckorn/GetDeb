@@ -1,0 +1,5 @@
+ytd-gtk (0.99.4-1~getdeb1) precise; urgency=low
+
+  * Initial release (LP: #1266311)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 23 Mar 2014 13:52:19 +0100
