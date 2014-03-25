@@ -1,14 +1,24 @@
-uget (1.10.3-1~getdeb2) precise; urgency=low
+uget (1.10.4-1~getdeb1) precise; urgency=low
 
-  * Add support for appindicator (LP: #1260706)
+  * New upstream version (LP: #1296998)
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 13 Dec 2013 18:50:37 +0100
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 25 Mar 2014 19:30:01 +0100
 
-uget (1.10.3-1~getdeb1) precise; urgency=low
+uget (1.10.4-1ubuntu1) trusty; urgency=low
 
-  * New upstream version
+  * Build-Depend on libappindicator3-dev for Ubuntu (LP: #1278233).
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 29 Jun 2013 15:51:10 +0200
+ -- TJ <ubuntu@iam.tj>  Sat, 15 Feb 2014 01:37:05 +0000
+
+uget (1.10.4-1) unstable; urgency=low
+
+  * New upstream release. Closes: #735937
+  * Updated Standard-Version to 3.9.5
+  * Added 03-uglib_missing_potfile.patch: Avoid missing translate file
+  * Updated debian/control canonicalize VCS-* fields 
+  * Updated year in debian/copyright
+
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Sat, 25 Jan 2014 21:29:41 -0500
 
 uget (1.10.3-1) unstable; urgency=low
 
