@@ -1,0 +1,63 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: uget
+Upstream-Contact: C.H. Huang <plushuang.tw@gmail.com>
+Source: http://sourceforge.net/projects/urlget/files/
+
+Files: *
+Copyright: 2005-2014 C.H. Huang <plushuang.tw@gmail.com>
+License: LGPL-2.1+
+
+Files: Windows/nsis/uget-no-gtk.nsi
+Copyright: 2005-2012 Raymond Huang <plushuang at users.sourceforge.net>
+License: LGPL-2.1+
+
+Files: uglib/pwmd.c
+       uglib/pwmd.h
+Copyright: 2011 Ben Kibbey <bjk@luxsci.net>
+License: GPL-2+
+
+Files: debian/*
+Copyright:
+ 2011-2014 Elías Alejandro Año Mendoza <ealmdz@gmail.com>
+ 2011, Alessio Treglia <quadrispro@ubuntu.com>
+ 2011, Dennis Craven <dcraven@gmail.com>
+License: LGPL-2.1+
+
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+Comment: You should have received a copy of the GNU Lesser General Public
+ License along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.

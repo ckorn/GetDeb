@@ -1,0 +1,6 @@
+?package(uget):\
+ needs="X11"\
+ section="Applications/Network/File Transfer"\
+ title="Uget"\
+ icon="/usr/share/pixmaps/uget.xpm"\
+ command="/usr/bin/uget-gtk"
