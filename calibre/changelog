@@ -1,3 +1,74 @@
+calibre (1.30.0-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+    *New Features
+    --Cover Browser: Add an option to show covers with their original aspect
+    ratio instead of resizing them all to have the same width and height.
+    Option is in Preferences->Look & Feel->Cover Browser.
+    --PDF Output: Enable using javascript inside header and footer templates
+    --Edit Book: When generating an inline ToC add a class attribute to all
+    <ul> tags to make it easy to style a particular level of the ToC
+    --Use abstract named sockets on linux for IPC, to avoid use of temp files
+    for sockets
+    --Drivers for the N800 and N950 Nokia MeeGo tablets
+    --Edit Book Saved searches: Allow saving normal mode searches as well
+    --Edit Book Saved searches: Add import/export functionality
+    --calibredb add: Add option to specify language when adding books
+    --Edit Book: Add support for saved searches. Click Search->Saved Searches
+    to bring up a dialog where you can create and manage saved searches
+    --Edit Book: New tool to specify semantics in EPUB books (semantics are
+    items in the guide such as preface, title-page, dedication, etc.). To use
+    it, go to Tools->Set Semantics
+    --Edit Book: Preview panel: Add a copy selected text action to the
+    context menu
+    --Edit Book: When inserting hyperlinks, allow specifying the text for the
+    hyperlink in the insert hyperlink dialog
+    *Bug Fixes
+    --AZW3 Input: Handle files with garbage bytes in their table of contents.
+    --DOCX Input: Fix text from some paragraphs not being converted if the
+    paragraph contains an inline forced page break and no formatted text or
+    line breaks.
+    --calibre-customize: Do not error out if one of the installed plugins has
+    no customization help when listing all plugins
+    --Edit book: Fix error when exporting files on some windows systems with
+    non UTF-8 filename encodings
+    --Edit Book: When beautifying treat <img> tags as block tags
+    --Linux binary build: Fix worker processes not working on linux systems
+    with bash >= 4.3
+    PDF Output: Fix using __SECTION__ in header and footer templates
+    resolving to the inscorrect section if a page with no sections follows a
+    page with multiple sections.
+    --Cover Browser: Fix visual 'pop' when scrolling the first time
+    --Grid View: Allow the left and right arrow keys to traverse over rows.
+    --Fix a regression in the previous release that broke downloading
+    metadata for authors with a double initial such as R. A. Salvatore.
+    --Edit book: When generating inline Table of Contents, mark it as such in
+    the guide section of the OPF.
+    --E-book viewer: Fix right margin for last page in a chapter sometimes
+    disappearing when changing font size.
+    --Edit Book: Fix saving of empty files not working
+    --Edit book: Fix a regression in the previous release that broke saving a
+    copy of the current book on linux and OS X
+    --Edit book: Fix syntax highlighting in HTML files breaks if the closing
+    of a comment or processing instruction is at the start of a new line.
+    --Edit book: Fix check book failing in the presence of empty <style/>
+    tags.
+    --Catalogs: Fix handling of tristate boolean custom columns when creating
+    EPUB/MOBI catalogs.
+    --Linux build: Workaround for systems that have broken libc
+    implementations that change the behavior of truncate() on file
+    descriptors with O_APPEND set.
+    *New news sources
+    --Applefobia by koliberek
+    *Improved news sources
+    --The Atlantic
+    --Courrier International
+    --Der Tagesspiegel
+    --TIME
+    --Wired Daily Edition
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Wed, 02 Apr 2014 20:35:49 +0200
+
 calibre (1.28.0-1~getdeb1) saucy; urgency=low
 
   * New upstream version
