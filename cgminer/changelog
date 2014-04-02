@@ -1,3 +1,216 @@
+cgminer (4.2.2-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+    - Minor correctness fix for unnecessary free
+    - Clean up various curl build issues
+    - allow url based config files
+    - Frequency only needs 3 digits for cointerra statline
+    - Use the serial number as unique_id for cta display
+    - Make it possible to enable/disable the status window from switching via
+    the
+    display menu
+    - We should not update the tv hashmeter time unless we're updating the
+    hashrates
+    - Add cointerra devices to udev rules.
+    - Use hashfast unique id instead of number since the unique id is
+    displayed
+    - Remove displayed space
+    - Left align the displayed unique id
+    - Use the hashfast opname as its unique identifier
+    - Display BF1 serial number as its unique identifier
+    - Display a unique identifier instead of a number if the device has one
+    - Use an alternating status display to return to a compact width of 80
+    characters, allowing more information to be displayed.
+    - No need for looking for khash hashrates in summary any more
+    - Fix two potential minor mem leaks
+    - Fix memory leaks in setup and generate work for gbt solo.
+    - Fix off by one malloc size error
+    - Fix memory leak in update_gbt_solo
+    - Put sanity check on decay_time to prevent updates with no time
+    - Add 3 rolling average hashrates to API output for summary and devs.
+    - Use the extra status screen real estate better, displaying rolling
+    1/5/15min
+    average hashrates as well.
+    - Revamp the ageing crufty hashmeter code to have proper exponential
+    decaying
+    values and store rolling 1/5/15min hashrates.
+    - Increment total_work under control lock.
+    - Trivial variable reuse
+    - Add support for other usb3 hubs on windows
+    - Fix various ava2 build issues generically
+    - Minimise the amount of heap memory allocations/frees when submitting
+    gbt
+    shares.
+    - Make varint in gbt submission a stack object.
+    - Fix big endian problems with gbt submissions.
+    - Fix 32bit overflow on relative diff shown.
+    - ants1 - stop results read hard looping
+    - ants1 - slow down mining if overheat occurs
+    - miner.php allow gen before (bgen) and after (gen) grouping
+    - Change default solo mining to failing when no btc address is specified.
+    - Use upgrade cglock variants in get_gbt_curl
+    - Provide a cg_uilock to unlock the intermediate variant of cglocks.
+    - Use the one curl instance for all gbt solo operations, protecting its
+    use with
+    a bool set under gbt lock.
+    - Only start block detection with gbt solo if setup succeeded
+    - One less block detection message
+    - Toss out the curl handle after each solo poll
+    - Don't reuse any curl handles for solo mining and break out of the lp
+    thread if
+    the pool is removed.
+    - Make sure to only start the lognpoll thread once on gbt solo.
+    - Don't keep RPC connections open for solo mining since bitcoind doesn't
+    like
+    having many persistent connections.
+    - GBT solo pools should be considered localgen pools.
+    - miner.php - speed up formatting and allow calc on gen fields
+    - Always show the address we're solo mining to to avoid confusion for
+    when no
+    address is set.
+    - Fix missing htobe16 on windows and meaningless >u32 string warning.
+    - Software ntime roll for all hashfast devices.
+    - Silence harmless warning.
+    - Drop a failed restart icarus device to allow it to be rehotplugged if
+    possible.
+    - Work with more than one transaction.
+    - Kill gbt solo pools that don't respond to the gbt request 5 times
+    sequentially.
+    - Fix ser_number for no remaining val byte.
+    - Create a work item and stage it when updating the gbt solo template to
+    allow
+    new block detection and restart code to work.
+    - Test block hash as well as block height when solo mining to ensure we
+    haven't
+    been mining on an orphan branch.
+    - Fix transaction processing for gbt solo.
+    - Encode height using integer varint format.
+    - Make new block detection message not show in gbt solo from
+    test_work_current
+    - Add block detection via getblockcount polling in gbt solo and update
+    gbt
+    template every 60 seconds.
+    - Iterate over transactions twice to malloc only once when copying all
+    the
+    transaction data.
+    - Update solo coinbase regularly and submit as gbt work
+    - Only show merkle hashes for solo mining in debug mode.
+    - Set correct flag for solo work.
+    - Generate gbt solo work emulating stratum work construction.
+    - Set the diff as a double sdiff from gbt solo data.
+    - Move swork.diff out of the stratum work section to be shared as sdiff.
+    - Generate a header bin from gbt solo as per the cached stratum one.
+    - Store strings similar to stratum's when decoding gbt solo
+    - Avoid allocing and freeing stratum strings that should be fixed length.
+    - Run parser through detect_stratum after stratum+tcp:// is force added
+    - Remove unnecessary header length calculation for stratum header binary
+    and
+    only binary convert the correct length of the header.
+    - Share more fields between stratum and gbt
+    - Share coinbase_len variable b/w stratum and gbt and setup more gbt solo
+    parameters.
+    - Generate a valid coinbase and set nonce2offset for gbt solo
+    - Move scriptsig header bin conversion to setup gbt solo
+    - Create our own custom scriptsig base.
+    - Add helper functions for creating script signature templates and beging
+    building template.
+    - Do gbt solo decoding under gbt lock.
+    - Add more gbt variable decoding from gbt solo information.
+    - Store all the transaction data in binary form when using GBT
+    - When setting up solo mining, check validity of bitcoin address against
+    bitcoind
+    - Make pooled GBT mining use merkle bin optimisations slated for solo
+    mining.
+    - Abstract out the merkle bin calculation for gbt solo
+    - Implement efficient merkle tree base from solo GBT information.
+    - miner.php custom formatting and row counter '#'
+    - Drillbit: Fix for underestimating hash rate from Bitfury devices
+    - Send per-core hashrates at regular ~5min intervals back to cta devices.
+    - Calculate the cta per core hashrate at 5 minute intervals.
+    - Check the bits of the correct core in cta bit count.
+    - Display the bit count along with the bitmap for each cta core in the
+    API stats
+    output.
+    - Store and display the per core hashrate on cta relative to each work
+    restart.
+    - Decrease the time we wait for unsetting a core on the cta bitmap to
+    correspond
+    with the lower max diff of 32.
+    - Set max diff on cointerra devices to 32 which is still only 11 shares
+    per
+    second but allows for earlier confirmation of per core hashrates.
+    - Keep track of when the last restart and work updates were triggered and
+    provide helper functions for knowing the time since then.
+    - hashfast make api stats field names unique
+    - Fix gcc longjmp warning in api.c
+    - Add a per-core hashrate to the cta API stats.
+    - miner.php support edevs and estats
+    - API - put edevstatus where it was supposed to be
+    - Icarus - allow timing mode to work with ANU and not slow it down
+    - drillbit - remove warnings
+    - drillbit - minor code tidy up
+    - Drillbit: Change language around 'void' to warning about limiter
+    disabled
+    - Drillbit: Fix accidental over-counting of HW errors
+    - Drillbit: --drillbit-auto parameter for tweakable custom tuning of ASIC
+    speeds
+    - Drillbit: Output warning if board reports void warranty
+    - Drillbit: Add Avalon & drillbit-autotune notes to ASIC-README
+    - Drillbit: Limit work sent out to 8 units in a single pass, was DoSing a
+    full
+    double scroll
+    - Drillbit: Move drillbit_empty_buffer calls to only when errors occur,
+    were
+    limiting performance on Windows
+    - Fix Windows bug with libusb_reset_device returning SUCCESS for
+    disconnected
+    device
+    - Drillbit: Fix some warnings
+    - Drillbit: Add --drillbit-autotune option for device to dynamically
+    alter clock
+    speed
+    - Drillbit: Fix typo in previous commit
+    - Drillbit: Remove default config in cgminer, rely on defaults in
+    firmware
+    - Drillbit: Combine split USB transfer for sending new work, reduce
+    overhead
+    - Drillbit: Add support for protocol V4, with device-agnostic board
+    configuration data
+    - Drillbit driver: Add support for Avalon-based Drillbit miners
+    - API - add edevs and estats - to only show enabled devices
+    - Check device data exists on a hfa instance before trying to reinit it.
+    - Print off what quadrant regulator failed if known in hfa driver.
+    - Reset all the stats on autovoltage complete in cta driver.
+    - Use correct diff instead of diffbits in cta driver.
+    - Whitelist all firmwares <= 0.5 on hfa for software rolling of ntime.
+    - Avoid a memory leak by reusing the ntime field when rolling stratum
+    work.
+    - Clear the pipe bitmap on cta only when no share has occurred for 2
+    hours
+    instead of 1.
+    - Cta share_hashes should be added, and we can base it on device wdiff
+    instead
+    of pool work difficulty for more accurate hashrates.
+    - Since the device runtime is now reset, the Raw hashrate entry in the
+    cta API
+    output is no longer meaningful.
+    - Look for autovoltage returning to zero on cta driver and reset stats at
+    that
+    point since the hashrate is unreliable till then.
+    - ants1 - cgminerise applog calls
+    - Default to stratum+tcp:// on any urls that don't have a prefix instead
+    of
+    http.
+    - Trivial cta style changes.
+    - ants1 - fix/enable temperature checking and remove unneeded temp_old
+    - ants1 - move local cgpu variables to info structure
+    - ants1 use a klist to store work and copied work
+    - Simplify dramatically the cross-process cgminer locking through use of
+    flock
+    instead of sysv semaphores.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Wed, 02 Apr 2014 20:34:09 +0200
+
 cgminer (4.1.0-1~getdeb1) saucy; urgency=low
 
   * New upstream version
