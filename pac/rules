@@ -12,6 +12,7 @@ override_dh_install:
 	rm -r debian/pac/usr/share/pac/lib/ex/vte32
 	rm -r debian/pac/usr/share/pac/lib/ex/vte64
 	rm -r debian/pac/usr/share/pac/lib/ex/vteARM
+	rm -r debian/pac/usr/share/pac/lib/ex/vtePPC64
 
 override_dh_installchangelogs:
 	dh_installchangelogs README

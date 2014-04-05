@@ -1,3 +1,34 @@
+pac (4.5.3.7.2-1~getdeb2~saucy) saucy; urgency=low
+
+  * New upstream version
+    - 4.5.3.7.2:
+    . Another bugfix for some Gtk2 versions not respecting some methods
+
+    - 4.5.3.7.1:
+    . Nth micro bugfix... (I'm so sorry for being such a lame programmer...
+    :(  )
+
+    - 4.5.3.7:
+    . Added a confirmation dialog when deleting keypress-history
+    . Fixed a bug regarding "Disconnect and restart" session
+    . Added requirement for "libgtk2-unique-perl" library
+
+    - 4.5.3.6:
+    . Added support for PowerPC 64 bit architecture! (awesome community
+    job!!!)
+    . Added an option to show a list at Terminals right side to show the
+    command history!
+    . Much better algorithm to detect terminal prompt for history to be
+    detected!!
+    . Added support to Bulk Edit EXPECT fields also!
+    . Given some love to Unity's launch icon right click menu (quick conn +
+    local shell)
+    . Added '--password=<pwd>' to allow autologon without interactively
+    asking user for password when PAC's protection is ON
+    . Minor code optimizations
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 Apr 2014 21:26:49 +0200
+
 pac (4.5.3.5-1~getdeb2~saucy) saucy; urgency=low
 
   * New upstream version

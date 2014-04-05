@@ -1,9 +1,9 @@
 Fix Category name.
-Index: pac-2.5.5.6/res/pac.desktop
+Index: pac-4.5.3.7.2/res/pac.desktop
 ===================================================================
---- pac-2.5.5.6.orig/res/pac.desktop	2011-03-06 10:55:30.366270998 +0100
-+++ pac-2.5.5.6/res/pac.desktop	2011-03-06 10:55:53.306271001 +0100
-@@ -5,9 +5,8 @@
+--- pac-4.5.3.7.2.orig/res/pac.desktop	2014-04-05 21:29:12.222683928 +0200
++++ pac-4.5.3.7.2/res/pac.desktop	2014-04-05 21:29:12.218683928 +0200
+@@ -5,10 +5,9 @@
  Icon=pac
  Type=Application
  Exec=/usr/bin/pac
@@ -13,4 +13,5 @@ Index: pac-2.5.5.6/res/pac.desktop
 -Categories=Applications;Network;
 +Categories=Application;Network;
  X-GNOME-Autostart-enabled=false
+ Actions=Shell;Quick;
  
