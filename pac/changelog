@@ -1,3 +1,18 @@
+pac (4.5.3.8-1~getdeb2~saucy) saucy; urgency=low
+
+  * New upstream version
+    . Modified history widget to prevent execution of commands if Terminal is
+    disconnected (strange thing could happen!)
+    . Fixed a bug that prevented the "Config" window from being closed under
+    some circumstances
+    . Changed Wake-on-lan shortcut from <ALT>-o to <ALT>-w
+    . Minor changes to optimize how right-click "SFTP" from SSH connections
+    work
+    . Minor bug fix to prevent showing main connection on very particular
+    circumstances
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 07 Apr 2014 20:55:54 +0200
+
 pac (4.5.3.7.2-1~getdeb2~saucy) saucy; urgency=low
 
   * New upstream version
