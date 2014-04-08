@@ -1,3 +1,17 @@
+pac (4.5.3.8.1-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+    . Added "Font Smooth" option to "xfreerdp" connections (may not work on
+    all 'xfreerdp' client versions) Tested with 'freerdp-x11 1.0.2-1'
+    . Finally fixed the problem with Terminal loosing focus when changing
+    from TAB!! :)
+    . Fixed a bug that prevented PAC from using all the available space for
+    embedded RDP windows
+    . Fixed a regression bug that prevented using both "Auto reconnect" and
+    "Delay char sending" at the same time
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Apr 2014 20:01:03 +0200
+
 pac (4.5.3.8-1~getdeb1) precise; urgency=low
 
   * New upstream version
