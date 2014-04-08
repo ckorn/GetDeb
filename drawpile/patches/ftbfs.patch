@@ -1,0 +1,16 @@
+# make qt5 compatible
+Index: drawpile-0.8.6/src/client/mainwindow.cpp
+===================================================================
+--- drawpile-0.8.6.orig/src/client/mainwindow.cpp	2014-03-27 16:18:44.000000000 +0100
++++ drawpile-0.8.6/src/client/mainwindow.cpp	2014-04-08 19:15:52.807251682 +0200
+@@ -1626,8 +1626,8 @@
+ 	QAction *resize = makeAction("resizecanvas", 0, tr("Resi&ze canvas..."));
+ 	QAction *preferences = makeAction(0, 0, tr("Prefere&nces..."));
+ 
+-	QAction *selectall = makeAction("selectall", 0, tr("Select &all"), QString(), QKeySequence::SelectAll);
+-	QAction *selectnone = makeAction("selectnone", 0, tr("&Deselect"), QString(), QKeySequence::Deselect);
++	QAction *selectall = makeAction("selectall", 0, tr("Select &all"));
++	QAction *selectnone = makeAction("selectnone", 0, tr("&Deselect"));
+ 
+ 	QAction *expandup = makeAction("expandup", 0, tr("Expand up"), "", QKeySequence("Ctrl+J"));
+ 	QAction *expanddown = makeAction("expandup", 0, tr("Expand down"), "", QKeySequence("Ctrl+K"));

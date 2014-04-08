@@ -1,3 +1,19 @@
+drawpile (0.8.6-1~getdeb1) saucy; urgency=low
+
+  * New upstream version
+     * Show old annotation position until reshape message has finished its
+     roundtrip
+     * Spin boxes for accurate adjustment of brush parameters
+     * New feature: cut selection to clipboard
+     * Smoother laser pointer trails
+     * Indexed recordings
+     * Pauses in recordings are now exported to video
+     * New tool: recording markers
+     * Added button to stop video export
+     * Added "Select all" and "Deselect" menu entries
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Apr 2014 19:06:25 +0200
+
 drawpile (0.8.5-1~getdeb1) saucy; urgency=low
 
   * New upstream version
