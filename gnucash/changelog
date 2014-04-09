@@ -1,4 +1,4 @@
-gnucash (1:2.6.3-1~getdeb1~saucy) saucy; urgency=low
+gnucash (1:2.6.3-1~getdeb3~saucy) saucy; urgency=low
 
   * New upstream version
     -Bugs Fixed:
@@ -22,7 +22,7 @@ gnucash (1:2.6.3-1~getdeb1~saucy) saucy; urgency=low
     --Prevent crash reported in Bug 711567.
     -Translations Updated: Catalan, Danish, Italian
 
- -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Mon, 07 Apr 2014 18:48:15 +0100
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Mon, 07 Apr 2014 23:48:15 +0100
 
 gnucash (1:2.6.2-1~getdeb3~saucy) saucy; urgency=low
 
