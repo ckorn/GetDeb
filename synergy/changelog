@@ -1,8 +1,14 @@
-synergy (1.4.12-1~getdeb1) precise; urgency=low
+synergy (1.4.17-1~getdeb1) precise; urgency=low
 
   * New upstream version
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 11 Jun 2013 21:34:59 +0200
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Apr 2014 03:02:01 +0200
+
+synergy (1.4.12-3ubuntu1) trusty; urgency=medium
+
+  * Link with pthread to fix FTBFS: undefined reference to `pthread_create'
+
+ -- Andreas Moog <andreas.moog@warperbbs.de>  Fri, 21 Feb 2014 18:39:46 +0100
 
 synergy (1.4.12-3) unstable; urgency=low
 

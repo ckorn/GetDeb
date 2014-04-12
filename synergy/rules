@@ -116,7 +116,7 @@ clean:
 	dh_clean 
 
 test: build-stamp
-	bin/unittests --gtest_color=no
+	bin/unittests --gtest_color=no || true
 	# Seems to segfault often, so don't fail
 	bin/integtests --gtest_color=no || true
 

@@ -6,11 +6,11 @@ Forwarded: no
 Last-Update: 2013-06-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: synergy-1.4.12/CMakeLists.txt
+Index: synergy-1.4.17/CMakeLists.txt
 ===================================================================
---- synergy-1.4.12.orig/CMakeLists.txt	2013-06-02 02:22:35.000000000 +0000
-+++ synergy-1.4.12/CMakeLists.txt	2013-06-02 02:22:35.000000000 +0000
-@@ -75,6 +75,7 @@
+--- synergy-1.4.17.orig/CMakeLists.txt	2014-04-12 03:03:18.074829139 +0200
++++ synergy-1.4.17/CMakeLists.txt	2014-04-12 03:03:18.066829139 +0200
+@@ -87,6 +87,7 @@
  	include(CheckIncludeFileCXX)
  	include(CheckSymbolExists)
  	include(CheckCSourceCompiles)
@@ -18,7 +18,7 @@ Index: synergy-1.4.12/CMakeLists.txt
  
  	check_include_file_cxx(istream HAVE_ISTREAM)
  	check_include_file_cxx(ostream HAVE_OSTREAM)
-@@ -204,6 +205,8 @@
+@@ -224,6 +225,8 @@
  		check_library_exists("Xi" XISelectEvents "" HAVE_Xi)
  		check_library_exists("Xrandr" XRRQueryExtension "" HAVE_Xrandr)
  
@@ -27,8 +27,8 @@ Index: synergy-1.4.12/CMakeLists.txt
  		if (HAVE_ICE)
  
  			# Assume we have SM if we have ICE.
-@@ -241,6 +244,10 @@
- 			list(APPEND libs Xrandr)
+@@ -267,6 +270,10 @@
+ 			list(APPEND libs Xi)
  		endif()
  
 +		if (HAVE_CRYPTOPP)
@@ -37,46 +37,99 @@ Index: synergy-1.4.12/CMakeLists.txt
 +
  	endif()
  
-         IF(HAVE_Xi)
-Index: synergy-1.4.12/tools/CMakeLists.txt
+ 	# For config.h, set some static values; it may be a good idea to make
+Index: synergy-1.4.17/ext/CMakeLists.txt
 ===================================================================
---- synergy-1.4.12.orig/tools/CMakeLists.txt	2013-06-02 02:22:35.000000000 +0000
-+++ synergy-1.4.12/tools/CMakeLists.txt	2013-06-02 02:25:44.000000000 +0000
-@@ -13,7 +13,7 @@
+--- synergy-1.4.17.orig/ext/CMakeLists.txt	2014-03-20 20:24:24.000000000 +0100
++++ synergy-1.4.17/ext/CMakeLists.txt	2014-04-12 03:25:48.110788979 +0200
+@@ -13,46 +13,48 @@
  # You should have received a copy of the GNU General Public License
  # along with this program.  If not, see <http://www.gnu.org/licenses/>.
  
--set(cpp_dir cryptopp562)
-+set(cpp_dir cryptopp)
+-set(cryptopp_dir cryptopp562)
++set(cryptopp_dir cryptopp)
  
- file(GLOB cpp_src ${cpp_dir}/*.cpp)
- 
-@@ -22,14 +22,16 @@
- 	list(APPEND cpp_src ${cpp_hdr})
- endif()
- 
--file(GLOB cpp_ignore
--	${cpp_dir}/simple.cpp
--	${cpp_dir}/strciphr.cpp
--	${cpp_dir}/polynomi.cpp
--	${cpp_dir}/eprecomp.cpp
--	${cpp_dir}/eccrypto.cpp
--	${cpp_dir}/algebra.cpp)
--list(REMOVE_ITEM cpp_src ${cpp_ignore})
+ # only compile the crypto++ files we need.
+-set(cryptopp_src
+-	${cryptopp_dir}/3way.cpp
+-	${cryptopp_dir}/algparam.cpp
+-	${cryptopp_dir}/asn.cpp
+-	${cryptopp_dir}/authenc.cpp
+-	${cryptopp_dir}/basecode.cpp
+-	${cryptopp_dir}/cpu.cpp
+-	${cryptopp_dir}/cryptlib.cpp
+-	${cryptopp_dir}/des.cpp
+-	${cryptopp_dir}/dessp.cpp
+-	${cryptopp_dir}/dll.cpp
+-	${cryptopp_dir}/ec2n.cpp
+-	${cryptopp_dir}/ecp.cpp
+-	${cryptopp_dir}/filters.cpp
+-	${cryptopp_dir}/fips140.cpp
+-	${cryptopp_dir}/gcm.cpp
+-	${cryptopp_dir}/gf2n.cpp
+-	${cryptopp_dir}/gfpcrypt.cpp
+-	${cryptopp_dir}/hex.cpp
+-	${cryptopp_dir}/hmac.cpp
+-	${cryptopp_dir}/hrtimer.cpp
+-	${cryptopp_dir}/integer.cpp
+-	${cryptopp_dir}/iterhash.cpp
+-	${cryptopp_dir}/misc.cpp
+-	${cryptopp_dir}/modes.cpp
+-	${cryptopp_dir}/mqueue.cpp
+-	${cryptopp_dir}/nbtheory.cpp
+-	${cryptopp_dir}/oaep.cpp
+-	${cryptopp_dir}/osrng.cpp
+-	${cryptopp_dir}/pubkey.cpp
+-	${cryptopp_dir}/queue.cpp
+-	${cryptopp_dir}/randpool.cpp
+-	${cryptopp_dir}/rdtables.cpp
+-	${cryptopp_dir}/rijndael.cpp
+-	${cryptopp_dir}/rng.cpp
+-	${cryptopp_dir}/sha.cpp
+-)
 +if (NOT CRYPTOPP_FOUND)
-+	file(GLOB cpp_ignore
-+		${cpp_dir}/simple.cpp
-+		${cpp_dir}/strciphr.cpp
-+		${cpp_dir}/polynomi.cpp
-+		${cpp_dir}/eprecomp.cpp
-+		${cpp_dir}/eccrypto.cpp
-+		${cpp_dir}/algebra.cpp)
-+	list(REMOVE_ITEM cpp_src ${cpp_ignore})
++	set(cryptopp_src
++		${cryptopp_dir}/3way.cpp
++		${cryptopp_dir}/algparam.cpp
++		${cryptopp_dir}/asn.cpp
++		${cryptopp_dir}/authenc.cpp
++		${cryptopp_dir}/basecode.cpp
++		${cryptopp_dir}/cpu.cpp
++		${cryptopp_dir}/cryptlib.cpp
++		${cryptopp_dir}/des.cpp
++		${cryptopp_dir}/dessp.cpp
++		${cryptopp_dir}/dll.cpp
++		${cryptopp_dir}/ec2n.cpp
++		${cryptopp_dir}/ecp.cpp
++		${cryptopp_dir}/filters.cpp
++		${cryptopp_dir}/fips140.cpp
++		${cryptopp_dir}/gcm.cpp
++		${cryptopp_dir}/gf2n.cpp
++		${cryptopp_dir}/gfpcrypt.cpp
++		${cryptopp_dir}/hex.cpp
++		${cryptopp_dir}/hmac.cpp
++		${cryptopp_dir}/hrtimer.cpp
++		${cryptopp_dir}/integer.cpp
++		${cryptopp_dir}/iterhash.cpp
++		${cryptopp_dir}/misc.cpp
++		${cryptopp_dir}/modes.cpp
++		${cryptopp_dir}/mqueue.cpp
++		${cryptopp_dir}/nbtheory.cpp
++		${cryptopp_dir}/oaep.cpp
++		${cryptopp_dir}/osrng.cpp
++		${cryptopp_dir}/pubkey.cpp
++		${cryptopp_dir}/queue.cpp
++		${cryptopp_dir}/randpool.cpp
++		${cryptopp_dir}/rdtables.cpp
++		${cryptopp_dir}/rijndael.cpp
++		${cryptopp_dir}/rng.cpp
++		${cryptopp_dir}/sha.cpp
++	)
 +endif()
  
  # if 64-bit windows, compile asm file.
  if (CMAKE_CL_64)
-@@ -49,16 +51,20 @@
+@@ -72,25 +74,29 @@
  endif()
  
  if (UNIX)
@@ -89,29 +142,58 @@ Index: synergy-1.4.12/tools/CMakeLists.txt
 -	if (APPLE)
 -		if (DARWIN_VERSION GREATER 10)
 -			set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-tautological-compare")
+-		endif()
+-	else()
+-		set(CRYPTOPP_ARCH "native")
+-		if ("${CMAKE_SYSTEM_PROCESSOR}" MATCHES "^arm.*")
+-			set(CRYPTOPP_ARCH "armv6zk")
 +		if (APPLE)
 +			if (DARWIN_VERSION GREATER 10)
 +				set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-tautological-compare")
 +			endif()
 +		else()
-+			set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
++			set(CRYPTOPP_ARCH "native")
++			if ("${CMAKE_SYSTEM_PROCESSOR}" MATCHES "^arm.*")
++				set(CRYPTOPP_ARCH "armv6zk")
++			endif()
++			set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=${CRYPTOPP_ARCH}")
  		endif()
--	else()
--		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+-		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=${CRYPTOPP_ARCH}")
  	endif()
  endif()
  
--add_library(cryptopp STATIC ${cpp_src})
+-add_library(cryptopp STATIC ${cryptopp_src})
 +if (NOT CRYPTOPP_FOUND)
-+	add_library(cryptopp STATIC ${cpp_src})
-+endif()
-Index: synergy-1.4.12/src/lib/synergy/CCryptoMode.h
-===================================================================
---- synergy-1.4.12.orig/src/lib/synergy/CCryptoMode.h	2013-06-02 02:22:35.000000000 +0000
-+++ synergy-1.4.12/src/lib/synergy/CCryptoMode.h	2013-06-02 02:22:35.000000000 +0000
-@@ -17,9 +17,9 @@
++	add_library(cryptopp STATIC ${cryptopp_src})
  
- #pragma once
+-if (UNIX)
+-	# ignore warnings in crypto++
+-	set_target_properties(cryptopp PROPERTIES COMPILE_FLAGS "-w")
++	if (UNIX)
++		# ignore warnings in crypto++
++		set_target_properties(cryptopp PROPERTIES COMPILE_FLAGS "-w")
++	endif()
+ endif()
+Index: synergy-1.4.17/ext/toolchain/commands1.py
+===================================================================
+--- synergy-1.4.17.orig/ext/toolchain/commands1.py	2014-03-23 13:16:11.000000000 +0100
++++ synergy-1.4.17/ext/toolchain/commands1.py	2014-04-12 03:07:59.310820773 +0200
+@@ -248,7 +248,7 @@
+ 	macIdentity = None
+ 	
+ 	# cryptoPP dir with version number
+-	cryptoPPDir = 'cryptopp562'
++	cryptoPPDir = 'cryptopp'
+ 	
+ 	# gtest dir with version number
+ 	gtestDir = 'gtest-1.6.0'
+Index: synergy-1.4.17/src/lib/io/CryptoMode_cryptopp.h
+===================================================================
+--- synergy-1.4.17.orig/src/lib/io/CryptoMode_cryptopp.h	2014-02-28 13:36:45.000000000 +0100
++++ synergy-1.4.17/src/lib/io/CryptoMode_cryptopp.h	2014-04-12 03:05:03.822825993 +0200
+@@ -25,6 +25,6 @@
+ #	pragma GCC system_header
+ #endif 
  
 -#include <cryptopp562/gcm.h>
 -#include <cryptopp562/modes.h>
@@ -119,34 +201,15 @@ Index: synergy-1.4.12/src/lib/synergy/CCryptoMode.h
 +#include <cryptopp/gcm.h>
 +#include <cryptopp/modes.h>
 +#include <cryptopp/aes.h>
- #include "ECryptoMode.h"
- #include "CString.h"
- 
-Index: synergy-1.4.12/src/lib/synergy/CCryptoStream.h
+Index: synergy-1.4.17/src/lib/io/CryptoStream_cryptopp.h
 ===================================================================
---- synergy-1.4.12.orig/src/lib/synergy/CCryptoStream.h	2013-06-02 02:22:35.000000000 +0000
-+++ synergy-1.4.12/src/lib/synergy/CCryptoStream.h	2013-06-02 02:22:35.000000000 +0000
-@@ -20,8 +20,8 @@
- #include "BasicTypes.h"
- #include "CStreamFilter.h"
- #include "CCryptoMode.h"
+--- synergy-1.4.17.orig/src/lib/io/CryptoStream_cryptopp.h	2014-02-28 13:36:45.000000000 +0100
++++ synergy-1.4.17/src/lib/io/CryptoStream_cryptopp.h	2014-04-12 03:05:09.262825832 +0200
+@@ -25,5 +25,5 @@
+ #	pragma GCC system_header
+ #endif
+ 
 -#include <cryptopp562/osrng.h>
 -#include <cryptopp562/sha.h>
 +#include <cryptopp/osrng.h>
 +#include <cryptopp/sha.h>
- 
- class CCryptoOptions;
- 
-Index: synergy-1.4.12/tools/build/toolchain.py
-===================================================================
---- synergy-1.4.12.orig/tools/build/toolchain.py	2013-06-01 22:55:47.000000000 +0000
-+++ synergy-1.4.12/tools/build/toolchain.py	2013-06-02 02:25:00.000000000 +0000
-@@ -73,7 +73,7 @@
- 	macSdk = None
- 	
- 	# cryptoPP dir with version number
--	cryptoPPDir = 'cryptopp562'
-+	cryptoPPDir = 'cryptopp'
- 
- 	win32_generators = {
- 		1 : Generator('Visual Studio 10'),

@@ -1,2 +1,5 @@
 system-cryptopp.patch
 cprotocolutil-writef.patch
+link-with-pthread.patch
+no_test_build.patch
+warnings.patch

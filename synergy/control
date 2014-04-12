@@ -2,6 +2,7 @@ Source: synergy
 Section: x11
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+XSBC-Original-Maintainer: Jeff Licquia <licquia@debian.org>
 Homepage: http://synergy-foss.org/
 Build-Depends: debhelper (>= 9),
                libxt-dev,
@@ -11,12 +12,14 @@ Build-Depends: debhelper (>= 9),
                docbook-to-man,
                libcrypto++-dev,
                pkg-config,
-               libqt4-dev
+               libqt4-dev,
+               libcurl4-openssl-dev
 Standards-Version: 3.9.3
 
 Package: synergy
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Share mouse, keyboard and clipboard over the network
  Synergy lets you easily share a single mouse and keyboard between
  multiple computers with different operating systems, each with its
