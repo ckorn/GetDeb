@@ -1,0 +1,21 @@
+This package was debianized by Cord Beermann <cord@debian.org> on
+Sat,  4 Feb 2006 21:40:52 +0100.
+
+It was downloaded from http://sf.net/project/showfiles.php?group_id=59275
+
+Copyright Notice, as taken from cmd/synergyc/synergyc.cpp:
+
+   Copyright (C) 2002 Chris Schoeneman
+
+   This package is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   found in the file COPYING that should have accompanied this file.
+
+   This package is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+On Debian systems, the full text of the GNU General Public License,
+version 2 (as distributed as COPYING in the source), can be found in
+the file /usr/share/common-licenses/GPL-2.

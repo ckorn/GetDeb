@@ -1,0 +1,9 @@
+src/gui/Makefile
+src/gui/ui_AboutDialogBase.h
+src/gui/ui_ActionDialogBase.h
+src/gui/ui_HotkeyDialogBase.h
+src/gui/ui_MainWindowBase.h
+src/gui/ui_ScreenSettingsDialogBase.h
+src/gui/ui_ServerConfigDialogBase.h
+src/gui/ui_SettingsDialogBase.h
+src/gui/ui_SetupWizardBase.h

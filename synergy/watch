@@ -1,0 +1,2 @@
+version=3
+http://fossfiles.com/synergy/synergy-([\d\.]+)-(?:.*)-Source\.tar\.(?:gz|xz|bz2)

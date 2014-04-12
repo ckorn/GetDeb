@@ -1,0 +1,292 @@
+synergy (1.4.17-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Apr 2014 03:02:01 +0200
+
+synergy (1.4.12-3ubuntu1) trusty; urgency=medium
+
+  * Link with pthread to fix FTBFS: undefined reference to `pthread_create'
+
+ -- Andreas Moog <andreas.moog@warperbbs.de>  Fri, 21 Feb 2014 18:39:46 +0100
+
+synergy (1.4.12-3) unstable; urgency=low
+
+  * Make GUI build and rest-of-synergy build separately targetable
+    (for testing on slow Debian build archs).
+  * Disable relro hardening flags on mips and mipsel, as it causes
+    the unit tests to segfault.
+
+ -- Jeff Licquia <licquia@debian.org>  Mon, 10 Jun 2013 03:12:05 +0000
+
+synergy (1.4.12-2) unstable; urgency=low
+
+  * Fix build failure on gcc 4.6 archs by changing a parameter's type
+    on a private method.
+  * Update Standards-Version.
+  * Add lintian override for autotools-dev files (which the synergy
+    build doesn't use).
+  * Don't run the test suite if DEB_BUILD_OPTIONS=nocheck is set.
+  * Add the proper incantations to get qmake to recognize the
+    proper dpkg hardening flags.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 08 Jun 2013 00:12:44 +0000
+
+synergy (1.4.12-1) unstable; urgency=low
+
+  * New upstream version...
+  * ...which includes the new encryption layer.  Closes: #421512.
+  * Deal with new dependency on Crypto++:
+    - Add a rule to debian/rules for unpacking the embedded cryptopp
+      zip file if needed.
+    - Alter CMakeLists files, Python build system to detect and use
+      the system libcrypto++ (based on pkgconfig).
+    - Alter include paths in source to strip the version number from
+      the path.
+    - Build-Depend on libcrypto++-dev.
+  * Re-enable the integrity tests, but don't fail if they segfault.
+  * Enable the GUI.  Thanks to Mario Limonciello
+    <Mario_Limonciello@Dell.com> for the original patch, which I've
+    adapted.  Closes: #698291.
+  * Add man page for new synergy app (the GUI).
+  * Add missing options to the synergys and synergyc man pages.
+    Closes: #659883.
+
+ -- Jeff Licquia <licquia@debian.org>  Mon, 03 Jun 2013 05:10:19 +0000
+
+synergy (1.4.10-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 28 Oct 2012 16:35:08 -0400
+
+synergy (1.3.8-2) unstable; urgency=low
+
+  * Build with dpkg-buildflags hardening support.
+  * Update Standards-Version.
+  * Apply mutex initialization fix from upstream.  This seems
+    to fix a number of segfault issues.  Closes: #666896.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 07 Jul 2012 15:08:33 -0400
+
+synergy (1.4.8-1) experimental; urgency=low
+
+  * New upstream version.
+  * Add synergyd, a new daemon upstream is working on (more for
+    Windows, I think).
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 15 Apr 2012 20:40:40 -0400
+
+synergy (1.4.7-1) experimental; urgency=low
+
+  * New upstream version.
+  * Remove gnome3.patch (pulled in upstream).
+  * Update Standards-Version.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 01 Apr 2012 20:14:53 -0400
+
+synergy (1.4.5-1) experimental; urgency=low
+
+  * Move to upstream 1.4.x series.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 14 Jan 2012 13:59:27 -0500
+
+synergy (1.3.8-1) unstable; urgency=low
+
+  * New upstream version.
+  * Switch to 3.0 (quilt) source format.
+  * Apply upstream patch to fix GNOME 3 issues.  Closes: #649208.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 04 Dec 2011 18:58:04 -0500
+
+synergy (1.3.7-1) unstable; urgency=low
+
+  * New upstream version.
+  * Update Standards-Version, fix new lintian warnings.
+  * Add test suites to build.  One appears unreliable; disable
+    until fixed.
+  * Switch back to the Debian-specific man pages, which are better.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 02 Oct 2011 19:37:04 -0400
+
+synergy (1.3.6-1) unstable; urgency=low
+
+  * New upstream version.  Closes: #611056.
+  * Pull in previous updates from experimental.
+    Closes: #591372.
+  * Switch to cmake from autotools.
+  * Drop obsolete docs.
+  * Use project-suppled man pages instead of Debian-specific ones.
+  * Update watch file to point to new synergy project.  Closes: #611726.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 13 Feb 2011 21:34:22 -0500
+
+synergy (1.3.4-1) experimental; urgency=low
+
+  * New upstream version.
+  * Set source package version.
+  * Update Standards-Version.
+  * Fix doc links to "obsolete" docs.
+  * Updated documentation and Homepage to reflect the merger
+    with synergy-plus.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 09 Nov 2010 16:44:15 -0500
+
+synergy (1.3.1-6) unstable; urgency=low
+
+  * Apply similar patch to synergyc.  Closes: #520008.
+  * Update Standards-Version and debhelper compatibility.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 31 Mar 2009 15:18:57 -0400
+
+synergy (1.3.1-5) unstable; urgency=low
+
+  * Apply patch from Carlo Wood which fixes a crash in synergys
+    with XCB.  Closes: #495498.
+
+ -- Jeff Licquia <licquia@debian.org>  Sun, 07 Sep 2008 23:25:43 -0400
+
+synergy (1.3.1-4) unstable; urgency=low
+
+  * Apply patch from Mike Stroyan which fixes some race conditions.
+    Closes: #432938.
+  * Re-jigger how options get passed to configure in debian/rules.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 24 Jun 2008 22:13:36 -0400
+
+synergy (1.3.1-3) unstable; urgency=low
+
+  * New maintainer.  Closes: #470186.
+  * Update Standards-Version.
+  * Add Homepage and Vcs-* fields.
+  * Fix lintian warnings on copyright and doc-base files.
+    Closes: #430783.
+  * Fix problem with synergys man page.
+
+ -- Jeff Licquia <licquia@debian.org>  Sat, 07 Jun 2008 19:26:22 -0500
+
+synergy (1.3.1-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * fix g++-4.3 FTBFS (Closes: 417719).
+
+ -- Pierre Habouzit <madcoder@debian.org>  Sun, 16 Mar 2008 22:01:24 +0000
+
+synergy (1.3.1-2) unstable; urgency=low
+
+  * added build-dependency on libxt-dev (closes: #367837)
+  * Bumped Standard-Version to 3.7.2. no change.
+
+ -- Cord Beermann <cord@debian.org>  Wed, 31 May 2006 22:57:17 +0200
+
+synergy (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Cord Beermann <cord@debian.org>  Sat,  8 Apr 2006 20:44:18 +0200
+
+synergy (1.3.0-1) unstable; urgency=low
+
+  * New upstream release
+  * should fix 'Shift key does not work inside VMware' (closes: #321055)
+  * closing old unreproducable bug (closes: #276282)
+
+ -- Cord Beermann <cord@debian.org>  Sat,  1 Apr 2006 09:04:14 +0200
+
+synergy (1.2.8-2) unstable; urgency=low
+
+  * doc-base install-docs control files do not appear to have a syntax
+    for comments. comments removed. thanks to Paul Cannon
+    for the diagnosis. (closes: #351997)
+
+ -- Cord Beermann <cord@cord.de>  Thu,  9 Feb 2006 23:25:34 +0100
+
+synergy (1.2.8-1) unstable; urgency=low
+
+  * Hijack the package (closes: #349746)
+  * Rebuild the package from scratch.
+  * moved package from 'net' to 'x11'.
+
+ -- Cord Beermann <cord@debian.org>  Sat,  4 Feb 2006 22:48:34 +0100
+
+synergy (1.2.7-0.2) unstable; urgency=low
+
+  * Non-maintainer upload
+  * configure is unhappy, adding xutils.
+
+ -- Cord Beermann <cord@debian.org>  Tue, 24 Jan 2006 16:50:40 +0100
+
+synergy (1.2.7-0.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * New upstream release (closes: #323922)
+  * fix FTBFS: build-depends on removed xlibs-dev (closes: #347066)
+
+ -- Cord Beermann <cord@debian.org>  Mon, 16 Jan 2006 16:39:53 +0100
+
+synergy (1.2.2-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#293461, Bug#279660, Bug#192516)
+  * Corrected typo in synergys.1 (s/heatbeat/heartbeat)
+    (closes: Bug#273236)
+
+ -- Daniel Lutz <danlutz@debian.org>  Wed, 16 Feb 2005 21:35:41 +0100
+
+synergy (1.0.14-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#195043, Bug#189953, Bug#211309)
+  * Added synergys.sgml and synergyc.sgml.
+  * Changed debian/rules to use docbook-to-man.
+  * Added docbook-to-man to debian/control Build-Depends.
+  * Updated synergys and synergyc manual pages.
+  * Happy Halloween!
+  * Packaged by Titus Barik <barik@ieee.org>
+    Thanks a lot!
+
+ -- Daniel Lutz <danlutz@debian.org>  Fri, 31 Oct 2003 19:36:30 -0500
+
+synergy (1.0.3-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#178504)
+  * Changed Standards-Version to 3.5.8
+  * Removed `dh_undocumented' from debian/rules
+  * Removed gcc-3.2 handling for hppa from debian/rules
+
+ -- Daniel Lutz <danlutz@debian.org>  Tue, 18 Feb 2003 12:39:12 +0100
+
+synergy (0.9.12-3) unstable; urgency=low
+
+  * Build-depend on g++-3.2 on `hppa' platform.
+    Choose gcc-3.2 and g++-3.2 instead of default compilers
+    in rules file if platform is `hppa'.
+    (This is needed because on `hppa', gcc-3.0 produces an ICE.)
+
+ -- Daniel Lutz <danlutz@debian.org>  Tue,  1 Oct 2002 22:13:22 +0200
+
+synergy (0.9.12-2) unstable; urgency=low
+
+  * Changed order of inclusion of files "CLog.h" and "std[fs]stream.h"
+    in cmd/synergys/synergys.cpp, lib/http/CHTTPProtocol.cpp
+    and lib/server/CHTTPServer.cpp so that it compiles with
+    gcc 3.2.
+
+ -- Daniel Lutz <danlutz@debian.org>  Mon, 30 Sep 2002 22:07:11 +0200
+
+synergy (0.9.12-1) unstable; urgency=low
+
+  * New upstream release
+    (closes: Bug#160729)
+
+ -- Daniel Lutz <danlutz@debian.org>  Thu, 19 Sep 2002 12:58:51 +0200
+
+synergy (0.9.8-1) unstable; urgency=low
+
+  * Initial Release.
+    (closes: Bug#156849)
+  * Added manual pages.
+
+ -- Daniel Lutz <danlutz@debian.org>  Thu, 15 Aug 2002 23:00:53 +0200
+
