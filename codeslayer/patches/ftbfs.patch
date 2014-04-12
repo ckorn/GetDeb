@@ -1,0 +1,12 @@
+# docs/reference/Makefile.am:38: error: EXTRA_DIST must be set with '=' before using '+='
+Index: codeslayer-4.1.1/docs/reference/Makefile.am
+===================================================================
+--- codeslayer-4.1.1.orig/docs/reference/Makefile.am	1979-12-31 00:00:00.000000000 +0100
++++ codeslayer-4.1.1/docs/reference/Makefile.am	2014-04-12 00:28:55.455104678 +0200
+@@ -35,4 +35,4 @@
+ include $(top_srcdir)/gtk-doc.make
+ 
+ content_files= version.xml
+-EXTRA_DIST += version.xml.in
+\ No newline at end of file
++EXTRA_DIST = version.xml.in

@@ -2,6 +2,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  _codeslayer_marshal_VOID__BOOLEAN_BOOLEAN@Base 4.0.0
  _codeslayer_marshal_VOID__STRING_INT_STRING_INT@Base 3.0.0
  _codeslayer_marshal_VOID__STRING_STRING@Base 1.2.1
+ _codeslayer_marshal_VOID__STRING_STRING_BOOLEAN_BOOLEAN_BOOLEAN@Base 4.1.1
  codeslayer_abstract_pane_add@Base 1.5.1
  codeslayer_abstract_pane_close@Base 1.5.1
  codeslayer_abstract_pane_create_notebook@Base 1.5.1
@@ -10,11 +11,11 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_abstract_pane_insert@Base 4.0.0
  codeslayer_abstract_pane_open@Base 1.5.1
  codeslayer_abstract_pane_remove@Base 1.5.1
+ codeslayer_abstract_pane_remove_all@Base 4.1.1
  codeslayer_abstract_pane_set_profile@Base 4.0.0
  codeslayer_abstract_pane_sync_registry@Base 4.0.0
  codeslayer_add_to_bottom_pane@Base 1.2.1
  codeslayer_add_to_menu_bar@Base 3.0.0
- codeslayer_add_to_process_bar@Base 3.0.0
  codeslayer_add_to_project_properties@Base 1.2.1
  codeslayer_add_to_projects_popup@Base 1.2.1
  codeslayer_add_to_side_pane@Base 1.2.1
@@ -87,7 +88,6 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_menu_bar_copy@Base 3.0.0
  codeslayer_menu_bar_copy_lines@Base 3.0.0
  codeslayer_menu_bar_cut@Base 3.0.0
- codeslayer_menu_bar_delete@Base 3.0.0
  codeslayer_menu_bar_draw_spaces@Base 3.0.0
  codeslayer_menu_bar_edit_get_type@Base 4.0.0
  codeslayer_menu_bar_edit_new@Base 4.0.0
@@ -112,6 +112,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_menu_bar_projects_get_type@Base 3.0.0
  codeslayer_menu_bar_projects_new@Base 3.0.0
  codeslayer_menu_bar_quit_application@Base 3.0.0
+ codeslayer_menu_bar_regular_expression@Base 4.1.1
  codeslayer_menu_bar_remove_tools_item@Base 3.0.0
  codeslayer_menu_bar_replace@Base 3.0.0
  codeslayer_menu_bar_save_all_documents@Base 4.0.0
@@ -154,8 +155,6 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_notebook_page_save_source_view@Base 4.0.0
  codeslayer_notebook_page_show_document_not_found_info_bar@Base 1.2.1
  codeslayer_notebook_page_show_external_changes_info_bar@Base 3.0.0
- codeslayer_notebook_pane_get_notebook@Base 1.2.1
- codeslayer_notebook_pane_get_notebook_search@Base 1.2.1
  codeslayer_notebook_pane_get_type@Base 1.2.1
  codeslayer_notebook_pane_new@Base 1.2.1
  codeslayer_notebook_pane_search_find@Base 1.2.1
@@ -166,7 +165,6 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_notebook_pane_set_notebook_search@Base 1.2.1
  codeslayer_notebook_save_all_documents@Base 4.0.0
  codeslayer_notebook_save_document@Base 4.0.0
- codeslayer_notebook_search_create_search_marks@Base 1.2.1
  codeslayer_notebook_search_find@Base 1.2.1
  codeslayer_notebook_search_find_next@Base 1.2.1
  codeslayer_notebook_search_find_previous@Base 1.2.1
@@ -228,22 +226,6 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_preferences_theme_new@Base 1.2.1
  codeslayer_preferences_utils_content_area@Base 1.2.1
  codeslayer_preferences_utils_notify@Base 4.0.0
- codeslayer_process_bar_get_type@Base 3.0.0
- codeslayer_process_bar_new@Base 3.0.0
- codeslayer_process_get_data@Base 3.0.0
- codeslayer_process_get_func@Base 3.0.0
- codeslayer_process_get_id@Base 3.0.0
- codeslayer_process_get_name@Base 3.0.0
- codeslayer_process_get_type@Base 3.0.0
- codeslayer_process_new@Base 3.0.0
- codeslayer_process_set_data@Base 3.0.0
- codeslayer_process_set_func@Base 3.0.0
- codeslayer_process_set_name@Base 3.0.0
- codeslayer_process_stop@Base 3.0.0
- codeslayer_processes_add@Base 3.0.0
- codeslayer_processes_get_type@Base 3.0.0
- codeslayer_processes_new@Base 3.0.0
- codeslayer_processes_remove@Base 3.0.0
  codeslayer_profile_add_document@Base 4.0.0
  codeslayer_profile_add_plugin@Base 4.0.0
  codeslayer_profile_add_project@Base 4.0.0
@@ -306,6 +288,8 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_projects_selection_new@Base 1.2.1
  codeslayer_projects_selection_set_file_path@Base 1.2.1
  codeslayer_projects_selection_set_project@Base 1.2.1
+ codeslayer_regex_view_get_type@Base 4.1.1
+ codeslayer_regex_view_new@Base 4.1.1
  codeslayer_registry_get_boolean@Base 4.0.0
  codeslayer_registry_get_double@Base 4.0.0
  codeslayer_registry_get_hashtable@Base 4.0.0
@@ -321,10 +305,19 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_registry_set_string@Base 4.0.0
  codeslayer_remove_from_bottom_pane@Base 1.2.1
  codeslayer_remove_from_menu_bar@Base 3.0.0
- codeslayer_remove_from_process_bar@Base 3.0.0
  codeslayer_remove_from_project_properties@Base 1.2.1
  codeslayer_remove_from_projects_popup@Base 1.2.1
  codeslayer_remove_from_side_pane@Base 1.2.1
+ codeslayer_search_clear_highlight@Base 4.1.1
+ codeslayer_search_find@Base 4.1.1
+ codeslayer_search_find_next@Base 4.1.1
+ codeslayer_search_find_previous@Base 4.1.1
+ codeslayer_search_get_type@Base 4.1.1
+ codeslayer_search_has_matches@Base 4.1.1
+ codeslayer_search_highlight_all@Base 4.1.1
+ codeslayer_search_new@Base 4.1.1
+ codeslayer_search_replace@Base 4.1.1
+ codeslayer_search_replace_all@Base 4.1.1
  codeslayer_select_document@Base 4.0.0
  codeslayer_select_document_by_file_path@Base 4.0.0
  codeslayer_send_plugin_message@Base 3.0.0
@@ -335,6 +328,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_source_view_add_completion_provider@Base 4.0.0
  codeslayer_source_view_get_document@Base 4.0.0
  codeslayer_source_view_get_modification_time@Base 4.0.0
+ codeslayer_source_view_get_search@Base 4.1.1
  codeslayer_source_view_get_type@Base 4.0.0
  codeslayer_source_view_new@Base 4.0.0
  codeslayer_source_view_scroll_to_line@Base 4.0.0
