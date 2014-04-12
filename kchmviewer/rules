@@ -4,4 +4,4 @@
 #export DH_VERBOSE=1
 
 %:
-	dh --parallel --with kde $@
+	dh $@ --parallel --with kde
