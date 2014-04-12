@@ -3,14 +3,19 @@ Section: kde
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Fathi Boudra <fabo@debian.org>, Jose Luis Tallon <jltallon@adv-solutions.net>
-Build-Depends: debhelper (>= 7.4.15), cmake, pkg-kde-tools (>= 0.6.4),
- kdelibs5-dev, libchm-dev, libqtwebkit-dev
+Build-Depends: debhelper (>= 9),
+               cmake,
+               pkg-kde-tools (>= 0.6.4),
+               kdelibs5-dev,
+               libchm-dev,
+               libqtwebkit-dev
 Standards-Version: 3.9.3
 Homepage: http://www.kchmviewer.net/
 
 Package: kchmviewer
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Recommends: okular-extra-backends
 Description: CHM viewer for KDE
  KchmViewer is a chm (MS HTML help file format) viewer, written in C++.
