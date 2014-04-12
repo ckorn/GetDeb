@@ -1,3 +1,9 @@
+frostwire (5.7.2-1~getdeb1) precise; urgency=low
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Apr 2014 00:57:02 +0200
+
 frostwire (5.7.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
