@@ -10,14 +10,14 @@ Build-Depends: debhelper (>= 9),
                libxml2-dev,
                libreadline6-dev,
                chrpath
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://tvpvrd.sourceforge.net/
 
 Package: tvpvrd
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         ffmpeg
+         libav-tools
 Description: TV broadcast scheduler
  A Unix server/daemon to make scheduled recordings of TV broadcasts
  using one or multiple Video capture cards with optional
