@@ -8,13 +8,13 @@ Build-Depends: cdbs,
                ruby,
                ruby-gettext,
                cdparanoia
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://wiki.hydrogenaudio.org/index.php?title=Rubyripper
 
 Package: rubyripper
 Architecture: all
 Depends: ruby,
-         libgtk2-ruby1.8,
+         ruby-gtk2,
          cdparanoia,
          eject,
          gedit | kwrite | mousepad,
