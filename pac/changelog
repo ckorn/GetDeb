@@ -1,3 +1,11 @@
+pac (4.5.3.9-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Fixed nth bug regarding main window not showing when "start minimized"
+    is selected ("blank window" bug!)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 18 Apr 2014 16:51:57 +0200
+
 pac (4.5.3.8.1-1~getdeb2~saucy) saucy; urgency=low
 
   * New upstream version

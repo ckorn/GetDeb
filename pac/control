@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                perl
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://sites.google.com/site/davidtv/
 
 Package: pac
