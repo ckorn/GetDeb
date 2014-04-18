@@ -1,3 +1,9 @@
+freefilesync (5.13-1~getdeb2~trusty) trusty; urgency=low
+
+  * Rebuild for trusty.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 29 Mar 2014 15:40:40 +0100
+
 freefilesync (5.13-1~getdeb1) quantal; urgency=low
 
   * New upstream version
