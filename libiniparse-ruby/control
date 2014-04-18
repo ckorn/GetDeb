@@ -3,10 +3,9 @@ Section: libs
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
-               ruby-pkg-tools,
                gem2deb (>= 0.2.6~),
-               ruby1.8
-Standards-Version: 3.9.3
+               libruby1.9.1
+Standards-Version: 3.9.5
 Homepage: http://rubygems.org/gems/iniparse
 XS-Ruby-Versions: all
 
@@ -15,7 +14,7 @@ Architecture: all
 Section: ruby
 XB-Ruby-Versions: ${ruby:Versions}
 Depends: ${misc:Depends},
-         libiniparse-ruby1.8
+         libiniparse-ruby1.9
 Description: Pure Ruby library for parsing INI documents (dummy package)
  Library for parsing INI documents.
  === Main features
@@ -34,13 +33,13 @@ Description: Pure Ruby library for parsing INI documents (dummy package)
     nothing gets mangled when writing back to the file.
  .
  This package is a dependency package, which depends on Ubuntu's
- default Ruby version (currently 1.8.x).
+ default Ruby version (currently ruby1.9.x).
 
-Package: libiniparse-ruby1.8
+Package: libiniparse-ruby1.9
 Architecture: all
 Section: ruby
 Depends: ${misc:Depends},
-         libruby1.8
+         libruby1.9.1
 Description: Pure Ruby library for parsing INI documents
  Library for parsing INI documents.
  === Main features
