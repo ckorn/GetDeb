@@ -3,10 +3,9 @@ Section: libs
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
-               ruby-pkg-tools,
-               ruby1.8,
+               ruby,
                gem2deb (>= 0.2.6~)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://www.pagodabox.com
 XS-Ruby-Versions: all
 
@@ -15,18 +14,16 @@ Architecture: all
 Section: ruby
 XB-Ruby-Versions: ${ruby:Versions}
 Depends: ${misc:Depends},
-         libruby1.8,
-         libpassword-ruby,
-         librestclient-ruby,
+         ruby-password,
+         ruby-rest-client,
          ruby-json,
          libiniparse-ruby,
          ruby-highline,
-         ruby1.8,
-         libopenssl-ruby,
+         ruby,
+         libruby,
          ruby-gli,
          ruby-pagoda-client,
-         ruby-pagoda-tunnel,
-         ruby | ruby-interpreter
+         ruby-pagoda-tunnel
 Description: Terminal client for pagodabox
  Terminal client for interacting with the pagodabox.
  This client does not contain full API functionality,
