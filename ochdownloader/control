@@ -3,12 +3,12 @@ Section: utils
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://ochdownloader.com/
 
 Package: ochdownloader
 Architecture: all
-Depends: libunrar0,
+Depends: unrar,
          ${misc:Depends},
          python-pyside.qtgui,
          python-crypto
