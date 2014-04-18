@@ -1,3 +1,9 @@
+subsonic (4.9-1~getdeb2~trusty) trusty; urgency=low
+
+  * Rebuild for trusty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 29 Mar 2014 17:49:45 +0100
+
 subsonic (4.9-1~getdeb1) precise; urgency=low
 
   * New upstream version

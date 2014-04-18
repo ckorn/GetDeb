@@ -3,7 +3,7 @@ Section: sound
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://www.subsonic.org
 
 Package: subsonic
@@ -15,7 +15,7 @@ Depends: ${misc:Depends},
          flac,
          faad,
          vorbis-tools,
-         ffmpeg
+         libav-tools
 Description: Web-based music streamer, jukebox and Podcast receiver
  Subsonic is a web-based music streamer, jukebox and Podcast receiver,
  providing access to your music collection wherever you are. Use it
