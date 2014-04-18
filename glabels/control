@@ -20,7 +20,7 @@ Build-Depends: autotools-dev,
                barcode (>= 0.98),
                libqrencode-dev (>= 3.1.0),
                libiec16022-dev (>= 0.2.4)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://glabels.sourceforge.net/
 
 Package: glabels
