@@ -38,7 +38,7 @@ Build-Depends: cdbs (>= 0.4.43),
                libchm-dev
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Martin Pitt <mpitt@debian.org>
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 XS-Python-Version: >= 2.7
 Homepage: http://calibre-ebook.com
 Vcs-Bzr: https://code.launchpad.net/~calibre-packagers/calibre/debian
