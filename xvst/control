@@ -7,9 +7,9 @@ Build-Depends: debhelper (>= 9),
                qt5-qmake,
                libqt5webkit5-dev,
                libqt5opengl5-dev,
+               qtlocation5-dev,
                qtdeclarative5-private-dev,
-               qtlocation5-private-dev,
-               qtsensors5-private-dev,
+               qtsensors5-dev,
                qtscript5-private-dev,
                libxslt1-dev,
                libglib2.0-dev,
@@ -17,14 +17,14 @@ Build-Depends: debhelper (>= 9),
                libgstreamer0.10-dev,
                libxml2-dev,
                libsqlite3-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://xviservicethief.sourceforge.net
 
 Package: xvst
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         ffmpeg
+         libav-tools
 Description: Download tool for video clips
  xVideoServiceThief (a.k.a xVST) is a tool for downloading
  your favourite video clips from a lot of video websites
