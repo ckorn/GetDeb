@@ -1,3 +1,9 @@
+simplescreenrecorder (0.2.2-1~getdeb2~trusty) trusty; urgency=low
+
+  * Rebuild for trusty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 29 Mar 2014 17:42:23 +0100
+
 simplescreenrecorder (0.2.2-1~getdeb1) precise; urgency=low
 
   * New upstream version

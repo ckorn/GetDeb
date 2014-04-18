@@ -18,8 +18,10 @@ libssr-glinject.so libssr-glinject #MINVER#
  _ZN8GLInjectC2Ev@Base 0.0.7
  _ZN8GLInjectD1Ev@Base 0.0.7
  _ZN8GLInjectD2Ev@Base 0.0.7
- _ZNSt6vectorIP14GLFrameGrabberSaIS1_EE13_M_insert_auxIIS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_@Base 0.1.2
- _ZNSt6vectorIPcSaIS0_EE13_M_insert_auxIIS0_EEEvN9__gnu_cxx17__normal_iteratorIPS0_S2_EEDpOT_@Base 0.1.2
+ _ZNSt6vectorIP14GLFrameGrabberSaIS1_EE19_M_emplace_back_auxIIS1_EEEvDpOT_@Base 0.2.2
+ _ZNSt6vectorIP14GLFrameGrabberSaIS1_EE19_M_emplace_back_auxIJS1_EEEvDpOT_@Base 0.2.2
+ _ZNSt6vectorIPcSaIS0_EE19_M_emplace_back_auxIIS0_EEEvDpOT_@Base 0.2.2
+ _ZNSt6vectorIPcSaIS0_EE19_M_emplace_back_auxIJS0_EEEvDpOT_@Base 0.2.2
  dlsym@Base 0.0.7
  dlvsym@Base 0.0.7
  eh_check_addr@Base 0.0.7
