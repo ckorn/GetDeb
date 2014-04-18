@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 %:
-	dh $@
+	dh $@ --with python2
 
 override_dh_clean:
 	dh_clean bookwrite bookwrite.png

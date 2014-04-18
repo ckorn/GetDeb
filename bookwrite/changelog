@@ -1,3 +1,9 @@
+bookwrite (0.9.1-1~getdeb6~trusty) trusty; urgency=low
+
+  * Rebuild for trusty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 28 Mar 2014 23:30:58 +0100
+
 bookwrite (0.9.1-1~getdeb5~oneiric) oneiric; urgency=low
 
   * Rebuild for oneiric
