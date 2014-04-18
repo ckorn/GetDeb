@@ -1,5 +1,0 @@
-version=3
-opts=\
-downloadurlmangle=s|.*[?]name=(.*?)&.*|http://gitso.googlecode.com/files/$1|,\
-filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
-http://code.google.com/p/gitso/downloads/detail[?]name=gitso_([\d\.]+)_src\.tar\.bz2&.*

@@ -1,7 +1,0 @@
-?package(unetbootin): \
-	needs="X11" \
-	section="Applications/System/Administration" \
-	title="UNetbootin" \
-	description="Tool for creating Live USB drives" \
-	command="/usr/bin/unetbootin" \
-	icon="/usr/share/pixmaps/unetbootin.xpm"

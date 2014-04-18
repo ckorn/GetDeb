@@ -1,3 +1,0 @@
-version=3
-https://code.google.com/p/transmission-remote-gtk/downloads/list \
-   (?:.*/)?transmission-remote-gtk-([\d\.]+)\.tar\.gz

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=2ManDVD
-Exec=2ManDVD
-Icon=/usr/share/pixmaps/mandvd.png
-Terminal=false
-Type=Application
-Categories=AudioVideo;Player;

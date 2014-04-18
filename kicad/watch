@@ -1,4 +1,0 @@
-version=3
-opts="dversionmangle=s/0\.(\d+)(?:\+.*)/$1/,uversionmangle=s/-//g" \
-http://iut-tice.ujf-grenoble.fr/cao/ \
-    (?:.*/)?kicad-([\d-]+)(?:-.*)\.tgz

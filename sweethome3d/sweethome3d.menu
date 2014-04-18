@@ -1,5 +1,0 @@
-?package(sweethome3d):needs="x11" section="Applications/Graphics" \
-	title="Sweet Home 3D" \
-	longtitle="Interior 2D design application with 3D preview" \
-	icon="/usr/share/pixmaps/sweethome3d.xpm" \
-	command="sweethome3d"
