@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 9),
                linux-libc-dev,
                libncurses5-dev,
                libjansson-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://ck.kolivas.org/apps/cgminer/
 
 Package: cgminer
