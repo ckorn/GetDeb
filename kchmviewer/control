@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                kdelibs5-dev,
                libchm-dev,
                libqtwebkit-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://www.kchmviewer.net/
 
 Package: kchmviewer
