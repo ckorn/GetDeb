@@ -1,3 +1,16 @@
+fotoxx (14.04.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Background color changed from black to dark gray.
+    + Translation updates: Spanish, Catalan, Italian.
+    + Fix duplicated use of menu name "Brightness Distribution" which makes 
+      it impossible to assign KB shortcuts or include in Favorites popup.
+    + Fix desktop file to enable Fotoxx for "Open With / Other Application".
+    + Bugfix: after [Save] (new version), the [Prev] button did not open
+      the correct previous file (usually off by one).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Apr 2014 23:18:42 +0200
+
 fotoxx (14.04.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
