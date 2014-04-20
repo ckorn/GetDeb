@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                libdbus-1-dev,
                libdbus-glib-1-dev,
                libpango1.0-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://cxx-gtk-utils.sourceforge.net
 
 Package: libcxx-gtk-utils-2-2.2-0
