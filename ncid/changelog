@@ -1,3 +1,66 @@
+ncid (0.89-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     - Makefile: updated
+     added more warning options in MFLAGS
+     added NCIDUPDATE and NCIDUTIL defines
+     - README: updated
+     - doc/*.md: rewrote for better use in ebook format on small devices
+     NCID-SDK.odt: updated
+     - client/ncid.conf-in: changed WrapLines from "none" to "word"
+     obtained $line from call line highlighted
+     added &&line to REQ: INFO line sent to ncidd
+     added support for all aliases
+     reduced alias menus from 2 to 1
+     rewrote DoList()
+     - gateway/Makefile: added more MFLAGS
+     - man/ncid-kpopup.1: added software packages needed
+     - man/ncidd.8: added the fax mode to hangup
+     - modules/*.sh: updated
+     - modules/*.conf: updated
+     - server/Makefile: added more MFLAGS, NCIDUPDATE, and NCIDUTIL
+     - server/ncidd.c: main()/while(1): added "ttyfd = 0 after close(ttyfd)
+     opentty(): added ttyfd = 0 in open(...
+     changed OPTION to OPTLINE
+     added getINFO() and getField()
+     doPoll(): rewrote MSG: and INFO: if statement sections
+     rewrote if statement for REQ: line
+     misc format changes
+     - server/ncidd.h: changed OPTION to OPTLINE
+     - server/ncidd.c: getINFO(): new for message content INFO
+     - server/ncidd.c: getField(): new for message content INFO
+     - server/nciddalias.c: strmatch(): new, uses wildcards
+     - server/nciddalias.c: userAlias(): calls strmatch() to determine alias
+     - server/nciddalias.c: findAlias(): rewrite
+     - server/nciddhangup.c: doHangup(): modified for FAX auto answer
+     hangupCall(): added FAX autoanswer mode
+     - server/nciddhangup.h: added FAXANS FAXINIT GETOK defines
+     - server/ncidd.alias: updated for the use of '*'
+     - server/ncidd.conf-in: added information on using hangup to act as a
+     FAX
+     - test/aliasfile: added new valid alias with additional characters.
+     - test/test-client.data: added new NOT: line format
+     - test/test-server: made --osx-launchd optional and -D as the default
+     - tools/cidupdate.pl: added a version number to agree with NCID release
+     removed most comments
+     added strmatch()
+     rewrote determining alliases from cidcall.log file
+     add END: line support
+     removed trailing spaces from $to and $value
+     deleted comments
+     - tools/ncidutil.pl: added a version number to agree with NCID release
+     added copyright (C) comment line
+     improved pod documentation
+     fix broken alias modify
+     deleted comments
+     - tools/cidcall.pl: modified to also display PID: and NOT: lines
+     default is to display CID:, HUP, OUT, and PID: lines
+     deleted comments, added copyright lines
+     updated pod
+     - tools/cidalias.pl: deleted comments, added copyright lines
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Apr 2014 23:41:32 +0200
+
 ncid (0.88-1~getdeb1) precise; urgency=low
 
   * New upstream version
