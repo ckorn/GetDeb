@@ -1,3 +1,12 @@
+pac (4.5.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Added the capacity to change "MOSH" protocol SSH port and Server-side
+    UDP port
+    . Minor bug-fixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 22 Apr 2014 20:38:21 +0200
+
 pac (4.5.3.9-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
