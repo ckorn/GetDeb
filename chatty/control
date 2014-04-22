@@ -3,12 +3,12 @@ Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
-               ant1.7,
-               ant1.7-optional,
+               ant,
+               ant-optional,
                openjdk-7-jdk
 Build-Conflicts: openjdk-6-jre-headless,
                  openjdk-6-jre-lib
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://getchatty.sourceforge.net
 
 Package: chatty

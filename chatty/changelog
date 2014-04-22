@@ -1,3 +1,30 @@
+chatty (0.6.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Admin Dialog: Select previously used or favorited stream status
+    (title/game)
+      from the presets dialog for your title changing convenience
+    - Optional new chat version that has no joins/parts but has better
+    channel association for bans/timeouts/subscribers and
+    "xy just subscribed" message
+    - Added /slap command due to S'ome demand
+    - Improved connecting to chat (automatically trying different
+    servers/ports)
+    - Added more shortcuts and stuff
+    - Added option to rejoin currently open channels when connecting
+
+    Changes:
+    - Moved Ignore joins/parts option to settings dialog
+    - Some small improvements
+    - Updated help
+
+    Bugfixes:
+    - Hopefully fixed synchronization error
+    - Fixed error when editing game favorites
+    - Fixed error when no stream title is set
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 21 Apr 2014 22:27:02 +0200
+
 chatty (0.6.1-1~getdeb1) precise; urgency=low
 
   * New upstream version
