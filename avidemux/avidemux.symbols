@@ -365,11 +365,6 @@ libADM_UIGtk.so avidemux #MINVER#
  _ZN7diaElemD0Ev@Base 1:2.5.6
  _ZN7diaElemD1Ev@Base 1:2.5.6
  _ZN7diaElemD2Ev@Base 1:2.5.6
- _ZNSt4pairIKSsiED1Ev@Base 1:2.5.6
- _ZNSt4pairIKSsiED2Ev@Base 1:2.5.6
- _ZNSt4pairISs14ConfigMenuTypeED1Ev@Base 1:2.5.6
- _ZNSt4pairISs14ConfigMenuTypeED2Ev@Base 1:2.5.6
- _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_@Base 1:2.5.6
  _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE16_M_insert_uniqueERKS2_@Base 1:2.5.6
  _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE4findERS1_@Base 1:2.5.6
  _ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E@Base 1:2.5.6

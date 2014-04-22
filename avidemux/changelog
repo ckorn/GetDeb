@@ -1,3 +1,9 @@
+avidemux (1:2.5.6-1~getdeb4~trusty) trusty; urgency=medium
+
+  * Rebuild for trusty.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 22 Apr 2014 20:04:26 +0200
+
 avidemux (1:2.5.6-1~getdeb3~quantal) quantal; urgency=low
 
   * Rebuild against new libx264-123 version.

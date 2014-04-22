@@ -3,7 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Homepage: http://avidemux.org
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9),
  autotools-dev (>= 20100122.1~),
  cmake,
