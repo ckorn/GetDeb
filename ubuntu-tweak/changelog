@@ -1,3 +1,22 @@
+ubuntu-tweak (0.8.7-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     * Overview of Changes:
+     - Add support for Ubuntu 14.04 Trusty Tahr
+     - Add Support for Minimize from Unity Launcher
+     - Add toggle for Nautilus Recursive Search
+
+     * Bugs fixed
+     - Fix the nautilus scripts support for Ubuntu 13.10 and later (Bug
+     #1242379)
+     - Going to workspace adjustement automatically add keyboard shortcut for
+     fade screen (Bug #1240005)
+     - Missing options: fonts, desktop icons,window, file manager (Bug
+     #1250252)
+     - Never crash when sources.list is not parsable (Bug #1246348)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 23 Apr 2014 18:45:13 +0200
+
 ubuntu-tweak (0.8.6-1~getdeb1) precise; urgency=low
 
   * New upstream version
