@@ -9,7 +9,7 @@ Build-Depends-Indep: python-gtk2,
                      intltool,
                      gettext,
                      libexpat1
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 X-Python-Version: >= 2.6
 Homepage: http://soundconverter.org/
 
