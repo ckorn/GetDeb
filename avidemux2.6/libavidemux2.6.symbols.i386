@@ -1418,6 +1418,29 @@ libADM_coreSqlLight3.so libavidemux2.6 #MINVER#
  _ZTI8Database@Base 1:2.6.0
  _ZTS8Database@Base 1:2.6.0
  _ZTV8Database@Base 1:2.6.0
+libADM_coreSubtitle.so libavidemux2.6 #MINVER#
+ _ZN12ADM_subtitle4dumpEv@Base 1:2.6.8
+ _ZN12ADM_subtitle4loadEPKc@Base 1:2.6.8
+ _ZN12ADM_subtitle7srt2ssaEv@Base 1:2.6.8
+ _ZN12ADM_subtitle9saveAsSSAEPKc@Base 1:2.6.8
+ _ZN12ADM_subtitleC1Ev@Base 1:2.6.8
+ _ZN12ADM_subtitleC2Ev@Base 1:2.6.8
+ _ZN12ADM_subtitleD0Ev@Base 1:2.6.8
+ _ZN12ADM_subtitleD1Ev@Base 1:2.6.8
+ _ZN12ADM_subtitleD2Ev@Base 1:2.6.8
+ _ZN7ADM_sub7loadSrtEPKcRSt6vectorI17subtitleTextEntrySaIS3_EE@Base 1:2.6.8
+ _ZN7ADM_sub7srt2ssaER17subtitleTextEntryS1_@Base 1:2.6.8
+ _ZNSt6vectorI17subtitleTextEntrySaIS0_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS0_S2_EERKS0_@Base 1:2.6.8
+ _ZNSt6vectorI17subtitleTextEntrySaIS0_EED1Ev@Base 1:2.6.8
+ _ZNSt6vectorI17subtitleTextEntrySaIS0_EED2Ev@Base 1:2.6.8
+ _ZNSt6vectorI17subtitleTextEntrySaIS0_EEaSERKS2_@Base 1:2.6.8
+ _ZNSt6vectorISsSaISsEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPSsS1_EERKSs@Base 1:2.6.8
+ _ZNSt6vectorISsSaISsEED1Ev@Base 1:2.6.8
+ _ZNSt6vectorISsSaISsEED2Ev@Base 1:2.6.8
+ _ZNSt6vectorISsSaISsEEaSERKS1_@Base 1:2.6.8
+ _ZTI12ADM_subtitle@Base 1:2.6.8
+ _ZTS12ADM_subtitle@Base 1:2.6.8
+ _ZTV12ADM_subtitle@Base 1:2.6.8
 libADM_coreUI6.so libavidemux2.6 #MINVER#
  _Z11GUI_Verbosev@Base 1:2.6.0
  _Z12GUI_Info_HIG13ADM_LOG_LEVELPKcS1_z@Base 1:2.6.0

@@ -1,3 +1,9 @@
+avidemux2.6 (1:2.6.8-1~getdeb3) trusty; urgency=medium
+
+  * Rebuild for trusty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 24 Apr 2014 20:25:28 +0200
+
 avidemux2.6 (1:2.6.8-1~getdeb2~saucy) saucy; urgency=low
 
   * New upstream version
