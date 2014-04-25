@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                scrollkeeper,
                intltool,
                libglib2.0-bin
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://virt-manager.et.redhat.com/
 
 Package: virt-manager
@@ -22,6 +22,7 @@ Depends: ${misc:Depends},
          python-dbus,
          python-urlgrabber,
          python-vte,
+         python-libxml2,
          librsvg2-common,
          python-libvirt (>= 0.7.1),
          python-gtk-vnc (>= 0.3.8),

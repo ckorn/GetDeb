@@ -1,9 +1,9 @@
 === modified file 'virtManager/manager.py'
-Index: virt-manager-0.10.0/virtManager/manager.py
+Index: virt-manager-1.0.1/virtManager/engine.py
 ===================================================================
---- virt-manager-0.10.0.orig/virtManager/manager.py	2013-11-29 23:47:27.586072414 +0100
-+++ virt-manager-0.10.0/virtManager/manager.py	2013-11-29 23:47:27.574072415 +0100
-@@ -726,7 +726,10 @@
+--- virt-manager-1.0.1.orig/virtManager/engine.py	2014-02-28 19:01:44.000000000 +0100
++++ virt-manager-1.0.1/virtManager/engine.py	2014-04-18 16:58:26.988913869 +0200
+@@ -635,7 +635,10 @@
                            "regular user. Try running as root.")
                  show_errmsg = False
              elif re.search(r"libvirt-sock", tb):
@@ -14,4 +14,4 @@ Index: virt-manager-0.10.0/virtManager/manager.py
 +                         (conn.is_qemu_system() and "\n - You are member of the 'libvirtd' group" or ''))
                  show_errmsg = False
  
-         msg = _("Unable to connect to libvirt.")
+         probe_connection = self.conns[conn.get_uri()]["probeConnection"]

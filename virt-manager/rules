@@ -8,5 +8,5 @@ override_dh_auto_clean:
 	rm -rf build
 
 override_dh_auto_configure:
-	dh_auto_configure -- qemu-user=libvirt-qemu preferred-distros=ubuntu kvm-package-names=qemu-system libvirt-package-names=libvirt-bin askpass-package-names=ssh-askpass-gnome
+	dh_auto_configure -- --with-qemu-user=libvirt-qemu --with-preferred-distros=ubuntu --without-tui --with-kvm-packages="qemu-system" --with-libvirt-packages-names="libvirt-bin" --with-askpass-package="ssh-askpass-gnome"
 

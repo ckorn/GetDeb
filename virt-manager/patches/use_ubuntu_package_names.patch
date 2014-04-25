@@ -2,11 +2,11 @@ Description: Suggest installing the packages that are actually available in Ubun
 Author: Marc Deslauriers <marc.deslauriers@ubuntu.com>
 Forwarded: no, Ubuntu-specific
 
-Index: virt-manager-0.10.0/virtManager/engine.py
+Index: virt-manager-1.0.1/virtManager/engine.py
 ===================================================================
---- virt-manager-0.10.0.orig/virtManager/engine.py	2013-11-29 23:48:02.346071380 +0100
-+++ virt-manager-0.10.0/virtManager/engine.py	2013-11-29 23:48:02.342071380 +0100
-@@ -182,7 +182,7 @@
+--- virt-manager-1.0.1.orig/virtManager/engine.py	2014-04-18 16:58:53.580913078 +0200
++++ virt-manager-1.0.1/virtManager/engine.py	2014-04-18 16:58:53.576913079 +0200
+@@ -183,7 +183,7 @@
          # Manager fail message
          msg = _("Could not detect a default hypervisor. Make\n"
                  "sure the appropriate virtualization packages\n"

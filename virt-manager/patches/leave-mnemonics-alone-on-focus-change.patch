@@ -1,0 +1,76 @@
+Description: Fix menu activation under Unity global menu bar
+ virt-manager disables gtk-enable-mnemonics when a running VM window is
+ focused and re-enables it when the focus is lost. So clicking the global menu
+ steals the focus away, changing the gtk-enable-mnemonics setting, which
+ updates the menus (adding back their mnemonics). Since menu updates are done
+ by removing and re-adding the same menu, the old menu is opened but
+ immediately replaced by a new unopened menu...
+ .
+ This patch prevents this from happening under Unity. Instead, we disable
+ mnemonics if there exists any viewer connected, and reset it once all are
+ disconnected.
+Author: William Hua <william.hua@canonical.com>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1291370
+
+Index: virt-manager-1.0.1/virtManager/console.py
+===================================================================
+--- virt-manager-1.0.1.orig/virtManager/console.py	2014-03-22 15:56:43.000000000 +0100
++++ virt-manager-1.0.1/virtManager/console.py	2014-04-20 20:46:13.395635948 +0200
+@@ -49,6 +49,9 @@
+  CONSOLE_PAGE_VIEWER,
+  CONSOLE_PAGE_OFFSET) = range(4)
+ 
++def is_unity():
++    return os.getenv('XDG_CURRENT_DESKTOP') == 'Unity'
++
+ 
+ def has_property(obj, setting):
+     try:
+@@ -830,6 +833,9 @@
+ 
+ 
+ class vmmConsolePages(vmmGObjectUI):
++
++    connected_viewers = 0
++
+     def __init__(self, vm, builder, topwin):
+         vmmGObjectUI.__init__(self, None, None, builder=builder, topwin=topwin)
+ 
+@@ -1059,7 +1065,7 @@
+         self.gtk_settings_accel = settings.get_property('gtk-menu-bar-accel')
+         settings.set_property('gtk-menu-bar-accel', None)
+ 
+-        if has_property(settings, "gtk-enable-mnemonics"):
++        if not is_unity() and has_property(settings, "gtk-enable-mnemonics"):
+             self.gtk_settings_mnemonic = settings.get_property(
+                                                         "gtk-enable-mnemonics")
+             settings.set_property("gtk-enable-mnemonics", False)
+@@ -1072,7 +1078,7 @@
+         settings.set_property('gtk-menu-bar-accel', self.gtk_settings_accel)
+         self.gtk_settings_accel = None
+ 
+-        if self.gtk_settings_mnemonic is not None:
++        if not is_unity() and self.gtk_settings_mnemonic is not None:
+             settings.set_property("gtk-enable-mnemonics",
+                                   self.gtk_settings_mnemonic)
+ 
+@@ -1390,6 +1396,19 @@
+         self.refresh_resizeguest_from_settings()
+ 
+     def _set_viewer_connected(self, val):
++        if is_unity():
++            if self._viewer_connected and not val:
++                vmmConsolePages.connected_viewers -= 1
++                if vmmConsolePages.connected_viewers == 0:
++                    if self.gtk_settings_mnemonic is not None:
++                        gtk.settings_get_default().set_property("gtk-enable-mnemonics", self.gtk_settings_mnemonic)
++            elif not self._viewer_connected and val:
++                if vmmConsolePages.connected_viewers == 0:
++                    settings = gtk.settings_get_default()
++                    if has_property(settings, "gtk-enable-mnemonics"):
++                        self.gtk_settings_mnemonic = settings.get_property("gtk-enable-mnemonics")
++                        settings.set_property("gtk-enable-mnemonics", False)
++                vmmConsolePages.connected_viewers += 1
+         self._viewer_connected = val
+         self.set_allow_fullscreen()
+     def _get_viewer_connected(self):
