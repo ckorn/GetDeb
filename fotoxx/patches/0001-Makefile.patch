@@ -7,10 +7,10 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
-Index: fotoxx-14.03.1/Makefile
+Index: fotoxx-14.05/Makefile
 ===================================================================
---- fotoxx-14.03.1.orig/Makefile	2014-03-04 19:17:02.092819718 +0100
-+++ fotoxx-14.03.1/Makefile	2014-03-04 19:17:41.560819381 +0100
+--- fotoxx-14.05.orig/Makefile	2014-04-30 23:38:01.031346128 +0200
++++ fotoxx-14.05/Makefile	2014-04-30 23:38:39.715345797 +0200
 @@ -14,7 +14,7 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -28,10 +28,10 @@ Index: fotoxx-14.03.1/Makefile
  	rm -f  $(DESTDIR)$(MENUFILE)
  	mkdir -p  $(DESTDIR)$(BINDIR)
  	mkdir -p  $(DESTDIR)$(DATADIR)
-@@ -99,14 +98,12 @@
- 	rm -f fotoxx.1.gz
+@@ -100,14 +99,12 @@
  	# menu (desktop) file
  	cp -f desktop $(DESTDIR)$(MENUFILE)
+ 	chmod +x $(DESTDIR)$(MENUFILE)
 -	xdg-desktop-menu install --novendor $(DESTDIR)$(MENUFILE)
  
  uninstall:

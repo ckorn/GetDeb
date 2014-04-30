@@ -1,3 +1,18 @@
+fotoxx (14.05-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Deprecated GTK functions were updated (Ubuntu >=13.10 is now required).
+    + The Blur function for a large radius (>20) was made 10x faster. 
+    + A new function Color Drawing converts a photo into a color drawing.
+    + The flakey plugins editor was improved and the functionality revised.
+    + A plugin was added to clean-up a white board photo using Image Magic.
+    + Retouch Combo was revised for better control of color changes.
+    + Retouch Combo can load and save its settings from/to a file.
+    + Bugfix: a memory leak in Dark/Bright Pixels was plugged. 
+    + Bugfix: fix desktop file (launcher) for non-English locales.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 30 Apr 2014 23:37:02 +0200
+
 fotoxx (14.04.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
