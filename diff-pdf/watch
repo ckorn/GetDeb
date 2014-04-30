@@ -1,0 +1,3 @@
+version=3
+https://github.com/vslavik/diff-pdf/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz

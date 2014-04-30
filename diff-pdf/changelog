@@ -1,0 +1,5 @@
+diff-pdf (0.2-1~getdeb1) trusty; urgency=low
+
+  * Initial release (LP: #1313227)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 30 Apr 2014 23:39:59 +0200

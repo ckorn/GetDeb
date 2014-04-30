@@ -1,0 +1,34 @@
+Source: diff-pdf
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               wx2.8-headers,
+               libwxgtk2.8-dev,
+               libcairo2-dev,
+               libglib2.0-dev,
+               libpoppler-glib-dev
+Standards-Version: 3.9.5
+Homepage: http://vslavik.github.io/diff-pdf/
+
+Package: diff-pdf
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Simple tool for visually comparing two PDF files
+ diff-pdf is a tool for visually comparing two PDFs.
+ .
+ It takes two PDF files as arguments. By default,
+ its only output is its return code, which is 0 if there
+ are no differences and 1 if the two PDFs differ.
+ If given the --pdf option, diff-pdf produces a PDF file
+ with visually highlighted differences:
+ $ diff-pdf --output-diff=diff.pdf a.pdf b.pdf
+ .
+ Another option is to compare the two files visually in a
+ simple GUI, using the --view argument:
+ $ diff-pdf --view a.pdf b.pdf
+ .
+ This opens a window that lets you view the files' pages,
+ identify their differences and zoom in on the details.
