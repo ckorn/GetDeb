@@ -12,7 +12,7 @@ Build-Depends: debhelper (>= 9),
                libgtksourceview2.0-dev,
                libgtk-3-dev,
                libgtksourceview-3.0-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://code.google.com/p/codeslayer/
 
 Package: codeslayer

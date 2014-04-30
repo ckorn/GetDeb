@@ -112,6 +112,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_menu_bar_projects_get_type@Base 3.0.0
  codeslayer_menu_bar_projects_new@Base 3.0.0
  codeslayer_menu_bar_quit_application@Base 3.0.0
+ codeslayer_menu_bar_recent_document@Base 4.2.0
  codeslayer_menu_bar_regular_expression@Base 4.1.1
  codeslayer_menu_bar_remove_tools_item@Base 3.0.0
  codeslayer_menu_bar_replace@Base 3.0.0
@@ -229,8 +230,10 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_profile_add_document@Base 4.0.0
  codeslayer_profile_add_plugin@Base 4.0.0
  codeslayer_profile_add_project@Base 4.0.0
+ codeslayer_profile_add_recent_document@Base 4.2.0
  codeslayer_profile_contains_plugin@Base 4.0.0
  codeslayer_profile_contains_project@Base 4.0.0
+ codeslayer_profile_contains_recent_document@Base 4.2.0
  codeslayer_profile_get_documents@Base 4.0.0
  codeslayer_profile_get_enable_projects@Base 4.0.0
  codeslayer_profile_get_file_path@Base 4.0.0
@@ -238,20 +241,24 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_profile_get_plugins@Base 4.0.0
  codeslayer_profile_get_project_by_file_path@Base 4.0.0
  codeslayer_profile_get_projects@Base 4.0.0
+ codeslayer_profile_get_recent_documents@Base 4.2.0
  codeslayer_profile_get_registry@Base 4.0.0
  codeslayer_profile_get_type@Base 4.0.0
  codeslayer_profile_new@Base 4.0.0
+ codeslayer_profile_recent_document_changed@Base 4.2.0
  codeslayer_profile_remove_all_documents@Base 4.0.0
  codeslayer_profile_remove_all_projects@Base 4.0.0
  codeslayer_profile_remove_document@Base 4.0.0
  codeslayer_profile_remove_plugin@Base 4.0.0
  codeslayer_profile_remove_project@Base 4.0.0
+ codeslayer_profile_remove_recent_document@Base 4.2.0
  codeslayer_profile_set_documents@Base 4.0.0
  codeslayer_profile_set_enable_projects@Base 4.0.0
  codeslayer_profile_set_file_path@Base 4.0.0
  codeslayer_profile_set_name@Base 4.0.0
  codeslayer_profile_set_plugins@Base 4.0.0
  codeslayer_profile_set_projects@Base 4.0.0
+ codeslayer_profile_set_recent_documents@Base 4.2.0
  codeslayer_profiles_create_profile@Base 4.0.0
  codeslayer_profiles_get_profile_names@Base 4.0.0
  codeslayer_profiles_get_type@Base 4.0.0
