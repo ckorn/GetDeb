@@ -1,3 +1,9 @@
+livestreamer-ui (1.0-1~getdeb4) trusty; urgency=medium
+
+  * Add patch to update by timer.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 01 May 2014 22:14:39 +0200
+
 livestreamer-ui (1.0-1~getdeb3) precise; urgency=low
 
   * Add patch to check with F5.

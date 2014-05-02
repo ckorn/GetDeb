@@ -1,0 +1,25 @@
+# update streams every 5 minutes
+Index: livestreamer-ui-1.0/main.py
+===================================================================
+--- livestreamer-ui-1.0.orig/main.py	2014-05-01 21:33:29.000000000 +0200
++++ livestreamer-ui-1.0/main.py	2014-05-01 22:29:06.715493614 +0200
+@@ -3,7 +3,7 @@
+ import json
+ 
+ from PySide.QtGui import QApplication, QLabel, QPushButton, QLineEdit, QWidget, QTextEdit, QGridLayout, QTableWidget, QTableWidgetItem, QHeaderView, QKeySequence
+-from PySide.QtCore import Qt
++from PySide.QtCore import Qt, QTimer, SIGNAL
+ 
+ 
+ from stream import Stream
+@@ -87,6 +87,10 @@
+         window.resize( 700, 350 )
+         window.show()
+ 
++        timer = QTimer(window)
++        window.connect(timer, SIGNAL("timeout()"), self.check_if_online)
++        timer.start(5*60*1000)
++
+         self.url_ui = url
+         self.quality_ui = quality
+         self.messages_ui = messages
