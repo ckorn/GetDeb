@@ -3,13 +3,13 @@ Thu, 30 Oct 2008 23:19:02 +0100.
 
 It was downloaded from http://sourceforge.net/projects/discwrapper
 
-Upstream Author(s):
+Upstream Author:
 
-    <nmatra@users.sourceforge.net>
+    Nándor Mátravölgyi <nmatra@citromail.hu>
 
 Copyright:
 
-    <nmatra@users.sourceforge.net>
+    Nándor Mátravölgyi <nmatra@citromail.hu>
 
 License:
 
@@ -30,5 +30,5 @@ License:
 On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL'.
 
-The Debian packaging is (C) 2008, Christoph Korn <c_korn@gmx.de> and
+The Debian packaging is Copyright 2008, Christoph Korn <c_korn@gmx.de> and
 is licensed under the GPL, see above.
