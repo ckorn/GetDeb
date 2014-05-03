@@ -70,6 +70,7 @@ Depends: python2.7,
          fonts-liberation,
          libjs-mathjax (>= 2.1+20121028-1),
          calibre-bin (>= ${source:Version}),
+         ${sip:Depends},
          ${misc:Depends}
 Recommends: python-dnspython
 Description: e-book converter and library management
