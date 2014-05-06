@@ -1,3 +1,14 @@
+cgminer (4.3.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Fix typo
+    - Work should be freed when aged, fixing a massive memory leak for bxf
+    devices
+    - miner.php fix single rig summary/config field formatting
+    - miner.php fix single rig total formatting
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 05 May 2014 19:34:39 +0200
+
 cgminer (4.3.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
