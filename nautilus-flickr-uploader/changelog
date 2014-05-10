@@ -1,3 +1,12 @@
+nautilus-flickr-uploader (0.15-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - NEW: Use Flickr API over SSL (requires LWP::Protocol::https).
+    - NEW: Use keep-alive, include content type of the image in the
+    form-data.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 May 2014 16:18:59 +0200
+
 nautilus-flickr-uploader (0.14.2-1~getdeb1) precise; urgency=low
 
   * New upstream version

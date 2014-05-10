@@ -1,14 +1,14 @@
 Fix DESTDIR support.
-Index: nautilus-flickr-uploader-0.14.2/Makefile
+Index: nautilus-flickr-uploader-0.15/Makefile
 ===================================================================
---- nautilus-flickr-uploader-0.14.2.orig/Makefile	2012-06-17 21:50:55.000000000 +0200
-+++ nautilus-flickr-uploader-0.14.2/Makefile	2012-06-19 12:50:30.006153484 +0200
+--- nautilus-flickr-uploader-0.15.orig/Makefile	2014-05-10 16:19:38.983403863 +0200
++++ nautilus-flickr-uploader-0.15/Makefile	2014-05-10 16:19:38.979403863 +0200
 @@ -1,4 +1,4 @@
 -DESTDIR=/usr/local
 +DESTDIR:=`pwd`/debian/nautilus-flickr-uploader/usr
  NAME=nautilus-flickr-uploader
  PERL=`which perl`
- VERSION=0.14.2
+ VERSION=0.15
 @@ -7,11 +7,11 @@
  	echo Try reading INSTALL file
  
