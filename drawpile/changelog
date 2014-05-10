@@ -1,3 +1,14 @@
+drawpile (0.9.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     * Server: support for multiple sessions on a single server
+     * Server: support for systemd socket activation
+     * Server: options can now be loaded from a settings file
+     * Server: persistent session expiration
+     * Clickable URLs in chat messages
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 May 2014 15:59:50 +0200
+
 drawpile (0.8.6-1~getdeb2~trusty) trusty; urgency=low
 
   * Rebuild for trusty
