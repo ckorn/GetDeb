@@ -1,3 +1,62 @@
+remotebox (1.8-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Added option to automatically start chosen guests when the host system
+    boots.
+      This requires some server side configuration before it can be used.
+      Consult
+      the RemoteBox manual for more information.
+    - Added option to set the start delay on an autostarting guest so that
+    guests can be started up in a specific sequence if required.
+    - Added option to set the shutdown type on a guest when the host is
+    shutdown
+    - Added VirtualBox preference to set the location of the autostart
+    database
+    - Snapshot Tree: Moved 'current state' underneath the most recent
+    snapshot in
+      the tree
+    - Added state icons to the snapshot list, which indicate if a snapshot is
+    an online or offline snapshot
+    - Optimized list handling in several places which should improve
+    performance
+      and remember selections on list refreshes where practical.
+    - Added additional information when a storage medium is selected in the
+    VMM
+    - Added additional guest keyboard shortcuts, Ctrl-Alt-(F4, F5, F6, F8,
+    F9, F10, F11)
+    - Added ability to add, remove and edit NAT Networks via the VirtualBox
+      preferences menu item. Port forwarding rules must be configured
+      elsewhere for the moment.
+    - Added option to set the network attachment type in the guest settings
+    to 'NAT Network'. These are named NAT networks which are subtly different
+      to just 'NAT'.
+    - Added option to set the snapshot folder location for a guest
+    - Added OS icons for various editions of MacOS X.
+    - Added support for guest groups. Groups are shown in a tree-fashion
+    which is somewhat visually different to VirtualBox. Setting guest groups
+    is fairly rudimentary at the moment requiring you to enter the group in
+    the form of '/group/subgroup'.
+    - Added 'Expand All Groups' and 'Collapse All Groups' buttons. The last
+    used button is remembered for subsequent refreshes of the guest list
+    - Fixed some Windows guest icons.
+    - Fixed a bug when creating Host-Only networks. An associated virtual
+    DHCP server wasn't getting created which would cause invalid object
+    references and ultimately made the Host-Only network feature useless.
+    - Fixed a bug when entering folders in the remote file chooser that
+    denied permission but the location was still updated. Now also warns
+    that you don't have permission to enter that folder
+    - Fixed a bug where a medium would be masked out in lists if another
+    medium with the same name existed.
+    - Fixed a bug where the Video Memory could get erroneously pegged to 1MB
+    on the first opening on the settings dialog.
+    - Inaccessible guests are now filtered from the list of guests and a
+    warning issued in the message log. RemoteBox has never handled
+    inaccessible guests well and for the most part the cause is generally the
+    user manipulating guests without VirtualBox's knowledge. 
+    - Various GUI tweaks
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 16 May 2014 21:17:34 +0200
+
 remotebox (1.7-1~getdeb1) saucy; urgency=low
 
   * New upstream version

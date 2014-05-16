@@ -1,9 +1,9 @@
 # patch the source to find the installation directory
-Index: remotebox-1.7/remotebox
+Index: remotebox-1.8/remotebox
 ===================================================================
---- remotebox-1.7.orig/remotebox	2014-02-01 00:10:17.932386860 +0100
-+++ remotebox-1.7/remotebox	2014-02-01 00:10:17.924386861 +0100
-@@ -7,13 +7,13 @@
+--- remotebox-1.8.orig/remotebox	2014-05-16 21:19:49.390612646 +0200
++++ remotebox-1.8/remotebox	2014-05-16 21:20:24.582612346 +0200
+@@ -7,12 +7,12 @@
  use POSIX qw(ceil);
  use MIME::Base64;
  # *** PACKAGERS MAY WISH TO PATCH THIS LOCATION ***
@@ -11,7 +11,6 @@ Index: remotebox-1.7/remotebox
 +use lib "/usr/share/remotebox";
  # *************************************************
  use vboxService qw($endpoint $fault :all);
- 
  # *** PACKAGERS MAY WISH TO PATCH THESE LOCATIONS ***
 -our $sharedir = "$Bin/share/remotebox";
 -our $docdir   = "$Bin/docs";
