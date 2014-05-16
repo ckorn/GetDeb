@@ -1,3 +1,42 @@
+chatty (0.6.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    New features:
+    - Popout channels into their own window to be able to view them
+    side-by-side
+    - Added context menu and improved sorting to Channel Favorites dialog
+    - Added check whether window restore position is actually on a screen (if
+    not then open on default position)
+    - Added Highlight prefix to cutomize color for individual highlight items
+      (also added ordering buttons that can be necessary for this feature)
+    - Added navigation buttons with page history to Help window
+    - Added command to manually refresh emoticons (and badges if you rejoin)
+    - Added command to show a list of your subemote codes (better emote
+      integration possibly maybe soon)
+    - Added option to show action messages (/me) colored like in webchat
+
+    Changes:
+    - Commercials hotkey now simulates a click on the 30s button if the
+      Admin Dialog is open on the Commercials tab (so you can also use a
+      delay)
+    - Added more information to the emote context menu (unfortunately you
+    have to right-click on the left side of the emoticon to open it)
+    - Changed default access options to all selected (you can still deselect
+    them if you don't need them and you think it's safer not having them on
+    the token)
+    - Decreased scrolling step a bit
+    - Improved scroll detection for scrolled up timeout
+    - Improved main window title change responsiveness
+    - Some small improvements
+    - Reorganized and updated help
+
+    Bugfixes:
+    - Fixed some possible errors by adding some checks
+    - Fixed bug when adding a usercolor (not correctly enabled Done button)
+    - Fixed bug canceling the list item edit dialog (highlights/logging)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 16 May 2014 21:04:10 +0200
+
 chatty (0.6.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
