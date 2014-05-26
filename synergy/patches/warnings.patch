@@ -1,9 +1,9 @@
 # do not treat warnings as errors. because there are warnings.
-Index: synergy-1.4.17/CMakeLists.txt
+Index: synergy-1.5.0/CMakeLists.txt
 ===================================================================
---- synergy-1.4.17.orig/CMakeLists.txt	2014-04-12 03:03:18.066829139 +0200
-+++ synergy-1.4.17/CMakeLists.txt	2014-04-12 03:47:53.802749543 +0200
-@@ -77,7 +77,7 @@
+--- synergy-1.5.0.orig/CMakeLists.txt	2014-05-25 00:13:49.972372996 +0200
++++ synergy-1.5.0/CMakeLists.txt	2014-05-25 00:13:49.968372996 +0200
+@@ -76,7 +76,7 @@
  
  	# warnings as errors:
  	# we have a problem with people checking in code with warnings.

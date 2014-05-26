@@ -1,3 +1,21 @@
+synergy (1.5.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    1.5.0
+    =====
+    Bug #4060 - Key stuck down on Windows server
+    Bug #4061 - Windows server repeats modifier keys
+
+    1.4.18
+    ======
+    Bug #3980 - Shell extension DLL causes explorer.exe to crash
+    Task #4049 - Correct code style in OSXKeyState compilation unit
+    Task #4050 - Fix subversion issue tracker URL
+    Task #4053 - Improve deb package quality
+    Task #4054 - Improve rpm package quality
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 25 May 2014 00:11:32 +0200
+
 synergy (1.4.17-1~getdeb1) precise; urgency=low
 
   * New upstream version

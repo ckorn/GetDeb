@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 9),
                pkg-config,
                libqt4-dev,
                libcurl4-openssl-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 
 Package: synergy
 Architecture: any
