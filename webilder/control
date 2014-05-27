@@ -2,18 +2,31 @@ Source: webilder
 Section: graphics
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Build-Depends: cdbs (>= 0.4.43), debhelper (>= 5.0.37.2),
- python-gtk2-dev, python-gnome2-dev, libglib2.0-dev,
- python-gnome2-desktop-dev, python, python-support,
- python-distutils-extra, python-setuptools, python-appindicator
+Build-Depends: cdbs (>= 0.4.43),
+               debhelper (>= 9),
+               python-gtk2-dev,
+               python-gnome2-dev,
+               libglib2.0-dev,
+               python-gnome2-desktop-dev,
+               python,
+               python-support,
+               python-distutils-extra,
+               python-setuptools,
+               python-appindicator
 Homepage: http://www.thesamet.com/webilder/
-Standards-Version: 3.9.1
+Standards-Version: 3.9.5
 
 Package: webilder
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-gtk2,
- python-imaging, python-glade2, webilder-gnome (= ${source:Version}),
- python-pkg-resources
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends},
+         python-gtk2,
+         python-imaging,
+         python-glade2,
+         webilder-gnome (= ${source:Version}),
+         python-pkg-resources,
+         python-appindicator
 Description: Complete solution for Webshots users who use Linux
  Webilder enables you to download photos from Webshots website
  into your photo collection. The package includes a GNOME panel
@@ -27,8 +40,11 @@ Description: Complete solution for Webshots users who use Linux
 
 Package: webilder-gnome
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-gnome2,
- webilder (= ${source:Version})
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends},
+         python-gnome2,
+         webilder (= ${source:Version})
 Description: Complete solution for Webshots users who use Linux (GNOME version)
  Webilder enables you to download photos from Webshots website
  into your photo collection. The package includes a GNOME panel
