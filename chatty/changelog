@@ -1,3 +1,38 @@
+chatty (0.6.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    New features:
+    - Added SpeedrunsLive (SRL) race viewer
+    - Added automatic settings file backup (copies settings to the /backup
+    folder when you start Chatty, at most once per day)
+    - Added Livestreamer support (start Livestreamer out of dialog/context
+    menus)
+    - Added feature for unique addressbook categories under some
+    circumstances
+    - Added "Simple Title" setting to have only "Chatty" as title (Extra
+    menu)
+
+    Changes:
+    - Improved debug logging (added append to current file, max file size,
+    rotate
+      between several files when max file size is reached)
+    - Improved scrolling when window is made smaller
+    - Added small delay between joins, automatically rejoin if join failed,
+    added "Joining #channel.." message (which indicates a JOIN was send to
+    the server)
+    - Some smaller improvements
+    - Added commands to open the current settings/working directory
+    - Updated help
+
+    Bugfixes:
+    - Possibly maybe fixed bug with default userlist width, but it can still
+    be a bit finicky
+    - Fixed bug in Channel Favorites dialog when table is empty
+    - Fixed /myemotes command
+    - Fixed bug when joining channel out of popout
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 27 May 2014 20:07:41 +0200
+
 chatty (0.6.3-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
