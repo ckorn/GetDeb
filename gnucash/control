@@ -3,7 +3,7 @@ Section: gnome
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Dmitry Smirnov <onlyjob@debian.org>
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9),
                intltool,
                pkg-config,

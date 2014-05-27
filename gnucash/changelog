@@ -1,3 +1,9 @@
+gnucash (1:2.6.3-1~getdeb4~trusty) trusty; urgency=medium
+
+  * Fix crash on exit.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 27 May 2014 20:01:50 +0200
+
 gnucash (1:2.6.3-1~getdeb3~saucy) saucy; urgency=low
 
   * New upstream version
