@@ -3,11 +3,11 @@
 # do not rearrange the dirs. the install files handle it.
 # do not use hg for copying files. we may include too many files here though.
 # try not to copy the debian dir. excluding it does not seem to work.
-Index: makehuman-1.0.0/buildscripts/build_prepare.py
+Index: makehuman-1.0.1/buildscripts/build_prepare.py
 ===================================================================
---- makehuman-1.0.0.orig/buildscripts/build_prepare.py	2014-03-10 10:31:36.000000000 +0100
-+++ makehuman-1.0.0/buildscripts/build_prepare.py	2014-03-22 03:16:54.992044831 +0100
-@@ -30,7 +30,7 @@
+--- makehuman-1.0.1.orig/buildscripts/build_prepare.py	2014-05-29 18:25:01.470412309 +0200
++++ makehuman-1.0.1/buildscripts/build_prepare.py	2014-05-29 18:25:01.466412310 +0200
+@@ -45,7 +45,7 @@
  HG_PATH = "hg"
  
  # Filter of files from source folder to exclude (glob syntax)
@@ -16,7 +16,7 @@ Index: makehuman-1.0.0/buildscripts/build_prepare.py
  # Same as above, but applies to release mode only
  EXCLUDES_RELEASE = ['testsuite']
  
-@@ -148,10 +148,10 @@
+@@ -163,10 +163,10 @@
  
      def export(self):
          # Sanity checks
@@ -30,7 +30,7 @@ Index: makehuman-1.0.0/buildscripts/build_prepare.py
          if os.path.exists(self.targetFile()):
              raise RuntimeError("An export folder called %s already exists" % self.targetFile())
          if not os.path.exists(self.sourceFile()):
-@@ -248,14 +248,14 @@
+@@ -263,14 +263,14 @@
              print '\n'
  
          # Re-arrange folders
@@ -53,7 +53,7 @@ Index: makehuman-1.0.0/buildscripts/build_prepare.py
          '''
          # Move all contents of new root folder into dist root (overwrite if needed)
          _fixOnFinish = []
-@@ -350,14 +350,16 @@
+@@ -370,14 +370,16 @@
  
      def exportHGFiles(self):
          print "Exporting files from hg repo (hg archive)"
@@ -77,7 +77,7 @@ Index: makehuman-1.0.0/buildscripts/build_prepare.py
  
          # Because the --excludes option does not appear to be working all too well (at least not with wildcards):
          # Gather files
-@@ -382,6 +384,7 @@
+@@ -402,6 +404,7 @@
  
          # Copy them
          for f in files:
