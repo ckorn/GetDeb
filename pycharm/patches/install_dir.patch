@@ -1,10 +1,10 @@
 # set the install directory directly
 # looking it up does not work. probably because of the symlinks.
-Index: pycharm-3.1.1/bin/pycharm.sh
+Index: pycharm-3.4/bin/pycharm.sh
 ===================================================================
---- pycharm-3.1.1.orig/bin/pycharm.sh	2014-02-14 05:39:05.000000000 +0100
-+++ pycharm-3.1.1/bin/pycharm.sh	2014-03-07 20:50:32.811117204 +0100
-@@ -111,8 +111,11 @@
+--- pycharm-3.4.orig/bin/pycharm.sh	2014-06-04 20:13:45.788660893 +0200
++++ pycharm-3.4/bin/pycharm.sh	2014-06-04 20:13:45.780664892 +0200
+@@ -118,8 +118,11 @@
    done
  fi
  
