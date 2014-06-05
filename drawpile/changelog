@@ -1,3 +1,18 @@
+drawpile (0.9.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     * SSL support
+     * Bugfix: Layer access control menu would lose per-user bits when
+     locking a layer
+     * Improved palette widget
+     * Added shortcut for showing and hiding the chat box
+     * Memory usage fix (undo savepoints are now correctly released)
+     * New color widgets
+     * Moved foreground/background color selector to the tool settings dock
+     * Added tool slots
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 05 Jun 2014 18:23:35 +0200
+
 drawpile (0.9.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
