@@ -1,3 +1,32 @@
+fotoxx (14.06.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Bugfix: The gallery page could crash if the thumbnail size was minimized
+     to zero.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Fri, 06 Jun 2014 22:50:52 +0200
+
+fotoxx (14.06-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + The Window "tabs" paradigm was revised to improve space utilization.
+    + The user guide has many minor revisions to reflect this change. 
+    + A custom convolution kernel can be edited and applied to an image. 
+    + These can also be saved to a file for later re-use. 
+    + Make thumbnails automatically for RAW files lacking embedded thumbnails.
+    + Panorama: images can be moved and warped with the mouse to fix residual
+     alignment offsets (parallax, horizon shift, others).
+    + Fix Perspective: move corner markers in 1-pixel steps with the KB arrow
+     keys.
+    + Trim/Rotate: move trim rectangle in 1-pixel steps with the KB arrow keys.
+    + Batch Convert has new controls to sharpen output images.
+    + Batch Convert RAW has new controls to resize and sharpen output images.
+    + Mashup can more easily adjust image overlaps and transparencies.
+    + Behave more nicely when running out of disk space.
+    + 3 minor bug fixes and a few other minor improvements.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Thu, 05 Jun 2014 20:15:11 +0200
+
 fotoxx (14.05.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
