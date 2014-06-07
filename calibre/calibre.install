@@ -7,6 +7,7 @@ usr/lib/calibre/html5lib
 usr/lib/calibre/qtcurve
 usr/lib/calibre/six.py
 usr/lib/calibre/regex
+usr/lib/calibre/tinycss
 usr/share/
 ../local/*.desktop usr/share/applications
 ../local/mime/*.xml usr/share/mime/packages/
