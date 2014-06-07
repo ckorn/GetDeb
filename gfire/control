@@ -1,0 +1,26 @@
+Source: gfire
+Section: net
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+XSBC-Original-Maintainer: Jacob Peddicord <jpeddicord@ubuntu.com>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               pidgin-dev,
+               libnotify-dev,
+               libdbus-glib-1-dev
+Standards-Version: 3.9.5
+Homepage: http://gfireproject.org/
+
+Package: gfire
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         pidgin (>= 1:2.5.0)
+Description: xfire plugin for pidgin
+ Gfire is an open source plugin for the Pidgin IM client which allows you
+ to connect to the Xfire network. It features full friend list support,
+ including game and server statuses, group chat, and profiles.
+ .
+ Xfire is a network that allows gamers to talk to each other while playing
+ a game. It keeps track of games you open and synchronizes your status online,
+ and allows you to join friends' games with a few clicks of the mouse.

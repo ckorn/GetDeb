@@ -1,0 +1,39 @@
+# fix autoreconf warnings
+# http://www.gnu.org/software/automake/manual/automake.html#Modernize-AM_005fINIT_005fAUTOMAKE-invocation
+# http://www.gnu.org/software/automake/manual/automake.html#Program-Variables
+Index: gfire-0.9.6/configure.ac
+===================================================================
+--- gfire-0.9.6.orig/configure.ac	2014-06-04 22:08:20.000000000 +0200
++++ gfire-0.9.6/configure.ac	2014-06-07 15:38:21.137826858 +0200
+@@ -16,7 +16,7 @@
+ AC_CONFIG_SRCDIR([src/gfire.c])
+ 
+ 
+-AM_INIT_AUTOMAKE([gfire], [gfire_version], "")
++AM_INIT_AUTOMAKE
+ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+ 
+ AC_PATH_PROG(sedpath, sed)
+Index: gfire-0.9.6/src/Makefile.am
+===================================================================
+--- gfire-0.9.6.orig/src/Makefile.am	2014-06-04 22:08:20.000000000 +0200
++++ gfire-0.9.6/src/Makefile.am	2014-06-07 15:29:24.173842831 +0200
+@@ -36,9 +36,6 @@
+ 	gf_preferences_proto.h \
+ 	Makefile.mingw
+ 
+-INCLUDES = \
+-	-I$(top_srcdir) \
+-    -DLOCALEDIR=\""$(localedir)"\"
+ 
+ plugindir = $(libdir)/purple-2
+ libxfire_la_LDFLAGS = -module -avoid-version
+@@ -105,6 +102,8 @@
+ endif
+ 
+ AM_CPPFLAGS = \
++	-I$(top_srcdir) \
++    -DLOCALEDIR=\""$(localedir)"\" \
+ 	-DLIBDIR=\"$(libdir)/purple-2/\" \
+ 	-DDATADIR=\"$(datadir)\" \
+ 	$(GLIB_CFLAGS) \

@@ -1,0 +1,55 @@
+gfire (0.9.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    0.9.6:
+    - Fix update notification bug
+    - Make update notifications optional within Pidgin
+
+    0.9.5:
+    - Many fixes on game detection (detection issues, memleak, ...)
+    - Compilation and build fixes by LookTJ, svenstaro and cookiekiller from
+    Github
+    - Fix for API changes by libpurple >=2.10.8
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 07 Jun 2014 15:12:30 +0200
+
+gfire (0.9.4-0ubuntu2) quantal; urgency=low
+
+  * debian/patches/only_include_glib.h:
+    Only include <glib.h> instead of individual header files (fixes FTBFS).
+
+ -- Michael Bienia <geser@ubuntu.com>  Thu, 27 Sep 2012 14:36:54 +0200
+
+gfire (0.9.4-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release. (LP: #845552, LP: #852607)
+    - drop unneeded configure* patches
+  * remove la file
+  * use dh-autoreconf to regenerate autofoo files 
+  * debian/watch: search for bz2 tarball
+  * update to standard 3.9.2, no further changes required
+  * change to source format 3.0 (quilt)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 18 Sep 2011 16:19:16 +0200
+
+gfire (0.8.3-0ubuntu2) oneiric; urgency=low
+
+  * configure.ac, configure:
+    - do not use -DG_DISABLE_DEPRECATED because libpurple/utils.h
+      uses G_CONST_RETURN which is deprecated (LP: #770888)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 15 Sep 2011 10:46:12 +0200
+
+gfire (0.8.3-0ubuntu1) karmic; urgency=low
+
+  * New upstream release, fixes connection issues (LP: #415834)
+  * debian/control: bumped Standards-Version.
+  * debian/watch: updated.
+
+ -- Jacob Peddicord <jpeddicord@ubuntu.com>  Wed, 19 Aug 2009 15:00:17 -0400
+
+gfire (0.8.2-0ubuntu1) karmic; urgency=low
+
+  * Initial release (LP: #108686)
+
+ -- Jacob Peddicord <jpeddicord@ubuntu.com>  Sat, 25 Jul 2009 18:03:46 -0400

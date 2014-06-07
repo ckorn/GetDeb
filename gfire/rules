@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with autoreconf
+
+override_dh_autoreconf:
+	echo 0 > REV
+	dh_autoreconf
+	intltoolize --copy --force --automake
+
+override_dh_auto_configure:
+	dh_auto_configure -- --libdir=/usr/lib --enable-libnotify --enable-dbus-status
+
+override_dh_install:
+	dh_install
+	find $(CURDIR) -name "*.la" -delete

@@ -1,0 +1,42 @@
+This package was debianized by Jacob Peddicord <jpeddicord@ubuntu.com> on
+Tue, 12 May 2009 20:15:00 -0400.
+
+It was downloaded from <http://gfireproject.org/>
+
+Upstream Authors:
+
+    Wolf Beat <asraniel@fryx.ch>
+    Keith Geffert <keith@penguingurus.com>
+    Laurent De Marez <laurentdemarez@gmail.com>
+    Warren Dumortier <nwarrenfl@gmail.com>
+
+Copyright:
+
+    Copyright (C) 2000-2001, 2006-2009 Beat Wolf <asraniel@fryx.ch>
+    Copyright (C) 2006-2009 Keith Geffert <keith@penguingurus.com>
+    Copyright (C) 2006-2009 Laurent De Marez <laurentdemarez@gmail.com>
+    Copyright (C) 2006-2009 Warren Dumortier
+
+License:
+
+    Gfire is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Gfire.  If not, see <http://www.gnu.org/licenses/>.
+
+On Debian GNU/Linux systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-3'.
+
+The Debian packaging is:
+
+    Copyright (C) 2009 Jacob Peddicord <jpeddicord@ubuntu.com>
+
+and is licensed under the GPL version 3, 
+see `/usr/share/common-licenses/GPL-3'.
