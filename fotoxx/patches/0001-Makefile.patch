@@ -7,8 +7,10 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
---- a/Makefile
-+++ b/Makefile
+Index: fotoxx-14.06.1/Makefile
+===================================================================
+--- fotoxx-14.06.1.orig/Makefile	2014-06-06 12:40:42.000000000 +0200
++++ fotoxx-14.06.1/Makefile	2014-06-07 23:41:25.428964652 +0200
 @@ -14,7 +14,7 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -26,7 +28,15 @@ Subject: [PATCH] Makefile
  	rm -f  $(DESTDIR)$(MENUFILE)
  	mkdir -p  $(DESTDIR)$(BINDIR)
  	mkdir -p  $(DESTDIR)$(DATADIR)
-@@ -102,14 +101,12 @@
+@@ -87,6 +86,7 @@
+ 	mkdir -p  $(DESTDIR)$(DOCDIR)
+ 	mkdir -p  $(DESTDIR)$(MANDIR)
+ 	mkdir -p  $(DESTDIR)$(PREFIX)/share/applications
++	mkdir -p $(DESTDIR)/$(APPDATADIR)
+ 	cp -f  fotoxx $(DESTDIR)$(BINDIR)
+ 	cp -f -R  data/* $(DESTDIR)$(DATADIR)
+ 	cp -f -R  icons/* $(DESTDIR)$(ICONDIR)
+@@ -102,14 +102,12 @@
  	# menu (desktop) file
  	cp -f desktop $(DESTDIR)$(MENUFILE)
  	# chmod +x $(DESTDIR)$(MENUFILE)
