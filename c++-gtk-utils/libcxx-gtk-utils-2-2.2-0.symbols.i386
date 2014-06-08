@@ -39,7 +39,6 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu14MainWidgetBaseD2Ev@Base 2.1.0
  _ZN3Cgu14MainWidgetBaseaSEOS0_@Base 2.2.2
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEE19tracking_disconnectERKNS_8Callback14SafeFunctorArgIIS1_S2_EEE@Base 2.1.0
- _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEE7connectERKNS_8Callback14SafeFunctorArgIIS1_S2_EEE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEE7connectERKNS_8Callback14SafeFunctorArgIIS1_S2_EEERNS_8ReleaserE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEED1Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgII12GIOConditionRbEED2Ev@Base 2.1.0
@@ -50,12 +49,10 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu14SafeEmitterArgIIEED1Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIIEED2Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIIRbEE19tracking_disconnectERKNS_8Callback14SafeFunctorArgIIS1_EEE@Base 2.1.0
- _ZN3Cgu14SafeEmitterArgIIRbEE7connectERKNS_8Callback14SafeFunctorArgIIS1_EEE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIIRbEE7connectERKNS_8Callback14SafeFunctorArgIIS1_EEERNS_8ReleaserE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIIRbEED1Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIIRbEED2Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJ12GIOConditionRbEE19tracking_disconnectERKNS_8Callback14SafeFunctorArgIJS1_S2_EEE@Base 2.1.0
- _ZN3Cgu14SafeEmitterArgIJ12GIOConditionRbEE7connectERKNS_8Callback14SafeFunctorArgIJS1_S2_EEE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJ12GIOConditionRbEE7connectERKNS_8Callback14SafeFunctorArgIJS1_S2_EEERNS_8ReleaserE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJ12GIOConditionRbEED1Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJ12GIOConditionRbEED2Ev@Base 2.1.0
@@ -66,7 +63,6 @@ libcxx-gtk-utils-2-2.2.so.0 libcxx-gtk-utils-2-2.2-0 #MINVER#
  _ZN3Cgu14SafeEmitterArgIJEED1Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJEED2Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJRbEE19tracking_disconnectERKNS_8Callback14SafeFunctorArgIJS1_EEE@Base 2.1.0
- _ZN3Cgu14SafeEmitterArgIJRbEE7connectERKNS_8Callback14SafeFunctorArgIJS1_EEE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJRbEE7connectERKNS_8Callback14SafeFunctorArgIJS1_EEERNS_8ReleaserE@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJRbEED1Ev@Base 2.1.0
  _ZN3Cgu14SafeEmitterArgIJRbEED2Ev@Base 2.1.0
