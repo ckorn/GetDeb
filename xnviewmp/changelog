@@ -1,3 +1,199 @@
+xnviewmp (0.68-1~getdeb2) trusty; urgency=medium
+
+  * New upstream version
+    - Fix release
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 08 Jun 2014 16:13:52 +0200
+
+xnviewmp (0.68-1~getdeb1) precise; urgency=medium
+
+  * New upstream version
+    - 337: [Bugs] Export BW settings -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29861
+    - 348: [Requests] SaveAs last format used -
+    http://newsgroup.xnview.com/viewtopic.php?p=29877
+    - 342: [Bugs] Apply category rotate thumbnail -
+    http://newsgroup.xnview.com/viewtopic.php?p=118950
+    - 341: [Requests] Temperature adjust in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29742
+    - 339: [Bugs] Save as folder in view mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29769
+    - 337: [Bugs] Change timestamp & update values -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29719
+    - 336: [Bugs] Change timestamp & no exif -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29755
+    - 335: [Bugs] IPTC in TIFF -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29704&p=118806
+    - 334: [Requests] Larger preview on rename dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29676
+    - 332: [Requests] sqlite 3.8.4.2
+    - 327: [Bugs] Webp with quality=98
+    - 326: [Bugs] Selection & fullscreen on second monitor
+    - 306: [Bugs] IPTC country code -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29591
+    - 286: [Bugs] Close button -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28468
+    - 324: [Bugs] // in pathname -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29603
+    - 323: [Bugs] Create EXIF date -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29049
+    - 322: [Bugs] NEF files leaks in view mode when quickly use previous/next
+    file
+    - 281: [Bugs] Left/right key automatic mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29506
+    - 314: [Bugs] Message when folder doesn't exists -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29636
+    - 313: [Requests] Most used format -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29620
+    - 318: [Bugs] Command line with "" -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29661
+    - 289: [Bugs] Maximize state after fullscreen view -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29530
+    - 207: [Bugs] IPTC Dialog show again -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29221
+    - 201: [Bugs] Square selection bug -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29112
+    - 317: [Bugs] 'Rebuild thumbnails' and empty list -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29653
+    - 292: [Bugs] First file selected -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29545
+    - 295: [Bugs] Toolbar position -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29555
+    - 304: [Bugs] ESC & gif viewing -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29581
+    - 305: [Bugs] Sorting & russian -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29594
+    - 307: [Bugs] GPS open -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29599
+    - 308: [Bugs] Ctrl+O missing -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29577
+    - 258: [Bugs] Move to and selection -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29401
+    - 208: [Bugs] Backspace for prev file -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28387
+    - 205: [Bugs] Enter & focus -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29218
+    - 310: [Bugs] libpng vulnerability -
+    http://newsgroup.xnview.com/viewtopic.php?f=36&t=29597
+    - 302: [Bugs] Annotation not visible in filter mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=83&t=29571
+    - 301: [Requests] InDesign thumbnail -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29491
+    - 129: [Requests] Support Drag & Drop in Folders Tree
+    - 130: [Requests] Support Drag & Drop from Folders Tree to Thumbs pane -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28297
+    - 077: [Bugs] Gamma resizing -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=25167
+    - 105: [Bugs] Empty Folders left after Move operations -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28450
+    - 300: [Bugs] Enter in detail view -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29559
+    - 290: [Bugs] File not loaded after drag&drop -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29536
+    - 226: [Requests] Smaller similar dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29085
+    - 279: [Bugs] ICC convert -
+    http://newsgroup.xnview.com/viewtopic.php?f=79&t=29480
+    - 263: [Requests] Command line parameter -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29392
+    - 298: [Bugs] Keep Date/time -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29237
+    - 277: [Bugs] bad Properties window after delete image file -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29265
+    - 247: [Requests] Layout command -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=29372&p=117150
+    - 296: [Bugs] Search dialog - no delete
+    - 294: [Bugs] Translate problem -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29548
+    - 272: [Bugs] Send Mail & codepage -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29396
+    - 274: [Requests] RegExp in Batch rename>Replace
+    - 275: [Requests] Rotate in toolbar -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29468
+    - 253: [Requests] Webp 0.4
+    - 249: [Requests] exiftool update -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29378
+    - 273: [Bugs] Add text -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29440
+    - 291: [Bugs] Multi page tiff print crash
+    - 238: [Bugs] No rating-label in fullscreen -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29291
+    - 252: [Bugs] Tooltips on tree items -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=29354&p=117205
+    - 257: [Bugs] Clear missing -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28424
+    - 211: [Bugs] Rename file -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28458
+    - 200: [Bugs] Quit compare tab -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29206
+    - 019: [Bugs] Selection Left/Right + Shift -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=28461
+    - 241: [Bugs] Border line -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29203
+    - 192: [Bugs] Tabs GUI problems -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29201
+    - 191: [Requests] Relative canvas resize -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29188&p=116368
+    - 189: [Bugs] Delete tagged files -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29161
+    - 188: [Bugs] Round error -
+    http://newsgroup.xnview.com/viewtopic.php?f=79&t=29167
+    - 264: [Bugs] Icon clickable area -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29412
+    - 271: [Bugs] * on unsaved -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29438
+    - 218: [Bugs] Sort by ISO -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29231
+    - 285: [Bugs] EXIF orient after save -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29496
+    - 284: [Bugs] Text color of info box (dark theme) -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29505
+    - 091: [Requests] Create multipage
+    - 270: [Bugs] Convert into -
+    http://newsgroup.xnview.com/viewtopic.php?f=82&t=29442
+    - 269: [Bugs] Rating with decimal -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29358
+    - 255: [Bugs] Export>JpegXR
+    - 254: [Bugs] Dock panel not restored if tab view closed
+    - 250: [Bugs] XCF compose
+    - 248: [Requests] Thumbnails DB location -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29287
+    - 223: [Requests] Watermark last folder -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29301
+    - 246: [Requests] Rename dialog -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29307
+    - 245: [Bugs] Move & create folder cancelled -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29281
+    - 244: [Bugs] Rename & click outside -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29254
+    - 243: [Bugs] Move files -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29284
+    - 234: [Bugs] Batch convert - Re-create folder structure
+    - 233: [Bugs] Batch convert {Folder name}
+    - 232: [Requests] Auto Correct -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29193
+    - 081: [Requests] Auto complete to search categories -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=28375
+    - 231: [Requests] Category Sets -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=27999
+    - 230: [Bugs] Median box filter -
+    http://newsgroup.xnview.com/viewtopic.php?f=36&t=29352
+    - 228: [Bugs] EXIF comment in thumbnail labels
+    - 227: [Bugs] Convert Zoom -
+    http://newsgroup.xnview.com/viewtopic.php?f=79&t=29327
+    - 222: [Bugs] Hasselblad files
+    - 203: [Bugs] Switching mode -
+    http://newsgroup.xnview.com/viewtopic.php?f=60&t=29207
+    - 220: [Bugs] Resize -
+    http://newsgroup.xnview.com/viewtopic.php?f=79&t=29272
+    - 215: [Bugs] Wildcard in search -
+    http://newsgroup.xnview.com/viewtopic.php?p=116610
+    - 214: [Bugs] Fullscreen settings -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29259
+    - 204: [Bugs] Customize toolbar -
+    http://newsgroup.xnview.com/viewtopic.php?f=62&t=29222&p=116460
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 08 Jun 2014 14:13:52 +0200
+
 xnviewmp (0.64-1~getdeb2) precise; urgency=low
 
   * Fix debian/watch file
