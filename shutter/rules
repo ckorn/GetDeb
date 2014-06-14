@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/$(shell dh_listpackages)/usr/share/perl5/
+	mv debian/$(shell dh_listpackages)/usr/share/shutter/resources/modules/Shutter debian/$(shell dh_listpackages)/usr/share/perl5/
+	rm -fr debian/$(shell dh_listpackages)/usr/share/shutter/resources/modules/
+	# wrong size
+	rm -r debian/$(shell dh_listpackages)/usr/share/icons/hicolor/24x24
+
+%:
+	dh $@
