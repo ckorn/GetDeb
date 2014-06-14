@@ -1,0 +1,5 @@
+wadoku-notify (0.0.1+git110128-1~getdeb1) trusty; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Jun 2014 15:39:13 +0200

@@ -1,0 +1,14 @@
+# just a small typo
+Index: wadoku-notify-0.0.1+git110128/src-linux/clipboard.vala
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/src-linux/clipboard.vala	2014-06-14 15:48:12.032746791 +0200
++++ wadoku-notify-0.0.1+git110128/src-linux/clipboard.vala	2014-06-14 18:37:49.280444045 +0200
+@@ -84,7 +84,7 @@
+ 			memory_mode = true;
+ 		}
+ 		else {
+-			GLib.stdout.printf("Usage:\n -gtk\tadd this for gtk notify window output instead of standart libnotify\n -memory-cache cache whole databae into memory (needs ca 80MB ram), mitght be faster for very slow harddrive\n");
++			GLib.stdout.printf("Usage:\n -gtk\tadd this for gtk notify window output instead of standard libnotify\n -memory-cache cache whole databae into memory (needs ca 80MB ram), mitght be faster for very slow harddrive\n");
+ 			return 0;
+ 		}
+ 

@@ -1,0 +1,14 @@
+# do not use the gtk version. notify looks quite nice.
+Index: wadoku-notify-0.0.1+git110128/data/wadoku-notify.desktop
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/data/wadoku-notify.desktop	2014-06-14 18:03:15.188505744 +0200
++++ wadoku-notify-0.0.1+git110128/data/wadoku-notify.desktop	2014-06-14 18:34:42.156449611 +0200
+@@ -3,7 +3,7 @@
+ Comment=wadoku translator
+ Type=Application
+ Name=wadoku-notify
+-Exec=wadoku-notify -gtk
++Exec=wadoku-notify
+ Icon=wadoku-notify
+ StartupNotify=true
+ Terminal=false

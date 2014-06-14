@@ -1,0 +1,41 @@
+# put executable in /usr/lib
+# fix desktop file
+Index: wadoku-notify-0.0.1+git110128/Makefile
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/Makefile	2014-06-14 16:08:56.868709761 +0200
++++ wadoku-notify-0.0.1+git110128/Makefile	2014-06-14 18:17:50.232479713 +0200
+@@ -52,12 +52,15 @@
+ 	ln -sf /opt/wadoku-notify/wadoku.png ${DESTDIR}/usr/share/pixmaps/wadoku-notify.png
+ else
+ 	mkdir -p ${DESTDIR}/usr/share/wadoku-notify
++	mkdir -p ${DESTDIR}/usr/lib/wadoku-notify
+ 	mkdir -p ${DESTDIR}/usr/share/applications
+-	cp bin/wadoku-notify ${DESTDIR}/usr/share/wadoku-notify/
++	cp bin/wadoku-notify ${DESTDIR}/usr/lib/wadoku-notify/
+ 	cp bin/wadoku.png ${DESTDIR}/usr/share/wadoku-notify/
+ 	cp data/wadoku.sqlite3 ${DESTDIR}/usr/share/wadoku-notify/
+ 	cp data/wadoku-notify.desktop ${DESTDIR}/usr/share/applications/
+-	ln -sf /usr/share/wadoku-notify/wadoku-notify ${DESTDIR}/usr/bin/wadoku-notify
++	ln -sf /usr/share/wadoku-notify/wadoku.sqlite3 ${DESTDIR}/usr/lib/wadoku-notify/wadoku.sqlite3
++	ln -sf /usr/share/wadoku-notify/wadoku.png ${DESTDIR}/usr/lib/wadoku-notify/wadoku.png
++	ln -sf /usr/lib/wadoku-notify/wadoku-notify ${DESTDIR}/usr/bin/wadoku-notify
+ 	ln -sf /usr/share/wadoku-notify/wadoku.png ${DESTDIR}/usr/share/pixmaps/wadoku-notify.png
+ endif
+ 
+Index: wadoku-notify-0.0.1+git110128/data/wadoku-notify.desktop
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/data/wadoku-notify.desktop	2011-01-28 22:34:12.000000000 +0100
++++ wadoku-notify-0.0.1+git110128/data/wadoku-notify.desktop	2014-06-14 18:03:15.188505744 +0200
+@@ -1,6 +1,4 @@
+-#!/usr/bin/env xdg-open
+ [Desktop Entry]
+-Encoding=UTF-8
+ Version=1.0
+ Comment=wadoku translator
+ Type=Application
+@@ -9,5 +7,4 @@
+ Icon=wadoku-notify
+ StartupNotify=true
+ Terminal=false
+-Type=Application
+ Categories=GNOME;Application;Utility;

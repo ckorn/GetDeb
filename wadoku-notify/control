@@ -1,0 +1,37 @@
+Source: wadoku-notify
+Section: misc
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               valabind,
+               valac,
+               libgtk2.0-dev,
+               libnotify-dev,
+               libsqlite3-dev,
+               pkg-config
+Standards-Version: 3.9.5
+Homepage: http://www.boscowitch.de/projects/wadoku-notify
+
+Package: wadoku-notify
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         wadoku-notify-data (= ${source:Version})
+Description: German-Japanese dictionary lookup tool
+ wadoku-notify is an automatic German-Japanese dictionary
+ lookup tool. It is open source licensed (GPLv3) and free
+ of charge.
+ .
+ The dictionary database content is from www.wadoku.de.
+
+Package: wadoku-notify-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: German-Japanese dictionary lookup tool (data package)
+ wadoku-notify is an automatic German-Japanese dictionary
+ lookup tool. It is open source licensed (GPLv3) and free
+ of charge.
+ .
+ The dictionary database content is from www.wadoku.de.
+ .
+ (This package contains the data files).

@@ -1,0 +1,48 @@
+# fix compilation errors
+Index: wadoku-notify-0.0.1+git110128/src-linux/clipboard.vala
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/src-linux/clipboard.vala	2011-01-28 22:34:12.000000000 +0100
++++ wadoku-notify-0.0.1+git110128/src-linux/clipboard.vala	2014-06-14 15:48:12.032746791 +0200
+@@ -78,7 +78,7 @@
+ 			Gdk.Color.parse("white",out fg_color);
+ 			label.modify_fg(StateType.NORMAL,fg_color);
+ 			window.add(label);
+-			Timer = Timeout.add(5500,HideTimer);
++			Timer = GLib.Timeout.add(5500,HideTimer);
+ 		}
+ 		else if (args[i] == "-memory-cache") {
+ 			memory_mode = true;
+Index: wadoku-notify-0.0.1+git110128/src-linux/notify-libnotify.vala
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/src-linux/notify-libnotify.vala	2011-01-28 22:34:12.000000000 +0100
++++ wadoku-notify-0.0.1+git110128/src-linux/notify-libnotify.vala	2014-06-14 15:52:39.592738832 +0200
+@@ -33,14 +33,14 @@
+ 		window.show_all();
+ 		
+ 		Source.remove(Timer);
+-		Timer = Timeout.add(5500,HideTimer);
++		Timer = GLib.Timeout.add(5500,HideTimer);
+ 		return;
+ 	}
+ 
+ 	if(not!=null)
+         	not.update((string)ctitle, (string)ctext, "%s/wadoku.png".printf(workingPath) );
+     	else
+-		not = new Notification((string)ctitle, (string)ctext, "%s/wadoku.png".printf(workingPath), null);
++		not = new Notification((string)ctitle, (string)ctext, "%s/wadoku.png".printf(workingPath));
+ 
+ 	not.set_timeout(5500);
+ 	not.set_urgency(Notify.Urgency.CRITICAL);
+Index: wadoku-notify-0.0.1+git110128/Makefile
+===================================================================
+--- wadoku-notify-0.0.1+git110128.orig/Makefile	2011-01-28 22:34:12.000000000 +0100
++++ wadoku-notify-0.0.1+git110128/Makefile	2014-06-14 16:08:56.868709761 +0200
+@@ -18,7 +18,7 @@
+ ifneq ($(N900_MODE),)
+ 	valac -o bin/wadoku-notify src-linux/clipboard.vala src/db.c src/sqlite3.c src-linux/notify-libnotify.vala --pkg libnotify --pkg gtk+-2.0 --pkg posix -D N900
+ else
+-	valac -o bin/wadoku-notify src-linux/clipboard.vala src/db.c src/sqlite3.c src-linux/notify-libnotify.vala --pkg libnotify --pkg gtk+-2.0 --pkg posix
++	valac -o bin/wadoku-notify src-linux/clipboard.vala src/db.c src/sqlite3.c src-linux/notify-libnotify.vala --pkg libnotify --pkg gtk+-2.0 --pkg posix -X -ldl
+ endif
+ 	ln -sf ../data/wadoku.sqlite3 bin/wadoku.sqlite3
+ 	ln -sf ../data/wadoku.png bin/wadoku.png
