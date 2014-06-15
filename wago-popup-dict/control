@@ -1,0 +1,42 @@
+Source: wago-popup-dict
+Section: education
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               dh-autoreconf,
+               pkg-config,
+               valac,
+               libsqlite3-dev,
+               libgtk-3-dev,
+               libcairo2-dev,
+               libgdk-pixbuf2.0-dev,
+               libappindicator3-dev
+Standards-Version: 3.9.5
+Homepage: http://www.boscowitch.de/
+
+Package: wago-popup-dict
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         wago-popup-dict-data (= ${source:Version})
+Description: Japanese Popup Dictionary
+ Wago-popup-dict is a opensource Japanese Popup Dictionary
+ for fast automatic words lookup. It is the successor of
+ wadoku-notify a simple Japanese-German popup dictionary.
+ It now also offers a edict Dictionary Database,
+ Global Hotkey support, Tray Icon and extended Setting
+ and search dialogs.
+
+Package: wago-popup-dict-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Japanese Popup Dictionary (data package)
+ Wago-popup-dict is a opensource Japanese Popup Dictionary
+ for fast automatic words lookup. It is the successor of
+ wadoku-notify a simple Japanese-German popup dictionary.
+ It now also offers a edict Dictionary Database,
+ Global Hotkey support, Tray Icon and extended Setting
+ and search dialogs.
+ .
+ (This package contains the data files).

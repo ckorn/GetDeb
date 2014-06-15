@@ -1,0 +1,94 @@
+# add appindicator support
+Index: wago-popup-dict-1.0+git140614/configure.ac
+===================================================================
+--- wago-popup-dict-1.0+git140614.orig/configure.ac	2014-06-15 00:17:22.523837994 +0200
++++ wago-popup-dict-1.0+git140614/configure.ac	2014-06-15 00:17:22.515837995 +0200
+@@ -20,7 +20,7 @@
+ 
+ 
+ PKG_CHECK_MODULES(WAGO_POPUP_DICT, [gtk+-3.0 ])
+-
++PKG_CHECK_MODULES(WAGO_POPUP_DICT, [appindicator3-0.1])
+ 
+ AC_OUTPUT([
+ Makefile
+Index: wago-popup-dict-1.0+git140614/src/Makefile.am
+===================================================================
+--- wago-popup-dict-1.0+git140614.orig/src/Makefile.am	2014-06-15 00:17:22.523837994 +0200
++++ wago-popup-dict-1.0+git140614/src/Makefile.am	2014-06-15 00:18:48.679835432 +0200
+@@ -25,14 +25,17 @@
+ 	wago_popup_dict.vala config.vapi settingsdlg.vala settingshandler.vala sqlitedictionary.vala unix-helpers.vala wago_popup.vala wordstem.vala sqlite3fts.vapi wago.vala
+ 
+ wago_popup_dict_CFLAGS = -lpthread \
+-	-ldl 
++	-ldl \
++	`pkg-config appindicator3-0.1 --cflags`
+ 
+ wago_popup_dict_VALAFLAGS =  \
+-	--pkg gtk+-3.0
++	--pkg gtk+-3.0 \
++	--pkg appindicator3-0.1
+ 
+ wago_popup_dict_LDFLAGS = \
+ 	-Wl,--export-dynamic, \
+-	-lsqlite3
++	-lsqlite3 \
++	`pkg-config appindicator3-0.1 --libs`
+ 
+ wago_popup_dict_LDADD = $(WAGO_POPUP_DICT_LIBS)
+ 
+Index: wago-popup-dict-1.0+git140614/src/wago.vala
+===================================================================
+--- wago-popup-dict-1.0+git140614.orig/src/wago.vala	2014-06-15 00:17:22.523837994 +0200
++++ wago-popup-dict-1.0+git140614/src/wago.vala	2014-06-15 00:17:22.519837995 +0200
+@@ -1,11 +1,12 @@
+ using Gtk;
++using AppIndicator;
+ 
+ public class Wago : GLib.Object {
+-	private StatusIcon trayicon;
+ 	private Gtk.Menu menuSystem;
+ 	private AboutDialog about;
+ 	private SettingsDlg setdlg;
+ 	private SettingsHandler handler;
++	private Indicator indicator;
+ 	
+ 	public WagoPopup popup;
+ 	
+@@ -14,13 +15,13 @@
+ 		this.handler = handler;
+ 		setdlg = new SettingsDlg(handler); 
+ 
+-		trayicon = new StatusIcon.from_file( handler.get_application_icon_path() );
+-     	trayicon.set_tooltip_text ("Wago-Popup Tray");
+-     	trayicon.set_visible(true);
+-		trayicon.activate.connect(about_clicked);
++                 indicator = new Indicator("Wago-Popup Tray", "wago-popup-dict",
++                                               IndicatorCategory.APPLICATION_STATUS);
++
++                 indicator.set_status(IndicatorStatus.ACTIVE);
++                 indicator.set_attention_icon("wago-popup-dict");
+ 		
+       	create_menuSystem();
+-    	trayicon.popup_menu.connect(menuSystem_popup);
+     		 
+     	about = new AboutDialog();
+     	about.set_version("1.0.0");
+@@ -28,7 +29,7 @@
+      	about.set_comments("Wago-Popup is an opensource Japanse Dictionary popup tool.\n licensed under the GPL v3");
+     	about.set_copyright("Copyright 2012 by boscowitch");
+     	about.set_website("http://www.boscowitch.de");
+-    	about.set_logo(trayicon.get_pixbuf());
++    	about.set_logo((new StatusIcon.from_file( handler.get_application_icon_path() )).get_pixbuf());
+     	about.set_modal(true);
+ 		
+     	//about.set_has_frame(true);	
+@@ -62,6 +63,8 @@
+   		var menuQuit = new ImageMenuItem.from_stock(Stock.QUIT, null);
+   		menuQuit.activate.connect(Gtk.main_quit);
+  	    menuSystem.append(menuQuit);
++
++            indicator.set_menu(menuSystem);
+         
+   		menuSystem.show_all();
+     }

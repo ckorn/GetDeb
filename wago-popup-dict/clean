@@ -1,0 +1,9 @@
+src/settingsdlg.c
+src/settingshandler.c
+src/sqlitedictionary.c
+src/unix-helpers.c
+src/wago.c
+src/wago_popup.c
+src/wago_popup_dict.c
+src/wago_popup_dict_vala.stamp
+src/wordstem.c

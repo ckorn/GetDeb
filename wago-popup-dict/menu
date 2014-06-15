@@ -1,0 +1,2 @@
+?package(wago-popup-dict):needs="X11" section="Applications/Education"\
+  title="wago-popup-dict" command="/usr/bin/wago-popup-dict"

@@ -1,0 +1,5 @@
+debian/hicolor			usr/share/icons
+usr/bin
+usr/share/doc
+usr/share/pixmaps
+usr/share/applications

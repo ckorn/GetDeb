@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh $@  --with autotools-dev,autoreconf
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog
+	rm debian/wago-popup-dict/usr/share/doc/wago-popup-dict/ChangeLog
