@@ -1,3 +1,56 @@
+calibre (1.40.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - New Features
+     + Edit Book: Add a new tool to manage fonts. Allows easily
+     changing/removing/embedding fonts in the entire book. To use it go to
+     Tools->Manage Fonts
+     + Edit Book: Allow the color of the links in the Live CSS panel to be
+     themed.
+     + E-book viewer: Add a keyboard shortcut to bookmark current location.
+    - Bug Fixes
+     + Edit Book: Check book: When auto-changing font name to match actual
+     name in font file, also change the font name in shorthand font
+     declarations
+     + Edit Book/Book polishing: Fix embedding all referenced fonts not
+     catching fonts that are only specified via style attributes and not in
+     any stylesheets.
+     + Conversion: Fix normalization of CSS shorthand font property not
+     working when multiple font families are specified in the same shorthand
+     property
+     + Edit Book: Live CSS: Fix clicking on link to go to style definition
+     not working if the stylesheet contains CSS 3 @media queries or
+     @font-face rules
+     + Edit Book: When importing DOCX files, set the media type for html
+     files correctly
+     + Edit Book: Fix import of DOCX files that contain no Table of Contents
+     not working.
+     + Portable installer: Fix a crash if the user selects a destination for
+     the portable install that does not have enough disk space.
+     + Fix date column not showing date added when adding zip/rar files that
+     contain an OPF with a calibre timestamp in its metadata
+     + Sony driver: Fix SONY annotation app not working with files sent to
+     the device by calibre
+     + Linux build: Fix regression that caused opening PDF files (or any
+     externally viewed files) preventing calibre from being restarted as long
+     as the external viewer is not shutdown.
+     + Edit book: Fix changing underline style to none when creating a custom
+     color scheme causes error.
+     + Check Book: Fix empty (zero byte) XML files causing check book to
+     fail.
+     + Check Book: Fix combination of mismatching font family names and a
+     font-family declaration with an invalid value (such as a dimension)
+     causing auto fixing of errors to fail.
+    -Improved news sources
+     + Respekt
+     + Newsweek
+     + Jerusalem Post
+     + Outlook India
+     + PC Magazine
+     + Instapaper
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Mon, 16 Jun 2014 21:33:17 +0200
+
 calibre (1.39.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
