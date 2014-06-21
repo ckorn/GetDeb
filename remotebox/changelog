@@ -1,3 +1,11 @@
+remotebox (1.8.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+   - Minor release to fix SOAP versioning issues experienced by some users
+   - Bundle appdata.xml file for packagers with distros that use it
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 21 Jun 2014 20:14:50 +0200
+
 remotebox (1.8-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
