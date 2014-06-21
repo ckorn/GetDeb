@@ -1,3 +1,13 @@
+cgminer (4.4.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+   - Move icarus driver to being seen as an asic
+   - Clear usb reads on each pass through icarus detect to hopefully prevent
+     false positives for detecting rboxes
+   - Clean up pool failure and failover code for stratum
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sat, 21 Jun 2014 20:39:23 +0200
+
 cgminer (4.3.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
