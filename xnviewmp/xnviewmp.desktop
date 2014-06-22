@@ -1,8 +1,9 @@
 [Desktop Entry]
 Terminal=false
-Exec=/usr/bin/xnviewmp %U
+Exec=xnviewmp %U
 Icon=xnview
 Type=Application
+Comment=Graphic viewer, browser, converter
 Categories=Graphics;
 StartupNotify=true
 Name=XnView Multi Platform
