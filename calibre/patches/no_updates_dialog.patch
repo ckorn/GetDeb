@@ -1,8 +1,8 @@
 # Description: Disable update check by default.
-Index: calibre-1.17.0/src/calibre/gui2/main.py
+Index: calibre-1.41.0/src/calibre/gui2/main.py
 ===================================================================
---- calibre-1.17.0.orig/src/calibre/gui2/main.py	2013-12-26 02:13:30.222502182 +0100
-+++ calibre-1.17.0/src/calibre/gui2/main.py	2013-12-26 02:14:14.546501803 +0100
+--- calibre-1.41.0.orig/src/calibre/gui2/main.py	2014-06-22 02:27:51.380940457 +0200
++++ calibre-1.41.0/src/calibre/gui2/main.py	2014-06-22 02:27:51.376940457 +0200
 @@ -37,8 +37,8 @@
                        help=_('Start minimized to system tray.'))
      parser.add_option('-v', '--verbose', default=0, action='count',
@@ -14,3 +14,19 @@ Index: calibre-1.17.0/src/calibre/gui2/main.py
      parser.add_option('--ignore-plugins', default=False, action='store_true',
              help=_('Ignore custom plugins, useful if you installed a plugin'
                  ' that is preventing calibre from starting'))
+Index: calibre-1.41.0/src/calibre/gui2/ui.py
+===================================================================
+--- calibre-1.41.0.orig/src/calibre/gui2/ui.py	2014-06-21 05:50:39.000000000 +0200
++++ calibre-1.41.0/src/calibre/gui2/ui.py	2014-06-22 02:41:01.080916965 +0200
+@@ -858,7 +858,10 @@
+         if write_settings:
+             self.write_settings()
+         self.check_messages_timer.stop()
+-        self.update_checker.terminate()
++        try:
++            self.update_checker.terminate()
++        except:
++            pass
+         self.listener.close()
+         self.job_manager.server.close()
+         self.job_manager.threaded_server.close()
