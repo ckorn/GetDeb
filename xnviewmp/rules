@@ -1,8 +1,4 @@
 #!/usr/bin/make -f
-
-DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
-
-
 %:
 	dh $@
 
@@ -55,6 +51,9 @@ override_dh_install:
 	rm -rf debian/xnviewmp-data/usr/share/xnviewmp/AddOn/lib/File
 	rm -rf debian/xnviewmp-data/usr/share/xnviewmp/AddOn/lib/Image
 
+	[ ! -d debian/xnviewmp-data ] || find debian/xnviewmp-data -type d -empty -delete
+	find debian/xnviewmp -type d -empty -delete
+
 override_dh_installchangelogs:
 	dh_installchangelogs XnView/WhatsNew.txt
 
@@ -64,8 +63,3 @@ override_dh_shlibdeps:
 
 override_dh_makeshlibs:
 	dh_makeshlibs -Xusr/lib/xnviewmp
-
-override_dh_gencontrol:
-	dh_gencontrol
-	# prevents Lintian warning virtual-package-depends-without-real-package-depends
-	sed -i 's/, libgl1,/, libgl1-mesa-glx | libgl1,/g' debian/xnviewmp/DEBIAN/control
