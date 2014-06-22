@@ -3,4 +3,4 @@ XnView/language			usr/share/xnviewmp
 XnView/UI			usr/share/xnviewmp
 XnView/*.txt			usr/share/xnviewmp
 XnView/qt.conf			usr/share/xnviewmp
-XnView/*.png			usr/share/xnviewmp
+converted_icons/*       	usr/share
