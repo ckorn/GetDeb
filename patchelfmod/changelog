@@ -1,0 +1,17 @@
+patchelfmod (0.14-1~getdeb1) trusty; urgency=medium
+
+  * Upload to GetDeb.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Jun 2014 00:10:16 +0200
+
+patchelfmod (0.14-1~trusty) trusty; urgency=low
+
+  * New version
+
+ -- Marshall Banana <djcj@gmx.de>  Fri, 13 Jun 2014 15:15:59 +0200
+
+patchelfmod (0.13) unstable; urgency=low
+
+  * Initial release
+
+ -- Marshall Banana <djcj@gmx.de>  Thu, 15 May 2014 06:05:28 +0200
