@@ -11,12 +11,13 @@ Build-Depends: debhelper (>= 9),
                libpango1.0-0 (>= 1.14.0),
                libsqlite3-0 (>= 3.5.9),
                libx11-6
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://sites.google.com/site/mynotex/
 
 Package: mynotex
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Free note-taking and note manager for GNU/Linux
  MyNotex is a free software for Gnu/Linux useful to take and to
  manage textual notes, also a large number of them. Notes are

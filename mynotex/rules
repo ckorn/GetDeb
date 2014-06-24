@@ -2,10 +2,6 @@
 %:
 	dh $@
 
-override_dh_auto_install:
-ifeq ($(DEB_BUILD_ARCH),amd64)
-	tar xzf executable_mynotex_*_amd64.tar.gz
-else
-	tar xzf executable_mynotex_*_i386.tar.gz
-endif
-
+override_dh_auto_configure:
+	find . -name "*.pdf" -execdir chmod -x {} \;
+	find . -name "*.lng" -execdir chmod -x {} \;

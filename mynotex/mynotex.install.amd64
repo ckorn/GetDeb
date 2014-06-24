@@ -1,0 +1,5 @@
+amd64/opt/mynotex/mynotex		usr/lib/mynotex
+amd64/opt/mynotex/*.lng			usr/share/mynotex
+amd64/opt/mynotex/*.pdf			usr/share/mynotex
+debian/mynotex.png			usr/share/pixmaps
+debian/mynotex.desktop			usr/share/applications
