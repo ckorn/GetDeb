@@ -1,27 +1,53 @@
 libssr-glinject.so libssr-glinject #MINVER#
+ XDestroyWindow@Base 0.3.0
  XNextEvent@Base 0.1.2
- _Z19glinject_init_hooksv@Base 0.0.7
+ _Z12FreeGLInjectv@Base 0.3.0
+ _Z12InitGLInjectv@Base 0.3.0
  _Z22glinject_my_XNextEventP9_XDisplayP7_XEvent@Base 0.1.2
+ _Z26glinject_my_XDestroyWindowP9_XDisplaym@Base 0.3.0
  _Z26glinject_my_glXSwapBuffersP9_XDisplaym@Base 0.0.7
  _Z27glinject_my_glXCreateWindowP9_XDisplayP16__GLXFBConfigRecmPKi@Base 0.0.7
+ _Z28glinject_my_glXDestroyWindowP9_XDisplaym@Base 0.3.0
  _Z32glinject_my_glXGetProcAddressARBPKh@Base 0.0.7
- _ZN14GLFrameGrabber13GetHotkeyInfoEv@Base 0.1.2
- _ZN14GLFrameGrabber13TriggerHotkeyEv@Base 0.1.2
- _ZN14GLFrameGrabber9GrabFrameEv@Base 0.0.7
- _ZN14GLFrameGrabberC1EP9_XDisplaymm@Base 0.0.7
- _ZN14GLFrameGrabberC2EP9_XDisplaymm@Base 0.0.7
- _ZN14GLFrameGrabberD1Ev@Base 0.0.7
- _ZN14GLFrameGrabberD2Ev@Base 0.0.7
- _ZN8GLInject10NewGrabberEP9_XDisplaymm@Base 0.0.7
- _ZN8GLInject11FindGrabberEP9_XDisplaym@Base 0.0.7
+ _ZN15GLXFrameGrabber4FreeEv@Base 0.3.0
+ _ZN15GLXFrameGrabber4InitEv@Base 0.3.0
+ _ZN15GLXFrameGrabber9GrabFrameEv@Base 0.3.0
+ _ZN15GLXFrameGrabberC1EP9_XDisplaymm@Base 0.3.0
+ _ZN15GLXFrameGrabberC2EP9_XDisplaymm@Base 0.3.0
+ _ZN15GLXFrameGrabberD1Ev@Base 0.3.0
+ _ZN15GLXFrameGrabberD2Ev@Base 0.3.0
+ _ZN18SSRStreamExceptionD0Ev@Base 0.3.0
+ _ZN18SSRStreamExceptionD1Ev@Base 0.3.0
+ _ZN18SSRStreamExceptionD2Ev@Base 0.3.0
+ _ZN20SSRVideoStreamWriter10UpdateSizeEjji@Base 0.3.0
+ _ZN20SSRVideoStreamWriter17GetGLInjectHeaderEv@Base 0.3.0
+ _ZN20SSRVideoStreamWriter20GetGLInjectFrameInfoEj@Base 0.3.0
+ _ZN20SSRVideoStreamWriter4FreeEv@Base 0.3.0
+ _ZN20SSRVideoStreamWriter4InitEv@Base 0.3.0
+ _ZN20SSRVideoStreamWriter8NewFrameEPj@Base 0.3.0
+ _ZN20SSRVideoStreamWriter9NextFrameEv@Base 0.3.0
+ _ZN20SSRVideoStreamWriterC1ERKSsS1_@Base 0.3.0
+ _ZN20SSRVideoStreamWriterC2ERKSsS1_@Base 0.3.0
+ _ZN20SSRVideoStreamWriterD1Ev@Base 0.3.0
+ _ZN20SSRVideoStreamWriterD2Ev@Base 0.3.0
+ _ZN8GLInject18NewGLXFrameGrabberEP9_XDisplaymm@Base 0.3.0
+ _ZN8GLInject19FindGLXFrameGrabberEP9_XDisplaym@Base 0.3.0
+ _ZN8GLInject29DeleteGLXFrameGrabberByWindowEP9_XDisplaym@Base 0.3.0
+ _ZN8GLInject31DeleteGLXFrameGrabberByDrawableEP9_XDisplaym@Base 0.3.0
  _ZN8GLInjectC1Ev@Base 0.0.7
  _ZN8GLInjectC2Ev@Base 0.0.7
  _ZN8GLInjectD1Ev@Base 0.0.7
  _ZN8GLInjectD2Ev@Base 0.0.7
- _ZNSt6vectorIP14GLFrameGrabberSaIS1_EE19_M_emplace_back_auxIIS1_EEEvDpOT_@Base 0.2.2
- _ZNSt6vectorIP14GLFrameGrabberSaIS1_EE19_M_emplace_back_auxIJS1_EEEvDpOT_@Base 0.2.2
- _ZNSt6vectorIPcSaIS0_EE19_M_emplace_back_auxIIS0_EEEvDpOT_@Base 0.2.2
- _ZNSt6vectorIPcSaIS0_EE19_M_emplace_back_auxIJS0_EEEvDpOT_@Base 0.2.2
+ _ZNK18SSRStreamException4whatEv@Base 0.3.0
+ _ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag@Base 0.3.0
+ _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@Base 0.3.0
+ _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED1Ev@Base 0.3.0
+ _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED2Ev@Base 0.3.0
+ _ZNSt6vectorIP15GLXFrameGrabberSaIS1_EE19_M_emplace_back_auxIIRKS1_EEEvDpOT_@Base 0.3.0
+ _ZNSt6vectorIP15GLXFrameGrabberSaIS1_EE19_M_emplace_back_auxIJRKS1_EEEvDpOT_@Base 0.3.0
+ _ZTI18SSRStreamException@Base 0.3.0
+ _ZTS18SSRStreamException@Base 0.3.0
+ _ZTV18SSRStreamException@Base 0.3.0
  dlsym@Base 0.0.7
  dlvsym@Base 0.0.7
  eh_check_addr@Base 0.0.7
@@ -44,18 +70,15 @@ libssr-glinject.so libssr-glinject #MINVER#
  eh_set_rel@Base 0.0.7
  eh_set_rel_plt@Base 0.0.7
  eh_set_rela_plt@Base 0.0.7
- g_glinject@Base 0.0.7
- g_glinject_hooks_initialized@Base 0.0.7
- g_glinject_ready@Base 0.0.7
+ g_glinject_real_XDestroyWindow@Base 0.3.0
  g_glinject_real_XNextEvent@Base 0.1.2
  g_glinject_real_dlsym@Base 0.0.7
  g_glinject_real_dlvsym@Base 0.0.7
  g_glinject_real_glXCreateWindow@Base 0.0.7
+ g_glinject_real_glXDestroyWindow@Base 0.3.0
  g_glinject_real_glXGetProcAddressARB@Base 0.0.7
  g_glinject_real_glXSwapBuffers@Base 0.0.7
- g_hotkey_info@Base 0.1.2
- g_hotkey_pressed@Base 0.1.2
  glXCreateWindow@Base 0.0.7
+ glXDestroyWindow@Base 0.3.0
  glXGetProcAddressARB@Base 0.0.7
  glXSwapBuffers@Base 0.0.7
- hook_table@Base 0.0.7

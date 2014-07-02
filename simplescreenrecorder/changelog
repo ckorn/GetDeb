@@ -1,3 +1,22 @@
+simplescreenrecorder (0.3.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Added profile support.
+    - New, more flexible OpenGL recording system (glinject-next branch
+    merged).
+    - More robust sound notifications.
+    - Show progress dialog while flushing the encoders.
+    - Improved hotkey support using XInput2.
+    - Improved synchronizer.
+    - Native support for mono microphones (plughw no longer needed).
+    - Added source detection for ALSA.
+    - Partially rewritten output backend.
+    - Improved mouse following algorithm.
+    - New icon.
+    - Bugfixes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Jul 2014 23:04:33 +0200
+
 simplescreenrecorder (0.2.2-1~getdeb2~trusty) trusty; urgency=low
 
   * Rebuild for trusty
