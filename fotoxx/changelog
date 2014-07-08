@@ -1,3 +1,28 @@
+fotoxx (14.07.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    2014 Jul 02  v.14.07.1
+    + Bugfix: stop spurious extra menu entry in non-english locales.
+
+    2014 Jul 01  v.14.07
+    + An image with selected areas can be saved to a PNG file with unselected
+      parts transparent. This can be useful in other image editors like Gimp.
+    + The main menu was made smaller to save space. Some menu-icons now use
+      left/right mouse clicks for two functions, e.g. edit undo/redo. 
+    + Mashup: draw lines and arrows on an image, similarly to writing text.
+    + Mashup: control of overlapping and transparent images was made easier.
+    + A batch upright tool was added - find and upright images turned 90°.
+    + Panorama: image matching for exposure/color differences was improved.
+    + The current image on the gallery page is more strongly highlighted.
+    + Raw Therapee was added as a RAW image file processing option.
+    + Metadata and geotag edits were added to the right-click popup menus.
+    + The world map was made 2x larger in area (a new download is required).
+    + Bugfix: file rename could sometimes leave an incorrect thumbnail.
+    + Bugfix: Batch RAW did not set the sRGB color space as default.
+    + Bugfix: memory leak in Mashup function.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 08 Jul 2014 00:21:49 +0200
+
 fotoxx (14.06.1-1~getdeb2) trusty; urgency=medium
 
   * Create appdata dir. Else it will be a file :/
