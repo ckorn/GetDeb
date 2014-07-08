@@ -3,11 +3,11 @@ Description: do not build unrar extension as we strip unrar from the tarball
 Forwarded: not-needed
 Last-Update: 2013-04-04
 
-Index: calibre-1.39.0/setup/extensions.py
+Index: calibre-1.43.0/setup/extensions.py
 ===================================================================
---- calibre-1.39.0.orig/setup/extensions.py	2014-06-07 16:24:47.693743965 +0200
-+++ calibre-1.39.0/setup/extensions.py	2014-06-07 16:24:47.685743966 +0200
-@@ -228,24 +228,6 @@
+--- calibre-1.43.0.orig/setup/extensions.py	2014-07-08 00:35:51.826476013 +0200
++++ calibre-1.43.0/setup/extensions.py	2014-07-08 00:35:51.818476013 +0200
+@@ -232,24 +232,6 @@
                  sip_files=['calibre/ebooks/pdf/render/qt_hack.sip']
                  ),
  
@@ -32,10 +32,10 @@ Index: calibre-1.39.0/setup/extensions.py
      ]
  
  
-Index: calibre-1.39.0/src/calibre/ebooks/metadata/archive.py
+Index: calibre-1.43.0/src/calibre/ebooks/metadata/archive.py
 ===================================================================
---- calibre-1.39.0.orig/src/calibre/ebooks/metadata/archive.py	2014-06-07 16:24:47.693743965 +0200
-+++ calibre-1.39.0/src/calibre/ebooks/metadata/archive.py	2014-06-07 16:24:47.685743966 +0200
+--- calibre-1.43.0.orig/src/calibre/ebooks/metadata/archive.py	2014-07-08 00:35:51.826476013 +0200
++++ calibre-1.43.0/src/calibre/ebooks/metadata/archive.py	2014-07-08 00:35:51.818476013 +0200
 @@ -42,7 +42,7 @@
      description = _('Extract common e-book formats from archives '
          '(zip/rar) files. Also try to autodetect if they are actually '
