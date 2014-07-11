@@ -1,8 +1,8 @@
 # disable version check. updates come via apt-get
-Index: chatty-0.6.4/src/chatty/Version.java
+Index: chatty-0.6.6/src/chatty/Version.java
 ===================================================================
---- chatty-0.6.4.orig/src/chatty/Version.java	2014-05-27 20:10:21.358132774 +0200
-+++ chatty-0.6.4/src/chatty/Version.java	2014-05-27 20:10:21.354132774 +0200
+--- chatty-0.6.6.orig/src/chatty/Version.java	2014-07-11 02:02:50.022713283 +0200
++++ chatty-0.6.6/src/chatty/Version.java	2014-07-11 02:02:50.018713283 +0200
 @@ -32,8 +32,8 @@
      }
      
@@ -14,29 +14,29 @@ Index: chatty-0.6.4/src/chatty/Version.java
      }
      
      /**
-Index: chatty-0.6.4/src/chatty/TwitchClient.java
+Index: chatty-0.6.6/src/chatty/TwitchClient.java
 ===================================================================
---- chatty-0.6.4.orig/src/chatty/TwitchClient.java	2014-05-27 20:10:21.358132774 +0200
-+++ chatty-0.6.4/src/chatty/TwitchClient.java	2014-05-27 20:10:21.354132774 +0200
-@@ -224,7 +224,7 @@
+--- chatty-0.6.6.orig/src/chatty/TwitchClient.java	2014-07-11 02:02:50.022713283 +0200
++++ chatty-0.6.6/src/chatty/TwitchClient.java	2014-07-11 02:04:52.326709645 +0200
+@@ -241,7 +241,7 @@
          
          // Check version, if enabled in this build
          if (Chatty.VERSION_CHECK_ENABLED) {
 -            checkNewVersion();
 +            //checkNewVersion();
          }
-         
+ 
          // Connect or open connect dialog
-@@ -273,7 +273,7 @@
-      * Checks for a new version if the last check was long enough ago.
+@@ -303,7 +303,7 @@
       */
      private void checkNewVersion() {
+         //g.setUpdateAvailable();
 -        if (!settings.getBoolean("checkNewVersion")) {
 +        /*if (!settings.getBoolean("checkNewVersion")) {
              return;
          }
          long ago = System.currentTimeMillis() - settings.getLong("versionLastChecked");
-@@ -297,7 +297,7 @@
+@@ -329,7 +329,7 @@
                      g.printSystem("You already have the newest version.");
                  }
              }
@@ -45,10 +45,10 @@ Index: chatty-0.6.4/src/chatty/TwitchClient.java
      }
      
  
-Index: chatty-0.6.4/src/chatty/Chatty.java
+Index: chatty-0.6.6/src/chatty/Chatty.java
 ===================================================================
---- chatty-0.6.4.orig/src/chatty/Chatty.java	2014-05-27 20:10:21.358132774 +0200
-+++ chatty-0.6.4/src/chatty/Chatty.java	2014-05-27 20:10:21.354132774 +0200
+--- chatty-0.6.6.orig/src/chatty/Chatty.java	2014-07-11 02:02:50.022713283 +0200
++++ chatty-0.6.6/src/chatty/Chatty.java	2014-07-11 02:02:50.018713283 +0200
 @@ -51,7 +51,7 @@
       * Enable Version Checker (if you compile and distribute this yourself, you
       * may want to disable this)

@@ -1,3 +1,100 @@
+chatty (0.6.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    0.6.6 (2014-06-25) Latest Version
+
+    New features:
+    - Ignore messages (similar to the Highlight system, match messages by
+    keywords, usernames, addressbook categories and channels)
+    - Improved Emote Context Menu (now with channel name on subemotes and
+    clicking on emote code inserts it in the input box)
+    - Improved subscriber detection on Twitch Client 1
+    - Improved Update Notification to now also show in the Main Menubar
+    (clicking on it opens a window showing the changelog)
+    - Livestreamer Context Menu quality selection now customizable
+    - Added some commands (including /ffz to show FFZ emotes of the current
+    channel, some commands to open dialogs and stuff intended for use in
+    Custom Commands)
+
+    Changes:
+    - Addressbook categories are now all made lowercase when added/loaded
+    from file
+    - Regular commands can now be also used in Context Menus/User Dialog
+    settings
+    - Improved error handling a bit (hopefully)
+    - Removed Ignore Joins/Parts setting in favor of Twitch Client 3
+    - Changed Twitch Client 1/3 setting to include small explanation
+    - Added sort by viewercount in Live Streams Dialog
+    - Added chan: and !chan: prefixes (Highlights and Ignore)
+    - Updated help
+    - Show how many Highlighted/Ignored messages are in the dialogs in the
+    View-menu
+    - Improved text settings editor (auto adjust size when typing, added
+    help)
+    - Changed Context Menu/User Dialog settings to allow more flexible
+    formatting
+      (linebreaks allowed, / for command optional, | for separator doesn't
+      have to be directly in front of a command, but still applies to the
+      following one)
+    - Moved to new FFZ server and updated parsing (recently added emotes
+    should now
+      show up)
+
+    Bugfixes:
+    - Fixed horizontal scrolling sometimes happening in chat window
+    - Fixed URL Context Menu stream detection to be case-insensitive
+    - Fixed display of "<" in Notifications
+    - Hopefully fixed possible display error
+
+
+    0.6.5 (2014-06-14)
+
+    New features:
+    - Reworked usericon (badges) system, which also allows custom usericons,
+      either replacing the default ones or adding some of your own
+    - Added Custom Commands, which allow you to define aliases for anything
+    you can enter into the inputbox (like chat messages, commands)
+    - Added settings to add Custom Commands to the User/Channel Context Menus
+    and changed Timeout buttons setting to also add Custom Commands to User
+      Dialog
+    - Added option to always show the chat scrollbar, which can be useful for
+      streamers who always want to capture the same subregion of the window
+    - Added /clearchat command which clears all text from the current chat
+    window
+    - Added settings for what to do when Chatty is started (show connect
+    dialog
+      or connect immediately and autjoin channels etc.)
+
+    Changes:
+    - Only show the "<user> has been banned from talking" message for users
+    that are currently known in the channel (that have said something, have
+      joined, been modded, etc.)
+    - Removed hardcoded /slap command, but added it as default to Custom
+    Commands
+    - Removed "Set color" entry from User Context Menu, but added /setcolor
+      command (so it can be readded using Custom Commands if necessary)
+    - Updated help
+    - Changed list settings editor (used for Highlights, Logging, Commands)
+    - Reorganized Settings Dialog a bit
+    - Updated /testNotification command to also allow for a channel parameter
+    - Changed Highlight Notification to switch to the channel the highlight
+      originated in (similar to Stream Status Notifications)
+    - Regular commands now case-insensitive
+    - Handle image URLs which may brake due to possible changes in the Twitch
+    API
+    - Added /echo command to just output text as info message (e.g. for
+    testing)
+
+    Bugfixes:
+    - Fixed speedrun.tv Race Link in SRL Race List context menu
+    - Made "Races with.." search case-insensitive
+    - Fixed possible flickering of chat window when being scrolled up
+    - Remove linebreaks from messages send to the server
+    - Fixed some possible display bugs in Settings Dialog
+    - Right-clicking on emotes now works on the whole emote
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 11 Jul 2014 02:00:17 +0200
+
 chatty (0.6.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
