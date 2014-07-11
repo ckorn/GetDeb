@@ -1,0 +1,36 @@
+Source: libzenxml
+Section: libs
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: http://zenxml.sourceforge.net/
+
+Package: libzenxml2.0-dev
+Architecture: all
+Section: libdevel
+Depends: ${misc:Depends}
+Description: XML library (header files)
+ zen::Xml is an XML library serializing structured user
+ data in a convenient way. Using compile-time information
+ gathered by techniques of template metaprogramming
+ it minimizes the manual overhead required and frees
+ the user from implementing fundamental type
+ conversions by himself.
+ .
+ (this package contains the header files).
+
+Package: libzenxml2.0-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         libjs-jquery
+Description: XML library (documentation)
+ zen::Xml is an XML library serializing structured user
+ data in a convenient way. Using compile-time information
+ gathered by techniques of template metaprogramming
+ it minimizes the manual overhead required and frees
+ the user from implementing fundamental type
+ conversions by himself.
+ .
+ (this package contains the documentation).
