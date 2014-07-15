@@ -46,6 +46,8 @@ override_dh_auto_install:
 	mkdir -p $(IMGDIR)/32x32/mimetypes
 	mkdir -p $(IMGDIR)/16x16/apps
 	mkdir -p $(IMGDIR)/16x16/mimetypes
+
+	rmdir debian/freefilesync/usr/share/FreeFileSync/Languages/outdated/
 	
 	# FreeFileSync
 	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/apps/freefilesync.png
@@ -72,8 +74,8 @@ override_dh_auto_install:
 	convert RealtimeSync/RealtimeSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-real.png
 	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/32x32/apps/realtimesync.png
 	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-real.png
-	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/16x16/apps/realtimesync.png
-	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
+	convert RealtimeSync/RealtimeSync.ico[4] $(IMGDIR)/16x16/apps/realtimesync.png
+	convert RealtimeSync/RealtimeSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
     
 	# FreeFileSync Batch
 	convert lib/Batch.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-batch.png
@@ -90,7 +92,7 @@ override_dh_auto_install:
 	intltool-merge debian/po/freefilesync -d -u -c debian/po/.intltool-merge-cache debian/realtimesync.desktop.in $(DESTRESDIR)/usr/share/applications/realtimesync.desktop
 
 override_dh_installchangelogs:
-	dh_installchangelogs BUILD/Changelog.txt
+	dh_installchangelogs Build/Changelog.txt
 
 get-orig-source:
 	# Uscan can grab upstream source zip

@@ -1,14 +1,14 @@
 # add missing link
-Index: freefilesync-5.13/Makefile
+Index: freefilesync-6.7/Makefile
 ===================================================================
---- freefilesync-5.13.orig/Makefile	2014-03-29 15:40:25.000000000 +0100
-+++ freefilesync-5.13/Makefile	2014-03-29 15:47:31.977716387 +0100
-@@ -8,7 +8,7 @@
- DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
+--- freefilesync-6.7.orig/Makefile	2014-07-15 17:57:26.033467340 +0200
++++ freefilesync-6.7/Makefile	2014-07-15 17:57:26.029467340 +0200
+@@ -62,7 +62,7 @@
+ debug:     LINKFLAGS += `wx-config   --libs std, aui --debug=yes `
+ launchpad: LINKFLAGS += `wx-config                              --libs std, aui --debug=no`
  
- CPPFLAGS  = -std=c++11 -Wall -pipe -O3 -DNDEBUG -DwxUSE_UNICODE -DZEN_PLATFORM_OTHER -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h"
--LINKFLAGS =
-+LINKFLAGS = -lz
+-release debug: LINKFLAGS += -lboost_thread -lboost_system
++release debug: LINKFLAGS += -lboost_thread -lboost_system -lz
+ launchpad:     LINKFLAGS += -lboost_thread -lboost_system -lz
  
- #distinguish Linux/OSX builds
- OPERATING_SYSTEM_NAME := $(shell uname)
+ 

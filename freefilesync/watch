@@ -1,2 +1,2 @@
 version=3
-http://sf.net/freefilesync/FreeFileSync_([\d\.]+)_source\.zip
+http://sf.net/freefilesync/FreeFileSync_([\d\.]+)_(?:s|S)ource\.zip
