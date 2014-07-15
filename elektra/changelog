@@ -1,3 +1,9 @@
+elektra (0.8.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 15 Jul 2014 18:45:46 +0200
+
 elektra (0.7.0-1~getdeb1) karmic; urgency=low
 
   * Upload to getdeb

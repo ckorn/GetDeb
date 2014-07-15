@@ -2,16 +2,25 @@ Source: elektra
 Section: libs
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Build-Depends: debhelper (>= 6), cdbs, pkg-config,
-               libdb4.6-dev, libxml2-dev, libltdl-dev,
-               doxygen, man2html, docbook-xsl, xsltproc
-Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 9),
+               cmake,
+               pkg-config,
+               libdb-dev,
+               libxml2-dev,
+               libltdl-dev,
+               doxygen,
+               man2html,
+               docbook-xsl,
+               xsltproc,
+               chrpath
+Standards-Version: 3.9.5
 Homepage: http://www.libelektra.org/
 
 Package: elektra
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: A key/value pair database to store software configurations
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: key/value pair database to store software configurations
  Elektra provides a universal and secure framework to store configuration
  parameters in a hierarchical key-value pair mechanism, instead of each
  program using its own text configuration files. This allows any program
@@ -30,7 +39,8 @@ Description: A key/value pair database to store software configurations
 Package: elektra-dev
 Section: libdevel
 Architecture: any
-Depends: ${misc:Depends}, elektra (= ${binary:Version})
+Depends: ${misc:Depends},
+         elektra (= ${binary:Version})
 Description: development library files for CinePaint
  Elektra provides a universal and secure framework to store configuration
  parameters in a hierarchical key-value pair tree.

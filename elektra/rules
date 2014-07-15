@@ -1,26 +1,38 @@
 #!/usr/bin/make -f
+%:
+	dh $@ --parallel --buildsystem=cmake
 
-export DH_VERBOSE=1
+overridedh_auto_configure:
+	dh_auto_configure -- -DINCLUDE_INSTALL_DIR:PATH='/usr/include/elektra'
 
-DEB_CONFIGURE_USER_FLAGS := \
-    --disable-static \
-    --program-prefix=elektra- \
-    --enable-iconv \
-    --disable-rpath \
-    --with-default-backend \
-    --with-default-dbackend \
-    --includedir=/usr/include/elektra \
-    --with-docbook=/usr/share/xml/docbook/stylesheet/nwalsh \
-    --with-develdocdir=/usr/share/doc/elektra-dev \
-    $(NULL)
+# needs special setup to work
+override_dh_auto_test:
 
-DH_ALWAYS_EXCLUDE := CVS:.svn
-DEB_CONFIGURE_SCRIPT_ENV += LDFLAGS="-Wl,--as-needed"
+override_dh_auto_install:
+	dh_auto_install
+	chrpath -d debian/tmp/usr/lib/libelektra.so.0.8.6
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
+#export DH_VERBOSE=1
 
-binary-install/elektra::
+#DEB_CONFIGURE_USER_FLAGS := \
+#    --disable-static \
+#    --program-prefix=elektra- \
+#    --enable-iconv \
+#    --disable-rpath \
+#    --with-default-backend \
+#    --with-default-dbackend \
+#    --includedir=/usr/include/elektra \
+#    --with-docbook=/usr/share/xml/docbook/stylesheet/nwalsh \
+#    --with-develdocdir=/usr/share/doc/elektra-dev \
+#    $(NULL)
+
+#DH_ALWAYS_EXCLUDE := CVS:.svn
+#DEB_CONFIGURE_SCRIPT_ENV += LDFLAGS="-Wl,--as-needed"
+
+#include /usr/share/cdbs/1/rules/debhelper.mk
+#include /usr/share/cdbs/1/class/autotools.mk
+
+#binary-install/elektra::
 	# Clear *_static
-	rm -rf debian/elektra/usr/bin/*_static
+#	rm -rf debian/elektra/usr/bin/*_static
 

@@ -1,9 +1,6 @@
 debian/tmp/usr/include
 debian/tmp/usr/lib/pkgconfig
 debian/tmp/usr/lib/*.a
-debian/tmp/usr/lib/*.la
-debian/tmp/usr/lib/*.so
-debian/tmp/usr/lib/*/*.la
-debian/tmp/usr/lib/*/*.so
-debian/tmp/usr/share/doc/elektra-dev
+debian/tmp/usr/lib/libelektra.so
+debian/tmp/usr/lib/libelektra-full.so
 debian/tmp/usr/share/man/man3

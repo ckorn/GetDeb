@@ -1,0 +1,27 @@
+# just some typos
+Index: elektra-0.8.6/src/tools/kdb/main.cpp
+===================================================================
+--- elektra-0.8.6.orig/src/tools/kdb/main.cpp	2014-06-04 17:01:42.000000000 +0200
++++ elektra-0.8.6/src/tools/kdb/main.cpp	2014-07-15 19:27:05.825307305 +0200
+@@ -163,7 +163,7 @@
+ 	}
+ 	catch (...)
+ 	{
+-		std::cerr << "Unkown error" << std::endl;
++		std::cerr << "Unknown error" << std::endl;
+ 		displayHelp(argv[0], f.getCommands());
+ 		return 7;
+ 	}
+Index: elektra-0.8.6/src/tools/kdb/file.hpp
+===================================================================
+--- elektra-0.8.6.orig/src/tools/kdb/file.hpp	2014-06-04 17:01:42.000000000 +0200
++++ elektra-0.8.6/src/tools/kdb/file.hpp	2014-07-15 19:32:31.713297611 +0200
+@@ -30,7 +30,7 @@
+ 
+ 	virtual std::string getLongHelpText()
+ 	{
+-		return "While elektra allows to store configuration in binary\n"
++		return "While elektra allows one to store configuration in binary\n"
+ 		       "key databases, there are typically stored in configuration\n"
+ 		       "files.\n"
+ 		       "For administrative users and people used to configuration\n"
