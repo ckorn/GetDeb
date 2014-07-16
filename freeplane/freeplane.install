@@ -1,0 +1,12 @@
+freeplane_framework/build/* usr/share/freeplane
+
+freeplane_framework/build/freeplane.svg usr/share/icons/hicolor/scalable/apps
+freeplane_framework/build/freeplane.png usr/share/icons/hicolor/32x32/apps
+48x48/freeplane.png usr/share/icons/hicolor/48x48/apps
+64x64/freeplane.png usr/share/icons/hicolor/64x64/apps
+128x128/freeplane.png usr/share/icons/hicolor/128x128/apps
+
+freeplane_framework/build/freeplane.png usr/share/pixmaps
+freeplane.xpm usr/share/pixmaps
+
+debian/freeplane.desktop usr/share/applications

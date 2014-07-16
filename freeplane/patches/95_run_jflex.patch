@@ -1,0 +1,29 @@
+add a target that runs jflex on latex.flex to generate LaTeXLexer.java
++ a clean step for LaTeXLexer.java
+--- a/freeplane_plugin_script/ant/build.xml
++++ b/freeplane_plugin_script/ant/build.xml
+@@ -18,7 +18,15 @@
+ 	<property name="classpath" value="${framework.jar}:${freeplane.jars}:${external.jars}:${jsyntaxpane.jar}" />
+ 	<property name="apidocdir" value="dist/doc/api" />
+ 
+-	<target name="build" depends="build-ui-xml">
++  <target name="build-latex-lexer">
++    <exec executable="jflex">
++      <arg value="-d"/>
++      <arg value="src-jsyntaxpane/jsyntaxpane/lexers/"/>
++      <arg value="src-jsyntaxpane/jsyntaxpane/lexers/latex.flex"/>
++    </exec>
++  </target>
++
++	<target name="build" depends="build-ui-xml,build-latex-lexer">
+ 		<mkdir dir="build" />
+ 		<javac srcdir="src" destdir="build" classpath="${classpath}" debug="${debug}" source="${java_source_version}" target="${java_target_version}" encoding="utf8">
+ 			<exclude name="**/*Test.*" />
+@@ -111,6 +119,7 @@
+ 		</delete>
+ 		<delete file="lib/jsyntaxpane/nodehighlighter.jar" quiet="true"/>
+ 		<delete file="${src.pluginclass}/preferences.xml" quiet="true"/>
++    <delete file="src-jsyntaxpane/jsyntaxpane/lexers/LaTeXLexer.java"/>
+ 	</target>
+ 
+ </project>

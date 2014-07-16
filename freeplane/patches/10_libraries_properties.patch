@@ -1,0 +1,109 @@
+changes paths to dependency jars to /usr/share/java/...
+--- a/freeplane/ant/ant.properties
++++ b/freeplane/ant/ant.properties
+@@ -1,14 +1,17 @@
+-freeplane.ext.lib = ${workspace}/freeplane/lib
++freeplane.ext.lib = /usr/share/java
+ freeplane.dist.lib = ${workspace}/freeplane/dist/lib
+ freeplaneviewer.jar = ${freeplane.dist.lib}/freeplaneviewer.jar
+ freeplaneeditor.jar = ${freeplane.dist.lib}/freeplaneeditor.jar
+ freeplaneosgi.jar = ${freeplane.dist.lib}/freeplaneosgi.jar
+ freeplanemac.jar = ${freeplane.ext.lib}/freeplanemac.jar
+ freeplane.jars = ${freeplaneviewer.jar}:${freeplaneeditor.jar}:${freeplaneosgi.jar}:${freeplanemac.jar}
+-commons-lang.jar = ${freeplane.ext.lib}/commons-lang-2.6.jar
+-commons-codec.jar = ${freeplane.ext.lib}/commons-codec-1.7.jar
+-commons-io.jar = ${freeplane.ext.lib}/commons-io-2.4.jar
+-forms.jar = ${freeplane.ext.lib}/forms-1.2.1.jar
++
++commons-lang.jar = ${freeplane.ext.lib}/commons-lang.jar
++# commons-codec 1.7!
++commons-codec.jar = ${freeplane.ext.lib}/commons-codec.jar
++commons-io.jar = ${freeplane.ext.lib}/commons-io.jar
++forms.jar = ${freeplane.ext.lib}/jgoodies-forms.jar
+ SimplyHTML.jar = ${freeplane.ext.lib}/SimplyHTML.jar
+-jortho.jar = ${freeplane.ext.lib}/jortho.jar
+-idwgpl.jar = ${freeplane.ext.lib}/idw-gpl.jar
++#jortho.jar = ${freeplane.ext.lib}/jortho.jar
++jortho.jar = ${workspace}/JOrtho_0.4_freeplane/dist/lib/jortho-0.4+fp1.1.1.jar
++idwgpl.jar = ${freeplane.ext.lib}/idw.jar
+--- a/freeplane_framework/ant/ant.properties
++++ b/freeplane_framework/ant/ant.properties
+@@ -1,4 +1,4 @@
+ launcher.dist.lib = ${workspace}/freeplane_framework/build
+ freeplanelauncher.jar = ${launcher.dist.lib}/freeplanelauncher.jar
+-framework.ext.lib = ${workspace}/freeplane_framework/lib
++framework.ext.lib = /usr/share
+ framework.jar = ${framework.ext.lib}/knopflerfish/framework.jar
+--- a/freeplane_plugin_bugreport/ant/ant.properties
++++ b/freeplane_plugin_bugreport/ant/ant.properties
+@@ -1 +1 @@
+-plugin.ext.lib = lib
++plugin.ext.lib = /usr/share/java
+--- a/freeplane_plugin_help/ant/ant.properties
++++ b/freeplane_plugin_help/ant/ant.properties
+@@ -1,2 +1,2 @@
+-plugin.ext.lib = lib
++plugin.ext.lib = /usr/share/java
+ jhall.jar = ${plugin.ext.lib}/jhall.jar
+--- a/freeplane_plugin_latex/ant/ant.properties
++++ b/freeplane_plugin_latex/ant/ant.properties
+@@ -1,2 +1,2 @@
+-plugin.ext.lib = lib
++plugin.ext.lib = /usr/share/java
+ jlatexmath.jar = ${plugin.ext.lib}/jlatexmath.jar
+--- a/freeplane_plugin_script/ant/ant.properties
++++ b/freeplane_plugin_script/ant/ant.properties
+@@ -1,3 +1,3 @@
+-plugin.ext.lib = lib
++plugin.ext.lib = /usr/share/java
+ groovy.jar = ${plugin.ext.lib}/groovy-all.jar
+ jsyntaxpane.jar = ${plugin.ext.lib}/jsyntaxpane.jar
+--- a/freeplane_plugin_svg/ant/ant.properties
++++ b/freeplane_plugin_svg/ant/ant.properties
+@@ -1,23 +1,18 @@
+-plugin.ext.lib = lib
++plugin.ext.lib = /usr/share/java
+ 
+ # Batik - xml.apache.org SVG Library (batik-all.jar)
+-batik.jars = ${plugin.ext.lib}/batik-awt-util.jar:${plugin.ext.lib}/batik-bridge.jar:${plugin.ext.lib}/batik-css.jar:${plugin.ext.lib}/batik-dom.jar:${plugin.ext.lib}/batik-extension.jar:${plugin.ext.lib}/batik-ext.jar:${plugin.ext.lib}/batik-codec.jar:${plugin.ext.lib}/batik-anim.jar:${plugin.ext.lib}/batik-gui-util.jar:${plugin.ext.lib}/batik-gvt.jar:${plugin.ext.lib}/batik-parser.jar:${plugin.ext.lib}/batik-script.jar:${plugin.ext.lib}/batik-svg-dom.jar:${plugin.ext.lib}/batik-svggen.jar:${plugin.ext.lib}/batik-swing.jar:${plugin.ext.lib}/batik-transcoder.jar:${plugin.ext.lib}/batik-util.jar:${plugin.ext.lib}/batik-xml.jar
++batik.jars = ${plugin.ext.lib}/batik-all.jar
+ 
+ # Rhino - JavaScript engine written in Java
+ js.jar = ${plugin.ext.lib}/js.jar
+ # FOP - XML to PDF Translator (fop.jar)
+-pdf-transcoder.jar = ${plugin.ext.lib}/pdf-transcoder.jar
++pdf-transcoder.jar = ${plugin.ext.lib}/fop.jar
+ 
+-pdf.jars = ${pdf-transcoder.jar}
+-# Possibly also needed to work properly under Debian/Ubuntu:
+-# /usr/share/java/avalon-framework.jar
+-# /usr/share/java/commons-logging.jar
+-# /usr/share/java/commons-io.jar
+-# /usr/share/java/xmlgraphics-commons.jar
++pdf.jars = ${pdf-transcoder.jar}:${plugin.ext.lib}/avalon-framework.jar:${plugin.ext.lib}/commons-logging.jar:${plugin.ext.lib}/commons-io.jar:${plugin.ext.lib}/xmlgraphics-commons.jar
+ 
+ # Xerces2 - Validating XML parser for Java with DOM level 3 support
+ # (xercesImpl.jar and xmlParserAPIs.jar)
+-xerces.jar = ${plugin.ext.lib}/xerces_2_5_0.jar
++xerces.jar = ${plugin.ext.lib}/xercesImpl.jar
+ xml-apis-ext.jar = ${plugin.ext.lib}/xml-apis-ext.jar
+ # Xalan2 - XSL Transformations (XSLT) processor in Java
+ xml-apis.jar = ${plugin.ext.lib}/xml-apis.jar
+--- a/freeplane_plugin_openmaps/ant/ant.properties
++++ b/freeplane_plugin_openmaps/ant/ant.properties
+@@ -1,2 +1,2 @@
+-plugin.ext.lib = lib
+-JMapViewer.jar = ${plugin.ext.lib}/JMapViewer.jar
+\ No newline at end of file
++plugin.ext.lib = /usr/share/java
++JMapViewer.jar = ${plugin.ext.lib}/jmapviewer.jar
+\ No newline at end of file
+--- a/freeplane_plugin_workspace/ant/ant.properties
++++ b/freeplane_plugin_workspace/ant/ant.properties
+@@ -1,3 +1,3 @@
+-plugin.ext.lib = lib
+-jgoodies.jar = ${workspace}/freeplane/dist/org.freeplane.core/lib/forms-1.2.1.jar
+-commons_io.jar = ${workspace}/freeplane/dist/org.freeplane.core/lib/commons-io-2.4.jar
++plugin.ext.lib = /usr/share/java
++jgoodies.jar = ${plugin.ext.lib}/jgoodies-forms.jar
++commons_io.jar = ${plugin.ext.lib}/commons-io.jar

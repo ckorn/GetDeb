@@ -1,0 +1,11 @@
+freeplane for Debian
+--------------------
+
+The latest (stable) version of freeplane can be downloaded from here:
+  http://sourceforge.net/projects/freeplane/files/freeplane%20stable/
+OR using:
+  $ debian/rules get-orig-source
+
+Import using:
+
+gbp import-orig --pristine-tar -u1.3.6.7 ../freeplane_srcpure-1.3.6-beta_pre07.tar.gz

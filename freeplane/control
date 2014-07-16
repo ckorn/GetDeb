@@ -1,0 +1,97 @@
+Source: freeplane
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Felix Natter <fnatter@gmx.net>
+Section: editors
+Priority: optional
+Build-Depends: cdbs,
+               debhelper (>= 9),
+               docbook-xsl,
+               docbook-xml,
+               xsltproc,
+               imagemagick,
+               librsvg2-bin,
+               ant,
+               default-jdk,
+               quilt,
+               jflex
+Build-Depends-Indep: javahelp2,
+                     groovy,
+                     libcommons-lang-java (>= 2.6),
+                     libcommons-io-java,
+                     libjgoodies-forms-java (>= 1.6.0),
+                     simplyhtml (>= 0.16.07),
+                     libbatik-java,
+                     librhino-java,
+                     libfop-java,
+                     libxerces2-java,
+                     libxml-commons-external-java,
+                     libjaxp1.3-java,
+                     libjlatexmath-java (>= 1.0.2),
+                     libknopflerfish-osgi-framework-java,
+                     libjsyntaxpane-java (>= 0.9.6~r156),
+                     libcommons-codec-java (>= 1.7),
+                     libidw-java,
+                     jmapviewer
+Standards-Version: 3.9.5
+Homepage: http://freeplane.org/
+
+Package: freeplane
+Architecture: all
+Depends: ${misc:Depends},
+         default-jre,
+         javahelp2,
+         groovy,
+         libcommons-lang-java (>= 2.6),
+         libcommons-io-java,
+         libjgoodies-forms-java (>= 1.6.0),
+         simplyhtml (>= 0.16.07),
+         libbatik-java,
+         librhino-java,
+         libfop-java,
+         libxerces2-java,
+         libxml-commons-external-java,
+         libjaxp1.3-java,
+         libjlatexmath-java (>= 1.0.2),
+         libknopflerfish-osgi-framework-java,
+         libjsyntaxpane-java (>= 0.9.6~r156),
+         libcommons-codec-java (>= 1.7),
+         libidw-java,
+         jmapviewer,
+         libjortho-freeplane-java (= ${binary:Version})
+Recommends: xdg-utils,
+            java-wrappers
+Description: Java program for working with Mind Maps
+ Freeplane is a free and open source software application that supports
+ thinking, sharing information and getting things done at work, in school
+ and at home. The core of the software is tools for mind mapping (also
+ known as concept mapping or information mapping) and using mapped
+ information.
+ .
+ Occupying the middle ground between an editor and a diagramming tool,
+ Freeplane allows the user to add content as quickly and naturally as they
+ would in a text editor, yet producing structured content that can be
+ manipulated as easily as a diagram.
+ .
+ Features include ordering ideas in nodes and freely positionable
+ nodes, connecting nodes, automatic/conditional styles, scripting,
+ add-ons, LaTeX, search/filtering, different export features, printing,
+ password protection of nodes/maps and more.
+ . 
+ See http://freeplane.sourceforge.net/wiki/index.php/Main_Page for a full
+ list of applications and features.
+
+Package: libjortho-freeplane-java
+Architecture: all
+Section: java
+Depends: ${misc:Depends}
+Provides: libjortho-java
+Description: Java spell-checking library
+ JOrtho (Java Orthography) is a spell-checker entirely written in Java.
+ Its dictionaries are based on the free Wiktionary project and can therefore
+ be updated for virtually any language.
+ .
+ The library works with any JTextComponent from the Swing frame work.
+ This includes JTextPane, JEditorPane and JTextArea.
+ .
+ The version packaged is based on JOrtho 0.4, slightly adapted for the needs
+ of Freeplane. See http://jortho.sourceforge.net/.

@@ -1,0 +1,11 @@
+10_libraries_properties.patch
+15_libraries_manifest.patch
+20_freeplane_sh.patch
+40_no_winmac.patch
+50_no_copy_files.patch
+60_no_license_latex.patch
+70_skip_bugreport.patch
+80_no_update_check.patch
+92_fix_old_manifest.patch
+93_jgoodies1.6.patch
+95_run_jflex.patch
