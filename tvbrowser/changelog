@@ -1,3 +1,9 @@
+tvbrowser (3.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 21 Jul 2014 23:36:52 +0200
+
 tvbrowser (3.3.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
