@@ -1,3 +1,45 @@
+chatty (0.6.7-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    New features:
+    - Added support for some of the BetterTTV emotes
+    - Added feature to ignore indiviual emotes, which makes them not turn
+    into an image (but their code will still show up)
+    - Changed game select dialog to one single list for favorites/search as
+    to not waste so much space
+    - Added setting to change the livestreamer command (so you can also e.g.
+    set the full path to Livestreamer if necessary)
+    - Added option to combine ban messages of the same user within 10
+    seconds, for example "<name> has been banned from talking (3)" means
+    banned 3 times
+    - Added "/ab change" command to add/remove/toggle categories in a single
+    command
+    - Added /uptime command
+    - Added /openUrl and /openUrlPrompt commands (for use in custom commands)
+    - Added ignore setting to not show ignored messages info (count/nick) in
+    chat if the ignored messages dialog is currently open
+
+    Changes:
+    - Live Streams window always on top of main window (seems a bit flickery
+    though)
+    - More Dialogs now closeable with ESC
+    - Added Ctrl+J shortcut for opening Join Dialog
+    - Save Channel Favorites sort order between sessions
+    - Increased number of saved lines per user from 20 to 100
+    - Reorganized Settings Dialog a bit (Usericons/Emoticons on separate
+    pages)
+    - Added context menu to Race Id (blue link) in Race Viewer
+    - Possibly improved debugging of emoticon loading errors a bit
+    - Updated help
+
+    Bugfixes:
+    - Search dialogs (Ctrl+F) fixed for popouts
+    - Fixed error on update notification
+    - Improved API response parsing a little bit
+    - Fixed context menus in Highlights/Ignored Messages dialogs
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 20 Jul 2014 23:41:51 +0200
+
 chatty (0.6.6-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
