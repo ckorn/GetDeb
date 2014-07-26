@@ -1,3 +1,9 @@
+webilder (0.7.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 25 Jul 2014 21:33:05 +0200
+
 webilder (0.7.2-1~getdeb2) trusty; urgency=medium
 
   * Include webilder_unity_indicator executable
