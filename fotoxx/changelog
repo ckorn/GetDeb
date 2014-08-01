@@ -1,3 +1,21 @@
+fotoxx (14.08-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + The user interface for creating or replacing a collection was improved.
+    + Images within a collection can now be rearranged via mouse drag and
+    drop.
+    + New effect: Make Waves: add random waviness to an image or selected
+    area.
+    + The Undo/Redo button combined with the 'A' key is Undo/Redo all edits.
+    + Editing metadata in RAW images is now allowed (restriction was
+    removed).
+    + A few non-obvious dialog controls now have popup tips when moused-over.
+    + Open Previous File retains zoom size/position to facilitate
+    comparisons.
+    + The menu icon size is now adjustable in Tools > User Settings.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Aug 2014 20:51:29 +0200
+
 fotoxx (14.07.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
