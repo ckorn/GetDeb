@@ -1,0 +1,2 @@
+bin/dist/plugins/collaboration/jabber usr/share/freemind/plugins/collaboration
+bin/dist/plugins/CollaborationJabber.xml usr/share/freemind/plugins

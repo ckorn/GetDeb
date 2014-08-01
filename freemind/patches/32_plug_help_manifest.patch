@@ -1,0 +1,18 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:23 +0200
+Subject: 32_plug_help_manifest
+
+---
+ freemind/plugins/help/doc/manifest.mf | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/freemind/plugins/help/doc/manifest.mf b/freemind/plugins/help/doc/manifest.mf
+index 763b061..c946b2f 100644
+--- a/freemind/plugins/help/doc/manifest.mf
++++ b/freemind/plugins/help/doc/manifest.mf
+@@ -1,4 +1,4 @@
+ Main-Class: sunw.demo.jhdemo.Runner
+ Run-Class: sunw.demo.jhdemo.JHLauncher
+-Class-Path: hsviewer.jar jhall.jar doc
++Class-Path: hsviewer.jar /usr/share/java/jhall.jar doc
+ Arguments: -helpset .doc/freemind.hs

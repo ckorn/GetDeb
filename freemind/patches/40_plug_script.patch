@@ -1,0 +1,28 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:23 +0200
+Subject: 40_plug_script
+
+---
+ freemind/plugins/ScriptingEngine.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/freemind/plugins/ScriptingEngine.xml b/freemind/plugins/ScriptingEngine.xml
+index 14eac34..a112046 100644
+--- a/freemind/plugins/ScriptingEngine.xml
++++ b/freemind/plugins/ScriptingEngine.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <plugin label="plugins/ScriptingEngine">
+ 	<plugin_classpath jar="script/scripting_plugin.jar"/>
+-	<plugin_classpath jar="script/groovy-all-1.5.6.jar"/>
++	<plugin_classpath jar="/usr/share/java/groovy.jar"/>
+ 	<plugin_registration class_name="plugins.script.ScriptingRegistration" isPluginBase="true">
+ 		<plugin_mode class_name="freemind.modes.mindmapmode"/>
+ 	</plugin_registration>
+@@ -37,4 +37,4 @@
+         <plugin_property name="ScriptLocation" value="/home/foltin/test.groovy" />
+ 	</plugin_action> 
+ -->
+-</plugin>
+\ No newline at end of file
++</plugin>

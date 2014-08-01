@@ -1,0 +1,3 @@
+bin/dist/doc/*.mm
+bin/dist/doc/*.pdf
+bin/dist/doc/*.odt

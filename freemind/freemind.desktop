@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=FreeMind
+Exec=/usr/bin/freemind
+Terminal=false
+Icon=FreeMindWindowIcon
+Type=Application
+MimeType=application/x-freemind;
+Categories=Office;
+GenericName=FreeMind
+Comment=A free mind mapping tool

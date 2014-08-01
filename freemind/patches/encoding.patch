@@ -1,0 +1,76 @@
+# error: unmappable character for encoding ASCII
+Index: freemind-1.0.1/freemind/accessories/plugins/build.xml
+===================================================================
+--- freemind-1.0.1.orig/freemind/accessories/plugins/build.xml	2014-04-12 20:05:35.000000000 +0200
++++ freemind-1.0.1/freemind/accessories/plugins/build.xml	2014-08-01 22:46:14.166271485 +0200
+@@ -10,7 +10,7 @@
+ 	<target name="build">
+ 		<echo message="Built in Plugins build on path ${basedir}"/>
+ 		<mkdir dir="${build}" />
+-		<javac includeantruntime="false" 	srcdir="${src}"
++		<javac encoding="utf-8" includeantruntime="false" 	srcdir="${src}"
+ 			destdir="${build}"
+ 			debug="${debug}"
+ 		   source="${java_source_version}"
+Index: freemind-1.0.1/freemind/build.xml
+===================================================================
+--- freemind-1.0.1.orig/freemind/build.xml	2014-08-01 22:43:41.262276033 +0200
++++ freemind-1.0.1/freemind/build.xml	2014-08-01 22:45:48.702272242 +0200
+@@ -91,7 +91,7 @@
+ 		<mkdir dir="binding/src" />
+ 		<mkdir dir="binding/run" />
+ 		<mkdir dir="binding/classes" />
+-		<javac includeantruntime="false"  destdir="binding/run" 
++		<javac encoding="utf-8" includeantruntime="false"  destdir="binding/run" 
+ 			srcdir="${src}"
+ 			classpath="${classpath}"
+ 			debug="${debug}"
+@@ -104,7 +104,7 @@
+ 		<!-- Special file for String encoding. -->
+ 		<mkdir dir="binding/src/de/foltin"/>
+ 		<copy  todir="binding/src/de/foltin" file="${src}/de/foltin/StringEncoder.java"/>
+-		<javac includeantruntime="false"  srcdir="binding/src" destdir="binding/classes" source="${java_source_version}" target="${java_target_version}" debug="on" />
++		<javac encoding="utf-8" includeantruntime="false"  srcdir="binding/src" destdir="binding/classes" source="${java_source_version}" target="${java_target_version}" debug="on" />
+ 		<echo message="Running binding compiler..." />
+ 		<bind verbose="false" load="true">
+ 			<bindingfileset dir="binding/src">
+@@ -148,7 +148,7 @@
+ 		</exec>
+ 		<!-- end mac changes. -->
+ 		<mkdir dir="${build}"/>
+-		<javac includeantruntime="false" srcdir="${src}"
++		<javac encoding="utf-8" includeantruntime="false" srcdir="${src}"
+ 			destdir="${build}"
+ 			classpath="${classpath}"
+ 			debug="${debug}"
+@@ -164,7 +164,7 @@
+ 		</javac>
+ 		<!-- Starter should work with java 1.1, too as it checks the java version.-->
+ 		<delete failonerror="false" file="${build}/freemind/main/FreeMindStarter.class"></delete>
+-		<javac includeantruntime="false" 	srcdir="${src}" destdir="${build}" classpath="${classpath}"	debug="${debug}" source="1.3" target="1.1">
++		<javac encoding="utf-8" includeantruntime="false" 	srcdir="${src}" destdir="${build}" classpath="${classpath}"	debug="${debug}" source="1.3" target="1.1">
+ 			<include name="freemind/main/FreeMindStarter.java"/>
+ 		</javac>
+ 		<ant antfile="${acc_build}" target="build"/>
+@@ -173,7 +173,7 @@
+ 
+ 	<target name="build_tests" depends="build">
+ 		<mkdir dir="${testbuild}"/>
+-		<javac includeantruntime="false" srcdir="${src}"
++		<javac encoding="utf-8" includeantruntime="false" srcdir="${src}"
+ 			destdir="${testbuild}"
+ 			debug="${debug}"
+ 		    	source="${java_source_version}"
+Index: freemind-1.0.1/freemind/plugins/build_import.xml
+===================================================================
+--- freemind-1.0.1.orig/freemind/plugins/build_import.xml	2014-04-12 20:05:35.000000000 +0200
++++ freemind-1.0.1/freemind/plugins/build_import.xml	2014-08-01 22:46:02.474271833 +0200
+@@ -5,7 +5,7 @@
+ 		<echo
+ 			message="Plugin ${plugin.dir}."/>
+ 		<mkdir dir="${build}"/>
+-		<javac includeantruntime="false"  srcdir="${src}" destdir="${build}"
++		<javac encoding="utf-8" includeantruntime="false"  srcdir="${src}" destdir="${build}"
+ 			debug="${debug}" source="${java_source_version}"
+ 			target="${java_target_version}">
+ 			<include name="${plugin.dir}/**" />

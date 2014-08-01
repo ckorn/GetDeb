@@ -1,0 +1,263 @@
+This package was debianized by Eric Lavarde <deb@zorglub.s.bawue.de> on
+Mon,  9 Feb 2004 06:14:41 +0100. The packaging itself is placed under
+dual license GPLv2+ and BSD (take what fits your needs).
+
+
+It was downloaded from http://freemind.sourceforge.net/
+
+Upstream Author: Joerg Mueller <joergmueller@bigfoot.com>
+
+FreeMind - A Program for creating and viewing Mindmaps
+Copyright: 2000-2009 Joerg Mueller, Daniel Polansky, Christian Foltin, Dimitri Polivaev and others
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+A copy of the GNU General Public License is available as
+/usr/share/common-licenses/GPL-2 in the Debian GNU/Linux
+distribution or on the World Wide Web at 
+<http://www.gnu.org/copyleft/gpl.html>.
+You can also obtain it by writing to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+A copy of the GNU General Public License is available as
+/usr/share/common-licenses/GPL-2 in the Debian GNU/Linux
+distribution.
+
+
+Files: ./freemind/preferences/layout/*Key*.java
+Copyright: 2000, 2004 Slava Pestov
+License: GPLv2+ (see above)
+
+
+Files: ./freemind/controller/printpreview/*.java:
+Copyright: 2003 Jens Kaiser
+License: LGPLv2+
+
+ *  This program is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Library General Public License
+ *  as published by the Free Software Foundation; either version 2 of
+ *  the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Library General Public License for more details.
+
+A copy of the GNU Library General Public License is available as
+/usr/share/common-licenses/LGPL-2 in the Debian GNU/Linux
+distribution or on the World Wide Web at
+<http://www.gnu.org/copyleft/lgpl.html>.
+You can also obtain it by writing to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+Files: ./freemind/main/FreeMindSplash*.java
+Copyright: 2002 by Thomas Alexandre
+License: GPLv2+ (see above)
+
+
+Files: ./freemind/main/XML*.java
+Copyright: 2000-2002 Marc De Scheemaecker
+License: zlib/libpng
+ * This file is part of NanoXML 2 Lite.
+ * Copyright (C) 2000-2002 Marc De Scheemaecker, All Rights Reserved.
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ *  1. The origin of this software must not be misrepresented; you must not
+ *     claim that you wrote the original software. If you use this software in
+ *     a product, an acknowledgment in the product documentation would be
+ *     appreciated but is not required.
+ *
+ *  2. Altered source versions must be plainly marked as such, and must not be
+ *     misrepresented as being the original software.
+ *
+ *  3. This notice may not be removed or altered from any source distribution.
+
+
+Files: ./freemind/main/*HTML*.java
+Copyright: 2004 Richard "Shred" Koerber <http://www.shredzone.net/>
+License: ?
+ * This is free software. You can modify and use it at will.
+
+
+Files: ./freemind/main/Base64Coding.java
+Copyright: (C) 2001, 2003, 2004, 2006  Free Software Foundation, Inc.
+License: GPLv2+ (see above; with GNU classpath exception, see below)
+
+Linking this library statically or dynamically with other modules is
+making a combined work based on this library.  Thus, the terms and
+conditions of the GNU General Public License cover the whole
+combination.
+
+As a special exception, the copyright holders of this library give you
+permission to link this library with independent modules to produce an
+executable, regardless of the license terms of these independent
+modules, and to copy and distribute the resulting executable under
+terms of your choice, provided that you also meet, for each linked
+independent module, the terms and conditions of the license of that
+module.  An independent module is a module which is not derived from
+or based on this library.  If you modify this library, you may extend
+this exception to your version of the library, but you are not
+obligated to do so.  If you do not wish to do so, delete this
+exception statement from your version.
+
+
+Files: ./freemind/main/ExampleFileFilter.java
+Copyright: (c) 2003 Sun Microsystems, Inc. All  Rights Reserved.
+License: BSD like?
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ * -Redistributions of source code must retain the above copyright
+ *  notice, this list of conditions and the following disclaimer.
+ * 
+ * -Redistribution in binary form must reproduct the above copyright
+ *  notice, this list of conditions and the following disclaimer in
+ *  the documentation and/or other materials provided with the distribution.
+ * 
+ * Neither the name of Sun Microsystems, Inc. or the names of contributors
+ * may be used to endorse or promote products derived from this software
+ * without specific prior written permission.
+ * 
+ * This software is provided "AS IS," without a warranty of any kind. ALL
+ * EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING
+ * ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ * OR NON-INFRINGEMENT, ARE HEREBY EXCLUDED. SUN AND ITS LICENSORS SHALL NOT
+ * BE LIABLE FOR ANY DAMAGES OR LIABILITIES SUFFERED BY LICENSEE AS A RESULT
+ * OF OR RELATING TO USE, MODIFICATION OR DISTRIBUTION OF THE SOFTWARE OR ITS
+ * DERIVATIVES. IN NO EVENT WILL SUN OR ITS LICENSORS BE LIABLE FOR ANY LOST
+ * REVENUE, PROFIT OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,
+ * INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY
+ * OF LIABILITY, ARISING OUT OF THE USE OF OR INABILITY TO USE SOFTWARE, EVEN
+ * IF SUN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * 
+ * You acknowledge that Software is not designed, licensed or intended for
+ * use in the design, construction, operation or maintenance of any nuclear
+ * facility.
+ 
+
+Files: ./freemind/extensions/ImportWizard.java
+Copyright: 1999 Len Trigg (trigg@cs.waikato.ac.nz)
+License: GPLv2+ (see above)
+
+
+Files: ./accessories/plugins/time/J*.java (except JTripleCalendar.java)
+Copyright: 2004 Kai Toedter <kai@toedter.com>
+License: LGPLv2+ (see above)
+
+
+The following files have no copyright/license but are assumed to be under the same
+conditions than the rest of the majority of the source code (GPLv2+):
+
+./freemind/main/LoggingOutputStream.java: *No copyright* UNKNOWN
+./freemind/extensions/StatefulMindMapNodeHookAdapter.java: *No copyright* UNKNOWN
+./freemind/extensions/StatefulNodeHook.java: *No copyright* UNKNOWN
+./freemind/modes/IconInformation.java: *No copyright* UNKNOWN
+./windows-launcher/Freemind.c: *No copyright* UNKNOWN
+./mkdmg.sh: *No copyright* UNKNOWN
+./tests/freemind/SignedScriptTests.java: *No copyright* UNKNOWN
+./plugins/latex/JZoomedHotEqn.java: *No copyright* UNKNOWN
+./plugins/svg/startSquiggle.sh: *No copyright* UNKNOWN
+./plugins/script/ScriptingRegistration.java: *No copyright* UNKNOWN
+./freemind.sh: *No copyright* UNKNOWN
+./accessories/mm2opml.xsl
+./accessories/mm2tji*.xsl
+./accessories/opml2mm.xsl
+
+
+The following license files can be ignored as they refer to Jar files/libraries
+that have been removed from the source code:
+
+./freemind/plugins/latex/Readme.txt
+./freemind/plugins/script/groovy-all-1.5.6-LICENSE.txt
+
+
+File: ./accessories/freemind2html.xsl
+Author:   Markus Brueckner <freemind-xsl@slash-me.net>
+License:  BSD license without advertising clause. (see
+http://www.opensource.org/licenses/bsd-license.php for further details)
+
+Copyright (c) The Regents of the University of California.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of the University nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+
+
+Files: ./accessories/mm2html.xsl ./accessories/mm2latex*.xsl ./accessories/mm2text.xsl
+Author: joerg feuerhake joerg.feuerhake@free-penguin.org
+License: GPL (see above)
+
+
+Files: ./accessories/mm2*_utf8*
+Copyright: Naoki Nose, 2006, and Eric Lavarde, 2008
+License: GPLv2+ (see above)
+
+
+Files: ./accessories/mm2twiki.xsl
+Copyright: Stephen Fitch, 2005
+License: GPL (see above)
+
+
+Files: ./accessories/mm2xbel.xsl ./accessories/xbel2mm.xsl
+Copyright: William McVey <wam@cisco.com>, 2003
+License: GPL (see above)
+
+
+Files: ./accessories/to{x,}html.xsl ./accessories/marktree.js
+Copyright: Miika Nurminen (minurmin@cc.jyu.fi) 2003, 2004
+License: MIT
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.

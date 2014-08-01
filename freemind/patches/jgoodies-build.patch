@@ -1,0 +1,21 @@
+From: Markus Koschany <apo@gambaru.de>
+Date: Fri, 4 Oct 2013 13:12:46 +0200
+Subject: jgoodies build
+
+---
+ freemind/freemind/preferences/layout/OptionPanel.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: freemind-1.0.1/freemind/freemind/preferences/layout/OptionPanel.java
+===================================================================
+--- freemind-1.0.1.orig/freemind/freemind/preferences/layout/OptionPanel.java	2014-07-29 21:09:03.682343412 +0200
++++ freemind-1.0.1/freemind/freemind/preferences/layout/OptionPanel.java	2014-07-29 21:09:45.902342156 +0200
+@@ -406,7 +406,7 @@
+ 			JLabel label = new JLabel(labelText, icon, JLabel.RIGHT);
+ 			label.setToolTipText(pTranslator.getText(getDescription()));
+ 			if (rowSpec == null) {
+-				rowSpec = new RowSpec("fill:20dlu");
++				rowSpec = RowSpec.decode("fill:20dlu");
+ 			}
+ 			if (3 < builder.getColumn()) {
+ 				builder.appendRelatedComponentsGapRow();

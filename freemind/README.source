@@ -1,0 +1,5 @@
+Use the target get-orig-source from debian/rules to create the source file
+within the current directory. The sources will be downloaded from the CVS
+repository of FreeMind, so be prepared.
+
+-- Eric Lavarde <deb@zorglub.s.bawue.de>, Sat, 28 Feb 2009 20:37:14 +0100

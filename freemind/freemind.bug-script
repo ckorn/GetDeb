@@ -1,0 +1,2 @@
+#!/bin/sh
+DEBUG=exit freemind 1>&3 2>&3

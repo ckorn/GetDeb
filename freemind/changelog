@@ -1,0 +1,405 @@
+freemind (1.0.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version (LP: #1342442)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 29 Jul 2014 20:33:05 +0200
+
+freemind (0.9.0+dfsg2-1) unstable; urgency=medium
+
+  * Team upload.
+    - Repack the source tarball and remove visorFreemind.swf.
+      Rebuilding with mtasc is discouraged by the maintainer of mtasc himself.
+    Thanks to bastien ROUCARIES for the report. (Closes: #736105)
+  * Declare compliance with Debian policy 3.9.5.
+
+ -- Markus Koschany <apo@gambaru.de>  Fri, 21 Feb 2014 13:08:55 +0100
+
+freemind (0.9.0+dfsg-3) unstable; urgency=low
+
+  * Team upload.
+  * Bump Standards-Version to 3.9.4, no changes.
+  * Require debhelper >= 9 and bump compat level to 9.
+  * Fix FTBFS with libjgoodies-forms-1.6. (Closes: #713144)
+    - Add jgoodies-forms-1.6.patch.
+    - Add jgoodies-build.patch.
+    - Add java-target-version.patch. Version 1.6 of jgoodies-forms-java
+      requires at least java 1.5.
+    This also fixes various regressions caused by the switch to
+    libjgoodies-forms-java 1.6.
+  * Add file URL list parameter (%U) to freemind.desktop, so users can double
+    click on data files and get the application to open them properly.
+    (Closes: #681219) Thanks to Marc Deslauriers for the report and patch.
+  * debian/control:
+    - freemind: Change Conflicts relation to Breaks and Replaces. Break against
+      a fixed version number and not against a dpkg-control substitution
+      variable.
+    - Use canonical VCS-URI.
+  * Add DEP3 headers to all patches.
+  * Rename 03_freemind_sh.patch to fix-shell-wrapper.patch.
+
+ -- Markus Koschany <apo@gambaru.de>  Fri, 04 Oct 2013 17:35:40 +0200
+
+freemind (0.9.0+dfsg-2) unstable; urgency=low
+
+  * Team upload.
+  * Replace Build-Depends on ant1.7 with ant. (Closes: #640267).
+  * Bump Standards-Version to 3.9.2. No changes were required.
+  * Drop unneeded Build-Depends on quilt.
+  * Add Vcs-* fields.
+  * Switch to default-jdk. (Closes: #640859).
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Wed, 07 Sep 2011 19:59:41 -0430
+
+freemind (0.9.0+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * Explicitly ask java-wrappers for java6 environment.
+  * Removed libcommons-lang-java as (build) dependency.
+  * Added DEBUG_WRAPPER hook in freemind.sh.
+  * Added reportbug hook script to get more information from users.
+  * Bumped standard from 3.8.4.0 to 3.9.1.0 (had to include BSD license text
+    into copyright file).
+  * Added upstream changelog 'history.txt' to freemind's docs.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 26 Feb 2011 10:27:39 +0100
+
+freemind (0.9.0~rc7+dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+  * Recommend and use (if present) java-wrappers + remove java2-runtime
+    and Java5 dependencies (Closes: #573875).
+  * Use directly uscan to download and repackage upstream sources.
+  * Bump policy version from 3.8.3 to 3.8.4 (no changes)
+  * Switch to source format 3.0 (thanks to Torsten Werner).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 08 May 2010 15:32:28 +0200
+
+freemind (0.9.0~rc6+dfsg-3) unstable; urgency=low
+
+  * Build depend on Ant (optional) 1.7 to avoid FTBFS with Ant 1.8
+    (Closes: #571376).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 13 Mar 2010 11:38:03 +0100
+
+freemind (0.9.0~rc6+dfsg-2) unstable; urgency=low
+
+  * Change JiBX dependency to libjibx1.1-java (or libjibx-java 1.1.x for
+    Ubuntu), and adapt patches to use 1.1.6a versioned jar files
+    (Closes: #568664, #568666).
+  * Fix obsolete-relation-form-in-source in freemind depends: simplyhtml
+    (> 0.13).
+  * Improve existing MIME support and add MIME support for KDE3
+    (Closes: #296258).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 05 Dec 2009 14:28:10 +0100
+
+freemind (0.9.0~rc6+dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+  * Suppress build dependency on xsd2jibx, thanks to Upstream change.
+  * Bumped policy version to 3.8.3.0 without changes. I left 'editors' as
+    section because I understand that 'java' would be for programming
+    related packages, whereas FreeMind is for end-users.
+  * Remove call to obsoleted dh_desktop from debian/rules.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 07 Nov 2009 11:02:07 +0100
+
+freemind (0.9.0~rc4-1) unstable; urgency=low
+
+  * New upstream version.
+  * Add Mozilla 1.1 version file (ftpmaster request).
+  * Bump policy version from 3.8.0 to 3.8.1 (no changes)
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun, 24 May 2009 08:33:51 +0200
+
+freemind (0.9.0~rc1-3) unstable; urgency=low
+
+  * Add Classpath exception statement and hint about orphan license files
+    to copyright file (ftpmaster request).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun, 05 Apr 2009 16:22:30 +0200
+
+freemind (0.9.0~rc1-2) unstable; urgency=low
+
+  * Add XSL files from accessories to copyright file (ftpmaster request).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun, 08 Mar 2009 12:40:49 +0100
+
+freemind (0.9.0~rc1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Move FreeMind to "Applications/Office" section in the menu.
+  * Bump policy version to 3.8.0 (Homepage field, README.source)
+  * Remove urlsee (replaced simply by xdg-open).
+  * Move all documentation (.mm, .pdf, .odt) to new freemind-doc package.
+  * Bug fixes:
+    + Desktop integration (Closes: #296258).
+    + Latest version packaged (Closes: #485629).
+    + Using OpenJDK and moving to main (Closes: #490623, #466303, #515107).
+  * Add javahelp2 dependencies and patches, now that it's in Debian.
+  * Replace libforms-java through libjgoodies-forms-java in dependencies.
+  * Remove unneeded patch to FreeMind resource file.
+  * The responsibilities between batik and fop regarding PDF transcoding
+    seem to have changed, adding fop as recommended dependency.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun, 01 Mar 2009 00:49:27 +0100
+
+freemind (0.9.0~beta9-2) experimental; urgency=low
+
+  * Added SimplyHTML and gnuregexp to FreeMind's classpath.
+  * Added forgotten dependency to SimplyHTML.
+  * Use ${binary:Version} for plugin dependencies on freemind.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Fri, 23 Mar 2007 18:04:36 +0100
+
+freemind (0.9.0~beta9-1) experimental; urgency=low
+
+  * Continuing tests.
+  * Bumped policy version to 3.7.2.2 (no changes required).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 10 Mar 2007 16:04:24 +0100
+
+freemind (0.8.0+01-4) unstable; urgency=low
+
+  * Corrected polish translation (thanks to hekto5 on sf.net).
+  * Add debug dpkg/rpm information and check for Sun/Blackdown VM in
+    freemind.sh.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Wed,  9 Nov 2005 17:07:52 +0000
+
+freemind (0.8.0+01-3) unstable; urgency=low
+
+  * Introduce usage of commons-codec to replace sun.misc.Base64Encoder/Decoder.
+  * Set java source and target version to 1.3 in order to avoid warnings from
+    jikes.
+  * Suppress useless import of sun.java2d.loops.FontInfo from
+    FontSizeAction.java.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun,  6 Nov 2005 16:02:33 +0000
+
+freemind (0.8.0+01-2) unstable; urgency=low
+
+  * Made the freemind.sharedmimeinfo file multi-lingual.
+  * Improved French traduction.
+  * corrected urlsee to send output to /tmp/urlsee.log when DEBUG is
+    defined because FreeMind discards all output.
+  * corrected urlsee to transform %20 into <space> when using 'see' or
+    other local command.
+  * Corrected the polish translation (it's neither complete nor
+    guaranteed correct but at least it loads).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun,  6 Nov 2005 15:20:01 +0000
+
+freemind (0.8.0+01-1) unstable; urgency=low
+
+  * Adding avalon-framework, commons-io, commons-logging to svg plugin
+    classpath for fop-transcoder to work.
+  * removing pdf-transcoder.jar from source package.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 22 Oct 2005 15:11:13 +0000
+
+freemind (0.8.0-2) unstable; urgency=low
+
+  * replaced gnujaxp through xmlParserAPIs in rules file (thanks to WBaer).
+  * included use of fop-transcoder from libbatik-java >= 1.6.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Fri, 21 Oct 2005 07:47:07 +0000
+
+freemind (0.8.0-1) unstable; urgency=low
+
+  * Finalized upstream version.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Wed,  7 Sep 2005 18:49:37 +0200
+
+freemind (0.7.9.rc5-4) unstable; urgency=low
+
+  * Bug fixing: link to freemind.jar had old version and forgot to fully
+    remove forms.jar from package.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 27 Aug 2005 12:23:35 +0200
+
+freemind (0.7.9.rc5-3) unstable; urgency=low
+
+  * Moved to policy 3.6.2.0 (no change required).
+  * Introduced dependency to libforms-java.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Thu, 18 Aug 2005 17:04:18 +0200
+
+freemind (0.7.9.rc5-2) unstable; urgency=low
+
+  * Migrating to cdbs system.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Thu, 18 Aug 2005 16:24:16 +0200
+
+freemind (0.7.9.rc5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Tue, 19 Jul 2005 14:11:14 +0200
+
+freemind (0.7.9.rc4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Tue,  5 Jul 2005 11:27:24 +0200
+
+freemind (0.7.9.rc3-2) unstable; urgency=low
+
+  * Fixed some warnings from docbook-to-man concerning freemind.sgml.
+  * Simplified all debian/freemind-plugins-*.install files.
+  * Added new package freemind-plugins-collab-jabber for collaboration
+    through jabber.
+  * Removed need for replacement variables in freemind.properties and
+    user.properties as it becomes more complicated than it brings anything.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Tue, 24 May 2005 19:50:42 +0200
+
+freemind (0.7.9.rc3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sun, 22 May 2005 17:08:09 +0200
+
+freemind (0.7.9.rc2-4) unstable; urgency=low
+
+  * Got the hint that I was compiling against the wrong libraries (thanks
+    to Wolfgang).
+  * Fixed small dependencies and recommends glitches.
+  * Remove jhall (non free) from source and binary packages.
+  * Added urlsee as 'default_browser_command_other_os' default (i.e. the
+    command used by FreeMind to display links and files). Manpage included.
+  * Source for freemind.1 is now SGML based.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Wed, 16 Mar 2005 20:37:40 +0100
+
+freemind (0.7.9.rc2-3) unstable; urgency=low
+
+  * Added alternative dependencies for Java 1.5.
+  * Replaced some more jars through dependencies on librelaxng-datatype-
+    java, libjaxp1.2-java, libcommons-lang-java.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Fri,  4 Mar 2005 20:31:28 +0100
+
+freemind (0.7.9.rc2-2) unstable; urgency=low
+
+  * Replaced jar files from svg plugin through standard jars from
+    libxerces2-java, libbatik-java and rhino
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Tue,  1 Mar 2005 20:20:25 +0100
+
+freemind (0.7.9.rc2-1) unstable; urgency=low
+
+  * New upstream release
+  * Added package freemind-plugins-time
+  * Added freedesktop support (closes: #296258)
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Mon, 28 Feb 2005 20:38:33 +0100
+
+freemind (0.7.9.rc1-3) unstable; urgency=low
+
+  * Modified dependencies to non-free Java implementations, Sun and Blackdown
+    packaged with java-package (Closes: #291946, #292182).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat,  5 Feb 2005 12:11:32 +0100
+
+freemind (0.7.9.rc1-2) unstable; urgency=low
+
+  * Move 'accessories' to usr/share/freemind for exports.
+  * Add -Dfreemind.base.dir to freemind.sh for FreeMind to find plugins and
+    accessories.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Fri, 14 Jan 2005 20:32:39 +0100
+
+freemind (0.7.9.rc1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Tue, 11 Jan 2005 20:12:57 +0100
+
+freemind (0.7.9.beta4-1) unstable; urgency=low
+
+  * New upstream release
+  * Added packages freemind-browser, freemind-plugins-help and freemind-
+    plugins-svg.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat,  8 Jan 2005 20:00:00 +0100
+
+freemind (0.7.1-6) unstable; urgency=low
+
+  * Added "gtk" as LookAndFeel possibility, as well as the possibility to
+    enter directly the Look&Feel class name (Closes: #288512).
+  * Renamed 'enum' to 'enumerator' in XMLElement.java; this is _not_ a promise
+    to support Java 1.5, Java 1.5 support will come only officially with
+    version >= 0.8.0 (Closes: #288506).
+  * Removed JAVA_HOME from debian/rules (Closes: #288505).
+  * Removed bashisms from freemind.sh, making it POSIX conform (Closes:
+    #289067).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat,  8 Jan 2005 19:37:05 +0100
+
+freemind (0.7.1-5) unstable; urgency=low
+
+  * minor changes towards Debian conformity, no end-user change.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 20 Nov 2004 22:10:14 +0100
+
+freemind (0.7.1-4) unstable; urgency=low
+
+  * Prepare for upload.
+  * Upgrade to policy standard 3.6.1.0.
+  * Enhanced description.
+  * Dependencies and jar location conform to Java Policy.
+  * use xpm instead of png icon to be policy conform.
+  * moved mm2xbel.xsl and xbel2mm.xsl to doc directory with README.Debian.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Mon, 15 Nov 2004 20:55:47 +0100
+
+freemind (0.7.1-3) unstable; urgency=low
+
+  * Upgrade freemind.sh to better find the java binary (Thanks to Jan Schulz
+    again) and copy patterns.xml to user directory.
+  * Updated man page to document all environment variables and files
+    used by freemind start script.
+  * Remove user.properties because freemind does create it itself now
+    (removes need for /etc/skel files and README.Debian).
+  * Changed subsection from 'editor' to 'text' to be consistent with
+    menu.
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat, 19 Jun 2004 22:41:56 +0200
+
+freemind (0.7.1-2) unstable; urgency=low
+
+  * Adding icon to menu entry.
+  * Small fixes of the manpage.
+  * Changed to patches as sent to upstream team.
+  * Added mime-type application/x-freemind.
+  * Some changes thanks to Jan Schulz:
+    - Set mozilla | www-browser as Recommend field.
+    - JAVA_HOME can now be overwritten (change to rules).
+    - Added new property 'browser_other' for mozilla vs. sensible-browser
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Sat,  1 May 2004 12:40:50 +0200
+
+freemind (0.7.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Changed 'src' to 'freemind' in source tree.
+  * Slight change to man page.
+  * Lookandfeel now remains to default (not windows or metal anymore).
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Mon,  1 Mar 2004 06:48:06 +0100
+
+freemind (0.6.7-1) unstable; urgency=low
+
+  * Initial Release.
+  * This is my first Debian package (following maint-guide's
+    recommendation ;-)
+  * removed *.bak files
+  * modified freemind.properties and user.properties:
+    - properties_folder from freemind to .freemind
+    - modified lookandfeel from windows to metal
+    - adapted docmapurl and browsemode_initial_map to Debian dir structure
+  * made freemin.sh able to start from everywhere
+
+ -- Eric Lavarde <deb@zorglub.s.bawue.de>  Tue, 17 Feb 2004 23:24:49 +0100
+

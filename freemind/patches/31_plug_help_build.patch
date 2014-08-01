@@ -1,0 +1,27 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:23 +0200
+Subject: 31_plug_help_build
+
+---
+ freemind/plugins/build_help.xml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/freemind/plugins/build_help.xml b/freemind/plugins/build_help.xml
+index 42bc699..15e1752 100644
+--- a/freemind/plugins/build_help.xml
++++ b/freemind/plugins/build_help.xml
+@@ -5,10 +5,10 @@
+ 	<property name="local.plugin.dir" location="${src}/${plugin.dir}"/>
+ 	<property name="plugin.jar" value="help_plugin.jar" />
+ 	<property name="plugin.zip" value="help_plugin-${ver}.zip" />
+-	<property name="additional.lib" value="${local.plugin.dir}/jhall.jar"/>
+-	<property name="additional.lib.pattern" value="${plugin.dir}/jhall.jar"/>
++	<property name="additional.lib" value="/usr/share/java/jhall.jar"/>
++	<property name="additional.lib.pattern" value="/usr/share/java/jhall.jar"/>
+ 
+ 	<import file="build_import.xml" />
+ 
+ 
+-</project>
+\ No newline at end of file
++</project>

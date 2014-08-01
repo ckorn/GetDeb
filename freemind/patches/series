@@ -1,0 +1,17 @@
+01_build_xml.patch
+02_build_xml_jibx.patch
+fix-shell-wrapper.patch
+05_freemind_sh_wrapper.patch
+10_plug_collab_jabber.patch
+11_plug_collab_jabber_build.patch
+20_plug_svg.patch
+21_plug_svg_build.patch
+30_plug_help.patch
+31_plug_help_build.patch
+32_plug_help_manifest.patch
+40_plug_script.patch
+41_plug_script_build.patch
+50_plug_latex_off.patch
+jgoodies-build.patch
+jgoodies-forms-1.6.patch
+encoding.patch

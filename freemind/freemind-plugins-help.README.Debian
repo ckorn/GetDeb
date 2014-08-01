@@ -1,0 +1,8 @@
+freemind-plugins-help for Debian
+--------------------------------
+
+This plugin will only work if you download JavaHelp (non free) from
+http://java.sun.com/products/javahelp/ and copy jhall.jar to
+/usr/local/share/java.
+
+-- Eric Lavarde <deb@zorglub.s.bawue.de>, Tue, 15 Mar 2005 20:30:14 +0100

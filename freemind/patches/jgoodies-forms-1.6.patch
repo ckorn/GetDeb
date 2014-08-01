@@ -1,0 +1,103 @@
+From: Markus Koschany <apo@gambaru.de>
+Date: Fri, 4 Oct 2013 13:17:20 +0200
+Subject: jgoodies forms 1.6
+
+---
+ .../accessories/plugins/dialogs/ManagePatternsPopupDialog.java    | 4 ++--
+ freemind/accessories/plugins/time/TimeList.java                   | 8 ++++----
+ freemind/freemind/preferences/layout/OptionPanel.java             | 4 ++--
+ freemind/plugins/collaboration/database/DatabaseBasics.java       | 4 ++--
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+
+Index: freemind-1.0.1/freemind/accessories/plugins/dialogs/ManagePatternsPopupDialog.java
+===================================================================
+--- freemind-1.0.1.orig/freemind/accessories/plugins/dialogs/ManagePatternsPopupDialog.java	2014-07-29 21:10:12.598341362 +0200
++++ freemind-1.0.1/freemind/accessories/plugins/dialogs/ManagePatternsPopupDialog.java	2014-07-29 21:13:03.450336279 +0200
+@@ -58,7 +58,7 @@
+ import javax.swing.event.ListSelectionEvent;
+ import javax.swing.event.ListSelectionListener;
+ 
+-import com.jgoodies.forms.factories.ButtonBarFactory;
++import com.jgoodies.forms.builder.ButtonBarBuilder;
+ 
+ import freemind.common.TextTranslator;
+ import freemind.controller.StructuredMenuHolder;
+@@ -462,8 +462,7 @@
+ 			jContentPane.add(mSplitPane, new GridBagConstraints(0, 0, 2, 1,
+ 					1.0, 8.0, GridBagConstraints.WEST, GridBagConstraints.BOTH,
+ 					new Insets(0, 0, 0, 0), 0, 0));
+-			jContentPane.add(ButtonBarFactory.buildOKCancelBar(
+-					getJCancelButton(), getJOKButton()),
++			jContentPane.add(new ButtonBarBuilder().addGlue().addButton(getJCancelButton(), getJOKButton()).build(),
+ 					new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
+ 							GridBagConstraints.EAST, GridBagConstraints.NONE,
+ 							new Insets(0, 0, 0, 0), 0, 0));
+Index: freemind-1.0.1/freemind/freemind/preferences/layout/OptionPanel.java
+===================================================================
+--- freemind-1.0.1.orig/freemind/freemind/preferences/layout/OptionPanel.java	2014-07-29 21:10:12.598341362 +0200
++++ freemind-1.0.1/freemind/freemind/preferences/layout/OptionPanel.java	2014-07-29 21:10:12.594341362 +0200
+@@ -48,8 +48,8 @@
+ import javax.swing.UIManager;
+ import javax.swing.UIManager.LookAndFeelInfo;
+ 
++import com.jgoodies.forms.builder.ButtonBarBuilder;
+ import com.jgoodies.forms.builder.DefaultFormBuilder;
+-import com.jgoodies.forms.factories.ButtonBarFactory;
+ import com.jgoodies.forms.layout.FormLayout;
+ import com.jgoodies.forms.layout.RowSpec;
+ 
+@@ -238,7 +238,7 @@
+ 		});
+ 		frame.getRootPane().setDefaultButton(okButton);
+ 		frame.getContentPane().add(
+-				ButtonBarFactory.buildOKCancelBar(cancelButton, okButton),
++				new ButtonBarBuilder().addGlue().addButton(cancelButton, okButton).build(),
+ 				BorderLayout.SOUTH);
+ 	}
+ 
+Index: freemind-1.0.1/freemind/plugins/collaboration/database/DatabaseBasics.java
+===================================================================
+--- freemind-1.0.1.orig/freemind/plugins/collaboration/database/DatabaseBasics.java	2014-07-29 21:10:12.598341362 +0200
++++ freemind-1.0.1/freemind/plugins/collaboration/database/DatabaseBasics.java	2014-07-29 21:10:12.594341362 +0200
+@@ -42,8 +42,8 @@
+ import javax.swing.JDialog;
+ import javax.swing.WindowConstants;
+ 
++import com.jgoodies.forms.builder.ButtonBarBuilder;
+ import com.jgoodies.forms.builder.DefaultFormBuilder;
+-import com.jgoodies.forms.factories.ButtonBarFactory;
+ import com.jgoodies.forms.layout.FormLayout;
+ 
+ import freemind.common.NumberProperty;
+@@ -216,7 +216,7 @@
+ 			});
+ 			getRootPane().setDefaultButton(mOkButton);
+ 			getContentPane().add(
+-					ButtonBarFactory.buildOKCancelBar(cancelButton, mOkButton),
++					new ButtonBarBuilder().addGlue().addButton(cancelButton, mOkButton).build(),
+ 					BorderLayout.SOUTH);
+ 			setTitle("Enter Password Dialog");
+ 			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+Index: freemind-1.0.1/freemind/plugins/collaboration/socket/SocketBasics.java
+===================================================================
+--- freemind-1.0.1.orig/freemind/plugins/collaboration/socket/SocketBasics.java	2014-04-12 20:05:35.000000000 +0200
++++ freemind-1.0.1/freemind/plugins/collaboration/socket/SocketBasics.java	2014-07-29 21:17:08.874328979 +0200
+@@ -40,8 +40,8 @@
+ import javax.swing.JDialog;
+ import javax.swing.WindowConstants;
+ 
++import com.jgoodies.forms.builder.ButtonBarBuilder;
+ import com.jgoodies.forms.builder.DefaultFormBuilder;
+-import com.jgoodies.forms.factories.ButtonBarFactory;
+ import com.jgoodies.forms.layout.FormLayout;
+ 
+ import freemind.common.NumberProperty;
+@@ -226,7 +226,7 @@
+ 			});
+ 			getRootPane().setDefaultButton(mOkButton);
+ 			getContentPane().add(
+-					ButtonBarFactory.buildOKCancelBar(cancelButton, mOkButton),
++					new ButtonBarBuilder().addGlue().addButton(cancelButton, mOkButton).build(),
+ 					BorderLayout.SOUTH);
+ 			setTitle("Enter Password Dialog");
+ 			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);

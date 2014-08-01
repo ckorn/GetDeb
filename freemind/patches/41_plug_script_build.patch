@@ -1,0 +1,25 @@
+From: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Date: Fri, 4 Oct 2013 13:10:24 +0200
+Subject: 41_plug_script_build
+
+---
+ freemind/plugins/build_scripting.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/freemind/plugins/build_scripting.xml b/freemind/plugins/build_scripting.xml
+index 9b9c650..3786792 100644
+--- a/freemind/plugins/build_scripting.xml
++++ b/freemind/plugins/build_scripting.xml
+@@ -5,9 +5,9 @@
+ 	<property name="local.plugin.dir" location="${src}/plugins/script"/>
+ 	<property name="plugin.jar" value="scripting_plugin.jar" />
+ 	<property name="plugin.zip" value="scripting_plugin-${ver}.zip" />
+-	<property name="additional.lib" location="${local.plugin.dir}/groovy-all-1.5.6.jar"/>
++	<property name="additional.lib" value="/usr/share/java/groovy.jar"/>
+ 	
+ 	<property name="additional.lib.pattern" value="${plugin.dir}/*.jar"/>
+ 
+ 	<import file="build_import.xml" />
+-</project>
+\ No newline at end of file
++</project>

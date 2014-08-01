@@ -1,0 +1,3 @@
+?package(freemind):needs="X11" section="Applications/Office"\
+  icon="/usr/share/pixmaps/FreeMindWindowIcon.xpm"\
+  title="FreeMind" command="/usr/bin/freemind"
