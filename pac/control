@@ -32,7 +32,8 @@ Depends: ${perl:Depends},
          telnet,
          rdesktop,
          gtk2-engines-pixbuf,
-         libgtk2-appindicator-perl
+         libgtk2-appindicator-perl,
+         libgtk2-unique-perl
 Description: Perl Auto Connector
  PAC is a Perl/GTK GNOME replacement for SecureCRT/Putty/etc...
  It provides a GUI to configure SSH/Telnet connections:

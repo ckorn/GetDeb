@@ -1,3 +1,9 @@
+pac (4.5.4-1~getdeb2) trusty; urgency=medium
+
+  * Add dependency on libgtk2-unique-perl
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Aug 2014 20:33:58 +0200
+
 pac (4.5.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
