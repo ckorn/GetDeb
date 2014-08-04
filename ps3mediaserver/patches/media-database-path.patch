@@ -1,0 +1,15 @@
+Description: Change default database dir from ./database to /var/lib/ps3mediaserver/database-$(USER)
+Author: Papa Issa DIAKHATE <paissad@gmail.com>
+Index: ps3mediaserver-1.90.1/src/main/java/net/pms/dlna/DLNAMediaDatabase.java
+===================================================================
+--- ps3mediaserver-1.90.1.orig/src/main/java/net/pms/dlna/DLNAMediaDatabase.java	2014-08-02 21:33:37.154062649 +0200
++++ ps3mediaserver-1.90.1/src/main/java/net/pms/dlna/DLNAMediaDatabase.java	2014-08-02 21:33:37.150062649 +0200
+@@ -84,7 +84,7 @@
+ 	private final int SIZE_GENRE = 64;
+ 
+ 	public DLNAMediaDatabase(String name) {
+-		String dir = "database";
++		String dir = "/var/lib/ps3mediaserver/database-" + System.getProperty("user.name");
+ 		dbName = name;
+ 		File fileDir = new File(dir);
+ 

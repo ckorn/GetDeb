@@ -1,0 +1,27 @@
+# add missing linker lib
+Index: ps3mediaserver-1.90.1/contrib/mplayer-configure.patch
+===================================================================
+--- ps3mediaserver-1.90.1.orig/contrib/mplayer-configure.patch	2013-08-17 16:52:16.000000000 +0200
++++ ps3mediaserver-1.90.1/contrib/mplayer-configure.patch	2014-08-03 23:25:40.686736929 +0200
+@@ -252,7 +252,7 @@
+  EOF
+    _x264=no
+ -  for ld_x264 in "-lx264 $ld_pthread" "-lx264 $ld_pthread" ; do
+-+  for ld_x264 in "-lx264 $ld_pthread" "-lx264 -lm $ld_pthread" ; do
+++  for ld_x264 in "-lx264 $ld_pthread" "-lx264 -lm -ldl $ld_pthread" ; do
+      cc_check $ld_x264 && libs_mencoder="$libs_mencoder $ld_x264" && _x264=yes && break
+    done
+  fi
+Index: ps3mediaserver-1.90.1/target/bin-tools/src/ffmpeg/configure
+===================================================================
+--- ps3mediaserver-1.90.1.orig/target/bin-tools/src/ffmpeg/configure	2014-08-02 22:48:46.000000000 +0200
++++ ps3mediaserver-1.90.1/target/bin-tools/src/ffmpeg/configure	2014-08-03 23:26:01.150736754 +0200
+@@ -3242,7 +3242,7 @@
+                                 die "ERROR: libvpx decoder version must be >=0.9.1"; }
+     enabled libvpx_encoder && { check_lib2 "vpx/vpx_encoder.h vpx/vp8cx.h" "vpx_codec_enc_init_ver VPX_CQ" -lvpx ||
+                                 die "ERROR: libvpx encoder version must be >=0.9.6"; } }
+-enabled libx264    && require  libx264 x264.h x264_encoder_encode -lx264 &&
++enabled libx264    && require  libx264 x264.h x264_encoder_encode -lx264 -ldl &&
+                       { check_cpp_condition x264.h "X264_BUILD >= 118" ||
+                         die "ERROR: libx264 version must be >= 0.118."; }
+ enabled libxavs    && require  libxavs xavs.h xavs_encoder_encode -lxavs

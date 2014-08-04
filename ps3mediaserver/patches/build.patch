@@ -1,0 +1,67 @@
+Index: ps3mediaserver-1.90.1/contrib/binaries-deps-versions
+===================================================================
+--- ps3mediaserver-1.90.1.orig/contrib/binaries-deps-versions	2014-08-02 22:52:01.000000000 +0200
++++ ps3mediaserver-1.90.1/contrib/binaries-deps-versions	2014-08-02 23:11:00.681888819 +0200
+@@ -45,3 +45,4 @@
+ VERSION_XVID=1.3.2
+ VERSION_ZLIB=1.2.7
+ VERSION_YASM=1.2.0
++VERSION_JASPER=1.900.1
+Index: ps3mediaserver-1.90.1/contrib/build-pms-binaries.sh
+===================================================================
+--- ps3mediaserver-1.90.1.orig/contrib/build-pms-binaries.sh	2013-08-17 16:52:16.000000000 +0200
++++ ps3mediaserver-1.90.1/contrib/build-pms-binaries.sh	2014-08-03 02:46:52.681503532 +0200
+@@ -639,6 +639,28 @@
+     cd $WORKDIR
+ }
+ 
++##########################################
++# Jasper
++# http://www.ece.uvic.ca/~frodo/jasper/#download
++#
++build_jasper() {
++	start_build jasper
++	cd $BUILD
++
++	if [ ! -d jasper-$VERSION_JASPER ]; then
++		$UNZIP $SRC/jasper-$VERSION_JASPER.zip
++		exit_on_error
++	fi
++
++	cd jasper-$VERSION_JASPER
++	set_flags
++	./configure --disable-shared --enable-static --disable-dependency-tracking --prefix=$TARGET
++	exit_on_error
++	$MAKE -j$THREADS
++	exit_on_error
++	$MAKE install
++}
++
+ 
+ ##########################################
+ # DCRAW
+@@ -659,7 +681,7 @@
+     if is_osx; then
+       $GCC -O4 -o dcraw dcraw.c -lm -ljpeg -DNO_LCMS $CFLAGS -L$TARGET/lib
+     else
+-      $GCC -O4 -static -Wl,--strip-all -o dcraw dcraw.c -lm -ljpeg -DNO_LCMS $CFLAGS -L$TARGET/lib
++      $GCC -O4 -static -Wl,--strip-all -o dcraw dcraw.c -ljasper -lm -ljpeg -DNO_LCMS $CFLAGS -L$TARGET/lib
+     fi    
+     exit_on_error
+     createdir $TARGET/bin
+@@ -1429,6 +1451,7 @@
+                 --disable-win32dll --disable-smb --disable-ladspa --disable-librtmp  \
+                 --disable-gif --disable-tga --disable-md5sum --disable-pnm \
+                 --with-freetype-config=$TARGET/bin/freetype-config \
++                --extra-cflags="$CFLAGS" --extra-ldflags="$LDFLAGS" \
+                 --prefix=$TARGET
+     fi
+ 
+@@ -1743,6 +1766,7 @@
+ 
+ # Build tools for including with PS3 Media Server
+ build_flac
++build_jasper
+ build_dcraw
+ build_tsmuxer
+ build_ffmpeg

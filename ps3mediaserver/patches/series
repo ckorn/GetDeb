@@ -1,0 +1,12 @@
+project-properties.patch
+PMS.conf.patch
+path-to-mediainfo-lib.patch
+debug-log-path.patch
+autoupdate-and-confdir.patch
+media-database-path.patch
+remove-unstable-warning.patch
+PMS.sh.patch
+add-ant-build.patch
+versions.patch
+build.patch
+configure.patch

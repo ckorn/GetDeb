@@ -1,0 +1,21 @@
+Index: ps3mediaserver-1.90.1/src/main/java/net/pms/dlna/MediaInfo.java
+===================================================================
+--- ps3mediaserver-1.90.1.orig/src/main/java/net/pms/dlna/MediaInfo.java	2014-08-02 21:29:42.866069618 +0200
++++ ps3mediaserver-1.90.1/src/main/java/net/pms/dlna/MediaInfo.java	2014-08-02 21:30:19.734068522 +0200
+@@ -46,15 +46,8 @@
+ 			libraryName = "mediainfo";
+ 		}
+ 
+-		// libmediainfo for Linux depends on libzen
+ 		if (!Platform.isWindows() && !Platform.isMac()) {
+-			try {
+-				// We need to load dependencies first, because we know where our native libs are (e.g. Java Web Start Cache).
+-				// If we do not, the system will look for dependencies, but only in the library path.
+-				NativeLibrary.getInstance("zen");
+-			} catch (LinkageError e) {
+-				logger.warn("Error loading libzen: " + e.getMessage());
+-			}
++			NativeLibrary.addSearchPath(libraryName, "/usr/lib/ps3mediaserver/");
+ 		}
+ 	}
+ 
