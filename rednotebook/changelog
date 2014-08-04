@@ -1,3 +1,13 @@
+rednotebook (1.8.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Do not show new version dialog if latest version cannot be determined
+    (lp:1324126).
+    * Fix date formatting for invalid locale encodings.
+    * Add necessary library files for spell-checking on Windows (lp:1331876).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 03 Aug 2014 23:48:28 +0200
+
 rednotebook (1.8.0-1~getdeb1) precise; urgency=low
 
   * New upstream version
