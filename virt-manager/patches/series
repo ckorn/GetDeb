@@ -3,3 +3,4 @@ more_helpful_error_message.patch
 use_ubuntu_package_names.patch
 uefi_support.patch
 leave-mnemonics-alone-on-focus-change.patch
+gtk_settings_graphical_console.patch

@@ -1,0 +1,18 @@
+# virt-manager graphical console not displayed when opening the details display
+# https://bugs.launchpad.net/getdeb.net/+bug/1355289
+diff -rupN virt-manager-1.0.1.orig/virtManager/console.py virt-manager-1.0.1/virtManager/console.py
+--- virt-manager-1.0.1.orig/virtManager/console.py	2014-08-11 18:14:12.900056511 +0200
++++ virt-manager-1.0.1/virtManager/console.py	2014-08-11 18:15:22.088058155 +0200
+@@ -1401,10 +1401,10 @@ class vmmConsolePages(vmmGObjectUI):
+                 vmmConsolePages.connected_viewers -= 1
+                 if vmmConsolePages.connected_viewers == 0:
+                     if self.gtk_settings_mnemonic is not None:
+-                        gtk.settings_get_default().set_property("gtk-enable-mnemonics", self.gtk_settings_mnemonic)
++                        Gtk.Settings.get_default().set_property("gtk-enable-mnemonics", self.gtk_settings_mnemonic)
+             elif not self._viewer_connected and val:
+                 if vmmConsolePages.connected_viewers == 0:
+-                    settings = gtk.settings_get_default()
++                    settings = Gtk.Settings.get_default()
+                     if has_property(settings, "gtk-enable-mnemonics"):
+                         self.gtk_settings_mnemonic = settings.get_property("gtk-enable-mnemonics")
+                         settings.set_property("gtk-enable-mnemonics", False)
