@@ -13,11 +13,11 @@ Signed-off-by: Adrian Perez <adrianperez.deb@gmail.com>
  org/gudy/azureus2/update/CoreUpdateChecker.java    |    5 ++++-
  4 files changed, 21 insertions(+), 6 deletions(-)
 
-Index: azureus-4.9.0.0/com/aelitis/azureus/ui/swt/Initializer.java
+Index: azureus-5.4.0.0/com/aelitis/azureus/ui/swt/Initializer.java
 ===================================================================
---- azureus-4.9.0.0.orig/com/aelitis/azureus/ui/swt/Initializer.java	2013-02-15 22:10:20.000000000 +0100
-+++ azureus-4.9.0.0/com/aelitis/azureus/ui/swt/Initializer.java	2013-02-18 16:26:24.242908858 +0100
-@@ -49,9 +49,10 @@
+--- azureus-5.4.0.0.orig/com/aelitis/azureus/ui/swt/Initializer.java	2014-08-14 20:47:07.186707514 +0200
++++ azureus-5.4.0.0/com/aelitis/azureus/ui/swt/Initializer.java	2014-08-14 20:47:07.178707515 +0200
+@@ -48,9 +48,10 @@
  import org.gudy.azureus2.ui.swt.pluginsinstaller.InstallPluginWizard;
  import org.gudy.azureus2.ui.swt.progress.ProgressWindow;
  import org.gudy.azureus2.ui.swt.update.UpdateMonitor;
@@ -29,7 +29,7 @@ Index: azureus-4.9.0.0/com/aelitis/azureus/ui/swt/Initializer.java
  import com.aelitis.azureus.core.*;
  import com.aelitis.azureus.core.messenger.ClientMessageContext;
  import com.aelitis.azureus.core.messenger.PlatformMessenger;
-@@ -444,12 +445,15 @@
+@@ -447,12 +448,15 @@
  					}
  					
  					reportCurrentTaskByKey("splash.openViews");
@@ -46,10 +46,10 @@ Index: azureus-4.9.0.0/com/aelitis/azureus/ui/swt/Initializer.java
  					UpdateMonitor.getSingleton(core); // setup the update monitor
  	
  					//Tell listeners that all is initialized :
-Index: azureus-4.9.0.0/org/gudy/azureus2/update/CorePatchChecker.java
+Index: azureus-5.4.0.0/org/gudy/azureus2/update/CorePatchChecker.java
 ===================================================================
---- azureus-4.9.0.0.orig/org/gudy/azureus2/update/CorePatchChecker.java	2012-07-12 22:33:40.000000000 +0200
-+++ azureus-4.9.0.0/org/gudy/azureus2/update/CorePatchChecker.java	2013-02-18 16:26:24.242908858 +0100
+--- azureus-5.4.0.0.orig/org/gudy/azureus2/update/CorePatchChecker.java	2014-08-14 20:47:07.186707514 +0200
++++ azureus-5.4.0.0/org/gudy/azureus2/update/CorePatchChecker.java	2014-08-14 20:47:07.182707514 +0200
 @@ -68,7 +68,11 @@
  				System.out.println( "CorePatchChecker: TESTING !!!!" );
  			}
@@ -63,10 +63,10 @@ Index: azureus-4.9.0.0/org/gudy/azureus2/update/CorePatchChecker.java
  		}
  	}
  	
-Index: azureus-4.9.0.0/org/gudy/azureus2/update/CoreUpdateChecker.java
+Index: azureus-5.4.0.0/org/gudy/azureus2/update/CoreUpdateChecker.java
 ===================================================================
---- azureus-4.9.0.0.orig/org/gudy/azureus2/update/CoreUpdateChecker.java	2012-07-12 22:33:40.000000000 +0200
-+++ azureus-4.9.0.0/org/gudy/azureus2/update/CoreUpdateChecker.java	2013-02-18 16:26:24.242908858 +0100
+--- azureus-5.4.0.0.orig/org/gudy/azureus2/update/CoreUpdateChecker.java	2014-08-14 20:47:07.186707514 +0200
++++ azureus-5.4.0.0/org/gudy/azureus2/update/CoreUpdateChecker.java	2014-08-14 20:47:07.182707514 +0200
 @@ -131,8 +131,11 @@
  		props.setProperty( "plugin.version", plugin_interface.getAzureusVersion());
  		

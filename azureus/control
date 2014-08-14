@@ -11,7 +11,7 @@ Build-Depends-Indep: default-jdk,
                      liblog4j1.2-java, 
                      libswt-gtk-3-java,
                      junit
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://azureus.sourceforge.net
 
 Package: azureus
