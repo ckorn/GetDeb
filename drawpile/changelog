@@ -1,3 +1,27 @@
+drawpile (0.9.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     * Improved palette box
+     * Various improvements to annotation editing
+     * Compressed recording support
+     * Regression fix: fixed missing initial snapshot generation in recording
+     index
+     * Added /roll chat command for generating dice rolls
+     * Layers can now be locked in offline mode
+     * Added /preservechat setting
+     * Fixed brush blending glitch on semitransparent layers
+     * More consistent non-antialiased dab positioning
+     * Improved tool box layout
+     * Combined color dock
+     * Updated OpenRaster support to spec version 0.0.3
+     * All supported file types can now be opened by drag&drop
+     * Individual layers can now be exported by dragging&dropping
+     * Live preview for layer opacity change
+     * Added flood fill tool
+     * Fixed brush preview outline alignment
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 15 Aug 2014 21:07:25 +0200
+
 drawpile (0.9.3-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
