@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=oStorybook
+GenericName=Novel Writing Software
+Comment=Open Source Novel Writing Software for Novelists, Authors and Creative Writers.
+Exec=ostorybook
+Terminal=false
+Type=Application
+Icon=ostorybook
+Categories=Office;Education;TextTools;Java
+MimeType=application/vnd.storybook

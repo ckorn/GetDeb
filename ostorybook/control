@@ -1,0 +1,28 @@
+Source: ostorybook
+Section: editors
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: http://sourceforge.net/projects/ostorybook
+
+Package: ostorybook
+Architecture: all
+Depends: ${misc:Depends},
+         openjdk-7-jre | java2-common
+Description: Open Source Novel Writing Software
+ oStorybook is a scene-based software for all creative
+ writers that helps to organize your story.
+ .
+ Features
+  * Manage Chapters and Scenes
+  * Chronological View
+  * Strands and strand links
+  * Characters
+  * Locations
+  * Chapters
+  * Parts
+  * Global Ideas
+  * Quick Information
+  * Task list and Navigation
+  * Items and Tags

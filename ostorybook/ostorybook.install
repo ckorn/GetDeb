@@ -1,0 +1,9 @@
+debian/scripts/ostorybook	usr/bin
+debian/ostorybook.desktop	usr/share/applications
+debian/ostorybook.png		usr/share/pixmaps
+*.jar				usr/share/ostorybook
+dicts				usr/share/ostorybook
+lib				usr/share/ostorybook
+*.xml				usr/share/ostorybook
+log4j.dtd			usr/share/ostorybook
+*.png				usr/share/ostorybook
