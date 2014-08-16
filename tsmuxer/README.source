@@ -1,0 +1,5 @@
+This Debian source package was built with the help of this Arch User
+Repository package: https://aur.archlinux.org/packages/tsmuxer-ng/
+
+Statically linked binaries are normally considered a bug on Debian.
+This is ignored however if the package has a '-static' in its name.
