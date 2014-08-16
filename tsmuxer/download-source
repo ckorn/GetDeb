@@ -2,8 +2,8 @@
 # http://forum.doom9.org/showthread.php?t=168539
 # https://aur.archlinux.org/packages/tsmuxer-ng/
 
-pkgver=2.6.11
-archive=tsmuxer$pkgver.tar.gz
+pkgver=$1
+archive=tsmuxer_$pkgver.orig.tar.gz
 sha256_1=815a383aebc67e59b6e541b927ce14480efed9d103fe99e74ced9ea381f61764
 
 if [ ! -f $archive ] ; then

@@ -2,9 +2,9 @@
 Type=Application
 Name=tsMuxerGUI
 Comment=Transport Stream muxer. New Generation (3D capable) GUI
-Exec=tsMuxerGUI
+Exec=tsmuxergui
 TryExec=tsmuxergui
-Icon=/usr/share/pixmaps/tsMuxerGUI.png
+Icon=tsmuxergui
 Terminal=false
 StartupNotify=false
 Categories=Qt;AudioVideo;Audio;AudioVideoEditing;

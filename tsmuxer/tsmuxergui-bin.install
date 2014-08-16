@@ -1,0 +1,3 @@
+tsMuxerGUI			usr/lib/tsmuxer
+debian/tsmuxergui.desktop	usr/share/applications
+debian/tsmuxergui.png		usr/share/pixmaps

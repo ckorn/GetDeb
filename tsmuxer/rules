@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
-
-version = $(shell head -n1 debian/changelog | cut -d' ' -f2 | cut -d'-' -f1 | sed -e 's/(//; s/)//;')
+PKD = $(abspath $(dir $(MAKEFILE_LIST)))
+PKG = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SSource)
+VER = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SVersion | cut -d- -f1)
 description = 'simple program to mux video to TS/M2TS files or create BD disks'
 
 
@@ -11,7 +12,9 @@ override_dh_installchangelogs:
 	dh_installchangelogs release_notes.txt
 
 override_dh_installman:
-	help2man -N --version-string=$(version) -n $(description) --help-option=' ' ./tsMuxeR > tsMuxeR.1
+ifeq ($(DEB_BUILD_ARCH), i386)
+	help2man -N --version-string=$(VER) -n $(description) --help-option=' ' ./tsMuxeR > tsmuxer.1
+endif
 	dh_installman
 
 override_dh_strip:
@@ -20,3 +23,10 @@ override_dh_strip:
 override_dh_builddeb:
 	dh_builddeb -- -Zxz -z9
 
+## http://wiki.debian.org/onlyjob/get-orig-source
+.PHONY: get-orig-source
+get-orig-source: $(PKG)_$(VER).orig.tar.gz $(info I: $(PKG)_$(VER))
+	@
+
+$(PKG)_$(VER).orig.tar.gz:
+	$(PKD)/download-source $(VER) 

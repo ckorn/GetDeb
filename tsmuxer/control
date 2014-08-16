@@ -1,32 +1,34 @@
 Source: tsmuxer
 Section: video
 Priority: optional
-Maintainer: Marshall Banana <djcj@gmx.de>
-Build-Depends:
-   debhelper (>= 9),
-   help2man
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               help2man,
+               libc6 [i386],
+               libgcc1 [i386],
+               libfreetype6 [i386],
+               libqt4-gui [i386]
 Standards-Version: 3.9.5
 Homepage: http://forum.doom9.org/showthread.php?t=168539
 
 Package: tsmuxer
-Section: metapackages
 Architecture: any
-Depends:
-   ${misc:Depends},
-   tsmuxer-static [i386],
-   tsmuxer-static:i386 [amd64]
+Depends: ${misc:Depends},
+         tsmuxer-bin
 Description: mux video to TS/M2TS files or create BD disks
  tsMuxeR can be run in track detection mode or muxing mode. If run tsMuxeR with
  only one argument then tsMuxeR  display input track information required to
  construct meta file. If run tsMuxeR with two arguments tsMuxeR start muxing
  or demuxing process.
 
-Package: tsmuxer-static
+Package: tsmuxer-bin
 Architecture: i386
-Depends:
-   ${misc:Depends},
-   libc6, libgcc1,
-   libfreetype6
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         libc6,
+         libgcc1,
+         libfreetype6
 Description: mux video to TS/M2TS files or create BD disks - files
  tsMuxeR can be run in track detection mode or muxing mode. If run tsMuxeR with
  only one argument then tsMuxeR  display input track information required to
@@ -34,12 +36,9 @@ Description: mux video to TS/M2TS files or create BD disks - files
  or demuxing process.
 
 Package: tsmuxergui
-Section: metapackages
 Architecture: any
-Depends:
-   ${misc:Depends},
-   tsmuxergui-static [i386],
-   tsmuxergui-static:i386 [amd64]
+Depends: ${misc:Depends},
+         tsmuxergui-bin
 Description: mux video to TS/M2TS files or create BD disks - GUI
  tsMuxeR can be run in track detection mode or muxing mode. If run tsMuxeR with
  only one argument then tsMuxeR  display input track information required to
@@ -48,14 +47,16 @@ Description: mux video to TS/M2TS files or create BD disks - GUI
  .
  This package installs the GUI for tsMuxeR.
 
-Package: tsmuxergui-static
+Package: tsmuxergui-bin
 Architecture: i386
-Depends:
-   ${misc:Depends},
-   tsmuxer-static (>= 2),
-   libc6, libgcc1,
-   libfreetype6,
-   libqt4-gui
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         libc6,
+         libgcc1,
+         libfreetype6,
+         libqt4-gui,
+         tsmuxer-bin (>= 2)
 Description: mux video to TS/M2TS files or create BD disks - GUI files
  tsMuxeR can be run in track detection mode or muxing mode. If run tsMuxeR with
  only one argument then tsMuxeR  display input track information required to
