@@ -1,3 +1,20 @@
+shutter (0.93-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Fixed bugs / minor improvements
+    -- LP: #1163251
+       [Dropbox plugin doesn't work since it uses an old version of the API]
+    -- LP: #1250536
+       [Error Dropbox authentication and upload]
+    -- LP: #1298878
+       [vgy.me support]
+    -- LP: #1349512
+       [Dropbox upload plugin uses Public folder and does not create proper
+       share link]
+    * updated translations
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 18 Aug 2014 20:27:43 +0200
+
 shutter (0.92-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
