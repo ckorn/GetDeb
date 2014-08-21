@@ -9,15 +9,13 @@ Homepage: http://shutter-project.org/
 
 Package: shutter
 Architecture: all
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${perl:Depends},
          libgtk2-perl,
          libglib-perl,
          libgnome2-perl,
          libgnome2-vfs-perl,
          libgnome2-wnck-perl,
-         libgnome2-gconf-perl,
          liblocale-gettext-perl,
          libxml-simple-perl,
          libwww-mechanize-perl,
@@ -40,8 +38,7 @@ Depends: ${shlibs:Depends},
          xdg-utils,
          libpath-class-perl,
          libjson-perl,
-         libjson-xs-perl,
-         libnet-dropbox-api-perl
+         libjson-xs-perl
 Recommends: libgoo-canvas-perl,
             libgtk2-appindicator-perl
 Suggests: gnome-web-photo,

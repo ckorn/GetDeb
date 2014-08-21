@@ -1,3 +1,9 @@
+shutter (0.93-1~getdeb2) trusty; urgency=medium
+
+  * Remove unnecessary dependency on libnet-dropbox-api-perl
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 20 Aug 2014 22:15:43 +0200
+
 shutter (0.93-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
