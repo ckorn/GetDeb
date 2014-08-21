@@ -1,3 +1,12 @@
+synergy (1.5.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug #3307 - Configuration file paths containing spaces don't work
+    Bug #3404 - Log path needs to be in quotes on windows
+    Bug #3996 - Installer fails when Windows Firewall is disabled
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 21 Aug 2014 20:52:56 +0200
+
 synergy (1.5.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
