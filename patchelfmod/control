@@ -1,5 +1,5 @@
 Source: patchelfmod
-Priority: extra
+Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
@@ -7,8 +7,6 @@ Build-Depends: debhelper (>= 9),
                libattr1-dev
 Standards-Version: 3.9.5
 Section: utils
-Homepage: https://github.com/darealshinji/patchelfmod
-Vcs-Git: https://github.com/darealshinji/patchelfmod.git
 
 Package: patchelfmod
 Architecture: any
@@ -24,6 +22,7 @@ Description: modify properties of ELF binaries
 
 Package: patchelfmod-dbg
 Section: debug
+Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
          patchelfmod (= ${binary:Version})
