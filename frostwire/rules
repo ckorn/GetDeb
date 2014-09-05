@@ -7,7 +7,7 @@ override_dh_auto_clean:
 	rm -rf frostwire
 
 override_dh_auto_build:
-	tar xvf frostwire-$(version).noarch.tar.gz	
+	tar xvf ../frostwire_$(version).orig.tar.gz	
 	mv frostwire-$(version).noarch frostwire
 	find frostwire -type f -name "*.jar" -exec chmod -x {} \;
 	rm frostwire/COPYING
