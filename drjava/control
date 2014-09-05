@@ -9,7 +9,7 @@ Homepage: http://drjava.org
 Package: drjava
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-6-jdk | sun-java6-jdk,
+         openjdk-7-jdk | sun-java7-jdk,
          fontconfig
 Description: Lightweight programming environment for Java
  DrJava is a lightweight programming environment for Java

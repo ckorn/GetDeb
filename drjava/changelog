@@ -1,3 +1,46 @@
+drjava (5761-1~getdeb2) trusty; urgency=medium
+
+  * New upstream version
+    In addition to bug fixes, this stable release includes one important 
+    new feature introduced after the last stable release:
+    This release of DrJava should successfully load the Java 8 compiler
+    when DrJava is run using a Java 8 JDK.
+    Notes:
+    (i) Java 5 compatibility has been dropped. To use DrJava, you will
+    need Java 6 or newer.
+    (ii) The Mac OS X app is configured to use Apple Java 6, the last Java
+    release developed by Apple. Subsequent Oracle releases of Java
+    for Mac OS X use a different, incompatible app launcher. DrJava
+    can be run using an Oracle JDK on Mac OS X by downloading the
+    jar file version of DrJava and invoking it from the command
+    line. In some cases, simply clicking on the jar file icon will
+    start DrJava.
+    (iii) Recent versions of Mac OS X include a gatekeeper that declares
+    unlicensed apps (like DrJava and most other open source apps) as
+    "corrupt" and suggests that they be deleted. Many users report
+    that this happens when attempting to open the DrJava app (even
+    though it uses Apple's app launcher) the first time.
+    Nevertheless, the app can be opened manually and will 
+    subsequently open normally.
+    (iv) This release of DrJava supports the editing and compilation of 
+    Java 8 programs but it does not yet support new Java 8 syntax
+    in the interactions pane. We anticipate that a forthcoming
+    release will have this capability.
+    (v) DrJava currently triggers a JVM bug in the Oracle releases of
+    Java 7 and 8 on Linux. The bug prints a JVM crash message on
+    the console (typically the terminal from which DrJava is
+    started), but DrJava still appears to start normally. Java must
+    restart in most configurations (depending on your saved DrJava
+    preferences) because many critical parameters of the JVM
+    including the classpath, maximum heap size, and maximum stack
+    size must be specified at startup and cannot be changed. The
+    Oracle Java 7/8 JVM does not crash in DrJava until after the
+    restart operation (spawning a new JVM) has been executed, so
+    only the display of the DrJava splash banner fails as a result
+    of the crash.
+
+ -- Jhonny Oliveira <jhonny.oliveira@gmail.com>  Sun, 31 Aug 2014 12:27:52 +0200
+
 drjava (0.0.0.0+r5756-1~getdeb1) precise; urgency=low
 
   * New upstream version
