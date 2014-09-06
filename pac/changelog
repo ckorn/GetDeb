@@ -1,3 +1,17 @@
+pac (4.5.5-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Fixed a behaviour that could lead to show VNC passwords on status bar
+    tooltip
+    . Fixed a bug that made main PAC window move on every new terminal
+    creation
+    . Changed behavior to not take a screenshot if "show screenshots"
+    checkbox is unselected
+    . Added support (libraries) for Perl 5.20, in both 32 and 64 bit
+    . Minor code cleanup
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Aug 2014 23:11:12 +0200
+
 pac (4.5.4-1~getdeb2) trusty; urgency=medium
 
   * Add dependency on libgtk2-unique-perl
