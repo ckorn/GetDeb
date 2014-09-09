@@ -1,3 +1,37 @@
+fotoxx (14.09-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    This release makes improvements and fixes annoyances in the user
+    interface.
+    + Dialogs set focus on the main window after use of the [apply] or [next]
+      button, so subsequent KB shortcuts will work without extra mouse
+      action.
+    + File Save: both unsaved metadata edits and image edits are now saved.
+      (using [apply] in a metadata dialog saves only the metadata changes).
+    + Display "no more images" after deleting the last image in the current 
+      gallery (otherwise the window goes inexplicably blank).
+    + Additional dialogs now restore previous inputs across sessions.
+    + Search Images: if time is omitted in a date/time search range, then 
+      00:00 or 23:59 is defaulted for the start or end time respectively.
+    + Search Images: new option: find only the latest version of each image.
+    + Batch Convert: If image files are renamed or moved with deletion of the
+      originals, collections containing the images are updated automatically.
+      (The problematic Move Collections function was removed.)
+    + Gallery popup images: use the same window or open a new window for each
+      thumbnail clicked. The one window option is effectively a combined
+      image and gallery view, with adjustable allocation of screen space
+      between the two views, and one-click selection of the next image
+      to view.
+    + Area Select: select by matching colors was made a little smarter.
+    + Gallery Selection: scroll selection list to keep new insertions in
+      view.
+    + New utility function to find and display all duplicate images, fast. 
+    + Slide Show: option to auto-replay after reaching the end.
+    + Bugfix: Manage Collections: dragging a thumbnail to the bottom of the 
+      gallery window would not scroll up if the window was maximized.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 Sep 2014 22:48:26 +0200
+
 fotoxx (14.08-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

@@ -7,10 +7,10 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
-Index: fotoxx-14.06.1/Makefile
+Index: fotoxx-14.09/Makefile
 ===================================================================
---- fotoxx-14.06.1.orig/Makefile	2014-06-06 12:40:42.000000000 +0200
-+++ fotoxx-14.06.1/Makefile	2014-06-07 23:41:25.428964652 +0200
+--- fotoxx-14.09.orig/Makefile	2014-09-06 22:49:46.603820610 +0200
++++ fotoxx-14.09/Makefile	2014-09-06 22:50:08.235819967 +0200
 @@ -14,7 +14,7 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -20,34 +20,3 @@ Index: fotoxx-14.06.1/Makefile
  MANDIR = $(PREFIX)/share/man/man1
  APPDATADIR = $(PREFIX)/share/appdata
  MENUFILE = $(PREFIX)/share/applications/fotoxx.desktop
-@@ -78,7 +78,6 @@
- 	rm -f -R  $(DESTDIR)$(SHAREDIR)
- 	rm -f -R  $(DESTDIR)$(DOCDIR)
- 	rm -f  $(DESTDIR)$(MANDIR)/fotoxx.1.gz
--	xdg-desktop-menu uninstall $(DESTDIR)$(MENUFILE)
- 	rm -f  $(DESTDIR)$(MENUFILE)
- 	mkdir -p  $(DESTDIR)$(BINDIR)
- 	mkdir -p  $(DESTDIR)$(DATADIR)
-@@ -87,6 +86,7 @@
- 	mkdir -p  $(DESTDIR)$(DOCDIR)
- 	mkdir -p  $(DESTDIR)$(MANDIR)
- 	mkdir -p  $(DESTDIR)$(PREFIX)/share/applications
-+	mkdir -p $(DESTDIR)/$(APPDATADIR)
- 	cp -f  fotoxx $(DESTDIR)$(BINDIR)
- 	cp -f -R  data/* $(DESTDIR)$(DATADIR)
- 	cp -f -R  icons/* $(DESTDIR)$(ICONDIR)
-@@ -102,14 +102,12 @@
- 	# menu (desktop) file
- 	cp -f desktop $(DESTDIR)$(MENUFILE)
- 	# chmod +x $(DESTDIR)$(MENUFILE)
--	xdg-desktop-menu install --novendor $(DESTDIR)$(MENUFILE)
- 
- uninstall:
- 	rm -f  $(DESTDIR)$(BINDIR)/fotoxx
- 	rm -f -R  $(DESTDIR)$(SHAREDIR)
- 	rm -f -R  $(DESTDIR)$(DOCDIR)
- 	rm -f  $(DESTDIR)$(MANDIR)/fotoxx.1.gz
--	xdg-desktop-menu uninstall $(DESTDIR)$(MENUFILE)
- 	rm -f  $(DESTDIR)$(MENUFILE)
- 
- clean: 
