@@ -1,44 +1,19 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-6.7/Makefile
+Index: freefilesync-6.9/Makefile
 ===================================================================
---- freefilesync-6.7.orig/Makefile	2014-07-11 17:09:00.483746873 +0200
-+++ freefilesync-6.7/Makefile	2014-07-15 18:10:01.000000000 +0200
-@@ -7,7 +7,7 @@
+--- freefilesync-6.9.orig/Makefile	2014-09-09 22:12:22.776673603 +0200
++++ freefilesync-6.9/Makefile	2014-09-09 22:17:10.348665048 +0200
+@@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
  
--CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../.. -I../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" \
-+CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" \
- -Wall -Winit-self -Wredundant-decls -Wmissing-include-dirs -Wswitch-enum -Wmain
+-CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../.. -I../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
++CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+ -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
- release launchpad: CXXFLAGS  += -O3 -DNDEBUG
-@@ -54,19 +54,15 @@
- endif
- ######################################################
- 
--WX_CONFIG_LIB =$(HOME)/Desktop/wxWidgets/lib
--BOOST_LIB_DIR =$(HOME)/Desktop/boost/stage/lib
--CXXFLAGS  += -I$(HOME)/Desktop/boost
--
--release:   CXXFLAGS  += `$(WX_CONFIG_LIB)/release/bin/wx-config --cxxflags --debug=no  --static=yes`
--debug:     CXXFLAGS  += `$(WX_CONFIG_LIB)/debug/bin/wx-config   --cxxflags --debug=yes --static=yes`
-+release:   CXXFLAGS  += `wx-config --cxxflags --debug=no `
-+debug:     CXXFLAGS  += `wx-config   --cxxflags --debug=yes`
- launchpad: CXXFLAGS  += `wx-config                              --cxxflags --debug=no`
- 
--release:   LINKFLAGS += `$(WX_CONFIG_LIB)/release/bin/wx-config --libs std, aui --debug=no  --static=yes`
--debug:     LINKFLAGS += `$(WX_CONFIG_LIB)/debug/bin/wx-config   --libs std, aui --debug=yes --static=yes`
-+release:   LINKFLAGS += `wx-config --libs std, aui --debug=no `
-+debug:     LINKFLAGS += `wx-config   --libs std, aui --debug=yes `
- launchpad: LINKFLAGS += `wx-config                              --libs std, aui --debug=no`
- 
--release debug: LINKFLAGS += $(BOOST_LIB_DIR)/libboost_thread.a $(BOOST_LIB_DIR)/libboost_system.a
-+release debug: LINKFLAGS += -lboost_thread -lboost_system
- launchpad:     LINKFLAGS += -lboost_thread -lboost_system -lz
- 
- 
-@@ -109,22 +105,22 @@
+ LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
+@@ -67,53 +67,53 @@
  CPP_LIST+=lib/status_handler.cpp
  CPP_LIST+=lib/versioning.cpp
  CPP_LIST+=lib/ffs_paths.cpp
@@ -75,36 +50,21 @@ Index: freefilesync-6.7/Makefile
 +CPP_LIST+=wx+/popup_dlg_generated.cpp
 +CPP_LIST+=wx+/zlib_wrap.cpp
  
- # OS X
- ifeq ($(OPERATING_SYSTEM_NAME), Darwin)
-@@ -134,8 +130,8 @@
- endif
+-OBJECT_LIST = $(CPP_LIST:%.cpp=../Obj/FFS_GCC_Make_Release/ffs/src/%.o)
++OBJECT_LIST = $(CPP_LIST:%.cpp=Obj/FFS_GCC_Make_Release/ffs/src/%.o)
  
- #list of all *.o files
--OBJECT_LIST =  $(CPP_LIST:%.cpp=../Obj/FFS_GCC_Make_Release/ffs/src/%.o)
--OBJECT_LIST += $(MM_LIST:%.mm=../Obj/FFS_GCC_Make_Release/ffs/src/%.mm.o)
-+OBJECT_LIST =  $(CPP_LIST:%.cpp=Obj/FFS_GCC_Make_Release/ffs/src/%.o)
-+OBJECT_LIST += $(MM_LIST:%.mm=Obj/FFS_GCC_Make_Release/ffs/src/%.mm.o)
+ all: launchpad
  
- all: release
- 
-@@ -143,34 +139,34 @@
- debug:     FreeFileSync
  launchpad: FreeFileSync
- 
--../Obj/FFS_GCC_Make_Release/ffs/src/%.mm.o : %.mm
-+Obj/FFS_GCC_Make_Release/ffs/src/%.mm.o : %.mm
- 	mkdir -p $(dir $@)
- 	$(COMPILER_BIN) $(CXXFLAGS) -c $< -o $@
  
 -../Obj/FFS_GCC_Make_Release/ffs/src/%.o : %.cpp
 +Obj/FFS_GCC_Make_Release/ffs/src/%.o : %.cpp
  	mkdir -p $(dir $@)
- 	$(COMPILER_BIN) $(CXXFLAGS) -c $< -o $@
+ 	g++ $(CXXFLAGS) -c $< -o $@
  
  FreeFileSync: $(OBJECT_LIST)
--	$(COMPILER_BIN) -o ../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
-+	$(COMPILER_BIN) -o Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
+-	g++ -o ../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
++	g++ -o Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
  
  clean:
 -	rm -rf ../Obj/FFS_GCC_Make_Release
@@ -136,45 +96,20 @@ Index: freefilesync-6.7/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-6.7/RealtimeSync/Makefile
+Index: freefilesync-6.9/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-6.7.orig/RealtimeSync/Makefile	2014-07-11 17:09:00.483746873 +0200
-+++ freefilesync-6.7/RealtimeSync/Makefile	2014-07-15 18:10:05.473444749 +0200
-@@ -4,7 +4,7 @@
+--- freefilesync-6.9.orig/RealtimeSync/Makefile	2014-09-09 22:12:22.776673603 +0200
++++ freefilesync-6.9/RealtimeSync/Makefile	2014-09-09 22:19:45.564660431 +0200
+@@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
  
--CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../../.. -I../../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" \
-+CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" \
- -Wall -Winit-self -Wredundant-decls -Wmissing-include-dirs -Wswitch-enum -Wmain
+-CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../../.. -I../../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
++CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+ -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
- release launchpad: CXXFLAGS  += -O3 -DNDEBUG
-@@ -37,19 +37,15 @@
- endif
- ######################################################
- 
--WX_CONFIG_LIB =$(HOME)/Desktop/wxWidgets/lib
--BOOST_LIB_DIR =$(HOME)/Desktop/boost/stage/lib
--CXXFLAGS  += -I$(HOME)/Desktop/boost
--
--release:   CXXFLAGS  += `$(WX_CONFIG_LIB)/release/bin/wx-config --cxxflags --debug=no  --static=yes`
--debug:     CXXFLAGS  += `$(WX_CONFIG_LIB)/debug/bin/wx-config   --cxxflags --debug=yes --static=yes`
-+release:   CXXFLAGS  += `wx-config --cxxflags --debug=no `
-+debug:     CXXFLAGS  += `wx-config   --cxxflags --debug=yes `
- launchpad: CXXFLAGS  += `wx-config                              --cxxflags --debug=no`
- 
--release:   LINKFLAGS += `$(WX_CONFIG_LIB)/release/bin/wx-config --libs std, aui --debug=no  --static=yes`
--debug:     LINKFLAGS += `$(WX_CONFIG_LIB)/debug/bin/wx-config   --libs std, aui --debug=yes --static=yes`
-+release:   LINKFLAGS += `wx-config --libs std, aui --debug=no `
-+debug:     LINKFLAGS += `wx-config   --libs std, aui --debug=yes `
- launchpad: LINKFLAGS += `wx-config                              --libs std, aui --debug=no`
- 
--release debug: LINKFLAGS += $(BOOST_LIB_DIR)/libboost_thread.a $(BOOST_LIB_DIR)/libboost_system.a
-+release debug: LINKFLAGS += -lboost_thread -lboost_system
- launchpad:     LINKFLAGS += -lboost_thread -lboost_system -lz
- 
- CPP_LIST= #internal list of all *.cpp files needed for compilation
-@@ -66,20 +62,20 @@
+ LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
+@@ -25,36 +25,36 @@
  CPP_LIST+=../lib/process_xml.cpp
  CPP_LIST+=../lib/resolve_path.cpp
  CPP_LIST+=../lib/ffs_paths.cpp
@@ -201,24 +136,21 @@ Index: freefilesync-6.7/RealtimeSync/Makefile
 +CPP_LIST+=../wx+/popup_dlg.cpp
 +CPP_LIST+=../wx+/popup_dlg_generated.cpp
  
- #list of all *.o files (we need the "RTS" subdirectory to handle "../*.cpp" files
 -OBJECT_LIST=$(CPP_LIST:%.cpp=../../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o)
 +OBJECT_LIST=$(CPP_LIST:%.cpp=../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o)
  
- all: release
+ all: launchpad
  
-@@ -87,18 +83,18 @@
- debug:     RealtimeSync
  launchpad: RealtimeSync
  
 -../../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o : %.cpp
 +../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o : %.cpp
  	mkdir -p $(dir $@)
- 	$(COMPILER_BIN) $(CXXFLAGS) -c $< -o $@
+ 	g++ $(CXXFLAGS) -c $< -o $@
  
  RealtimeSync: $(OBJECT_LIST)
--	$(COMPILER_BIN) -o ../../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
-+	$(COMPILER_BIN) -o ../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
+-	g++ -o ../../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
++	g++ -o ../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
  
  clean:
 -	rm -rf ../../Obj/RTS_GCC_Make_Release
