@@ -31,7 +31,8 @@ Depends: ${misc:Depends},
          python-ipaddr,
          gir1.2-gtk-vnc-2.0,
          python-spice-client-gtk,
-         gir1.2-spice-client-gtk-3.0
+         gir1.2-spice-client-gtk-3.0,
+         gir1.2-libosinfo-1.0
 Recommends: libvirt-bin (>= 0.4.6),
             gnome-icon-theme
 Replaces: virtinst

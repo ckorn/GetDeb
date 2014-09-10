@@ -1,9 +1,9 @@
 === modified file 'virtManager/manager.py'
-Index: virt-manager-1.0.1/virtManager/engine.py
+Index: virt-manager-1.1.0/virtManager/engine.py
 ===================================================================
---- virt-manager-1.0.1.orig/virtManager/engine.py	2014-02-28 19:01:44.000000000 +0100
-+++ virt-manager-1.0.1/virtManager/engine.py	2014-04-18 16:58:26.988913869 +0200
-@@ -635,7 +635,10 @@
+--- virt-manager-1.1.0.orig/virtManager/engine.py	2014-09-09 23:09:25.332571791 +0200
++++ virt-manager-1.1.0/virtManager/engine.py	2014-09-09 23:09:25.328571791 +0200
+@@ -606,7 +606,10 @@
                            "regular user. Try running as root.")
                  show_errmsg = False
              elif re.search(r"libvirt-sock", tb):

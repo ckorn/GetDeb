@@ -1,9 +1,10 @@
 # virt-manager graphical console not displayed when opening the details display
 # https://bugs.launchpad.net/getdeb.net/+bug/1355289
-diff -rupN virt-manager-1.0.1.orig/virtManager/console.py virt-manager-1.0.1/virtManager/console.py
---- virt-manager-1.0.1.orig/virtManager/console.py	2014-08-11 18:14:12.900056511 +0200
-+++ virt-manager-1.0.1/virtManager/console.py	2014-08-11 18:15:22.088058155 +0200
-@@ -1401,10 +1401,10 @@ class vmmConsolePages(vmmGObjectUI):
+Index: virt-manager-1.1.0/virtManager/console.py
+===================================================================
+--- virt-manager-1.1.0.orig/virtManager/console.py	2014-09-09 23:19:18.396554149 +0200
++++ virt-manager-1.1.0/virtManager/console.py	2014-09-09 23:19:18.392554149 +0200
+@@ -1406,10 +1406,10 @@
                  vmmConsolePages.connected_viewers -= 1
                  if vmmConsolePages.connected_viewers == 0:
                      if self.gtk_settings_mnemonic is not None:

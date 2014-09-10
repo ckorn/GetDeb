@@ -1,3 +1,26 @@
+virt-manager (1.1.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Switch to libosinfo as OS metadata database (Giuseppe Scrivano)
+    - Use libosinfo for OS detection from CDROM media labels (Giuseppe
+      Scrivano)
+    - Use libosinfo for improved OS defaults, like recommended disk size
+      (Giuseppe Scrivano)
+    - virt-image tool has been removed, as previously announced
+    - Enable Hyper-V enlightenments for Windows VMs
+    - Revert virtio-console default, back to plain serial console
+    - Experimental q35 option in new VM 'customize' dialog
+    - UI for virtual network QoS settings (Giuseppe Scrivano)
+    - virt-install: --disk discard= support (Jim Minter)
+    - addhardware: Add spiceport UI (Marc-André Lureau)
+    - virt-install: --events on_poweroff etc. support (Chen Hanxiao)
+    - cli --network portgroup= support and UI support
+    - cli --boot initargs= and UI support
+    - addhardware: allow setting controller model (Chen Hanxiao)
+    - virt-install: support setting hugepage options (Chen Hanxiao)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Sep 2014 23:09:04 +0200
+
 virt-manager (1.0.1-1~getdeb2) trusty; urgency=medium
 
   * graphical console not displayed when opening

@@ -11,11 +11,11 @@ Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/virt-manager/+bug/1074207
 Forwarded: no, not ready
 Updated: 2014-02-17
 
-Index: virt-manager-1.0.1/ui/create.ui
+Index: virt-manager-1.1.0/ui/create.ui
 ===================================================================
---- virt-manager-1.0.1.orig/ui/create.ui	2014-04-20 19:50:58.895664245 +0200
-+++ virt-manager-1.0.1/ui/create.ui	2014-04-20 19:50:58.879664245 +0200
-@@ -509,6 +509,34 @@
+--- virt-manager-1.1.0.orig/ui/create.ui	2014-09-09 23:09:37.956571415 +0200
++++ virt-manager-1.1.0/ui/create.ui	2014-09-09 23:09:37.948571415 +0200
+@@ -491,6 +491,34 @@
                                        </packing>
                                      </child>
                                      <child>
@@ -50,11 +50,11 @@ Index: virt-manager-1.0.1/ui/create.ui
                                        <object class="GtkComboBox" id="config-machine">
                                          <property name="visible">True</property>
                                          <property name="can_focus">False</property>
-Index: virt-manager-1.0.1/ui/details.ui
+Index: virt-manager-1.1.0/ui/details.ui
 ===================================================================
---- virt-manager-1.0.1.orig/ui/details.ui	2014-04-20 19:50:58.895664245 +0200
-+++ virt-manager-1.0.1/ui/details.ui	2014-04-20 19:50:58.883664245 +0200
-@@ -990,6 +990,35 @@
+--- virt-manager-1.1.0.orig/ui/details.ui	2014-09-09 23:09:37.956571415 +0200
++++ virt-manager-1.1.0/ui/details.ui	2014-09-09 23:18:07.780556249 +0200
+@@ -954,6 +954,35 @@
                                            </packing>
                                          </child>
                                          <child>
@@ -90,29 +90,29 @@ Index: virt-manager-1.0.1/ui/details.ui
                                            <object class="GtkLabel" id="overview-machine-label">
                                              <property name="visible">True</property>
                                              <property name="can_focus">False</property>
-@@ -999,7 +1028,7 @@
+@@ -963,7 +992,7 @@
                                            </object>
                                            <packing>
                                              <property name="left_attach">0</property>
 -                                            <property name="top_attach">3</property>
 +                                            <property name="top_attach">4</property>
-                                             <property name="width">1</property>
-                                             <property name="height">1</property>
                                            </packing>
-@@ -1013,7 +1042,7 @@
+                                         </child>
+                                         <child>
+@@ -975,7 +1004,7 @@
                                            </object>
                                            <packing>
                                              <property name="left_attach">1</property>
 -                                            <property name="top_attach">3</property>
 +                                            <property name="top_attach">4</property>
-                                             <property name="width">1</property>
-                                             <property name="height">1</property>
                                            </packing>
-Index: virt-manager-1.0.1/virtManager/create.py
+                                         </child>
+                                         <child>
+Index: virt-manager-1.1.0/virtManager/create.py
 ===================================================================
---- virt-manager-1.0.1.orig/virtManager/create.py	2014-04-20 19:50:58.895664245 +0200
-+++ virt-manager-1.0.1/virtManager/create.py	2014-04-20 19:50:58.887664245 +0200
-@@ -306,6 +306,11 @@
+--- virt-manager-1.1.0.orig/virtManager/create.py	2014-09-09 23:09:37.956571415 +0200
++++ virt-manager-1.1.0/virtManager/create.py	2014-09-09 23:18:59.860554700 +0200
+@@ -311,6 +311,11 @@
          archList.set_row_separator_func(
              lambda m, i, ignore: m[i][0] is None, None)
  
@@ -124,7 +124,7 @@ Index: virt-manager-1.0.1/virtManager/create.py
          hyperList = self.widget("config-hv")
          hyperModel = Gtk.ListStore(str, str)
          hyperList.set_model(hyperModel)
-@@ -503,6 +508,7 @@
+@@ -516,6 +521,7 @@
          self.conn.invalidate_caps()
          self.change_caps()
          self.populate_hv()
@@ -132,7 +132,7 @@ Index: virt-manager-1.0.1/virtManager/create.py
          self.populate_arch()
  
          show_arch = (self.widget("config-hv").get_visible() or
-@@ -728,6 +734,16 @@
+@@ -746,6 +752,16 @@
          else:
              lst.emit("changed")
  
@@ -149,7 +149,7 @@ Index: virt-manager-1.0.1/virtManager/create.py
      def populate_conn_list(self, urihint=None):
          conn_list = self.widget("create-conn")
          model = conn_list.get_model()
-@@ -934,6 +950,21 @@
+@@ -953,6 +969,21 @@
      def get_config_name(self):
          return self.widget("create-vm-name").get_text()
  
@@ -169,22 +169,22 @@ Index: virt-manager-1.0.1/virtManager/create.py
 +            return None
 +
      def get_config_machine(self):
-         return uiutil.get_list_selection(self.widget("config-machine"),
-             rowindex=0, check_visible=True)
-@@ -1655,6 +1686,8 @@
+         return uiutil.get_list_selection(self.widget("config-machine"), 0,
+             check_visible=True)
+@@ -1724,6 +1755,8 @@
                  if not self.validate_storage_page():
                      return False
  
 +        self.guest.os.loader = self.get_config_loader()
 +
-         macaddr = self.widget("config-macaddr").get_text().strip()
-         nettype = self.netlist.get_network_selection()[0]
- 
-Index: virt-manager-1.0.1/virtManager/details.py
+         macaddr = None
+         if self.widget("config-macaddr").get_sensitive():
+             macaddr = self.widget("config-macaddr").get_text().strip()
+Index: virt-manager-1.1.0/virtManager/details.py
 ===================================================================
---- virt-manager-1.0.1.orig/virtManager/details.py	2014-04-20 19:50:58.895664245 +0200
-+++ virt-manager-1.0.1/virtManager/details.py	2014-04-20 19:50:58.887664245 +0200
-@@ -2413,8 +2413,12 @@
+--- virt-manager-1.1.0.orig/virtManager/details.py	2014-09-09 23:09:37.956571415 +0200
++++ virt-manager-1.1.0/virtManager/details.py	2014-09-09 23:09:37.956571415 +0200
+@@ -2443,8 +2443,12 @@
          self.widget("overview-hv").set_text(self.vm.get_pretty_hv_type())
          arch = self.vm.get_arch() or _("Unknown")
          emu = self.vm.get_emulator() or _("None")
@@ -197,12 +197,12 @@ Index: virt-manager-1.0.1/virtManager/details.py
  
          # Machine settings
          machtype = self.vm.get_machtype()
-Index: virt-manager-1.0.1/virtManager/domain.py
+Index: virt-manager-1.1.0/virtManager/domain.py
 ===================================================================
---- virt-manager-1.0.1.orig/virtManager/domain.py	2014-04-20 19:50:58.895664245 +0200
-+++ virt-manager-1.0.1/virtManager/domain.py	2014-04-20 19:50:58.887664245 +0200
-@@ -1078,6 +1078,8 @@
-         return self.get_xmlobj().os.init
+--- virt-manager-1.1.0.orig/virtManager/domain.py	2014-09-09 23:09:37.956571415 +0200
++++ virt-manager-1.1.0/virtManager/domain.py	2014-09-09 23:09:37.956571415 +0200
+@@ -1081,6 +1081,8 @@
+ 
      def get_emulator(self):
          return self.get_xmlobj().emulator
 +    def get_loader(self):
