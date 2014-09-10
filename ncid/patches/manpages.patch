@@ -1,9 +1,9 @@
 A manpage has a wrong section.
 Hyphens were used as minus signs.
-Index: ncid-0.89/man/ncid2ncid.1
+Index: ncid-1.0/man/ncid2ncid.1
 ===================================================================
---- ncid-0.89.orig/man/ncid2ncid.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid2ncid.1	2014-04-19 23:37:56.700794028 +0200
+--- ncid-1.0.orig/man/ncid2ncid.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid2ncid.1	2014-09-09 22:39:56.056624422 +0200
 @@ -1,5 +1,5 @@
  .\" %W% %G%
 -.TH NCID2NCID 8
@@ -159,10 +159,10 @@ Index: ncid-0.89/man/ncid2ncid.1
  .fi
  .SH SEE ALSO
  ncid2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5, ncidd.blacklist
-Index: ncid-0.89/man/ncidd.8
+Index: ncid-1.0/man/ncidd.8
 ===================================================================
---- ncid-0.89.orig/man/ncidd.8	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncidd.8	2014-04-19 23:40:56.152792496 +0200
+--- ncid-1.0.orig/man/ncidd.8	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncidd.8	2014-09-09 22:54:42.344598057 +0200
 @@ -10,33 +10,33 @@
  .I Options:
  .PP
@@ -175,7 +175,7 @@ Index: ncid-0.89/man/ncidd.8
 -[-d <file>       | --datalog <logfile>]
 -[-e <identifier> | --lineid <identifier>]
 -[-g <0|1>        | --gencid <0|1>]
--[-H <0|1>        | --hangup <0|1>]
+-[-H <0|1|2>      | --hangup <0|1|2>]
 -[-h              | --help]
 -[-I <modemstr>   | --initstr <modemstr>]
 -[-i <cidstr>     | --initcid <cidstr>]
@@ -202,7 +202,7 @@ Index: ncid-0.89/man/ncidd.8
 +[\-d <file>       | \-\-datalog <logfile>]
 +[\-e <identifier> | \-\-lineid <identifier>]
 +[\-g <0|1>        | \-\-gencid <0|1>]
-+[\-H <0|1>        | \-\-hangup <0|1>]
++[\-H <0|1|2>      | \-\-hangup <0|1|2>]
 +[\-h              | \-\-help]
 +[\-I <modemstr>   | \-\-initstr <modemstr>]
 +[\-i <cidstr>     | \-\-initcid <cidstr>]
@@ -218,13 +218,13 @@ Index: ncid-0.89/man/ncidd.8
 +[\-T <ttyspeed>   | \-\-ttyspeed <ttyspeed>]
 +[\-t <ttyport>    | \-\-ttyport <ttyport>]
 +[\-V              | \-\-version]
-+[\-v <1-9>        | \-\-verbose <1-9>]
++[\-v <1\-9>        | \-\-verbose <1\-9>]
 +[\-W <file>       | \-\-whitelist <file>]
 +[\-\-osx\-launchd]
  .fi
  .SH DESCRIPTION
  The \fBncidd\fR server collects Caller ID data from:
-@@ -105,7 +105,7 @@
+@@ -109,7 +109,7 @@
  .PP
  Gateways also send \fBncidd\fR \fICALLINFO text lines\fR.
  A SIP gateway will send a CALLINFO line when it receives a CANCEL or
@@ -233,7 +233,7 @@ Index: ncid-0.89/man/ncidd.8
  to indicate a hangup with no answer.
  .PP
  The NCID gateway sends \fBncidd\fR CID and CIDINFO text lines instead
-@@ -117,48 +117,48 @@
+@@ -121,48 +121,48 @@
  .SH "OPTIONS"
  .PD 0
  .TP
@@ -291,16 +291,16 @@ Index: ncid-0.89/man/ncidd.8
  Generate a generic Caller ID at ring 2 if one is not received
  from the modem either because the telco is not sending it or
  because the modem does not support it.
-@@ -167,7 +167,7 @@
+@@ -171,7 +171,7 @@
  .br
  Default: gencid = 1
  .TP
--.B -H <0|1|2> | --hangup <0|1>
-+.B \-H <0|1|2> | \-\-hangup <0|1>
+-.B -H <0|1|2> | --hangup <0|1|2>
++.B \-H <0|1|2> | \-\-hangup <0|1|2>
  Automatically hangup up on a call if the caller name or number is in
- the ncidd.blacklist file.  A hangup text line is sent to the clients.
- If hangup is set to 1, ncidd will do a normal hangup.  If hangup is set
-@@ -175,65 +175,65 @@
+ the ncidd.blacklist file but not the ncidd.whitelist file.
+ If hangup is set to 1, ncidd will hangup the call.  If hangup is set
+@@ -180,65 +180,65 @@
  .br
  Default: hangup = 0
  .TP
@@ -378,7 +378,7 @@ Index: ncid-0.89/man/ncidd.8
  Send optional CID data to a client.
  Where \fIdatatype\fR is:
  .br
-@@ -247,22 +247,22 @@
+@@ -252,22 +252,22 @@
  .br
  Default: Optional CID DATA is not sent
  .TP
@@ -406,7 +406,7 @@ Index: ncid-0.89/man/ncidd.8
  Do not use level 9 unless there is a problem in poll().  It grows the
  logfile very fast.
  .br
-@@ -351,21 +351,21 @@
+@@ -356,21 +356,21 @@
      Return Code    Meaning
      -----------    -------
           0         Successful
@@ -443,10 +443,10 @@ Index: ncid-0.89/man/ncidd.8
          -?         System error
  .fi
  .SH SEE ALSO
-Index: ncid-0.89/man/sip2ncid.8
+Index: ncid-1.0/man/sip2ncid.8
 ===================================================================
---- ncid-0.89.orig/man/sip2ncid.8	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/sip2ncid.8	2014-04-19 23:37:56.700794028 +0200
+--- ncid-1.0.orig/man/sip2ncid.8	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/sip2ncid.8	2014-09-09 22:39:56.056624422 +0200
 @@ -10,24 +10,24 @@
  .I Options:
  .PP
@@ -637,10 +637,10 @@ Index: ncid-0.89/man/sip2ncid.8
  .fi
  .SH SEE ALSO
  sip2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5
-Index: ncid-0.89/man/yac2ncid.1
+Index: ncid-1.0/man/yac2ncid.1
 ===================================================================
---- ncid-0.89.orig/man/yac2ncid.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/yac2ncid.1	2014-04-19 23:37:56.700794028 +0200
+--- ncid-1.0.orig/man/yac2ncid.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/yac2ncid.1	2014-09-09 22:39:56.056624422 +0200
 @@ -5,7 +5,7 @@
  - YAC server to NCID server gateway
  .SH SYNOPSIS
@@ -666,10 +666,10 @@ Index: ncid-0.89/man/yac2ncid.1
  Verbose mode.
  .PD
  .PD
-Index: ncid-0.89/man/ncid2ncid.conf.5
+Index: ncid-1.0/man/ncid2ncid.conf.5
 ===================================================================
---- ncid-0.89.orig/man/ncid2ncid.conf.5	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid2ncid.conf.5	2014-04-19 23:37:56.700794028 +0200
+--- ncid-1.0.orig/man/ncid2ncid.conf.5	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid2ncid.conf.5	2014-09-09 22:39:56.056624422 +0200
 @@ -10,7 +10,7 @@
  The \fIncid2ncid.conf\fR file is used to set options.
  Options are set on a command line.
@@ -679,10 +679,10 @@ Index: ncid-0.89/man/ncid2ncid.conf.5
  between double quotes, or an equal sign.
  .PP
  The \fIncid2ncid.conf\fR file understands 3 types of lines:
-Index: ncid-0.89/man/ncid-alert.1
+Index: ncid-1.0/man/ncid-alert.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-alert.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-alert.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-alert.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-alert.1	2014-09-09 22:39:56.056624422 +0200
 @@ -6,11 +6,11 @@
  .SH SYNOPSIS
  .B
@@ -706,10 +706,10 @@ Index: ncid-0.89/man/ncid-alert.1
  .RE
  .SH REQUIREMENTS
  libnotify
-Index: ncid-0.89/man/ncid-notify.1
+Index: ncid-1.0/man/ncid-notify.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-notify.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-notify.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-notify.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-notify.1	2014-09-09 22:39:56.056624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-notify
  - send a NCID notification to your Android or iOS device
@@ -719,10 +719,10 @@ Index: ncid-0.89/man/ncid-notify.1
  .B ncid-notify
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid-wakeup.1
+Index: ncid-1.0/man/ncid-wakeup.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-wakeup.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-wakeup.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-wakeup.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-wakeup.1	2014-09-09 22:39:56.056624422 +0200
 @@ -1,9 +1,9 @@
 -.\" %W% %G%
  .TH NCID-WAKEUP 1
@@ -744,10 +744,10 @@ Index: ncid-0.89/man/ncid-wakeup.1
  .SH FILES
  /etc/ncid/ncid.conf
  .br
-Index: ncid-0.89/man/ncid-initmodem.1
+Index: ncid-1.0/man/ncid-initmodem.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-initmodem.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-initmodem.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-initmodem.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-initmodem.1	2014-09-09 22:39:56.056624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-initmodem
  - use ncidd to reinitialize modem to Caller ID mode
@@ -757,10 +757,10 @@ Index: ncid-0.89/man/ncid-initmodem.1
  .B ncid-initmodem
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid-kpopup.1
+Index: ncid-1.0/man/ncid-kpopup.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-kpopup.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-kpopup.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-kpopup.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-kpopup.1	2014-09-09 22:39:56.060624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-kpopup
  - popup Caller ID using KDE
@@ -770,10 +770,10 @@ Index: ncid-0.89/man/ncid-kpopup.1
  .B ncid-kpopup
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid-mythtv.1
+Index: ncid-1.0/man/ncid-mythtv.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-mythtv.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-mythtv.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-mythtv.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-mythtv.1	2014-09-09 22:39:56.060624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-mythtv
  - display Caller ID on MythTV using mythtvosd
@@ -783,10 +783,10 @@ Index: ncid-0.89/man/ncid-mythtv.1
  .B ncid-mythtv
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid-page.1
+Index: ncid-1.0/man/ncid-page.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-page.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-page.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-page.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-page.1	2014-09-09 22:39:56.060624422 +0200
 @@ -1,9 +1,9 @@
 -.\" %W% %G%
  .TH NCID-PAGE 1
@@ -821,10 +821,10 @@ Index: ncid-0.89/man/ncid-page.1
  .RE
  .PP
  .SH FILES
-Index: ncid-0.89/man/ncid-samba.1
+Index: ncid-1.0/man/ncid-samba.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-samba.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-samba.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-samba.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-samba.1	2014-09-09 22:39:56.060624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-samba
  - send Caller ID to samba to create a popup
@@ -834,10 +834,10 @@ Index: ncid-0.89/man/ncid-samba.1
  .B ncid-samba
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid-skel.1
+Index: ncid-1.0/man/ncid-skel.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-skel.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-skel.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-skel.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-skel.1	2014-09-09 22:39:56.060624422 +0200
 @@ -2,8 +2,9 @@
  .TH NCID-SKEL 1
  .SH NAME
@@ -858,10 +858,10 @@ Index: ncid-0.89/man/ncid-skel.1
  .SH FILES
  /etc/ncid/conf.d/ncid-skel.conf
  .br
-Index: ncid-0.89/man/ncid-speak.1
+Index: ncid-1.0/man/ncid-speak.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-speak.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-speak.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-speak.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-speak.1	2014-09-09 22:39:56.060624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-speak
  - send Caller ID to a text-to-speech program
@@ -871,10 +871,10 @@ Index: ncid-0.89/man/ncid-speak.1
  .B ncid-speak
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid-yac.1
+Index: ncid-1.0/man/ncid-yac.1
 ===================================================================
---- ncid-0.89.orig/man/ncid-yac.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-yac.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-yac.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-yac.1	2014-09-09 22:39:56.060624422 +0200
 @@ -4,7 +4,7 @@
  .B ncid-yac
  - send Caller ID to YAC listeners
@@ -884,10 +884,10 @@ Index: ncid-0.89/man/ncid-yac.1
  .B ncid-yac
  .SH DESCRIPTION
  The
-Index: ncid-0.89/man/ncid.1
+Index: ncid-1.0/man/ncid.1
 ===================================================================
---- ncid-0.89.orig/man/ncid.1	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid.1	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid.1	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid.1	2014-09-09 22:39:56.060624422 +0200
 @@ -2,7 +2,7 @@
  .TH NCID 1
  .SH NAME
@@ -1073,10 +1073,10 @@ Index: ncid-0.89/man/ncid.1
  
  # run ncid on a TiVo using out2osd, server on remote host
  tivocid 192.168.0.1
-Index: ncid-0.89/man/ncid-modules.7
+Index: ncid-1.0/man/ncid-modules.7
 ===================================================================
---- ncid-0.89.orig/man/ncid-modules.7	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/man/ncid-modules.7	2014-04-19 23:37:56.704794028 +0200
+--- ncid-1.0.orig/man/ncid-modules.7	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/man/ncid-modules.7	2014-09-09 22:39:56.060624422 +0200
 @@ -12,7 +12,7 @@
  .PP
  Modules are normally called by the client using the command line:
@@ -1086,10 +1086,10 @@ Index: ncid-0.89/man/ncid-modules.7
  .RE
  .PP
  The client can only call one module at a time, but multiple clients
-Index: ncid-0.89/tools/wct.pl
+Index: ncid-1.0/tools/wct.pl
 ===================================================================
---- ncid-0.89.orig/tools/wct.pl	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/tools/wct.pl	2014-04-19 23:37:56.708794028 +0200
+--- ncid-1.0.orig/tools/wct.pl	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/tools/wct.pl	2014-09-09 22:39:56.060624422 +0200
 @@ -1122,7 +1122,7 @@
  
  It automatically sets the beginning line number for the WC device which
@@ -1108,10 +1108,10 @@ Index: ncid-0.89/tools/wct.pl
  wct with the --discover command line option.
  
  =item Z
-Index: ncid-0.89/gateway/wc2ncid.pl
+Index: ncid-1.0/gateway/wc2ncid.pl
 ===================================================================
---- ncid-0.89.orig/gateway/wc2ncid.pl	2014-04-19 23:37:56.712794028 +0200
-+++ ncid-0.89/gateway/wc2ncid.pl	2014-04-19 23:37:56.708794028 +0200
+--- ncid-1.0.orig/gateway/wc2ncid.pl	2014-09-09 22:39:56.064624422 +0200
++++ ncid-1.0/gateway/wc2ncid.pl	2014-09-09 22:39:56.060624422 +0200
 @@ -1111,7 +1111,7 @@
  
  It automatically sets the beginning line number for the WC device which
