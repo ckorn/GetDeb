@@ -1,3 +1,9 @@
+tvbrowser (3.4.0.1-1~getdeb2) trusty; urgency=medium
+
+  * Install missing infothemes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 15 Sep 2014 22:02:12 +0200
+
 tvbrowser (3.4.0.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

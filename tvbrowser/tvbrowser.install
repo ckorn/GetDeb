@@ -4,6 +4,7 @@ debian/scripts/tvbrowser		usr/bin
 hyphen					usr/share/tvbrowser
 icons					usr/share/tvbrowser
 imgs					usr/share/tvbrowser
+infothemes				usr/share/tvbrowser
 personas				usr/share/tvbrowser
 plugins					usr/share/tvbrowser
 themepacks				usr/share/tvbrowser
