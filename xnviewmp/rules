@@ -58,8 +58,7 @@ override_dh_installchangelogs:
 	dh_installchangelogs XnView/WhatsNew.txt
 
 override_dh_shlibdeps:
-	dh_shlibdeps -l$(CURDIR)/debian/xnviewmp/usr/lib/xnviewmp/lib \
-	-XIlmImf.so -Xlibqjpeg.so
+	dh_shlibdeps -l$(CURDIR)/debian/xnviewmp/usr/lib/xnviewmp/lib -Xlibqjpeg.so
 
 override_dh_makeshlibs:
 	dh_makeshlibs -Xusr/lib/xnviewmp
