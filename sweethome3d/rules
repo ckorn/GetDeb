@@ -1,0 +1,56 @@
+#!/usr/bin/make -f
+
+VERSION   := $(shell dpkg-parsechangelog | egrep '^Version:' | cut -f2 -d' ' | cut -f1 -d-)
+JARFILE   := install/sweethome3d.jar
+ICONS     := debian/icons
+ABOUT     := src/com/eteks/sweethome3d/swing/resources/aboutIcon.png
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir -p lib libtest
+	ant jarExecutable
+
+override_dh_auto_install:
+	mv install/SweetHome3D-$(VERSION).jar $(JARFILE)
+	# icons
+	for i in 16 22 48 128; do \
+		mkdir -p $(ICONS)/$$i; \
+		convert $(ABOUT) -colorspace RGB -resize $${i}x$${i} \
+			-colorspace sRGB $(ICONS)/$$i/sweethome3d.png; \
+	done
+	convert $(ABOUT) -colorspace RGB -resize 32x32 \
+		-colorspace sRGB $(ICONS)/sweethome3d.xpm
+	dh_install
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
+
+override_dh_auto_clean:
+	find . -name *.class -print -exec rm -f {} \;
+	rm -rf $(JARFILE) $(ICONS)
+	dh_clean 
+
+TMPDIR=get-orig-source-tmp
+SRCDIR=$(TMPDIR)/SweetHome3D-$(VERSION)-src
+EXCLUDES=*.jar *.so *.jnilib *.dll *.zip
+get-orig-source:
+	mkdir -p $(TMPDIR)
+	uscan --download-version $(VERSION) --force-download --destdir $(TMPDIR)
+	unzip -q $(TMPDIR)/*.zip -d$(TMPDIR); rm -f $(TMPDIR)/*.zip
+	@echo "Getting ChangeLog from SW3D site..."
+	lynx -dump -nolist http://www.sweethome3d.com/history.jsp| \
+		sed -n 's/\[.*\]//g;/Version history/,/December 2006/p' >$(SRCDIR)/ChangeLog
+
+	@echo "\nTo comply with DFSG, the following files will be removed from tarball:"
+	@find $(SRCDIR) $(foreach pattern,$(EXCLUDES),-name '$(pattern)' -o) \
+		-path '*/src/com/eteks/sweethome3d/io/resources/contributions/*' -o \
+		-name JPEGImagesToVideo.java| \
+		sort|cut -d/ -f3-|awk '{print " - "$$0}'
+	cd $(TMPDIR); tar $(foreach pattern,$(EXCLUDES),--exclude $(pattern)) \
+		--exclude src/com/eteks/sweethome3d/io/resources/contributions \
+		--exclude JPEGImagesToVideo.java \
+		-Jcf ../../sweethome3d_$(VERSION)+dfsg.orig.tar.xz *-src
+	rm -rf $(TMPDIR)

@@ -1,0 +1,16 @@
+Description: Files under src/com/eteks/sweethome3d/io/resources/contributions
+ are released under Free Art License version 1.2 which doesn't comply with
+ DFSG and have been removed from upstream tarball. This patch to ignore missing
+ files.
+Author: Gabriele Giacone <1o5g4r8o@gmail.com>
+
+--- a/build.xml
++++ b/build.xml
+@@ -94,6 +94,7 @@
+     <zip destfile="build/Furniture.jar" basedir="src">
+       <include name="com/eteks/sweethome3d/io/*FurnitureCatalog*.properties"/>
+       <include name="com/eteks/sweethome3d/io/resources/**"/>
++      <exclude name="com/eteks/sweethome3d/io/*ContributedFurnitureCatalog*.properties"/>
+       <exclude name="com/eteks/sweethome3d/io/resources/textures/**"/>
+       <exclude name="com/eteks/sweethome3d/io/resources/patterns/**"/>
+     </zip>

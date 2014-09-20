@@ -1,0 +1,35 @@
+Source: sweethome3d
+Section: java
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Gabriele Giacone <1o5g4r8o@gmail.com>
+Build-Depends: ant, debhelper (>= 9)
+Build-Depends-Indep: icedtea-netx-common,
+                     imagemagick,
+                     java3ds-fileloader,
+                     libfreehep-graphicsio-svg-java,
+                     libitext-java,
+                     libjava3d-java,
+                     libsunflow-java (>= 0.07.2.svn396+dfsg-10),
+                     libbatik-java,
+                     default-jdk
+Standards-Version: 3.9.5
+Homepage: http://www.sweethome3d.com/
+
+Package: sweethome3d
+Architecture: all
+Depends: icedtea-netx-common | sun-java6-bin,
+         java-wrappers,
+         java3ds-fileloader,
+         libfreehep-graphicsio-svg-java,
+         libitext-java,
+         libjava3d-java,
+         libsunflow-java (>= 0.07.2.svn396+dfsg-10),
+         libbatik-java,
+         default-jre | java6-runtime,
+         ${misc:Depends}
+Recommends: sweethome3d-furniture
+Description: Interior 2D design application with 3D preview
+ Sweet Home 3D is an interior design Java application for
+ quickly choosing and placing furniture on a house 2D plan
+ drawn by the end-user, with a 3D preview.
