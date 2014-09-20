@@ -1,3 +1,21 @@
+cgminer (4.6.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Throttle bflsc28 devices when they hit the overheat limit
+    - Add whitelisting of firmware used in final bflsc28 products
+    - API.java - remove lowercase of all data sent
+    - Avalon2: Add 3 bytes nonce2 support
+    - Avalon2: MM needs n2size length <= 4
+    - Use fan min as fan speed when run with --avalon2-fixed-speed
+    - Clear the pool submit fail bool after adding shares to the stratum
+      hashtable to minimise window the share is not in the table
+    - api-example unlimited socket works
+    - Add custom strcasestr and use custom gnu type functions in bflsc
+    - Fix windows build of bflsc driver
+    - Fix possible deref in bflsc28
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 20 Sep 2014 18:17:20 +0200
+
 cgminer (4.6.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
