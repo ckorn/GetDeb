@@ -1,7 +1,9 @@
 don't build some mac/win stuff, don't copy third-party libraries (they're not even included in freeplane_srcpure!)
---- a/freeplane/ant/build.xml
-+++ b/freeplane/ant/build.xml
-@@ -187,14 +187,16 @@
+Index: freeplane-1.3.12/freeplane/ant/build.xml
+===================================================================
+--- freeplane-1.3.12.orig/freeplane/ant/build.xml	2014-09-20 17:36:05.731635226 +0200
++++ freeplane-1.3.12/freeplane/ant/build.xml	2014-09-20 17:36:05.727635226 +0200
+@@ -192,14 +192,16 @@
  		</jar>
  	</target>
  	
@@ -19,8 +21,10 @@ don't build some mac/win stuff, don't copy third-party libraries (they're not ev
          <mkdir dir="${dist.resources}" />
          <copy todir="${dist.resources}">
              <fileset dir="external-resources"/>
---- a/freeplane_framework/ant/build.xml
-+++ b/freeplane_framework/ant/build.xml
+Index: freeplane-1.3.12/freeplane_framework/ant/build.xml
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_framework/ant/build.xml	2014-09-20 17:36:05.731635226 +0200
++++ freeplane-1.3.12/freeplane_framework/ant/build.xml	2014-09-20 17:36:05.727635226 +0200
 @@ -166,10 +166,6 @@
  		<copy todir="${build}">
  			<fileset dir="${script}" />

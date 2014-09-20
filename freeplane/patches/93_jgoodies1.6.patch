@@ -1,6 +1,8 @@
 fix code for libjgoodies-forms-java 1.3->1.6 transition
---- a/freeplane/src/org/freeplane/core/resources/components/OptionPanel.java
-+++ b/freeplane/src/org/freeplane/core/resources/components/OptionPanel.java
+Index: freeplane-1.3.12/freeplane/src/org/freeplane/core/resources/components/OptionPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane/src/org/freeplane/core/resources/components/OptionPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane/src/org/freeplane/core/resources/components/OptionPanel.java	2014-09-20 17:36:10.711635078 +0200
 @@ -50,7 +50,7 @@
  import org.freeplane.features.mode.Controller;
  
@@ -55,8 +57,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  	}
  	
  	private boolean validate() {
---- a/freeplane/src/org/freeplane/features/styles/mindmapmode/StyleEditorPanel.java
-+++ b/freeplane/src/org/freeplane/features/styles/mindmapmode/StyleEditorPanel.java
+Index: freeplane-1.3.12/freeplane/src/org/freeplane/features/styles/mindmapmode/StyleEditorPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane/src/org/freeplane/features/styles/mindmapmode/StyleEditorPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane/src/org/freeplane/features/styles/mindmapmode/StyleEditorPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -761,7 +761,7 @@
  		final String form = "right:max(20dlu;p), 2dlu, p, 1dlu,right:max(20dlu;p), 4dlu, 80dlu, 7dlu";
  		final FormLayout rightLayout = new FormLayout(form, "");
@@ -66,8 +70,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  		rightBuilder.appendSeparator(TextUtils.getText("OptionPanel.separator.NodeStyle"));
  		if (addStyleBox) {
  			addAutomaticLayout(rightBuilder);
---- a/freeplane/src/org/freeplane/view/swing/features/time/mindmapmode/TimeManagement.java
-+++ b/freeplane/src/org/freeplane/view/swing/features/time/mindmapmode/TimeManagement.java
+Index: freeplane-1.3.12/freeplane/src/org/freeplane/view/swing/features/time/mindmapmode/TimeManagement.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane/src/org/freeplane/view/swing/features/time/mindmapmode/TimeManagement.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane/src/org/freeplane/view/swing/features/time/mindmapmode/TimeManagement.java	2014-09-20 17:36:10.715635078 +0200
 @@ -78,7 +78,7 @@
  import org.freeplane.features.text.mindmapmode.MTextController;
  
@@ -91,8 +97,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  				 btnBuilder.getLayout().addGroupedColumn(btnBuilder.getColumnCount());
  			}
  
---- a/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnDetailsPanel.java
-+++ b/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnDetailsPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnDetailsPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnDetailsPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnDetailsPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -28,7 +28,7 @@
  import org.freeplane.plugin.script.ExecuteScriptAction;
  import org.freeplane.plugin.script.addons.ScriptAddOnProperties.Script;
@@ -131,8 +139,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  				RowSpec.decode("top:default:grow"),}));
  		if (warning != null) {
  			JLabel warningLabel = createWarningLabel(addOn);
---- a/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnInstallerPanel.java
-+++ b/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnInstallerPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnInstallerPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnInstallerPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_script/src/org/freeplane/plugin/script/addons/AddOnInstallerPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -43,7 +43,7 @@
  import org.freeplane.plugin.script.ScriptingPermissions;
  
@@ -171,8 +181,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  		//
  		// Search
  		//
---- a/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/FileExistsDialogPanel.java
-+++ b/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/FileExistsDialogPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/FileExistsDialogPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/FileExistsDialogPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/FileExistsDialogPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -10,7 +10,7 @@
  
  import org.freeplane.core.util.TextUtils;
@@ -200,8 +212,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  		
  		JLabel lblNewLabel = new JLabel(TextUtils.format(message, targetFile.getName(), targetFile.getParent()));
  		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
---- a/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/ImportProjectDialogPanel.java
-+++ b/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/ImportProjectDialogPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/ImportProjectDialogPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/ImportProjectDialogPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/ImportProjectDialogPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -41,7 +41,7 @@
  import org.freeplane.plugin.workspace.model.project.ProjectLoader;
  import org.freeplane.plugin.workspace.nodes.ProjectRootNode;
@@ -260,8 +274,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  				RowSpec.decode("fill:default:grow"),}));
  		
  		JLabel lblNewLabel = new JLabel(TextUtils.getText(ImportProjectDialogPanel.class.getSimpleName().toLowerCase(Locale.ENGLISH)+".help"));
---- a/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewDirectoryDialogPanel.java
-+++ b/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewDirectoryDialogPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewDirectoryDialogPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewDirectoryDialogPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewDirectoryDialogPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -11,7 +11,7 @@
  import javax.swing.JTextField;
  import com.jgoodies.forms.layout.FormLayout;
@@ -298,8 +314,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  		
  		JLabel lblIn = new JLabel("In:");
  		add(lblIn, "3, 2, right, center");
---- a/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewProjectDialogPanel.java
-+++ b/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewProjectDialogPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewProjectDialogPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewProjectDialogPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NewProjectDialogPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -29,7 +29,7 @@
  import org.freeplane.plugin.workspace.WorkspaceController;
  import org.freeplane.plugin.workspace.model.project.AWorkspaceProject;
@@ -357,8 +375,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  				RowSpec.decode("fill:default:grow"),}));
  		
  		JLabel lblNewLabel = new JLabel(TextUtils.getText(NewProjectDialogPanel.class.getSimpleName().toLowerCase(Locale.ENGLISH)+".help"));
---- a/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NodeRenameDialogPanel.java
-+++ b/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NodeRenameDialogPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NodeRenameDialogPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NodeRenameDialogPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/NodeRenameDialogPanel.java	2014-09-20 17:36:10.715635078 +0200
 @@ -10,7 +10,7 @@
  import javax.swing.JPanel;
  import javax.swing.JTextField;
@@ -396,8 +416,10 @@ fix code for libjgoodies-forms-java 1.3->1.6 transition
  		
  		JLabel lblName = new JLabel("name:");
  		add(lblName, "3, 2, right, default");
---- a/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/WorkspaceNewFolderPanel.java
-+++ b/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/WorkspaceNewFolderPanel.java
+Index: freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/WorkspaceNewFolderPanel.java
+===================================================================
+--- freeplane-1.3.12.orig/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/WorkspaceNewFolderPanel.java	2014-09-20 17:36:10.723635078 +0200
++++ freeplane-1.3.12/freeplane_plugin_workspace/src/org/freeplane/plugin/workspace/components/dialog/WorkspaceNewFolderPanel.java	2014-09-20 17:36:10.719635078 +0200
 @@ -25,7 +25,7 @@
  import org.freeplane.plugin.workspace.WorkspaceController;
  import org.freeplane.plugin.workspace.model.AWorkspaceTreeNode;
