@@ -1,3 +1,9 @@
+xnviewmp (0.68-1~getdeb5~trusty) trusty; urgency=medium
+
+  * Apply more changes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 18 Sep 2014 20:45:30 +0200
+
 xnviewmp (0.68-1~getdeb4~trusty) trusty; urgency=medium
 
   * Apply changes from darealshinji. Thanks.
