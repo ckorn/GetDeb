@@ -62,4 +62,4 @@ override_dh_shlibdeps:
 	-XIlmImf.so -Xlibqjpeg.so
 
 override_dh_makeshlibs:
-	dh_makeshlibs -Xusr/lib/xnviewmp
+	# no true shared libraries

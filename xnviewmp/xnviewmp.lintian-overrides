@@ -1,6 +1,2 @@
 # it's closed-source
 xnviewmp: embedded-library
-
-# private libs trigger ldconfig erroneously
-xnviewmp: postinst-has-useless-call-to-ldconfig
-xnviewmp: postrm-has-useless-call-to-ldconfig
