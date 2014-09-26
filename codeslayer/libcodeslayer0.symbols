@@ -55,6 +55,13 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_document_linker_new@Base 4.0.0
  codeslayer_document_linker_set_pattern@Base 4.0.0
  codeslayer_document_new@Base 1.2.1
+ codeslayer_document_search_dialog_get_type@Base 4.3.0
+ codeslayer_document_search_dialog_new@Base 4.3.0
+ codeslayer_document_search_dialog_run@Base 4.3.0
+ codeslayer_document_search_get_type@Base 4.3.0
+ codeslayer_document_search_index_files@Base 4.3.0
+ codeslayer_document_search_new@Base 4.3.0
+ codeslayer_document_search_run_dialog@Base 4.3.0
  codeslayer_document_set_file_path@Base 1.2.1
  codeslayer_document_set_line_number@Base 1.2.1
  codeslayer_document_set_project@Base 1.2.1
@@ -119,6 +126,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_menu_bar_save_all_documents@Base 4.0.0
  codeslayer_menu_bar_save_document@Base 4.0.0
  codeslayer_menu_bar_scan_external_changes@Base 3.0.0
+ codeslayer_menu_bar_search_for_document@Base 4.3.0
  codeslayer_menu_bar_search_get_type@Base 3.0.0
  codeslayer_menu_bar_search_new@Base 3.0.0
  codeslayer_menu_bar_show_bottom_pane@Base 3.0.0
@@ -234,6 +242,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_profile_contains_plugin@Base 4.0.0
  codeslayer_profile_contains_project@Base 4.0.0
  codeslayer_profile_contains_recent_document@Base 4.2.0
+ codeslayer_profile_get_config_folder_path@Base 4.3.0
  codeslayer_profile_get_documents@Base 4.0.0
  codeslayer_profile_get_enable_projects@Base 4.0.0
  codeslayer_profile_get_file_path@Base 4.0.0
