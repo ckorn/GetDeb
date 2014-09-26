@@ -1,3 +1,55 @@
+chatty (0.7-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    New features:
+    - Added Emoticon Dialog, showing emotes you paid for (Subscriber/Turbo)
+    and channel-specific emotes (FFZ/BTTV)
+    - Added Followers/Subscribers lists, added new follower sound (works only
+    if Followers Dialog is open)
+    - Livestreamer: Added setting to use auth (for sub-only streams), added
+    setting whether to open the Livestreamer Dialog when opening a stream
+    from the menu
+    - Added setting to write stream info to a file (e.g. for display on
+    stream)
+    - Automatically request moderator list once per channel, added /fixMods
+    command to temporarily fix mods status without showing the list of all
+      moderators
+    - Added /host and /unhost commands
+    - Added shortcut Ctrl-W to close active tab/restore popout to tab
+    - Admin Dialog: Added option to automatically repeat commercial on the
+    set delay
+    - Added stream uptime to Channel Info Dialog (how long ago a stream was
+    started)
+
+    Changes:
+    - Changed message parsing to support "<name> is now hosting you"
+    notification
+      (only works on Twitch Client Version 3 though, see Settings - Advanced)
+    - Added setting to specify the timezone of the timestamp separately from
+    the system timezone setting
+    - Added kadgar.net to open live streams from the context menu
+    - Added optional filter to remove combining characters used in some
+    languages that may cause an error in some cases
+    - Livestreamer: Reuse open tabs if process stopped and opening stream
+    with the same stream/quality, re-enable quality selection buttons if
+    process stopped, improved labels and help
+    - Added more timestamp options in the settings and changed to showing as
+    example
+    - Added gzip support to Twitch API requests
+    - Added check to confirm status of stream going offline, which may or may
+    not prevent wrong offline notifications if the Twitch API returns false
+      data
+    - Added hint about entering Twitch Commands in invalid command message
+    - Updated help
+
+    Bugfixes:
+    - Fixed error in message parsing
+    - Fixed display error with ban messages
+    - Fixed a possible bug with notifications
+    - Now showing "<number> /host commands remaining this half hour." message
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Sep 2014 21:13:49 +0200
+
 chatty (0.6.7-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
