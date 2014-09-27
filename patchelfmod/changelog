@@ -1,3 +1,9 @@
+patchelfmod (0.16-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 27 Sep 2014 15:51:41 +0200
+
 patchelfmod (0.15-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
