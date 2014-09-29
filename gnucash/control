@@ -77,7 +77,8 @@ Description: debugging symbols for the accounting software Gnucash
 Package: gnucash-common
 Architecture: all
 Depends: ${misc:Depends},
-         libjs-jquery
+         libjs-jquery,
+         python
 Recommends: gnucash (>= ${source:Version})
 Breaks: gnucash (<< 2.4.0-1~)
 Replaces: gnucash (<< 2.4.0-1~)

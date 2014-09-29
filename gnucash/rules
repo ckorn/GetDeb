@@ -46,6 +46,8 @@ override_dh_install:
 	# this fixes a crash on exit caused by a double free
 	# https://bugzilla.gnome.org/show_bug.cgi?id=728717#c24
 	rm -f debian/gnucash-common/usr/share/gnucash/python/init.py
+	[ ! -f debian/gnucash-common/usr/share/gnucash/python/pycons/pycons ] \
+	 || chmod +x debian/gnucash-common/usr/share/gnucash/python/pycons/pycons
 
 override_dh_auto_test:
 
