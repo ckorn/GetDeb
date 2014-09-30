@@ -1,10 +1,4 @@
 fritzing for Debian
 -------------------
 
-All of following sourceless binaries were deleted from tarball source:
- ./SetupAPI.Lib
- ./datasheets/BC857_SMD_[BC557].pdf
- ./datasheets/N-FET_IRF640.pdf
- ./datasheets/Multilayer_Capacitor_SMD_X7R.pdf
- ./datasheets/BC847_SMD_[BC547].pdf
- ./datasheets/P-FET_IRF9640.pdf
+Run `bzr-buildpackage` for build from bzr repository.

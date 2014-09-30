@@ -1,69 +1,327 @@
-This work was packaged for Debian by:
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: fritzing
+Source: http://www.fritzing.org/download
 
-    Enrique Hernández Bello <ehbello@gmail.com> on Sun, 03 Oct 2010 15:05:26 +0100
+Files: *
+Copyright: 2007-2013 University of Applied Sciences Potsdam
+License: GPL-3+
+Comment: here is a list of authors and contributors,
+        Prof. Reto Wettach <reto@driftingfriends.de>
+ Andre Knoerig <andre.knoerig@fh-potsdam.de>
+ Myriel Milicevic <myriel@neighbourhoodsatellites.com>
+ Zach Eveland <zeveland@blacklabel-development.com>
+ Dirk van Oosterbosch <dirk@fritzing.org>
+ Jonathan Cohen <jonathan@fritzing.org>
+ Marcus Paeschke <marcus@neotoxic.de>
+ Omer Yosha <contact@airpiano.de>
+ Travis Robertson <travoso@dnai.com>
+ Stefan Hermann <stefanhermann79@gmail.com>
+ Brendan Howell <brendan@fritzing.org>
+ Mariano Crowe <merunga@fritzing.org>
+ Johannes Landstorfer <johannes.landstorfer@gmail.com>
+ Jenny Chowdhury <jennylc@jennylc.com>
+ Lionel Michel 
+ Jannis Leidel <jannis@leidel.info>
+ Daniel Tzschentke <daniel.tzschentke@ixds.de>
 
-It was downloaded from:
+Files: resources/fonts/*
+Copyright: 2005-2008 The Android Open Source Project
+License: the Apache License, Version 2.0
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the Apache License, Version 2.0.
+ .
+ On Debian systems, the complete text of the Apache License, Version 2.0
+ can be found in `/usr/share/common-licenses/Apache-2.0'.
 
-    <http://www.fritzing.org/download>
+Files: parts/*
+Copyright: 2007-2013 University of Applied Sciences Potsdam
+License: CC-BY-SA-3.0
+Comment: here is a list of authors of documentation and parts design,
+ #begin authors of parts
+ #This list is generated automatically by the script debian/update-copyright
+ #It is based on the contents of the database parts.db
+ 2008-09-16	
+ 2008-09-25	
+ 2009-05-04	
+ 2010-04-06	
+ 2011-01-18	
+ 2009-06-22	Adafruit Industries
+ 2011-07-09	Alan Smith
+ 2001-09-23	Alfonso Abelenda Escudero
+ 	althaus
+ 2013-04-03	althaus
+ 2013-04-11	althaus
+ 2013-04-11	Althaus
+ 2013-08-22	althaus
+ 	Amber Mear/Digilent Inc.
+ 	Analog Devices
+ 2009-11-04	andre
+ 2010-04-11	andre
+ 2012-01-20	Andre Knoerig
+ 2012-02-02	Andre Knoerig
+ 2009-12-17	André Knörig
+ 2010-03-06	André Knörig
+ 2010-03-07	André Knörig
+ 2010-07-01	André Knörig
+ 2012-03-10	Arduino
+ 	Atlas Scientific 
+ 2012-04-11	Azharul Haque
+ 	BDub @ Technobly.com
+ 2008-02-02	Brendan Howell
+ 2008-07-25	Brendan Howell
+ 2008-07-28	Brendan Howell
+ 2008-11-04	Brendan Howell
+ 2008-11-25	Brendan Howell
+ 2008-12-20	Brendan Howell
+ 2008-12-22	Brendan Howell
+ 2009-01-07	Brendan Howell
+ 2009-01-09	Brendan Howell
+ 2009-02-26	Brendan Howell
+ 2009-05-05	Brendan Howell
+ 2009-05-20	Brendan Howell
+ 2009-06-08	Brendan Howell
+ 2009-09-08	Brendan Howell
+ 2009-10-23	Brendan Howell
+ 2009-12-01	Brendan Howell
+ 2010-10-07	Brendan Howell
+ 2009-12-10	Brendan Howell and Lionel Michel
+ 2009-10-23	Brendan Howell/Dirk van Osterbosch/Lionel Michel
+ 2011-07-20	Brett Hagman, Rogue Robotics, bhagman@roguerobotics.com, http://www.roguerobotics.com/
+ 2010-01-12	Brian Evans
+ 2011-11-16	Carlos Hansen
+ 2011-11-15	Carlos Hansen Mendoza
+ 2011-11-11	Christophe Augier
+ 2012-03-04	Christopher Mann
+ 	Christoph Rieder
+ 2010-08-18	CW
+ 2010-10-01	CW
+ 2010-11-01	CW
+ 2011-08-20	daryl
+ 2012-02-05	David Thomasson
+ 2012-04-07	D&C
+ 	Digilent/Amber Mear
+ 2008-11-11	Dirk van Oosterbosch
+ 2008-11-12	Dirk van Oosterbosch
+ 2008-12-08	Dirk van Oosterbosch
+ 2008-12-30	Dirk van Oosterbosch
+ 2009-01-08	Dirk van Oosterbosch
+ 2009-05-03	Dirk van Oosterbosch
+ 2009-10-23	Dirk van Oosterbosch
+ 2010-02-10	Dirk van Oosterbosch
+ 2009-09-25	Don Roberts (blog.gogozer.net)
+ 2011-06-17	drew
+ 2014-02-02	fabian
+ 	fabian althaus
+ 	Fabian Althaus
+ 2008-05-14	Fabian Althaus
+ 2011-05-26	Fabian Althaus
+ 2013-05-05	Fabian Althaus
+ 2013-05-14	Fabian Althaus
+ 2013-05-22	fabian althaus
+ 2013-05-25	fabian Althaus
+ 2013-05-26	Fabian Althaus
+ 2013-06-12	Fabian Althaus
+ 2013-07-25	Fabian Althaus
+ 2013-08-12	Fabian Althaus
+ 2013-09-17	fabian althaus
+ 2014-04-12	Fabian Althaus
+ 2014-04-15	Fabian Althaus
+ 2014-05-06	fabian althaus
+ 2014-06-11	fabian althaus
+ 2014-06-14	fabian althaus
+ 2023-06-24	fabian althaus
+ 	Fabian Althaus modified by Ouinouin
+ 2014-06-22	fabian_atlthaus
+ 	f.althaus
+ 2013-05-25	f.althaus
+ 2013-05-26	f.althaus
+ 2012-01-14	frank
+ 2012-01-15	Frank Belau
+ 2009-10-22	Fritzing
+ 	Fritzing Core Team
+ 2009-10-01	Fritzing Part-o-matic
+ 2009-10-20	Fritzing Part-o-matic
+ 2009-10-23	Fritzing Part-o-matic
+ 2011-02-22	Fritzing Part-o-matic
+ 2010-03-06	Fritzing Team
+ 2010-10-20	Fritzing Team
+ 	Frode Lillerud
+ 2012-03-16	gareth@halfacree.co.uk
+ 2012-03-17	gareth@halfacree.co.uk
+ 2009-08-13	GorillaCoder
+ 2010-11-18	J.A. Korten - JKSOFT Educational
+ 2010-12-01	J.A. Korten - JKSOFT Educational
+ 2011-06-02	JC
+ 2011-12-04	Jean-Claude Wippler
+ 	Jenny
+ 2009-10-23	Jenny
+ 2008-11-11	JennyLC
+ 2013-11-01	Jeremy Bennett
+ 2011-10-25	Jinbuhm Kim (jinbuhm.Kim@gmail.com)
+ 2009-05-03	Jonas Jaeger
+ 2011-04-06	jonathan
+ 2011-06-17	jonathan
+ 2011-07-21	jonathan
+ 2011-08-10	jonathan
+ 2011-10-06	jonathan
+ 2012-02-03	jonathan
+ 2012-10-23	Jonathan
+ 2010-04-29	Jonathan Cohen
+ 2011-06-29	Jonathan Cohen
+ 2011-08-08	Jonathan Cohen
+ 2012-05-30	Jonathan Cohen
+ 2012-06-03	Jonathan Cohen
+ 2012-10-02	Jonathan Cohen
+ 2012-10-23	Jonathan Cohen
+ 2010-01-03	Juan Greco
+ 2009-02-26	lionel
+ 	Lionel Michel
+ 2009-02-25	Lionel Michel
+ 2009-02-26	Lionel Michel
+ 2009-03-04	Lionel Michel
+ 2009-03-05	Lionel Michel
+ 2009-03-06	Lionel Michel
+ 2009-04-12	Lionel Michel
+ 2009-10-23	Lionel Michel
+ 2009-11-12	lionelmichel
+ 2009-11-12	Lionel Michel
+ 2009-12-09	Lionel Michel
+ 2010-02-10	Lionel Michel
+ 2010-04-08	Lionel Michel
+ 2010-04-12	Lionel Michel
+ 2010-04-14	Lionel Michel
+ 2010-04-30	Lionel Michel
+ 2010-06-23	Lionel Michel
+ 2010-07-27	Lionel Michel
+ 2010-10-29	Lionel Michel
+ 2010-11-05	lionelmichel
+ 2012-04-12	Lionel Michel
+ 2009-10-23	Luis Emiro Linares Garcia
+ 2008-08-21	Mariano Crowe
+ 2012-02-17	Martha Maldonado
+ 2012-02-14	Mattia Francesco Moro
+ 2011-09-07	Mike
+ 2010-08-10	Mr.T
+ 2010-09-23	Mr.T
+ 2010-09-24	Mr.T
+ 2010-09-28	Mr.T
+ 2010-09-30	Mr.T
+ 2010-10-06	Mr.T
+ 2011-01-07	Mr.T
+ 2011-01-11	Mr.T
+ 2011-01-12	Mr.T
+ 2011-01-17	Mr.T
+ 2011-01-18	Mr.T
+ 2011-12-01	Mr.T
+ 2011-07-22	Niclas Hoyer
+ 2012-04-20	Nikos Vallianos
+ 2010-08-07	Nils and Torsten (based on the Arduino part)
+ 2010-02-05	nvillar
+ 2008-12-25	O. Tannenbaum
+ 2009-10-23	Peter Boman
+ 2011-02-22	Petris Christian
+ 2012-03-14	red byer
+ 2012-03-18	red byer
+ 2010-05-26	Revolution Education Ltd
+ 2011-01-12	Revolution Education Ltd
+ 	Riccardo Marchesi
+ 2011-06-07	Sander Isendoorn
+ 2011-02-22	Scandola Erik
+ 2011-11-28	Snootlab
+ 2011-11-29	Snootlab
+ 2011-08-30	Sorki
+ 2011-07-08	SparkFun
+ 2011-07-10	SparkFun
+ 2011-08-10	SparkFun
+ 2011-11-09	SparkFun
+ 2011-11-16	Sparkfun
+ 2011-11-16	SparkFun
+ 2011-11-29	SparkFun
+ 2011-12-05	SparkFun
+ 	Stefan Hermann
+ 2008-09-23	Stefan Hermann
+ 2008-09-24	Stefan Hermann
+ 2008-10-10	Stefan Hermann
+ 2008-11-04	Stefan Hermann
+ 2009-06-22	stefanhermann
+ 2010-09-16	Stefan Hermann
+ 2011-06-11	stefanhermann
+ 2011-08-04	Stefan Hermann
+ 2011-08-08	Stefan Hermann
+ 2011-09-15	Stefan Hermann
+ 2011-09-20	Stefan Hermann
+ 2011-09-21	stefanhermann
+ 2011-09-22	stefanhermann
+ 2012-02-13	stefanhermann
+ 2012-06-01	Stefan Hermann
+ 2011-06-17	stephane
+ 	Steven Vogel
+ 2010-01-19	tigoe
+ 2010-03-11	tigoe
+ 2010-07-17	tigoe
+ 2010-08-03	tigoe
+ 2010-08-10	tigoe
+ 2009-10-25	Tuomo Tammenpää
+ 2012-02-18	Uğur Can Bastık
+ 2010-02-20	Vince Callahan
+ 2012-02-20	wreutz
+ 2012-02-21	wreutz
+ 2012-05-25	www.fritzing.org
+ 2012-11-07	www.fritzing.org
+ 2013-02-13	www.fritzing.org
+ 2013-07-15	www.fritzing.org
+ 2013-07-18	www.fritzing.org
+ 2014-01-13	www.fritzing.org
+ 2014-01-17	www.fritzing.org
+ 2014-04-22	www.fritzing.org
+ #end authors of parts
 
-Upstream Authors:
+Files: debian/*
+Copyright: 2010-2013 Enrique Hernández Bello <ehbello@gmail.com>
+License: GPL-3+
 
-	Prof. Reto Wettach <reto@driftingfriends.de>
-	Andre Knoerig <andre.knoerig@fh-potsdam.de>
-	Myriel Milicevic <myriel@neighbourhoodsatellites.com>
-	Zach Eveland <zeveland@blacklabel-development.com>
-	Dirk van Oosterbosch <dirk@fritzing.org>
-	Jonathan Cohen <jonathan@fritzing.org>
-	Marcus Paeschke <marcus@neotoxic.de>
-	Omer Yosha <contact@airpiano.de>
-	Travis Robertson <travoso@dnai.com>
-	Stefan Hermann <stefanhermann79@gmail.com>
-	Brendan Howell <brendan@fritzing.org>
-	Mariano Crowe <merunga@fritzing.org>
-	Johannes Landstorfer <johannes.landstorfer@gmail.com>
-	Jenny Chowdhury <jennylc@jennylc.com>
-	Lionel Michel 
-	Jannis Leidel <jannis@leidel.info>
-	Daniel Tzschentke <daniel.tzschentke@ixds.de>
+License: CC-BY-SA-3.0
+ You are free:
+ - to Share — to copy, distribute and transmit the work
+ - to Remix — to adapt the work
+ - to make commercial use of the work
+ .
+ Under the following conditions:
+ - Attribution — You must attribute the work in the manner specified
+   by the author or licensor (but not in any way that suggests that
+   they endorse you or your use of the work).
+ .
+ - Share Alike — If you alter, transform, or build upon this work, you
+   may distribute the resulting work only under the same or similar
+   license to this one.
+ .
+ You can get a copy of the full license at:
+ <http://www.creativecommons.org/licenses/by-sa/3.0/>.
+ .
+ This means that you can create your own variation of Fritzing, as
+ long as you credit us and also publish it under GPL. Similarly, you
+ may re-publish our documentation, as long as you credit us, and
+ publish it under the same license.
+ .
+ You may publish circuits and diagrams that you create with Fritzing
+ and that use our graphics, again as long as you credit us, and
+ publish your works under the same license.  A credit can be as simple
+ as "this image was created with Fritzing."
 
-Copyright:
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or (at
+ your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
 
-    <Copyright (C) 2007-2011 University of Applied Sciences Potsdam>
-
-License:
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-On Debian systems, the complete text of the GNU General
-Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
-
-The documentation and part designs are licensed under Creative Commons 3.0
-BY-SA Unported. You can get a copy of this at:
-<http://www.creativecommons.org/licenses/by-sa/3.0/>.
-
-This means that you can create your own variation of Fritzing, as long as you 
-credit us and also publish it under GPL. Similarly, you may re-publish our 
-documentation, as long as you credit us, and publish it under the same 
-license. 
-
-You may publish circuits and diagrams that you create with 
-Fritzing and that use our graphics, again as long as you credit us, and 
-publish your works under the same license.  A credit can be as simple as 
-"this image was created with Fritzing."
-
-The Debian packaging is:
-
-    Copyright (C) 2010 Enrique Hernández Bello <ehbello@gmail.com>
-
-and is licensed under the GPL version 3, see above.

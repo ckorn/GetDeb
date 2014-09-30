@@ -1,16 +1,19 @@
 Source: fritzing
+Maintainer: Enrique Hernández Bello <ehbello@gmail.com>
+Uploaders: Georges Khaznadar <georgesk@debian.org>
 Section: electronics
 Priority: optional
-Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Uploaders: Georges Khaznadar <georgesk@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 9),
                imagemagick,
                libqt4-dev,
                zlib1g-dev,
                libboost-dev,
-               hardening-wrapper
-Standards-Version: 3.9.3
+               hardening-wrapper,
+	       sqlite3
+Standards-Version: 3.9.5
+Vcs-Browser: https://bazaar.launchpad.net/~ehbello/fritzing/debian/changes
+Vcs-Bzr: https://code.launchpad.net/~ehbello/fritzing/debian
 Homepage: http://fritzing.org
 
 Package: fritzing
@@ -48,3 +51,4 @@ Description: Easy-to-use electronic design software (data files)
  schematic, PCB artwork, and PCB production files.
  .
  This package contains the architecture independent data files for Fritzing.
+

@@ -10,6 +10,9 @@ include /usr/share/cdbs/1/class/qmake.mk
 
 # Add here any variable or target overrides you need.
 
+clean::
+	debian/update-copyright
+
 binary-install/fritzing::
 	convert $(DEBDIR)/fritzing/usr/share/pixmaps/fritzing_icon.png -resize 32x32 \
 		$(DEBDIR)/fritzing/usr/share/pixmaps/fritzing_icon.xpm

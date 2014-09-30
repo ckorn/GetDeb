@@ -1,8 +1,9 @@
-Index: fritzing-0.8.6b/phoenix.pro
+Description: Hardening patch
+Index: fritzing-0.9.0b/phoenix.pro
 ===================================================================
---- fritzing-0.8.6b.orig/phoenix.pro	2014-01-22 19:58:56.510025522 +0100
-+++ fritzing-0.8.6b/phoenix.pro	2014-01-22 19:58:56.506025522 +0100
-@@ -59,6 +59,12 @@
+--- fritzing-0.9.0b.orig/phoenix.pro	2014-09-29 21:29:04.317242016 +0200
++++ fritzing-0.9.0b/phoenix.pro	2014-09-29 21:29:04.313242016 +0200
+@@ -103,6 +103,13 @@
          LIBS += /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
  }
  unix {
@@ -11,6 +12,7 @@ Index: fritzing-0.8.6b/phoenix.pro
 +    QMAKE_CFLAGS *= $(shell dpkg-buildflags --get CFLAGS)
 +    QMAKE_CXXFLAGS *=$(shell dpkg-buildflags --get CXXFLAGS)
 +    QMAKE_LDFLAGS *=$(shell dpkg-buildflags --get LDFLAGS)
++
 +
      !macx { # unix is defined on mac
          HARDWARE_PLATFORM = $$system(uname -m)

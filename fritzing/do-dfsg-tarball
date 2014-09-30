@@ -59,15 +59,19 @@ cp -i ../${UPSTREAM_FILE} ../${DFSG_FILE}.${EXT}
 echo "Unpacking tarball... "
 ${UNPACK} ../${DFSG_FILE}.${EXT}
 
+OLDIFS=$IFS
+IFS='
+' # don't remove this
 SOURCELESS=$(grep -v ^# debian/sourceless)
 for ITEM in $SOURCELESS; do
-	echo -n "Deleting ${ITEM} from tarball... "
-	if ! tar --delete --wildcards -f ../${DFSG_FILE} ${ITEM}; then
+	echo -n "Deleting '${ITEM}' from tarball... "
+	if ! tar --delete --wildcards -f ../${DFSG_FILE} "${ITEM}"; then
 		echo "WARNING! THE CONTENT OF THE DEBIAN/SOURCELESS MAY BE WRONG!"
 	else
 		echo "done"
 	fi
 done
+IFS=$OLDIFS
 
 echo "Packing tarball... "
 ${PACK} ../${DFSG_FILE}

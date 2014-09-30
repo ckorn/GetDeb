@@ -1,38 +1,61 @@
-fritzing (0.8.7b-1~getdeb1) precise; urgency=low
+fritzing (0.9.0b-1~getdeb1) trusty; urgency=medium
 
-  * New upstream version
+  * New upstream version (LP: #1375240)
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 24 Jan 2014 22:44:09 +0100
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 29 Sep 2014 21:27:56 +0200
 
-fritzing (0.8.6b-1~getdeb1) precise; urgency=low
+fritzing (0.8.7b+dfsg2-1) unstable; urgency=medium
 
-  * New upstream version
+  [ Enrique Hernández Bello ]
+  * Fixed do-dfsg-tarball script to recognize paths with blank spaces.
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 22 Jan 2014 19:58:37 +0100
+  [ Georges Khaznadar ]
+  * fixed the package versions's numbering isued by Enrique
 
-fritzing (0.8.5b-1~getdeb1) precise; urgency=low
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Sun, 15 Jun 2014 01:45:01 +0100
 
-  * New upstream version
+fritzing (0.8.7b+dfsg-1) unstable; urgency=medium
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 17 Dec 2013 21:43:25 +0100
+  * upgraded to the newest upstream release
+  * upgraded Standards-Version to 3.9.5
 
-fritzing (0.8.4b-1~getdeb1) precise; urgency=low
+ -- Georges Khaznadar <georgesk@debian.org>  Sun, 09 Feb 2014 16:53:32 +0100
 
-  * New upstream version
+fritzing (0.8.5b+dfsg-1) unstable; urgency=low
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 15 Dec 2013 19:43:58 +0100
+  * added files to the list debain/sourceless
+  * upgraded to the newest upstream release
+  * modified debian/copyright to take in account new fonts and to take in
+    account modifications in the author database with the script
+    debian/update-copyright
 
-fritzing (0.8.3b-1~getdeb1) precise; urgency=low
+ -- Georges Khaznadar <georgesk@debian.org>  Wed, 25 Dec 2013 20:14:46 +0100
 
-  * New upstream version
+fritzing (0.8.3b-1) unstable; urgency=low
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Aug 2013 20:23:17 +0200
+  [ Enrique Hernández Bello ]
+  * New upstream version.
+  * Updated README.source file.
+  * Updated upstream changelog.
+  * Runs update-copyright while building.
+  * Installs help, pdb and translation syntax xml files.
+    (Closes: #700592) (LP: #1184347)
+  * Installs Fritzing manpage provided by upstream sources.
 
-fritzing (0.8.0b-1~getdeb1) precise; urgency=low
+  [ Georges Khaznadar ]
+  * added a build-dependency on sqlite3, which is reqired for update-copyright
 
-  * New upstream version
+ -- Enrique Hernández Bello <ehbello@gmail.com>  Sat, 05 Oct 2013 21:30:40 +0100
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 17 Jun 2013 19:01:46 +0200
+fritzing (0.8.0b-1) unstable; urgency=low
+
+  * upgraded to the newest upstream version
+  * noticed loads of new data in the new package, as SVG files.
+    Presumabily Closes: #700592
+  * converted debian/copyright to DEP5 format
+  * created a script to gather the name of authors of parts design
+
+ -- Georges Khaznadar <georgesk@debian.org>  Mon, 24 Jun 2013 11:19:30 +0200
 
 fritzing (0.7.12b-2) unstable; urgency=low
 

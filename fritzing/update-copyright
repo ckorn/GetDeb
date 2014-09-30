@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+tmp=debian/copyright.tmp
+sed '/#begin authors of parts/q' debian/copyright > $tmp
+echo ' #This list is generated automatically by the script debian/update-copyright' >> $tmp
+echo ' #It is based on the contents of the database parts.db' >> $tmp
+echo "select author,date from parts;" | sqlite3 parts/parts.db| sort|uniq|sed 's/\(.*\)|\(.*\)/ \2\t\1/' >> $tmp
+sed -n '/#end authors of parts/,$p' debian/copyright >> $tmp
+
+mv $tmp debian/copyright
