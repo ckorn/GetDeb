@@ -369,6 +369,7 @@ libcodeslayer.so.0 libcodeslayer0 #MINVER#
  codeslayer_utils_get_utf8_text@Base 3.0.0
  codeslayer_utils_has_text@Base 1.3.0
  codeslayer_utils_isdigit@Base 1.2.1
+ codeslayer_utils_list_copy@Base 4.3.1
  codeslayer_utils_list_to_string@Base 1.4.0
  codeslayer_utils_save_gobjects@Base 1.4.0
  codeslayer_utils_save_key_file@Base 3.0.0
