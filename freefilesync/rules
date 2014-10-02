@@ -47,8 +47,6 @@ override_dh_auto_install:
 	mkdir -p $(IMGDIR)/16x16/apps
 	mkdir -p $(IMGDIR)/16x16/mimetypes
 
-	rmdir debian/freefilesync/usr/share/FreeFileSync/Languages/outdated/
-	
 	# FreeFileSync
 	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/apps/freefilesync.png
 	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-ffs.png
