@@ -1,3 +1,9 @@
+fotoxx (14.10-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 01 Oct 2014 20:14:54 +0200
+
 fotoxx (14.09-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
