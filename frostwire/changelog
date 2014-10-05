@@ -1,3 +1,9 @@
+frostwire (5.7.7-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 03 Oct 2014 19:31:24 +0200
+
 frostwire (5.7.6-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
