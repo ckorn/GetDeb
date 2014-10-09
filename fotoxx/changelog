@@ -1,3 +1,11 @@
+fotoxx (14.10.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Bugfix: If an unmodified image was saved with a different file type,
+      the wrong extension was used, e.g. jpeg file saved as filename.png.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 09 Oct 2014 18:05:32 +0200
+
 fotoxx (14.10.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
