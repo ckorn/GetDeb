@@ -1,3 +1,21 @@
+drawpile (0.9.5-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     * Added Czech translation
+     * Added "Record session" checkbox to join dialog
+     * Added zoom and angle sliders to status bar
+     * Added support for zooming/rotating with a pinch gesture
+     * Added option to disable tablet events
+     * Added custom cursors for tools
+     * Better text/selection box resizing handles
+     * Flood fill expansion
+     * Fixed UI language fallback
+     * Support for older OSX versions (10.7 and up)
+     * Support Retina displays on OSX
+     * Added "preserve alpha" blending mode
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 18 Oct 2014 19:01:31 +0200
+
 drawpile (0.9.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
