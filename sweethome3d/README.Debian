@@ -1,7 +1,0 @@
-Sweethome3d for Debian
-----------------------
-
- Video creation feature has been removed because based on Java Media Framework.
- JMF source code is released under Sun Community Source Licensing (SCSL) which
- is not DFSG-compliant.
-

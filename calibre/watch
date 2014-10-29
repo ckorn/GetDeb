@@ -1,3 +1,0 @@
-version=3
-http://build.getdeb.net/redirectors/calibre.html \
-    (?:.*/)?calibre-(\d[\d\.]*)\.tar\.xz
