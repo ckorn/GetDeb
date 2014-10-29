@@ -39,6 +39,7 @@ libssr-glinject.so libssr-glinject #MINVER#
  _ZN8GLInjectD1Ev@Base 0.0.7
  _ZN8GLInjectD2Ev@Base 0.0.7
  _ZNK18SSRStreamException4whatEv@Base 0.3.0
+ _ZNKSt5ctypeIcE8do_widenEc@Base 0.3.1
  _ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag@Base 0.3.0
  _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev@Base 0.3.0
  _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED1Ev@Base 0.3.0
