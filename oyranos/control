@@ -27,7 +27,7 @@ Build-Depends: debhelper (>= 9),
                libxfixes-dev,
                netpbm,
                graphviz
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://www.oyranos.org
 
 Package: oyranos

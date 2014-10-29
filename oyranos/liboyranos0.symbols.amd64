@@ -1567,7 +1567,6 @@ liboyranos_oyX1_cmm_module.so.0.4.0 liboyranos0 #MINVER#
  oyX1MOptions_Handle@Base 0.4.0
  oyX1MonitorProfileSetup@Base 0.4.0
  oyX1MonitorProfileUnset@Base 0.4.0
- oyX1Monitor_activeOutputs_@Base 0.4.0
  oyX1Monitor_deviceScreen_@Base 0.4.0
  oyX1Monitor_device_@Base 0.4.0
  oyX1Monitor_edid_@Base 0.4.0
@@ -1589,9 +1588,6 @@ liboyranos_oyX1_cmm_module.so.0.4.0 liboyranos0 #MINVER#
  oyX1Monitor_systemPort_@Base 0.4.0
  oyX1Monitor_width_@Base 0.4.0
  oyX1Monitor_x_@Base 0.4.0
- oyX1Monitor_xrrOutputInfo_@Base 0.4.0
- oyX1Monitor_xrrOutput_@Base 0.4.0
- oyX1Monitor_xrrResource_@Base 0.4.0
  oyX1Monitor_y_@Base 0.4.0
  oyX1Rectangle_FromDevice@Base 0.4.0
  oyX1_api10_set_xcm_region_handler@Base 0.4.0
