@@ -4,50 +4,38 @@ Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Dmitry Smirnov <onlyjob@debian.org>
 Standards-Version: 3.9.5
-Build-Depends: debhelper (>= 9),
-               intltool,
-               pkg-config,
-               dh-autoreconf,
-               guile-2.0-dev,
-               imagemagick,
-               libaqbanking34-dev,
-               libdbi-dev,
-               libdbd-sqlite3,
-               libglib2.0-dev (>= 2.26),
-               libgnome-keyring-dev,
-               libgnomecanvas2-dev,
-               libgoffice-0.8-dev,
-               libgtk2.0-dev (>= 2.24),
-               libofx-dev,
-               libwebkitgtk-dev,
-               libxml2-dev,
-               libxslt1-dev,
-               python,
-               python-dev,
-               xsltproc,
-               zlib1g-dev
+Build-Depends: debhelper (>= 9), intltool, pkg-config, dh-autoreconf,
+ guile-2.0-dev,
+ imagemagick,
+ libaqbanking34-dev (>= 5.3.5beta-2~),
+ libdbi-dev,
+ libdbd-sqlite3,
+ libglib2.0-dev (>= 2.26),
+ libgnome-keyring-dev,
+ libgnomecanvas2-dev,
+ libgoffice-0.8-dev,
+ libgtk2.0-dev (>= 2.24),
+ libofx-dev,
+ libwebkitgtk-dev,
+ libxml2-dev,
+ libxslt1-dev,
+ python,
+ python-dev,
+ xsltproc,
+ zlib1g-dev
 Build-Conflicts: guile-1.8
 Homepage: http://www.gnucash.org/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-gnucash/gnucash.git
+Vcs-Git: git://anonscm.debian.org/pkg-gnucash/gnucash.git
 
 Package: gnucash
 Architecture: any
-Depends: gnucash-common (= ${source:Version}),
-         python-gnucash (= ${source:Version}),
-         ${shlibs:Depends},
-         ${misc:Depends},
-         ${perl:Depends},
-         guile-2.0,
-         libfinance-quote-perl,
-         libwww-perl,
-         libhtml-tree-perl,
-         libhtml-tableextract-perl,
-         libcrypt-ssleay-perl,
-         libdate-manip-perl
-Suggests: libdbd-mysql,
-          libdbd-pgsql,
-          libdbd-sqlite3
-Recommends: gnucash-docs,
-            yelp
+Depends: gnucash-common (= ${source:Version}), ${shlibs:Depends},
+  ${aqbanking:Depends}, ${misc:Depends}, ${perl:Depends}, guile-2.0,
+  libfinance-quote-perl, libwww-perl, libhtml-tree-perl,
+  libhtml-tableextract-perl, libcrypt-ssleay-perl, libdate-manip-perl
+Suggests: libdbd-mysql, libdbd-pgsql, libdbd-sqlite3
+Recommends: gnucash-docs, yelp
 Breaks: gnucash-common (<< 1:2.4.8-1~)
 Replaces: gnucash-common (<< 1:2.4.8-1~)
 Description: personal and small-business financial-accounting software
@@ -62,8 +50,7 @@ Package: gnucash-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: gnucash (= ${binary:Version}),
-         ${misc:Depends}
+Depends: gnucash (= ${binary:Version}), ${misc:Depends}
 Description: debugging symbols for the accounting software Gnucash
  Gnucash provides accounting functions suitable for use by small businesses and
  individuals. It can track finances in multiple accounts, keeping running and
@@ -76,9 +63,7 @@ Description: debugging symbols for the accounting software Gnucash
 
 Package: gnucash-common
 Architecture: all
-Depends: ${misc:Depends},
-         libjs-jquery,
-         python
+Depends: ${misc:Depends}, libjs-jquery
 Recommends: gnucash (>= ${source:Version})
 Breaks: gnucash (<< 2.4.0-1~)
 Replaces: gnucash (<< 2.4.0-1~)
@@ -97,9 +82,7 @@ Description: common files for the financial-accounting software Gnucash
 Package: python-gnucash
 Section: python
 Architecture: any
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
-         ${python:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: Gnucash interface for Python
  Gnucash provides accounting functions suitable for use by small businesses and
  individuals. It can track finances in multiple accounts, keeping running and

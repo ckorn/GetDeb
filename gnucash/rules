@@ -10,7 +10,7 @@ export BUILDING_FROM_SVN=$(if $(wildcard autogen.sh),yes,no)
 LDFLAGS+= -Wl,--as-needed
 
 %:
-	dh $@ --parallel --with python2,autoreconf
+	dh $@ --parallel --with python2,autoreconf,aqbanking
 
 override_dh_auto_clean:
 	find . -type l -exec rm -v \{\} \;
@@ -43,11 +43,6 @@ override_dh_install:
 	pod2man -s1 --stderr --utf8 debian/tmp/usr/bin/gnc-fq-check debian/tmp/gnc-fq-check.1
 	find debian/tmp/usr/lib -name \*.la -exec rm -v \{\} \;
 	dh_install
-	# this fixes a crash on exit caused by a double free
-	# https://bugzilla.gnome.org/show_bug.cgi?id=728717#c24
-	rm -f debian/gnucash-common/usr/share/gnucash/python/init.py
-	[ ! -f debian/gnucash-common/usr/share/gnucash/python/pycons/pycons ] \
-	 || chmod +x debian/gnucash-common/usr/share/gnucash/python/pycons/pycons
 
 override_dh_auto_test:
 
