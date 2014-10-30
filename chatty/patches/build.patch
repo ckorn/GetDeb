@@ -1,8 +1,8 @@
 # make an own build.xml because the sources do not contain all build files
-Index: chatty-0.6/build.xml
+Index: chatty-0.7.1/build.xml
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ chatty-0.6/build.xml	2014-02-14 17:54:13.855719444 +0100
+--- /dev/null
++++ chatty-0.7.1/build.xml
 @@ -0,0 +1,29 @@
 +<project name="chatty" default="jar">
 +  <target name="clean">
@@ -13,7 +13,7 @@ Index: chatty-0.6/build.xml
 +
 +  <target name="compile" depends="clean">
 +     <mkdir dir="bin"/>
-+     <javac srcdir="src/chatty" destdir="bin">
++     <javac srcdir="src/chatty" encoding="utf-8" destdir="bin">
 +        <classpath>
 +           <fileset dir="lib">
 +              <include name="**/*.jar" />

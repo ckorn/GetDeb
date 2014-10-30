@@ -1,3 +1,65 @@
+chatty (0.7.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    New features:
+    - Added Emoticon Favorites, that are displayed in the Emote Dialog (you
+    can only
+      add Twitch Emotes for now, not FFZ or BTTV)
+    - Added support for correct capitalization of names in chat
+    (experimental, you
+      have to enable it in the settings if you want to try it)
+    - Show correctly capitalized stream names in Live Streams/Channel Info
+    Dialog
+      (independent of the Correctly Capitalized Names setting)
+    - Added minimize to tray/close to tray options
+    - Added setting for auto scroll down timeout length
+    - Added setting to change font size of dialogs (experimental, only
+    Userinfo now)
+    - Added setting to customize chat log file location
+    - Added context menu to Follower/Subscriber Dialog to export list to file
+    - Added support for FrankerFaceZ global event emotes
+
+    Changes:
+    - Changed tray icon to only show when needed
+    - Set proper tooltip for tray icon
+    - Added some more timestamp options
+    - Changed stream status writer output to "exported" subfolder of settings
+    folder
+    - Changed stream status writer to ignore case of stream name
+    - Channel Info: Added approx. last stream length as tooltip to "Offline"
+    text
+    - Changed Twitch badges to use images instead of alpha (shows new colors
+    now)
+    - Changed base colors for badges to new Twitch colors (affects FFZ Mod
+    Icon and Fallback Icons)
+    - Allow for selection of text in chat by double-clicking (focus to
+    inputbox now
+      only on single-click on chat)
+    - Detect a few more URL formats to be made clickable
+    - Improved debug logging a bit (memory usage)
+    - Some small improvements to memory usage
+    - Added some more characters to Font Selection Dialog, but also an input
+    field to enter your own text to test the font
+    - Catch the error if hotkey library couldn't be found and output warning
+    instead
+    - Updated help
+
+    Bugfixes:
+    - Fixed info messages sometimes going to the wrong window if popouts are
+    used
+    - Fixed subscriber sorting in userlist (but overall sorting can still be
+    screwed up sometimes)
+    - Fixed wrong channel being joined when joining channel out of user
+    context menu with "Capitalize Names (First Letter)" option being enabled
+    (fixed implicitly by changing some stuff around for supporting
+    capitalized names)
+    - Added workaround for Twitch emotes appearing wrong on Retina displays
+    - Nothing to do with Chatty in particular (it's the same for every IRC
+    client), but the "xy just subscribed" message should now work for
+    everyone again, because Twitch fixed it :)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Oct 2014 20:22:21 +0100
+
 chatty (0.7-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
