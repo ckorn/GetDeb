@@ -1,0 +1,28 @@
+Return-Path: <roshal@creabel.com>
+Date: Tue, 19 May 1998 05:41:46 +0500
+From: Eugene Roshal <roshal@creabel.com>
+To: Petr Cech <cech@atrey.karlin.mff.cuni.cz>
+Subject: Re: RAR - inclusion in Debian
+
+Hello,
+
+>         I'm contacting you because I want to package rar. The problem is that
+> your licence does request the distribution of unmodified archive. We have a
+> "source package" which consists of unmodified program and patch files, where
+> the packaging information are. The source  would consist of rarlinux.sfx,
+> but the problem is with binary package. Binary package is mainly directory tree
+> with the files in proper places and packaging information. But this is not
+> the "distribution package" in the sense of You licence. There would be all
+> files, that are in the original (and of course unmodified). 
+>   So the question is, would You approve distribution in this format or should I
+> avoid packaging rar?
+
+Yes, I give you my permission to distribute RAR in this format.
+
+> And would it possible for You to build rar linked with glibc2 (aka libc6)?
+
+Sorry, currently I do not have access to new enough Linux version to make
+it. Maybe later.
+
+Eugene
+
