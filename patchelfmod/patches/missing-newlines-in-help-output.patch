@@ -1,0 +1,20 @@
+--- a/src/patchelfmod.cpp
++++ b/src/patchelfmod.cpp
+@@ -1544,7 +1544,7 @@
+ 	       "RPATH options:\n"
+ 	       "\n"
+ 	       "  -R, --set-rpath <rpath>     Change the RPATH of an executable or library to <rpath>.\n"
+-	       "                              Creates a new entry of type DT_RUNPATH if none exists."
++	       "                              Creates a new entry of type DT_RUNPATH if none exists.\n"
+ 	       "      --rpath <rpath>         An alias for '--set-rpath'.\n"
+ 	       "  -D, --delete-rpath          Remove an existing RPATH.\n"
+ 	       "  -s, --shrink-rpath          Remove all directories from RPATH that do not contain\n"
+@@ -1584,7 +1584,7 @@
+ 	       "DT_SONAME options:\n"
+ 	       "\n"
+ 	       "  -S, --set-soname <soname>   Change the DT_SONAME entry of a library to <soname>.\n"
+-	       "                              Creates a new entry if none exists."
++	       "                              Creates a new entry if none exists.\n"
+ 	       "      --soname <soname>       An alias for '--set-soname'.\n"
+ 	       "  -P, --print-soname          Print the soname of a library.\n"
+ 	       "\n"
