@@ -10,7 +10,7 @@ Package: rar
 Architecture: i386 amd64
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Suggests: unrar-nonfree
+Suggests: unrar-freeware
 Description: Archiver for .rar files
  This is the RAR archiver from Eugene Roshal. It supports multiple volume
  archives and damage protection. It can also create SFX-archives. There are
