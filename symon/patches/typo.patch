@@ -4,11 +4,11 @@ Author: Christoph Korn <christoph.korn@getdeb.net>
 Origin: upstream
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: symon-2.86/CHANGELOG
+Index: symon-2.87/CHANGELOG
 ===================================================================
---- symon-2.86.orig/CHANGELOG	2013-02-05 09:38:17.000000000 +0100
-+++ symon-2.86/CHANGELOG	2013-02-18 19:14:31.702608782 +0100
-@@ -589,7 +589,7 @@
+--- symon-2.87.orig/CHANGELOG
++++ symon-2.87/CHANGELOG
+@@ -605,7 +605,7 @@
  
      Daniel Hartmeier
       - shmat usage in monmux/share.c != 64 bit safe
@@ -17,11 +17,11 @@ Index: symon-2.86/CHANGELOG
  
  
  29/08/2002 - 2.2
-Index: symon-2.86/symux/symux.8
+Index: symon-2.87/symux/symux.8
 ===================================================================
---- symon-2.86.orig/symux/symux.8	2012-04-04 17:10:51.000000000 +0200
-+++ symon-2.86/symux/symux.8	2013-02-18 19:14:28.330608882 +0100
-@@ -143,7 +143,7 @@
+--- symon-2.87.orig/symux/symux.8
++++ symon-2.87/symux/symux.8
+@@ -143,7 +143,7 @@ supplied, the latest will be assumed.
  .It Va datadir
  will guess filenames for all accepted streams.
  .Va write

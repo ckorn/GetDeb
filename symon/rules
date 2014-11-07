@@ -2,11 +2,13 @@
 %:
 	dh $@
 
+override_dh_auto_clean:
+	pmake clean
+
 override_dh_auto_build:
 	pmake
 
-override_dh_auto_clean:
-	pmake clean
+override_dh_auto_test:
 
 override_dh_auto_install:
 
