@@ -1,3 +1,9 @@
+me-tv1.4 (1.4.0.54-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 Nov 2014 21:32:18 +0100
+
 me-tv1.4 (1.4.0.12-1~getdeb1) precise; urgency=low
 
   * New upstream version
