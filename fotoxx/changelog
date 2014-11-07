@@ -1,3 +1,21 @@
+fotoxx (14.11-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + A world map and several larger-scale continental maps are provided in 
+      a separate package: fotoxx-maps. These maps show locations of photos
+      having geotags. Clicking a map location shows a gallery of thumbnail
+      images that can be selected in turn for viewing full size or editing.
+      A user may add more maps, and these will work the same way. 
+    + Gallery thumbnail popup: expanded speed and functionality for zooming
+      thumbnails and comparing images side by side. 
+    + Gallery scrolling is smoother and easier to control with the mouse:
+      scrolls faster as mouse is dragged closer to top or bottom of window.
+    + Sync Gallery can now have a KB shortcut (default 'S' for new installs).
+    + Bugfix: Edit Geotags: If the dialog inputs were cleared to blanks, the
+      image geotag data was not being erased. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 Nov 2014 20:28:40 +0100
+
 fotoxx (14.10.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
