@@ -6,7 +6,7 @@ override_dh_auto_clean:
 	find . -name "*.class" -delete
 
 override_dh_auto_build:
-	javac tide/Main.java
+	javac -encoding utf8 tide/Main.java
 
 override_dh_install:
 	dh_install
