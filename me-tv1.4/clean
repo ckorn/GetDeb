@@ -11,3 +11,4 @@ missing
 mkinstalldirs
 po/Makefile.in.in
 server/Makefile.in
+compile

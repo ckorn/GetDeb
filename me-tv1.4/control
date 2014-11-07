@@ -20,7 +20,7 @@ Build-Depends: debhelper (>= 9),
                libgstreamer0.10-dev,
                libgstreamer-plugins-base0.10-dev,
                gnome-common
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: https://launchpad.net/me-tv
 
 Package: me-tv1.4
