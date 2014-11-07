@@ -1,3 +1,9 @@
+symon (2.87-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 Nov 2014 21:00:45 +0100
+
 symon (2.86-1~getdeb1) precise; urgency=low
 
   * New upstream version
