@@ -3,14 +3,14 @@ Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
-               openjdk-6-jdk
-Standards-Version: 3.9.3
+               openjdk-7-jdk
+Standards-Version: 3.9.5
 Homepage: http://tide.olympe-network.com/
 
 Package: tide
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-6-jdk | sun-java6-jdk,
+         openjdk-7-jdk | sun-java6-jdk | java-common,
          fontconfig
 Description: Java IDE
  tIDE is a small but powerful and
