@@ -4,7 +4,7 @@
 
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-avalon --enable-bflsc --enable-bitforce --enable-bitfury --enable-hashfast \
-	                     --enable-icarus --enable-knc --enable-bab --enable-klondike --enable-modminer
+	                     --enable-icarus --enable-klondike --enable-modminer
 
 override_dh_auto_install:
 	dh_auto_install
