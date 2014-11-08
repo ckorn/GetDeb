@@ -1,0 +1,3 @@
+rar/rar /usr/bin
+rar/default.sfx /usr/lib
+rar/rarfiles.lst /etc

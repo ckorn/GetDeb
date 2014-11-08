@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+version = $(shell dpkg-parsechangelog -SVersion | cut -d: -f2 | cut -d- -f1)
+#version = $(shell dpkg-parsechangelog|grep 'Version: '|cut -d: -f3|cut -d- -f1)
+
+archive = rarlinux-$(version).tar.gz
+ifeq ($(DEB_HOST_ARCH),amd64)
+archive = rarlinux-x64-$(version).tar.gz
+endif
+
+
+%:
+	dh ${@} --parallel
+
+override_dh_auto_clean:
+	rm -rf rar
+
+override_dh_install:
+	tar xvf $(archive)
+	mv rar/unrar rar/unrar-freeware
+	dh_install
+	chmod 0644 debian/rar/usr/lib/default.sfx
+
+override_dh_installchangelogs:
+	dh_installchangelogs -A rar/whatsnew.txt
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

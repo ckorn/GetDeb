@@ -1,0 +1,193 @@
+.TH UNRAR 1 "November 2014" "5.1.1" "RAR archiver"
+.SH NAME
+unrar - extract rar files
+.SH SYNOPSIS
+.B rar
+.I "<command> [\-<switch 1> \-<switch N>] archive [files...]"
+.br
+.I "<@listfiles...> <path_to_extract>"
+
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.BR unrar
+command.
+.br
+This manual page was written for Ubuntu
+because the original program does not have a manual page.
+.br
+Commands and options described here are as of
+.BR rar
+5.1.1.
+.PP
+.B rar
+and
+.B unrar
+are programs for manipulation with .rar archives.
+
+.SH OPTIONS
+After the program name comes a command and then optional switches with
+dashes before them.
+.br
+A summary of commands is included below.
+For a complete description, run
+.BR unrar
+without options.
+.TP
+.B e
+Extract files without archived paths
+.TP
+.B l[t[a],b]
+List archive contents [technical[all], bare]
+.TP
+.B p
+Print file to stdout
+.TP
+.B t
+Test archive files
+.TP
+.B v[t[a],b]
+Verbosely list archive contents [technical[all],bare]
+.TP
+.B x
+Extract files with full path
+
+.SH SWITCHES
+.BR NOTE:
+Every switch must be separated by a whitespace. They cannot be put
+together.
+.TP
+.B \-?
+Display help on commands and switches. The same as when none
+or an illegal command line option is entered.
+.TP
+.B \-\-
+This switch tells to RAR that there is no more switches
+in the command line. It could be useful, if either archive
+or file name starts from '\-' character. Without '\-\-' switch
+such name would be treated as switch.
+.TP
+.B \-@[+]
+Disable [enable] file lists
+.TP
+.B \-ad
+Append archive name to destination path
+.TP
+.B \-ag[format]
+Generate archive name using the current date
+.TP
+.B \-ai
+Ignore file attributes
+.TP
+.B \-ap<path>
+Set path inside archive
+.TP
+.B \-c\-
+Disable comments show
+.TP
+.B \-cfg\-
+Disable read configuration
+.TP
+.B \-cl
+Convert names to lower case
+.TP
+.B \-cu
+Convert names to upper case
+.TP
+.B \-dh
+Open shared files
+.TP
+.B \-ep
+Exclude paths from names
+.TP
+.B \-ep3
+Expand paths to full including the drive letter
+.TP
+.B \-f
+Freshen files
+.TP
+.B \-id[c,d,p,q]
+Disable messages
+.TP
+.B \-ierr
+Send all messages to stderr
+.TP
+.B \-inul
+Disable all messages
+.TP
+.B \-kb
+Keep broken extracted files
+.TP
+.B \-n<file>
+Additionally filter included files
+.TP
+.B \-n@
+Read additional filter masks from stdin
+.TP
+.B \-n@<list>
+Read additional filter masks from list file
+.TP
+.B \-o[+|\-]
+Set the overwrite mode
+.TP
+.B \-or
+Rename files automatically
+.TP
+.B \-ow
+Save or restore file owner and group
+.TP
+.B \-p[password]
+Set password
+.TP
+.B \-p\-
+Do not query password
+.TP
+.B \-r
+Recurse subdirectories
+.TP
+.B \-sc<chr>[obj]
+Specify the character set
+.TP
+.B \-sl<size>
+Process files with size less than specified
+.TP
+.B \-sm<size>
+Process files with size more than specified
+.TP
+.B \-ta<date>
+Process files modified after <date> in YYYYMMDDHHMMSS format
+.TP
+.B \-tb<date>
+Process files modified before <date> in YYYYMMDDHHMMSS format
+.TP
+.B \-tn<time>
+Process files newer than <time>
+.TP
+.B \-to<time>
+Process files older than <time>
+.TP
+.B \-ts<m,c,a>[N]
+Save or restore file time (modification, creation, access)
+.TP
+.B \-u
+Update files
+.TP
+.B \-v
+List all volumes
+.TP
+.B \-ver[n]
+File version control
+.TP
+.B \-vp
+Pause before each volume
+.TP
+.B \-x<file>
+Exclude specified file
+.TP
+.B \-x@
+Read file names to exclude from stdin
+.TP
+.B \-x@<list>
+Exclude files listed in specified list file
+.TP
+.B \-y
+Assume Yes on all queries
