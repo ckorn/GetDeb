@@ -1,12 +1,13 @@
 Description: Suggest installing the packages that are actually available in Ubuntu.
 Author: Marc Deslauriers <marc.deslauriers@ubuntu.com>
 Forwarded: no, Ubuntu-specific
+Updated: 2014-02-17
 
 Index: virt-manager-1.1.0/virtManager/engine.py
 ===================================================================
---- virt-manager-1.1.0.orig/virtManager/engine.py	2014-09-09 23:09:28.892571685 +0200
-+++ virt-manager-1.1.0/virtManager/engine.py	2014-09-09 23:09:28.884571685 +0200
-@@ -181,7 +181,7 @@
+--- virt-manager-1.1.0.orig/virtManager/engine.py
++++ virt-manager-1.1.0/virtManager/engine.py
+@@ -181,7 +181,7 @@ class vmmEngine(vmmGObject):
          # Manager fail message
          msg = _("Could not detect a default hypervisor. Make\n"
                  "sure the appropriate virtualization packages\n"

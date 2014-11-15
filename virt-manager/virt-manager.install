@@ -1,0 +1,10 @@
+usr/bin/virt-manager
+usr/share/man/man1/virt-manager.1
+usr/share/icons/
+usr/share/applications
+usr/share/glib-2.0
+usr/share/locale
+usr/share/virt-manager/icons
+usr/share/virt-manager/ui
+usr/share/virt-manager/virt-manager
+usr/share/virt-manager/virtManager

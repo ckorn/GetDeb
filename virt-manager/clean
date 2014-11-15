@@ -1,7 +1,7 @@
 man/virt-clone.1
 man/virt-convert.1
-man/virt-image.1
-man/virt-image.5
 man/virt-install.1
 man/virt-manager.1
+man/virt-xml.1
 po/virt-manager.pot
+virtcli/cli.cfg

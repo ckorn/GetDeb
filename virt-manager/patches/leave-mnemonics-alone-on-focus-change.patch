@@ -11,22 +11,23 @@ Description: Fix menu activation under Unity global menu bar
  disconnected.
 Author: William Hua <william.hua@canonical.com>
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/1291370
+Updated: 2014-07-04
 
 Index: virt-manager-1.1.0/virtManager/console.py
 ===================================================================
---- virt-manager-1.1.0.orig/virtManager/console.py	2014-09-09 23:19:14.332554270 +0200
-+++ virt-manager-1.1.0/virtManager/console.py	2014-09-09 23:19:14.328554270 +0200
-@@ -47,6 +47,9 @@
-  CONSOLE_PAGE_VIEWER,
+--- virt-manager-1.1.0.orig/virtManager/console.py
++++ virt-manager-1.1.0/virtManager/console.py
+@@ -48,6 +48,9 @@ from virtManager.details import DETAILS_
   CONSOLE_PAGE_OFFSET) = range(4)
+ 
  
 +def is_unity():
 +    return os.getenv('XDG_CURRENT_DESKTOP') == 'Unity'
 +
- 
  def has_property(obj, setting):
      try:
-@@ -835,6 +838,9 @@
+         obj.get_property(setting)
+@@ -835,6 +838,9 @@ class SpiceViewer(Viewer):
  
  
  class vmmConsolePages(vmmGObjectUI):
@@ -36,7 +37,7 @@ Index: virt-manager-1.1.0/virtManager/console.py
      def __init__(self, vm, builder, topwin):
          vmmGObjectUI.__init__(self, None, None, builder=builder, topwin=topwin)
  
-@@ -1064,7 +1070,7 @@
+@@ -1064,7 +1070,7 @@ class vmmConsolePages(vmmGObjectUI):
          self.gtk_settings_accel = settings.get_property('gtk-menu-bar-accel')
          settings.set_property('gtk-menu-bar-accel', None)
  
@@ -45,7 +46,7 @@ Index: virt-manager-1.1.0/virtManager/console.py
              self.gtk_settings_mnemonic = settings.get_property(
                                                          "gtk-enable-mnemonics")
              settings.set_property("gtk-enable-mnemonics", False)
-@@ -1077,7 +1083,7 @@
+@@ -1077,7 +1083,7 @@ class vmmConsolePages(vmmGObjectUI):
          settings.set_property('gtk-menu-bar-accel', self.gtk_settings_accel)
          self.gtk_settings_accel = None
  
@@ -54,7 +55,7 @@ Index: virt-manager-1.1.0/virtManager/console.py
              settings.set_property("gtk-enable-mnemonics",
                                    self.gtk_settings_mnemonic)
  
-@@ -1395,6 +1401,19 @@
+@@ -1395,6 +1401,19 @@ class vmmConsolePages(vmmGObjectUI):
          self.refresh_resizeguest_from_settings()
  
      def _set_viewer_connected(self, val):
@@ -63,10 +64,10 @@ Index: virt-manager-1.1.0/virtManager/console.py
 +                vmmConsolePages.connected_viewers -= 1
 +                if vmmConsolePages.connected_viewers == 0:
 +                    if self.gtk_settings_mnemonic is not None:
-+                        gtk.settings_get_default().set_property("gtk-enable-mnemonics", self.gtk_settings_mnemonic)
++                        Gtk.Settings.get_default().set_property("gtk-enable-mnemonics", self.gtk_settings_mnemonic)
 +            elif not self._viewer_connected and val:
 +                if vmmConsolePages.connected_viewers == 0:
-+                    settings = gtk.settings_get_default()
++                    settings = Gtk.Settings.get_default()
 +                    if has_property(settings, "gtk-enable-mnemonics"):
 +                        self.gtk_settings_mnemonic = settings.get_property("gtk-enable-mnemonics")
 +                        settings.set_property("gtk-enable-mnemonics", False)

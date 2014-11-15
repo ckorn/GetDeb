@@ -1,0 +1,22 @@
+From: Oliver Seufer <debian@seufer.de>
+Date: Sat, 1 Jun 2013 22:41:07 +0200
+Subject: fix path to hvmloader
+
+Closes: #685749
+---
+ virtinst/guest.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: virt-manager-1.1.0/virtinst/guest.py
+===================================================================
+--- virt-manager-1.1.0.orig/virtinst/guest.py
++++ virt-manager-1.1.0/virtinst/guest.py
+@@ -673,7 +673,7 @@ class Guest(XMLBuilder):
+             self.os.init = self.os.init or "/bin/sh"
+ 
+         if not self.os.loader and self.os.is_hvm() and self.type == "xen":
+-            self.os.loader = "/usr/lib/xen/boot/hvmloader"
++            self.os.loader = "hvmloader"
+         if self.os.os_type == "xen" and self.type == "xen":
+             # Use older libvirt 'linux' value for back compat
+             self.os.os_type = "linux"

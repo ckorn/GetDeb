@@ -1,0 +1,22 @@
+From: =?utf-8?q?Guido_G=C3=BCnther?= <agx@sigxcpu.org>
+Date: Sat, 11 Jan 2014 14:05:29 +0100
+Subject: Fix patch to pygrub
+
+Closes: #685749
+---
+ virtinst/guest.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: virt-manager-1.1.0/virtinst/guest.py
+===================================================================
+--- virt-manager-1.1.0.orig/virtinst/guest.py
++++ virt-manager-1.1.0/virtinst/guest.py
+@@ -350,7 +350,7 @@ class Guest(XMLBuilder):
+         if (not install and
+             self.os.is_xenpv() and
+             not self.os.kernel):
+-            self.bootloader = "/usr/bin/pygrub"
++            self.bootloader = "pygrub"
+             self.os.clear()
+ 
+         return self.get_xml_config()

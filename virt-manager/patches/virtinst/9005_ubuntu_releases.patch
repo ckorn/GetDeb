@@ -1,0 +1,18 @@
+Description: Update list of Ubuntu releases
+Author: Marc Deslauriers <marc.deslauriers@canonical.com>
+Forwarded: not yet
+Updated: 2014-06-20
+
+Index: virt-manager-1.1.0/virtinst/osdict.py
+===================================================================
+--- virt-manager-1.1.0.orig/virtinst/osdict.py
++++ virt-manager-1.1.0/virtinst/osdict.py
+@@ -60,6 +60,8 @@ _aliases = {
+     "ubuntuquantal" : "ubuntu12.10",
+     "ubunturaring" : "ubuntu13.04",
+     "ubuntusaucy" : "ubuntu13.10",
++    "ubuntutrusty" : "ubuntu14.04",
++    "ubuntuutopic" : "ubuntu14.10",
+     "vista" : "winvista",
+     "winxp64" : "winxp",
+ }

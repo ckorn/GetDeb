@@ -1,0 +1,18 @@
+Description: add the actual binary names from the qemu packages so default
+ hypervisor detection works properly on first run.
+Author: Marc Deslauriers <marc.deslauriers@canonical.com>
+
+Index: virt-manager-1.1.0/virtManager/connect.py
+===================================================================
+--- virt-manager-1.1.0.orig/virtManager/connect.py
++++ virt-manager-1.1.0/virtManager/connect.py
+@@ -110,6 +110,9 @@ class vmmConnect(vmmGObjectUI):
+         if (os.path.exists("/usr/bin/qemu") or
+             os.path.exists("/usr/bin/qemu-kvm") or
+             os.path.exists("/usr/bin/kvm") or
++            os.path.exists("/usr/bin/qemu-system-x86_64") or
++            os.path.exists("/usr/bin/qemu-system-i386") or
++            os.path.exists("/usr/bin/kvm") or
+             os.path.exists("/usr/libexec/qemu-kvm")):
+             if always_system or os.geteuid() == 0:
+                 return "qemu:///system"
