@@ -1,9 +1,12 @@
-=== modified file 'virtManager/manager.py'
+Description: make the error message more helpful on Ubuntu
+Forwarded: no
+Updated: 2014-02-17
+
 Index: virt-manager-1.1.0/virtManager/engine.py
 ===================================================================
---- virt-manager-1.1.0.orig/virtManager/engine.py	2014-09-09 23:09:25.332571791 +0200
-+++ virt-manager-1.1.0/virtManager/engine.py	2014-09-09 23:09:25.328571791 +0200
-@@ -606,7 +606,10 @@
+--- virt-manager-1.1.0.orig/virtManager/engine.py
++++ virt-manager-1.1.0/virtManager/engine.py
+@@ -606,7 +606,10 @@ class vmmEngine(vmmGObject):
                            "regular user. Try running as root.")
                  show_errmsg = False
              elif re.search(r"libvirt-sock", tb):

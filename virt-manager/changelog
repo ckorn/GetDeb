@@ -1,89 +1,112 @@
-virt-manager (1.1.0-1~getdeb1) trusty; urgency=medium
+virt-manager (1:1.1.0-1~getdeb2) trusty; urgency=medium
 
-  * New upstream version
-    - Switch to libosinfo as OS metadata database (Giuseppe Scrivano)
-    - Use libosinfo for OS detection from CDROM media labels (Giuseppe
-      Scrivano)
-    - Use libosinfo for improved OS defaults, like recommended disk size
-      (Giuseppe Scrivano)
-    - virt-image tool has been removed, as previously announced
-    - Enable Hyper-V enlightenments for Windows VMs
-    - Revert virtio-console default, back to plain serial console
-    - Experimental q35 option in new VM 'customize' dialog
-    - UI for virtual network QoS settings (Giuseppe Scrivano)
-    - virt-install: --disk discard= support (Jim Minter)
-    - addhardware: Add spiceport UI (Marc-André Lureau)
-    - virt-install: --events on_poweroff etc. support (Chen Hanxiao)
-    - cli --network portgroup= support and UI support
-    - cli --boot initargs= and UI support
-    - addhardware: allow setting controller model (Chen Hanxiao)
-    - virt-install: support setting hugepage options (Chen Hanxiao)
+  * Rebuild with new patches.
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Sep 2014 23:09:04 +0200
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 14 Nov 2014 23:58:46 +0100
 
-virt-manager (1.0.1-1~getdeb2) trusty; urgency=medium
+virt-manager (1:1.0.1-0ubuntu2) utopic; urgency=medium
 
-  * graphical console not displayed when opening
-    the details display (LP: #1355289)
+  * debian/patches/dont-force-keyboard-grabs.patch: don't force keyboard
+    grab before widget is realized
+  * debian/patches/prevent-access-to-deleted-objects.patch: prevent access
+    to deleted objects
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Aug 2014 20:21:17 +0200
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 09 Jul 2014 11:43:48 -0400
 
-virt-manager (1.0.1-1~getdeb1) trusty; urgency=medium
+virt-manager (1:1.0.1-0ubuntu1) utopic; urgency=medium
 
-  * New upstream version
-    Release 1.0.1 (March 22, 2014)
-    ------------------------------
-    - virt-install/virt-xml: New --memorybacking option (Chen Hanxiao)
-    - virt-install/virt-xml: New --memtune option (Chen Hanxiao)
-    - virt-manager: UI for LXC <idmap> (Chen Hanxiao)
-    - virt-manager: gsettings key to disable keygrab (Kjö Hansi Glaz)
-    - virt-manager: Show domain state reason in the UI (Giuseppe Scrivano)
-    - Fix a number of bugs found since the 1.0.0 release
+  * Merge from debian experimental. (LP: #1213337)
+  * Merged changes from Ubuntu virt-manager package:
+    - Updated to 1.0.1 release
+    - debian/control: Depend on gir1.2-appindicator3-0.1 for appindicator
+      support.
+    - debian/control: Add lsb-release to BuildDepends so we can detect
+      whether we're running on Ubuntu or Debian.
+    - debian/rules: Set qemu user to libvirt-qemu so appropriate
+      permissions get set.
+    - debian/rules: Set the preferred distro so we appear first in the
+      list.
+    - debian/patches/more_helpful_error_message.patch: explain to the user
+      why connecting to qemu:///system failed and how to fix it.
+    - debian/patches/use_ubuntu_package_names.patch: Suggest installing the
+      packages that are actually available in Ubuntu.
+    - debian/patches/uefi_support.patch: ugly hack to add a UEFI firmware
+      option.
+  * Merged changes from Ubuntu virtinst package:
+    - debian/patches/virtinst/9004_ubuntu_fix_tree_support.patch: Fix tree
+      detection for all ISO/HTTP source, to not longer fail with
+      cobbler/koan.
+    - debian/patches/virtinst/9005_ubuntu_releases.patch: add Trusty,
+      updated support status, and switch back to cirrus by default to get a
+      reasonable screen size during installation.
+    - debian/patches/virtinst/9006_fix_path_to_qemu-dm.patch: drop the full
+      path from qemu-dm as already done for hvmloader and pygrub. The Xen
+      tools will handle this and add the missing path.
+  * debian/patches/add_qemu_binaries.patch: add the actual binary names
+    from the qemu packages so default hypervisor detection works properly
+    on first run.
+  * debian/patches/fix_changing_graphics_type.patch: fix changing the
+    graphics type in the details dialog.
+  * debian/patches/hook_into_domain_balloon_event.patch: properly hook into
+    hotplug events so memory size gets updated.
+  * debian/patches/fix_showing_vcpus.patch: display the right number of
+    vcpus in the customize dialog.
+  * debian/patches/fix_whitespace_in_storage_name.patch: Fix using storage
+    when the directory name contains whitespace
 
-    Release 1.0.0 (February 14, 2014)
-    ---------------------------------
-    - virt-manager: Snapshot support
-    - New tool virt-xml: Edit libvirt XML in one shot from the command line
-    - Improved defaults: qcow2, USB2, host CPU model, guest agent channel,
-      ...
-    - Introspect command line options like --disk=? or --network=help
-    - The virt-image tool will be removed before the next release, speak up
-      if you have a good reason not to remove it.
-    - virt-manager: Support arm vexpress VM creation
-    - virt-manager: Add guest memory usage graphs (Thorsten Behrens)
-    - virt-manager: UI for editing <filesystem> devices (Cédric Bosdonnat)
-    - Spice USB redirection support (Guannan Ren)
-    - <tpm> UI and command line support (Stefan Berger)
-    - <rng> UI and command line support (Giuseppe Scrivano)
-    - <panic> UI and command line support (Chen Hanxiao)
-    - <blkiotune> command line support (Chen Hanxiao)
-    - virt-manager: support for glusterfs storage pools (Giuseppe Scrivano)
-    - cli: New options --memory, --features, --clock, --metadata, --pm
-    - Greatly improve app responsiveness when connecting to remote hosts
-    - Lots of UI cleanup and improvements
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 04 Jul 2014 10:03:57 -0400
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 18 Apr 2014 16:54:36 +0200
+virt-manager (1:0.10.0+git20130205.69015c-1) experimental; urgency=medium
 
-virt-manager (0.10.0-1~getdeb2) saucy; urgency=low
+  [ Guido Günther ]
+  * [4fa03ba] New upstream version 0.10.0~git20130205.69015c
+    (Closes: #736122)
+  * [a675fa6] Update patches
+  * [59b67a3] Add more missing deps. Thanks to Daniel Schröter
 
-  * Add patch "Switch AppIndicator code to use GObject introspection.":
-    https://git.fedorahosted.org/cgit/virt-manager.git/commit/?id=b9cb73ec472cd74687cb090424099bf888832208
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 05 Feb 2014 22:05:41 +0100
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 30 Nov 2013 19:13:06 +0100
+virt-manager (1:0.10.0-2) experimental; urgency=medium
 
-virt-manager (0.10.0-1~getdeb1) saucy; urgency=low
+  * [3dae30e] Add missing typelib dependencies (Closes: #736547)
 
-  * New upstream version (LP: #1175076)
-    - Merged code with python-virtinst. virtinst is no longer public
-    - Port from GTK2 to GTK3 (Daniel Berrange, Cole Robinson)
-    - Port from gconf to gsettings
-    - Port from autotools to python distutils
-    - Remove virt-manager-tui
-    - Remove HAL support
-    - IPv6 and static route virtual network support (Gene Czarcinski)
-    - virt-install: Add --cpu host-passthrough (Ken ICHIKAWA, Hu Tao)
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 25 Jan 2014 13:06:35 +0100
 
- -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 27 Nov 2013 20:03:37 +0100
+virt-manager (1:0.10.0-1) experimental; urgency=medium
+
+  * [f759996] Remove obsolete DM-Upload-Allowed field
+  * [f1d7e9f] New upstream version 0.10.0
+  * [8ca3378] Drop virt-manager patches.
+        0001-use-usr-share-gconf-for-schema-data.patch - uses gschema now
+        0002-Use-IPy-from-python-ipy.patch - IPy now longer used
+  * [e649c0a] Update virtinst patches.
+    Dropped, fixed upstream:
+        0003-Fix-path-to-keyboard-configuration.patch
+        0004-Fix-location-of-Debian-daily-builds.patch
+        0005-Don-t-fail-if-we-can-t-set-locale-debian-bug-697864.patch
+        0006-virt-clone-Properly-set-image-type.patch
+  * [8c5a765] virtinst sources moved into virt-manager so create the binary
+    package from here too
+  * [ce94668] Drop scrollkeeper build-dep (Closes: #718040)
+  * Use an epoch so the virtinst version >= the separately packaged version.
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 11 Jan 2014 15:56:25 +0100
+
+virt-manager (0.9.5-1ubuntu4) utopic; urgency=medium
+
+  * d/p/mark-libvirt-lxc: Clearly mark the LXC connections as being
+    libvirt-lxc, to avoid confusion due to differing features and
+    configurations.
+
+ -- Serge Hallyn <serge.hallyn@ubuntu.com>  Wed, 11 Jun 2014 11:51:19 -0500
+
+virt-manager (0.9.5-1ubuntu3) trusty; urgency=medium
+
+  * debian/patches/leave-mnemonics-alone-on-focus-change.patch:
+    - Leave gtk-enable-mnemonics setting alone under Unity when windows
+      change focus. (LP: #1291370)
+
+ -- William Hua <william.hua@canonical.com>  Sun, 16 Mar 2014 19:55:45 +1300
 
 virt-manager (0.9.5-1ubuntu2) trusty; urgency=low
 

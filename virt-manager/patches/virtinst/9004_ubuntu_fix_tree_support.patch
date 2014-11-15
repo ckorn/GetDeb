@@ -1,0 +1,63 @@
+Description: Correctly detect UbuntuDistro in HTTP source
+ When the installation source is the Ubuntu HTTP archive, an ISO or mini ISO mounted
+ (or even cobbler imported ISO, Mini ISO) on a  HTTP source (or FTP in such case),
+ the UbuntDistro is not correctly detected causing the installation to fail by not
+ detecting correctly Ubuntu as a source as well as architectures..
+ This patch fixes the approach to determine whether the source is an Ubuntu source.
+Author: Andres Rodriguez <andreserl@ubuntu.com>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/884765
+Forwarded: no
+Updated: 2014-02-17
+
+Index: virt-manager-1.1.0/virtinst/urlfetcher.py
+===================================================================
+--- virt-manager-1.1.0.orig/virtinst/urlfetcher.py
++++ virt-manager-1.1.0/virtinst/urlfetcher.py
+@@ -888,9 +888,12 @@ class DebianDistro(Distro):
+     def _set_media_paths(self):
+         # Use self._prefix to set media paths
+         self._boot_iso_paths   = ["%s/netboot/mini.iso" % self._prefix]
+-        hvmroot = "%s/netboot/%s/%s/" % (self._prefix,
+-                                         self._installer_name,
+-                                         self._treeArch)
++        if self._prefix:
++            hvmroot = "%s/netboot/%s/%s/" % (self._prefix,
++                                             self._installer_name,
++                                             self._treeArch)
++        else:
++            hvmroot = ""
+         xenroot = "%s/netboot/xen/" % self._prefix
+         self._hvm_kernel_paths = [(hvmroot + "linux", hvmroot + "initrd.gz")]
+         self._xen_kernel_paths = [(xenroot + "vmlinuz",
+@@ -945,16 +948,30 @@ class UbuntuDistro(DebianDistro):
+     urldistro = "ubuntu"
+ 
+     def isValidStore(self):
++        # For regular trees
+         if self.fetcher.hasFile("%s/MANIFEST" % self._prefix):
+-            # For regular trees
+             filename = "%s/MANIFEST" % self._prefix
+             regex = ".*%s.*" % self._installer_name
+         elif self.fetcher.hasFile("install/netboot/version.info"):
+             # For trees based on ISO's
+             self._prefix = "install"
++            if fetcher.hasFile("install/netboot/ubuntu-installer/i386"):
++                self._treeArch = "i386"
++            elif fetcher.hasFile("install/netboot/ubuntu-installer/amd64"):
++                self._treeArch = "amd64"
+             self._set_media_paths()
+             filename = "%s/netboot/version.info" % self._prefix
+             regex = "%s*" % self.name
++        elif fetcher.hasFile("initrd.gz") and fetcher.hasFile("linux"):
++            # For trees based on mini ISO's
++            self._prefix = ""
++            if fetcher.hasFile("boot/grub/x86_64-efi"):
++                self._treeArch = "amd64"
++            else:
++                self._treeArch = "i386"
++            self._set_media_paths()
++            filename = "f10.txt"
++            regex = "%s*" % self.name
+         else:
+             return False
+ 

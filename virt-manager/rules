@@ -1,6 +1,9 @@
 #!/usr/bin/make -f
+
+DISTRO := $(shell lsb_release -si | tr '[:upper:]' '[:lower:]')
+
 %:
-	dh $@ --with python2
+	dh $@ --with python2 --buildsystem=python_distutils
 
 override_dh_auto_clean:
 	dh_auto_clean
@@ -8,5 +11,9 @@ override_dh_auto_clean:
 	rm -rf build
 
 override_dh_auto_configure:
-	dh_auto_configure -- --with-qemu-user=libvirt-qemu --with-preferred-distros=ubuntu --without-tui --with-kvm-packages="qemu-system" --with-libvirt-packages-names="libvirt-bin" --with-askpass-package="ssh-askpass-gnome"
+	./setup.py configure --qemu-user=libvirt-qemu \
+		--preferred-distros=$(DISTRO)
 
+override_dh_python2:
+	dh_python2 -O--buildsystem=python_distutils
+	dh_python2 -p virtinst usr/share/virt-manager
