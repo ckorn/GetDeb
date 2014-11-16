@@ -1,3 +1,11 @@
+glabels (3.2.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Fixed "new label dialog" crash introduced with Gtk 3.14
+    - Fixed text box layout problems with center and right alignment
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 10 Nov 2014 19:23:12 +0100
+
 glabels (3.2.0-1~getdeb2~trusty) trusty; urgency=low
 
   * Rebuild for trusty
