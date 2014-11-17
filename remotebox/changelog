@@ -1,3 +1,17 @@
+remotebox (1.9-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Combined guest logs onto a single tabbed window
+    - Added fix to show documentation when running on Windows.
+    - Added Memory Bar to show memory usage on the server
+    - Added support for importing OVF/OVA appliances
+    - Added support for exporting a VM as an OVF/OVA appliance
+    - Added support for setting IPv4 Port Forwarding rules on NAT networks
+    - Improvements made to error handling on most dialogs
+    - Various GUI tweaks
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 16 Nov 2014 20:44:53 +0100
+
 remotebox (1.8.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
