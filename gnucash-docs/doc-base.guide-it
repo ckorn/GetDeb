@@ -1,0 +1,14 @@
+Document: gnucash-guide-it
+Title: GnuCash Tutorial and Concepts Guide (Italian)
+Abstract: An in depth guide to the concepts behind using GnuCash with a
+ tutorial to show how to put those concepts into practice.
+Section: Office
+
+Format: HTML
+Index: /usr/share/doc/gnucash-docs/gnucash-guide-it/index.html
+Files: /usr/share/doc/gnucash-docs/gnucash-guide-it/*.html
+       /usr/share/doc/gnucash-docs/gnucash-guide-it/figures/*.png
+       /usr/share/doc/gnucash-docs/gnucash-guide-it/stylesheet/*.png
+
+Format: PDF
+Files: /usr/share/doc/gnucash-docs/gnucash-guide-it.pdf.gz
