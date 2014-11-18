@@ -1,3 +1,26 @@
+rabbitvcs (0.16-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Issue 316 Enhancement Colour-code entries in log
+    Issue 336 Enhancement Copy to clipboard from revision log
+    Issue 352 Enhancement Filter by Author or Date in Log/revision history
+    Issue 358 Enhancement Rethink layout of nautllus properties dialog
+    Issue 496 Enhancement Keyboard shortcut for closing dialogues
+    Issue 510 Enhancement RabbitVCS Git fetch --all
+    Issue 645 Enhancement Refresh in the commit-dialog
+    Issue 675 Enhancement Copy svn log to clipboard
+    Issue 703 Enhancement When viewing changes, allow multiple selections
+    Issue 714 Defect Regression - shortcut keys for closing log dialog
+    Issue 715 Defect Regression - filtering a log displays the wrong
+    selections in the files UI.
+    Issue 720 Defect Regression - Forward buttons no longer enabled
+    Issue 728 Enhancement Nemo integration
+    Issue 843 Defect
+    Issue 692 Enhancement Apply patch by Francis Bisson for Caja integration
+    Issue 492 Defect Add the effective user id into the generated file paths
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 18 Nov 2014 18:47:55 +0100
+
 rabbitvcs (0.15.3-1~getdeb1) precise; urgency=low
 
   * New upstream version
