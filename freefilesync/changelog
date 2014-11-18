@@ -1,3 +1,9 @@
+freefilesync (6.11-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 17 Nov 2014 20:09:49 +0100
+
 freefilesync (6.10-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

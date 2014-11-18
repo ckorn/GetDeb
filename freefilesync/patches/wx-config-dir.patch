@@ -1,10 +1,10 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-6.9/Makefile
+Index: freefilesync-6.11/Makefile
 ===================================================================
---- freefilesync-6.9.orig/Makefile	2014-09-09 22:12:22.776673603 +0200
-+++ freefilesync-6.9/Makefile	2014-09-09 22:17:10.348665048 +0200
-@@ -5,7 +5,7 @@
+--- freefilesync-6.11.orig/Makefile
++++ freefilesync-6.11/Makefile
+@@ -5,7 +5,7 @@ SHAREDIR    = $(DESTDIR)$(prefix)/share
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
  
@@ -13,13 +13,13 @@ Index: freefilesync-6.9/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
-@@ -67,53 +67,53 @@
+@@ -67,53 +67,53 @@ CPP_LIST+=lib/perf_check.cpp
  CPP_LIST+=lib/status_handler.cpp
  CPP_LIST+=lib/versioning.cpp
  CPP_LIST+=lib/ffs_paths.cpp
 -CPP_LIST+=../../zen/xml_io.cpp
 -CPP_LIST+=../../zen/recycler.cpp
--CPP_LIST+=../../zen/file_handling.cpp
+-CPP_LIST+=../../zen/file_access.cpp
 -CPP_LIST+=../../zen/file_io.cpp
 -CPP_LIST+=../../zen/file_traverser.cpp
 -CPP_LIST+=../../zen/zstring.cpp
@@ -35,7 +35,7 @@ Index: freefilesync-6.9/Makefile
 -CPP_LIST+=../../wx+/zlib_wrap.cpp
 +CPP_LIST+=zen/xml_io.cpp
 +CPP_LIST+=zen/recycler.cpp
-+CPP_LIST+=zen/file_handling.cpp
++CPP_LIST+=zen/file_access.cpp
 +CPP_LIST+=zen/file_io.cpp
 +CPP_LIST+=zen/file_traverser.cpp
 +CPP_LIST+=zen/zstring.cpp
@@ -96,11 +96,11 @@ Index: freefilesync-6.9/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-6.9/RealtimeSync/Makefile
+Index: freefilesync-6.11/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-6.9.orig/RealtimeSync/Makefile	2014-09-09 22:12:22.776673603 +0200
-+++ freefilesync-6.9/RealtimeSync/Makefile	2014-09-09 22:19:45.564660431 +0200
-@@ -2,7 +2,7 @@
+--- freefilesync-6.11.orig/RealtimeSync/Makefile
++++ freefilesync-6.11/RealtimeSync/Makefile
+@@ -2,7 +2,7 @@ APPNAME = RealtimeSync
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
  
@@ -109,13 +109,13 @@ Index: freefilesync-6.9/RealtimeSync/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
-@@ -25,36 +25,36 @@
+@@ -25,36 +25,36 @@ CPP_LIST+=../lib/localization.cpp
  CPP_LIST+=../lib/process_xml.cpp
  CPP_LIST+=../lib/resolve_path.cpp
  CPP_LIST+=../lib/ffs_paths.cpp
 -CPP_LIST+=../../../zen/xml_io.cpp
 -CPP_LIST+=../../../zen/dir_watcher.cpp
--CPP_LIST+=../../../zen/file_handling.cpp
+-CPP_LIST+=../../../zen/file_access.cpp
 -CPP_LIST+=../../../zen/file_io.cpp
 -CPP_LIST+=../../../zen/file_traverser.cpp
 -CPP_LIST+=../../../zen/zstring.cpp
@@ -126,7 +126,7 @@ Index: freefilesync-6.9/RealtimeSync/Makefile
 -CPP_LIST+=../../../wx+/popup_dlg_generated.cpp
 +CPP_LIST+=../zen/xml_io.cpp
 +CPP_LIST+=../zen/dir_watcher.cpp
-+CPP_LIST+=../zen/file_handling.cpp
++CPP_LIST+=../zen/file_access.cpp
 +CPP_LIST+=../zen/file_io.cpp
 +CPP_LIST+=../zen/file_traverser.cpp
 +CPP_LIST+=../zen/zstring.cpp
