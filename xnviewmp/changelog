@@ -1,3 +1,9 @@
+xnviewmp (0.69-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version (LP: #1389902)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 18 Nov 2014 19:13:23 +0100
+
 xnviewmp (0.68-1~getdeb5~trusty) trusty; urgency=medium
 
   * Apply more changes.
