@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_build:
+	make html pdf
+
+override_dh_auto_clean:
+	dh_auto_clean
+	for lg in C it de ja; do \
+		rm -rf help/$${lg}/gnucash-help guide/$${lg}/gnucash-guide; \
+	done
+
+override_dh_installdocs:
+	dh_installdocs
+	for suffix in "/" ".pdf"; do \
+		for type in help guide; do \
+			cp -a $${type}/C/gnucash-$${type}$${suffix} debian/gnucash-docs/usr/share/doc/gnucash-docs/gnucash-$${type}-en$${suffix}; \
+			cp -a $${type}/it/gnucash-$${type}$${suffix} debian/gnucash-docs/usr/share/doc/gnucash-docs/gnucash-$${type}-it$${suffix}; \
+			cp -a $${type}/de/gnucash-$${type}$${suffix} debian/gnucash-docs/usr/share/doc/gnucash-docs/gnucash-$${type}-de$${suffix}; \
+			if [ "$${type}" = guide ]; then \
+				cp -a $${type}/ja/gnucash-$${type}$${suffix} debian/gnucash-docs/usr/share/doc/gnucash-docs/gnucash-$${type}-ja$${suffix}; \
+			fi; \
+		done; \
+	done
+	# Replace duplicate files with symlinks, to save space.
+	# And make sure that files from /usr/share/doc are not taken as original copy.
+	rdfind -outputname /dev/null -makesymlinks true debian/gnucash-docs/usr/share/gnome/ \
+		debian/gnucash-docs/usr/share/doc/
+	# Fix those symlinks to make them relative
+	symlinks -r -s -c debian/gnucash-docs/
+
+get-orig-source:
+	uscan --force-download --rename --destdir .
+.PHONY: get-orig-source

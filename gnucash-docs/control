@@ -1,0 +1,44 @@
+Source: gnucash-docs
+Section: doc
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9),
+               xsltproc,
+               rarian-compat,
+               fop,
+               dh-autoreconf,
+               libxml2-utils,
+               rdfind,
+               symlinks
+Homepage: http://www.gnucash.org
+
+Package: gnucash-docs
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: yelp
+Suggests: gnucash,
+          pdf-viewer,
+          www-browser
+Conflicts: gnucash (<< 1.9.0-1)
+Description: Documentation for gnucash, a personal finance tracking program
+ GnuCash provides accounting functions suitable for use by small businesses and
+ individuals. It can track finances in multiple accounts, keeping running and
+ reconciled balances. There is support for customer, vendor and employee
+ processing. It has an X based graphical user interface, double entry, a
+ hierarchy of accounts, expense accounts (categories), and can import Quicken
+ QIF files and OFX files.
+ .
+ This package contains the GnuCash Help Manual and the GnuCash Tutorial and
+ Concepts Guide.
+ .
+ The Help Manual is a quick reference of how to accomplish specific tasks and
+ how to use the features in GnuCash. The Tutorial and Concepts Guide is an in
+ depth guide to the concepts behind using GnuCash with a tutorial to show how
+ to put those concepts into practice.
+ .
+ These documents are available in HTML, PDF and DocBook formats (the latter is
+ intended to be viewed with the GNOME Help browser).
+ .
+ Translations in German, Italian and Japanese are also included in this package
+ (for Japanese, only the guide is available).
