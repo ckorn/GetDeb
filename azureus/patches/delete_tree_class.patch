@@ -1,15 +1,15 @@
 Delete class not required for non-Windows builds.
 (See comment above the class)
 Fails to build because of missing createHandle() method anyway.
-Index: azureus-4.6.0.2/org/eclipse/swt/widgets/Tree2.java
+Index: azureus-5.5.0.0/org/eclipse/swt/widgets/Tree2.java
 ===================================================================
---- azureus-4.6.0.2.orig/org/eclipse/swt/widgets/Tree2.java	2011-02-26 18:55:38.892090001 +0100
-+++ /dev/null	1970-01-01 00:00:00.000000000 +0000
+--- azureus-5.5.0.0.orig/org/eclipse/swt/widgets/Tree2.java
++++ /dev/null
 @@ -1,150 +0,0 @@
 -/**
 - * Created on May 12, 2010
 - *
-- * Copyright 2008 Vuze, Inc.  All rights reserved.
+- * Copyright (C) Azureus Software, Inc, All Rights Reserved.
 - * This program is free software; you can redistribute it and/or modify
 - * it under the terms of the GNU General Public License as published by
 - * the Free Software Foundation; version 2 of the License only.

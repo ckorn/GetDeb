@@ -13,11 +13,11 @@ Signed-off-by: Adrian Perez <adrianperez.deb@gmail.com>
  .../platform/PlatformManagerPluginDelegate.java    |   15 ++++++++++++---
  4 files changed, 26 insertions(+), 7 deletions(-)
 
-Index: azureus-5.2.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
+Index: azureus-5.5.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
 ===================================================================
---- azureus-5.2.0.0.orig/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2013-11-28 18:43:16.457401506 +0100
-+++ azureus-5.2.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2013-11-28 18:43:16.449401506 +0100
-@@ -30,8 +30,10 @@
+--- azureus-5.5.0.0.orig/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
++++ azureus-5.5.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
+@@ -27,8 +27,10 @@ import org.gudy.azureus2.core3.util.*;
  import org.gudy.azureus2.platform.PlatformManager;
  import org.gudy.azureus2.platform.PlatformManagerFactory;
  import org.gudy.azureus2.platform.unix.ScriptAfterShutdown;
@@ -28,7 +28,7 @@ Index: azureus-5.2.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl
  import org.gudy.azureus2.plugins.PluginInterface;
  import org.gudy.azureus2.plugins.platform.PlatformManagerException;
  import org.gudy.azureus2.pluginsimpl.local.PluginInitializer;
-@@ -317,7 +319,8 @@
+@@ -314,7 +316,8 @@ AzureusRestarterImpl
  		}
  
  		try {
@@ -38,7 +38,7 @@ Index: azureus-5.2.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl
  			AEWin32Access accessor = AEWin32Manager.getAccessor(true);
  			if (accessor == null) {
  				result = -123;
-@@ -372,6 +375,7 @@
+@@ -369,6 +372,7 @@ AzureusRestarterImpl
  							SystemProperties.getApplicationPath(), AEWin32Access.SW_NORMAL);
  				}
  			}
@@ -46,11 +46,11 @@ Index: azureus-5.2.0.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl
  
  			/*
  			 * Some results:
-Index: azureus-5.2.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java
+Index: azureus-5.5.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java
 ===================================================================
---- azureus-5.2.0.0.orig/org/gudy/azureus2/platform/PlatformManagerFactory.java	2013-11-28 18:43:16.457401506 +0100
-+++ azureus-5.2.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java	2013-11-28 18:43:16.449401506 +0100
-@@ -58,11 +58,11 @@
+--- azureus-5.5.0.0.orig/org/gudy/azureus2/platform/PlatformManagerFactory.java
++++ azureus-5.5.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java
+@@ -55,11 +55,11 @@ PlatformManagerFactory
  						if ( getPlatformType() == PlatformManager.PT_WINDOWS ){
  							
  							platform_manager = org.gudy.azureus2.platform.win32.PlatformManagerImpl.getSingleton();
@@ -64,11 +64,11 @@ Index: azureus-5.2.0.0/org/gudy/azureus2/platform/PlatformManagerFactory.java
  						}else if( getPlatformType() == PlatformManager.PT_UNIX ){
  							
  							platform_manager = org.gudy.azureus2.platform.unix.PlatformManagerImpl.getSingleton();
-Index: azureus-5.2.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
+Index: azureus-5.5.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
 ===================================================================
---- azureus-5.2.0.0.orig/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2013-11-28 18:43:16.457401506 +0100
-+++ azureus-5.2.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2013-11-28 18:43:16.453401506 +0100
-@@ -24,6 +24,10 @@
+--- azureus-5.5.0.0.orig/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
++++ azureus-5.5.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
+@@ -21,6 +21,10 @@ import java.util.Properties;
  
  import org.gudy.azureus2.platform.unix.PlatformManagerUnixPlugin;
  
@@ -79,7 +79,7 @@ Index: azureus-5.2.0.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.
  import org.gudy.azureus2.plugins.Plugin;
  import org.gudy.azureus2.plugins.PluginException;
  import org.gudy.azureus2.plugins.PluginInterface;
-@@ -54,16 +58,21 @@
+@@ -51,16 +55,21 @@ public class PlatformManagerPluginDelega
  		PlatformManager platform = PlatformManagerFactory.getPlatformManager();
  
  		int platformType = platform.getPlatformType();
