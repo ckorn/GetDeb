@@ -1,3 +1,4 @@
 usr/lib/pycharm/bin			usr/share/pycharm/bin
 usr/share/pycharm/pycharm.png		usr/lib/pycharm/bin/pycharm.png
 usr/lib/pycharm/bin/libpty.so		usr/share/pycharm/lib/libpty/linux/x86_64/libpty.so
+usr/lib/pycharm/attach_linux_amd64.so	usr/share/pycharm/helpers/pydev/pydevd_attach_to_process/attach_linux_amd64.so

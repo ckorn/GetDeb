@@ -1,3 +1,9 @@
+pycharm (4.0-1~getdeb2) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Nov 2014 19:33:59 +0100
+
 pycharm (3.4.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
