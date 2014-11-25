@@ -1,0 +1,3 @@
+version=3
+https://github.com/jlherren/skype-call-recorder/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz
