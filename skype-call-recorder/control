@@ -1,0 +1,28 @@
+Source: skype-call-recorder
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               libqt4-dev,
+               libvorbis-dev,
+               libmp3lame-dev,
+               libid3-3.8.3-dev
+Standards-Version: 3.9.5
+Homepage: http://atdot.ch/scr/
+
+Package: skype-call-recorder
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Records Skype calls
+ Skype Call Recorder is an open source tool that allows you
+ to record your Skype calls on Linux. Current features
+ include:
+ .
+ Record calls to MP3, Ogg Vorbis or WAV files
+ Automatic and manual recording
+ Configure automatic recording on per-caller basis
+ Split stereo recording
+ Completely free (free as in free beer)
+ Completely free (free as in freedom), released under GPL
