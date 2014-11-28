@@ -1,3 +1,9 @@
+clipgrab (3.4.8-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 27 Nov 2014 21:14:28 +0100
+
 clipgrab (3.4.7-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
