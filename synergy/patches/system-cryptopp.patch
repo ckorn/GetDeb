@@ -6,11 +6,11 @@ Forwarded: no
 Last-Update: 2013-06-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: synergy-1.5.0/CMakeLists.txt
+Index: synergy-1.6.1/CMakeLists.txt
 ===================================================================
---- synergy-1.5.0.orig/CMakeLists.txt	2014-05-25 00:12:39.680373596 +0200
-+++ synergy-1.5.0/CMakeLists.txt	2014-05-25 00:12:39.672373596 +0200
-@@ -86,6 +86,7 @@
+--- synergy-1.6.1.orig/CMakeLists.txt
++++ synergy-1.6.1/CMakeLists.txt
+@@ -86,6 +86,7 @@ if (UNIX)
  	include(CheckIncludeFileCXX)
  	include(CheckSymbolExists)
  	include(CheckCSourceCompiles)
@@ -18,7 +18,7 @@ Index: synergy-1.5.0/CMakeLists.txt
  
  	check_include_file_cxx(istream HAVE_ISTREAM)
  	check_include_file_cxx(ostream HAVE_OSTREAM)
-@@ -223,6 +224,8 @@
+@@ -226,6 +227,8 @@ if (UNIX)
  		check_library_exists("Xi" XISelectEvents "" HAVE_Xi)
  		check_library_exists("Xrandr" XRRQueryExtension "" HAVE_Xrandr)
  
@@ -27,7 +27,7 @@ Index: synergy-1.5.0/CMakeLists.txt
  		if (HAVE_ICE)
  
  			# Assume we have SM if we have ICE.
-@@ -266,6 +269,10 @@
+@@ -269,6 +272,10 @@ if (UNIX)
  			list(APPEND libs Xi)
  		endif()
  
@@ -38,10 +38,10 @@ Index: synergy-1.5.0/CMakeLists.txt
  	endif()
  
  	# For config.h, set some static values; it may be a good idea to make
-Index: synergy-1.5.0/ext/CMakeLists.txt
+Index: synergy-1.6.1/ext/CMakeLists.txt
 ===================================================================
---- synergy-1.5.0.orig/ext/CMakeLists.txt	2014-05-25 00:12:39.680373596 +0200
-+++ synergy-1.5.0/ext/CMakeLists.txt	2014-05-25 00:12:39.672373596 +0200
+--- synergy-1.6.1.orig/ext/CMakeLists.txt
++++ synergy-1.6.1/ext/CMakeLists.txt
 @@ -13,46 +13,48 @@
  # You should have received a copy of the GNU General Public License
  # along with this program.  If not, see <http://www.gnu.org/licenses/>.
@@ -129,7 +129,7 @@ Index: synergy-1.5.0/ext/CMakeLists.txt
  
  # if 64-bit windows, compile asm file.
  if (CMAKE_CL_64)
-@@ -72,25 +74,29 @@
+@@ -72,25 +74,29 @@ if (CMAKE_CL_64)
  endif()
  
  if (UNIX)
@@ -174,11 +174,11 @@ Index: synergy-1.5.0/ext/CMakeLists.txt
 +		set_target_properties(cryptopp PROPERTIES COMPILE_FLAGS "-w")
 +	endif()
  endif()
-Index: synergy-1.5.0/ext/toolchain/commands1.py
+Index: synergy-1.6.1/ext/toolchain/commands1.py
 ===================================================================
---- synergy-1.5.0.orig/ext/toolchain/commands1.py	2014-05-25 00:12:39.680373596 +0200
-+++ synergy-1.5.0/ext/toolchain/commands1.py	2014-05-25 00:12:39.672373596 +0200
-@@ -248,7 +248,7 @@
+--- synergy-1.6.1.orig/ext/toolchain/commands1.py
++++ synergy-1.6.1/ext/toolchain/commands1.py
+@@ -248,7 +248,7 @@ class InternalCommands:
  	macIdentity = None
  	
  	# cryptoPP dir with version number
@@ -187,10 +187,10 @@ Index: synergy-1.5.0/ext/toolchain/commands1.py
  	
  	# gtest dir with version number
  	gtestDir = 'gtest-1.6.0'
-Index: synergy-1.5.0/src/lib/io/CryptoMode_cryptopp.h
+Index: synergy-1.6.1/src/lib/io/CryptoMode_cryptopp.h
 ===================================================================
---- synergy-1.5.0.orig/src/lib/io/CryptoMode_cryptopp.h	2014-05-25 00:12:39.680373596 +0200
-+++ synergy-1.5.0/src/lib/io/CryptoMode_cryptopp.h	2014-05-25 00:12:39.672373596 +0200
+--- synergy-1.6.1.orig/src/lib/io/CryptoMode_cryptopp.h
++++ synergy-1.6.1/src/lib/io/CryptoMode_cryptopp.h
 @@ -25,6 +25,6 @@
  #	pragma GCC system_header
  #endif 
@@ -201,10 +201,10 @@ Index: synergy-1.5.0/src/lib/io/CryptoMode_cryptopp.h
 +#include <cryptopp/gcm.h>
 +#include <cryptopp/modes.h>
 +#include <cryptopp/aes.h>
-Index: synergy-1.5.0/src/lib/io/CryptoStream_cryptopp.h
+Index: synergy-1.6.1/src/lib/io/CryptoStream_cryptopp.h
 ===================================================================
---- synergy-1.5.0.orig/src/lib/io/CryptoStream_cryptopp.h	2014-05-25 00:12:39.680373596 +0200
-+++ synergy-1.5.0/src/lib/io/CryptoStream_cryptopp.h	2014-05-25 00:12:39.676373596 +0200
+--- synergy-1.6.1.orig/src/lib/io/CryptoStream_cryptopp.h
++++ synergy-1.6.1/src/lib/io/CryptoStream_cryptopp.h
 @@ -25,5 +25,5 @@
  #	pragma GCC system_header
  #endif
