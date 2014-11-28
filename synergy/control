@@ -13,7 +13,8 @@ Build-Depends: debhelper (>= 9),
                libcrypto++-dev,
                pkg-config,
                libqt4-dev,
-               libcurl4-openssl-dev
+               libcurl4-openssl-dev,
+               libavahi-compat-libdnssd-dev
 Standards-Version: 3.9.5
 
 Package: synergy
