@@ -34,6 +34,7 @@ Depends: default-jre | sun-java6-jre,
          libxpp3-java,
          libgnu-regexp-java,
          simplyhtml (>> 0.13),
+         libxalan2-java,
          ${misc:Depends}
 Recommends: freemind-doc,
             xdg-utils,

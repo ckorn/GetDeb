@@ -1,3 +1,15 @@
+freemind (1.0.1-1~getdeb3) trusty; urgency=medium
+
+  * Install dictionaries.properties
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 29 Nov 2014 22:43:55 +0100
+
+freemind (1.0.1-1~getdeb2) trusty; urgency=medium
+
+  * Depend on libxalan2-java
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 18 Nov 2014 19:44:25 +0100
+
 freemind (1.0.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version (LP: #1342442)
