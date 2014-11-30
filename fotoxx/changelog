@@ -1,3 +1,27 @@
+fotoxx (14.12-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Tools > Magnify Image: New function - analogous to inspecting a printed
+      image with a magnifying glass that can be moved freely over the image.
+    + Tools > User Settings: When stepping through image files with the 
+      prev/next button or arrow keys, there is a new option to show only the 
+      final edited version (or the original file if never edited).
+    + Retouch Combo: The slider to emphasize darker...brighter pixels for
+      color adjustments was made more effective.
+    + New command parameter -nosync: Allows a faster startup, but search and
+      map functions are disabled because of the risk of incorrect results.
+      More information is in the Technical Notes section of the User Guide.
+    + Select Area: The Finish dialog has a new option to extend the selection
+      automatically to designated image corners - a time saver.
+    + Slide Show: When paused, the Keyboard M-key starts the magnify
+    function.
+    + Bugfix: Edit Metadata was not being cancelled when a conflicting
+      function was started.
+    + Bugfix: Adding geotags by clicking on a map sometimes failed.
+    + Bugfix: Copy text from a dialog widget with Ctrl+C was not working.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 30 Nov 2014 18:02:13 +0100
+
 fotoxx (14.11-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
