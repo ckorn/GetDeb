@@ -1,5 +1,6 @@
 bin/dist/freemind.sh				usr/share/freemind
 bin/dist/*.ortho				usr/share/freemind
+bin/dist/dictionaries.properties		usr/share/freemind
 bin/dist/lib/freemind.jar			usr/share/freemind/lib
 bin/dist/lib/bindings.jar			usr/share/freemind/lib
 bin/dist/lib/jortho.jar				usr/share/freemind/lib

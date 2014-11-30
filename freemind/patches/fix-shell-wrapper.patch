@@ -8,9 +8,9 @@ Subject: fix shell wrapper
 
 Index: freemind-1.0.1/freemind/freemind.sh
 ===================================================================
---- freemind-1.0.1.orig/freemind/freemind.sh	2014-08-01 21:21:33.150422632 +0200
-+++ freemind-1.0.1/freemind/freemind.sh	2014-08-01 21:22:11.518421490 +0200
-@@ -94,7 +94,8 @@
+--- freemind-1.0.1.orig/freemind/freemind.sh
++++ freemind-1.0.1/freemind/freemind.sh
+@@ -94,7 +94,8 @@ findjava() {
  		return 0
  	else
  		_error "Couldn't find a java virtual machine," \
@@ -20,7 +20,7 @@ Index: freemind-1.0.1/freemind/freemind.sh
  		return 1
  	fi
  }
-@@ -196,16 +197,17 @@
+@@ -196,16 +197,17 @@ fi
  # you want to add a new Look&Feel jar (the motif one is so ugly...).
  # 
  CLASSPATH="${ADD_JARS}:${CLASSPATH}:${freedir}/lib/freemind.jar:\
@@ -35,10 +35,11 @@ Index: freemind-1.0.1/freemind/freemind.sh
 -${freedir}/lib/forms-1.0.5.jar:\
 +/usr/share/java/forms.jar:\
  ${freedir}/lib/jortho.jar:\
- ${freedir}/lib/xalan.jar:\
+-${freedir}/lib/xalan.jar:\
 -${freedir}/lib/serializer.jar:\
 -${freedir}/lib/xml-apis.jar:\
 -${freedir}/lib/xercesImpl.jar:\
++/usr/share/java/xalan2.jar:\
 +/usr/share/java/serializer.jar:\
 +/usr/share/java/xml-apis.jar:\
 +/usr/share/java/xercesImpl.jar:\
