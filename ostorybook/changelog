@@ -1,3 +1,9 @@
+ostorybook (4.9.16-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 01 Dec 2014 20:13:14 +0100
+
 ostorybook (4.9.15-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
