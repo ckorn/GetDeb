@@ -14,6 +14,9 @@ override_dh_auto_configure:
 	./setup.py configure --qemu-user=libvirt-qemu \
 		--preferred-distros=$(DISTRO)
 
+override_dh_install:
+	dh_install --fail-missing
+
 override_dh_python2:
 	dh_python2 -O--buildsystem=python_distutils
 	dh_python2 -p virtinst usr/share/virt-manager

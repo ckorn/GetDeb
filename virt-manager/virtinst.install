@@ -1,12 +1,15 @@
 usr/bin/virt-clone
 usr/bin/virt-convert
 usr/bin/virt-install
+usr/bin/virt-xml
 usr/share/man/man1/virt-install.1
 usr/share/man/man1/virt-convert.1
 usr/share/man/man1/virt-clone.1
+usr/share/man/man1/virt-xml.1
 usr/share/virt-manager/virt-clone
 usr/share/virt-manager/virt-convert
 usr/share/virt-manager/virt-install
+usr/share/virt-manager/virt-xml
 usr/share/virt-manager/virtcli
 usr/share/virt-manager/virtconv
 usr/share/virt-manager/virtinst

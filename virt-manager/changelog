@@ -1,3 +1,9 @@
+virt-manager (1:1.1.0-1~getdeb3) trusty; urgency=medium
+
+  * Include virt-xml (LP: #1400012)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Dec 2014 02:54:04 +0100
+
 virt-manager (1:1.1.0-1~getdeb2) trusty; urgency=medium
 
   * Rebuild with new patches.
