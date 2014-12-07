@@ -56,7 +56,9 @@ Depends: ${python:Depends},
          ${misc:Depends},
          python-libvirt (>= 0.4.6),
          python-libxml2,
-         python-urlgrabber
+         python-urlgrabber,
+         python-ipaddr,
+         gir1.2-libosinfo-1.0
 Recommends: virt-viewer, qemu
 Description: Programs to create and clone virtual machines
  Virtinst is a set of commandline tools to create virtual machines using
@@ -66,3 +68,4 @@ Description: Programs to create and clone virtual machines
  virt-clone: clone existing virtual machines
  virt-image: create virtual machines from an image description
  virt-convert: convert virtual machines between formats
+ virt-xml: edit libvirt xml
