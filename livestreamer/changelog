@@ -1,0 +1,42 @@
+livestreamer (1.11.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Dec 2014 19:55:21 +0100
+
+livestreamer (1.10.2-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Sat, 06 Sep 2014 10:36:39 +0200
+
+livestreamer (1.10.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Sat, 30 Aug 2014 17:46:46 +0200
+
+livestreamer (1.10.0-1) unstable; urgency=low
+
+  * New upstream version (Closes: #757347)
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Mon, 18 Aug 2014 22:18:54 +0200
+
+livestreamer (1.9.0-1) unstable; urgency=low
+
+  * Disable version check (Closes: #750502)
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Tue, 22 Jul 2014 20:50:15 +0200
+
+livestreamer (1.8.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Tue, 27 May 2014 21:18:04 +0200
+
+livestreamer (1.7.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #740062)
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Thu, 06 Mar 2014 00:29:37 +0100
