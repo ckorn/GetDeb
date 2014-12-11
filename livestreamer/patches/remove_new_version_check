@@ -1,0 +1,75 @@
+Index: livestreamer-1.11.0/CHANGELOG.rst
+===================================================================
+--- livestreamer-1.11.0.orig/CHANGELOG.rst	2014-12-11 19:55:50.477082265 +0100
++++ livestreamer-1.11.0/CHANGELOG.rst	2014-12-11 19:55:50.473082265 +0100
+@@ -203,7 +203,6 @@
+ --------------------------
+ 
+ CLI:
+- - Added option: ``--no-version-check``
+  - Added HTTP options: ``--http-cookies``,
+    ``--http-headers``,
+    ``--http-query-params``,
+Index: livestreamer-1.11.0/src/livestreamer_cli/argparser.py
+===================================================================
+--- livestreamer-1.11.0.orig/src/livestreamer_cli/argparser.py	2014-12-11 19:55:50.477082265 +0100
++++ livestreamer-1.11.0/src/livestreamer_cli/argparser.py	2014-12-11 19:55:50.473082265 +0100
+@@ -242,13 +242,6 @@
+     """
+ )
+ general.add_argument(
+-    "--no-version-check",
+-    action="store_true",
+-    help="""
+-    Do not check for new Livestreamer releases.
+-    """
+-)
+-general.add_argument(
+     "--yes-run-as-root",
+     action="store_true",
+     help=argparse.SUPPRESS
+Index: livestreamer-1.11.0/src/livestreamer_cli/main.py
+===================================================================
+--- livestreamer-1.11.0.orig/src/livestreamer_cli/main.py	2014-12-11 19:55:50.477082265 +0100
++++ livestreamer-1.11.0/src/livestreamer_cli/main.py	2014-12-11 19:55:50.473082265 +0100
+@@ -806,29 +806,6 @@
+             sys.exit(1)
+ 
+ 
+-def check_version():
+-    cache = Cache(filename="cli.json")
+-    latest_version = cache.get("latest_version")
+-
+-    if not latest_version:
+-        res = requests.get("https://pypi.python.org/pypi/livestreamer/json")
+-        data = res.json()
+-        latest_version = data.get("info").get("version")
+-        cache.set("latest_version", latest_version, (60 * 60 * 24))
+-
+-    version_info_printed = cache.get("version_info_printed")
+-    if version_info_printed:
+-        return
+-
+-    installed_version = StrictVersion(livestreamer.version)
+-    latest_version = StrictVersion(latest_version)
+-
+-    if latest_version > installed_version:
+-        console.logger.info("A new version of Livestreamer ({0}) is "
+-                            "available!".format(latest_version))
+-        cache.set("version_info_printed", True, (60 * 60 * 6))
+-
+-
+ def main():
+     setup_args()
+     check_root()
+@@ -838,10 +815,6 @@
+     setup_console()
+     setup_http_session()
+ 
+-    if not args.no_version_check:
+-        with ignored(Exception):
+-            check_version()
+-
+     if args.plugins:
+         print_plugins()
+     elif args.url:
