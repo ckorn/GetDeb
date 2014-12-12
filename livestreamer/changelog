@@ -1,3 +1,9 @@
+livestreamer (1.11.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 12 Dec 2014 18:23:18 +0100
+
 livestreamer (1.11.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

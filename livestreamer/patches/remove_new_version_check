@@ -1,8 +1,8 @@
-Index: livestreamer-1.11.0/CHANGELOG.rst
+Index: livestreamer-1.11.1/CHANGELOG.rst
 ===================================================================
---- livestreamer-1.11.0.orig/CHANGELOG.rst	2014-12-11 19:55:50.477082265 +0100
-+++ livestreamer-1.11.0/CHANGELOG.rst	2014-12-11 19:55:50.473082265 +0100
-@@ -203,7 +203,6 @@
+--- livestreamer-1.11.1.orig/CHANGELOG.rst	2014-12-12 18:23:25.148663277 +0100
++++ livestreamer-1.11.1/CHANGELOG.rst	2014-12-12 18:23:25.144661278 +0100
+@@ -210,7 +210,6 @@
  --------------------------
  
  CLI:
@@ -10,10 +10,10 @@ Index: livestreamer-1.11.0/CHANGELOG.rst
   - Added HTTP options: ``--http-cookies``,
     ``--http-headers``,
     ``--http-query-params``,
-Index: livestreamer-1.11.0/src/livestreamer_cli/argparser.py
+Index: livestreamer-1.11.1/src/livestreamer_cli/argparser.py
 ===================================================================
---- livestreamer-1.11.0.orig/src/livestreamer_cli/argparser.py	2014-12-11 19:55:50.477082265 +0100
-+++ livestreamer-1.11.0/src/livestreamer_cli/argparser.py	2014-12-11 19:55:50.473082265 +0100
+--- livestreamer-1.11.1.orig/src/livestreamer_cli/argparser.py	2014-12-12 18:23:25.148663277 +0100
++++ livestreamer-1.11.1/src/livestreamer_cli/argparser.py	2014-12-12 18:23:25.144661278 +0100
 @@ -242,13 +242,6 @@
      """
  )
@@ -28,10 +28,10 @@ Index: livestreamer-1.11.0/src/livestreamer_cli/argparser.py
      "--yes-run-as-root",
      action="store_true",
      help=argparse.SUPPRESS
-Index: livestreamer-1.11.0/src/livestreamer_cli/main.py
+Index: livestreamer-1.11.1/src/livestreamer_cli/main.py
 ===================================================================
---- livestreamer-1.11.0.orig/src/livestreamer_cli/main.py	2014-12-11 19:55:50.477082265 +0100
-+++ livestreamer-1.11.0/src/livestreamer_cli/main.py	2014-12-11 19:55:50.473082265 +0100
+--- livestreamer-1.11.1.orig/src/livestreamer_cli/main.py	2014-12-12 18:23:25.148663277 +0100
++++ livestreamer-1.11.1/src/livestreamer_cli/main.py	2014-12-12 18:23:25.144661278 +0100
 @@ -806,29 +806,6 @@
              sys.exit(1)
  
