@@ -11,26 +11,23 @@ Forwarded: no
 Last-Update: 2013-06-07
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: synergy-1.4.17/src/lib/synergy/ProtocolUtil.cpp
+Index: synergy-1.6.2/src/lib/synergy/ProtocolUtil.cpp
 ===================================================================
---- synergy-1.4.17.orig/src/lib/synergy/ProtocolUtil.cpp	2014-04-12 03:10:10.446816872 +0200
-+++ synergy-1.4.17/src/lib/synergy/ProtocolUtil.cpp	2014-04-12 03:10:10.442816872 +0200
-@@ -342,9 +342,9 @@
+--- synergy-1.6.2.orig/src/lib/synergy/ProtocolUtil.cpp	2014-12-14 20:46:09.138464625 +0100
++++ synergy-1.6.2/src/lib/synergy/ProtocolUtil.cpp	2014-12-14 20:47:26.334462328 +0100
+@@ -342,7 +342,7 @@
  }
  
  void
--CProtocolUtil::writef(void* buffer, const char* fmt, va_list args)
-+CProtocolUtil::writef(UInt8* buffer, const char* fmt, va_list args)
+-ProtocolUtil::writef(void* buffer, const char* fmt, va_list args)
++ProtocolUtil::writef(UInt8* buffer, const char* fmt, va_list args)
  {
--	UInt8* dst = reinterpret_cast<UInt8*>(buffer);
-+	UInt8* dst = buffer;
+ 	UInt8* dst = reinterpret_cast<UInt8*>(buffer);
  
- 	while (*fmt) {
- 		if (*fmt == '%') {
-Index: synergy-1.4.17/src/lib/synergy/ProtocolUtil.h
+Index: synergy-1.6.2/src/lib/synergy/ProtocolUtil.h
 ===================================================================
---- synergy-1.4.17.orig/src/lib/synergy/ProtocolUtil.h	2014-04-12 03:10:10.446816872 +0200
-+++ synergy-1.4.17/src/lib/synergy/ProtocolUtil.h	2014-04-12 03:10:10.442816872 +0200
+--- synergy-1.6.2.orig/src/lib/synergy/ProtocolUtil.h	2014-12-14 20:46:09.138464625 +0100
++++ synergy-1.6.2/src/lib/synergy/ProtocolUtil.h	2014-12-14 20:46:09.134464625 +0100
 @@ -79,7 +79,7 @@
  							const char* fmt, va_list);
  
