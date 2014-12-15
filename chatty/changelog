@@ -1,3 +1,63 @@
+chatty (0.7.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Features:
+    - User Dialog Buttons (Timeout/Custom Commands) now support shortcuts,
+    Ban and Unban buttons are not hardcoded anymore and have to be added to the
+    setting (setting is automatically changed if you switch from a version
+    before 0.7.2)
+    - Added User/Line Selection feature to select a User in chat via the
+    keyboard so e.g. timeouts are possible completely via the keyboard
+    - Added feature to modify Addressbook entries via a file
+    - Added color restriction for Usericons
+    - Highlight/Ignore: Added prefixes ("start:", "status:", "!status:",
+    "!cat:", "chanCat:", "!chanCat")
+    - Channel Info Dialog now allows to be resized a lot smaller, Viewercount
+    info now adjusting better to smaller sizes
+    - Added setting to change Look&Feel (only Default and System for now)
+    - Added setting to attach dialogs to main window, so they always stay in
+    the same relative position when the main window is moved
+    - Added some keyboard shortcuts
+    - Added some support for FFZ feature friday, added /ffzGlobal command to
+    show global FFZ emote codes
+
+    Changes:
+    - Added menu entry to open login configuration for easier access (no need
+    to disconnect from chat)
+    - Improved login configuration dialog
+    - When login was determined invalid by automatic check: Changed warning
+    message, don't remove automatically anymore but let user do it if
+    necessary
+    - Added Options submenu to View menu to allow more options with direct
+    access
+    - Added more options to Title/Game Presets dialog due to S'ome demand
+    - Logging to file now enabled by default (only if you start from fresh
+    settings)
+    - MOD/UNMOD messages are now disabled by default (from fresh settings)
+    - Custom Commands executed from the Channel Context Menu now include the
+    name of the channel as first parameter (without leading #)
+    - Some small improvements of labels/info texts in Settings Dialog
+    - Increased join delay, increased delay between failed join attempts
+    - Ping connection more often if inactive to detect disconnect quicker and
+      possibly prevent disconnect in some cases
+    - Improved URL detection (again)
+    - Improved debug messages a bit
+    - Improved error catching in some places
+    - Added more tests
+    - Updated help
+
+    Bugfixes:
+    - Fixed URLs that don't have a protocol prefix (e.g. http://) being
+      opened without a prefix, which resulted in the browser not opening
+      correctly
+    - Fixed error in FrankerFaceZ emote parsing
+    - Fixed bug where "Close to tray" wouldn't work without "Minimize to
+      tray" being enabled as well
+    - Fixed layout problem in Settings Dialog when log path was too long
+    - Use usercolor corrected for readability for colored /me messages
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 15 Dec 2014 18:17:01 +0100
+
 chatty (0.7.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
