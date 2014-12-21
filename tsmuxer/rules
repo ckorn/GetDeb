@@ -18,7 +18,11 @@ endif
 	dh_installman
 
 override_dh_strip:
-	# stripping will kill the binaries
+ifeq ($(DEB_BUILD_ARCH), i386)
+	upx-ucl -d $(CURDIR)/debian/tsmuxer-bin/usr/lib/tsmuxer/tsMuxeR
+	upx-ucl -d $(CURDIR)/debian/tsmuxergui-bin/usr/lib/tsmuxer/tsMuxerGUI
+	dh_strip
+endif
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz -z9
