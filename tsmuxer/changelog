@@ -1,3 +1,10 @@
+tsmuxer (2.6.11-1~getdeb3) trusty; urgency=medium
+
+  * Apply patch from darealshinji. Thanks!
+  * debian/rules: Only extract when on i386
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 21 Dec 2014 16:33:59 +0100
+
 tsmuxer (2.6.11-1~getdeb1) trusty; urgency=medium
 
   * Upload to GetDeb
