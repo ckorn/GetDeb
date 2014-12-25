@@ -1,3 +1,12 @@
+shutter (0.93.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * updated Dropbox.pm and XFIXES.pm
+    * fixed deprecated code 
+    * updated translations
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 24 Dec 2014 22:32:12 +0100
+
 shutter (0.93-1~getdeb2) trusty; urgency=medium
 
   * Remove unnecessary dependency on libnet-dropbox-api-perl
