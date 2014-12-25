@@ -1,3 +1,18 @@
+kchmviewer (7.2.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Ported to Qt5 (but still builds and works with Qt4)
+    - Added support for 3rd party integration
+    - Fixed some minor issues
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 25 Dec 2014 20:46:57 +0100
+
+kchmviewer (7.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 23 Dec 2014 18:38:43 +0100
+
 kchmviewer (7.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
