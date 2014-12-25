@@ -75,7 +75,7 @@ Description: debugging symbols for the accounting software Gnucash
  This package contains debugging symbols needed for debugging Gnucash.
 
 Package: gnucash-common
-Architecture: all
+Architecture: any
 Depends: ${misc:Depends},
          libjs-jquery,
          python

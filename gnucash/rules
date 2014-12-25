@@ -6,6 +6,9 @@ export DH_VERBOSE=1
 # Hack for Gnucash build system
 export BUILDING_FROM_SVN=$(if $(wildcard autogen.sh),yes,no)
 
+# cannot compile because it tries to write to $HOME
+export GUILE_AUTO_COMPILE=0
+
 # reduce overlinking
 LDFLAGS+= -Wl,--as-needed
 
