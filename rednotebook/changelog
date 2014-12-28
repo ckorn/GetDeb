@@ -1,3 +1,17 @@
+rednotebook (1.9.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Add #tags to cloud ignore list to remove them from the tag cloud
+    (thanks Przemysław Buczkowski).
+    * Remove option to start RedNotebook minimized.
+    * Do not remove menu bar in fullscreen mode (lp:1400356).
+    * Allow exiting fullscreen mode with ESC key.
+    * Only allow comment signs (#) at the beginning of a line in the config
+    file.
+    * Fix reading configuration files.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 27 Dec 2014 21:50:16 +0100
+
 rednotebook (1.8.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
