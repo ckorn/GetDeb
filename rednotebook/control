@@ -3,8 +3,8 @@ Section: text
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Build-Depends-Indep: python (>=2.5),
-                     python-support (>=0.5.3),
-                     debhelper (>= 9)
+                     debhelper (>= 9),
+                     dh-python
 Standards-Version: 3.9.5
 Homepage: http://rednotebook.sourceforge.net/
 
