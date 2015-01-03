@@ -1,3 +1,22 @@
+fotoxx (15.01-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Panorama: better image projection math for more precise stitching.
+    + Several slider controls were given a log scale for easier and more 
+      precise control of small changes near the neutral value.
+    + Reduce Noise: new option: selectively apply to darker image areas.
+    + Adding and editing plugins was made easier.
+    + Plugins menu was moved from the window left panel into the Edit menu. 
+    + Gallery view has a small layout change for improved appearance.
+    + Gallery popup windows: F11 toggles full screen view, Escape terminates.
+    + Magnify function: user interface was made more flexible. 
+    + Slide Show: zoom-in limit raised to 3x. Image retains full sharpness.
+    + Map View: red dots are sized for good visibility at any map scale.
+    + Bugfix: Printing an unsaved edited image file printed the original
+    file.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 02 Jan 2015 22:34:16 +0100
+
 fotoxx (14.12-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
