@@ -1,0 +1,8 @@
+resources/frostwire				usr/bin
+resources/frostwire.desktop			usr/share/applications
+lib/icons/hicolor/16x16/apps/frostwire.png	usr/share/icons/hicolor/16x16/apps
+lib/icons/hicolor/32x32/apps/frostwire.png	usr/share/icons/hicolor/32x32/apps
+lib/icons/hicolor/48x48/apps/frostwire.png	usr/share/icons/hicolor/48x48/apps
+lib/icons/hicolor/64x64/apps/frostwire.png	usr/share/icons/hicolor/64x64/apps
+lib/icons/hicolor/128x128/apps/frostwire.png	usr/share/icons/hicolor/128x128/apps
+lib/icons/hicolor/256x256/apps/frostwire.png	usr/share/icons/hicolor/256x256/apps

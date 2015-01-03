@@ -1,0 +1,12 @@
+# decrease heap size
+Index: frostwire-6.0.3/gradle.properties
+===================================================================
+--- frostwire-6.0.3.orig/gradle.properties	2014-10-23 13:58:37.000000000 +0200
++++ frostwire-6.0.3/gradle.properties	2015-01-03 01:35:10.610220400 +0100
+@@ -1,3 +1,3 @@
+-org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=1024m
++org.gradle.jvmargs=-Xmx512m -XX:MaxPermSize=1024m
+ org.gradle.parallel=true
+-org.gradle.daemon=true
+\ No newline at end of file
++org.gradle.daemon=true
