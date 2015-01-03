@@ -1,1 +1,4 @@
-frostwire			usr/share
+lib/jars/frostwire.jar		usr/share/frostwire
+resources/frostwire.sh		usr/share/frostwire
+resources/EULA.txt		usr/share/frostwire
+resources/VERSION		usr/share/frostwire
