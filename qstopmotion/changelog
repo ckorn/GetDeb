@@ -1,3 +1,13 @@
+qstopmotion (2.0.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Remove of the Gstreamer grabber from the Windows platform.
+    * On Windows qStopMotion can be started as an portable application.
+    * Video4Linux2 grabber on the Linux platform.
+    * Camera controller for the Video4Linux2 grabber.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 02 Jan 2015 22:07:52 +0100
+
 qstopmotion (1.0.1-1~getdeb1) precise; urgency=low
 
   * Initial release (LP: #1187151)

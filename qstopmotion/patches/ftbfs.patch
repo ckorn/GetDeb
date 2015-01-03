@@ -1,8 +1,8 @@
 # The Debug causes compile errors. Remove it.
-Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
+Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
 ===================================================================
---- qstopmotion-1.0.1.orig/src/frontends/qtfrontend/qtfrontend.cpp	2012-05-08 09:42:20.000000000 +0200
-+++ qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp	2013-06-05 19:45:23.576767582 +0200
+--- qstopmotion-2.0.0.orig/src/frontends/qtfrontend/qtfrontend.cpp	2015-01-02 22:14:59.743790202 +0100
++++ qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp	2015-01-02 22:16:11.339788072 +0100
 @@ -39,7 +39,6 @@
  
  QtFrontend::QtFrontend(int &argc, char **argv)
@@ -106,9 +106,9 @@ Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
  {
 -    qDebug("QtFrontend::init --> Start");
  
-     // Need to call this here to get the locale for the language
-     // which is used by the translator created in mainWindowGUI
-@@ -306,27 +286,22 @@
+     QString iconFile(getGraphicsDirName());
+     iconFile.append(QLatin1String("qstopmotion_splash_screen.png"));
+@@ -334,27 +314,22 @@
  
      // this->testMainWidget();
  
@@ -136,7 +136,7 @@ Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
      return false;
  }
  
-@@ -522,7 +497,6 @@
+@@ -609,7 +584,6 @@
  
  void QtFrontend::initializePreferences()
  {
@@ -144,10 +144,11 @@ Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
  
      QDir homeDir = QDir::home();
      QString preferencesFile = homeDir.absolutePath();
-@@ -538,18 +512,15 @@
+@@ -624,20 +598,14 @@
+         // File doesn't exist or is corrupt
          setDefaultPreferences();
      }
- 
+-
 -    qDebug("QtFrontend::initializePreferences --> End");
  }
  
@@ -155,21 +156,34 @@ Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
  void QtFrontend::setDefaultPreferences()
  {
 -    qDebug("QtFrontend::setDefaultPreferences --> Start");
- 
+-
+     preferencesTool->setVersion(PreferencesTool::preferencesVersion);
      preferencesTool->setBasicPreferenceDefaults();
      // preferencesTool->setEncoderDefaults();
- 
+-
 -    qDebug("QtFrontend::setDefaultPreferences --> End");
  }
  
  
-@@ -634,22 +605,18 @@
+@@ -722,11 +690,8 @@
+ {
+     bool ret;
+ 
+-    qDebug("QtFrontend::startGrabber --> Start");
+-
+     ret = mw->startGrabber();
+ 
+-    qDebug("QtFrontend::startGrabber --> End");
+     return ret;
+ }
+ 
+@@ -735,22 +700,15 @@
  {
      bool ret;
  
 -    qDebug("QtFrontend::on --> Start");
- 
-     ret = mw->startGrabber();
+-
+     ret = mw->isGrabberInited();
  
 -    qDebug("QtFrontend::on --> End");
      return ret;
@@ -178,15 +192,15 @@ Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
  
  void QtFrontend::stopGrabber()
  {
--    qDebug("QtFrontend::off --> Start");
- 
+-    qDebug("QtFrontend::stopGrabber --> Start");
+-
      mw->stopGrabber();
- 
--    qDebug("QtFrontend::off --> End");
+-
+-    qDebug("QtFrontend::stopGrabber --> End");
  }
  
  
-@@ -775,57 +742,47 @@
+@@ -880,57 +838,47 @@
  
  bool QtFrontend::isRecoveryMode()
  {
@@ -244,7 +258,7 @@ Index: qstopmotion-1.0.1/src/frontends/qtfrontend/qtfrontend.cpp
  }
  
  
-@@ -909,55 +866,45 @@
+@@ -1062,55 +1010,45 @@
  
  void QtFrontend::test(QWidget *parentWidget, int level)
  {
