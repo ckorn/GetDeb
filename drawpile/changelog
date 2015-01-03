@@ -1,3 +1,34 @@
+drawpile (0.9.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Added connection timeout check
+    * Added keepalive messages
+    * Automatically switch stroke preview mode based on latency
+    * OSX: Quit menu action now works as expected
+    * OSX: Added "Close" item to File menu.
+    * OSX: Don't quit when all windows are closed
+    * OSX: Added Window menu
+    * Added zoom and angle shortcut context menus to status bar
+    * Added network statistics dialog
+    * Color picker cursor is now set when quick colorpicking
+    * Simplified navigator dock
+    * Brush size adjustment now sets brush diameter instead of radius
+    * Slightly smoother antialised (thin) brush stroke rendering
+    * Fixed tablet event handling when running on Qt 5.4
+    * Added preview widget for flood fill
+    * Set annotation editor background color
+    * Added Watercolor brush
+    * Added pixel grid for high zoom levels
+    * Statusbar is no longer shown under the tool docks to conserve vertical
+    space
+    * Custom session IDs are now shown in session selection window
+    * Ctrl+wheel zoom now uses 50% steps
+    * Various minor improvements and bug fixes
+    * Added dprec2txt tool
+    * Added support for playing back all older recording format versions
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 02 Jan 2015 22:39:57 +0100
+
 drawpile (0.9.5-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
