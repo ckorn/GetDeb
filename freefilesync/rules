@@ -98,9 +98,16 @@ get-orig-source:
 	# Unpack
 	# Repacked source should have a top-level directory ending in .orig
 	# as a reminder to other developers
-	unzip FreeFileSync_v$(DEB_UPSTREAM_VERSION)_source.zip -d freefilesync_$(DEB_UPSTREAM_VERSION).orig
-	rm FreeFileSync_v$(DEB_UPSTREAM_VERSION)_source.zip
+	unzip FreeFileSync_$(DEB_UPSTREAM_VERSION)_Source.zip -d freefilesync-$(DEB_UPSTREAM_VERSION)
+	cd freefilesync-$(DEB_UPSTREAM_VERSION) && \
+	    mv wx+ zen FreeFileSync/Source && \
+	    mv FreeFileSync/Build FreeFileSync/Source && \
+	    rm LICENSE && \
+	    mv FreeFileSync/Source/* . && \
+	    rmdir FreeFileSync/Source && \
+	    rmdir FreeFileSync
+	rm FreeFileSync_$(DEB_UPSTREAM_VERSION)_Source.zip
 	GZIP=--best tar -cz --owner root --group root --mode a+rX \
 			-f freefilesync_$(DEB_UPSTREAM_VERSION).orig.tar.gz \
-			freefilesync_$(DEB_UPSTREAM_VERSION).orig
-	rm -r freefilesync_$(DEB_UPSTREAM_VERSION).orig
+			freefilesync-$(DEB_UPSTREAM_VERSION)
+	rm -r freefilesync-$(DEB_UPSTREAM_VERSION) 

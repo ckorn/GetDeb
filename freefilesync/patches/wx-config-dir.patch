@@ -1,10 +1,10 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-6.11/Makefile
+Index: freefilesync-6.13/Makefile
 ===================================================================
---- freefilesync-6.11.orig/Makefile
-+++ freefilesync-6.11/Makefile
-@@ -5,7 +5,7 @@ SHAREDIR    = $(DESTDIR)$(prefix)/share
+--- freefilesync-6.13.orig/Makefile	2015-01-11 15:36:22.461367197 +0100
++++ freefilesync-6.13/Makefile	2015-01-11 15:36:22.461367197 +0100
+@@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
  
@@ -13,7 +13,7 @@ Index: freefilesync-6.11/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
-@@ -67,53 +67,53 @@ CPP_LIST+=lib/perf_check.cpp
+@@ -67,53 +67,53 @@
  CPP_LIST+=lib/status_handler.cpp
  CPP_LIST+=lib/versioning.cpp
  CPP_LIST+=lib/ffs_paths.cpp
@@ -96,11 +96,11 @@ Index: freefilesync-6.11/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-6.11/RealtimeSync/Makefile
+Index: freefilesync-6.13/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-6.11.orig/RealtimeSync/Makefile
-+++ freefilesync-6.11/RealtimeSync/Makefile
-@@ -2,7 +2,7 @@ APPNAME = RealtimeSync
+--- freefilesync-6.13.orig/RealtimeSync/Makefile	2015-01-11 15:36:22.461367197 +0100
++++ freefilesync-6.13/RealtimeSync/Makefile	2015-01-11 15:38:41.557363060 +0100
+@@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
  
@@ -109,10 +109,10 @@ Index: freefilesync-6.11/RealtimeSync/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
-@@ -25,36 +25,36 @@ CPP_LIST+=../lib/localization.cpp
- CPP_LIST+=../lib/process_xml.cpp
+@@ -26,36 +26,36 @@
  CPP_LIST+=../lib/resolve_path.cpp
  CPP_LIST+=../lib/ffs_paths.cpp
+ CPP_LIST+=../lib/hard_filter.cpp
 -CPP_LIST+=../../../zen/xml_io.cpp
 -CPP_LIST+=../../../zen/dir_watcher.cpp
 -CPP_LIST+=../../../zen/file_access.cpp
