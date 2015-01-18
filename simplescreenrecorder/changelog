@@ -1,3 +1,11 @@
+simplescreenrecorder (0.3.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Fixed mistake in configure.ac that was causing
+      libssr-glinject.so to be linked with unwanted libraries.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Jan 2015 21:14:03 +0100
+
 simplescreenrecorder (0.3.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
