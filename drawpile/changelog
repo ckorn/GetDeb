@@ -1,3 +1,18 @@
+drawpile (0.9.7-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+   * Fixed "host on remote server" dropdown box
+   * Fixed crash when reordering layers
+   * Added new Retcon synchronization method
+   * Removed preview strokes
+   * Protocol change: 16 bit layer and annotation IDs
+   * Updated server admin API
+   * New server admin web app
+   * Added context menu to pressure curve editor
+   * Added clear button to key shortcut editor
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Jan 2015 16:52:57 +0100
+
 drawpile (0.9.6-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
