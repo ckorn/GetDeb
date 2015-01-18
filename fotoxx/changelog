@@ -1,3 +1,11 @@
+fotoxx (15.01.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + French translation updated.
+    + Two minor bug fixes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Jan 2015 16:56:36 +0100
+
 fotoxx (15.01-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
