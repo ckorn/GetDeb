@@ -1,3 +1,44 @@
+chatty (0.7.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    New features:
+    - Added customizable hotkeys feature allowing you to add/remove/change
+    hotkeys in the settings (Global Hotkeys Windows only)
+    - Added Stream Chat dialog (only regular messages, optional message
+    timeout to make them disappear after some time, mainly for testing
+    right now)
+    - Added support for global mods
+    - Added $chan parameter to Custom Commands
+    - Log to file: Added setting to customize timestamp (via setting
+    commands)
+
+    Changes:
+    - Changed inputbox font to prevent bug where fallback fonts wouldn't work
+      properly in JTextPane
+    - Changed default for "Restore dialogs" setting to "Restore dialogs from
+    last session" (only if you start from fresh settings)
+    - Backup: Increased setting backup count to 5 backups
+    - Changed staff usermode symbol to & (text symbol, not the badge)
+    - Added scaling to emotes if the image is too big, set maximum size to
+    100x50
+    - Improved setting commands (added add/remove commands for String lists,
+    save default for lists/maps), improved help for setting commands
+    - Added "set:" commandline parameter to set any setting that can be set
+    with the /set command
+    - Changed to new BTTV emotes API
+    - Improved URL parsing a bit
+    - Updated help
+
+    Bugfixes:
+    - Fixed Simple Title menu setting not being updated correctly
+    - Set foreground color of Viewer History based on the current foreground
+    color of the dialog, so it fits the LAF
+    - Set Notification foreground color to black, in case a LAF uses another
+    color that doesn't go well with the yellow background (Notification
+    colors should be customizable eventually)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 19 Jan 2015 18:52:07 +0100
+
 chatty (0.7.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
