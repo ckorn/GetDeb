@@ -1,3 +1,9 @@
+tide (2.66-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Jan 2015 19:52:28 +0100
+
 tide (2.65-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
