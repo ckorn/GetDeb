@@ -1,8 +1,8 @@
-Index: b/gparted.desktop.in.in
+Index: gparted-0.21.0/gparted.desktop.in.in
 ===================================================================
---- a/gparted.desktop.in.in
-+++ b/gparted.desktop.in.in
-@@ -3,9 +3,9 @@
+--- gparted-0.21.0.orig/gparted.desktop.in.in	2015-01-26 21:30:34.908030585 +0100
++++ gparted-0.21.0/gparted.desktop.in.in	2015-01-26 21:31:07.908029604 +0100
+@@ -3,10 +3,10 @@
  _GenericName=Partition Editor
  _X-GNOME-FullName=GParted Partition Editor
  _Comment=Create, reorganize, and delete partitions
@@ -13,4 +13,5 @@ Index: b/gparted.desktop.in.in
  Type=Application
 -Categories=GNOME;System;Filesystem;
 +Categories=GNOME;System;Filesystem;Settings;
+ _Keywords=Partition;
  StartupNotify=true
