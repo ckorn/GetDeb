@@ -1,0 +1,18 @@
+Author: Dmitry Shachnev <mitya57@gmail.com>
+Description: use system python-markdown
+Forwarded: not-needed
+Last-Update: 2013-04-04
+
+Index: calibre/src/calibre/library/comments.py
+===================================================================
+--- calibre.orig/src/calibre/library/comments.py
++++ calibre/src/calibre/library/comments.py
+@@ -134,7 +134,7 @@ def merge_comments(one, two):
+     return comments_to_html(one) + '\n\n' + comments_to_html(two)
+ 
+ def sanitize_comments_html(html):
+-    from calibre.ebooks.markdown import Markdown
++    from markdown import Markdown
+     text = html2text(html)
+     md = Markdown(safe_mode='remove')
+     cleansed = re.sub('\n+', '', md.convert(text))
