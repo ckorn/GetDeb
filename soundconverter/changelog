@@ -1,3 +1,9 @@
+soundconverter (2.1.5-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 31 Jan 2015 18:06:55 +0100
+
 soundconverter (2.1.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
