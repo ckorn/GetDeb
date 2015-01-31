@@ -1,0 +1,4 @@
+version=3
+
+opts=uversionmangle=s/video-copy-// \
+http://sf.net/ogmrip/ogmrip-([0-9.]*)\.tar\.gz
