@@ -1,3 +1,22 @@
+drawpile (0.9.8-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+     * Show menu bar when pointer is brought to the top of the screen in full
+     screen mode
+     * Fixed unnecessary retcon at start of new strokes
+     * Fixed annotation moving (regression)
+     * Fixed retconning of indirect paint mode strokes
+     * Added a language override field to settings dialog
+     * New feature: Hold tool shortcut button to select the tool temporarily;
+     releasing the button switches back.
+     * Simplified Host dialog
+     * Flat tool slot button style
+     * Minor protocol change: added new PutImage composition modes
+     * "Fill under" mode for flood fill tool
+     * Moved zoom buttons to the status bar
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 30 Jan 2015 22:08:40 +0100
+
 drawpile (0.9.7-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
