@@ -1,2 +1,3 @@
 version=3
-https://pypi.python.org/packages/source/l/livestreamer/livestreamer-(.*)\.tar\.gz
+https://github.com/chrippa/livestreamer/releases \
+    (?:.*/)?v?([\d\.]+)\.tar\.gz
