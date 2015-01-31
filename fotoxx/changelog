@@ -1,3 +1,28 @@
+fotoxx (15.02-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + The indexing process for newly added image files was made faster: 
+      speedup is about 1.2x for a 7200 rpm disk and 1.9x for an SSD.
+    + Panorama: a multi-row panorama capability was added by integrating
+      Panorama Tools utilities into the Fotoxx menus. Very easy to use.
+    + Slide Show: the maximum zoom-in speed was increased by 2x. This is
+      significant for a large or high DPI monitor or a slow computer. 
+    + Slide Show: the option to show captions/comments can be configured
+      per image, and they can be made to vanish after a specified interval.
+    + User Settings: Thumbnail size is adjustable over 128/256/512 pixels
+      (default 256). 512 is a bit slower but better for a large or high DPI
+      monitor, or when viewing gallery pages with thumbnail size at maximum.
+    + Mashup: mouse-painted image transparencies are easier to control.
+    + Mashup: transparency blends can be set separately for all 4 image
+    edges.
+    + Cosmetic improvements in gallery view and metadata short report.
+    + Startup parameter -nosync was replaced with the more correct -noindex.
+    + Bugfix: quick rotate 90 degrees: metadata was not being copied. 
+    + Bugfix: crash if switch to gallery view during slide show transition.
+    + Bugfix: HDR/HDF/Stack: crash if [cancel] pressed twice rapidly.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 31 Jan 2015 17:54:13 +0100
+
 fotoxx (15.01.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
