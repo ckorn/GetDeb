@@ -1,0 +1,2 @@
+debian/patches/fix-info-image-path.patch
+debian/upstream-signing-key.pgp

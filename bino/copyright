@@ -1,0 +1,226 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: bino
+Source: http://bino3d.org/download.html
+
+Files: *
+Copyright: 2010-2014 Martin Lambers <marlam@marlam.de>
+License: GPL-3.0+
+
+Files: aclocal.m4
+Copyright: 1996-2013 Free Software Foundation, Inc.
+License: m4
+
+Files: build-aux/*
+Copyright: 1992-2014 Free Software Foundation, Inc.
+License: GPL-2+
+
+Files: configure.ac
+Copyright: 2010-2014 Martin Lambers <marlam@marlam.de>
+           Frédéric Devernay <Frederic.Devernay@inrialpes.fr>
+           Binocle <http://binocle.com> (author: Olivier Letz <oletz@binocle.com>)
+License: GPL-3.0+
+
+Files: INSTALL
+Copyright: 1994-1996, 1999-2002, 2004-2013 Free Software Foundation, Inc
+License: liberal
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved.  This file is offered as-is,
+ without warranty of any kind.
+
+Files: Makefile.in doc/Makefile.in src/Makefile.in src/base/Makefile.in
+Copyright: 1994-2013 Free Software Foundation, Inc.
+License: liberal
+ This Makefile.in is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+ even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE.
+
+Files: Makefile.am
+Copyright: 2010-2011 Martin Lambers <marlam@marlam.de>
+           2010-2011 Frédéric Devernay <Frederic.Devernay@inrialpes.fr>
+License: BSD-2-clause-like
+
+Files: debian/*
+Copyright: 2011-2014 Daniel Schaal <farbing@web.de>
+License: GPL-3.0+
+
+Files: src/*
+Copyright: 2010-2013 Martin Lambers <marlam@marlam.de>
+           Joe <cuchac@email.cz>
+           Daniel Schaal <farbing@web.de>
+           Frédéric Devernay <Frederic.Devernay@inrialpes.fr>
+           D. Matz <bandregent@yahoo.de>
+           Stefan Eilemann <eile@eyescale.ch>
+           Binocle <http://binocle.com> (author: Olivier Letz <oletz@binocle.com>)
+           Alexey Osipov <lion-simba@pridelands.ru>
+           Frédéric Bour <frederic.bour@lakaban.net>
+License: GPL-3.0+
+
+Files: src/icons/*
+Copyright: 2007 David Vignoni <david@icon-king.com>
+           2007 Johann Ollivier Lapeyre <johann@oxygen-icons.org>
+           2007 Kenneth Wimer <kwwii@bootsplash.org>
+           2007 Nuno Pinheiro <nuno@oxygen-icons.org>
+           2007 Riccardo Iaconelli <riccardo@oxygen-icons.org>
+           2007 David Miller <miller@oxygen-icons.org>
+License: LGPL-3.0+
+
+Files: src/logo/*
+Copyright: 2011 Tobias Lange <tobias@longly-home.de>
+License: GPL-3.0+
+
+Files: src/icons-local/*
+Copyright: 2011,2012 Martin Lambers <marlam@marlam.de>
+License: BSD-2-clause-like
+
+Files: src/NvSDIout.* src/NvSDIutils.*
+Copyright: 2012 Binocle.com <http://binocle.com>
+License: other
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+Files: src/audio_output.h
+Copyright: 2010-2013 Martin Lambers <marlam@marlam.de>
+           Gabriele Greco <gabrielegreco@gmail.com>
+           Frédéric Devernay <Frederic.Devernay@inrialpes.fr>
+License: GPL-3.0+
+
+Files: doc/*
+Copyright: 2010-2014 Martin Lambers <marlam@marlam.de>
+           2010-2014 Stefan Eilemann <eile@eyescale.ch>
+           2010-2014 Frédéric Devernay <Frederic.Devernay@inrialpes.fr>
+License: BSD-2-clause-like
+
+Files: doc/audio-video-sync.mp4
+Copyright: 2011 S. Christian Collins <http://www.schristiancollins.com>
+License: permissive
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved. This file is offered as-is,
+ without any warranty.
+
+Files: pkg/macosx/*
+Copyright: 2011 Frédéric Devernay <Frederic.Devernay@inrialpes.fr>
+License: BSD-2-clause-like
+
+Files: pkg/w32/*
+Copyright: 2011 Martin Lambers <marlam@marlam.de>
+License: BSD-2-clause-like
+
+Files: po/bg.po
+Copyright: 2012 Krasimir S. Stefanov <lokiisyourmaster@gmail.com>
+License: GPL-3.0+
+
+Files: po/de.po
+Copyright: 2011-2012 Martin Lambers <marlam@marlam.de>
+License: GPL-3.0+
+
+Files: po/fr.po
+Copyright: 2011-2012 Frédéric Devernay <>
+License: GPL-3.0+
+
+Files: po/ru.po
+Copyright: 2011-2012 Alexey Osipov <simba@lerlan.ru>
+License: GPL-3.0+
+
+Files: po/zh_cn.po
+Copyright: 2014 Frank Hill <hxf.prc@gmail.com>
+License: GPL-3.0+
+
+Files: po/Makefile.in.in
+Copyright: 1995-1997 Ulrich Drepper <drepper@gnu.ai.mit.edu>
+           2000-2007 Ulrich Drepper <drepper@gnu.ai.mit.edu>
+           2009-2010 Ulrich Drepper <drepper@gnu.ai.mit.edu>
+License: other
+ This file can be copied and used freely without restrictions.  It can
+ be used in projects which are not available under the GNU General Public
+ License but which still want to provide support for the GNU gettext
+ functionality.
+ Please note that the actual code of GNU gettext is covered by the GNU
+ General Public License and is *not* in the public domain.
+
+License: BSD-2-clause-like
+ Copying and distribution of this file, with or without modification, are
+ permitted in any medium without royalty provided the copyright notice and this
+ notice are preserved. These files are offered as-is, without any warranty.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991, or (at your
+ option) any later version.
+ .
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: LGPL-3.0+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-3".
+
+License: m4
+ This file is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+ .
+ This file can can be used in projects which are not available under
+ the GNU General Public License or the GNU Library General Public
+ License but which still want to provide support for the GNU gettext
+ functionality.
+ Please note that the actual code of the GNU gettext library is covered
+ by the GNU Library General Public License, and the rest of the GNU
+ gettext package package is covered by the GNU General Public License.
+ They are *not* in the public domain.
+

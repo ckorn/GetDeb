@@ -1,0 +1,49 @@
+Source: bino
+Section: video
+Priority: extra
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               libass-dev (>= 0.10.0-2),
+               libavcodec-dev (>= 4:0.7),
+               libavdevice-dev (>= 4:0.7),
+               libavformat-dev (>= 4:0.7),
+               libglewmx-dev,
+               liblircclient-dev,
+               libopenal-dev,
+               libqt5opengl5-dev,
+               qtbase5-dev-tools,
+               libswscale-dev (>= 4:0.7),
+               pkg-config,
+               texinfo
+Standards-Version: 3.9.5
+Homepage: http://bino3d.org/
+
+Package: bino
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: 3D video player
+ Bino is a video player with support for a wide variety
+ of stereoscopic video layouts and formats.
+ .
+ Bino can display monoscopic videos, as well as
+ videos with the left and right view stored either
+ in separate streams or displayed side by side.
+ It can output these videos for several types
+ of anaglyph glasses or 3D displays.
+
+Package: bino-dbg
+Architecture: any
+Section: debug
+Depends: bino (= ${binary:Version}), ${misc:Depends}
+Description: debugging symbols for bino 3D video player
+ Bino is a video player with support for a wide variety
+ of stereoscopic video layouts and formats.
+ .
+ Bino can display monoscopic videos, as well as
+ videos with the left and right view stored either
+ in separate streams or displayed side by side.
+ It can output these videos for several types
+ of anaglyph glasses or 3D displays.
+ .
+ This package contains the debugging symbols.

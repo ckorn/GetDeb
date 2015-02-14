@@ -1,0 +1,7 @@
+bino for Debian
+---------------
+
+The support for multi-display video is disabled in this package,
+as the required library (Equalizer) is not available in Debian.
+
+ -- Daniel Schaal <farbing@web.de>  09/09/2011
