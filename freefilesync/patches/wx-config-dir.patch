@@ -1,9 +1,9 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-6.13/Makefile
+Index: freefilesync-6.14/Makefile
 ===================================================================
---- freefilesync-6.13.orig/Makefile	2015-01-11 15:36:22.461367197 +0100
-+++ freefilesync-6.13/Makefile	2015-01-11 15:36:22.461367197 +0100
+--- freefilesync-6.14.orig/Makefile	2015-02-12 19:49:14.540121636 +0100
++++ freefilesync-6.14/Makefile	2015-02-12 19:49:14.536121636 +0100
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
@@ -13,7 +13,7 @@ Index: freefilesync-6.13/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
-@@ -67,53 +67,53 @@
+@@ -68,53 +68,53 @@
  CPP_LIST+=lib/status_handler.cpp
  CPP_LIST+=lib/versioning.cpp
  CPP_LIST+=lib/ffs_paths.cpp
@@ -96,10 +96,10 @@ Index: freefilesync-6.13/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-6.13/RealtimeSync/Makefile
+Index: freefilesync-6.14/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-6.13.orig/RealtimeSync/Makefile	2015-01-11 15:36:22.461367197 +0100
-+++ freefilesync-6.13/RealtimeSync/Makefile	2015-01-11 15:38:41.557363060 +0100
+--- freefilesync-6.14.orig/RealtimeSync/Makefile	2015-02-12 19:49:14.540121636 +0100
++++ freefilesync-6.14/RealtimeSync/Makefile	2015-02-12 19:49:14.536121636 +0100
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
