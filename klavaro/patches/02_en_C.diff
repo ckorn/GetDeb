@@ -1,0 +1,20 @@
+Prefer C over en_GB for English variants other than en_GB.
+
+Index: klavaro-3.01/src/translation.c
+===================================================================
+--- klavaro-3.01.orig/src/translation.c	2015-02-12 21:11:45.815974348 +0100
++++ klavaro-3.01/src/translation.c	2015-02-12 21:11:45.811974349 +0100
+@@ -241,6 +241,13 @@
+ 	gint i;
+ 	gchar aux_code_2[3];
+ 
++	if (g_str_has_prefix (test, "en"))
++	{
++		g_free (test);
++		test = g_strdup ("C");
++		return (TRUE);
++	}
++
+ 	if (g_str_equal (test, "C"))
+ 		return TRUE;
+ 

@@ -1,0 +1,169 @@
+This package was debianized by Lionel Le Folgoc (mr_pouit) <mrpouit@gmail.com> on
+Thu, 16 Nov 2006 20:09:50 +0100.
+
+It was downloaded from:
+
+    http://sourceforge.net/projects/klavaro
+
+Upstream authors, as listed in AUTHORS:
+
+    | Programmers:
+    | ------------
+    | 
+    | - Felipe Castro  (Brasil) < fefcas at gmail dot com >
+    | - Petr Machata
+    | 
+    | Designers:
+    | ----------
+    | 
+    | - David Prieto (Spanish) - new interface mockups since version 1.2.0, new icons, new pixmaps.
+    | - Szczepan Marchewka (Polland)
+    | 
+    | 
+    | Translators:
+    | ------------
+    | 
+    | The Translation Project (http://translationproject.org) is the place to
+    | search the people who maintains Klavaro translations. The first contributors,
+    | who did the work in the beginning are listed below.
+    | 
+    | Arab:
+    | - Usama Akkad
+    | 
+    | Bangla/Bengali:
+    | - Ankur ICT Development Foundation, Bangladesh.
+    |   http://www.ankur.org.bd
+    | 
+    | Czech:
+    | - Martin Šín
+    | 
+    | Dutch:
+    | - Dieter Vanderfaeillie (Belgium)
+    | - Richard van Schaik (Netherlands)
+    | 
+    | English:
+    | - Dave Pawson (Great Britain)
+    | - Felipe Castro
+    | - Gregory Palmer
+    | 
+    | Esperanto:
+    | - Felipe Castro
+    | 
+    | French:
+    | - Fabrice Haberer-Proust
+    | - Lionel Dupuys
+    | - Sébastien Wilmet
+    | 
+    | German:
+    | - Hermann J. Beckers
+    | - Matthias Mailänder
+    | 
+    | Hungarian:
+    | - Gergely Máté
+    | 
+    | Polish:
+    | - Robert Stefaniuk
+    | 
+    | Portuguese:
+    | - Felipe Castro
+    | 
+    | Russian:
+    | - Александр Казанцев (Alexandr Kazancev)
+    | 
+    | Spanish:
+    | - Ibon Castilla
+    | - Juan Macedo
+    | - David Prieto
+    | 
+    | Swedish:
+    | - Nils Pettersson
+    | 
+    | Urdu:
+    | - Jess Body
+    | 
+    | Vietnamese:
+    | - Trần Ngọc Quân
+
+Copyright:
+
+    Copyright (C) 2005-2014 Felipe Castro <fefcas@gmail.com> at http://klavaro.sourceforge.net/
+    Copyright (C) 2006, 2008-2014 Free Software Foundation, Inc.
+
+License:
+
+    | This program is free software, licensed under the terms of the GNU
+    | General Public License as published by the Free Software Foundation,
+    | either version 3 of the License, or (at your option) any later version.
+    | You should have received a copy of the GNU General Public License
+    | along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+On Debian systems, the complete text of the GNU General Public License
+version 3 can be found in `/usr/share/common-licenses/GPL-3'.
+
+The Debian packaging is
+Copyright (C) 2006, Lionel Le Folgoc (mr_pouit) <mrpouit@gmail.com>
+Copyright (C) 2007-2014, Bart Martens <bartm@knars.be>
+and is licensed under the GPL version 3, see above.
+
+The file po/bn.po has this copyright and license:
+
+    | Copyright (C) 2008 Ankur
+    | This file is distributed under the same license as the klavaro package.
+    | Mahay Alam Khan (মাহে আলম খান) <mak@ankur.org.bd>, 2008.
+
+The file po/da.po has this copyright and license:
+
+    | Copyright (C) 2014 Joe Hansen.
+    | This file is distributed under the same license as the klavaro package.
+
+The file po/ar.po has this copyright and license:
+
+    | Copyright (C) Usama Akkad, 2009
+    | This file is distributed under the same license as the klavaro package.
+
+The file po/nb.po has this copyright and license:
+
+    | Copyright (C) 2009-2011 Axel Bojer
+    | This file is distributed under the same license as the klavaro package.
+
+The file po/fi.po has this copyright and license:
+
+    |  Copyright (C) Lasse Liehu, 2014
+    |  This file is distributed under the same license as the klavaro package.
+
+The files in gtkdatabox/ have these copyright notices and licenses:
+
+    | Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
+    | Copyright (C) 1998 - 2008  Dr. Roland Bock
+    | Copyright (C) 2011 - 2012  Dr. Matt Flax <flatmax@>
+    | Copyright (C) 2012  Dr. Matt Flax <flatmax@>
+    | 
+    |  * This library is free software; you can redistribute it and/or
+    |  * modify it under the terms of the GNU Lesser General Public
+    |  * License as published by the Free Software Foundation; either
+    |  * version 2 of the License, or (at your option) any later version.
+    |  *
+    |  * This library is distributed in the hope that it will be useful,
+    |  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    |  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    |  * Lesser General Public License for more details.
+    |  *
+    |  * You should have received a copy of the GNU Lesser General Public
+    |  * License along with this library; if not, write to the
+    |  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+    |  * Boston, MA 02110-1301 USA.
+    | 
+    |  * This program is free software; you can redistribute it and/or
+    |  * modify it under the terms of the GNU Lesser General Public License
+    |  * as published by the Free Software Foundation; either version 2.1
+    |  * of the License, or (at your option) any later version.
+    |  *
+    |  * This program is distributed in the hope that it will be useful,
+    |  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    |  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    |  * GNU Lesser General Public License for more details.
+    |  *
+    |  * You should have received a copy of the GNU General Public License
+    |  * along with this program; if not, write to the Free Software
+    |  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
