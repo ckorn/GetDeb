@@ -1,0 +1,10 @@
+Document: bino-manual
+Title: Bino user Manual
+Author: Martin Lambers, Stefan Eilemann, Frédéric Devernay
+Abstract: This manual describes how to
+ use bino.
+Section: Video
+
+Format: HTML
+Index: /usr/share/doc/bino/html/bino.html
+Files: /usr/share/doc/bino/html/*.html

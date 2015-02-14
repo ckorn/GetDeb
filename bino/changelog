@@ -1,0 +1,89 @@
+bino (1.6.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version (LP: #1420805)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 12 Feb 2015 20:50:43 +0100
+
+bino (1.6.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.6.0 (Closes: #757280).
+  * Remove libav10 ftbfs patch, applied upstream
+  * Switch to qt5
+  * Update copyright file for 1.6.0
+
+ -- Daniel Schaal <farbing@web.de>  Sat, 20 Sep 2014 09:42:32 +0200
+
+bino (1.4.4-2) unstable; urgency=medium
+
+  * Add patch to fix FTBFS with libav10 (Closes: #739214).
+
+ -- Daniel Schaal <farbing@web.de>  Fri, 21 Feb 2014 07:31:03 +0100
+
+bino (1.4.4-1) unstable; urgency=low
+
+  * Imported Upstream version 1.4.4
+  * Update to Standards-Version 3.9.5, no changes needed
+  * Add patch to share images between bino.info and html doc
+  * Add patch to include-binaries to avoid "unwanted binaries" error
+  * Add signature check for upstream tarball when using uscan
+
+ -- Daniel Schaal <farbing@web.de>  Thu, 26 Dec 2013 09:52:26 +0100
+
+bino (1.4.2-1) unstable; urgency=low
+
+  * Imported Upstream version 1.4.2
+  * debian/rules:
+    * make build more verbose
+    * deleting usr/share/info/dir no longer necessary
+    * use DEB_LDFLAGS_MAINT_APPEND instead of LDFLAGS directly.
+  * debian/copyright: Update for 1.4.2.
+  * debian/control:
+    * Update to Standards-Version 3.9.4, no changes needed.
+    * Move git repo to github.
+
+ -- Daniel Schaal <farbing@web.de>  Wed, 01 May 2013 08:57:38 +0200
+
+bino (1.4.0-1) unstable; urgency=low
+
+  * Imported Upstream version 1.4.0
+  * Add Build-Depends on debhelper >= 9, remove lintian override
+  * debian/gbp.conf: disable pristine-tar as it doesn't support xz yet.
+  * debian/control:
+    * update Standards-Version to 3.9.3 (no changes needed)
+    * build-Depend on libglewmx-dev instead of libglew-dev
+    * build-Depend on texinfo
+  * debian/copyright:
+    * update Format url to new canonical url
+    * update for new upstream version
+  * debian/watch: only consider versions with even version numbers.
+
+ -- Daniel Schaal <farbing@web.de>  Sun, 24 Jun 2012 11:57:35 +0200
+
+bino (1.2.1-2) unstable; urgency=low
+
+  * explicitly disable Equalizer in configure line
+  * Build-Depend on libass-dev >= 0.10.0-2,
+    earlier versions are missing a dependency on libfribidi-dev.
+    (Closes: #646442)
+
+ -- Daniel Schaal <farbing@web.de>  Fri, 16 Dec 2011 22:45:38 +0100
+
+bino (1.2.1-1) unstable; urgency=low
+
+  * Imported Upstream version 1.2.1
+  * add comment to lintian override
+  * wrap-and-sort control and .install files
+  * build-depend on libglew1.6-dev instead of
+    virtual package libglew-dev
+  * delete usr/share/info/dir from debian/tmp
+  * html docs are installed in htmldir now,
+    adapt configure option
+  * remove fix-hyphen-used-as-minus.patch, applied upstream
+
+ -- Daniel Schaal <farbing@web.de>  Mon, 10 Oct 2011 22:23:34 +0200
+
+bino (1.2.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #610793)
+
+ -- Daniel Schaal <farbing@web.de>  Fri, 09 Sep 2011 14:23:54 +0200
