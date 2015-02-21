@@ -6,6 +6,7 @@ usr/lib/calibre/templite
 usr/lib/calibre/html5lib
 usr/lib/calibre/regex
 usr/lib/calibre/tinycss
+usr/lib/calibre/css_selectors
 #usr/lib/calibre/six.py
 usr/share/
 ../local/*.desktop usr/share/applications
