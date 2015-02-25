@@ -1,3 +1,9 @@
+kchmviewer (7.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 24 Feb 2015 19:40:27 +0100
+
 kchmviewer (7.2.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
