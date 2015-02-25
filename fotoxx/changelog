@@ -1,3 +1,12 @@
+fotoxx (15.02.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bugfix: Fotoxx may fail to start after a new install if there are less
+    than 200 image files found or if the file "newest_files" has been
+    deleted.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 24 Feb 2015 19:36:50 +0100
+
 fotoxx (15.02-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
