@@ -1,3 +1,25 @@
+fotoxx (15.03-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + "Rotate 90" was renamed "Upright". A button was added that detects 
+      and correct 90/180° rotations without guidance (based on EXIF data).
+    + Batch Convert and Batch Upright detect and correct 90/180° rotations.
+    + The term "Named Collection" was replaced with "Album", which is the 
+      term most commonly used for this type of functionality. 
+    + Smart Erase got an IQ upgrade to better deal with curvy objects.
+    + Mashup: Black margins in overlay images (from prior warping edits or 
+      panorama composite) can be automatically removed (made transparent). 
+    + Mashup: Editing very large layouts was made more responsive.
+    + Mashup: Overlay images can be warped by dragging the mouse. This can
+      also be used to fix minor alignment offsets from Panorama Tools.
+    + Mashup: Overlay image margins can be adjusted two ways: hard edge trim
+      and/or a gradual edge blend with background or other overlapped images.
+    + The window title bar and gallery pages show photo time as well as date.
+    + New slide show transition: image shrinks away to expose the next image.
+    + Three minor bug fixes and two minor usability improvements.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 28 Feb 2015 17:18:46 +0100
+
 fotoxx (15.02.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
