@@ -1,3 +1,9 @@
+mount-gtk (1.4.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 27 Feb 2015 21:03:49 +0100
+
 mount-gtk (1.4.2-1~getdeb1) raring; urgency=low
 
   * New upstream version
