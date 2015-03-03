@@ -1,3 +1,15 @@
+fotoxx (15.03.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Portuguese translation updated.
+    + Bugfix: Mashup: recover lost fine-positioning via keyboard arrow keys.
+    + Bugfix: Mashup: lock menus to avoid crash from unconventional user
+    action.
+    + Bugfix: Upright: properly upright image in window and keep dialog
+    active.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 03 Mar 2015 18:24:28 +0100
+
 fotoxx (15.03-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
