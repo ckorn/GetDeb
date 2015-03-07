@@ -2,15 +2,31 @@ Source: upp
 Section: devel
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: g++ (= 4.1) | g++ (>= 4.3), debhelper (>= 7), libx11-dev (>= 1.0.0), libxft-dev (>= 2.1.8), libpng12-dev (>= 1.2.8), libbz2-dev, libgtk2.0-dev (>= 2.8.17), libnotify-dev
-Standards-Version: 3.9.3
+Build-Depends: g++ (= 4.1) | g++ (>= 4.3),
+               debhelper (>= 9),
+               libx11-dev (>= 1.0.0),
+               libxft-dev (>= 2.1.8),
+               libpng12-dev (>= 1.2.8),
+               libbz2-dev,
+               libgtk2.0-dev (>= 2.8.17),
+               libnotify-dev
+Standards-Version: 3.9.5
 Homepage: http://www.ultimatepp.org
 
 Package: upp
 Architecture: all
-Replaces: upp (<=1668), upp-data (<=1668)
+Replaces: upp (<=1668),
+          upp-data (<=1668)
 Conflicts: upp-data (<=1668)
-Depends: theide, ${misc:Depends}, g++ (= 4.1) | g++ (>= 4.3), libx11-dev (>= 1.0.0), libxft-dev (>= 2.1.8), libpng12-dev (>= 1.2.8), libbz2-dev, libgtk2.0-dev (>= 2.8.17), libnotify-dev
+Depends: theide,
+         ${misc:Depends},
+         g++ (= 4.1) | g++ (>= 4.3),
+         libx11-dev (>= 1.0.0),
+         libxft-dev (>= 2.1.8),
+         libpng12-dev (>= 1.2.8),
+         libbz2-dev,
+         libgtk2.0-dev (>= 2.8.17),
+         libnotify-dev
 Description: C++ library for cross-platform development
  Ultimate++ is a radical and innovative GUI toolkit whose number one priority
  is programmer productivity. C++ is a great programming language but
@@ -20,7 +36,8 @@ Description: C++ library for cross-platform development
 
 Package: theide
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Replaces: upp (<= 2332)
 Description: IDE (not only) for Ultimate++ framework
  TheIDE introduces modular concepts to C++ programming. It features 
@@ -32,9 +49,11 @@ Description: IDE (not only) for Ultimate++ framework
 
 Package: theide-nogtk
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Provides: theide
-Replaces: theide, upp (<=2332)
+Replaces: theide,
+          upp (<=2332)
 Conflicts: theide
 Description: IDE (not only) for Ultimate++ framework [nogtk build]
  TheIDE introduces modular concepts to C++ programming. It features 
@@ -49,7 +68,8 @@ Description: IDE (not only) for Ultimate++ framework [nogtk build]
 
 Package: umk
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Provides: theide
 Replaces: theide, upp (<=2332)
 Conflicts: theide
@@ -60,7 +80,8 @@ Description: Command line builder for Ultimate++ projects
 
 Package: theide-dbg
 Architecture: any
-Depends: theide (= ${Source-Version})
+Depends: theide (= ${source:Version}),
+         ${misc:Depends}
 Section: debug
 Priority: extra
 Description: Debug symbols for theide package
@@ -68,7 +89,8 @@ Description: Debug symbols for theide package
 
 Package: theide-nogtk-dbg
 Architecture: any
-Depends: theide-nogtk (= ${Source-Version})
+Depends: theide-nogtk (= ${source:Version}),
+         ${misc:Depends}
 Section: debug
 Priority: extra
 Description: Debug symbols for theide-nogtk package
@@ -76,7 +98,8 @@ Description: Debug symbols for theide-nogtk package
 
 Package: umk-dbg
 Architecture: any
-Depends: umk (= ${Source-Version})
+Depends: umk (= ${source:Version}),
+         ${misc:Depends}
 Section: debug
 Priority: extra
 Description: Debug symbols for umk package
