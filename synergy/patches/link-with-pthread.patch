@@ -2,10 +2,10 @@ Description: Link with pthread to fix FTBFS: undefined reference to `pthread_cre
 Author: Andreas Moog <andreas.moog@warperbbs.de>
 Bug: http://synergy-foss.org/spit/issues/details/3924/
 
-Index: synergy-1.5.0/src/lib/arch/CMakeLists.txt
+Index: synergy-1.7.0/src/lib/arch/CMakeLists.txt
 ===================================================================
---- synergy-1.5.0.orig/src/lib/arch/CMakeLists.txt	2014-05-25 00:13:19.824373253 +0200
-+++ synergy-1.5.0/src/lib/arch/CMakeLists.txt	2014-05-25 00:13:28.280373181 +0200
+--- synergy-1.7.0.orig/src/lib/arch/CMakeLists.txt	2015-03-05 19:26:41.680096768 +0100
++++ synergy-1.7.0/src/lib/arch/CMakeLists.txt	2015-03-05 19:26:41.676096768 +0100
 @@ -49,6 +49,10 @@
  
  add_library(arch STATIC ${sources})
@@ -15,5 +15,5 @@ Index: synergy-1.5.0/src/lib/arch/CMakeLists.txt
 +endif()
 +
  if (UNIX)
- 	target_link_libraries(arch ${libs})
+ 	target_link_libraries(arch dl ${libs})
  endif()

@@ -1,3 +1,15 @@
+synergy (1.7.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Enhancement #4313 - SSL encrypted secure connection
+    Enhancement #4168 - Plugin manager for GUI
+    Enhancement #4307 - Always show client auto-detect dialog
+    Enhancement #4397 - Modernize Mac build script (deployment and signing)
+    Enhancement #4398 - Remove obsolete Mac database cleaner
+    Enhancement #4337 - Remove IStreamFilterFactory dead code
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 05 Mar 2015 19:23:53 +0100
+
 synergy (1.6.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version (LP: #1402416)
