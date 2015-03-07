@@ -1,10 +1,10 @@
 # do not build tests. they require to compile the gmock-1.6.0.zip and gtest-1.6.0.zip files.
-Index: synergy-1.4.17/src/CMakeLists.txt
+Index: synergy-1.7.0/src/CMakeLists.txt
 ===================================================================
---- synergy-1.4.17.orig/src/CMakeLists.txt	2014-02-26 18:46:02.000000000 +0100
-+++ synergy-1.4.17/src/CMakeLists.txt	2014-04-12 03:17:18.450804140 +0200
-@@ -19,6 +19,4 @@
- add_subdirectory(plugin)
+--- synergy-1.7.0.orig/src/CMakeLists.txt	2015-03-05 19:26:44.620096680 +0100
++++ synergy-1.7.0/src/CMakeLists.txt	2015-03-05 19:26:44.616096680 +0100
+@@ -18,6 +18,4 @@
+ add_subdirectory(cmd)
  add_subdirectory(micro)
  
 -if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "IRIX")

@@ -1,8 +1,8 @@
 # do not treat warnings as errors. because there are warnings.
-Index: synergy-1.5.0/CMakeLists.txt
+Index: synergy-1.7.0/CMakeLists.txt
 ===================================================================
---- synergy-1.5.0.orig/CMakeLists.txt	2014-05-25 00:13:49.972372996 +0200
-+++ synergy-1.5.0/CMakeLists.txt	2014-05-25 00:13:49.968372996 +0200
+--- synergy-1.7.0.orig/CMakeLists.txt	2015-03-05 19:26:46.800096615 +0100
++++ synergy-1.7.0/CMakeLists.txt	2015-03-05 19:26:46.796096616 +0100
 @@ -76,7 +76,7 @@
  
  	# warnings as errors:
@@ -10,5 +10,5 @@ Index: synergy-1.5.0/CMakeLists.txt
 -	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
 +	#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
  
- 	# For config.h, detect the libraries, functions, etc.
- 	include(CheckIncludeFiles)
+ 	if (NOT APPLE)
+ 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
