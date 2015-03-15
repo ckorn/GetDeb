@@ -1,0 +1,3 @@
+version=3
+https://bugs.launchpad.net/getdeb.net/+bug/1426367 \
+    (?:.*/)?image3d_([\d\.]+)_i386\.deb

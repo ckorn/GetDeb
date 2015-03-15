@@ -1,0 +1,5 @@
+image3d (1.1.1-1~getdeb1) trusty; urgency=low
+
+  * Initial release (LP: #1426367)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Mar 2015 19:00:13 +0100

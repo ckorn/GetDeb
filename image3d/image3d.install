@@ -1,0 +1,7 @@
+image3d.dat			usr/share/image3d
+image3d.html			usr/share/image3d
+image3d.png			usr/share/image3d
+image3d.py			usr/share/image3d
+image3d.ui			usr/share/image3d
+image3dpair.sh			usr/share/image3d
+debian/image3d.desktop		usr/share/applications
