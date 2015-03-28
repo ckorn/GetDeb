@@ -1,0 +1,6 @@
+debian/hexchat.xpm usr/share/pixmaps
+usr/bin/hexchat
+usr/lib/*/hexchat/plugins/*.so
+usr/lib/*/pkgconfig
+usr/share/appdata
+usr/share/applications

@@ -1,0 +1,13 @@
+Description: Skipping files with no provided translation
+ src/common/chanopt.c
+ src/common/inbound.c
+ src/fe-text/fe-text.c
+Author: Jesse Rhodes <drubo@drubo.net>
+
+
+--- /dev/null
++++ hexchat-2.10.1/po/POTFILES.skip
+@@ -0,0 +1,3 @@
++src/common/chanopt.c
++src/common/inbound.c
++src/fe-text/fe-text.c
