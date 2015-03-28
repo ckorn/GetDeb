@@ -1,0 +1,3 @@
+?package(hexchat):needs="X11" section="Applications/Network/Communication"\
+  title="HexChat" command="/usr/bin/hexchat" hints="IRC"\
+  icon="/usr/share/pixmaps/hexchat.xpm"

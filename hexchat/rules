@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@  --with autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-silent-rules
+
+
+override_dh_auto_build:
+	convert -resize 32x32 data/icons/hexchat.png debian/hexchat.xpm
+	gzip -c9 debian/changelog.txt > debian/changelog.gz
+	dh_auto_build
+
+override_dh_auto_clean:
+	rm -f po/*.gmo
+	rm -f src/common/dbus/org.hexchat.service.service
+	rm -f src/common/textenums.h
+	rm -f src/common/textevents.h
+	rm -f src/common/make-te
+	rm -f po/stamp-po
+	rm -f debian/substvars
+	rm -f debian/changelog.gz
+	rm -f debian/hexchat.xpm
+	dh_auto_clean

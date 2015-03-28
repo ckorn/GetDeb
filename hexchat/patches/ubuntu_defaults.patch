@@ -1,0 +1,42 @@
+Description: Ubuntu Server/Channel Defaults
+ Default server now labelled "Ubuntu Servers (freenode)"
+ On-connect dialog suggests user join #ubuntu
+ .
+   * Fix ubuntu_defaults.patch (LP: #1390851)
+Author: Jesse Rhodes <drubo@drubo.net>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1390851
+
+--- hexchat-2.10.1.orig/src/common/servlist.c
++++ hexchat-2.10.1/src/common/servlist.c
+@@ -225,7 +225,7 @@ static const struct defaultserver def[]
+ 	{"FEFNet", 0, 0, 0, LOGIN_SASL},
+ 	{0,			"irc.fef.net"},
+ 
+-	{"freenode", 0, 0, 0, LOGIN_SASL},
++	{"Ubuntu Servers (freenode)", 0, 0, 0, LOGIN_SASL},
+ #ifdef USE_OPENSSL
+ 	{0,				"chat.freenode.net/+6697"},
+ #endif
+@@ -1129,7 +1129,7 @@ servlist_load_defaults (void)
+ {
+ 	int i = 0, j = 0;
+ 	ircnet *net = NULL;
+-	guint def_hash = g_str_hash ("freenode");
++	guint def_hash = g_str_hash ("Ubuntu Servers (freenode)");
+ 
+ 	while (1)
+ 	{
+--- hexchat-2.10.1.orig/src/fe-gtk/joind.c
++++ hexchat-2.10.1/src/fe-gtk/joind.c
+@@ -247,9 +247,9 @@ joind_show_dialog (server *serv)
+ 							G_CALLBACK (joind_ok_cb), serv);
+ 							
+ 	if (serv->network)
+-		if (g_ascii_strcasecmp(((ircnet*)serv->network)->name, "freenode") == 0)
++		if (g_ascii_strcasecmp(((ircnet*)serv->network)->name, "Ubuntu Servers (freenode)") == 0)
+ 		{
+-			gtk_entry_set_text (GTK_ENTRY (entry1), "#hexchat");
++			gtk_entry_set_text (GTK_ENTRY (entry1), "#ubuntu");
+ 			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(radiobutton2), TRUE);
+ 		}
+ 
