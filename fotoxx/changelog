@@ -1,3 +1,20 @@
+fotoxx (15.04-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + New: Zonal Flatten: enhance contrast in dull areas even when overall 
+      brightness and contrast is well optimized (powerful, try it).
+    + New: Directed Blur: 1-dimensional image blur in direction of mouse
+    drag.
+    + Properly extract thumbnails from RAW files enclosing .ppm thumbnails.
+    + Album edit: View any image full size while adding and arranging images.
+    + Slide Show: Support for stop show, jump to a new position, resume show.
+    + Slide Show: New image transitions: implode, explode, Japanese fan.
+    + Print dialog accepts margin inputs in either inches or centimeters.
+    + New user setting: show or hide hidden directories in gallery view.
+    + Bugfix: print dialog: displayed print size was not always correct. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 01 Apr 2015 19:42:07 +0200
+
 fotoxx (15.03.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
