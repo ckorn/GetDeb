@@ -5,7 +5,10 @@ Maintainer: Christoph Korn <c_korn@gmx.de>
 Build-Depends: debhelper (>= 9),
                cmake,
                qtbase5-dev,
-               zlib1g-dev
+               zlib1g-dev,
+               libkf5archive-dev,
+               qtmultimedia5-dev,
+               libqt5svg5-dev
 Standards-Version: 3.9.5
 Homepage: http://drawpile.sourceforge.net/
 
