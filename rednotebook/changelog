@@ -1,3 +1,20 @@
+rednotebook (1.10.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * When undoing a formatting action, only remove formatting, not the text
+    (lp:1326606).
+    * Fix searching with enter for text with non-ASCII characters
+    (lp:1430697).
+    * Fix filtering exports by tags containing non-ASCII characters
+    (lp:1267263).
+    * Don't remove whitespace from old-style tags in autocomplete box
+    (lp:1414603).
+    * Don't try to change spellchecking language if spellchecker is not set
+    up (lp:1443818).
+    * Don't try to access files with wrong encoding (lp:1443818).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 15 Apr 2015 20:11:52 +0200
+
 rednotebook (1.10-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
