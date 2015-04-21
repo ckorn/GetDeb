@@ -3,14 +3,18 @@ Section: text
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Original-Maintainer: LI Daobing <lidaobing@debian.org>
-Build-Depends: cdbs (>= 0.4.23-1.1), cmake (>= 2.6.2), debhelper (>= 5),
- libwebkitgtk-dev, libchm-dev, libgcrypt11-dev, intltool,
- pkg-config, libglade2-dev (>= 2.4.0), libgtk2.0-dev (>= 2.8.0),
- libnspr4-dev
-Standards-Version: 3.9.3
-DM-Upload-Allowed: yes
-Vcs-Browser: http://git.debian.org/?p=chinese/chmsee.git
-Vcs-Git: git://git.debian.org/git/chinese/chmsee.git
+Build-Depends: cdbs (>= 0.4.23-1.1),
+               cmake (>= 2.6.2),
+               debhelper (>= 5),
+               libwebkitgtk-dev,
+               libchm-dev,
+               libgcrypt20-dev,
+               intltool,
+               pkg-config,
+               libglade2-dev (>= 2.4.0),
+               libgtk2.0-dev (>= 2.8.0),
+               libnspr4-dev
+Standards-Version: 3.9.5
 Homepage: http://code.google.com/p/chmsee
 
 Package: chmsee
