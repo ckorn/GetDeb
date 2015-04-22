@@ -1,7 +1,0 @@
-bins/	/usr/share/fritzing/
-help/	/usr/share/fritzing/
-parts/  /usr/share/fritzing/
-pdb/	/usr/share/fritzing/
-sketches/       /usr/share/fritzing/
-translations/*.qm	/usr/share/fritzing/translations/
-translations/syntax/*.xml	/usr/share/fritzing/translations/syntax/

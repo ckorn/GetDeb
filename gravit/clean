@@ -1,8 +1,0 @@
-INSTALL
-aclocal.m4
-config.guess
-config.sub
-depcomp
-install-sh
-missing
-src/config.h.in

@@ -1,9 +1,0 @@
-debian/webcamstudio.desktop		usr/share/applications
-debian/webcamstudio.png			usr/share/pixmaps
-debian/wrappers/webcamstudio		usr/bin
-dist/*.jar				usr/lib/webcamstudio
-libraries/commons-io-*.jar		usr/lib/webcamstudio/lib
-libraries/jffmpeg-*.jar			usr/lib/webcamstudio/lib
-libraries/jtwitter*.jar			usr/lib/webcamstudio/lib
-libraries/mail.jar			usr/lib/webcamstudio/lib
-libraries/zxing*.jar			usr/lib/webcamstudio/lib

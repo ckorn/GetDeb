@@ -1,4 +1,0 @@
-?package(klavaro):needs="X11" section="Applications/Education"\
-  icon="/usr/share/pixmaps/klavaro-logo.xpm"\
-  longtitle="touch typing tutor"\
-  title="Klavaro" command="/usr/bin/klavaro"

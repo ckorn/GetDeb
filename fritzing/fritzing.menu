@@ -1,2 +1,0 @@
-?package(fritzing):needs="X11" section="Applications/Science/Electronics"\
-  title="Fritzing" icon="/usr/share/pixmaps/fritzing_icon.xpm" command="/usr/bin/Fritzing"
