@@ -1,3 +1,9 @@
+calibre (2.25.0-1~getdeb2~vivid) vivid; urgency=medium
+
+  * Rebuild for vivid
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 21 Apr 2015 20:02:29 +0200
+
 calibre (2.25.0-1~getdeb1) utopic; urgency=medium
 
   * New upstream version
