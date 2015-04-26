@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Image3D
+Name=Popout3D
 Version=1.0
-Exec=/usr/share/image3d/image3d.py
+Exec=/usr/share/popout3d/popout3d.py
 Comment=A 3D image creator.
-Icon=/usr/share/image3d/image3d.png
+Icon=/usr/share/popout3d/popout3d.png
 Type=Application
 Terminal=false
 StartupNotify=true
