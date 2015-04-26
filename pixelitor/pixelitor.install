@@ -1,0 +1,4 @@
+target/Pixelitor.jar		usr/share/pixelitor
+debian/scripts/pixelitor	usr/bin
+debian/pixelitor.xpm		usr/share/pixmaps
+debian/pixelitor.desktop	usr/share/applications

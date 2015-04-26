@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /usr/share/pixelitor
+
+java -jar Pixelitor.jar "$@"

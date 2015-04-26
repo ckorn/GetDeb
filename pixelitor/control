@@ -1,0 +1,22 @@
+Source: pixelitor
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               maven,
+               openjdk-8-jdk,
+               openjfx
+Standards-Version: 3.9.6
+Homepage: http://pixelitor.sourceforge.net/
+
+Package: pixelitor
+Architecture: all
+Depends: ${misc:Depends},
+         openjdk-8-jre,
+         jayatana
+Description: Image editing software
+ Free and open source image editing software that supports
+ layers, image effects, multiple undo etc.
+ .
+ It has more than 80 image filters and color adjustments,
+ some of which are unique to Pixelitor.

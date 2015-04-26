@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Pixelitor
+Exec=/usr/bin/pixelitor
+Icon=pixelitor
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Viewer;
+Keywords=pixel

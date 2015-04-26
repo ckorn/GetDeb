@@ -1,0 +1,11 @@
+pixelitor (3.0.1-1~getdeb2) vivid; urgency=medium
+
+  * Add missing dependency on jayatana
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 26 Apr 2015 02:12:03 +0200
+
+pixelitor (3.0.1-1~getdeb1) vivid; urgency=low
+
+  * Initial release (LP: #1443831)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 26 Apr 2015 00:16:51 +0200
