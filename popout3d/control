@@ -1,4 +1,4 @@
-Source: image3d
+Source: popout3d
 Section: graphics
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
@@ -6,10 +6,11 @@ Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 Homepage: https://bugs.launchpad.net/getdeb.net/+bug/1426367
 
-Package: image3d
+Package: popout3d
 Architecture: all
 Depends: ${misc:Depends},
-         python-wand (>=0.3.5),
+         python3-pyqt5,
+         python3-wand (>=0.3.5),
          imagemagick (>=6.7),
          python (>=2.7),
          hugin (>=2013.0.0)
