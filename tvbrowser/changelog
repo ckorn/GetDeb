@@ -1,3 +1,9 @@
+tvbrowser (3.4.1.0-1~getdeb2~vivid) vivid; urgency=medium
+
+  * Patch script to support Ubuntu 15.04
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 28 Apr 2015 19:25:52 +0200
+
 tvbrowser (3.4.1.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
