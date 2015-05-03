@@ -1,0 +1,19 @@
+# Make Java 8 work
+Index: subsonic-5.2.1/subsonic.sh
+===================================================================
+--- subsonic-5.2.1.orig/subsonic.sh	2014-03-13 19:12:11.000000000 +0100
++++ subsonic-5.2.1/subsonic.sh	2015-05-02 18:44:42.523928689 +0200
+@@ -100,6 +100,13 @@
+     JAVA=${JAVA_HOME}/bin/java
+ fi
+ 
++TOOL_OPTIONS=`echo $JAVA_TOOL_OPTIONS`
++size=${#TOOL_OPTIONS}
++if [ $size -ne 0 ] ; then
++  echo "unset JAVA_TOOL_OPTIONS"
++  unset JAVA_TOOL_OPTIONS
++fi
++
+ # Create Subsonic home directory.
+ mkdir -p ${SUBSONIC_HOME}
+ LOG=${SUBSONIC_HOME}/subsonic_sh.log
