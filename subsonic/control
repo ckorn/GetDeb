@@ -9,7 +9,7 @@ Homepage: http://www.subsonic.org
 Package: subsonic
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-6-jre | sun-java6-jre,
+         openjdk-8-jre | openjdk-7-jre | sun-java6-jre,
          fontconfig,
          lame,
          flac,

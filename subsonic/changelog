@@ -1,3 +1,9 @@
+subsonic (5.2.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 02 May 2015 18:20:53 +0200
+
 subsonic (4.9-1~getdeb2~trusty) trusty; urgency=low
 
   * Rebuild for trusty
