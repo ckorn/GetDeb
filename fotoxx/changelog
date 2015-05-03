@@ -1,3 +1,21 @@
+fotoxx (15.05-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + New: Smart Denoise: measure noise and use the result to reduce noise
+      with minimal loss of subtle detail. Also measure camera sensor noise. 
+    + The function Newest Images was revised to show a gallery of the newest 
+      1000 files, based on either EXIF photo date or file modification date.
+    + Zonal Flatten: algorithm improvement and stronger deband controls.
+    + New: Cycle Background: cycle monitor background image via Fotoxx album.
+    + Bugfix: possible crash in some edit functions if [done] button pressed
+      very quickly after adjusting a dialog control or edit curve.
+    + Bugfix: Edit Metadata: tags with special characters were sometimes
+      getting split into two tags.
+    + Bugfix: Color Mode: color negative: it was sometimes possible to
+      create invalid RGB colors which affected later color functions.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 02 May 2015 17:23:50 +0200
+
 fotoxx (15.04.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
