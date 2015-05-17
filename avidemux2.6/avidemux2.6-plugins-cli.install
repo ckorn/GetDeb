@@ -1,2 +1,7 @@
-usr/lib/ADM_plugins6/videoFilters/*cli.so
-usr/lib/ADM_plugins6/videoFilters/*Cli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_eq2Cli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_chromaShiftCli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_contrastCli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_mpdelogoCli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_HueCli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_CropCli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_swscaleResize_cli.so

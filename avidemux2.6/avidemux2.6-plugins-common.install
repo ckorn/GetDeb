@@ -2,14 +2,7 @@ usr/lib/ADM_plugins6/videoEncoders/libADM_ve_xvid4.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffMpeg2.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffMpeg4.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffDv.so
-#usr/lib/ADM_plugins6/videoEncoders/mpeg2enc
-#usr/lib/ADM_plugins6/videoEncoders/x264/Apple*
-#usr/lib/ADM_plugins6/videoEncoders/x264/Sony*
-#usr/lib/ADM_plugins6/videoEncoders/x264/Microsoft*
-#usr/lib/ADM_plugins6/videoEncoders/x264/x264Param.xsd
-#usr/lib/ADM_plugins6/videoEncoders/libADM_ve_x264.so
-#usr/lib/ADM_plugins6/videoEncoders/avcodec/
-#usr/lib/ADM_plugins6/videoEncoders/xvid/XvidParam.xsd
+usr/lib/ADM_plugins6/videoEncoders/libADM_ve_x265_other.so
 usr/lib/ADM_plugins6/audioDecoder
 usr/lib/ADM_plugins6/audioDevices
 usr/lib/ADM_plugins6/audioEncoders

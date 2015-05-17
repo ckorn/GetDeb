@@ -2,7 +2,7 @@ Source: avidemux2.6
 Section: graphics
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9),
                autotools-dev (>= 20100122.1~),
                cmake,
@@ -39,7 +39,10 @@ Build-Depends: debhelper (>= 9),
                libsqlite3-dev,
                libgtk-3-dev,
                libvdpau-dev,
-               libfontconfig1-dev
+               libfontconfig1-dev,
+               libva-dev,
+               libx265-dev,
+               libc6-dev
 Homepage: http://avidemux.org
 
 Package: avidemux2.6

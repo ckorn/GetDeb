@@ -1,3 +1,9 @@
+avidemux2.6 (1:2.6.9-1~getdeb2~vivid) vivid; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 16 May 2015 01:54:18 +0200
+
 avidemux2.6 (1:2.6.8-1~getdeb3) trusty; urgency=medium
 
   * Rebuild for trusty

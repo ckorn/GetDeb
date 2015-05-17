@@ -1,3 +1,8 @@
-usr/lib/ADM_plugins6/videoFilters/*gtk.so
-usr/lib/ADM_plugins6/videoFilters/*Gtk.so
 usr/lib/ADM_glade
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_swscaleResize_gtk.so
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_contrastGtk.so
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_chromaShiftGtk.so
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_eq2Gtk.so
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_cropGtk.so
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_HueGtk.so
+usr/lib/ADM_plugins6/videoFilters/gtk/libADM_vf_asharpGtk.so
