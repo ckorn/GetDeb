@@ -1,10 +1,10 @@
 # set the install directory directly
 # looking it up does not work. probably because of the symlinks.
-Index: pycharm-3.4/bin/pycharm.sh
+Index: pycharm-4.5/bin/pycharm.sh
 ===================================================================
---- pycharm-3.4.orig/bin/pycharm.sh	2014-06-04 20:13:45.788660893 +0200
-+++ pycharm-3.4/bin/pycharm.sh	2014-06-04 20:13:45.780664892 +0200
-@@ -118,8 +118,11 @@
+--- pycharm-4.5.orig/bin/pycharm.sh	2015-05-16 02:00:27.833125558 +0200
++++ pycharm-4.5/bin/pycharm.sh	2015-05-16 02:00:27.833125558 +0200
+@@ -52,8 +52,11 @@
    done
  fi
  
@@ -17,4 +17,4 @@ Index: pycharm-3.4/bin/pycharm.sh
 +echo "IDE_BIN_HOME: " $IDE_BIN_HOME
  
  # ---------------------------------------------------------------------
- # Collect JVM options and properties.
+ # Locate a JDK installation directory which will be used to run the IDE.
