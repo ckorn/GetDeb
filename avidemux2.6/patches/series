@@ -2,3 +2,4 @@
 04-xvid-detection.diff
 05-installdir.patch
 no_logdir.patch
+ftbfs.patch

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Avidemux 2.6 (Jobs)
 GenericName=Video Editor Jobs application
-TryExec=avidemux3_jobs
-Exec=avidemux3_jobs
+TryExec=avidemux3_jobs_qt4
+Exec=avidemux3_jobs_qt4
 Icon=avidemux2.6-jobs
 Terminal=false
 Type=Application
