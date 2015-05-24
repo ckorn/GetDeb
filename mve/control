@@ -1,0 +1,29 @@
+Source: mve
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               libgtest-dev,
+               libqt4-dev,
+               libqt4-opengl-dev,
+               libpng12-dev,
+               libjpeg8-dev,
+               libtiff5-dev,
+               libreadline6-dev
+Standards-Version: 3.9.5
+Homepage: http://www.gris.tu-darmstadt.de/projects/multiview-environment/
+
+Package: mve
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Multi-View Environment
+ The Multi-View Environment, MVE, is an implementation of
+ a complete end-to-end pipeline for image-based geometry
+ reconstruction. It features Structure-from-Motion,
+ Multi-View Stereo and Surface Reconstruction.
+ The individual steps of the pipeline are available as
+ command line applications, but most features are also
+ available from our user interface UMVE.
+ The project is developed at TU-Darmstadt by
+ Michael Goesele's research group.

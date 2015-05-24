@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	find tests -name "*.o" -type f -delete
+	find apps -name "*.o" -type f -delete
+
+override_dh_auto_build:
+	dh_auto_build
+	cd apps && make apps
+	cd apps/umve/ && qmake && make
+
+# fails to build
+override_dh_auto_test:

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Multi-View Environment
+Exec=/usr/bin/umve
+Icon=umve
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Viewer;
+Keywords=umve;mve;
