@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 9),
                pkg-config,
                gnome-doc-utils,
                rarian-compat
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://homepages.ihug.co.nz/~trmusson/programs.html#ignuit
 
 Package: ignuit
