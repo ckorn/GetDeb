@@ -1,3 +1,23 @@
+drawpile (0.9.10-1~getdeb1) vivid; urgency=medium
+
+  * New upstream version
+     * Fixed loading of older recording formats (<v11.x)
+     * Added Solo+BG layer view mode
+     * Added Onionskin layer view mode
+     * Added animation export feature
+     * Added flipbook window for previewing animations
+     * When opening animated GIFs, each frame is loaded as a layer
+     * Protocol change: merged LayerCreate and LayerCopy
+     * Added "Insert layer" action
+     * LAN server discovery using Zeroconf
+     * Added Japanese and Russian translations
+     * Fixed filling selections partially outside the canvas
+     * Moving a selection will now automatically move the pixels too
+     * Added autosave feature
+     * Added button to reset all settings
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 23 May 2015 19:10:13 +0200
+
 drawpile (0.9.9-1~getdeb1) utopic; urgency=medium
 
   * New upstream version
