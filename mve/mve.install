@@ -1,0 +1,10 @@
+apps/bundle2ply/bundle2ply		usr/bin
+apps/dmrecon/dmrecon			usr/bin
+apps/makescene/makescene		usr/bin
+apps/meshconvert/meshconvert		usr/bin
+apps/mveshell/mveshell			usr/bin
+apps/scene2pset/scene2pset		usr/bin
+apps/sfmrecon/sfmrecon			usr/bin
+apps/umve/umve				usr/bin
+debian/umve.desktop			usr/share/applications
+debian/umve.png				usr/share/pixmaps
