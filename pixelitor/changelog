@@ -1,3 +1,9 @@
+pixelitor (3.1.0-1~getdeb1) vivid; urgency=medium
+
+  * New upstream version (LP: #1457696)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 23 May 2015 19:07:21 +0200
+
 pixelitor (3.0.1-1~getdeb2) vivid; urgency=medium
 
   * Add missing dependency on jayatana
