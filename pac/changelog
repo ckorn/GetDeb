@@ -1,3 +1,21 @@
+pac (4.5.5.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Added support for ARMV7L devices! (Tested on my HTC One M7 phone with
+    Perl v5.20!)
+    . Fixed a bug that prevented terminal transparency from being saved
+    . Fixed a bug that prevented forwarding CLIPBOARD for "rdesktop"
+    connections (xfreerdp is still buggy!)
+    . Removed the <ALT>w shortcut to open the "Wake On LAN" window
+    . Fixed a little bug regarding "autohide connections list on connection
+    open" not working correctly
+    . Fixed a little bug  regarding Preferences window not showing again if
+    previously was clos viz the "x" window button
+    . Modified the "Split" routine to try to give same space to splitted
+    terminals
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 25 May 2015 19:36:24 +0200
+
 pac (4.5.5-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
