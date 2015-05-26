@@ -1,0 +1,32 @@
+--- a/virtManager/manager.py
++++ b/virtManager/manager.py
+@@ -298,6 +298,8 @@ class vmmManager(vmmGObjectUI):
+ 
+         tool = self.widget("vm-toolbar")
+         tool.set_property("icon-size", Gtk.IconSize.LARGE_TOOLBAR)
++        ctx = tool.get_style_context()
++        ctx.add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
+         for c in tool.get_children():
+             c.set_homogeneous(False)
+ 
+--- a/virtManager/details.py
++++ b/virtManager/details.py
+@@ -346,12 +346,17 @@ class vmmDetails(vmmGObjectUI):
+         self.conn = self.vm.conn
+ 
+         self.is_customize_dialog = False
++
++        tb = self.widget("details-toolbar")
++        ctx = tb.get_style_context()
++        ctx.add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
++
+         if parent:
+             # Details window is being abused as a 'configure before install'
+             # dialog, set things as appropriate
+             self.is_customize_dialog = True
+             self.topwin.set_type_hint(Gdk.WindowTypeHint.DIALOG)
+-            self.topwin.set_transient_for(parent)
++            self.topwin.set_transient_for(parent)		
+ 
+             self.widget("toolbar-box").show()
+             self.widget("customize-toolbar").show()

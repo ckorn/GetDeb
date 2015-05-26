@@ -7,11 +7,9 @@ Closes: #685749
  virtinst/guest.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-Index: virt-manager-1.1.0/virtinst/guest.py
-===================================================================
---- virt-manager-1.1.0.orig/virtinst/guest.py
-+++ virt-manager-1.1.0/virtinst/guest.py
-@@ -350,7 +350,7 @@ class Guest(XMLBuilder):
+--- a/virtinst/guest.py
++++ b/virtinst/guest.py
+@@ -364,7 +364,7 @@
          if (not install and
              self.os.is_xenpv() and
              not self.os.kernel):

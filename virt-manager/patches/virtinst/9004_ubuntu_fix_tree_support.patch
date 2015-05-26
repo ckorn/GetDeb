@@ -9,48 +9,46 @@ Bug-Ubuntu: https://bugs.launchpad.net/bugs/884765
 Forwarded: no
 Updated: 2014-02-17
 
-Index: virt-manager-1.1.0/virtinst/urlfetcher.py
-===================================================================
---- virt-manager-1.1.0.orig/virtinst/urlfetcher.py
-+++ virt-manager-1.1.0/virtinst/urlfetcher.py
-@@ -888,9 +888,12 @@ class DebianDistro(Distro):
+--- a/virtinst/urlfetcher.py
++++ b/virtinst/urlfetcher.py
+@@ -899,9 +899,12 @@
      def _set_media_paths(self):
-         # Use self._prefix to set media paths
-         self._boot_iso_paths   = ["%s/netboot/mini.iso" % self._prefix]
--        hvmroot = "%s/netboot/%s/%s/" % (self._prefix,
--                                         self._installer_name,
+         self._boot_iso_paths   = ["%s/netboot/mini.iso" % self._url_prefix]
+ 
+-        hvmroot = "%s/netboot/%s/%s/" % (self._url_prefix,
+-                                         self._installer_dirname,
 -                                         self._treeArch)
 +        if self._prefix:
-+            hvmroot = "%s/netboot/%s/%s/" % (self._prefix,
-+                                             self._installer_name,
++            hvmroot = "%s/netboot/%s/%s/" % (self._url_prefix,
++                                             self._installer_dirname,
 +                                             self._treeArch)
 +        else:
 +            hvmroot = ""
-         xenroot = "%s/netboot/xen/" % self._prefix
-         self._hvm_kernel_paths = [(hvmroot + "linux", hvmroot + "initrd.gz")]
-         self._xen_kernel_paths = [(xenroot + "vmlinuz",
-@@ -945,16 +948,30 @@ class UbuntuDistro(DebianDistro):
+         initrd_basename = "initrd.gz"
+         kernel_basename = "linux"
+         if self._treeArch in ["ppc64el"]:
+@@ -961,16 +964,30 @@
      urldistro = "ubuntu"
  
      def isValidStore(self):
 +        # For regular trees
-         if self.fetcher.hasFile("%s/MANIFEST" % self._prefix):
+         if self.fetcher.hasFile("%s/MANIFEST" % self._url_prefix):
 -            # For regular trees
-             filename = "%s/MANIFEST" % self._prefix
-             regex = ".*%s.*" % self._installer_name
+             filename = "%s/MANIFEST" % self._url_prefix
+             regex = ".*%s.*" % self._installer_dirname
          elif self.fetcher.hasFile("install/netboot/version.info"):
              # For trees based on ISO's
-             self._prefix = "install"
+             self._url_prefix = "install"
 +            if fetcher.hasFile("install/netboot/ubuntu-installer/i386"):
 +                self._treeArch = "i386"
 +            elif fetcher.hasFile("install/netboot/ubuntu-installer/amd64"):
 +                self._treeArch = "amd64"
              self._set_media_paths()
-             filename = "%s/netboot/version.info" % self._prefix
+             filename = "%s/netboot/version.info" % self._url_prefix
              regex = "%s*" % self.name
 +        elif fetcher.hasFile("initrd.gz") and fetcher.hasFile("linux"):
 +            # For trees based on mini ISO's
-+            self._prefix = ""
++            self._url_prefix = ""
 +            if fetcher.hasFile("boot/grub/x86_64-efi"):
 +                self._treeArch = "amd64"
 +            else:

@@ -7,11 +7,9 @@ Closes: #685749
  virtinst/guest.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-Index: virt-manager-1.1.0/virtinst/guest.py
-===================================================================
---- virt-manager-1.1.0.orig/virtinst/guest.py
-+++ virt-manager-1.1.0/virtinst/guest.py
-@@ -673,7 +673,7 @@ class Guest(XMLBuilder):
+--- a/virtinst/guest.py
++++ b/virtinst/guest.py
+@@ -719,7 +719,7 @@
              self.os.init = self.os.init or "/bin/sh"
  
          if not self.os.loader and self.os.is_hvm() and self.type == "xen":

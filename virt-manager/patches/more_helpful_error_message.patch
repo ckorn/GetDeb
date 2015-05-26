@@ -2,11 +2,9 @@ Description: make the error message more helpful on Ubuntu
 Forwarded: no
 Updated: 2014-02-17
 
-Index: virt-manager-1.1.0/virtManager/engine.py
-===================================================================
---- virt-manager-1.1.0.orig/virtManager/engine.py
-+++ virt-manager-1.1.0/virtManager/engine.py
-@@ -606,7 +606,10 @@ class vmmEngine(vmmGObject):
+--- a/virtManager/engine.py
++++ b/virtManager/engine.py
+@@ -631,7 +631,10 @@
                            "regular user. Try running as root.")
                  show_errmsg = False
              elif re.search(r"libvirt-sock", tb):

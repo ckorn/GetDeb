@@ -13,11 +13,9 @@ where used but that is gone.
 Signed-off-by: Stefan Bader <stefan.bader@canonical.com>
 Updated: 2014-02-17
 
-Index: virt-manager-1.1.0/virtinst/guest.py
-===================================================================
---- virt-manager-1.1.0.orig/virtinst/guest.py
-+++ virt-manager-1.1.0/virtinst/guest.py
-@@ -737,10 +737,7 @@ class Guest(XMLBuilder):
+--- a/virtinst/guest.py
++++ b/virtinst/guest.py
+@@ -781,10 +781,7 @@
              return
  
          if self.os.is_hvm() and self.type == "xen":
