@@ -3,11 +3,9 @@ Author: Marc Deslauriers <marc.deslauriers@ubuntu.com>
 Forwarded: no, Ubuntu-specific
 Updated: 2014-02-17
 
-Index: virt-manager-1.1.0/virtManager/engine.py
-===================================================================
---- virt-manager-1.1.0.orig/virtManager/engine.py
-+++ virt-manager-1.1.0/virtManager/engine.py
-@@ -181,7 +181,7 @@ class vmmEngine(vmmGObject):
+--- a/virtManager/engine.py
++++ b/virtManager/engine.py
+@@ -180,7 +180,7 @@
          # Manager fail message
          msg = _("Could not detect a default hypervisor. Make\n"
                  "sure the appropriate virtualization packages\n"
