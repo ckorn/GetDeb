@@ -1,3 +1,11 @@
+pac (4.5.5.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Added support to allow per-connection "select by words"
+    . Nth "/r" fixxxxxxxxxxxxx... :(
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 28 May 2015 18:32:11 +0200
+
 pac (4.5.5.3-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
