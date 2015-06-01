@@ -39,7 +39,8 @@ Build-Depends: cdbs (>= 0.4.43),
                libudev-dev [linux-any],
                libmtdev-dev [linux-any],
                libegl1-mesa-dev,
-               libchm-dev
+               libchm-dev,
+               libssl-dev
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Martin Pitt <mpitt@debian.org>
 Standards-Version: 3.9.6
