@@ -1,3 +1,9 @@
+pixelitor (3.1.1-1~getdeb1) vivid; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 31 May 2015 18:35:53 +0200
+
 pixelitor (3.1.0-1~getdeb1) vivid; urgency=medium
 
   * New upstream version (LP: #1457696)
