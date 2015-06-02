@@ -1,3 +1,25 @@
+fotoxx (15.06-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + New: HSL Color: change the color of selected image areas using an HSL
+      color chooser. Blend with original image to preserve existing
+      variation.
+    + Threshold Denoise algorithm was improved.
+    + The Noise measurement tool was made less sensitive to RGB levels 
+      having a small gradient over the measured spot. 
+    + Cycle Desktop (background image): Runs in the background. Add to the 
+      startup list to get a new desktop image each logon or time period.
+    + New: Set Desktop Image: Set the desktop background image from Fotoxx.
+    + New slide show transition: Image falls over to reveal the next image.
+    + Mashup: UI improved for adding text and lines/arrows to a layout.
+    + Trim/Rotate now includes an [auto] button to remove the black image 
+      margins left by composite or warp functions. Auto-Trim menu is gone.
+    + KB shortcuts includes a button to report all the standard shortcuts.
+    + Multiple UI and help text improvements.
+    + Three minor bug fixes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 01 Jun 2015 14:55:45 +0200
+
 fotoxx (15.05-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
