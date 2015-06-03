@@ -1,5 +1,12 @@
 #!/bin/sh
 
+TOOL_OPTIONS=`echo $JAVA_TOOL_OPTIONS`
+size=${#TOOL_OPTIONS}
+if [ $size -ne 0 ] ; then
+  echo "unset JAVA_TOOL_OPTIONS"
+  unset JAVA_TOOL_OPTIONS
+fi
+
 # Include java-wrappers
 . /usr/lib/java-wrappers/java-wrappers.sh
 
