@@ -1,3 +1,18 @@
+pac (4.5.5.5-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Modified "SSH" Advanced Options, to be more GUI friendly, and with a
+    context menu to show available SSH advance options (those '-o "xx=yy"')
+    . Modified "SFTP" Advanced Options, to be more GUI friendly, and with a
+    context menu to show available SFTP advance options (those '-o "xx=yy"')
+    . Added an option to show the command line that each connection will
+    launch, under "Edit"->"Advanced Parameters"->"Get Command line"
+    . Fixed a bug that prevented some SSH users from forwarding ports: "/"
+    syntax not recognized by *every* SSH client. Goung back to ":"
+    . Minor fixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Jun 2015 20:18:47 +0200
+
 pac (4.5.5.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
