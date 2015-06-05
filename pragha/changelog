@@ -1,3 +1,9 @@
+pragha (1.3.2.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Jun 2015 02:03:01 +0200
+
 pragha (1.3.2.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
