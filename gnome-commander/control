@@ -1,0 +1,66 @@
+Source: gnome-commander
+Section: gnome
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Alessio Treglia <alessio@debian.org>
+Build-Depends: debhelper (>= 9~),
+               dh-autoreconf,
+               gnome-doc-utils,
+               intltool,
+               libexiv2-dev (>= 0.14),
+               libglib2.0-dev (>= 2.0),
+               libgnome2-dev (>= 2.0),
+               libgnomeui-dev (>= 2.4),
+               libgnomevfs2-dev (>= 2.0),
+               libgtk2.0-dev (>= 2.8),
+               libpoppler-glib-dev,
+               libssl-dev,
+               libtag1-dev (>= 1.4),
+               libunique-dev,
+               libxml-parser-perl,
+               python-dev (>= 2.6.6-3~),
+               python-scour,
+               rarian-compat
+X-Python-Version: >= 2.6
+Standards-Version: 3.9.5
+Homepage: http://gcmd.github.io/
+
+Package: gnome-commander
+Architecture: any
+Depends: gnome-commander-data (>= ${source:Version}),
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Suggests: gnome-user-guide,
+          libgnomevfs2-extra,
+          meld
+Description: nice and fast file manager for the GNOME desktop
+ GNOME Commander is a fast and powerful graphical filemanager for the GNOME
+ desktop environment, it has a "two-pane" interface in the tradition of
+ Norton and Midnight Commander.
+
+Package: gnome-commander-data
+Architecture: all
+Replaces: gnome-commander (<= 1.2.8.10-1)
+Breaks: gnome-commander (<= 1.2.8.10-1)
+Depends: ${misc:Depends}
+Suggests: gnome-commander
+Description: Data files for GNOME Commander
+ GNOME Commander is a fast and powerful graphical filemanager for
+ the GNOME desktop environment, it has a "two-pane" interface in
+ the tradition of Norton and Midnight Commander.
+ .
+ This package contains the data files for gnome-commander.
+
+Package: gnome-commander-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: gnome-commander (= ${binary:Version}),
+         ${misc:Depends}
+Description: Debugging symbols for gnome-commander
+ GNOME Commander is a fast and powerful graphical filemanager for the GNOME
+ desktop environment, it has a "two-pane" interface in the tradition of
+ Norton and Midnight Commander.
+ .
+ This package contains the debugging symbols for gnome-commander.
