@@ -1,3 +1,132 @@
+chatty (0.8-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Core Changes:
+    - Connection: Implemented IRCv3 tags/commands/membership support
+    - Userlist: IRCv3 now supports optional joins/parts (correct userlist),
+    which is enabled by default in Chatty (doesn't mean joins/parts have to
+    be shown)
+    - Added experimental support for secured connections
+
+    Emoticons:
+    - Changed Emoticon parsing to use spaces as delimiter instead of word
+    boundaries (to match changes made to Twitch Chat)
+    - Scaling: Added settings to scale emotes in chat and the Emotes Dialog
+    - BTTV: Implemented BTTV Custom Channel Emotes, switched to new BTTV API
+    - IRCv3: Implemented new Twitch Emotes API, including using IRCv3 tags
+    - Emote Dialog: Added overview of all global emotes (Twitch and Other)
+    - Detail View: Added Detail View that can be opened for an emote with
+    different scaling and a table of information about the emote
+    - Context Menu: Added more entries and information
+    - Added emote image caching, making loading of emotes a bit faster and
+    hopefully more reliable if the server can't be reached at the time of
+    loading
+    - Added feature to add custom emotes (locally), also allowing you to
+    replace other emotes
+    - FFZ: Switched to new API (and showing more info about the emotes)
+
+    TAB Completion:
+    - Changed to work with @ in front (or any other non-word characters
+    around it)
+    - Added info popup to show completion information (how many items are
+    found, which item you are at while cycling through results)
+    - Added completion for emotes (Shift-TAB)
+    - Added completion for setting names (TAB when using after setting
+    command)
+    - Added completion for some commands (TAB after /)
+    - Added support for custom completion items that you can add in the
+    settings or via the /customCompletion command
+
+    StreamChat:
+    - Added fitting context menu to stream chat dialog
+    - Added setting to START inserting text a the top in Stream Chat
+      (but not insert text at the top in general), added streamChatResizable
+      setting
+    - Added commands /clearStreamChat, /testStreamChat, /setStreamChatSize,
+      /getStreamChatSize
+
+    Other Enhancements:
+    - Added bot badge (bot names from BTTV/FFZ APIs and local setting)
+    - Added ability to record current stream time via commands to assist in
+    creating stream highlights
+    - Added setting to clear chat when channel is cleared by a moderator
+    - Hosting: Added info in the title which channel is being hosted, added
+    warning in chat when a channel is still being hosted when the stream is
+    going live
+    - Streamlined reconnection messages a bit
+    - Output message if channel attempting to join doesn't exist on Twitch
+    - Added correctly capitalized names from IRCv3 display-name tag, removed
+      commands to change capitalization of names locally
+    - Added experimental showing of slowmode/submode status in the titlebar
+    (only shows correctly if mode toggled while you are already in the
+    channel, until chat sends that info on join as well)
+    - Added feature to locally set custom names for any user which show up in
+    chat and the userlist
+    - Highlighting: Added more prefix options
+    - Ignore: Added prefix option to ignore info messages
+    - Added Miscellaneous-menu to User Context menu and added entry Copy Name
+      (meaning copy to clipboard)
+    - Added Miscellaneous-menu to Channel Context menu and added entry to
+    join currently hosted channel
+    - Added /copy command which copies the given text to the clipboard
+    - Added /color command which redirects to the Twitch Chat /color command
+    - Added /livestreamer command to open streams/dialog via command
+    - Added /appinfo command
+    - Added /r9k and /r9koff commands
+    - Added workaround for Twitch API sometimes returning stream information
+    with missing channel object (no title available), assuming previous title
+    - Updated help
+
+    Changes:
+    - Files: Moved cache files to be saved in the /cache folder
+    - Reduced Twitch API debug log spam a bit
+    - Increased join delay a bit
+    - Updated Settings Dialog layout to adjust to the dialog size better
+    - Changed Twitch API version calls to use v3 by default
+    - Changed Usericon image files starting with "http" to be interpreted as
+    URL
+    - Disabled auto request of mods list for the time being, since mod status
+    for messages should always work and mod status in the userlist should
+      probably work if the userlist works in the first place
+    - Decreased Live Streams dialog scroll speed a bit
+
+    Settings:
+    - Highlighting: Added highlightIgnored setting whether to try to
+    highlight messages that have already been ignored (disabled by default)
+    - Changed capitalizedNames (first letter only) setting to default to on
+    (only affects fresh settings)
+    - Debugging: Added setting to log raw IRC traffic to file (disabled by
+    default)
+    - Added mainResizable setting to be able to turn off resizing of the main
+    window
+    - Added setting to ignore Stream Status Notifications for Stream Offline
+    - Added some more support for different setting types to setting commands
+    - Changed setting commands to support numeric lists
+    - Changed Settings Dialog to only tell you to reconnect if you don't have
+    to also restart Chatty (required by a setting change)
+
+    Bugfixes:
+    - Fixed bug where channel would constantly be reopened when it failed to
+    join (especially happening on non-existing channels)
+    - Fixed bug where reonnection timer would sometimes not be cancelled
+    - Fixed synchronization that could lock up the GUI when performing API
+    requests
+    - Fixed username case-sensitivity issues for commands
+    - Fixed error in stream status writer when stream doesn't have a game set
+    - StreamChat: Fixed bug where stream chat wouldn't scroll down properly
+    - Addressbook: Fixed remove commands issues with case-sensitivity
+    - Run correct commercial length in Admin Dialog when using a hotkey
+    - Fixed close channel hotkey to close active channel rather chan active
+    tab
+    - Possibly fixed some info messages from Twitch Chat not showing up
+    - Changed "Mr. Freeman" to "Dr. Freeman"
+    - Fixed rare error in tables (like Follower Dialog)
+    - Fixed and enabled workaround for some combining characters causing
+    performance issues (replacing more than two combining characters in a row
+    with ****)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Jun 2015 20:17:57 +0200
+
 chatty (0.7.3-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
