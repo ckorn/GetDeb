@@ -1,6 +1,6 @@
 --- a/virtManager/manager.py
 +++ b/virtManager/manager.py
-@@ -298,6 +298,8 @@ class vmmManager(vmmGObjectUI):
+@@ -298,6 +298,8 @@
  
          tool = self.widget("vm-toolbar")
          tool.set_property("icon-size", Gtk.IconSize.LARGE_TOOLBAR)
@@ -11,7 +11,7 @@
  
 --- a/virtManager/details.py
 +++ b/virtManager/details.py
-@@ -346,12 +346,17 @@ class vmmDetails(vmmGObjectUI):
+@@ -346,12 +346,17 @@
          self.conn = self.vm.conn
  
          self.is_customize_dialog = False
