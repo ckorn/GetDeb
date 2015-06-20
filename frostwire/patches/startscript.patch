@@ -1,0 +1,214 @@
+# fix start script
+# source: http://forum.frostwire.com/viewtopic.php?f=1&t=23764
+# unset JAVA_TOOL_OPTIONS
+Index: frostwire-6.0.3/resources/frostwire.sh
+===================================================================
+--- frostwire-6.0.3.orig/resources/frostwire.sh	2015-06-18 22:13:03.000000000 +0200
++++ frostwire-6.0.3/resources/frostwire.sh	2015-06-18 22:16:55.383916321 +0200
+@@ -3,35 +3,45 @@
+ # Runs FrostWire.  This script must be executed in your FrostWire
+ # install directory.
+ 
+-cd /usr/share/frostwire
++cd "`dirname "$0"`"
+ 
+ export HOSTNAME=`hostname`
+ 
+ echo HOSTNAME IS ${HOSTNAME}
+ 
+ # try to discover java
+-MSG0="Loading FrostWire:"
+-MSG1="Starting FrostWire..."
+-MSG2="Java exec found in "
+-MSG3="OOPS, your java version is too old "
+-MSG4="You need to upgrade to JRE 1.7.x or newer from http://www.java.com"
+-MSG5="Suitable java version found "
+-MSG6="Configuring environment..."
+-MSG7="OOPS, you don't seem to have a valid JRE. FrostWire works best with Sun JRE available at http://www.java.com "
+-MSG8="OOPS, unable to locate java exec in "
+-MSG9=" hierarchy"
+-MSG10="Java exec not found in PATH, starting auto-search..."
+-MSG11="Java exec found in PATH. Verifying..."
++MSG_LOADING_FROSTWIRE="Loading FrostWire:"
++MSG_STARTING_FROSTWIRE="Starting FrostWire..."
++MSG_JAVA_EXEC_FOUND_IN="Java exec found in "
++MSG_JAVA_VERSION_TOO_OLD="OOPS, your java version is too old "
++MSG_YOU_NEED_TO_UPGRADE_TO_JRE_OR_NEWER="You need to upgrade to JRE 1.7.x or newer from http://www.java.com"
++MSG_SUITABLE_JAVA_VERSION_FOUND="Suitable java version found "
++MSG_CONFIGURING_ENVIRONMENT="Configuring environment..."
++MSG_OOPS_INVALID_JRE="OOPS, you don't seem to have a valid JRE. FrostWire works best with Sun JRE available at http://www.java.com "
++MSG_UNABLE_TO_LOCATE_JAVA_EXEC_IN="OOPS, unable to locate java exec in "
++MSG_HIERARCHY=" hierarchy"
++MSG_JAVA_EXEC_NOT_FOUND_IN_PATH_STARTING_SEARCH="Java exec not found in PATH, starting auto-search..."
++MSG_JAVA_EXEC_FOUND_IN_PATH_VERIFYING="Java exec found in PATH. Verifying..."
++MSG_I_CANT_FIND_YOUR_JAVA_RUNTIME_ENVIRONMENT="I can't find your Java Runtime Environment..."
++MSG_DO_YOU_WANT_ME_TO_INSTALL_JAVA="Do you want me to install the Java Runtime Environment 8 for you (openjdk-8-jre) [y/n]?"
+ 
+ CLASSPATH=
+ PS=":"
+ 
++command_exists() {
++  command -v "$1" > /dev/null
++}
++
+ look_for_java()
+ {
+- JAVADIR=/usr/lib  
++ JAVADIR=/usr/lib/jvm/java-8-openjdk-amd64/jre
+  if look_for_javaImpl ; then
+     return 0
+- fi 
++ fi   
++ JAVADIR=/usr/lib 
++ if look_for_javaImpl ; then
++    return 0
++ fi
+  JAVADIR=/usr/java
+  if look_for_javaImpl ; then
+        return 0
+@@ -40,63 +50,86 @@
+  if look_for_javaImpl ; then
+        return 0
+  fi
+- return 1
++
++ if [ -f /etc/debian_version ]; then
++    echo ""
++    echo $MSG_I_CANT_FIND_YOUR_JAVA_RUNTIME_ENVIRONMENT
++    echo ""
++    while true; do
++        read -p $MSG_DO_YOU_WANT_ME_TO_INSTALL_JAVA yn
++        case $yn in
++            [Yy]*) sudo apt-get install openjdk-8-jre; return 0;;
++           [Nn]*) echo $MSG_UNABLE_TO_LOCATE_JAVA_EXEC_IN "${JAVADIR}/" $MSG_HIERARCHY ; echo $MSG_YOU_NEED_TO_UPGRADE_TO_JRE_OR_NEWER; return 1;;
++       *) echo "(Please answer 'yes' or 'no')"; echo "";;
++        esac
++    done
++  else
++      return 1
++  fi
+ }
+ 
+ look_for_javaImpl()
+ {
++  echo "Looking for java in: $JAVADIR ..."
+   IFS=$'\n'
+   potential_java_dirs=(`ls -d1 "$JAVADIR"/j* | sort | tac`)
+   for D in "${potential_java_dirs[@]}"; do
+     if [[ -d "$D" && -x "$D/bin/java" ]]; then
+       JAVA_PROGRAM_DIR="$D/bin/"
+-      echo $MSG2 $JAVA_PROGRAM_DIR
++      echo $MSG_JAVA_EXEC_FOUND_IN $JAVA_PROGRAM_DIR
+       if check_version ; then
+-	return 0
++   return 0
+       fi
+     fi
+   done
+-  echo $MSG8 "${JAVADIR}/" $MSG9 ; echo $MSG4
+-  return 1 
++
++  echo $MSG_UNABLE_TO_LOCATE_JAVA_EXEC_IN "${JAVADIR}/" $MSG_HIERARCHY ;
++  echo $MSG_YOU_NEED_TO_UPGRADE_TO_JRE_OR_NEWER
++ 
++  return 1
+ }
+ 
+ check_version()
+ {
+   # short-circuit gcj
+-  ISGCJ=`${JAVA_PROGRAM_DIR}java -version 2>&1 | grep -i gcj`
++  JAVA_CMD=${JAVA_PROGRAM_DIR}java 
++  ISGCJ=`${JAVA_CMD} -version 2>&1 | grep -i gcj`
+   if [ "$ISGCJ" != "" ] ; then
+-      echo $MSG7
++      echo $MSG_OOPS_INVALID_JRE
+       return 1
+   fi
+ 
+-  JAVA_HEADER=`${JAVA_PROGRAM_DIR}java -version 2>&1 | head -n 1`
+-  JAVA_IMPL=`echo ${JAVA_HEADER} | cut -f1 -d' '`
+-  if [ "$JAVA_IMPL" = "java" ] ; then
+-    VERSION=`echo ${JAVA_HEADER} | sed "s/java version \"\(.*\)\"/\1/"`
+-    if echo $VERSION | grep "^1.[0-6]" ; then
+-      echo $MSG3 "[${JAVA_PROGRAM_DIR}java = ${VERSION}]" ; echo $MSG4
++  VALID_JAVA_VERSION_FOUND=$(${JAVA_CMD} -version 2>&1 | egrep 'java|openjdk')
++  if [ -z "$VALID_JAVA_VERSION_FOUND" ]; then
++      echo $MSG_OOPS_INVALID_JRE BOOM
++      return 1
++  fi
++
++  VERSION=$(${JAVA_CMD} -version 2>&1 | awk -F '"' '/version/ {print $2}')
++  echo java version found is $VERSION
++
++  VERSION=`echo ${JAVA_HEADER} | sed "s/java version \"\(.*\)\"/\1/"`
++  if echo $VERSION | grep "^1.[0-6]" ; then
++      echo $MSG_JAVA_VERSION_TOO_OLD "[${JAVA_CMD} = ${VERSION}]" ; echo $MSG_YOU_NEED_TO_UPGRADE_TO_JRE_OR_NEWER
+       return 1
+-    else
+-      echo $MSG5 "[${JAVA_PROGRAM_DIR}java = ${VERSION}]" ; echo $MSG6
+-      return 0	      
+-    fi
+   else
+-    echo $MSG7 "[${JAVA_PROGRAM_DIR}java = ${JAVA_IMPL}]" ; echo $MSG4
+-    return 1
++      echo $MSG_SUITABLE_JAVA_VERSION_FOUND "[${JAVA_CMD} = ${VERSION}]" ; echo $MSG_CONFIGURING_ENVIRONMENT
++      return 0        
+   fi
+ }
+ 
+-echo $MSG1
++echo $MSG_STARTING_FROSTWIRE
+ 
+ # locate and test the java executable
+ if [ `uname` = "Linux" ]; then
+-  if ! command -v java &>/dev/null; then
+-    echo $MSG10
++  if ! command_exists java ; then
++    echo "Java not found? WHY?"
++    echo $MSG_JAVA_EXEC_NOT_FOUND_IN_PATH_STARTING_SEARCH
+     if ! look_for_java ; then
+       exit 1
+     fi
+   else
+-    echo $MSG11
++    echo $MSG_JAVA_EXEC_FOUND_IN_PATH_VERIFYING
+     if ! check_version ; then
+       if ! look_for_java ; then
+         exit 1
+@@ -107,7 +140,7 @@
+   JAVA_PROGRAM_DIR=""
+ fi
+ 
+-echo $MSG0
++echo $MSG_LOADING_FROSTWIRE
+ 
+ export J2SE_PREEMPTCLOSE=1
+ 
+@@ -124,10 +157,18 @@
+ 
+ export LD_LIBRARY_PATH=`pwd`
+ 
++TOOL_OPTIONS=`echo $JAVA_TOOL_OPTIONS`
++size=${#TOOL_OPTIONS}
++if [ $size -ne 0 ] ; then
++  echo "unset JAVA_TOOL_OPTIONS"
++  unset JAVA_TOOL_OPTIONS
++fi
++
++
+ ${JAVA_PROGRAM_DIR}java -Djava.library.path=. -jar frostwire.jar $1
+ 
+ if [ $? -ne 0 ]; then
+-    echo 
++    echo
+     echo ${JAVA_PROGRAM_DIR}
+     echo "******************************************************************"
+     echo "Something went wrong with FrostWire."
+@@ -135,5 +176,5 @@
+     echo "(FrostWire is tested against and works best with with Sun's JRE, Java 1.7+)"
+     echo "The version of Java in your PATH is:"
+     java -version
+-    echo 
++    echo
+ fi
