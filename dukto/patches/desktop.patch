@@ -1,0 +1,17 @@
+# remove encoding
+# set some keywords
+Index: dukto-6.0/dukto.desktop
+===================================================================
+--- dukto-6.0.orig/dukto.desktop	2013-02-08 12:29:16.000000000 +0100
++++ dukto-6.0/dukto.desktop	2015-07-05 16:11:38.351459885 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Version=1.0
+ Type=Application
+ Terminal=false
+@@ -9,3 +8,4 @@
+ Icon=dukto
+ X-HildonDesk-ShowInToolbar=true
+ X-Osso-Type=application/x-executable
++Keywords=duk;lan;file

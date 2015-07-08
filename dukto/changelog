@@ -1,0 +1,5 @@
+dukto (6.0-1~getdeb1) trusty; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 05 Jul 2015 15:49:34 +0200
