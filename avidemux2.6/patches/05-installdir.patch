@@ -1,8 +1,8 @@
-Index: avidemux2.6-2.6.9/bootStrap.bash
+Index: avidemux2.6-2.6.10/bootStrap.bash
 ===================================================================
---- avidemux2.6-2.6.9.orig/bootStrap.bash	2015-05-16 01:55:06.018372627 +0200
-+++ avidemux2.6-2.6.9/bootStrap.bash	2015-05-16 01:55:06.014372543 +0200
-@@ -170,7 +170,7 @@
+--- avidemux2.6-2.6.10.orig/bootStrap.bash	2015-07-08 22:24:12.219386699 +0200
++++ avidemux2.6-2.6.10/bootStrap.bash	2015-07-08 22:24:12.215386601 +0200
+@@ -171,7 +171,7 @@
  
  export TOP=$PWD
  export POSTFIX=""

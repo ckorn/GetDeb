@@ -1,2 +1,3 @@
 version=3
-http://sf.net/avidemux/avidemux_(.*)\.tar\.gz
+http://fixounet.free.fr/avidemux/download.html \
+    (?:.*/)?avidemux_([\d\.]+)\.tar\.gz
