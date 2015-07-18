@@ -1,3 +1,14 @@
+avidemux2.6 (1:2.6.10-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Re-added translations
+    * Re-added avsproxy
+    * Fixed multi passes with x264 when file has non ascii chars
+    * Added experimental Qt5 build for mac
+    * Fixed a bug with filler frames (fraps)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 08 Jul 2015 22:20:44 +0200
+
 avidemux2.6 (1:2.6.9-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
