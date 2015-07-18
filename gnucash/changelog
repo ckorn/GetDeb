@@ -1,3 +1,26 @@
+gnucash (1:2.6.7-1~getdeb2~vivid) vivid; urgency=medium
+
+  * New upstream version
+    681225 - income statement displays blank base currency entries when
+    trading account transactions are present during the report period
+    739271 - pt_BR translation wrong word "limpesa". Should be "limpeza"
+    744858 - Update exchange rate on bill only possible once per session
+         (after unpost/repost)
+    746792 - process payment in foreign currency leads to broken equation
+    734183 - Set value to zero before calling gnc_exp_parser_parse.
+    746163 - Custom register colors (table rows) not recognized from
+         .gtkrc-2.0.gnucash file
+    746873 - Gnucash asks sql passwords before wallet password
+    747812 - unset LDFLAGS when unsetting CFLAGS
+    747377 - Fix overly restrictive input validation for IBAN of SEPA
+    transfer.
+    740955 - Correct general journal and general ledger reports to properly
+          handle Use-Split-Action-For-Num option in File->Properties.
+    747300 - SQL backend missing from most recent DMG?
+    746977 - scm ccache files should be in pkglibdir not pkgdatadir
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 08 Jul 2015 21:16:59 +0200
+
 gnucash (1:2.6.6-1~getdeb2~utopic) utopic; urgency=medium
 
   * New upstream version
