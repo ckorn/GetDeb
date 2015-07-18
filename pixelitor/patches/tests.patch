@@ -1,10 +1,10 @@
 # comment patch because it requires a X11 display
 # not available during a build in a chroot
-Index: pixelitor-3.0.1/src/test/java/pixelitor/CompositionCreationTest.java
+Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
 ===================================================================
---- pixelitor-3.0.1.orig/src/test/java/pixelitor/CompositionCreationTest.java	2015-04-05 23:07:58.000000000 +0200
-+++ pixelitor-3.0.1/src/test/java/pixelitor/CompositionCreationTest.java	2015-04-26 01:25:34.640718885 +0200
-@@ -34,21 +34,21 @@
+--- pixelitor-3.1.3.orig/src/test/java/pixelitor/CompositionCreationTest.java	2015-07-11 21:14:09.785852523 +0200
++++ pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java	2015-07-11 21:16:07.708302954 +0200
+@@ -40,24 +40,24 @@
  
      @Test
      public void testNewImage() {
@@ -29,24 +29,246 @@ Index: pixelitor-3.0.1/src/test/java/pixelitor/CompositionCreationTest.java
 +        assertNotNull(comp.getCompositeImage());*/
      }
  
-     private static Composition testMultiLayerRead(File f) {
-@@ -111,7 +111,7 @@
+-    private static Composition testMultiLayerRead(File f, Consumer<Layer> checkSecondLayer) {
++    /*private static Composition testMultiLayerRead(File f, Consumer<Layer> checkSecondLayer) {
+         Composition comp = OpenSaveManager.createCompositionFromFile(f);
+         comp.checkInvariant();
+         assertEquals(2, comp.getNrLayers());
+@@ -69,7 +69,7 @@
+         checkSecondLayer.accept(secondLayer);
+ 
+         return comp;
+-    }
++    }*/
+ 
+ 
      @Test
-     public void testReadWriteORA() throws IOException {
-         // read and test
+@@ -97,77 +97,5 @@
+     }
+ 
+ 
+-    @Test
+-    public void testReadWritePXC() throws IOException {
+-        // read and test
+-        String[] fileNames = {
+-                "src/test/resources/pxc_test_input.pxc",
+-                "src/test/resources/pxc_file_w_layer_mask.pxc",
+-                "src/test/resources/pxc_file_w_text_layer.pxc",
+-                "src/test/resources/pxc_file_w_adj_layer.pxc",
+-        };
+-
+-        List<Consumer<Layer>> extraChecks = new ArrayList<>();
+-        // extra check for simple pxc file
+-        extraChecks.add(secondLayer -> {
+-            assert secondLayer instanceof ImageLayer;
+-            assertSame(BlendingMode.MULTIPLY, secondLayer.getBlendingMode());
+-            assertEquals(0.75, secondLayer.getOpacity(), 0.0001);
+-        });
+-        // extra check for pxc with layer mask
+-        extraChecks.add(secondLayer -> {
+-            assert secondLayer instanceof ImageLayer;
+-            assert secondLayer.hasMask();
+-            assert secondLayer.getMask().isLinked();
+-            assert secondLayer.isMaskEnabled();
+-        });
+-        // extra check for pxc with text layer
+-        extraChecks.add(secondLayer -> {
+-            assert !secondLayer.hasMask();
+-            assert secondLayer instanceof TextLayer;
+-            assertEquals("T", ((TextLayer) secondLayer).getSettings().getText());
+-        });
+-        // extra check for pxc with adjustment layer
+-        extraChecks.add(secondLayer -> {
+-            assert !secondLayer.hasMask();
+-            assert secondLayer instanceof AdjustmentLayer;
+-        });
+-
+-        for (int i = 0; i < fileNames.length; i++) {
+-            String fileName = fileNames[i];
+-            File f = new File(fileName);
+-            Composition comp = testMultiLayerRead(f, extraChecks.get(i));
+-
+-            // write to tmp file
+-            File tmp = File.createTempFile("pix_tmp", ".pxc");
+-            OpenSaveManager.serializePXC(comp, tmp);
+-
+-            // read back and test
+-            testMultiLayerRead(tmp, extraChecks.get(i));
+-
+-            tmp.delete();
+-        }
+-    }
+-
+-    @Test
+-    public void testReadWriteORA() throws IOException {
+-        Consumer<Layer> extraCheck = secondLayer -> {
+-            assert secondLayer instanceof ImageLayer;
+-            assertSame(BlendingMode.MULTIPLY, secondLayer.getBlendingMode());
+-            assertEquals(0.75, secondLayer.getOpacity(), 0.0001);
+-        };
+-
+-        // read and test
 -        File f = new File("src/test/resources/gimp_ora_test_input.ora");
-+        /*File f = new File("src/test/resources/gimp_ora_test_input.ora");
-         Composition comp = testMultiLayerRead(f);
- 
-         File tmp = File.createTempFile("pix_tmp", ".ora");
-@@ -120,7 +120,7 @@
-         // read back and test
-         testMultiLayerRead(tmp);
- 
+-        Composition comp = testMultiLayerRead(f, extraCheck);
+-
+-        File tmp = File.createTempFile("pix_tmp", ".ora");
+-        OpenRaster.writeOpenRaster(comp, tmp, true);
+-
+-        // read back and test
+-        testMultiLayerRead(tmp, extraCheck);
+-
 -        tmp.delete();
-+        tmp.delete();*/
+-    }
+ 
+-}
+\ No newline at end of file
++}
+Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionTest.java
+===================================================================
+--- pixelitor-3.1.3.orig/src/test/java/pixelitor/CompositionTest.java	2015-07-11 04:30:45.000000000 +0200
++++ pixelitor-3.1.3/src/test/java/pixelitor/CompositionTest.java	2015-07-11 21:46:22.509782746 +0200
+@@ -56,13 +56,6 @@
+     }
+ 
+     @Test
+-    public void testAddNewEmptyLayer() {
+-        comp.addNewEmptyLayer("newLayer", true);
+-        comp.addNewEmptyLayer("newLayer", false);
+-        checkNumLayers(4);
+-    }
+-
+-    @Test
+     public void testSetActiveLayer() {
+         Layer layer = comp.getLayer(0);
+         comp.setActiveLayer(layer, AddToHistory.YES);
+@@ -459,4 +452,4 @@
+         comp.checkInvariant();
      }
  
 -}
 \ No newline at end of file
 +}
+Index: pixelitor-3.1.3/src/test/java/pixelitor/layers/ContentLayerTest.java
+===================================================================
+--- pixelitor-3.1.3.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2015-07-11 04:30:45.000000000 +0200
++++ pixelitor-3.1.3/src/test/java/pixelitor/layers/ContentLayerTest.java	2015-07-11 21:43:41.466437939 +0200
+@@ -42,44 +42,7 @@
+         layer = TestHelper.createTestImageLayer("imageLayer 1", comp);
+     }
+ 
+-    @Test
+-    public void testLayerMovingMethods() {
+-        assertEquals(0, layer.getTranslationX());
+-        assertEquals(0, layer.getTranslationY());
+-
+-        layer.startMovement();
+-
+-        assertEquals(0, layer.getTranslationX());
+-        assertEquals(0, layer.getTranslationY());
+-
+-        layer.moveWhileDragging(2, 2);
+-
+-        assertEquals(2, layer.getTranslationX());
+-        assertEquals(2, layer.getTranslationY());
+-
+-        layer.moveWhileDragging(3, 3);
+-
+-        assertEquals(3, layer.getTranslationX());
+-        assertEquals(3, layer.getTranslationY());
+-
+-        layer.endMovement();
+-
+-        // the layer was enlarged in endMovement, and the translation reset to 0, 0
+-        assertEquals(0, layer.getTranslationX());
+-        assertEquals(0, layer.getTranslationY());
+-
+-        layer.startMovement();
+-        layer.moveWhileDragging(-1, -2);
+-
+-        assertEquals(-1, layer.getTranslationX());
+-        assertEquals(-2, layer.getTranslationY());
+-
+-        layer.endMovement();
+-
+-        // this time the layer was not enlarged
+-        assertEquals(-1, layer.getTranslationX());
+-        assertEquals(-2, layer.getTranslationY());
+-    }
++    
+ 
+     @Test
+     // this method is abstract in ImageLayer, test separately for subclasses
+@@ -134,4 +97,4 @@
+         layer.setupDrawingComposite(g, true);
+         layer.setupDrawingComposite(g, false);
+     }
+-}
+\ No newline at end of file
++}
+Index: pixelitor-3.1.3/src/test/java/pixelitor/layers/ImageLayerTest.java
+===================================================================
+--- pixelitor-3.1.3.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2015-07-11 04:30:45.000000000 +0200
++++ pixelitor-3.1.3/src/test/java/pixelitor/layers/ImageLayerTest.java	2015-07-11 21:45:03.832148532 +0200
+@@ -150,36 +150,17 @@
+     }
+ 
+     @Test
+-    public void testEnlargeLayer() {
+-        layer.enlargeLayer();
+-    }
+-
+-    @Test
+     public void testGetImageForFilterDialogs() {
+         BufferedImage image = layer.getImageForFilterDialogs();
+         assertNotNull(image);
+     }
+ 
+     @Test
+-    public void testCreateTmpDrawingLayer() {
+-        TmpDrawingLayer drawingLayer1 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, true);
+-        assertNotNull(drawingLayer1);
+-        TmpDrawingLayer drawingLayer2 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, false);
+-        assertNotNull(drawingLayer2);
+-    }
+-
+-    @Test
+     public void testMergeTmpDrawingImageDown() {
+         layer.mergeTmpDrawingImageDown();
+     }
+ 
+     @Test
+-    public void testCreateCompositionSizedTmpImage() {
+-        BufferedImage image = layer.createCompositionSizedTmpImage();
+-        assertNotNull(image);
+-    }
+-
+-    @Test
+     public void testGetCanvasSizedSubImage() {
+         // TODO would be better with translation
+         BufferedImage image = layer.getCanvasSizedSubImage();
+@@ -226,4 +207,4 @@
+     public void testCropToCanvasSize() {
+         layer.cropToCanvasSize();
+     }
+-}
+\ No newline at end of file
++}
+Index: pixelitor-3.1.3/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
+===================================================================
+--- pixelitor-3.1.3.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2015-07-11 04:30:45.000000000 +0200
++++ pixelitor-3.1.3/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2015-07-11 21:45:42.640954606 +0200
+@@ -27,14 +27,4 @@
+         assert upperLayer == comp.getActiveLayer();
+     }
+ 
+-    @Test
+-    public void testNormal() {
+-        BufferedImage result = comp.calculateCompositeImage();
+-        assert ImageUtils.compareSmallImages(result, Tests3x3.getStandardImage2());
+-    }
+-
+-    @Test
+-    public void testMultiply() {
+-        upperLayer.setBlendingMode(BlendingMode.MULTIPLY, false, AddToHistory.YES, true);
+-    }
+ }
