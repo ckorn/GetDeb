@@ -1,3 +1,28 @@
+fotoxx (15.07-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Menus were reorganized. User Guide was revised to match.
+    + User Guide was audited and many minor errors were corrected.
+    + Index Image Files: user interface and messages were rationalized.
+    + Undo/Redo button: middle mouse button produces a popup list of edits 
+      done to the current image. Go back to any done or undone edit step. 
+    + Edit Metadata and Search Images: working with thousands of unorganized 
+      image tags was made much more practical: type-in tags or use pick-list.
+    + New batch tool: convert tags for all image files using a from-to list.
+    + New batch tool: select images (click thumbnails) to trash or delete.
+    + New batch tool: find and upright all image files rotated 90 degrees.
+    + Gallery navigation panel: parent directories are buttons instead of
+    text.
+    + Effects > Pencil Sketch: set any desired foreground or background
+    color.
+    + RAW image noise measure was improved (gives slightly lower values).
+    + Select Area: new buttons to quickly change line color while drawing.
+    + Slide Show: zoom-out from a chosen image spot (compliment of zoom-in).
+    + New user option: start session with last gallery now works for albums.
+    + 4 minor bug fixes and 10 user interface improvements.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 08 Jul 2015 21:13:55 +0200
+
 fotoxx (15.06-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
