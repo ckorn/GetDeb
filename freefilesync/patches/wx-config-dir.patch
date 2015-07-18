@@ -1,9 +1,9 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-7.0/Makefile
+Index: freefilesync-7.2/Makefile
 ===================================================================
---- freefilesync-7.0.orig/Makefile	2015-05-12 21:00:19.399616449 +0200
-+++ freefilesync-7.0/Makefile	2015-05-12 21:00:19.395616367 +0200
+--- freefilesync-7.2.orig/Makefile	2015-07-11 21:19:15.448137907 +0200
++++ freefilesync-7.2/Makefile	2015-07-11 21:19:15.444137825 +0200
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
@@ -12,7 +12,7 @@ Index: freefilesync-7.0/Makefile
 +CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
- LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
+ LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
 @@ -71,53 +71,53 @@
  CPP_LIST+=lib/status_handler.cpp
  CPP_LIST+=lib/versioning.cpp
@@ -96,10 +96,10 @@ Index: freefilesync-7.0/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-7.0/RealtimeSync/Makefile
+Index: freefilesync-7.2/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-7.0.orig/RealtimeSync/Makefile	2015-05-12 21:00:19.399616449 +0200
-+++ freefilesync-7.0/RealtimeSync/Makefile	2015-05-12 21:00:19.395616367 +0200
+--- freefilesync-7.2.orig/RealtimeSync/Makefile	2015-07-11 21:19:15.448137907 +0200
++++ freefilesync-7.2/RealtimeSync/Makefile	2015-07-11 21:19:15.444137825 +0200
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
@@ -108,7 +108,7 @@ Index: freefilesync-7.0/RealtimeSync/Makefile
 +CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
- LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_system -lz -pthread
+ LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
 @@ -25,36 +25,36 @@
  CPP_LIST+=../lib/resolve_path.cpp
  CPP_LIST+=../lib/ffs_paths.cpp
