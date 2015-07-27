@@ -1,3 +1,31 @@
+drawpile (1.0.0-1~getdeb1) vivid; urgency=medium
+
+  * New upstream version
+     * Added "Behind" and "Color erase" blending modes
+     * Added support for automatically setting up port forwarding with UPnP
+     * Added notification about Carrier Grade NAT
+     * Added option to show layer numbers instead than titles
+     * Added "thick laser trail" option
+     * Added German translation
+     * Remain somewhat responsive when joining a long-running session
+     * Fixed timeout disconnect caused by missing Ping messages (related to
+     above)
+     * Fixed missing button icons in flipbook window
+     * Fixed crash when using filling a rectangle aligned with bottom right
+     corner of the canvas
+     * Improved touch gesture support (scrolling, zooming and rotating)
+     * Faster image loading
+     * Moved user list to the chat box
+     * OpenRaster: new namespace for Drawpile extensions
+     * Protocol change: all blending modes can now be used with PutImage
+     * Removed Color pressure mode
+     * Scale selections maintaining aspect ratio by holding shift
+     * Pasted images are now placed on their original positions (if copied
+     from Drawpile)
+     * Public session listing filtering for adult content
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 19 Jul 2015 01:55:13 +0200
+
 drawpile (0.9.10-1~getdeb1) vivid; urgency=medium
 
   * New upstream version
