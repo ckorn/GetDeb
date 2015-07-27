@@ -21,14 +21,9 @@ Depends: ${shlibs:Depends},
          xdg-utils,
          dcraw
 Suggests: brasero
-Description: easy-to-use digital photo editor
- Fotoxx is a program for improving digital photos. It allows you to navigate
- through large image directories using a window of thumbnail images, create HDR
- (high dynamic range) images by combining bright and dark images to improve
- details visible in both bright and dark areas, create panoramas by joining
- overlapped images, adjust brightness and color intensity independently for
- different underlying brightness levels, reduce fog or haze by removing
- "whiteness" and intensifying colors, rotate an image (level a tilted image or
- turn 90 degrees), remove red-eyes from electronic flash photos, sharpen,
- resize, or crop images, reduce noise in low-light photos, change color depth,
- and stretch an image by dragging the mouse. 
+Description: Image Editor and Collection Manager
+ Fotoxx is a free open-source Linux program for editing
+ photos and other images, and managing a large image
+ collection.
+ It has a rich set of functions for image editing,
+ metadata editing, image searching, and batch utilities.
