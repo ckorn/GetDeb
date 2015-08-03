@@ -1,3 +1,60 @@
+gparted (0.23.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    ### Key changes include:
+
+      * Add partition name to create dialog and enable online naming
+        (relevant for GPT partitioned disk)
+      * Show serial number in device information
+      * Add support for btrfs set new file system UUID
+      * Prevent UI hang when resizing FAT16/32, HFS and HFS+ file systems
+
+    Bug Fixes
+    ---------
+      * Only set LVM partition flag on tables which support it (#746204)
+      * Add partition name to create dialog and enable online naming
+      (#746214)
+      * Fix some operations fail after paste into existing partition
+      (#746559)
+      * Fix FileSystem object memory leaks in init_filesystems (#749036)
+      * Fix arcane cylinder size adjustment when copying and resizing
+      (#749867)
+      * Reduce the amount of copying of partition objects (#750168)
+      * Refactor LVM2_PV_Info module interface and cache representation
+      (#750582)
+        - Adjust pointers to prevent crash resizing a logical partition
+        (#752587)
+      * Show serial number in device information (#751251)
+      * Add support for btrfs set new file system UUID(#751337)
+      * Prevent UI hang when resizing FAT16/32, HFS and HFS+ file systems
+      (#737022)
+      * Add translation comments for code section setting partition flag
+      (#752901)
+
+    Code Credits
+    ------------
+      Code enhancements are courtesy of Mike Fleetwood and Curtis Gedak.
+
+    Translations (new/updated)
+    --------------------------
+      ca(Jordi Mas), cs(Marek Černocký), de(Wolfgang Stöggl),
+      es(Daniel Mustieles), fr(Alexandre Franke), gd(GunChleoc),
+      hu(Gábor Kelemen, Balázs Úr), is(Sveinn í Felli), it(Milo
+      Casagrande),
+      kk(Baurzhan Muftakhidinov), pa(A S Alam), pl(Piotr Drąg),
+      pt_BR(Enrico Nicoletto), ro(Daniel Șerbănescu), ru(Stas Solovey),
+      sk(Dušan Kazik), sv(Josef Andersson, Anders Jonsson),
+      th(Akom Chotiphantawanon)
+
+    Dependencies (new/updated)
+    --------------------------
+      * hdparm command is required for optional display serial number device
+        information.
+      * btrfs-progs version >= 4.1 June 2015 package is required for
+        optional set new btrfs UUID.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Aug 2015 19:38:54 +0200
+
 gparted (0.22.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
