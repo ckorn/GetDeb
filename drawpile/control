@@ -15,6 +15,7 @@ Homepage: http://drawpile.sourceforge.net/
 Package: drawpile
 Architecture: any
 Depends: ${shlibs:Depends},
-         ${misc:Depends}
+         ${misc:Depends},
+         libqt5svg5
 Description: OpenCanvas similar drawing program
  DrawPile is a collaborative drawing program, similar to OpenCanvas.

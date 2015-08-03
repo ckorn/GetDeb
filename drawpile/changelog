@@ -1,3 +1,9 @@
+drawpile (1.0.0-1~getdeb2~vivid) vivid; urgency=medium
+
+  * Add libqt5svg5 as explicit dependency.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Aug 2015 02:46:44 +0200
+
 drawpile (1.0.0-1~getdeb1) vivid; urgency=medium
 
   * New upstream version
