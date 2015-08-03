@@ -15,7 +15,7 @@ Build-Depends: dpkg-dev (>= 1.16.1~),
                libparted0-dev (>= 2.2),
                intltool,
                gnome-pkg-tools
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://gparted.sourceforge.net
 
 Package: gparted
