@@ -1,3 +1,34 @@
+fotoxx (15.08-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + The brightness distribution for an image can be reshaped using slider 
+      controls and watching the image or graph. The distribution can be 
+      clipped at either end, or stretched or flattened in different zones.
+    + Editing and searching image tags have an additional tool to better deal
+      with a huge list of defined tags. The tag pick-list can be all tags, or
+      only those for a tag category chosen from a category pick-list.
+    + Select Area: an area cutout can be saved as a PNG or TIF file with a 
+      transparency map (alpha channel). Such files can be opened and pasted
+      into other images, with transparency working as it should.
+    + Image edits: image transparency works as it should. Partly or fully 
+      transparent areas can be painted-on or unpainted using the mouse.
+    + Mashup: transparency data in overlay images is utilized and editable.
+    + New batch tool: add/change/delete any metadata for selected image
+    files.
+    + Add Text: quickly add the same text at same position to multiple
+    images.
+    + Gallery thumbnail memory cache is self-limiting to 1 GB main memory.
+    + Several small improvements in the user interface and diagnostic
+    messages.
+    + Bugfix: gallery sort by file modification date used incorrect
+    date/time. 
+    + Bugfix: possible crash in leverage edits if edit function is cancelled.
+    + Bugfix: Select Area: draw/replace area edge did not work properly for 
+      areas previously selected by mouse painting or areas previously
+      finished. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Aug 2015 13:07:24 +0200
+
 fotoxx (15.07-1~getdeb2) trusty; urgency=medium
 
   * Update description
