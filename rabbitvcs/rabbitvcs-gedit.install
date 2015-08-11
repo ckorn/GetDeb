@@ -1,3 +1,2 @@
-clients/gedit/rabbitvcs-plugin.py		usr/lib/gedit-2/plugins
-clients/gedit/rabbitvcs-gedit2.gedit-plugin	usr/lib/gedit-2/plugins
-clients/gedit/rabbitvcs-gedit3.plugin		usr/lib/gedit-2/plugins
+clients/gedit/rabbitvcs-plugin.py usr/lib/gedit/plugins
+clients/gedit/rabbitvcs-gedit3.plugin usr/lib/gedit/plugins

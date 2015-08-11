@@ -1,3 +1,9 @@
+rabbitvcs (0.16-1~getdeb2) trusty; urgency=medium
+
+  * Sync with debian (LP: #1468507)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 11 Aug 2015 22:25:32 +0200
+
 rabbitvcs (0.16-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
