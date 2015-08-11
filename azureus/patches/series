@@ -1,4 +1,3 @@
-delete_tree_class.patch
 debian/speedtest.diff
 debian/update-disable.diff
 fixes/multiuser.diff
