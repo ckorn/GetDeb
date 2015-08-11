@@ -1,3 +1,9 @@
+libiniparse-ruby (1.4.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 11 Aug 2015 13:19:16 +0200
+
 libiniparse-ruby (1.4.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
