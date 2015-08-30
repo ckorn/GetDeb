@@ -1,2 +1,3 @@
 version=3
-http://sf.net/rednotebook/rednotebook-(.*)\.tar\.gz
+https://github.com/jendrikseipp/rednotebook/releases \
+    (?:.*/)?archive/v([\d\.]+)\.tar\.gz
