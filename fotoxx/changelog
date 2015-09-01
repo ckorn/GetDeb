@@ -1,3 +1,21 @@
+fotoxx (15.09-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Program code was revised for latest GTK API breakage (Ubuntu 15.10). 
+    + The font size used in menus and dialogs can now be set by the user. 
+    + Panorama: about 20% faster (3 x 7 megapixels, 2 GHz CPU --> 18 secs).
+    + Paint Transparency: response lag with large images was eliminated.
+    + Area Copy and Paste was reinstated (easier than file save and open).
+    + Use of alpha channel for vacated margins extended to all bend
+    functions.
+    + New: Calibrate Printer: tool to improve image print color accuracy.
+    + Bugfix: crash in Flatten Book Page while marking page edges.
+    + Bugfix: Slide Show fails if translated transition names contain blanks.
+    + Bugfux: Leverage Edit: use of contrast as edit lever was broken.
+    + Seven other minor improvements and fixes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 31 Aug 2015 20:45:26 +0200
+
 fotoxx (15.08-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
