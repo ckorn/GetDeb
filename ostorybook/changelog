@@ -1,3 +1,9 @@
+ostorybook (4.10.0-1~getdeb1) vivid; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Sep 2015 20:41:55 +0200
+
 ostorybook (4.9.17-1~getdeb2) vivid; urgency=medium
 
   * New upstream version
