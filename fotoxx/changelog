@@ -1,3 +1,11 @@
+fotoxx (15.09.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Bugfix: infinite loop when saving RAW file to JPG/TIF/PNG.
+    + Bugfix: Open of TIF file with 8 bits/color was showing 0 or 16.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 03 Sep 2015 18:30:41 +0200
+
 fotoxx (15.09-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
