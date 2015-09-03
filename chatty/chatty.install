@@ -2,4 +2,4 @@ debian/chatty.png		usr/share/pixmaps
 debian/chatty.desktop		usr/share/applications
 debian/scripts/chatty		usr/bin
 dist/chatty.jar			usr/share/chatty
-sounds				usr/share/chatty
+assets				usr/share/chatty

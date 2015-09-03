@@ -1,2 +1,3 @@
 version=3
-http://sf.net/getchatty/Chatty_([\d\.]+)_source\.zip
+https://github.com/chatty/chatty/releases \
+    (?:.*/)?archive/v([\d\.]+)\.tar\.gz
