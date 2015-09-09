@@ -1,3 +1,9 @@
+freefilesync (7.4-1~getdeb2~vivid) vivid; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 09 Sep 2015 19:20:07 +0200
+
 freefilesync (7.2-1~getdeb2~vivid) vivid; urgency=medium
 
   * New upstream version
