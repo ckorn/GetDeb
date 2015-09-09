@@ -1,2 +1,3 @@
 version=3
-http://sf.net/freefilesync/FreeFileSync_([\d\.]+)_(?:s|S)ource\.zip
+http://www.freefilesync.org/download.php \
+    (?:.*/)?FreeFileSync_([\d\.]+)_(?:s|S)ource\.zip
