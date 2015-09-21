@@ -1,3 +1,9 @@
+speedtest-cli (0.3.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 21 Sep 2015 18:55:27 +0200
+
 speedtest-cli (0.3.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
