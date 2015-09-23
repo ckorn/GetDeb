@@ -1,8 +1,8 @@
 # The Debug causes compile errors. Remove it.
-Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
+Index: qstopmotion-2.0.2/src/frontends/qtfrontend/qtfrontend.cpp
 ===================================================================
---- qstopmotion-2.0.0.orig/src/frontends/qtfrontend/qtfrontend.cpp	2015-01-02 22:14:59.743790202 +0100
-+++ qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp	2015-01-02 22:16:11.339788072 +0100
+--- qstopmotion-2.0.2.orig/src/frontends/qtfrontend/qtfrontend.cpp	2015-09-23 19:32:56.332747447 +0200
++++ qstopmotion-2.0.2/src/frontends/qtfrontend/qtfrontend.cpp	2015-09-23 19:32:56.332747447 +0200
 @@ -39,7 +39,6 @@
  
  QtFrontend::QtFrontend(int &argc, char **argv)
@@ -11,9 +11,9 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
  
      domainFacade         = NULL;
      viewFacade           = NULL;
-@@ -53,13 +52,11 @@
-     #endif
-     */
+@@ -62,13 +61,11 @@
+ #endif
+ 
  
 -    qDebug("QtFrontend::Constructor --> End");
  }
@@ -25,23 +25,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
  
      // Save the size and position of the application
      QSize appSize = mw->size();
-@@ -91,15 +88,11 @@
-     delete stApp;
-     stApp = NULL;
- 
--    qDebug("QtFrontend::Destructor --> End");
- }
- 
- 
- bool QtFrontend::checkApplicationDirectory(char *binDirName)
- {
--    qDebug("QtFrontend::checkApplicationDirectory --> Start");
--
--    qDebug() << "QtFrontend::checkApplicationDirectory --> Call command: " << binDirName;
- 
-     bool hasCorrectPermissions = true;
-     QDir homeDir = QDir::home();
-@@ -115,7 +108,6 @@
+@@ -124,7 +121,6 @@
                  tr("You do not have the necessary permissions to run qStopMotion.\n"
                  "You need permission to create the .qstopmotion directory in your home directory."));
  
@@ -49,7 +33,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
              return 1;
          }
      }
-@@ -134,7 +126,6 @@
+@@ -143,7 +139,6 @@
                  tr("You do not have the necessary permissions to run qStopMotion.\n"
                  "You need permission to read, write and execute on the .qstopmotion directory."));
  
@@ -57,58 +41,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
              return 1;
          }
      }
-@@ -154,7 +145,6 @@
-     if (pathLength == -1)
-     {
-         QString command = Util::checkCommand(binDirName);
--        qDebug() << "QtFrontend::checkApplicationDirectory --> Check command: " << command;
-         absoluteAppName = Util::convertPathFromOsSpecific(QString(command));
-         pathLength = absoluteAppName.lastIndexOf("/bin/");
-     }
-@@ -183,8 +173,6 @@
-         pathLength = absoluteAppName.lastIndexOf("/");
-         appBinDirName.append(absoluteAppName.left(pathLength + 1));
-     }
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Direcory: " + appApplicationDirName);
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Binary Direcory: " + appBinDirName);
- 
- #ifdef Q_WS_WIN
-     // Windows version
-@@ -239,33 +227,25 @@
- 
- #endif
- 
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Manual Direcory: " + appManualDirName);
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Translations Direcory: " + appTranslationsDirName);
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Graphics Direcory: " + appGraphicsDirName);
--
- 
-     otherDirName.clear();
-     otherDirName.append(appGraphicsDirName);
-     otherDirName.append(PreferencesTool::iconsDirectory);
-     otherDirName.append(QLatin1String("/"));
-     appIconsDirName.append(otherDirName.toLatin1());
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Icon Direcory: " + appIconsDirName);
- 
-     otherDirName.clear();
-     otherDirName.append(appGraphicsDirName);
-     otherDirName.append(PreferencesTool::picturesDirectory);
-     otherDirName.append(QLatin1String("/"));
-     appPicturesDirName.append(otherDirName.toLatin1());
--    qDebug("QtFrontend::checkApplicationDirectory --> Application Pictures Direcory: " + appPicturesDirName);
- 
--    qDebug("QtFrontend::checkApplicationDirectory --> End");
-     return 0;
- }
- 
- 
- void QtFrontend::init()
- {
--    qDebug("QtFrontend::init --> Start");
- 
-     QString iconFile(getGraphicsDirName());
-     iconFile.append(QLatin1String("qstopmotion_splash_screen.png"));
-@@ -334,27 +314,22 @@
+@@ -343,27 +338,22 @@
  
      // this->testMainWidget();
  
@@ -136,7 +69,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
      return false;
  }
  
-@@ -609,7 +584,6 @@
+@@ -618,7 +608,6 @@
  
  void QtFrontend::initializePreferences()
  {
@@ -144,7 +77,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
  
      QDir homeDir = QDir::home();
      QString preferencesFile = homeDir.absolutePath();
-@@ -624,20 +598,14 @@
+@@ -633,20 +622,14 @@
          // File doesn't exist or is corrupt
          setDefaultPreferences();
      }
@@ -165,7 +98,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
  }
  
  
-@@ -722,11 +690,8 @@
+@@ -731,11 +714,8 @@
  {
      bool ret;
  
@@ -177,7 +110,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
      return ret;
  }
  
-@@ -735,22 +700,15 @@
+@@ -744,22 +724,15 @@
  {
      bool ret;
  
@@ -200,7 +133,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
  }
  
  
-@@ -880,57 +838,47 @@
+@@ -889,57 +862,47 @@
  
  bool QtFrontend::isRecoveryMode()
  {
@@ -258,7 +191,7 @@ Index: qstopmotion-2.0.0/src/frontends/qtfrontend/qtfrontend.cpp
  }
  
  
-@@ -1062,55 +1010,45 @@
+@@ -1071,55 +1034,45 @@
  
  void QtFrontend::test(QWidget *parentWidget, int level)
  {
