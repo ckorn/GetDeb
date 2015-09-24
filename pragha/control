@@ -7,7 +7,6 @@ Build-Depends: debhelper (>= 9),
                libmad0-dev,
                libcdio-cdda-dev,
                libcdio-dev,
-               libcddb2-dev,
                libtagc0-dev,
                libtag1-dev,
                libglib2.0-dev,
@@ -42,8 +41,10 @@ Build-Depends: debhelper (>= 9),
                libnotify-dev,
                libkeybinder-3.0-dev,
                libglyr-dev,
-               libtotem-plparser-dev
-Standards-Version: 3.9.5
+               libtotem-plparser-dev,
+               libclastfm0-dev,
+               rygel-2.4-dev
+Standards-Version: 3.9.6
 Homepage: https://github.com/pragha-music-player/pragha
 
 Package: pragha

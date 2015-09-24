@@ -1,3 +1,33 @@
+pragha (1.3.3-1~getdeb1) vivid; urgency=medium
+
+  * New upstream version
+    News:
+      Rework the interface of equalizer and adds the preamplifier.
+      Add a switch for disabling the equalizer preset easily.
+      Add option to use small icons on tool/headerbar.
+
+    Others Changes:
+      Change "Use Gnome 3 HIG" option to "Use system title bar and borders"
+      Don't use icons on menubar.
+
+    Bugs fixed:
+      Fixes undefined symbols of devices plugin.
+      Use uri instead filename to save playlist with TotemPlPlarser.
+      Add all songs when import online playlists. Issue #81
+      Expand widgets if added as wide control.
+
+    Updates Translations:
+      New Lithuanian translation thanks to Moo.
+      New Polish translation thanks to m_szymczak.
+      Update French translation thanks to Pingax.
+      Update German translation thanks to Atalanttore.
+      Update Portuguese translation thanks to smarquespt.
+      Update Russian translation thanks to Lazy_Kent.
+      Update Bulgarian translation thanks to lyubomirv.
+      Update Swedish translation thanks to monotux.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 24 Sep 2015 19:07:55 +0200
+
 pragha (1.3.2.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
