@@ -1,3 +1,28 @@
+gnucash (1:2.6.8-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug 724738 - Value in "Display Symbol" field not saved.
+    Bug 746998 - "Months Remaining" spinbox in Loan Assistant is
+     non-obvious. Provide a tool tip explaining what it's for.
+    Bug 747795 - Attached file not found. MSWin only.
+     ShellExecuteW("open")
+     doesn't decode http escapes on file: IRIs.
+    Bug 749077 - wrongfully invalidating any account save
+     location/path starting with ".gnucash"
+    Bug 752035 - Transaction Report "Filter By" Not Always Working.
+    Bug 752204 - .gml2 files are modified during build. Since there's
+     no real benefit to saving the files most of the time, don't,
+     but leave the save line in, commented out, to make it easy to
+     write new files if necessary.
+    Bug 752879 - Finance::Quote TZ Date::Manip config variable is
+     deprecated.
+    Bug 753146 - free(): invalid pointer on duplicate transaction
+     when Use Split Action Field for Number is set.
+    Bug 754617 - Gnucash should use PKG_PROG_PKG_CONFIG
+    Bug 754764 Budget Doxygen documentation - gnc-budget-view.c.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 28 Sep 2015 19:57:14 +0200
+
 gnucash (1:2.6.7-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
