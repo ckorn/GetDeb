@@ -1,2 +1,3 @@
 version=3
-http://sf.net/gnucash/gnucash-docs-([\d.]+)\.tar\.gz
+https://github.com/Gnucash/gnucash-docs/releases \
+    (?:.*/)?archive/([\d\.]+)\.tar\.gz
