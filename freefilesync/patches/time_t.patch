@@ -1,0 +1,14 @@
+# yeah, on i386 it's still 32bit
+Index: freefilesync-7.5/ui/version_check.cpp
+===================================================================
+--- freefilesync-7.5.orig/ui/version_check.cpp	2015-09-24 13:28:34.000000000 +0200
++++ freefilesync-7.5/ui/version_check.cpp	2015-10-01 21:50:44.128815766 +0200
+@@ -410,7 +410,7 @@
+ {
+     if (updateCheckActive(lastUpdateCheck))
+     {
+-        static_assert(sizeof(time_t) >= 8, "Still using 32-bit time_t? WTF!!");
++        //static_assert(sizeof(time_t) >= 8, "Still using 32-bit time_t? WTF!!");
+         const time_t now = std::time(nullptr);
+         return numeric::dist(now, lastUpdateCheck) >= 7 * 24 * 3600; //check weekly
+     }
