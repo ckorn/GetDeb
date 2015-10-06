@@ -1,3 +1,9 @@
+gnucash-docs (2.6.9-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 06 Oct 2015 18:58:37 +0200
+
 gnucash-docs (2.6.8-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
