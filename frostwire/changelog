@@ -1,3 +1,9 @@
+frostwire (6.1.5-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 07 Oct 2015 19:58:13 +0200
+
 frostwire (6.0.3-1~getdeb2) trusty; urgency=medium
 
   * Fix startup script
