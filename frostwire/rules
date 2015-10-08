@@ -14,3 +14,7 @@ override_dh_auto_build:
 	cp -p -v build/libs/frostwire.jar lib/jars
 	rm -fr build
 	rm -fr .gradle
+
+override_dh_install:
+	cp run frostwire
+	dh_install
