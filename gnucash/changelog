@@ -1,3 +1,14 @@
+gnucash (1:2.6.9-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug 755920 - Crash (Freeze) when using File Save As.. in Windows OS
+        Fix termination of the loop so that it's not dependent
+        upon Linux paths.
+    Bug 755778 - Test failure: test-engine: duplicate test case paths
+    Bug 755781 - Files with copyright but no grant of license.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 07 Oct 2015 22:17:53 +0200
+
 gnucash (1:2.6.8-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
