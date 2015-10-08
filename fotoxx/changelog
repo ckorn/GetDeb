@@ -1,3 +1,24 @@
+fotoxx (15.10-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + New: Batch Scripts: Perform a series of image edits while recording all
+      menu and dialog inputs into a script file. Execute the script file to 
+      apply the same edits to multiple images selected from gallery pages.
+    + Calibrate Printer: improved for slightly more accurate colors.
+    + Edit curves: The capture distance for mouse selection of nodes to drag 
+      is adjustable (increase default value to make touch pads easier to
+      use).
+    + Batch Add/Change Metadata: a pick-list for commonly used tags was
+    added.
+    + Geographic maps: mouse distance to trigger a popup location name was 
+      made independent of map scale (10 pixels instead of 10 km). 
+    + Bugfix: gallery file selection: clicking on a file name in the list of
+      selected files was sometimes inaccurate and selected the wrong file.
+    + Bugfix: setting geotags by clicking on map locations did not allow an
+      initial location to be revised by clicking somewhere else.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 08 Oct 2015 19:24:07 +0200
+
 fotoxx (15.09.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
