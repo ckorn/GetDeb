@@ -1,3 +1,9 @@
+ncid (1.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 06 Oct 2015 23:51:47 +0200
+
 ncid (1.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
