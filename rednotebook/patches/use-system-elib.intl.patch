@@ -3,20 +3,20 @@ Author: Jonathan Wiltshire <jmw@debian.org>
 Forwarded: no
 Last-Update: 2011-08-09
 
-Index: rednotebook-1.7.0/rednotebook/journal.py
+Index: rednotebook-1.10.3/rednotebook/journal.py
 ===================================================================
---- rednotebook-1.7.0.orig/rednotebook/journal.py	2013-02-28 12:25:24.000000000 +0100
-+++ rednotebook-1.7.0/rednotebook/journal.py	2013-03-01 14:14:18.305822653 +0100
-@@ -47,7 +47,7 @@
+--- rednotebook-1.10.3.orig/rednotebook/journal.py	2015-10-15 20:20:46.118409462 +0200
++++ rednotebook-1.10.3/rednotebook/journal.py	2015-10-15 20:20:46.114409318 +0200
+@@ -45,7 +45,7 @@
  
- ## ---------------------- Enable i18n -------------------------------
+ # ---------------------- Enable i18n -------------------------------
  
 -from rednotebook.external import elibintl
 +import elib.intl
  
  # We need to translate 3 different types of strings:
  # * sourcecode strings
-@@ -61,7 +61,7 @@
+@@ -59,7 +59,7 @@
  
  # Register _() as a global translation function and set up the translation
  try:

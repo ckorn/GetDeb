@@ -1,3 +1,10 @@
+rednotebook (1.10.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Make #hashtags regular expression faster (up to 1000x).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 15 Oct 2015 20:19:50 +0200
+
 rednotebook (1.10.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
