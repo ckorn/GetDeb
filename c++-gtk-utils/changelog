@@ -1,3 +1,9 @@
+c++-gtk-utils (2.2.12-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 19 Oct 2015 19:47:00 +0200
+
 c++-gtk-utils (2.2.11-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
