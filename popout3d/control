@@ -11,6 +11,7 @@ Architecture: all
 Depends: ${misc:Depends},
          python3-pyqt5,
          python3-wand (>=0.3.5),
+         python3-pil,
          imagemagick (>=6.7),
          python (>=2.7),
          hugin (>=2013.0.0)
