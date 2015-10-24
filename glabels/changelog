@@ -1,3 +1,9 @@
+glabels (3.2.1-1~getdeb2~wily) wily; urgency=medium
+
+  * Rebuild for wily
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Oct 2015 20:15:18 +0200
+
 glabels (3.2.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
