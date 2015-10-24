@@ -1,0 +1,26 @@
+# https://github.com/LuminanceHDR/LuminanceHDR/issues/11#issuecomment-150561539
+Index: luminance-2.4.0/CMakeLists.txt
+===================================================================
+--- luminance-2.4.0.orig/CMakeLists.txt	2014-01-27 21:20:46.000000000 +0100
++++ luminance-2.4.0/CMakeLists.txt	2015-10-23 20:56:00.136901731 +0200
+@@ -29,6 +29,7 @@
+ find_package(Qt5Sql)
+ find_package(Qt5Network)
+ find_package(Qt5LinguistTools)
++find_package(Qt5PrintSupport REQUIRED)
+ IF(WIN32)
+ 	find_package(Qt5WinExtras)
+ ENDIF()
+Index: luminance-2.4.0/src/HelpBrowser/CMakeLists.txt
+===================================================================
+--- luminance-2.4.0.orig/src/HelpBrowser/CMakeLists.txt	2014-01-27 21:20:46.000000000 +0100
++++ luminance-2.4.0/src/HelpBrowser/CMakeLists.txt	2015-10-23 20:56:16.889246185 +0200
+@@ -29,7 +29,7 @@
+ 
+ 
+ ADD_LIBRARY(helpbrowser ${FILES_H} ${FILES_CPP} ${FILES_MOC} ${FILES_UI_H} ${FILES_HXX})
+-qt5_use_modules(helpbrowser Core Concurrent Gui Widgets Xml WebKit WebKitWidgets)
++qt5_use_modules(helpbrowser Core Concurrent Gui Widgets Xml WebKit WebKitWidgets PrintSupport)
+ 
+ SET(FILES_TO_TRANSLATE ${FILES_TO_TRANSLATE} ${FILES_CPP} ${FILES_H} ${FILES_UI} ${FILES_HXX} PARENT_SCOPE)
+ SET(LUMINANCE_MODULES_GUI ${LUMINANCE_MODULES_GUI} helpbrowser PARENT_SCOPE)

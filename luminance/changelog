@@ -1,3 +1,9 @@
+luminance (2.4.0-1~getdeb4~wily) wily; urgency=medium
+
+  * Rebuild for wily
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Oct 2015 21:10:42 +0200
+
 luminance (2.4.0-1~getdeb3~utopic) utopic; urgency=medium
 
   * Rebuild for utopic
