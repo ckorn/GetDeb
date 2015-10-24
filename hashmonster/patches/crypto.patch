@@ -1,0 +1,28 @@
+# add includepath and lib
+# change location of rhash.h
+Index: hashmonster-0.2.7/hashmonster.pro
+===================================================================
+--- hashmonster-0.2.7.orig/hashmonster.pro	2011-06-19 19:07:54.000000000 +0200
++++ hashmonster-0.2.7/hashmonster.pro	2015-10-22 23:06:12.719286764 +0200
+@@ -10,6 +10,8 @@
+ !contains( DEFINES, DISABLEQCA ) {
+ 	!build_pass:message( "Enabling libqca..." )
+ 	CONFIG += crypto
++	INCLUDEPATH += /usr/include/QtCrypto
++	LIBS += -lqca
+ }
+ !contains( DEFINES, DISABLERHASH ) {
+ 	!build_pass:message( "Enabling librhash..." )
+Index: hashmonster-0.2.7/hashmonster.h
+===================================================================
+--- hashmonster-0.2.7.orig/hashmonster.h	2011-06-06 21:53:27.000000000 +0200
++++ hashmonster-0.2.7/hashmonster.h	2015-10-22 23:02:12.774302084 +0200
+@@ -42,7 +42,7 @@
+ #endif
+ #ifndef DISABLERHASH
+ namespace rhashns {
+-  #include "rhash/rhash.h"
++  #include "rhash.h"
+ }
+ #endif
+ #include "hmcryptographichash.h"

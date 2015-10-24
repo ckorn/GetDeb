@@ -1,3 +1,9 @@
+hashmonster (0.2.7-1~getdeb3~wily) wily; urgency=medium
+
+  * Rebuild for wily
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Oct 2015 20:58:44 +0200
+
 hashmonster (0.2.7-1~getdeb2) quantal; urgency=low
 
   * Rebuild for quantal
