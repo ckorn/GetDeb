@@ -1,3 +1,0 @@
-version=3
-https://bitbucket.org/MakeHuman/makehuman/downloads \
-    (?:.*/)?([\d\.]+)\.tar\.bz2
