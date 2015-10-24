@@ -1,3 +1,9 @@
+gparted (0.23.0-1~getdeb3~wily) wily; urgency=medium
+
+  * Rebuild for wily
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 21 Oct 2015 20:53:02 +0200
+
 gparted (0.23.0-1~getdeb2~vivid) vivid; urgency=medium
 
   * New upstream version
