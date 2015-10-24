@@ -9,7 +9,7 @@ Standards-Version: 3.9.5
 Homepage: http://www.pagodabox.com
 XS-Ruby-Versions: all
 
-Package: libpagoda-ruby1.8
+Package: libpagoda-ruby2.1
 Architecture: all
 Section: ruby
 XB-Ruby-Versions: ${ruby:Versions}
@@ -34,7 +34,7 @@ Package: libpagoda-ruby
 Architecture: all
 Section: ruby
 Depends: ${misc:Depends},
-         libpagoda-ruby1.8
+         libpagoda-ruby2.1
 Description: Terminal client for pagodabox (dummy package)
  Terminal client for interacting with the pagodabox.
  This client does not contain full API functionality,
@@ -42,4 +42,4 @@ Description: Terminal client for pagodabox (dummy package)
  experience.
  .
  This package is a dependency package, which depends on Ubuntu's
- default Ruby version (currently 1.8.x).
+ default Ruby version (currently 2.1.x).
