@@ -1,6 +1,0 @@
-XnView/lib			usr/lib/xnviewmp
-XnView/Plugins			usr/lib/xnviewmp
-XnView/XnView			usr/lib/xnviewmp
-XnView/xnview.png		usr/share/pixmaps
-debian/xnviewmp.desktop		usr/share/applications
-debian/scripts/xnviewmp		usr/bin

@@ -1,5 +1,0 @@
-debian/avidemux-qt.desktop usr/share/applications
-debian/avidemux-qt.xpm usr/share/pixmaps
-usr/bin/avidemux2_qt4
-usr/lib/libADM_UIQT4.so
-usr/lib/libADM_render_qt4.so

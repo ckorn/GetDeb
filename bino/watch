@@ -1,3 +1,0 @@
-version=3
-opts=pgpsigurlmangle=s/$/.sig/ \
-http://download.savannah.gnu.org/releases/bino/bino-(\d+\.[24680]\.\d+)\.tar\.xz
