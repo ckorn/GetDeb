@@ -4,4 +4,5 @@ popout3d_logo.png		usr/share/popout3d
 popout3d.py			usr/share/popout3d
 popout3d.ui			usr/share/popout3d
 popout3d_ui.py			usr/share/popout3d
+popout3d_start.bmp		usr/share/popout3d
 debian/popout3d.desktop		usr/share/applications
