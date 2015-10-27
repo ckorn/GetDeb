@@ -21,7 +21,8 @@ Homepage: http://gparted.sourceforge.net
 Package: gparted
 Architecture: any
 Depends: ${shlibs:Depends},
-         ${misc:Depends}
+         ${misc:Depends},
+         util-linux
 Suggests: xfsprogs,
           reiserfsprogs,
           reiser4progs,
