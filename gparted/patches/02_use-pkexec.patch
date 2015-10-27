@@ -4,10 +4,10 @@ Description: We are trying to get rid of gksu use in Ubuntu by replacing
  it with pkexec so things like two-factor authentication work. The patch
  adds the policykit policy files required for pkexec.
 
-Index: b/data/Makefile.am
+Index: gparted-0.24.0/data/Makefile.am
 ===================================================================
---- a/data/Makefile.am
-+++ b/data/Makefile.am
+--- gparted-0.24.0.orig/data/Makefile.am	2015-10-27 19:32:43.382552345 +0100
++++ gparted-0.24.0/data/Makefile.am	2015-10-27 19:32:43.378552286 +0100
 @@ -1 +1,10 @@
  SUBDIRS = icons
 +
@@ -19,10 +19,10 @@ Index: b/data/Makefile.am
 +@INTLTOOL_POLICY_RULE@
 +
 +EXTRA_DIST = $(dist_polkit_policy_in_files)
-Index: b/data/Makefile.in
+Index: gparted-0.24.0/data/Makefile.in
 ===================================================================
---- a/data/Makefile.in
-+++ b/data/Makefile.in
+--- gparted-0.24.0.orig/data/Makefile.in	2015-10-27 19:32:43.382552345 +0100
++++ gparted-0.24.0/data/Makefile.in	2015-10-27 19:32:43.378552286 +0100
 @@ -14,6 +14,7 @@
  # PARTICULAR PURPOSE.
  
@@ -39,7 +39,7 @@ Index: b/data/Makefile.in
 +DIST_COMMON = $(dist_polkit_policy_DATA) $(srcdir)/Makefile.am \
 +	$(srcdir)/Makefile.in
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- am__aclocal_m4_deps = $(top_srcdir)/m4/gnome-doc-utils.m4 \
+ am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx_11.m4 \
  	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/libtool.m4 \
 @@ -56,6 +58,29 @@
  	install-pdf-recursive install-ps-recursive install-recursive \
@@ -71,7 +71,7 @@ Index: b/data/Makefile.in
  RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
    distclean-recursive maintainer-clean-recursive
  AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \
-@@ -252,6 +277,10 @@
+@@ -253,6 +278,10 @@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  SUBDIRS = icons
@@ -82,7 +82,7 @@ Index: b/data/Makefile.in
  all: all-recursive
  
  .SUFFIXES:
-@@ -291,6 +320,26 @@
+@@ -292,6 +321,26 @@
  
  clean-libtool:
  	-rm -rf .libs _libs
@@ -109,7 +109,7 @@ Index: b/data/Makefile.in
  
  # This directory's subdirectories are mostly independent; you can cd
  # into them and run `make' without going through this Makefile.
-@@ -487,9 +536,12 @@
+@@ -488,9 +537,12 @@
  	done
  check-am: all-am
  check: check-recursive
@@ -123,7 +123,7 @@ Index: b/data/Makefile.in
  install: install-recursive
  install-exec: install-exec-recursive
  install-data: install-data-recursive
-@@ -540,7 +592,7 @@
+@@ -541,7 +593,7 @@
  
  info-am:
  
@@ -132,7 +132,7 @@ Index: b/data/Makefile.in
  
  install-dvi: install-dvi-recursive
  
-@@ -584,7 +636,7 @@
+@@ -585,7 +637,7 @@
  
  ps-am:
  
@@ -141,7 +141,7 @@ Index: b/data/Makefile.in
  
  .MAKE: $(RECURSIVE_CLEAN_TARGETS) $(RECURSIVE_TARGETS) ctags-recursive \
  	install-am install-strip tags-recursive
-@@ -594,15 +646,18 @@
+@@ -595,15 +647,18 @@
  	ctags ctags-recursive distclean distclean-generic \
  	distclean-libtool distclean-tags distdir dvi dvi-am html \
  	html-am info info-am install install-am install-data \
@@ -168,10 +168,10 @@ Index: b/data/Makefile.in
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
-Index: b/data/com.ubuntu.pkexec.gparted.policy
+Index: gparted-0.24.0/data/com.ubuntu.pkexec.gparted.policy
 ===================================================================
---- /dev/null
-+++ b/data/com.ubuntu.pkexec.gparted.policy
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ gparted-0.24.0/data/com.ubuntu.pkexec.gparted.policy	2015-10-27 19:32:43.378552286 +0100
 @@ -0,0 +1,19 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE policyconfig PUBLIC
@@ -192,10 +192,10 @@ Index: b/data/com.ubuntu.pkexec.gparted.policy
 +  </action>
 +
 +</policyconfig>
-Index: b/data/com.ubuntu.pkexec.gparted.policy.in
+Index: gparted-0.24.0/data/com.ubuntu.pkexec.gparted.policy.in
 ===================================================================
---- /dev/null
-+++ b/data/com.ubuntu.pkexec.gparted.policy.in
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ gparted-0.24.0/data/com.ubuntu.pkexec.gparted.policy.in	2015-10-27 19:32:43.378552286 +0100
 @@ -0,0 +1,19 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE policyconfig PUBLIC
@@ -216,10 +216,10 @@ Index: b/data/com.ubuntu.pkexec.gparted.policy.in
 +  </action>
 +
 +</policyconfig>
-Index: b/po/POTFILES.in
+Index: gparted-0.24.0/po/POTFILES.in
 ===================================================================
---- a/po/POTFILES.in
-+++ b/po/POTFILES.in
+--- gparted-0.24.0.orig/po/POTFILES.in	2015-10-27 19:32:43.382552345 +0100
++++ gparted-0.24.0/po/POTFILES.in	2015-10-27 19:32:43.378552286 +0100
 @@ -1,5 +1,6 @@
  # List of source files containing translatable strings.
  # Please keep this file sorted alphabetically.
