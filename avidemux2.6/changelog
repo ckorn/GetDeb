@@ -1,3 +1,9 @@
+avidemux2.6 (1:2.6.10-1~getdeb3~wily) wily; urgency=medium
+
+  * Rebuild for wily (LP: #1511133)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 28 Oct 2015 23:15:41 +0100
+
 avidemux2.6 (1:2.6.10-1~getdeb2~vivid) vivid; urgency=medium
 
   * New upstream version
