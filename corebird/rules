@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with autoreconf
+
+override_dh_autoreconf:
+	mkdir -p m4
+	touch ChangeLog
+	touch config.rpath
+	AUTOPOINT="intltoolize --automake --copy" dh_autoreconf

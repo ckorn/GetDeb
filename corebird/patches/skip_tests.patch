@@ -1,0 +1,13 @@
+# tests require a display
+Index: corebird-1.1/Makefile.am
+===================================================================
+--- corebird-1.1.orig/Makefile.am	2015-09-30 16:07:26.000000000 +0200
++++ corebird-1.1/Makefile.am	2015-10-29 22:41:10.534191800 +0100
+@@ -1,6 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+ 
+-SUBDIRS = src ui data assets po tests sql
++SUBDIRS = src ui data assets po sql
+ EXTRA_DIST = config.rpath  \
+ 						 intltool-extract.in \
+ 						 intltool-merge.in \

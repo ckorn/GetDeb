@@ -1,0 +1,5 @@
+corebird (1.1-1~getdeb1) wily; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 29 Oct 2015 22:05:16 +0100

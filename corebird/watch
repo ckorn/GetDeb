@@ -1,0 +1,3 @@
+version=3
+https://github.com/baedert/corebird/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz

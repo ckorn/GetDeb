@@ -1,0 +1,25 @@
+Source: corebird
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               libgtk-3-dev,
+               librest-dev,
+               libsoup2.4-dev,
+               libgee-0.8-dev,
+               libjson-glib-dev,
+               libsqlite3-dev,
+               libgstreamer-plugins-base1.0-dev,
+               valac
+Standards-Version: 3.9.5
+Homepage: http://corebird.baedert.org/
+
+Package: corebird
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Native Gtk+ Twitter client
+ Native Gtk+ Twitter client for the Linux desktop.
+ .
+ Corebird is a modern, easy and fun Twitter client.
