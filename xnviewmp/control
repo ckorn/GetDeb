@@ -17,7 +17,13 @@ Build-Depends: debhelper (>= 9),
                zlib1g [i386],
                libqt4-opengl,
                imagemagick,
-               chrpath
+               chrpath,
+               libpulse-dev,
+               libasound-dev,
+               libegl1-mesa,
+               libgtk2.0-0,
+               libxslt1.1,
+               libphonon4
 Standards-Version: 3.9.5
 Homepage: http://www.xnview.com
 
