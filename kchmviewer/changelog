@@ -1,3 +1,20 @@
+kchmviewer (7.4-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    - Version 7.4 released (r450)
+    - Zoom level is now inherited in newly opened windows
+    - Fixed the empty or stale tab names while using the back/forward
+    navigation buttons and new tab options
+    - Added -v and --version command-line options
+    - Added an option (Settings/Browser/Always use single click) to use a
+    single-click to open tree items in the contents/index tabs despite the
+    selected OS activator such as KDE double-click. Off by default.
+    - Fixed TOC parsing on some CHM files which had TOC names without
+    associated URLs.
+    - Disabled encoding selection menu for epubs
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 04 Nov 2015 21:34:15 +0100
+
 kchmviewer (7.3-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
