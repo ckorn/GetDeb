@@ -1,3 +1,21 @@
+simplescreenrecorder (0.3.6-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 03 Nov 2015 20:39:40 +0100
+
+simplescreenrecorder (0.3.4-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+    - Allow user to start recording with hotkey or systray
+      even when not on the recording page.
+    - Fixed JACK input bug that could cause deadlocks in
+      rare cases.
+    - Added full support for NV12. If FFmpeg is compiled
+      with NVENC support, this will allow you to use it.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 Nov 2015 01:01:05 +0100
+
 simplescreenrecorder (0.3.3-1~getdeb3~wily) wily; urgency=medium
 
   * Rebuild for wily

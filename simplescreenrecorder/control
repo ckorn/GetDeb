@@ -21,7 +21,7 @@ Build-Depends: debhelper (>= 9),
                libpulse-dev,
                libjack-jackd2-dev,
                libxi-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://www.maartenbaert.be/simplescreenrecorder/
 
 Package: simplescreenrecorder
