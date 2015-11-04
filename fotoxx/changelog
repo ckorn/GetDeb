@@ -1,3 +1,34 @@
+fotoxx (15.11.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    2015 Nov 03  v.15.11.1
+    + Bugfix: Rename failed to automatically open the next following file.
+    + Translation updates: Spanish, Catalan, Portuguese.
+
+    2015 Nov 01  v.15.11
+    + Folders in gallery pages show contained sub-folder and image file
+    counts.
+    + Pattern: pattern can imprint target image without changing image
+    colors.
+    + Adjust HSL: the amount of color change is proportional to the match
+    with
+      a selected target color, and this match range is adjustable.
+    + Batch Convert: more flexibility in the formatting of output file names.
+    + New: Spherical image projection with variable radius of curvature.
+    + Trim/Rotate: if an image is leveled using mouse drag, the trim
+    rectangle 
+      is automatically maximized, removing the need to do this manually.
+    + If an edit dialog is started and left/right image margins are present, 
+      the image is pushed to the right side so the dialog can be positioned
+      over the expanded left margin and menu panel, to cover less image area.
+      
+      This position is saved and restored the next time the dialog is used. 
+    + Saving to file type .bmp was removed, since all metadata is lost.
+    + A new transition type was added to Slide Show: collapsing sphere. 
+    + Six other minor improvements and bug fixes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 03 Nov 2015 20:37:51 +0100
+
 fotoxx (15.10-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
