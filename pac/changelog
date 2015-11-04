@@ -1,3 +1,11 @@
+pac (4.5.5.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    . Added support for perl 5.22 64bit for library Vte.so
+    . Minor variable substitution (<ASK:desc|opt1|opt2|...|optN>) bugfixing
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 04 Nov 2015 21:33:38 +0100
+
 pac (4.5.5.5-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
