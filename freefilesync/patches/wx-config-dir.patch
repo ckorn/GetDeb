@@ -1,15 +1,15 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-7.2/Makefile
+Index: freefilesync-7.6/Makefile
 ===================================================================
---- freefilesync-7.2.orig/Makefile	2015-07-12 02:52:43.780921722 +0200
-+++ freefilesync-7.2/Makefile	2015-07-12 02:52:43.776921640 +0200
+--- freefilesync-7.6.orig/Makefile	2015-11-03 21:12:22.096740980 +0100
++++ freefilesync-7.6/Makefile	2015-11-03 21:13:24.970063038 +0100
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
  
--CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../.. -I../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
-+CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+-CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../.. -I../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
++CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
@@ -96,16 +96,16 @@ Index: freefilesync-7.2/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-7.2/RealtimeSync/Makefile
+Index: freefilesync-7.6/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-7.2.orig/RealtimeSync/Makefile	2015-07-12 02:52:43.780921722 +0200
-+++ freefilesync-7.2/RealtimeSync/Makefile	2015-07-12 02:52:43.776921640 +0200
+--- freefilesync-7.6.orig/RealtimeSync/Makefile	2015-11-03 21:12:22.096740980 +0100
++++ freefilesync-7.6/RealtimeSync/Makefile	2015-11-03 21:16:12.913583544 +0100
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
  
--CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../../.. -I../../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
-+CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+-CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I../../.. -I../../../zenXml -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
++CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread

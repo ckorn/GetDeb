@@ -1,27 +1,27 @@
 # make_unique is a new feature
-Index: freefilesync-7.5/Makefile
+Index: freefilesync-7.6/Makefile
 ===================================================================
---- freefilesync-7.5.orig/Makefile	2015-10-01 20:49:45.000000000 +0200
-+++ freefilesync-7.5/Makefile	2015-10-01 20:54:47.564362298 +0200
+--- freefilesync-7.6.orig/Makefile	2015-11-03 21:19:13.645358498 +0100
++++ freefilesync-7.6/Makefile	2015-11-03 21:19:41.357936360 +0100
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
  
--CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
-+CXXFLAGS  = -std=c++11 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+-CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
++CXXFLAGS  = -std=c++14 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
-Index: freefilesync-7.5/RealtimeSync/Makefile
+Index: freefilesync-7.6/RealtimeSync/Makefile
 ===================================================================
---- freefilesync-7.5.orig/RealtimeSync/Makefile	2015-10-01 20:49:45.000000000 +0200
-+++ freefilesync-7.5/RealtimeSync/Makefile	2015-10-01 21:00:56.025273192 +0200
+--- freefilesync-7.6.orig/RealtimeSync/Makefile	2015-11-03 21:19:13.645358498 +0100
++++ freefilesync-7.6/RealtimeSync/Makefile	2015-11-03 21:19:39.881905589 +0100
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
  
--CXXFLAGS  = -std=c++11 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
-+CXXFLAGS  = -std=c++11 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+-CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
++CXXFLAGS  = -std=c++14 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
