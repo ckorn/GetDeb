@@ -1,3 +1,9 @@
+popout3d (1.3.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 31 Oct 2015 21:54:44 +0100
+
 popout3d (1.3-1~getdeb2) trusty; urgency=medium
 
   * Fixes (LP: #1426367)
