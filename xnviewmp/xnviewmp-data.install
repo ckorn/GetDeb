@@ -1,0 +1,6 @@
+XnView/AddOn			usr/share/xnviewmp
+XnView/language			usr/share/xnviewmp
+XnView/UI			usr/share/xnviewmp
+XnView/*.txt			usr/share/xnviewmp
+XnView/qt.conf			usr/share/xnviewmp
+converted_icons/*       	usr/share

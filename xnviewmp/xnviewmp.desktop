@@ -1,0 +1,11 @@
+[Desktop Entry]
+Terminal=false
+Exec=xnviewmp %U
+Icon=xnview
+Type=Application
+Comment=Graphic viewer, browser, converter
+Categories=Graphics;
+StartupNotify=true
+Name=XnView Multi Platform
+GenericName=XnViewMP
+MimeType=image/bmp;image/gif;image/jpeg;image/png;image/tiff;image/x-tga;image/x-pcx;image/jp2;

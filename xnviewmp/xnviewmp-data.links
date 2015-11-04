@@ -1,0 +1,3 @@
+/usr/share/perl5/File      usr/share/xnviewmp/AddOn/lib/File
+/usr/share/perl5/Image     usr/share/xnviewmp/AddOn/lib/Image
+/usr/bin/exiftool          usr/share/xnviewmp/AddOn/exiftool
