@@ -31,3 +31,4 @@ endif
 	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/SEQUENCE-LICENSE
 	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/SQLJET-LICENSE
 	rm -f debian/pycharm-data/usr/share/pycharm/plugins/svn4idea/lib/TRILEAD-LICENSE
+	rm -f debian/pycharm/usr/lib/pycharm/bin/fsnotifier-arm
