@@ -10,7 +10,7 @@ Package: pycharm
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         java-openjdk7-jre | java7-runtime | java6-runtime | java5-runtime | java2-runtime | java-runtime,
+         java-openjdk7-jre | java7-runtime,
          pycharm-data (= ${source:Version}),
          python
 Description: Python IDE
