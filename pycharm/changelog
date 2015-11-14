@@ -1,3 +1,9 @@
+pycharm (5.0.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Nov 2015 20:50:21 +0100
+
 pycharm (5.0-1~getdeb2) trusty; urgency=medium
 
   * Remove dependencies on old Java versions
