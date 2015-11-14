@@ -1,3 +1,12 @@
+rednotebook (1.11-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    * Remind users to make new backup if last backup is older than a month.
+    * When inserting a link for a selected text passage, replace text
+    passage.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Nov 2015 20:49:57 +0100
+
 rednotebook (1.10.4-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
