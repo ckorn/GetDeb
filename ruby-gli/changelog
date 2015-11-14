@@ -1,3 +1,9 @@
+ruby-gli (2.13.3-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 14 Nov 2015 20:52:01 +0100
+
 ruby-gli (2.13.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
