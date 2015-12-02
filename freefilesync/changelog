@@ -1,3 +1,9 @@
+freefilesync (7.7-1~getdeb1) wily; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Dec 2015 20:08:30 +0100
+
 freefilesync (7.6-1~getdeb1) wily; urgency=medium
 
   * New upstream version
