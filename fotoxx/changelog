@@ -1,3 +1,39 @@
+fotoxx (15.12-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Adjust HSL menu: better control of the color range to select and
+    adjust.
+    + Fix Perspective: new option to automatically trim using the corner
+    markers.
+    + Trim/Rotate: new option: level a slanted image using EXIF RollAngle if
+    present.
+    + Keyboard Shortcuts: list all existing shortcuts in a popup window. 
+      A button is available to start a dialog to add or revise shortcuts.
+    + Metadata short report: user can specify extra items to include in the
+    report.
+    + New: Metadata batch report - list selected metadata for selected image
+    files.
+    + File Save (New Version): this function can now have a keyboard
+    shortcut.
+    + Maps: red-dot locations are consolidated only for separations < 100
+    meters.
+      Previously location names were used, but this is sometimes too broad.
+    + Maps: custom user maps are now separated from standard maps. 
+      This prevents losing them if the fotoxx-maps package is re-installed.
+    + TIFF files are now saved without compression. The file size may be
+    slightly
+      greater or less, but the processing time is reduced 90%. 
+    + Slide Show: new transition: image turns like a book page to reveal next
+    image.
+    + Bugfix: the Upright function could not step to the next image.
+    + Bugfix: PT Panorama was broken due to an interface change in Panorama
+    Tools.
+    + Bugfix: possible crash when leveling an image by dragging the mouse.
+    + Bugfix: possible crash if a select area is abandoned with nothing
+    selected.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Dec 2015 19:59:13 +0100
+
 fotoxx (15.11.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
