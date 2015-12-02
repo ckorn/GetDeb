@@ -1,3 +1,9 @@
+upp (9251-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Dec 2015 20:59:37 +0100
+
 upp (8227-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
