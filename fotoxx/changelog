@@ -1,3 +1,9 @@
+fotoxx (15.12-1~getdeb2) trusty; urgency=medium
+
+  * Fix debian/watch
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 13 Dec 2015 19:26:09 +0100
+
 fotoxx (15.12-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
