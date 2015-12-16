@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@ --parallel --buildsystem=cmake
+
+override_dh_auto_install:
+	dh_auto_install
+
+	mkdir -p debian/keepassx/usr/share/icons/hicolor/16x16/apps \
+	         debian/keepassx/usr/share/icons/hicolor/24x24/apps \
+	         debian/keepassx/usr/share/icons/hicolor/32x32/apps \
+	         debian/keepassx/usr/share/icons/hicolor/48x48/apps \
+	         debian/keepassx/usr/share/icons/hicolor/64x64/apps \
+	         debian/keepassx/usr/share/icons/hicolor/128x128/apps \
+	         debian/keepassx/usr/share/icons/hicolor/scalable/apps \
+	         debian/keepassx/usr/share/pixmaps
+
+	cd debian/keepassx/usr/share/pixmaps && ln -s ../icons/hicolor/32x32/apps/keepassx.png .
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf bin build
