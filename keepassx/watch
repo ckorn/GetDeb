@@ -1,0 +1,3 @@
+version=3
+https://github.com/keepassx/keepassx/releases \
+    (?:.*/)?archive/([\d\.]+)\.tar\.gz
