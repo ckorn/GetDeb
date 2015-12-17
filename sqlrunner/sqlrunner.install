@@ -1,3 +1,0 @@
-sqlrunner/*.jar usr/lib/sqlrunner
-debian/scripts/sqlrunner usr/bin
-debian/sqlrunner.desktop usr/share/applications
