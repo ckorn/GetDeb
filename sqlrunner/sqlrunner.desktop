@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=SQLRunner
-Comment=Java developer's oriented JDBC client
-Exec=sqlrunner
-Icon=sqlrunner
-Type=Application
-Terminal=false
-Categories=Database;Utility;
