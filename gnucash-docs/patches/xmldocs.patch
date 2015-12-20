@@ -1,0 +1,21 @@
+# Revert https://github.com/Gnucash/gnucash-docs/commit/254029ab75db44a3634a67e274a20ed86d72aa7a
+diff --git a/xmldocs.make b/xmldocs.make
+index 7bcc8e4..80ee8dc 100644
+--- a/xmldocs.make
++++ b/xmldocs.make
+@@ -82,7 +82,7 @@ all: ${OMF}
+ # ************** Rules to make and install html documentation ********************
+ styledir = $(top_srcdir)/stylesheet
+ CLEANFILES += $(docname)/*.html
+-figfiles = `ls $(figdir)/*.png`
++figfiles = $(figdir)/*.png
+ html: all convert-html copy-pics copy-style
+ 
+ # Convert xml to html with xsltproc
+@@ -151,4 +151,4 @@ uninstall-html:
+ 	fi
+ 
+ check:
+-	xmllint --valid --noout ${srcdir}/${docname}.xml
++	xmllint --valid --noout ${srcdir}/${docname}.xml
+\ No newline at end of file
