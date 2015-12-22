@@ -1,3 +1,36 @@
+gnucash (1:2.6.10-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug 627692 - Report options, Account Selection, "select all" => not all
+       accounts selected, only visible ones
+    Bug 646129 - Account selection in reports: 'Select Children' doesn't
+       actually select children if they are collapsed.
+    Bug 662126 - Cannot create scheduled transaction for dividend
+    reinvestment
+    Bug 742321 - Reset temporary prefs on application startup
+    Bug 745101 - No warning when quitting with unsaved file.
+       When the file was first created without the New File Assistant.
+    Bug 746155 - Reports: html-acct-table prepend-row! & prepend-col!
+       unknown variables Fixed following the suggestions by
+      Tony Kerns.
+    Bug 754192 - Since Last Run Dialog asks for security price even if not
+       needed.
+    Bug 754533 -  No Account Templates Error Patch
+    Bug 755781 - Files with copyright but no grant of license.
+    Bug 756335 - When importing, date selection causes exit crash
+    Bug 756339 - Prices table not updated
+    Bug 756720 - configure fails to find libgoffice 0.10-10 (0.10.18-1)
+       While we can't support libgoffice 0.10 because that would
+      require gtk3 we can improve the error message if no libgoffice
+      0.8.x version is found.
+    Bug 757378 - Display the user-defined display symbol for non-currency
+       commodities.
+    Bug 759224 - illegal dates in stock transactions cause corrupt file.
+    Bug 759294 - New the billing term are not saved during invoice editing.
+       Prevent editing the terms from the invoice view.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 22 Dec 2015 20:19:24 +0100
+
 gnucash (1:2.6.9-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
