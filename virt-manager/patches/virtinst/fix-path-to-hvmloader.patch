@@ -7,9 +7,11 @@ Closes: #685749
  virtinst/guest.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
---- a/virtinst/guest.py
-+++ b/virtinst/guest.py
-@@ -719,7 +719,7 @@
+Index: virt-manager-1.3.2/virtinst/guest.py
+===================================================================
+--- virt-manager-1.3.2.orig/virtinst/guest.py	2015-12-24 22:16:54.325807733 +0100
++++ virt-manager-1.3.2/virtinst/guest.py	2015-12-24 22:16:54.321807644 +0100
+@@ -752,7 +752,7 @@
              self.os.init = self.os.init or "/bin/sh"
  
          if not self.os.loader and self.os.is_hvm() and self.type == "xen":

@@ -3,9 +3,11 @@ Author: Marc Deslauriers <marc.deslauriers@canonical.com>
 Forwarded: not yet
 Updated: 2014-06-20
 
---- a/virtinst/osdict.py
-+++ b/virtinst/osdict.py
-@@ -166,6 +166,9 @@
+Index: virt-manager-1.3.2/virtinst/osdict.py
+===================================================================
+--- virt-manager-1.3.2.orig/virtinst/osdict.py	2015-12-24 22:17:01.845974883 +0100
++++ virt-manager-1.3.2/virtinst/osdict.py	2015-12-24 22:17:01.841974794 +0100
+@@ -168,6 +168,9 @@
          "ubuntuquantal" : "ubuntu12.10",
          "ubunturaring" : "ubuntu13.04",
          "ubuntusaucy" : "ubuntu13.10",

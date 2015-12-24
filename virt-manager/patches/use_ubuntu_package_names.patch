@@ -3,9 +3,11 @@ Author: Marc Deslauriers <marc.deslauriers@ubuntu.com>
 Forwarded: no, Ubuntu-specific
 Updated: 2014-02-17
 
---- a/virtManager/engine.py
-+++ b/virtManager/engine.py
-@@ -180,7 +180,7 @@
+Index: virt-manager-1.3.2/virtManager/engine.py
+===================================================================
+--- virt-manager-1.3.2.orig/virtManager/engine.py	2015-12-24 22:17:07.022089864 +0100
++++ virt-manager-1.3.2/virtManager/engine.py	2015-12-24 22:17:07.018089775 +0100
+@@ -217,7 +217,7 @@
          # Manager fail message
          msg = _("Could not detect a default hypervisor. Make\n"
                  "sure the appropriate virtualization packages\n"
