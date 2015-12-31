@@ -1,3 +1,9 @@
+skype-call-recorder (0.11-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 30 Dec 2015 19:20:45 +0100
+
 skype-call-recorder (0.9-1~getdeb2~wily) wily; urgency=medium
 
   * Rebuild for wily
