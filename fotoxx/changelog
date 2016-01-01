@@ -1,3 +1,28 @@
+fotoxx (16.01-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Edit Any Metadata and Batch Add/Change Metadata: faster/easier UI:
+    mouse point and click to select metadata items from a list of most likely
+      items.
+    + Panorama: a manual alignment option was added for images with no clear 
+      features in the overlap area that can be used for auto-alignment.
+    + Batch Convert: add an overlay image to output images (e.g. a credit
+    line).
+    + Slide Show: minor changes to improve user interface (see User Guide).
+    + Image right-shift is now a user option with no more back-and-forth
+    motion.
+    + Search Images: new option for text data matching: case-sensitive or
+    not.
+    + New user option: default gallery sort: file name, file mod date, photo
+    date.
+    + A new function for color saturation was added (separate from Retouch
+    Combo).
+    + Bugfix: Search Images for metadata was including some non-matching
+    images.
+    + Bugifx: possible crash in Select Area if 'extend to corner' is active. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Jan 2016 17:31:03 +0100
+
 fotoxx (15.12.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
