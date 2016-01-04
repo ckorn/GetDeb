@@ -1,4 +1,4 @@
 debian/init.d/ncid-samba		etc/init.d
 etc/ncid/conf.d/ncid-samba.conf
 usr/share/man/man1/ncid-samba.1
-usr/share/ncid/ncid-samba
+usr/share/ncid/modules/ncid-samba
