@@ -1,4 +1,4 @@
 debian/init.d/ncid-mythtv		etc/init.d
 usr/share/man/man1/ncid-mythtv.1
-usr/share/ncid/ncid-mythtv
+usr/share/ncid/modules/ncid-mythtv
 etc/ncid/conf.d/ncid-mythtv.conf

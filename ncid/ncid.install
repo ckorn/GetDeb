@@ -14,6 +14,7 @@ etc/ncid/sip2ncid.conf
 etc/ncid/wc2ncid.conf
 etc/ncid/yac2ncid.conf
 etc/ncid/rn2ncid.conf
+etc/ncid/obi2ncid.conf
 usr/bin/cidalias
 usr/bin/cidcall
 usr/bin/cidupdate
@@ -22,6 +23,8 @@ usr/bin/wct
 usr/bin/wc2ncid
 usr/bin/yac2ncid
 usr/bin/rn2ncid
+usr/bin/ncidutil
+usr/bin/obi2ncid
 usr/sbin/ncidd
 usr/sbin/sip2ncid
 usr/share/man/man1/cidalias.1
@@ -36,6 +39,9 @@ usr/share/man/man1/wc2ncid.1
 usr/share/man/man1/yac2ncid.1
 usr/share/man/man1/ncid-notify.1
 usr/share/man/man1/rn2ncid.1
+usr/share/man/man1/obi2ncid.1
+usr/share/man/man1/ncidutil.1
+usr/share/man/man5/obi2ncid.conf.5
 usr/share/man/man5/ncid2ncid.conf.5
 usr/share/man/man5/ncidd.alias.5
 usr/share/man/man5/ncidd.blacklist.5
@@ -51,7 +57,11 @@ usr/share/man/man7/ncidgateways.7
 usr/share/man/man7/ncidtools.7
 usr/share/man/man8/ncidd.8
 usr/share/man/man8/sip2ncid.8
-usr/share/ncid/ncidrotate
-usr/share/ncid/ncid-alert
-usr/share/ncid/ncid-notify
-usr/share/ncid/ncid-wakeup
+usr/share/ncid/sys/ncidrotate
+usr/share/ncid/modules/ncid-alert
+usr/share/ncid/modules/ncid-notify
+usr/share/ncid/modules/ncid-wakeup
+usr/share/ncid/recordings/CannotBeCompleted.rmd
+usr/share/ncid/recordings/NumberDisconnected.rmd
+usr/share/ncid/recordings/CallingDeposit.rmd
+usr/share/ncid/recordings/NotInService.rmd
