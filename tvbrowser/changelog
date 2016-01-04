@@ -1,3 +1,9 @@
+tvbrowser (3.4.3-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 03 Jan 2016 22:39:43 +0100
+
 tvbrowser (3.4.2-1~getdeb2~wily) wily; urgency=medium
 
   * New upstream version
