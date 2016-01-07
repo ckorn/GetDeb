@@ -1,3 +1,11 @@
+fotoxx (16.01.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Bugfix: Search Image by tags: uppercase/lowercase failure.
+    + Translation updates for Spanish, Catalan, Italian.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 06 Jan 2016 19:13:43 +0100
+
 fotoxx (16.01-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
