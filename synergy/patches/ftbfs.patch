@@ -1,0 +1,116 @@
+Index: synergy-1.7.5/src/lib/arch/unix/ArchNetworkBSD.cpp
+===================================================================
+--- synergy-1.7.5.orig/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-01-09 00:53:39.000000000 +0100
++++ synergy-1.7.5/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-01-09 00:54:28.641267511 +0100
+@@ -332,7 +332,7 @@
+ 		do {
+ 			ignore = read(unblockPipe[0], dummy, sizeof(dummy));
+ 		} while (errno != EAGAIN);
+-
++		ignore++;
+ 		// don't count this unblock pipe in return value
+ 		--n;
+ 	}
+@@ -505,6 +505,7 @@
+ 		int ignore;
+ 
+ 		ignore = write(unblockPipe[1], &dummy, 1);
++		ignore++;
+ 	}
+ }
+ 
+Index: synergy-1.7.5/src/lib/synergy/ArgsBase.cpp
+===================================================================
+--- synergy-1.7.5.orig/src/lib/synergy/ArgsBase.cpp	2015-11-19 20:51:14.000000000 +0100
++++ synergy-1.7.5/src/lib/synergy/ArgsBase.cpp	2016-01-09 01:23:18.155836747 +0100
+@@ -21,15 +21,9 @@
+ ArgsBase::ArgsBase() :
+ #if SYSAPI_WIN32
+ m_daemon(false), // daemon mode not supported on windows (use --service)
+-m_debugServiceWait(false),
+-m_pauseOnExit(false),
+-m_stopOnDeskSwitch(false),
+ #else
+ m_daemon(true), // backward compatibility for unix (daemon by default)
+ #endif
+-#if WINAPI_XWINDOWS
+-m_disableXInitThreads(false),
+-#endif
+ m_backend(false),
+ m_restartable(true),
+ m_noHooks(false),
+@@ -40,6 +34,14 @@
+ m_disableTray(false),
+ m_enableIpc(false),
+ m_enableDragDrop(false),
++#if SYSAPI_WIN32
++m_debugServiceWait(false),
++m_pauseOnExit(false),
++m_stopOnDeskSwitch(false),
++#endif
++#if WINAPI_XWINDOWS
++m_disableXInitThreads(false),
++#endif
+ m_shouldExit(false),
+ m_synergyAddress(),
+ m_enableCrypto(false),
+Index: synergy-1.7.5/src/lib/platform/XWindowsEventQueueBuffer.cpp
+===================================================================
+--- synergy-1.7.5.orig/src/lib/platform/XWindowsEventQueueBuffer.cpp	2015-11-19 20:51:14.000000000 +0100
++++ synergy-1.7.5/src/lib/platform/XWindowsEventQueueBuffer.cpp	2016-01-09 01:34:01.613098346 +0100
+@@ -54,10 +54,10 @@
+ 
+ XWindowsEventQueueBuffer::XWindowsEventQueueBuffer(
+ 		Display* display, Window window, IEventQueue* events) :
+-	m_events(events),
+ 	m_display(display),
+ 	m_window(window),
+-	m_waiting(false)
++	m_waiting(false),
++	m_events(events)
+ {
+ 	assert(m_display != NULL);
+ 	assert(m_window  != None);
+Index: synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp
+===================================================================
+--- synergy-1.7.5.orig/src/lib/platform/XWindowsScreen.cpp	2015-11-19 20:51:14.000000000 +0100
++++ synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp	2016-01-09 01:53:15.672778595 +0100
+@@ -96,6 +96,7 @@
+ 		bool disableXInitThreads,
+ 		int mouseScrollDelta,
+ 		IEventQueue* events) :
++	PlatformScreen(events),
+ 	m_isPrimary(isPrimary),
+ 	m_mouseScrollDelta(mouseScrollDelta),
+ 	m_display(NULL),
+@@ -120,8 +121,7 @@
+ 	m_xkb(false),
+ 	m_xi2detected(false),
+ 	m_xrandr(false),
+-	m_events(events),
+-	PlatformScreen(events)
++	m_events(events)
+ {
+ 	assert(s_screen == NULL);
+ 
+@@ -1272,7 +1272,6 @@
+ 				cookie->extension == xi_opcode) {
+ 			if (cookie->evtype == XI_RawMotion) {
+ 				// Get current pointer's position
+-				Window root, child;
+ 				XMotionEvent xmotion;
+ 				xmotion.type = MotionNotify;
+ 				xmotion.send_event = False; // Raw motion
+Index: synergy-1.7.5/src/lib/plugin/ns/SecureSocket.cpp
+===================================================================
+--- synergy-1.7.5.orig/src/lib/plugin/ns/SecureSocket.cpp	2015-11-19 20:51:14.000000000 +0100
++++ synergy-1.7.5/src/lib/plugin/ns/SecureSocket.cpp	2016-01-09 02:00:58.590245070 +0100
+@@ -529,7 +529,7 @@
+ SecureSocket::verifyCertFingerprint()
+ {
+ 	// calculate received certificate fingerprint
+-	X509 *cert = cert = SSL_get_peer_certificate(m_ssl->m_ssl);
++	X509 *cert = SSL_get_peer_certificate(m_ssl->m_ssl);
+ 	EVP_MD* tempDigest;
+ 	unsigned char tempFingerprint[EVP_MAX_MD_SIZE];
+ 	unsigned int tempFingerprintLen;
