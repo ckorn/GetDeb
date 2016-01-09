@@ -7,3 +7,5 @@ src/gui/ui_ScreenSettingsDialogBase.h
 src/gui/ui_ServerConfigDialogBase.h
 src/gui/ui_SettingsDialogBase.h
 src/gui/ui_SetupWizardBase.h
+src/gui/ui_AddClientDialogBase.h
+src/gui/ui_PluginWizardPageBase.h
