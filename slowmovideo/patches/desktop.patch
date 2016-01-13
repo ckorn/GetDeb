@@ -1,0 +1,28 @@
+# fix creation of desktop file
+Index: slowmovideo-0.4+git160113/src/slowmoVideo/slowmoUI/CMakeLists.txt
+===================================================================
+--- slowmovideo-0.4+git160113.orig/src/slowmoVideo/slowmoUI/CMakeLists.txt	2015-12-18 17:41:23.000000000 +0100
++++ slowmovideo-0.4+git160113/src/slowmoVideo/slowmoUI/CMakeLists.txt	2016-01-13 21:17:59.952430779 +0100
+@@ -147,20 +147,16 @@
+ # create desktop file for KDE/Gnome
+ # desktop file section
+ 	file( WRITE "${PROJECT_BINARY_DIR}/slowmoUI.desktop"
+-"#!/usr/bin/env xdg-open
+-[Desktop Entry]
++"[Desktop Entry]
+ Type=Application
+ Comment=Slow Motion Video
+ Exec=${CMAKE_INSTALL_PREFIX}/bin/slowmoUI
+ GenericName=slowmoVideo
+-Icon=${CMAKE_INSTALL_PREFIX}/share/icons/AppIcon.png
+-MimeType=
++Icon=slowmovideo.png
+ Name=slowmoUI
+ Terminal=false
+ Categories=Qt;AudioVideo;Video;\n")
+ 
+-	#install ( FILES icons/slowmoUI.png DESTINATION share/icons )
+-	install ( FILES res/AppIcon.png DESTINATION share/icons )
+ 	install ( FILES ${PROJECT_BINARY_DIR}/slowmoUI.desktop DESTINATION share/applications
+ 		PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
+ )

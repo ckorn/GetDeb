@@ -1,0 +1,19 @@
+# hardcode default path to ffmpeg
+Index: slowmovideo-0.4+git160113/src/slowmoVideo/slowmoUI/mainwindow.cpp
+===================================================================
+--- slowmovideo-0.4+git160113.orig/src/slowmoVideo/slowmoUI/mainwindow.cpp	2015-12-18 17:41:23.000000000 +0100
++++ slowmovideo-0.4+git160113/src/slowmoVideo/slowmoUI/mainwindow.cpp	2016-01-13 22:25:02.899747113 +0100
+@@ -182,10 +182,11 @@
+     }
+     
+     if (!settings.contains("binaries/ffmpeg")) {
+-        qDebug() << "need to find ffmpeg";
++        /*qDebug() << "need to find ffmpeg";
+ 	QMessageBox::information( this, 
+ 		"valid FFMPEG not found", "Please choose a working ffmpeg\n" , 
+-		QMessageBox::Ok, 0 );
++		QMessageBox::Ok, 0 );*/
++        settings.setValue("binaries/ffmpeg", "/usr/bin/ffmpeg");
+         PreferencesDialog dialog;
+         dialog.exec();
+     }

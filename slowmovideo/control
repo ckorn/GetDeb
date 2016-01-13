@@ -1,0 +1,28 @@
+Source: slowmovideo
+Section: graphics
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               libavformat-dev,
+               libopencv-dev,
+               qtbase5-dev,
+               qtscript5-dev,
+               freeglut3-dev,
+               libglew1.6-dev,
+               libsdl1.2-dev
+Standards-Version: 3.9.6
+Homepage: http://slowmovideo.granjow.net
+
+Package: slowmovideo
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ffmpeg
+Description: slow-motion videos from your footage
+ slowmoVideo is an OpenSource program that creates slow-motion videos 
+ from your footage.
+ But it does not simply make your videos play at 0.01× speed.
+ You can smoothly slow down and speed up your footage,
+ optionally with motion blur.
+

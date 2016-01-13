@@ -1,0 +1,4 @@
+version=3
+opts="dversionmangle=s/\+git\d+//" \
+https://github.com/slowmoVideo/slowmoVideo/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz
