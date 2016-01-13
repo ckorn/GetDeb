@@ -1,3 +1,22 @@
+gnucash (1:2.6.11-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+     Bug 680104 - Scheduled Tranaction formula not calculated when variables
+     are mixed with constants.
+     Bug 756335 - When importing, date selection causes exit crash.
+     Bug 759570 - Postponing a repeating SX skips over the instance.
+     Bug 759674 - GNUCash crashes when importing invoices or bills with
+     delimited import.
+     Bug 759859 - Reconcilation does not convert transactions' currency to
+     the main one making reconcilation impossible.
+     Bug 760052 - missing flag translatable in Custom Report.
+     Bug 760079 - Translations comments: Remove translatable flag from
+     placeholder labels in dialog date-close.
+     Bug 760398 - Cancelling the creation of a duplicate bill or invoice
+     doesn't reset the invoice number counter
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 12 Jan 2016 20:44:06 +0100
+
 gnucash (1:2.6.10-1~getdeb2~wily) wily; urgency=medium
 
   * New upstream version
