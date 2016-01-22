@@ -7,6 +7,7 @@ override_dh_auto_clean:
 	rm -rf target
 
 override_dh_auto_build:
-	mvn -X package
+	mvn -X package -DskipTests
 
 	mv target/*.jar target/Pixelitor.jar
+

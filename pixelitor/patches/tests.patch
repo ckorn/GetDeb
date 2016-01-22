@@ -1,9 +1,9 @@
 # comment patch because it requires a X11 display
 # not available during a build in a chroot
-Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
+Index: pixelitor-3.1.4/src/test/java/pixelitor/CompositionCreationTest.java
 ===================================================================
---- pixelitor-3.1.3.orig/src/test/java/pixelitor/CompositionCreationTest.java	2015-07-11 21:14:09.785852523 +0200
-+++ pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java	2015-07-11 21:16:07.708302954 +0200
+--- pixelitor-3.1.4.orig/src/test/java/pixelitor/CompositionCreationTest.java	2016-01-19 18:38:55.937056207 +0100
++++ pixelitor-3.1.4/src/test/java/pixelitor/CompositionCreationTest.java	2016-01-19 18:45:48.951928683 +0100
 @@ -40,24 +40,24 @@
  
      @Test
@@ -11,29 +11,29 @@ Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
 -        Composition comp = NewImage.createNewComposition(FillType.WHITE, 20, 20, "New Image");
 +        /*Composition comp = NewImage.createNewComposition(FillType.WHITE, 20, 20, "New Image");
          comp.checkInvariant();
-         assertEquals(1, comp.getNrLayers());
-         assertEquals(20, comp.getCanvasWidth());
-         assertEquals(20, comp.getCanvasHeight());
--        assertNotNull(comp.getCompositeImage());
-+        assertNotNull(comp.getCompositeImage());*/
+         assertThat(comp.getNrLayers()).isEqualTo(1);
+         assertThat(comp.getCanvasWidth()).isEqualTo(20);
+         assertThat(comp.getCanvasHeight()).isEqualTo(20);
+-        assertThat(comp.getCompositeImage()).isNotNull();
++        assertThat(comp.getCompositeImage()).isNotNull();*/
      }
  
      private static void testSingleLayerRead(File f) {
 -        Composition comp = OpenSaveManager.createCompositionFromFile(f);
-+        /*Composition comp = OpenSaveManager.createCompositionFromFile(f);
++       /* Composition comp = OpenSaveManager.createCompositionFromFile(f);
          comp.checkInvariant();
-         assertEquals(1, comp.getNrLayers());
-         assertEquals(10, comp.getCanvasWidth());
-         assertEquals(10, comp.getCanvasHeight());
--        assertNotNull(comp.getCompositeImage());
-+        assertNotNull(comp.getCompositeImage());*/
+         assertThat(comp.getNrLayers()).isEqualTo(1);
+         assertThat(comp.getCanvasWidth()).isEqualTo(10);
+         assertThat(comp.getCanvasHeight()).isEqualTo(10);
+-        assertThat(comp.getCompositeImage()).isNotNull();
++        assertThat(comp.getCompositeImage()).isNotNull();*/
      }
  
 -    private static Composition testMultiLayerRead(File f, Consumer<Layer> checkSecondLayer) {
 +    /*private static Composition testMultiLayerRead(File f, Consumer<Layer> checkSecondLayer) {
          Composition comp = OpenSaveManager.createCompositionFromFile(f);
          comp.checkInvariant();
-         assertEquals(2, comp.getNrLayers());
+         assertThat(comp.getNrLayers()).isEqualTo(2);
 @@ -69,7 +69,7 @@
          checkSecondLayer.accept(secondLayer);
  
@@ -43,12 +43,12 @@ Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
  
  
      @Test
-@@ -97,77 +97,5 @@
+@@ -96,81 +96,6 @@
+         testSingleLayerRead(f);
      }
  
- 
 -    @Test
--    public void testReadWritePXC() throws IOException {
+-    public void testReadWritePXC() {
 -        // read and test
 -        String[] fileNames = {
 -                "src/test/resources/pxc_test_input.pxc",
@@ -75,7 +75,7 @@ Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
 -        extraChecks.add(secondLayer -> {
 -            assert !secondLayer.hasMask();
 -            assert secondLayer instanceof TextLayer;
--            assertEquals("T", ((TextLayer) secondLayer).getSettings().getText());
+-            assertThat(((TextLayer) secondLayer).getSettings().getText()).isEqualTo("T");
 -        });
 -        // extra check for pxc with adjustment layer
 -        extraChecks.add(secondLayer -> {
@@ -85,17 +85,21 @@ Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
 -
 -        for (int i = 0; i < fileNames.length; i++) {
 -            String fileName = fileNames[i];
--            File f = new File(fileName);
--            Composition comp = testMultiLayerRead(f, extraChecks.get(i));
+-            try {
+-                File f = new File(fileName);
+-                Composition comp = testMultiLayerRead(f, extraChecks.get(i));
 -
--            // write to tmp file
--            File tmp = File.createTempFile("pix_tmp", ".pxc");
--            OpenSaveManager.serializePXC(comp, tmp);
+-                // write to tmp file
+-                File tmp = File.createTempFile("pix_tmp", ".pxc");
+-                OpenSaveManager.serializePXC(comp, tmp);
 -
--            // read back and test
--            testMultiLayerRead(tmp, extraChecks.get(i));
+-                // read back and test
+-                testMultiLayerRead(tmp, extraChecks.get(i));
 -
--            tmp.delete();
+-                tmp.delete();
+-            } catch (Exception e) {
+-                throw new IllegalStateException("Error while testing " + fileName, e);
+-            }
 -        }
 -    }
 -
@@ -119,156 +123,186 @@ Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionCreationTest.java
 -
 -        tmp.delete();
 -    }
++ 
  
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.3/src/test/java/pixelitor/CompositionTest.java
+Index: pixelitor-3.1.4/src/test/java/pixelitor/CompositionTest.java
 ===================================================================
---- pixelitor-3.1.3.orig/src/test/java/pixelitor/CompositionTest.java	2015-07-11 04:30:45.000000000 +0200
-+++ pixelitor-3.1.3/src/test/java/pixelitor/CompositionTest.java	2015-07-11 21:46:22.509782746 +0200
-@@ -56,13 +56,6 @@
+--- pixelitor-3.1.4.orig/src/test/java/pixelitor/CompositionTest.java	2016-01-19 18:34:46.584783332 +0100
++++ pixelitor-3.1.4/src/test/java/pixelitor/CompositionTest.java	2016-01-19 18:46:26.028537819 +0100
+@@ -64,35 +64,6 @@
      }
  
      @Test
 -    public void testAddNewEmptyLayer() {
--        comp.addNewEmptyLayer("newLayer", true);
--        comp.addNewEmptyLayer("newLayer", false);
--        checkNumLayers(4);
+-        tester.checkLayers("[layer 1, ACTIVE layer 2]");
+-
+-        comp.addNewEmptyLayer("newLayer 1", true);
+-        tester.checkLayers("[layer 1, ACTIVE newLayer 1, layer 2]");
+-        History.assertNumEditsIs(1);
+-        History.assertLastEditNameIs("New Empty Layer");
+-
+-        comp.addNewEmptyLayer("newLayer 2", false);
+-
+-        tester.checkLayers("[layer 1, newLayer 1, ACTIVE newLayer 2, layer 2]");
+-        tester.checkDirty(true);
+-        History.assertNumEditsIs(2);
+-        History.assertLastEditNameIs("New Empty Layer");
+-
+-        History.undo();
+-        tester.checkLayers("[layer 1, ACTIVE newLayer 1, layer 2]");
+-
+-        History.undo();
+-        tester.checkLayers("[layer 1, ACTIVE layer 2]");
+-
+-        History.redo();
+-        tester.checkLayers("[layer 1, ACTIVE newLayer 1, layer 2]");
+-
+-        History.redo();
+-        tester.checkLayers("[layer 1, newLayer 1, ACTIVE newLayer 2, layer 2]");
 -    }
 -
 -    @Test
      public void testSetActiveLayer() {
-         Layer layer = comp.getLayer(0);
-         comp.setActiveLayer(layer, AddToHistory.YES);
-@@ -459,4 +452,4 @@
-         comp.checkInvariant();
-     }
+         tester.checkLayers("[layer 1, ACTIVE layer 2]");
  
+@@ -632,4 +603,4 @@
+         comp.setName("New Name");
+         assertThat(comp.getName()).isEqualTo("New Name");
+     }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.3/src/test/java/pixelitor/layers/ContentLayerTest.java
+Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/ContentLayerTest.java
 ===================================================================
---- pixelitor-3.1.3.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2015-07-11 04:30:45.000000000 +0200
-+++ pixelitor-3.1.3/src/test/java/pixelitor/layers/ContentLayerTest.java	2015-07-11 21:43:41.466437939 +0200
-@@ -42,44 +42,7 @@
-         layer = TestHelper.createTestImageLayer("imageLayer 1", comp);
+--- pixelitor-3.1.4.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-01-19 18:38:55.937056207 +0100
++++ pixelitor-3.1.4/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-01-19 18:47:11.693286793 +0100
+@@ -73,51 +73,6 @@
+         History.clear();
      }
  
 -    @Test
 -    public void testLayerMovingMethods() {
--        assertEquals(0, layer.getTranslationX());
--        assertEquals(0, layer.getTranslationY());
+-        assertThat(layer.getTX()).isEqualTo(0);
+-        assertThat(layer.getTY()).isEqualTo(0);
 -
 -        layer.startMovement();
 -
--        assertEquals(0, layer.getTranslationX());
--        assertEquals(0, layer.getTranslationY());
+-        assertThat(layer.getTX()).isEqualTo(0);
+-        assertThat(layer.getTY()).isEqualTo(0);
 -
 -        layer.moveWhileDragging(2, 2);
 -
--        assertEquals(2, layer.getTranslationX());
--        assertEquals(2, layer.getTranslationY());
+-        assertThat(layer.getTX()).isEqualTo(2);
+-        assertThat(layer.getTY()).isEqualTo(2);
 -
 -        layer.moveWhileDragging(3, 3);
 -
--        assertEquals(3, layer.getTranslationX());
--        assertEquals(3, layer.getTranslationY());
+-        assertThat(layer.getTX()).isEqualTo(3);
+-        assertThat(layer.getTY()).isEqualTo(3);
 -
 -        layer.endMovement();
 -
--        // the layer was enlarged in endMovement, and the translation reset to 0, 0
--        assertEquals(0, layer.getTranslationX());
--        assertEquals(0, layer.getTranslationY());
+-        checkTranslationAfterPositiveDrag();
 -
 -        layer.startMovement();
 -        layer.moveWhileDragging(-1, -2);
 -
--        assertEquals(-1, layer.getTranslationX());
--        assertEquals(-2, layer.getTranslationY());
+-        checkTranslationAfterNegativeDrag();
 -
 -        layer.endMovement();
 -
--        // this time the layer was not enlarged
--        assertEquals(-1, layer.getTranslationX());
--        assertEquals(-2, layer.getTranslationY());
+-        // No change:
+-        // ImageLayer: this time the layer was not enlarged
+-        // TextLayer: endMovement does not change the tmpTranslation + translation sum
+-        checkTranslationAfterNegativeDrag();
+-
+-        // TODO should have undo
+-//        History.assertNumEditsIs(2);
+-//        History.undo();
+-//        checkTranslationAfterPositiveDrag();
+-//        History.undo();
+-//        assertThat(layer.getTX()).isEqualTo(0);
+-//        assertThat(layer.getTY()).isEqualTo(0);
 -    }
-+    
- 
-     @Test
-     // this method is abstract in ImageLayer, test separately for subclasses
-@@ -134,4 +97,4 @@
+-
+     private void checkTranslationAfterPositiveDrag() {
+         if (layer instanceof ImageLayer) {
+             // the layer was enlarged in endMovement, and the translation reset to 0, 0
+@@ -175,4 +130,4 @@
          layer.setupDrawingComposite(g, true);
          layer.setupDrawingComposite(g, false);
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.3/src/test/java/pixelitor/layers/ImageLayerTest.java
+Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/ImageLayerTest.java
 ===================================================================
---- pixelitor-3.1.3.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2015-07-11 04:30:45.000000000 +0200
-+++ pixelitor-3.1.3/src/test/java/pixelitor/layers/ImageLayerTest.java	2015-07-11 21:45:03.832148532 +0200
-@@ -150,36 +150,17 @@
-     }
- 
-     @Test
--    public void testEnlargeLayer() {
--        layer.enlargeLayer();
--    }
--
--    @Test
-     public void testGetImageForFilterDialogs() {
-         BufferedImage image = layer.getImageForFilterDialogs();
-         assertNotNull(image);
+--- pixelitor-3.1.4.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-01-19 18:38:55.937056207 +0100
++++ pixelitor-3.1.4/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-01-19 18:48:08.838222279 +0100
+@@ -176,25 +176,11 @@
      }
  
      @Test
 -    public void testCreateTmpDrawingLayer() {
--        TmpDrawingLayer drawingLayer1 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, true);
--        assertNotNull(drawingLayer1);
--        TmpDrawingLayer drawingLayer2 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, false);
--        assertNotNull(drawingLayer2);
+-        TmpDrawingLayer tmpDrawingLayer1 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, true);
+-        assertThat(tmpDrawingLayer1).isNotNull();
+-        TmpDrawingLayer tmpDrawingLayer2 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, false);
+-        assertThat(tmpDrawingLayer2).isNotNull();
 -    }
 -
 -    @Test
      public void testMergeTmpDrawingImageDown() {
-         layer.mergeTmpDrawingImageDown();
+         layer.mergeTmpDrawingLayerDown();
      }
  
      @Test
 -    public void testCreateCompositionSizedTmpImage() {
 -        BufferedImage image = layer.createCompositionSizedTmpImage();
--        assertNotNull(image);
+-        assertThat(image).isNotNull();
 -    }
 -
 -    @Test
      public void testGetCanvasSizedSubImage() {
          // TODO would be better with translation
          BufferedImage image = layer.getCanvasSizedSubImage();
-@@ -226,4 +207,4 @@
-     public void testCropToCanvasSize() {
-         layer.cropToCanvasSize();
+@@ -286,4 +272,4 @@
+             assertThat(layer.hasMask()).isFalse();
+         }
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.3/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
+Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
 ===================================================================
---- pixelitor-3.1.3.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2015-07-11 04:30:45.000000000 +0200
-+++ pixelitor-3.1.3/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2015-07-11 21:45:42.640954606 +0200
-@@ -27,14 +27,4 @@
-         assert upperLayer == comp.getActiveLayer();
+--- pixelitor-3.1.4.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-01-19 18:38:55.937056207 +0100
++++ pixelitor-3.1.4/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-01-19 18:48:43.850794555 +0100
+@@ -50,11 +50,6 @@
      }
  
--    @Test
+     @Test
 -    public void testNormal() {
--        BufferedImage result = comp.calculateCompositeImage();
--        assert ImageUtils.compareSmallImages(result, Tests3x3.getStandardImage2());
+-        testBlendingMode(BlendingMode.NORMAL, upperColor);
 -    }
 -
 -    @Test
+     public void testDarken() {
+         // MIN(211, 119) = 119
+         // MIN(141,  86) = 86
+@@ -63,14 +58,6 @@
+     }
+ 
+     @Test
 -    public void testMultiply() {
--        upperLayer.setBlendingMode(BlendingMode.MULTIPLY, false, AddToHistory.YES, true);
+-        // 211 * 119 / 255 = 98
+-        // 141 *  86 / 255 = 48
+-        //  86 * 132 / 255 = 45
+-        testBlendingMode(BlendingMode.MULTIPLY, new Color(98, 48, 45));
 -    }
- }
+-
+-    @Test
+     public void testColorBurn() {
+         testBlendingMode(BlendingMode.COLOR_BURN, new Color(161, 0, 0));
+     }
