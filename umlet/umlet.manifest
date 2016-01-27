@@ -1,0 +1,4 @@
+usr/share/java/umlet.jar:
+  Bundle-Name: Umlet
+  Bundle-Version: 13.3
+  Bundle-Vendor: http://www.umlet.com

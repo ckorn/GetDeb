@@ -1,0 +1,8 @@
+palettes		usr/share/umlet
+custom_elements		usr/share/umlet
+img			usr/share/umlet
+lib			usr/share/umlet
+umlet.jar		usr/share/umlet
+umlet.sh		usr/share/umlet
+debian/umlet.xpm	usr/share/pixmaps
+debian/umlet.desktop	usr/share/applications

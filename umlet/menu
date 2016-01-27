@@ -1,0 +1,2 @@
+?package(umlet):needs="X11" section="Applications/Programming"\
+  title="UMLet" command="/usr/bin/umlet"

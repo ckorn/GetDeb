@@ -1,0 +1,3 @@
+version=3
+http://www.umlet.com/changes.htm \
+    (?:.*/)?umlet-standalone-([\d\.]+)\.zip

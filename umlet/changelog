@@ -1,0 +1,100 @@
+umlet (14.1.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version (LP: #1538574)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 27 Jan 2016 21:16:48 +0100
+
+umlet (13.3-1) unstable; urgency=low
+
+  * updated to latest upstream version
+  * - removed dependency to java-wrapper, adapted package description
+  * - use uscan for getting orig source, adapted watchfile to new source 
+      location on github
+
+ -- Benjamin Mesing <ben@debian.org>  Mon, 15 Jun 2015 23:20:11 +0200
+
+umlet (12.1-1) unstable; urgency=low
+
+  * Updated to latest upstream version
+  * Note that upstream zip file does not contain all required source
+    instead part of it was fetched via svn 
+  * - fixed patches for latest upstream
+  * - changed maintainer e-mail adress
+  * - fixed manifest to contain Bundle-Name and Bundle-Version
+  * - merged patches from patch-queue - removed runScript from patches
+  * - updated to new policy version
+
+ -- Benjamin Mesing <ben@debian.org>  Tue, 01 Apr 2014 21:08:15 +0200
+
+umlet (11.3-5.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "Transition package to use default java implementation":
+    apply patch from Ubuntu / James Page:
+
+    Transition package to use default java implementation:
+    - d/control: Switch openjdk-6-jdk -> default-jdk.
+    - d/rules: Set JAVA_HOME = /usr/lib/jvm/default-java.
+
+    (Closes: #684305)
+
+  * debian/rules: pass -encoding to javac via jh_build call.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 01 Jun 2013 15:04:24 +0200
+
+umlet (11.3-5) unstable; urgency=low
+
+  * improved command line script to handle whitespaces in filenames
+    (thanks Niels for a watchful eye)
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Tue, 22 Jan 2013 21:32:08 +0100
+
+umlet (11.3-4) unstable; urgency=medium
+
+  * pass command line parameters through "umlet" script (Closes: #690272)
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Fri, 12 Oct 2012 22:02:34 +0200
+
+umlet (11.3-3) unstable; urgency=medium
+
+  * set JAVA_HOME path arch-aware within rules file to comply to 
+    multiarch changes (Closes: #642036)
+  * depend on java6-sdk instead of openjdk explicitly (Closes: #645297 )
+  * use jarwrapper to start umlet (Closes: #645394)
+  * updated to latest upstream release (Closes: #645298)
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Sun, 23 Oct 2011 19:43:28 +0200
+
+umlet (11.3-2) unstable; urgency=low
+
+  * changed build-system to use javahelper
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Thu, 14 Jul 2011 22:13:14 +0200
+
+umlet (11.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Sun, 10 Jul 2011 18:46:57 +0200
+
+umlet (10.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Sat, 24 Apr 2010 12:25:35 +0200
+
+umlet (10.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #542445)
+  - supports zooming
+  - in-app Mail feature 
+  * changed source format to 3.0 (quilt)
+  * depend on libjlibeps-java now instead of including libepsgraphics
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Sun, 20 Dec 2009 12:47:03 +0100
+
+umlet (9.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #398093)
+
+ -- Benjamin Mesing <bensmail@gmx.net>  Sun, 17 May 2009 18:12:49 +0200

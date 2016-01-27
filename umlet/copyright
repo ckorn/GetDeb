@@ -1,0 +1,23 @@
+This package was debianized by Benjamin Mesing <bensmail@gmx.net> on
+Sat,  2 Dec 2006ff.
+
+UMLet was downloaded from http://www.umlet.com
+
+Upstream UMLet Author: M. Auer, J. Poelz, A. Fuernweger, L. Meyer and T. Tschurtschenthaler <info@umlet.com>
+
+UMLet License:
+You are free to distribute this software under the terms of
+the GNU General Public License 2.
+
+Main source:
+Copyright 2009, M. Auer, J. Poelz, A. Fuernweger, L. Meyer and T. Tschurtschenthaler <info@umlet.com>
+
+Source code for Windows Exe file (subfolder src/umlet_exe:
+Copyright © TU Wien 2008
+
+
+On Debian systems, the complete text of the GNU General Public
+License 2 can be found in the file `/usr/share/common-licenses/GPL-2'.
+
+The Debian packaging is © 2006-2009, Benjamin Mesing <bensmail@gmx.net>
+and is licensed under the GPL-2.
