@@ -1,0 +1,8 @@
+1. start umlet, add an element from palette, save, exit
+2. start umlet, load
+3. help->about -> click link
+4. Custom elements -> new, modify drawRectangle(), add to diagram and close editor, save, exit umlet
+5. start umlet, load (check if custom modifications are there)
+6. select other palette, File->Edit current Palette, save and close, see if it gets updated in the palette view
+7. File -> Export As: eps, PNG
+8. File -> Generate Diagram from file or directory

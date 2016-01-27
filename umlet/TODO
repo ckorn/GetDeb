@@ -1,0 +1,9 @@
+currently the stash contains a list of files removed (the eclipse plugin files) probably not needed any more
+
+TODO:
+- build umlet
+- fix start script
+...
+
+
+find sourcefiles/src -name *.java -and -type f -print0 | xargs -0 /usr/lib/jvm/default-java/bin/javac -cp /usr/share/java/ecj.jar:/usr/share/java/batik-all.jar:/usr/share/java/fop.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/net.sourceforge.jlibeps.jar:/usr/share/java/gnumail.jar:/usr/share/java/itext5.jar:/usr/share/java/jsyntaxpane.jar:/usr/share/java/rsyntaxtextarea.jar:/usr/share/java/autocomplete.jar:/usr/share/java/javaparser.jar:/usr/share/java/commons-io-java:debian/_jh_build.umlet -d debian/_jh_build.umlet -source 1.5 -target 1.5 -encoding utf8

@@ -1,0 +1,23 @@
+ 
+- Do not constantly change the structure within the zip file. (don't change dir-names so often
+- Add man-Page
+- You are currently assuming, that umlet with its templates installs into a directory underneath which all its subdirectories are lying (the root path seems to be determined . This is quite uncommon for Linux. For Debian e.g. the jar resides within /usr/share/java and most of the other stuff I've put into usr/share/umlet. You also assume the custom element path to be in this directory, which also requires write permissions there - which is uncommon even for windows (if you have multiple users). However, user specifc files are stored in the users local dir (I've chosen $HOME/.umlet)
+
+Adaptation of palettes is a tricky issue when dealing with a non-writable application directory. My suggestion is to have a default palette in the programm folder and define a user path, where modified palettes are stored (as soon as a standard palette is changed and saving occurs, it is written to the user dir). Palettes of the same name in the user dir override those in the program dir.
+
+
+Suggestion:
+-- Umlet.customPath() should return the full path to the custom elements
+
+Currently e.g. you do
+this.loadJavaSource(new File(Umlet.getInstance().getHomePath() + Umlet.getCustomElementPath() + templatefile));
+in CustomElementCompiler. Instead this should be 
+this.loadJavaSource(new File(Umlet.getCustomElementPath() + templatefile));
+which would allow to set the customElementPath() centrally in Umlet.
+
+
+
+
+
+-- Umlet.customPath()
+

@@ -1,0 +1,43 @@
+Source: umlet
+Section: devel
+Priority: extra
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               javahelper,
+               fastjar,
+               default-jdk,
+               libbatik-java,
+               fop,
+               libavalon-framework-java,
+               libcommons-io-java,
+               libxerces2-java,
+               libjlibeps-java,
+               libgnumail-java,
+               libitext5-java,
+               liblog4j1.2-java,
+               libecj-java,
+               libjsyntaxpane-java,
+               librsyntaxtextarea-java,
+               libautocomplete-java,
+               libjsyntaxpane-java,
+               libjavaparser-java
+Standards-Version: 3.9.5
+
+Package: umlet
+Architecture: all
+Depends: default-jdk | java6-sdk,
+         jarwrapper,
+         ${misc:Depends}
+Description: simple, text driven UML drawing tool
+ UMLet is a UML tool aimed at providing a fast way of drawing 
+ UML diagrams. UML elements are modified using text input instead 
+ of pop-up dialogs. Elements can be modified and used as 
+ templates; this way, users can easily tailor UMLet to their 
+ modeling needs. UMLet supports a variety of UML diagram types: 
+ class diagrams, use case diagrams, sequence diagrams, state 
+ diagrams, deployment diagrams, activity diagrams, etc.
+ .
+ UMLet can only be used for drawing UML diagrams, it does not
+ support code export or the XMI format. UMLet allows one to export
+ diagrams as images or PDF.
+Homepage: http://umlet.com/

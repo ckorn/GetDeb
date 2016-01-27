@@ -1,0 +1,16 @@
+umlet for Debian
+----------------
+
+The Debian package of UMLet offers no Eclipse integration.
+If Eclipse integration is desired, please use the upstream 
+release from http://www.umlet.com/.
+
+For the debian version, custom elements are stored in 
+$HOME/.umlet/custom_elements.
+
+Currently umlet palettes are copied to 
+$HOME/.umlet/palettes upon first run. This allows one to modify
+and save palettes. However, if upstream default layout of 
+palettes changes, users will continue to work on the old ones
+even if they did not change their copies.
+

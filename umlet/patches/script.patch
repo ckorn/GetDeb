@@ -1,0 +1,14 @@
+# hardcode program dir
+Index: umlet-14.1.1/umlet.sh
+===================================================================
+--- umlet-14.1.1.orig/umlet.sh	2016-01-14 17:12:18.000000000 +0100
++++ umlet-14.1.1/umlet.sh	2016-01-27 21:31:13.422240595 +0100
+@@ -6,7 +6,7 @@
+ #    $ umlet.sh myDiagram.uxf
+ # you must specify the programDir directly instead
+ #programDir=/path/to/umlet
+-programDir=$(cd $(dirname $0);pwd)
++programDir=/usr/share/umlet
+ 
+ if [ $# -eq 1 ]
+  then java -Dsun.java2d.xrender=f -jar ${programDir}/umlet.jar -filename="$1"

@@ -1,0 +1,6 @@
+This file was repackaged because:
+1. it contained compiled external libraries (jar files)
+   which should be removed
+
+For repackaging instructions see the get-orig-source 
+target in the debian/rules file
