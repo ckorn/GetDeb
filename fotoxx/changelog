@@ -1,3 +1,39 @@
+fotoxx (16.02-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + New Effects > Cartoon: convert a photo into a cartoon-like drawing. 
+    + Add Text and Add Lines now work better with images having transparent
+    areas.
+    + Paint/Clone: optionally paint over transparent areas, instantly or
+    gradually.
+    + Brasero was replaced by growisofs for writing image files to
+    DVD/BlueRay disc.
+      (growisofs underlies Brasero, K3b, and most other disc burning
+      utilities).
+    + Edit Any Metadata: UI improvement to better handle long text strings.
+    + Batch Change Metadata: UI improvement to better handle long text
+    strings.
+    + New batch function: select image files by clicking thumbnails, output a
+    file 
+      with a list of the selected files. Useful to feed shell scripts or
+      other apps.
+    + Function key changes: F10 for full screen with menu and panel, F11
+    without.
+    + Batch Convert: overlay images (e.g. credit lines) can be sized for a
+    constant
+      screen display size, regardless of image size or aspect ratio.
+    + When viewing images sequentially using the [prev/next] button or
+    keyboard
+      arrow keys, adjacent directories can be spanned without user
+      navigation.
+    + An album can be opened from the command line: $ fotoxx -album
+    <album-name>
+    + Bugfix: Retouch Combo: reset button did not reset everything. 
+    + Bugfix: Panorama: "file color" button caused image misalignment or
+    crash.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 01 Feb 2016 20:32:39 +0100
+
 fotoxx (16.01.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
