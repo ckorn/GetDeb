@@ -1,3 +1,9 @@
+synergy (1.7.5-1~getdeb2) trusty; urgency=medium
+
+  * Fix debian/watch file
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 04 Feb 2016 19:52:52 +0100
+
 synergy (1.7.5-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
