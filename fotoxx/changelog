@@ -1,3 +1,15 @@
+fotoxx (16.02.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Translation updates for Portuguese.
+    + Bugfix: Resize: locking width/height ratio did not always work.
+    + Bugfix: Slide Show startup sometimes failed. 
+    + Bugfix: If an album contains the same image file two or more times,
+    stepping sequentially through the images loops from the Nth instance
+    back to the first.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Feb 2016 18:50:36 +0100
+
 fotoxx (16.02-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
