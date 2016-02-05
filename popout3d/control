@@ -14,7 +14,9 @@ Depends: ${misc:Depends},
          python3-pil,
          imagemagick (>=6.7),
          python (>=2.7),
-         hugin (>=2013.0.0)
+         hugin (>=2013.0.0),
+         python3-gi,
+         gir1.2-gtksource-3.0
 Description: Create a 3D picture from photographs taken with an ordinary camera
  Take a set of photos of a subject and the software will create a 3D image
  from each pair of photos in the set, so that you can choose the best.
