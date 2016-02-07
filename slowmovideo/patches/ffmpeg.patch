@@ -1,9 +1,9 @@
 # hardcode default path to ffmpeg
-Index: slowmovideo-0.4+git160113/src/slowmoVideo/slowmoUI/mainwindow.cpp
+Index: slowmovideo-0.5/src/slowmoVideo/slowmoUI/mainwindow.cpp
 ===================================================================
---- slowmovideo-0.4+git160113.orig/src/slowmoVideo/slowmoUI/mainwindow.cpp	2015-12-18 17:41:23.000000000 +0100
-+++ slowmovideo-0.4+git160113/src/slowmoVideo/slowmoUI/mainwindow.cpp	2016-01-13 22:25:02.899747113 +0100
-@@ -182,10 +182,11 @@
+--- slowmovideo-0.5.orig/src/slowmoVideo/slowmoUI/mainwindow.cpp	2016-02-06 23:10:21.916944035 +0100
++++ slowmovideo-0.5/src/slowmoVideo/slowmoUI/mainwindow.cpp	2016-02-06 23:10:21.912943949 +0100
+@@ -185,10 +185,11 @@
      }
      
      if (!settings.contains("binaries/ffmpeg")) {
