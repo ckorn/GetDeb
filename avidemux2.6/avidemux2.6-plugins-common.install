@@ -28,6 +28,8 @@ usr/lib/ADM_plugins6/videoEncoders/libADM_ve_ffFlv1.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_jpeg.so
 usr/lib/ADM_plugins6/videoEncoders/libADM_ve_huff.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_avsfilter.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_black.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_fadeTo.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_fadeToBlack.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_blackenBorders.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_decimate.so

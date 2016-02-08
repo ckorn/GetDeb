@@ -1,9 +1,9 @@
 # ADM_VERSION is not defined anywhere.
-Index: avidemux2.6-2.6.9/avidemux/common/main.cpp
+Index: avidemux2.6-2.6.11/avidemux/common/main.cpp
 ===================================================================
---- avidemux2.6-2.6.9.orig/avidemux/common/main.cpp	2015-05-15 11:19:29.000000000 +0200
-+++ avidemux2.6-2.6.9/avidemux/common/main.cpp	2015-05-16 03:47:17.482674603 +0200
-@@ -165,7 +165,7 @@
+--- avidemux2.6-2.6.11.orig/avidemux/common/main.cpp	2016-02-07 18:30:17.386878206 +0100
++++ avidemux2.6-2.6.11/avidemux/common/main.cpp	2016-02-07 18:30:17.382878115 +0100
+@@ -172,7 +172,7 @@
  int startAvidemux(int argc, char *argv[])
  {
      printf("*************************\n");

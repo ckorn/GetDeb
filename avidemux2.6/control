@@ -44,22 +44,6 @@ Build-Depends: debhelper (>= 9),
                libc6-dev
 Homepage: http://avidemux.org
 
-Package: avidemux2.6
-Architecture: i386 amd64 powerpc
-Depends: ${shlibs:Depends},
-         avidemux2.6-common,
-         libavidemux2.6,
-         avidemux2.6-jobs,
-         ${misc:Depends}
-Recommends: avidemux2.6-plugins-gtk
-Description: Free video editor - GTK version
- Avidemux is a free video editor designed for simple cutting, filtering and
- encoding tasks. It supports many file types, including AVI, DVD compatible
- MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
- using projects, job queue and powerful scripting capabilities.
- .
- This package contains the classic version with GTK+ interface.
-
 Package: avidemux2.6-jobs
 Architecture: i386 amd64 powerpc
 Depends: ${shlibs:Depends},
@@ -134,21 +118,6 @@ Description: Free video editor - common files for plugins
  .
  This package includes common files for plugins to extend the functionality
  of Avidemux and should not be installed directly.
-
-Package: avidemux2.6-plugins-gtk
-Architecture: i386 amd64 powerpc
-Depends: avidemux2.6-plugins-common,
-         ${shlibs:Depends},
-         ${misc:Depends}
-Conflicts: avidemux-plugins
-Replaces: avidemux-plugins
-Description: Free video editor - GTK plugins
- Avidemux is a free video editor designed for simple cutting, filtering and
- encoding tasks. It supports many file types, including AVI, DVD compatible
- MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
- using projects, job queue and powerful scripting capabilities.
- .
- This package includes plugins to extend the functionality of Avidemux.
 
 Package: avidemux2.6-plugins-qt
 Architecture: i386 amd64 powerpc
