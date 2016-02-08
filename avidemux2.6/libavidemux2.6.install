@@ -8,7 +8,6 @@ usr/lib/libADM6swscale.so.3
 usr/lib/libADM6avcodec.so.56
 usr/lib/libADM_coreVDPAU6.so
 usr/lib/libADM_coreLibVA6.so
-usr/lib/libADM_toolkitGtk.so
 usr/lib/libADM_coreSocket6.so
 usr/lib/libADM_coreMuxer6.so
 usr/lib/libADM_coreAudioEncoder6.so

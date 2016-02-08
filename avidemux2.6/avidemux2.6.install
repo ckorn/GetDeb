@@ -1,5 +1,0 @@
-debian/avidemux2.6-gtk.xpm		usr/share/pixmaps
-debian/avidemux2.6-gtk.desktop		usr/share/applications
-usr/bin/avidemux3_gtk
-usr/lib/libADM_UIGtk6.so
-usr/lib/libADM_render6_gtk.so

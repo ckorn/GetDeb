@@ -1,3 +1,41 @@
+avidemux2.6 (1:2.6.11-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+    *[Edit] Try to cope better with decoding error
+    *[Edit] Fixed off-by-one keyframe cutting
+    *[WIN] Fixed uninstaller
+    *[All] Better general support for H265
+    *[All] Basic support for Opus
+    *[Demux]Extract keyframes from non supported video in mkv (vp9,h265,...)
+    *[UI] Cap refresh rate for large video or slow machines (set it in
+    preferences)
+    *[Bug] Fix nv12 to yv12 mmx code
+
+    2.6.11Beta aka 2.6.910 : Christmas improvements
+    * [LIB] Updated ffmpeg to 2.7.2
+    * [DEMUX] Improved FLV demuxer
+    * [LIB] Updated libass
+    * [MUX] x264 : BluRay compatibility is now taken into account
+    * [AUDIO] Lame : Added 256 and 320 kbps bitrate
+    * [BUILD] Fixed RPM creation
+    * [SAVE] Fixed save as image when hardware acceleration is used
+    * [VIDEO Fixed Crash with x265 when dual pass mode is used
+    * [VIDEO] Ask if the encoder should reuse stat file if it exists
+    * [OSX] Fixed case sensitivity
+    * [LIB] Updated to SDL 2 (win32)
+    * [MUX] Support for nvEnc added (hw H264 encoder)
+    * [DEMUX] VapourSynth support through VapourSynthProxy
+    * [MUX] Convert to H264 AnnexB when saving as mpeg TS
+    * [AUDIO] Fixed audio corruption when multiple EAC3 streams where
+    processed
+    * [VIDEO] Fixed xvid4 encoding bug with large width
+    * [VIDEO] Experimental OpenGL and filters updated (display should work
+    fine, filters are crashing easily).
+    * [UI] Fixed last folder used for save/load
+    * [WIN] Windows 7 style progress bar (win32)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 07 Feb 2016 18:04:14 +0100
+
 avidemux2.6 (1:2.6.10-1~getdeb3~wily) wily; urgency=medium
 
   * Rebuild for wily (LP: #1511133)

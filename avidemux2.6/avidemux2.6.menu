@@ -1,4 +1,0 @@
-?package(avidemux2.6):needs="X11" section="Applications/Graphics" \
-  title="avidemux" \
-  icon="/usr/share/pixmaps/avidemux2.6-gtk.xpm" \
-  command="/usr/bin/avidemux3_gtk"
