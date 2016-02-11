@@ -1,3 +1,2 @@
 version=3
-https://launchpad.net/soundconverter/+download \
-    (?:.*/)?soundconverter-([\d\.]+)\.tar\.(?:gz|bz2|xz)
+https://launchpad.net/soundconverter/trunk .*/soundconverter-(.*)\.tar\.xz

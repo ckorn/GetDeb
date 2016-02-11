@@ -1,36 +1,38 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=48
-Name: soundconverter
-Contact: Gautier Portet <kassoulet@gmail.com>
-Source: http://soundconverter.berlios.de/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: soundconverter
+Upstream-Contact: Gautier Portet <kassoulet@gmail.com>
+Source: https://github.com/kassoulet/soundconverter
 
 Files: *
 Copyright: 2004, Lars Wirzenius <liw@iki.fi>
-           2005-2008, Gautier Portet <kassoulet@gmail.com>
+           2005-2014, Gautier Portet <kassoulet@gmail.com>
 License: GPL-3
-    On Debian systems the full text of the GNU General Public
-    License can be found in the `/usr/share/common-licenses/GPL-3'
-    file.
+
+Files: data/soundconverter-logo.svg
+       data/soundconverter.png
+       data/soundconverter.svg
+Copyright: public-domain
+License: public-domain
+ See commit 7d90194a6aa86ce10dbcfa1faa0c6d488f535bcf in the upstream git
+ repository.
 
 Files: debian/*
 Copyright: 2006-2008, William Grant <william@qeuni.net>
            2009, Jason Heeris <jason.heeris@gmail.com>
+           2014, Lars Wirzenius <liw@liw.fi>
+           2015, Sebastian Ramacher <sramacher@debian.org>
 License: GPL-3
-    On Debian systems the full text of the GNU General Public
-    License can be found in the `/usr/share/common-licenses/GPL-3'
-    file.
 
-        Copyright and acknowledgements
-        ------------------------------
-
-Copyright 2004 Lars Wirzenius
-Copyright 2005-2008 Gautier Portet
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of the GNU General Public License as published by the
-Free Software Foundation; version 3 of the License.
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-Public License for more details.
-
+License: GPL-3
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation; version 3 of the License.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ On Debian systems the full text of the GNU General Public
+ License can be found in the `/usr/share/common-licenses/GPL-3'
+ file.
