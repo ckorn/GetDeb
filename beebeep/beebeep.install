@@ -1,0 +1,5 @@
+test/beebeep		usr/lib/beebeep
+test/lib*.so.*		usr/lib/beebeep
+debian/scripts/beebeep	usr/bin
+debian/beebeep.desktop	usr/share/applications
+debian/beebeep.xpm	usr/share/pixmaps

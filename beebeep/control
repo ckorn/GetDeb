@@ -1,0 +1,23 @@
+Source: beebeep
+Section: net
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+                libqt4-dev,
+                qt4-default,
+                libphonon-dev,
+                libdispatch-dev,
+                libxcb-screensaver0-dev,
+                libavahi-compat-libdnssd-dev
+Standards-Version: 3.9.5
+Homepage: http://beebeep.sourceforge.net/
+
+Package: beebeep
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Local network peer to peer messenger
+ Open source, peer to peer, lan messenger developed by Marco Mastroddi.
+ You can talk and share files with all the people inside your local area
+ network such of an office, home or internet cafe. You don't need a server,
+ just download, unzip and start it. Simple, fast and secure.
