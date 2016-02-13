@@ -1,9 +1,9 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-7.6/Makefile
+Index: freefilesync-7.9/Makefile
 ===================================================================
---- freefilesync-7.6.orig/Makefile	2015-11-03 21:12:22.096740980 +0100
-+++ freefilesync-7.6/Makefile	2015-11-03 21:13:24.970063038 +0100
+--- freefilesync-7.9.orig/Makefile	2016-02-13 19:05:49.977509884 +0100
++++ freefilesync-7.9/Makefile	2016-02-13 19:07:49.675952822 +0100
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
@@ -13,7 +13,7 @@ Index: freefilesync-7.6/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
-@@ -71,53 +71,53 @@
+@@ -71,55 +71,55 @@
  CPP_LIST+=lib/status_handler.cpp
  CPP_LIST+=lib/versioning.cpp
  CPP_LIST+=lib/ffs_paths.cpp
@@ -82,12 +82,16 @@ Index: freefilesync-7.6/Makefile
  	mkdir -p $(APPSHAREDIR)
 -	cp -R ../Build/Languages/ \
 -	../Build/Help/ \
--	../Build/Sync_Complete.wav \
+-	../Build/ding.wav \
+-	../Build/gong.wav \
+-	../Build/harp.wav \
 -	../Build/Resources.zip \
 -	../Build/styles.gtk_rc \
 +	cp -R Build/Languages/ \
 +	Build/Help/ \
-+	Build/Sync_Complete.wav \
++	Build/ding.wav \
++	Build/gong.wav \
++	Build/harp.wav \
 +	Build/Resources.zip \
 +	Build/styles.gtk_rc \
  	$(APPSHAREDIR)
@@ -96,10 +100,10 @@ Index: freefilesync-7.6/Makefile
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-7.6/RealtimeSync/Makefile
+Index: freefilesync-7.9/RealTimeSync/Makefile
 ===================================================================
---- freefilesync-7.6.orig/RealtimeSync/Makefile	2015-11-03 21:12:22.096740980 +0100
-+++ freefilesync-7.6/RealtimeSync/Makefile	2015-11-03 21:16:12.913583544 +0100
+--- freefilesync-7.9.orig/RealTimeSync/Makefile	2016-02-13 19:05:49.977509884 +0100
++++ freefilesync-7.9/RealTimeSync/Makefile	2016-02-13 19:05:49.973509803 +0100
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
@@ -141,14 +145,14 @@ Index: freefilesync-7.6/RealtimeSync/Makefile
  
  all: launchpad
  
- launchpad: RealtimeSync
+ launchpad: RealTimeSync
  
 -../../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o : %.cpp
 +../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o : %.cpp
  	mkdir -p $(dir $@)
  	g++ $(CXXFLAGS) -c $< -o $@
  
- RealtimeSync: $(OBJECT_LIST)
+ RealTimeSync: $(OBJECT_LIST)
 -	g++ -o ../../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
 +	g++ -o ../Build/$(APPNAME) $(OBJECT_LIST) $(LINKFLAGS)
  

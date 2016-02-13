@@ -23,15 +23,15 @@ export DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/chan
 
 override_dh_auto_clean:
 	dh_auto_clean
-	dh_auto_clean --sourcedirectory=RealtimeSync
+	dh_auto_clean --sourcedirectory=RealTimeSync
 
 override_dh_auto_build:
 	dh_auto_build
-	dh_auto_build --sourcedirectory=RealtimeSync
+	dh_auto_build --sourcedirectory=RealTimeSync
 	
 override_dh_auto_install:
 	dh_auto_install
-	dh_auto_install --sourcedirectory=RealtimeSync
+	dh_auto_install --sourcedirectory=RealTimeSync
 	
 	# Extract program icons
 	mkdir -p $(IMGDIR)/256x256/apps
@@ -62,18 +62,18 @@ override_dh_auto_install:
 	convert lib/FreeFileSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-ffs.png
 	
 	# RealTimeSync
-	convert RealtimeSync/RealtimeSync.ico[0] $(IMGDIR)/256x256/apps/realtimesync.png
-	convert RealtimeSync/RealtimeSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-real.png
+	convert RealTimeSync/RealTimeSync.ico[0] $(IMGDIR)/256x256/apps/realtimesync.png
+	convert RealTimeSync/RealTimeSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-real.png
 	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
 	# See LP : 807013
 	#convert RealtimeSync/RealtimeSync.ico[1] $(IMGDIR)/128x128/apps/realtimesync.png
 	#convert RealtimeSync/RealtimeSync.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-real.png
-	convert RealtimeSync/RealtimeSync.ico[2] $(IMGDIR)/48x48/apps/realtimesync.png
-	convert RealtimeSync/RealtimeSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-real.png
-	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/32x32/apps/realtimesync.png
-	convert RealtimeSync/RealtimeSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-real.png
-	convert RealtimeSync/RealtimeSync.ico[4] $(IMGDIR)/16x16/apps/realtimesync.png
-	convert RealtimeSync/RealtimeSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
+	convert RealTimeSync/RealTimeSync.ico[2] $(IMGDIR)/48x48/apps/realtimesync.png
+	convert RealTimeSync/RealTimeSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-real.png
+	convert RealTimeSync/RealTimeSync.ico[3] $(IMGDIR)/32x32/apps/realtimesync.png
+	convert RealTimeSync/RealTimeSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-real.png
+	convert RealTimeSync/RealTimeSync.ico[4] $(IMGDIR)/16x16/apps/realtimesync.png
+	convert RealTimeSync/RealTimeSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
     
 	# FreeFileSync Batch
 	convert lib/Batch.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-batch.png

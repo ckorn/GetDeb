@@ -1,8 +1,8 @@
 # make_unique is a new feature
-Index: freefilesync-7.6/Makefile
+Index: freefilesync-7.9/Makefile
 ===================================================================
---- freefilesync-7.6.orig/Makefile	2015-11-03 21:19:13.645358498 +0100
-+++ freefilesync-7.6/Makefile	2015-11-03 21:19:41.357936360 +0100
+--- freefilesync-7.9.orig/Makefile	2016-02-13 18:14:19.052406244 +0100
++++ freefilesync-7.9/Makefile	2016-02-13 18:14:19.048406151 +0100
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
@@ -12,10 +12,10 @@ Index: freefilesync-7.6/Makefile
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
-Index: freefilesync-7.6/RealtimeSync/Makefile
+Index: freefilesync-7.9/RealTimeSync/Makefile
 ===================================================================
---- freefilesync-7.6.orig/RealtimeSync/Makefile	2015-11-03 21:19:13.645358498 +0100
-+++ freefilesync-7.6/RealtimeSync/Makefile	2015-11-03 21:19:39.881905589 +0100
+--- freefilesync-7.9.orig/RealTimeSync/Makefile	2016-02-13 18:13:40.775511655 +0100
++++ freefilesync-7.9/RealTimeSync/Makefile	2016-02-13 18:14:45.053008065 +0100
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin

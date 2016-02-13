@@ -1,3 +1,21 @@
+freefilesync (7.9-1~getdeb1) wily; urgency=medium
+
+  * New upstream version
+    New comparison variant: compare by file size
+    Buffer SFTP read/write accesses for optimal packet sizes
+    Configure folder access time out via GlobalSettings.xml
+    Drag and drop config files anywhere on main dialog
+    Work around "argument list too long" file copy error (OS X)
+    Work around "invalid argument" file copy error (OS X)
+    Support case-change when syncing to case-sensitive SFTP (Windows)
+    Select between sync completion sounds gong/harp.wav
+    Set up sync completion sound file in GlobalSettings.xml
+    Validate monitoring data to avoid RealTimeSync crash
+    Updated help file
+    Updated translation files
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 13 Feb 2016 16:03:28 +0100
+
 freefilesync (7.8-1~getdeb1) wily; urgency=medium
 
   * New upstream version
