@@ -1,0 +1,12 @@
+# clean desktop file
+Index: vocal-1.0/data/vocal.desktop
+===================================================================
+--- vocal-1.0.orig/data/vocal.desktop	2015-04-17 03:37:11.000000000 +0200
++++ vocal-1.0/data/vocal.desktop	2016-02-16 23:45:48.175827078 +0100
+@@ -10,6 +10,3 @@
+ X-PulseAudio-Properties=media.role=music
+ Actions=AboutDialog;
+ 
+-[Desktop Action AboutDialog]
+-Exec=vocal --about
+-Name=About Vocal

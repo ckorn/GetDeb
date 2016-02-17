@@ -1,0 +1,3 @@
+version=3
+http://vocalproject.net/download/ \
+    (?:.*/)?vocal_([\d\.]+)\.tar\.gz.*

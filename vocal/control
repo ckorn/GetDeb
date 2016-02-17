@@ -1,0 +1,28 @@
+Source: vocal
+Section: sound
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 9),
+               libgranite-dev,
+               libgtk-3-dev (>= 3.14),
+               valac (>= 0.18.1),
+               libunity-dev,
+               libnotify-dev,
+               libxml2-dev,
+               libgstreamer1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libclutter-gtk-1.0-dev,
+               libclutter-1.0-dev,
+               libsqlite3-dev
+Standards-Version: 3.9.6
+Homepage: http://vocalproject.net/
+
+Package: vocal
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Subscribe, download, and listen to podcasts
+ Simple podcast client for the modern desktop.
+ .
+ Subscribe, download, and listen to podcasts
