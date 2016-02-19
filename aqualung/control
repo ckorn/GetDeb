@@ -1,0 +1,51 @@
+Source: aqualung
+Section: sound
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               libflac-dev,
+               libglib2.0-dev,
+               libgtk2.0-dev,
+               libgdk-pixbuf2.0-dev,
+               libxml2-dev,
+               libcdio-paranoia-dev,
+               libjack-dev,
+               libsamplerate0-dev,
+               liblrdf0-dev,
+               libcddb2-dev,
+               libmodplug-dev,
+               libmpcdec-dev,
+               libwavpack-dev,
+               zlib1g-dev,
+               libbz2-dev,
+               libmad0-dev,
+               libogg-dev,
+               libspeex-dev,
+               libavformat-dev,
+               liboggz2-dev,
+               libvorbis-dev,
+               libcdio-dev,
+               libcdio-cdda-dev,
+               libavcodec-dev,
+               libavutil-dev,
+               libusb-dev,
+               libifp-dev,
+               ladspa-sdk,
+               libasound2-dev,
+               libpulse-dev,
+               libmp3lame-dev,
+               liblua5.2-dev,
+               linux-libc-dev
+Standards-Version: 3.9.6
+Homepage: http://aqualung.jeremyevans.net/
+
+Package: aqualung
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Advanced music player
+ Advanced music player originally targeted at the GNU/Linux operating system.
+ It plays audio CDs, internet radio streams and podcasts as well as
+ soundfiles in just about any audio format and has the feature of inserting
+ no gaps between adjacent tracks.
