@@ -1,9 +1,9 @@
 # comment patch because it requires a X11 display
 # not available during a build in a chroot
-Index: pixelitor-3.1.4/src/test/java/pixelitor/CompositionCreationTest.java
+Index: pixelitor-4.0.0/src/test/java/pixelitor/CompositionCreationTest.java
 ===================================================================
---- pixelitor-3.1.4.orig/src/test/java/pixelitor/CompositionCreationTest.java	2016-01-19 18:38:55.937056207 +0100
-+++ pixelitor-3.1.4/src/test/java/pixelitor/CompositionCreationTest.java	2016-01-19 18:45:48.951928683 +0100
+--- pixelitor-4.0.0.orig/src/test/java/pixelitor/CompositionCreationTest.java	2016-02-18 23:32:05.676902705 +0100
++++ pixelitor-4.0.0/src/test/java/pixelitor/CompositionCreationTest.java	2016-02-18 23:32:05.672902621 +0100
 @@ -40,24 +40,24 @@
  
      @Test
@@ -128,10 +128,10 @@ Index: pixelitor-3.1.4/src/test/java/pixelitor/CompositionCreationTest.java
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.4/src/test/java/pixelitor/CompositionTest.java
+Index: pixelitor-4.0.0/src/test/java/pixelitor/CompositionTest.java
 ===================================================================
---- pixelitor-3.1.4.orig/src/test/java/pixelitor/CompositionTest.java	2016-01-19 18:34:46.584783332 +0100
-+++ pixelitor-3.1.4/src/test/java/pixelitor/CompositionTest.java	2016-01-19 18:46:26.028537819 +0100
+--- pixelitor-4.0.0.orig/src/test/java/pixelitor/CompositionTest.java	2016-02-18 23:32:05.676902705 +0100
++++ pixelitor-4.0.0/src/test/java/pixelitor/CompositionTest.java	2016-02-18 23:32:05.672902621 +0100
 @@ -64,35 +64,6 @@
      }
  
@@ -168,18 +168,18 @@ Index: pixelitor-3.1.4/src/test/java/pixelitor/CompositionTest.java
      public void testSetActiveLayer() {
          tester.checkLayers("[layer 1, ACTIVE layer 2]");
  
-@@ -632,4 +603,4 @@
+@@ -624,4 +595,4 @@
          comp.setName("New Name");
          assertThat(comp.getName()).isEqualTo("New Name");
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/ContentLayerTest.java
+Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/ContentLayerTest.java
 ===================================================================
---- pixelitor-3.1.4.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-01-19 18:38:55.937056207 +0100
-+++ pixelitor-3.1.4/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-01-19 18:47:11.693286793 +0100
-@@ -73,51 +73,6 @@
+--- pixelitor-4.0.0.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-02-18 17:34:22.000000000 +0100
++++ pixelitor-4.0.0/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-02-18 23:33:09.242231154 +0100
+@@ -85,55 +85,6 @@
          History.clear();
      }
  
@@ -203,83 +203,89 @@ Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/ContentLayerTest.java
 -        assertThat(layer.getTX()).isEqualTo(3);
 -        assertThat(layer.getTY()).isEqualTo(3);
 -
--        layer.endMovement();
+-        // endMovement is called on the composition
+-        // so that we have history
+-        comp.endMovement();
 -
 -        checkTranslationAfterPositiveDrag();
+-        iconUpdates.check(1, 1);
 -
+-        // start another drag to the negative direction
 -        layer.startMovement();
 -        layer.moveWhileDragging(-1, -2);
 -
 -        checkTranslationAfterNegativeDrag();
 -
--        layer.endMovement();
+-        comp.endMovement();
 -
 -        // No change:
 -        // ImageLayer: this time the layer was not enlarged
 -        // TextLayer: endMovement does not change the tmpTranslation + translation sum
 -        checkTranslationAfterNegativeDrag();
+-        iconUpdates.check(2, 2);
 -
--        // TODO should have undo
--//        History.assertNumEditsIs(2);
--//        History.undo();
--//        checkTranslationAfterPositiveDrag();
--//        History.undo();
--//        assertThat(layer.getTX()).isEqualTo(0);
--//        assertThat(layer.getTY()).isEqualTo(0);
+-        History.assertNumEditsIs(2);
+-        History.undo();
+-        checkTranslationAfterPositiveDrag();
+-        History.undo();
+-        assertThat(layer.getTX()).isEqualTo(0);
+-        assertThat(layer.getTY()).isEqualTo(0);
 -    }
 -
      private void checkTranslationAfterPositiveDrag() {
          if (layer instanceof ImageLayer) {
              // the layer was enlarged in endMovement, and the translation reset to 0, 0
-@@ -175,4 +130,4 @@
-         layer.setupDrawingComposite(g, true);
+@@ -182,4 +133,4 @@
          layer.setupDrawingComposite(g, false);
+         iconUpdates.check(0, 0);
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/ImageLayerTest.java
+Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/ImageLayerTest.java
 ===================================================================
---- pixelitor-3.1.4.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-01-19 18:38:55.937056207 +0100
-+++ pixelitor-3.1.4/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-01-19 18:48:08.838222279 +0100
-@@ -176,25 +176,11 @@
+--- pixelitor-4.0.0.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-02-18 23:32:05.676902705 +0100
++++ pixelitor-4.0.0/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-02-18 23:34:37.280070819 +0100
+@@ -274,27 +274,6 @@
      }
  
      @Test
--    public void testCreateTmpDrawingLayer() {
--        TmpDrawingLayer tmpDrawingLayer1 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, true);
--        assertThat(tmpDrawingLayer1).isNotNull();
--        TmpDrawingLayer tmpDrawingLayer2 = layer.createTmpDrawingLayer(AlphaComposite.SrcOver, false);
--        assertThat(tmpDrawingLayer2).isNotNull();
+-    public void test_TmpDrawingLayer() {
+-        TmpDrawingLayer tmpDrawingLayer
+-                = layer.createTmpDrawingLayer(AlphaComposite.SrcOver);
+-        assertThat(tmpDrawingLayer).isNotNull();
+-        assertThat(tmpDrawingLayer.getWidth()).isEqualTo(layer.canvas.getWidth());
+-        assertThat(tmpDrawingLayer.getHeight()).isEqualTo(layer.canvas.getHeight());
+-
+-        layer.mergeTmpDrawingLayerDown();
+-        iconUpdates.check(0, 0);
 -    }
 -
 -    @Test
-     public void testMergeTmpDrawingImageDown() {
-         layer.mergeTmpDrawingLayerDown();
-     }
- 
-     @Test
--    public void testCreateCompositionSizedTmpImage() {
+-    public void test_createCompositionSizedTmpImage() {
 -        BufferedImage image = layer.createCompositionSizedTmpImage();
 -        assertThat(image).isNotNull();
+-        assertThat(image.getWidth()).isEqualTo(layer.canvas.getWidth());
+-        assertThat(image.getHeight()).isEqualTo(layer.canvas.getHeight());
+-        iconUpdates.check(0, 0);
 -    }
 -
 -    @Test
-     public void testGetCanvasSizedSubImage() {
-         // TODO would be better with translation
+     public void test_getCanvasSizedSubImage() {
          BufferedImage image = layer.getCanvasSizedSubImage();
-@@ -286,4 +272,4 @@
-             assertThat(layer.hasMask()).isFalse();
+         assertThat(image).isNotNull();
+@@ -410,4 +389,4 @@
+             iconUpdates.checkLayer(2);
          }
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
+Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
 ===================================================================
---- pixelitor-3.1.4.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-01-19 18:38:55.937056207 +0100
-+++ pixelitor-3.1.4/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-01-19 18:48:43.850794555 +0100
-@@ -50,11 +50,6 @@
+--- pixelitor-4.0.0.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-02-18 23:32:05.676902705 +0100
++++ pixelitor-4.0.0/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-02-18 23:32:05.672902621 +0100
+@@ -70,11 +70,6 @@
      }
  
      @Test
@@ -291,7 +297,7 @@ Index: pixelitor-3.1.4/src/test/java/pixelitor/layers/LayerBlendingModesTest.jav
      public void testDarken() {
          // MIN(211, 119) = 119
          // MIN(141,  86) = 86
-@@ -63,14 +58,6 @@
+@@ -83,14 +78,6 @@
      }
  
      @Test
