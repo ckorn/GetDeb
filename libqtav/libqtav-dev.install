@@ -1,0 +1,10 @@
+usr/include/*/qt5/QtAV/*.h
+usr/lib/*/libQt*AV.prl
+usr/lib/*/libQt*AV.so
+usr/lib/*/qt5/mkspecs/features/av.prf
+usr/lib/*/qt5/mkspecs/modules/qt_lib_av.pri
+usr/include/*/qt5/QtAVWidgets
+usr/lib/*/libQt*AVWidgets.prl
+usr/lib/*/libQt*AVWidgets.so
+usr/lib/*/qt5/mkspecs/features/avwidgets.prf
+usr/lib/*/qt5/mkspecs/modules/qt_lib_avwidgets.pri

@@ -1,0 +1,17 @@
+config.tests/gl/gl
+config.tests/pulseaudio/pulseaudio
+config.tests/sse4_1/sse4_1
+config.tests/xv/xv
+lib_linux_x86_64/libQtAV.prl
+lib_linux_x86_64/libQtAVWidgets.prl
+lib_linux_x86_64/libcommon.prl
+sdk_install.sh
+sdk_uninstall.sh
+tools/install_sdk/mkspecs/features/av.prf
+tools/install_sdk/mkspecs/features/avwidgets.prf
+tools/install_sdk/mkspecs/modules/qt_lib_av.pri
+tools/install_sdk/mkspecs/modules/qt_lib_av_private.pri
+tools/install_sdk/mkspecs/modules/qt_lib_avwidgets.pri
+tools/install_sdk/mkspecs/modules/qt_lib_avwidgets_private.pri
+config.log
+.qmake.cache

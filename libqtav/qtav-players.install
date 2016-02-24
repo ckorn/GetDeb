@@ -1,0 +1,5 @@
+usr/lib/*/qt5/bin/player
+usr/lib/*/qt5/bin/QMLPlayer
+usr/share/applications/player.desktop
+usr/share/applications/QMLPlayer.desktop
+usr/share/icons/hicolor/64x64/apps/QtAV.svg

@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+DEB_BUILD_MULTIARCH ?= $(shell dpkg-architecture -qDEB_BUILD_MULTIARCH)
+export QT_SELECT=qt5
+
+%:
+	dh $@ --parallel
+
+override_dh_clean:
+	find . -iname "*.so.*" -delete
+	find . -iname "*.so" -delete
+	find . -iname "*.o" -delete
+	find . -iname "Makefile" -delete
+	rm -rf .moc .qmake .rcc
+	dh_clean
+
+override_dh_auto_configure:
+	qmake "CONFIG+=no_rpath recheck config_libass_link"
+
+override_dh_install:
+	dh_install --list-missing

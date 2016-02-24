@@ -1,0 +1,3 @@
+version=3
+https://github.com/wang-bin/QtAV/tags \
+    (?:.*/)?v([\d\.]+)\.tar\.gz

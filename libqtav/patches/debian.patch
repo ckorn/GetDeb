@@ -1,0 +1,129 @@
+# just don't create files inside the debian directory
+Index: libqtav-1.9.0/src/libQtAV.pro
+===================================================================
+--- libqtav-1.9.0.orig/src/libQtAV.pro	2015-12-20 19:24:08.000000000 +0100
++++ libqtav-1.9.0/src/libQtAV.pro	2016-02-23 22:15:40.867088801 +0100
+@@ -544,37 +544,6 @@
+    }
+ }
+ 
+-unix:!android:!mac {
+-#debian
+-DEB_INSTALL_LIST = .$$[QT_INSTALL_LIBS]/libQt*AV.so.*
+-libqtav.target = libqtav.install
+-libqtav.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${libqtav.target}
+-QMAKE_EXTRA_TARGETS += libqtav
+-target.depends *= $${libqtav.target}
+-
+-DEB_INSTALL_LIST = $$join(SDK_HEADERS, \\n.$$[QT_INSTALL_HEADERS]/, .$$[QT_INSTALL_HEADERS]/)
+-DEB_INSTALL_LIST += .$$[QT_INSTALL_LIBS]/libQt*AV.prl .$$[QT_INSTALL_LIBS]/libQt*AV.so
+-DEB_INSTALL_LIST += .$$[QT_INSTALL_BINS]/../mkspecs/features/av.prf .$$[QT_INSTALL_BINS]/../mkspecs/modules/qt_lib_av.pri
+-qtav_dev.target = qtav-dev.install
+-qtav_dev.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${qtav_dev.target}
+-QMAKE_EXTRA_TARGETS += qtav_dev
+-target.depends *= $${qtav_dev.target}
+-
+-DEB_INSTALL_LIST = $$join(SDK_PRIVATE_HEADERS, \\n.$$[QT_INSTALL_HEADERS]/QtAV/*/, .$$[QT_INSTALL_HEADERS]/QtAV/*/)
+-DEB_INSTALL_LIST += .$$[QT_INSTALL_BINS]/../mkspecs/modules/qt_lib_av_private.pri
+-qtav_private_dev.target = qtav-private-dev.install
+-qtav_private_dev.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${qtav_private_dev.target}
+-QMAKE_EXTRA_TARGETS += qtav_private_dev
+-target.depends *= $${qtav_private_dev.target}
+-
+-greaterThan(QT_MAJOR_VERSION, 4) {
+-  qtav_dev_links.target = qtav-dev.links
+-  qtav_dev_links.commands = echo \"$$[QT_INSTALL_LIBS]/libQtAV.so $$[QT_INSTALL_LIBS]/libQt$${QT_MAJOR_VERSION}AV.so\" >$$PROJECTROOT/debian/$${qtav_dev_links.target}
+-  QMAKE_EXTRA_TARGETS *= qtav_dev_links
+-  target.depends *= $${qtav_dev_links.target}
+-} #Qt>=5
+-} #debian
+-
+ MODULE_INCNAME = QtAV
+ MODULE_VERSION = $$VERSION
+ #use Qt version. limited by qmake
+Index: libqtav-1.9.0/widgets/libQtAVWidgets.pro
+===================================================================
+--- libqtav-1.9.0.orig/widgets/libQtAVWidgets.pro	2015-12-20 19:24:08.000000000 +0100
++++ libqtav-1.9.0/widgets/libQtAVWidgets.pro	2016-02-23 22:15:16.478450511 +0100
+@@ -146,30 +146,6 @@
+    }
+ }
+ 
+-unix:!android:!mac {
+-#debian
+-DEB_INSTALL_LIST = .$$[QT_INSTALL_LIBS]/libQt*AVWidgets.so.*
+-libqtavwidgets.target = libqtavwidgets.install
+-libqtavwidgets.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${libqtavwidgets.target}
+-QMAKE_EXTRA_TARGETS += libqtavwidgets
+-target.depends *= $${libqtavwidgets.target}
+-
+-DEB_INSTALL_LIST = $$join(SDK_HEADERS, \\n.$$[QT_INSTALL_HEADERS]/, .$$[QT_INSTALL_HEADERS]/)
+-DEB_INSTALL_LIST += .$$[QT_INSTALL_LIBS]/libQt*AVWidgets.prl .$$[QT_INSTALL_LIBS]/libQt*AVWidgets.so
+-DEB_INSTALL_LIST += .$$[QT_INSTALL_BINS]/../mkspecs/features/avwidgets.prf .$$[QT_INSTALL_BINS]/../mkspecs/modules/qt_lib_avwidgets.pri
+-qtavwidgets_dev.target = qtav-dev.install #like qtmultimedia5-dev, contains widgets headers
+-qtavwidgets_dev.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >>$$PROJECTROOT/debian/$${qtavwidgets_dev.target}
+-QMAKE_EXTRA_TARGETS += qtavwidgets_dev
+-target.depends *= $${qtavwidgets_dev.target}
+-
+-greaterThan(QT_MAJOR_VERSION, 4) {
+-  qtavwidgets_dev_links.target = qtav-dev.links #like qtmultimedia5-dev, contains widgets .so
+-  qtavwidgets_dev_links.commands = echo \"$$[QT_INSTALL_LIBS]/libQtAVWidgets.so $$[QT_INSTALL_LIBS]/libQt$${QT_MAJOR_VERSION}AVWidgets.so\" >>$$PROJECTROOT/debian/$${qtavwidgets_dev_links.target}
+-  QMAKE_EXTRA_TARGETS *= qtavwidgets_dev_links
+-  target.depends *= $${qtavwidgets_dev_links.target}
+-} #Qt>=5
+-} #debian
+-
+ MODULE_INCNAME = QtAVWidgets
+ MODULE_VERSION = $$VERSION
+ #use Qt version. limited by qmake
+Index: libqtav-1.9.0/examples/player/player.pro
+===================================================================
+--- libqtav-1.9.0.orig/examples/player/player.pro	2015-12-20 19:24:08.000000000 +0100
++++ libqtav-1.9.0/examples/player/player.pro	2016-02-23 22:40:41.768056123 +0100
+@@ -14,25 +14,6 @@
+ genRC($$TARGET)
+ include(src.pri)
+ 
+-unix:!android:!mac {
+-#debian
+-player_bins = player QMLPlayer
+-DEB_INSTALL_LIST = $$join(player_bins, \\n.$$[QT_INSTALL_BINS]/, .$$[QT_INSTALL_BINS]/)
+-DEB_INSTALL_LIST *= \
+-            usr/share/applications/player.desktop \
+-            usr/share/applications/QMLPlayer.desktop \
+-            usr/share/icons/hicolor/64x64/apps/QtAV.svg
+-deb_install_list.target = qtav-players.install
+-deb_install_list.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${deb_install_list.target}
+-QMAKE_EXTRA_TARGETS += deb_install_list
+-target.depends *= $${deb_install_list.target}
+-
+-qtav_players_links.target = qtav-players.links
+-qtav_players_links.commands = echo \"$$[QT_INSTALL_BINS]/player /usr/bin/Player\n$$[QT_INSTALL_BINS]/QMLPlayer /usr/bin/QMLPlayer\" >$$PROJECTROOT/debian/$${qtav_players_links.target}
+-QMAKE_EXTRA_TARGETS *= qtav_players_links
+-target.depends *= $${qtav_players_links.target}
+-}
+-
+ tv.files = res/tv.ini
+ #BIN_INSTALLS += tv
+ target.path = $$[QT_INSTALL_BINS]
+Index: libqtav-1.9.0/qml/libQmlAV.pro
+===================================================================
+--- libqtav-1.9.0.orig/qml/libQmlAV.pro	2015-12-20 19:24:08.000000000 +0100
++++ libqtav-1.9.0/qml/libQmlAV.pro	2016-02-23 22:41:48.417206331 +0100
+@@ -108,16 +108,6 @@
+   SOURCES += QuickFBORenderer.cpp
+ }
+ 
+-unix:!android:!mac {
+-#debian
+-qml_module_files = qmldir Video.qml plugins.qmltypes libQmlAV.so
+-DEB_INSTALL_LIST = $$join(qml_module_files, \\n.$$[QT_INSTALL_QML]/QtAV/, .$$[QT_INSTALL_QML]/QtAV/)
+-deb_install_list.target = qml-module-qtav.install
+-deb_install_list.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${deb_install_list.target}
+-QMAKE_EXTRA_TARGETS += deb_install_list
+-target.depends += $${deb_install_list.target}
+-}
+-
+ target.path = $$[QT_INSTALL_QML]/QtAV
+ qtav_qml.path = $$[QT_INSTALL_QML]/QtAV
+ !contains(QMAKE_HOST.os, Windows):INSTALLS *= target qtav_qml
