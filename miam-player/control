@@ -1,0 +1,41 @@
+Source: miam-player
+Section: sound
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               qtbase5-dev,
+               qt5-default,
+               libqt5opengl5-dev,
+               libavformat-dev,
+               libswscale-dev,
+               libavcodec-dev,
+               libavutil-dev,
+               libswresample-dev,
+               libavresample-dev,
+               libavfilter-dev,
+               libavdevice-dev,
+               libloki-dev,
+               qtmultimedia5-dev,
+               libtag1-dev,
+               libx11-dev,
+               libxcb1-dev,
+               libqt5x11extras5-dev,
+               libqtav-private-dev,
+               libqtav-dev
+Standards-Version: 3.9.6
+Homepage: http://miam-player.org
+
+Package: miam-player
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Cross-platform open source music player
+ Miam Player is a cross-platform open source music player.
+ .
+ Features:
+  * Fast and reliable
+  * Read .mp3, .m4a (MP4), .flac, .ogg, .oga (OGG Vorbis),
+    .asf, .ape (Monkey Audio), .opus and more!
+  * Customize everything: User Interface, Covers, Shortcuts,
+    Buttons, Themes
+  * Read and edit metadata using Taglib

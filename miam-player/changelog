@@ -1,0 +1,5 @@
+miam-player (0.8.0-1~getdeb1) wily; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 23 Feb 2016 21:04:12 +0100

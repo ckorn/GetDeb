@@ -1,0 +1,14 @@
+# fix typo
+Index: miam-player-0.8.0/src/Player/views/tageditor/tageditor.cpp
+===================================================================
+--- miam-player-0.8.0.orig/src/Player/views/tageditor/tageditor.cpp	2016-02-12 00:54:12.000000000 +0100
++++ miam-player-0.8.0/src/Player/views/tageditor/tageditor.cpp	2016-02-23 23:34:35.787822348 +0100
+@@ -26,7 +26,7 @@
+ 	<< "Game" << "Sound Clip" << "Gospel" << "Noise" << "AlternRock" << "Bass" << "Soul" << "Punk" << "Space" << "Meditative"
+ 	<< "Instrumental Pop" << "Instrumental Rock" << "Ethnic" << "Gothic" << "Darkwave" << "Techno-Industrial" << "Electronic"
+ 	<< "Pop-Folk" << "Eurodance" << "Dream" << "Southern Rock" << "Comedy" << "Cult" << "Gangsta" << "Top 40"
+-	<< "Christian Rap" << "Pop/Funk" << "Jungle" << "Native American" << "Cabaret" << "New Wave" << "Psychadelic" << "Rave"
++	<< "Christian Rap" << "Pop/Funk" << "Jungle" << "Native American" << "Cabaret" << "New Wave" << "Psychedelic" << "Rave"
+ 	<< "Showtunes" << "Trailer" << "Lo-Fi" << "Tribal" << "Acid Punk" << "Acid Jazz" << "Polka" << "Retro" << "Musical"
+ 	<< "Rock & Roll" << "Hard Rock");
+ 

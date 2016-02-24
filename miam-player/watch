@@ -1,0 +1,3 @@
+version=3
+https://github.com/MBach/Miam-Player/tags \
+    (?:.*/)?v([\d\.]+)\.tar\.gz
