@@ -1,3 +1,33 @@
+fotoxx (16.03-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + New: Blur Background: select one or more areas (foreground) that remain
+    sharp 
+      while the remaining areas (background) are blurred, optionally in
+      proportion 
+      to distance from foreground. Also useful for the classic Tilt-Shift
+      effect.
+    + New: Add Transparency: based on brightness, a chosen color, or the
+    inverse.
+    + Edit Metadata: Editing a series of images that need some of the same
+    metadata
+      was made faster and easier with a button to recall previous data.
+    + The image size limit for most edit functions was doubled to 250
+    megapixels
+      (not realistic for computers having less than 16 GB main memory). 
+    + Select Area: area edge distance calculation was made 2-3x faster.
+    + Select Area: copy/paste retains both transparency and edge distance
+    data.
+    + Calibrate Printer Colors: the chart and the procedure were revised, and
+    this
+      means you have to perform the calibration again (my apologies for
+      this). 
+    + Bugfix: Mashup: warping overlay images no longer leaves black margins
+    where
+      an image was pulled inward from the edge. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Mar 2016 18:05:14 +0100
+
 fotoxx (16.02.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
