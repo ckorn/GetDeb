@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
+               libglib2.0-dev,
                libgtk-3-dev,
                librest-dev,
                libsoup2.4-dev,
@@ -11,8 +12,9 @@ Build-Depends: debhelper (>= 9),
                libjson-glib-dev,
                libsqlite3-dev,
                libgstreamer-plugins-base1.0-dev,
-               valac
-Standards-Version: 3.9.5
+               valac,
+               libxml2-utils
+Standards-Version: 3.9.6
 Homepage: http://corebird.baedert.org/
 
 Package: corebird
