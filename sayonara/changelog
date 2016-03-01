@@ -1,0 +1,414 @@
+sayonara (0.8.2-1~getdeb1) trusty; urgency=medium
+
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 28 Feb 2016 13:52:01 +0100
+
+sayonara (0.8.2-0ppa9-trusty1) trusty; urgency=low
+
+  * Czech language update 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 26 Feb 2016 22:33:18 +0100
+
+sayonara (0.8.2-0ppa8-trusty1) trusty; urgency=low
+
+  * Language update
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 19 Feb 2016 22:45:42 +0100
+
+sayonara (0.8.2-0ppa5-trusty1) trusty; urgency=low
+
+  * Language update
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Thu, 18 Feb 2016 17:25:48 +0100
+
+sayonara (0.8.2-0ppa4-trusty1) trusty; urgency=low
+
+  * Tag editor style update
+  * Various playlist fixes
+  * Enhanced Webstreams/Podcasts usability
+  * Moved genre updates into new thread
+  * Gapless playback is more relyable
+  * Moved library plugin menus to menubar
+  * Native skin more 'native'
+  * Bugfix: When only one genre is available, genre is displayed now
+  * Bugfix: Local files with special characters can be dropped to playlist again
+  * Bugfix: Various stream recorder bugfixes
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 14 Feb 2016 21:08:49 +0100
+
+sayonara (0.8.1-0ppa1~trusty1) trusty; urgency=low
+
+  * Added remote control
+  * Only one instance allowed from now on
+  * Small playlist items is default now
+  * Added lyrics and edit entry for playlist
+  * Bugfix: Restore library size when hiding/unhiding
+  * Bugfix: No sound issue fixed
+  * Bugfix: Gapless playback does not stop playlist anymore
+  * Bugfix: Clear library first when library path has changed
+  * Bugfix: Report progress when copying files to MTP device
+  * Bugfix: Copy tracks from directory view to MTP device possible now
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 10 Jan 2016 17:01:43 +0100
+
+sayonara (0.8.0-0ppa4-trusty1) trusty; urgency=low
+
+  * debian, debian 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 18 Dec 2015 09:30:46 +0100
+
+sayonara (0.8.0-0ppa3-trusty1) trusty; urgency=low
+
+  * further debian bugfixes 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 18 Dec 2015 08:32:54 +0100
+
+sayonara (0.8.0-0ppa2-trusty1) trusty; urgency=low
+
+  * Debian package bugfixes
+  * Taglib bugfix when extracting tags from path 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 18 Dec 2015 07:32:32 +0100
+
+sayonara (0.8.0-0ppa1~trusty1) trusty; urgency=low
+
+  * External devices supported (experimental)
+  * Genre view
+  * Search in directories
+  * Resizable windows in library window
+  * Redesign of library windows and selector
+  * Font configurator
+  * Chinese language support
+  * Language updates and bugfixes
+  * Style update
+  * Startup improved
+  * More podcast and stream information
+  * Rating item in tag editor, extract rating from ID3 Tag
+  * Notifications via DBus
+  * Bugfix: Shuffle playback
+  * Bugfix: MPRIS Plugin (Sayonara view in sound indicator)
+  * Bugfix: If a track is loaded from outside, a new playlist is created
+  * Bugfix: Several bugfixes on stream recorder
+  * Bugfix: Rating items
+  * Bugfix: Several bugfixes in broadcasting
+  * Bugfix: A lot of more 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Wed, 16 Dec 2015 12:39:50 +0100
+
+sayonara (0.7.1-0ppa5-trusty1) trusty; urgency=low
+
+  * fixed sqlite dependency 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 16 Oct 2015 23:28:08 +0200
+
+sayonara (0.7.1-0ppa4-trusty1) trusty; urgency=low
+
+  * Fixed playlists database bug  
+  * Fixed startup crash bug
+  * Fixed play/pause/seek problem
+  * Style update
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Mon, 05 Oct 2015 18:24:49 +0200
+
+sayonara (0.7.1-0ppa3-trusty1) trusty; urgency=low
+
+  * Playlist initializer issues fixed (automatic playback etc) 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 04 Oct 2015 09:42:07 +0200
+
+sayonara (0.7.1-0ppa2-trusty1) trusty; urgency=low
+
+  * Apply new build rules to fix soundcloud bug 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 04 Oct 2015 00:04:45 +0200
+
+sayonara (0.7.1-0ppa1~trusty1) trusty; urgency=low
+
+  * Broadcasting: A lot of Broadcasting issues fixed
+  * Notifications: Replaced libnotify notifications by DBus notifications
+  * Tagging: Rating supported
+  * Tagging: Old tags stay as they are
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 03 Oct 2015 20:01:39 +0200
+
+sayonara (0.7.0-0ppa5-trusty1) trusty; urgency=low
+
+  * reintegrated show action in tray menu because of unity 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 13 Sep 2015 19:33:16 +0200
+
+sayonara (0.7.0-0ppa4-trusty1) trusty; urgency=low
+
+  * fixed soundcloud issue, when there are tracks but no playlists
+  * fixed soundlcoud artist search ui focus problem
+  * fixed show/hide window bug 
+  * removed show action in tray icon
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 13 Sep 2015 17:25:23 +0200
+
+sayonara (0.7.0-0ppa3-trusty1) trusty; urgency=low
+
+  * fixed soundcloud db bug 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 25 Aug 2015 19:36:41 +0200
+
+sayonara (0.7.0-0ppa2-trusty1) trusty; urgency=low
+
+  * added new debian dependencies 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Mon, 24 Aug 2015 23:42:36 +0200
+
+sayonara (0.7.0-0ppa1~trusty1) trusty; urgency=low
+
+  * replaced qt4 by qt5
+  * removed curl dependency
+  * added soundcloud plugin
+  * added coversearch in local directory
+  * added directory view
+  * added Last.fm login during runtime
+  * fixed bookmarks loop issue
+  * fixed library import issues
+  * fixed lib64 issue on some distributions
+  * fixed lame bug in Engine
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 16 Aug 2015 15:22:16 +0200
+
+sayonara (0.6.6-0ppa6-trusty1) trusty; urgency=low
+
+  * update dbus include directories 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 14 Jul 2015 22:18:29 +0200
+
+sayonara (0.6.6-0ppa5-trusty1) trusty; urgency=low
+
+  * added cmake build type none 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 14 Jul 2015 21:46:11 +0200
+
+sayonara (0.6.6-0ppa4-trusty1) trusty; urgency=low
+
+  * added debian compat level 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 14 Jul 2015 21:38:30 +0200
+
+sayonara (0.6.6-0ppa3-trusty1) trusty; urgency=low
+
+  * bug removed: second song starts at position where first song ended
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 14 Jul 2015 21:29:00 +0200
+
+sayonara (0.6.6-0ppa2-trusty1) trusty; urgency=low
+
+  * shutdown option in playlist
+  * release build update 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Thu, 14 May 2015 14:31:42 +0200
+
+sayonara (0.6.6-0ppa1~trusty1) trusty; urgency=low
+
+  * streamripper revival
+  * tabbed playlists improvement
+  * gui update
+  * correct detection of install path 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Thu, 14 May 2015 14:08:51 +0200
+
+sayonara (0.6.5-0ppa6-trusty1) trusty; urgency=low
+
+  * DBus Integrity
+  * Various bug fixes 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 03 Apr 2015 14:40:22 +0200
+
+sayonara (0.6.5-0ppa5-trusty1) trusty; urgency=low
+
+  * added qt sqlite mandatory dependency
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 17 Mar 2015 23:04:46 +0100
+
+sayonara (0.6.5-0ppa4-trusty1) trusty; urgency=low
+
+  * PPA 4
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 14 Mar 2015 19:21:09 +0100
+
+sayonara (0.6.5-0ppa3-trusty1) trusty; urgency=low
+
+  * playlist recovery on startup fixes
+  * optional mp3 encoder 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 14 Mar 2015 17:25:25 +0100
+
+sayonara (0.6.5-0ppa2-trusty1) trusty; urgency=low
+
+  * playlist recovery on startup fixes
+  * optional mp3 encoder 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 14 Mar 2015 16:47:48 +0100
+
+sayonara (0.6.5-0ppa1~trusty1) trusty; urgency=low
+
+  * New Version 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 07 Mar 2015 19:40:53 +0100
+
+sayonara (0.6.4-0ppa4~trusty1) trusty; urgency=low
+
+  * fixed tag edit
+  * fixed start playing bug 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 07 Mar 2015 16:11:24 +0100
+
+sayonara (0.6.4-0ppa3~trusty1) trusty; urgency=low
+
+  * fixed tag edit
+  * fixed start playing bug 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 07 Mar 2015 15:54:59 +0100
+
+sayonara (0.6.4-0ppa2~trusty1) trusty; urgency=low
+
+  * Version number
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Thu, 05 Mar 2015 00:05:06 +0100
+
+sayonara (0.6.4-0ppa1~trusty1) trusty; urgency=low
+
+  * use qt resource system 
+  * updated translations
+  * improved audio tagging
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Wed, 04 Mar 2015 23:23:05 +0100
+
+
+sayonara (0.6.3-0ppa2~trusty1) trusty; urgency=low
+
+  * a comment
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Wed, 04 Mar 2015 22:45:35 +0100
+
+sayonara (0.6.3-0ppa1~trusty1) trusty; urgency=low
+
+  * No changes
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Wed, 04 Mar 2015 21:44:31 +0100
+
+sayonara (0.6.2-0sp1~ubuntu14.10.1~ppa1) trusty; urgency=low
+
+  * czech translation update
+  * sql dependencies
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sat, 28 Feb 2015 18:21:12 +0100
+
+sayonara (0.6.1-0ubuntu4) trusty; urgency=low
+
+  * more debug and new dependencies
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 08 Feb 2015 21:31:38 +0100
+
+sayonara (0.6.1-0ubuntu3) trusty; urgency=low
+
+  * see ubuntu4 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 08 Feb 2015 21:25:45 +0100
+
+sayonara (0.6.1-0ubuntu2) trusty; urgency=low
+
+  * trusty release
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 08 Feb 2015 13:45:35 +0100
+
+sayonara (0.6.1-0ubuntu1) trusty; urgency=low
+
+  * mp3 converter
+  * broadcasting functionality
+  * equalizer curve
+  * tabbed playlists
+  * finally a repeat one button
+  * No changes compared to last version 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 08 Feb 2015 01:20:52 +0100
+
+sayonara (0.6.0-0ubuntu1) trusty; urgency=low
+
+  * mp3 converter
+  * broadcasting functionality
+  * equalizer curve
+  * tabbed playlists
+  * finally a repeat one button
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Sun, 08 Feb 2015 00:31:33 +0100
+
+sayonara (0.5.9-0ubuntu1) trusty; urgency=low
+
+  * improved cover search
+  * speed plugin 
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Tue, 02 Sep 2014 17:25:24 +0200
+
+sayonara (0.4.1) trusty; urgency=low
+
+  * Spectrum analyzer
+  * Maximize state is restored properly
+  * Navigation in with arrow keys
+  * Drag and drop into library
+  * ID3 tagging improved (tags from path)
+  * Case insensitive search for non-latin languages
+  * Enhanced selection in library
+  * Rating
+  * Gapless playback
+  * Search in playlist
+  
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 07 Jul 2013 02:28:00 +0100
+
+sayonara (0.4) trusty; urgency=low
+  
+  * Language support
+  * Memory leak fixed
+  * Asynchronous import to library
+  * No blurred notifications
+  * Improved alternative cover fetcher
+  * Keyboard shortcuts
+  * Update notifier
+  * Level meter
+  * Less memory consumption
+  * Sorting in library is saved
+  * Load last track for non-library tracks fixed
+  * Trusted debian packages
+  * Fullscreen window state is restored
+  * Icons in hicolor theme
+  * Link to forum in "Help"
+  * Library replaced by other window, if no libpath 
+  * Dark skin
+
+ -- Lucio Carreras <luciocarreras@gmail.com>  Fri, 10 Apr 2013 10:17:00 +0100
+
+sayonara (0.3.2) trusty-proposed; urgency=low
+  
+  * Sayonara 0.3.2 was a bufix release
+  * Podcasts
+  * Only one instance
+  * Notifications with libnotify
+  * Startup options
+  * Podcasts
+  * Window specific search in library
+  * Optional columns in library
+  * Streams are more stable
+  * Better LastFM support
+  * Playlists load and save to m3u
+  * Sayonara in file manager context menu
+  * Discnumbers
+  * Dark skin
+  * Numbers in playlist
+  * Streamrecorder improved (playlists, session folders)
+  * Faster library handling
+  * Clear library
+  * playlist issues
+  * library marks
+  * streaming with activated stream recorder
+  * Menu icons
+  * Better font for non-latin characters
+  * Better Unicode support
+ -- Lucio Carreras <luciocarreras@gmail.com>  Mon, 25 Mar 2013 23:00:00 +0100

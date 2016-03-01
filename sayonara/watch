@@ -1,0 +1,3 @@
+version=3
+http://sayonara-player.com/downloads.php \
+    (?:.*/)?sayonara-player-([\d\.]+)(?:-.*)?.tar.gz
