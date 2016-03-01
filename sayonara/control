@@ -1,0 +1,47 @@
+Source: sayonara
+Section: sound
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               pkg-config,
+               qt5-default,
+               qttools5-dev,
+               qttools5-dev-tools,
+               libtag1-dev,
+               libgstreamer1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libgstreamer-plugins-good1.0-dev,
+               libgstreamer-plugins-bad1.0-dev,
+               libmtp-dev
+Standards-Version: 3.9.6
+Homepage: http://sayonara-player.com
+
+Package: sayonara
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         gstreamer1.0-plugins-ugly,
+         gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good,
+         gstreamer1.0-pulseaudio,
+         libqt5sql5-sqlite
+Description: Small and lightweight music player
+ Its main focus is on managing libraries and playing sound out of it. 
+ It contains a music library, custom playlists, dynamic playlists, 
+ ID3 Tag Editor, LastFM scrobbling, LastFM radio, web streaming, equalizer, 
+ lyrics, stream recorder and podcasts
+
+Package: sayonara-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: sayonara (= ${binary:Version}),
+         ${misc:Depends}
+Description: Small and lightweight music player (debug package)
+ Its main focus is on managing libraries and playing sound out of it. 
+ It contains a music library, custom playlists, dynamic playlists, 
+ ID3 Tag Editor, LastFM scrobbling, LastFM radio, web streaming, equalizer, 
+ lyrics, stream recorder and podcasts.
+ .
+ (This package contains the debug symbols).
