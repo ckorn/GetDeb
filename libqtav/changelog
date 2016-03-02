@@ -1,3 +1,58 @@
+libqtav (1.10.0-1~getdeb1) wily; urgency=medium
+
+  * New upstream version
+    - Improve seek speed, fix drop too much frames after seek
+    - VideoFrameExtractor: seek faster if called many times. Speed up
+    progress bar preview
+    - Support media files from android assets. Use protocol 'assets:'
+    - Apply video decoder options when playing
+    - Better iOS support
+    - VideoToolbox:
+     * Check profile to avoid crash
+     * Support RGB output
+     * Use `rgb422_apple` texture
+     * Support iOS 0-copy rendering using OpenGLES
+     * More interop types for OSX and iOS
+    - OpenGL
+     * Use 16bit depth textures for >8bit videos (e.g. 10bit) if possible
+     * Correct input/output color range. This fixes QtAV video different
+    from other players
+     * Fix high opengl and core profile rendering
+     * Better EGL detection
+    - VO:
+     * Simplify signal emitting
+     * Support background color, simplify background painting
+     * VideoOutput delete crash, resize issues
+     * Improve performance of QPainter based renderers
+    - AudioOutput:
+     * remove setBufferSize, add a better API setBufferSamples
+     * Add flush(), clear(). Not implemented for backends.
+     * Fix OpenAL playback for some audio formats
+     * Dynamic load OpenAL by default except iOS
+     * Add AudioToolbox support for OSX/iOS and becomes the default backend
+     * PulseAudio: workaround noise for multiple instance
+    - Subtitle:
+     * Support ass font files in android assets
+     * Fix srt decoding
+    - QML:
+     * Add QtMultimedia compatible APIs VideoOutput.contentRect/sourceRect
+    - Simplify SurfaceType
+    - Fix strange behaviors near eof: seek, stepForward, exit etc.
+    - Fix playback block if audio duration is shorter than video
+    - VideoFrame constructed from QImage takes image's ownership
+    - Add VideoFrame.colorRange, AudioFrame.duration
+    - encoder: support start time
+    - Add AVPlayer.bufferSpeed, seekFinished(qint64)
+    - Fix abort when loading
+    - Examples:
+     * Fix videos in videowall not synchronized
+     * QMLPlayer has better touch screen experience
+     * QMLPlayer supports win10 store (But Qt is not well supported)
+     * Drag & Drop support on OSX
+     * URL open dialog for QMLPlayer
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 02 Mar 2016 19:34:26 +0100
+
 libqtav (1.9.0-1~getdeb1) wily; urgency=medium
 
   * Upload to GetDeb

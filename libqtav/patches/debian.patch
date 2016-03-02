@@ -1,9 +1,9 @@
 # just don't create files inside the debian directory
-Index: libqtav-1.9.0/src/libQtAV.pro
+Index: libqtav-1.10.0/src/libQtAV.pro
 ===================================================================
---- libqtav-1.9.0.orig/src/libQtAV.pro	2015-12-20 19:24:08.000000000 +0100
-+++ libqtav-1.9.0/src/libQtAV.pro	2016-02-23 22:15:40.867088801 +0100
-@@ -544,37 +544,6 @@
+--- libqtav-1.10.0.orig/src/libQtAV.pro	2016-03-02 19:38:10.440812799 +0100
++++ libqtav-1.10.0/src/libQtAV.pro	2016-03-02 19:38:10.436812730 +0100
+@@ -566,37 +566,6 @@
     }
  }
  
@@ -41,10 +41,10 @@ Index: libqtav-1.9.0/src/libQtAV.pro
  MODULE_INCNAME = QtAV
  MODULE_VERSION = $$VERSION
  #use Qt version. limited by qmake
-Index: libqtav-1.9.0/widgets/libQtAVWidgets.pro
+Index: libqtav-1.10.0/widgets/libQtAVWidgets.pro
 ===================================================================
---- libqtav-1.9.0.orig/widgets/libQtAVWidgets.pro	2015-12-20 19:24:08.000000000 +0100
-+++ libqtav-1.9.0/widgets/libQtAVWidgets.pro	2016-02-23 22:15:16.478450511 +0100
+--- libqtav-1.10.0.orig/widgets/libQtAVWidgets.pro	2016-03-02 19:38:10.440812799 +0100
++++ libqtav-1.10.0/widgets/libQtAVWidgets.pro	2016-03-02 19:38:10.436812730 +0100
 @@ -146,30 +146,6 @@
     }
  }
@@ -76,10 +76,10 @@ Index: libqtav-1.9.0/widgets/libQtAVWidgets.pro
  MODULE_INCNAME = QtAVWidgets
  MODULE_VERSION = $$VERSION
  #use Qt version. limited by qmake
-Index: libqtav-1.9.0/examples/player/player.pro
+Index: libqtav-1.10.0/examples/player/player.pro
 ===================================================================
---- libqtav-1.9.0.orig/examples/player/player.pro	2015-12-20 19:24:08.000000000 +0100
-+++ libqtav-1.9.0/examples/player/player.pro	2016-02-23 22:40:41.768056123 +0100
+--- libqtav-1.10.0.orig/examples/player/player.pro	2016-03-02 19:38:10.440812799 +0100
++++ libqtav-1.10.0/examples/player/player.pro	2016-03-02 19:38:10.436812730 +0100
 @@ -14,25 +14,6 @@
  genRC($$TARGET)
  include(src.pri)
@@ -106,11 +106,11 @@ Index: libqtav-1.9.0/examples/player/player.pro
  tv.files = res/tv.ini
  #BIN_INSTALLS += tv
  target.path = $$[QT_INSTALL_BINS]
-Index: libqtav-1.9.0/qml/libQmlAV.pro
+Index: libqtav-1.10.0/qml/libQmlAV.pro
 ===================================================================
---- libqtav-1.9.0.orig/qml/libQmlAV.pro	2015-12-20 19:24:08.000000000 +0100
-+++ libqtav-1.9.0/qml/libQmlAV.pro	2016-02-23 22:41:48.417206331 +0100
-@@ -108,16 +108,6 @@
+--- libqtav-1.10.0.orig/qml/libQmlAV.pro	2016-03-02 19:38:10.440812799 +0100
++++ libqtav-1.10.0/qml/libQmlAV.pro	2016-03-02 19:38:10.436812730 +0100
+@@ -98,16 +98,6 @@
    SOURCES += QuickFBORenderer.cpp
  }
  
