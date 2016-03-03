@@ -1,0 +1,13 @@
+Description: Add Class-Path to manifest file.
+Author: Gabriele Giacone <1o5g4r8o@gmail.com>
+
+--- a/build.xml
++++ b/build.xml
+@@ -447,6 +447,7 @@
+     <jar destfile="install/SweetHome3D-${version}.jar">
+       <manifest>
+         <attribute name="Main-Class" value="com.eteks.sweethome3d.SweetHome3DBootstrap"/>
++        <attribute name="Class-Path" value="/usr/share/java/j3dcore.jar /usr/share/java/j3dutils.jar /usr/share/java/vecmath.jar /usr/share/java/sunflow.jar /usr/share/java/itext.jar /usr/share/java/janino.jar /usr/share/java/freehep-util.jar /usr/share/java/freehep-io.jar /usr/share/java/freehep-xml.jar /usr/share/java/freehep-graphics2d.jar /usr/share/java/freehep-graphicsio.jar /usr/share/java/freehep-graphicsio-svg.jar /usr/share/icedtea-web/netx.jar /usr/lib/jvm/java-6-sun/jre/lib/javaws.jar"/>
+       </manifest>
+       <zipfileset src="build/SweetHome3D.jar"/>
+       <zipfileset src="build/Furniture.jar"/>

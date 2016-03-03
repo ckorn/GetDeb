@@ -1,0 +1,71 @@
+sweethome3d for Debian
+----------------------
+
+ REPACKAGING
+ 
+ o Files under src/com/eteks/sweethome3d/io/resources/contributions are released
+   under Free Art License version 1.2 which doesn't comply with DFSG and have
+   been removed from upstream tarball.
+
+ o File src/com/eteks/sweethome3d/swing/JPEGImagesToVideo.java has been removed
+   from upstream tarball because license terms contain:
+
+       This software is not designed or intended for use in on-line control of
+       aircraft, air traffic, aircraft navigation or aircraft communications;
+       or in the design, construction, operation or maintenance of any nuclear
+       facility. Licensee represents and warrants that it will not use or
+       redistribute the Software for such purposes.
+
+   This violates DFSG §6:
+
+       6. No Discrimination Against Fields of Endeavor
+       The license must not restrict anyone from making use of the program in a
+       specific field of endeavor. For example, it may not restrict the program
+       from being used in a business, or from being used for genetic research.
+
+ o Video creation feature has been removed because based on Java Media Framework.
+   JMF source code is released under Sun Community Source Licensing (SCSL) which
+   is not DFSG-compliant. See patch 03novideo for more info.
+
+ o The following binary files have been removed from upstream tarball:
+
+ - freehep-vectorgraphics-svg-2.1.1b-src-diff.zip
+ - lib/batik-svgpathparser-1.7.jar
+ - lib/freehep-vectorgraphics-svg-2.1.1b.jar
+ - lib/iText-2.1.7.jar
+ - lib/j3dcore.jar
+ - lib/j3dutils.jar
+ - lib/jmf.jar
+ - lib/linux/i386/libj3dcore-ogl-cg.so
+ - lib/linux/i386/libj3dcore-ogl.so
+ - lib/linux/x64/libj3dcore-ogl.so
+ - lib/macosx/gluegen-rt.jar
+ - lib/macosx/java3d-1.6/gluegen.jar
+ - lib/macosx/java3d-1.6/j3dcore.jar
+ - lib/macosx/java3d-1.6/j3dutils.jar
+ - lib/macosx/java3d-1.6/jogl-all.jar
+ - lib/macosx/java3d-1.6/libgluegen-rt.jnilib
+ - lib/macosx/java3d-1.6/libjogl_desktop.jnilib
+ - lib/macosx/java3d-1.6/libnativewindow_awt.jnilib
+ - lib/macosx/java3d-1.6/libnativewindow_macosx.jnilib
+ - lib/macosx/java3d-1.6/vecmath.jar
+ - lib/macosx/jogl.jar
+ - lib/macosx/libgluegen-rt.jnilib
+ - lib/macosx/libjogl.jnilib
+ - lib/macosx/libjogl_awt.jnilib
+ - lib/macosx/libjogl_cg.jnilib
+ - lib/sunflow-0.07.3i.jar
+ - lib/vecmath.jar
+ - lib/windows/i386/j3dcore-d3d.dll
+ - lib/windows/i386/j3dcore-ogl-cg.dll
+ - lib/windows/i386/j3dcore-ogl-chk.dll
+ - lib/windows/i386/j3dcore-ogl.dll
+ - lib/windows/x64/j3dcore-ogl.dll
+ - libtest/AppleJavaExtensions.jar
+ - libtest/abbot.jar
+ - libtest/gnu-regexp-1.1.0.jar
+ - libtest/jdepend-2.9.jar
+ - libtest/jdom-1.0.jar
+ - libtest/jnlp.jar
+ - libtest/profile.jar
+ - sunflow-0.07.3i-src-diff.zip

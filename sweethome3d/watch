@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\+dfsg// \
+http://sf.net/sweethome3d/SweetHome3D-([\d\.]*)-src.zip
