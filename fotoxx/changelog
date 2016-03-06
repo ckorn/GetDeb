@@ -1,3 +1,10 @@
+fotoxx (16.03.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Translation updates for Spanish, Catalan, Italian, and Portuguese.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Mar 2016 21:38:14 +0100
+
 fotoxx (16.03-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
