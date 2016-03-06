@@ -1,0 +1,5 @@
+dtags (2.0.3-1~getdeb1) trusty; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Mar 2016 16:35:54 +0000

@@ -1,0 +1,27 @@
+Source: dtags
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: dh-python,
+               python-setuptools (>= 0.6b3),
+               python-all (>= 2.6.6-3),
+               debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: https://github.com/joowani/dtags
+
+Package: python-dtags
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-pkg-resources
+Description: Directory Tags for Lazy Programmers
+ dtags is a lightweight command line tool which lets you:
+ .
+  * Tag and un-tag directories
+  * Change directories quickly using the tag names
+  * Automate command executions in multiple directories
+ .
+ The goal is to save the user as many keystrokes as possible while
+ maintaining clarity, flexibility and usability.
+ .
+ All commands come with tab-completion.
