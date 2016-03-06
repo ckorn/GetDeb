@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+#DEBHELPER#
+
+if [ "$1" != configure ]; then
+	exit 0
+fi
+
+unud=/var/lib/update-notifier/user.d
+
+if [ -d $unud ]; then
+	cp -f /usr/share/dtags/dtags-update.update-notifier \
+	    "$unud/dtags-update"
+fi
