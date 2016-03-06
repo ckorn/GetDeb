@@ -1,0 +1,24 @@
+Source: satellite
+Section: devel
+Priority: extra
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Uploaders: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-go
+Standards-Version: 3.9.6
+Homepage: https://github.com/avinashbot/satellite
+
+Package: satellite
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-go
+Built-Using: ${misc:Built-Using}
+Description: Get images from Himawari-8 or DSCOVR
+ Download the latest images from Himawari-8 or DSCOVR and set it as your
+ desktop background.
+ .
+ $ satellite -use himawari -depth 4 -every 60s
+ $ satellite -use dscovr -path ./images/dscovr/1.png
+ $ satellite -depth 20 # This will result in a massive image!
