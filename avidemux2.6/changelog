@@ -1,3 +1,19 @@
+avidemux2.6 (1:2.6.12-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+    *[H264] Fixed crash when saving h264 annexB in avi (Brundle)
+    *[Vdpau] Fixed VDPAU resize and deinterlace when height is padded
+    *[Mkv] Faster loading of VP9 and h265
+    *[MP4] Supports more flavors of H265
+    *[i18n] Spanish translation update by ringmaster
+    *[Edit] Another frame seeking bug fixed, happened rarely
+    *[All] Slightly better crash handler
+    *[FFmpeg]Update to 2.7.6
+    *[Muxer] Basic webm support
+    *[Jobs] Fixed right click menus with qt5
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 05 Mar 2016 21:16:40 +0100
+
 avidemux2.6 (1:2.6.11-1~getdeb2~wily) wily; urgency=medium
 
   * New upstream version
