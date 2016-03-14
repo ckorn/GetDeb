@@ -1,3 +1,9 @@
+youtube-dl (1:2016.03.14-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 14 Mar 2016 18:20:19 +0100
+
 youtube-dl (1:2016.03.06-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
