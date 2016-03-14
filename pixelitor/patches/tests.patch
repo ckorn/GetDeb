@@ -1,9 +1,9 @@
 # comment patch because it requires a X11 display
 # not available during a build in a chroot
-Index: pixelitor-4.0.0/src/test/java/pixelitor/CompositionCreationTest.java
+Index: pixelitor-4.0.1/src/test/java/pixelitor/CompositionCreationTest.java
 ===================================================================
---- pixelitor-4.0.0.orig/src/test/java/pixelitor/CompositionCreationTest.java	2016-02-18 23:32:05.676902705 +0100
-+++ pixelitor-4.0.0/src/test/java/pixelitor/CompositionCreationTest.java	2016-02-18 23:32:05.672902621 +0100
+--- pixelitor-4.0.1.orig/src/test/java/pixelitor/CompositionCreationTest.java	2016-03-13 20:10:52.798907879 +0100
++++ pixelitor-4.0.1/src/test/java/pixelitor/CompositionCreationTest.java	2016-03-13 20:10:52.790907520 +0100
 @@ -40,24 +40,24 @@
  
      @Test
@@ -128,11 +128,11 @@ Index: pixelitor-4.0.0/src/test/java/pixelitor/CompositionCreationTest.java
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-4.0.0/src/test/java/pixelitor/CompositionTest.java
+Index: pixelitor-4.0.1/src/test/java/pixelitor/CompositionTest.java
 ===================================================================
---- pixelitor-4.0.0.orig/src/test/java/pixelitor/CompositionTest.java	2016-02-18 23:32:05.676902705 +0100
-+++ pixelitor-4.0.0/src/test/java/pixelitor/CompositionTest.java	2016-02-18 23:32:05.672902621 +0100
-@@ -64,35 +64,6 @@
+--- pixelitor-4.0.1.orig/src/test/java/pixelitor/CompositionTest.java	2016-03-13 20:10:52.798907879 +0100
++++ pixelitor-4.0.1/src/test/java/pixelitor/CompositionTest.java	2016-03-13 20:10:52.794907700 +0100
+@@ -53,35 +53,6 @@
      }
  
      @Test
@@ -168,17 +168,17 @@ Index: pixelitor-4.0.0/src/test/java/pixelitor/CompositionTest.java
      public void testSetActiveLayer() {
          tester.checkLayers("[layer 1, ACTIVE layer 2]");
  
-@@ -624,4 +595,4 @@
+@@ -547,4 +518,4 @@
          comp.setName("New Name");
          assertThat(comp.getName()).isEqualTo("New Name");
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/ContentLayerTest.java
+Index: pixelitor-4.0.1/src/test/java/pixelitor/layers/ContentLayerTest.java
 ===================================================================
---- pixelitor-4.0.0.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-02-18 17:34:22.000000000 +0100
-+++ pixelitor-4.0.0/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-02-18 23:33:09.242231154 +0100
+--- pixelitor-4.0.1.orig/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-03-13 20:10:52.798907879 +0100
++++ pixelitor-4.0.1/src/test/java/pixelitor/layers/ContentLayerTest.java	2016-03-13 20:10:52.794907700 +0100
 @@ -85,55 +85,6 @@
          History.clear();
      }
@@ -242,10 +242,10 @@ Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/ContentLayerTest.java
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/ImageLayerTest.java
+Index: pixelitor-4.0.1/src/test/java/pixelitor/layers/ImageLayerTest.java
 ===================================================================
---- pixelitor-4.0.0.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-02-18 23:32:05.676902705 +0100
-+++ pixelitor-4.0.0/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-02-18 23:34:37.280070819 +0100
+--- pixelitor-4.0.1.orig/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-03-13 20:10:52.798907879 +0100
++++ pixelitor-4.0.1/src/test/java/pixelitor/layers/ImageLayerTest.java	2016-03-13 20:10:52.794907700 +0100
 @@ -274,27 +274,6 @@
      }
  
@@ -275,16 +275,16 @@ Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/ImageLayerTest.java
          BufferedImage image = layer.getCanvasSizedSubImage();
          assertThat(image).isNotNull();
 @@ -410,4 +389,4 @@
-             iconUpdates.checkLayer(2);
+             iconUpdates.check(3, 1);
          }
      }
 -}
 \ No newline at end of file
 +}
-Index: pixelitor-4.0.0/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
+Index: pixelitor-4.0.1/src/test/java/pixelitor/layers/LayerBlendingModesTest.java
 ===================================================================
---- pixelitor-4.0.0.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-02-18 23:32:05.676902705 +0100
-+++ pixelitor-4.0.0/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-02-18 23:32:05.672902621 +0100
+--- pixelitor-4.0.1.orig/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-03-13 20:10:52.798907879 +0100
++++ pixelitor-4.0.1/src/test/java/pixelitor/layers/LayerBlendingModesTest.java	2016-03-13 20:10:52.794907700 +0100
 @@ -70,11 +70,6 @@
      }
  
