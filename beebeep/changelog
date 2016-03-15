@@ -1,3 +1,9 @@
+beebeep (3.0.5-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 15 Mar 2016 20:08:25 +0100
+
 beebeep (3.0.4-1~getdeb1) trusty; urgency=low
 
   * Initial release
