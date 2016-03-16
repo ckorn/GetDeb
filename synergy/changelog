@@ -1,3 +1,16 @@
+synergy (1.7.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug #451 - Fast cursor on any client with Mac server
+    Bug #5041 - Copying from the Chrome web browser doesn't work
+    Bug #4735 -     Clipboard doesn't work from client to server
+    Bug #2909 - Clipboard copies only plaintext between Mac and Windows
+    Bug #4353 - Large clipboard causes crash
+    Bug #3774 - Missing MinGW dependencies after install on Windows
+    Bug #4723 - Waiting for active desktop result freezes Windows service
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 15 Mar 2016 21:39:23 +0100
+
 synergy (1.7.5-1~getdeb2) trusty; urgency=medium
 
   * Fix debian/watch file
