@@ -1,0 +1,145 @@
+livestreamer (1.12.2-1~getdeb2) trusty; urgency=medium
+
+  * Add missing dependency python-librtmp
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Mar 2016 21:52:15 +0100
+
+livestreamer (1.12.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug fixes:
+     - hds: Don't modify request params when handling PVSWF. (#842)
+     - hls: Handle unpadded encryption IV's.
+     - Fixed regression in redirect resolver. (#816)
+
+    Plugins:
+     - Added plugin for media.ccc.de (media_ccc_de), patch by @meise.
+     - Added plugin for Kanal 5/9/11 (sbsdiscovery), patch by @tboss. (#815)
+     - Added plugin for Periscope (periscope).
+     - Added plugin for SSH101 (ssh101), patch by @Razier-23. (#869)
+     - artetv: Updated for service changes.
+     - crunchyroll: Updated for service changes. (#864, #865)
+     - hitbox: Fixed VOD support. (#856)
+     - livestream: Updated for service changes.
+     - viasat: Added support for juicyplay.se.
+     - viasat: Fixed missing streams. (#822)
+     - youtube: Added support for /channel URLs. (#825)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 03 May 2015 17:50:55 +0200
+
+livestreamer (1.12.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug fixes:
+     - Don't crash when failing to look up listening ports. (#790)
+
+    Plugins:
+     - Added plugin for ITV Player, patch by @blxd. (#776)
+     - Added plugin for tv3.cat, patch by @blxd. (#784)
+     - Added plugin for TV Catchup, patch by @blxd. (#775)
+     - connectcast: Fixed crash, patch by @mammothb. (#779)
+     - dailymotion: Added support for HDS VODs. (#731)
+     - gaminglive: Added support for VODs, patches by @kasper93 and @chhe.
+     (#789, #808)
+     - picarto: Updated for service changes, patch by @FireDart. (#803)
+     - tv4play: Work around bad SSL implementation on Python 2. (#785)
+     - twitch: Use correct OAuth scopes, patch by @josephglanville. (#778)
+     - ustreamtv: Updated for service changes, patch by @trUSTssc. (#799)
+     - viasat: Fixed missing streams. (#750)
+     - viasat: Added play.tv3.lt to supported URLs. (#773)
+
+    Streams:
+     - hds: Fixed issue with query parameters when building fragment URLs.
+     (#786)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 22 Mar 2015 22:16:31 +0100
+
+livestreamer (1.12.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    Bug fixes:
+     - Made HTTP modes more strict to avoid issues with `mpv --yt-dl`.
+     - Fixed :option:`--http-cookie` option crash.
+
+    CLI:
+     - Added :option:`--can-handle-url` option, useful for scripting.
+     - Added a passive HTTP server mode (:option:`--player-external-http`),
+     patch by @danielkza. (#699)
+
+    Plugins:
+     - Added plugin for Disney Channel Germany, patch by @boekkooi. (#698)
+     - Added plugin for NOS (Nederlandse Omroep Stichting), patch by
+     @boekkooi. (#697)
+     - Added plugin for tga.plu.cn, patch by @wolftankk. (#669)
+     - Added plugin for Wat.tv, patch by @boekkooi. (#701)
+     - Added plugin for afreeca.tv. (The old afreecatv plugin has been
+     renamed to afreeca)
+     - chaturbate: Added support for subdomain URLs, patch by @GameWalker.
+     (#676)
+     - connectcast: Updated for service changes, patch by @darvelo. (#722)
+     - dailymotion: Added support for games.dailymotion.com, patch by
+     @daslicious. (#684)
+     - dommune: Fixed Youtube redirect URL.
+     - gaminglive: Updated for service changes, patch by @chhe. (#721)
+     - mlgtv: Updated for service changes, patch by @daslicious. (#686)
+     - hitbox: Updated for services changes. (#648)
+     - streamlive: Updated for service changes, patch by @daslicious. (#667)
+     - ustreamtv: Updated for service changes. (#707)
+     - youtube: Now handles more URL types.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 Mar 2015 21:07:20 +0100
+
+livestreamer (1.11.1-1~getdeb2) trusty; urgency=medium
+
+  * Fix debian/watch
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 31 Jan 2015 20:19:41 +0100
+
+livestreamer (1.11.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 12 Dec 2014 18:23:18 +0100
+
+livestreamer (1.11.0-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Dec 2014 19:55:21 +0100
+
+livestreamer (1.10.2-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Sat, 06 Sep 2014 10:36:39 +0200
+
+livestreamer (1.10.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Sat, 30 Aug 2014 17:46:46 +0200
+
+livestreamer (1.10.0-1) unstable; urgency=low
+
+  * New upstream version (Closes: #757347)
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Mon, 18 Aug 2014 22:18:54 +0200
+
+livestreamer (1.9.0-1) unstable; urgency=low
+
+  * Disable version check (Closes: #750502)
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Tue, 22 Jul 2014 20:50:15 +0200
+
+livestreamer (1.8.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Tue, 27 May 2014 21:18:04 +0200
+
+livestreamer (1.7.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #740062)
+
+ -- Stefan Breunig <stefan-debian@yrden.de>  Thu, 06 Mar 2014 00:29:37 +0100
