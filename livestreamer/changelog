@@ -1,3 +1,9 @@
+livestreamer (1.12.2-1~getdeb2) trusty; urgency=medium
+
+  * Add missing dependency python-librtmp
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Mar 2016 21:52:15 +0100
+
 livestreamer (1.12.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

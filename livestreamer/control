@@ -25,7 +25,8 @@ Depends: ${misc:Depends},
          ${python:Depends},
          python-requests,
          python-singledispatch,
-         python-concurrent.futures
+         python-concurrent.futures,
+         python-librtmp         
 Recommends: rtmpdump,
             python-crypto
 Suggests: livestreamer
