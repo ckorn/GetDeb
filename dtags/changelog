@@ -1,3 +1,9 @@
+dtags (2.0.6-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 20 Mar 2016 20:41:55 +0100
+
 dtags (2.0.3-1~getdeb1) trusty; urgency=low
 
   * source package automatically created by stdeb 0.8.5
