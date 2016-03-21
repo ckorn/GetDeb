@@ -1,3 +1,10 @@
+livestreamer (1.12.2-1~getdeb3) trusty; urgency=medium
+
+  * Remove dependency because python-librtmp
+    is not available in trusty actually.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 18 Mar 2016 20:33:48 +0100
+
 livestreamer (1.12.2-1~getdeb2) trusty; urgency=medium
 
   * Add missing dependency python-librtmp
