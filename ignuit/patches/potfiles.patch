@@ -1,0 +1,13 @@
+# add missing file
+Index: ignuit-2.24.1/po/POTFILES.in
+===================================================================
+--- ignuit-2.24.1.orig/po/POTFILES.in	2012-02-26 10:22:37.000000000 +0100
++++ ignuit-2.24.1/po/POTFILES.in	2016-03-25 14:41:58.030812787 +0100
+@@ -1,6 +1,7 @@
+ # List of source files containing translatable strings.
+ # Please keep this file sorted alphabetically.
+ [encoding: UTF-8]
++data/glade/category_properties.glade
+ data/glade/editor.glade
+ data/glade/find.glade
+ data/glade/main.glade

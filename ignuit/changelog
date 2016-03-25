@@ -1,3 +1,9 @@
+ignuit (2.24.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 25 Mar 2016 13:58:35 +0100
+
 ignuit (2.24.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
