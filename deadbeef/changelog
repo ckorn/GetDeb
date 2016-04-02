@@ -1,0 +1,5 @@
+deadbeef (0.7.1-1~getdeb2~wily) wily; urgency=low
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 29 Mar 2016 22:18:21 +0200

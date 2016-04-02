@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	sh autogen.sh
+	dh_auto_configure -- --prefix=/usr --enable-ffmpeg --enable-gtk2 --disable-gtk3
+
+override_dh_install:
+	find debian/deadbeef/usr -type f -iname "*.la" -delete
+	dh_install
