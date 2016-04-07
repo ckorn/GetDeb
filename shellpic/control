@@ -1,0 +1,17 @@
+Source: shellpic
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Section: utils
+Priority: optional
+Build-Depends: python-all (>= 2.6.6-3),
+               debhelper (>= 7.4.3)
+Standards-Version: 3.9.5
+Homepage: https://github.com/larsjsol/shellpic
+
+Package: shellpic
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-pil
+Description: Display images using escape codes
+ Shellpic uses escape codes to display images in
+ a terminal, IRC or NUTS client.
