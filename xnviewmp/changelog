@@ -1,3 +1,9 @@
+xnviewmp (0.79-1~getdeb2~wily) wily; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 13 Apr 2016 21:54:11 +0200
+
 xnviewmp (0.78-1~getdeb2~wily) wily; urgency=medium
 
   * New upstream version
