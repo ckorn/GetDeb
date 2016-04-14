@@ -20,7 +20,7 @@ $(PKG)_$(VER).orig.tar.xz:
 	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
 	$(if $(wildcard $(PKG)-$(VER)),$(error $(PKG)-$(VER) exist, aborting..))
 	@echo "# Extracting..."
-	unzip umlet-standalone-*.zip \
+	tar xzf umlet_*.orig.tar.gz \
 	|| $(RM) -r $(PKG)-$(VER)
 	@echo "# Cleaning-up..."
 	mv Umlet $(PKG)-$(VER) && cd $(PKG)-$(VER) \
