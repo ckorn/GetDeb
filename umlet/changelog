@@ -1,3 +1,9 @@
+umlet (14.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Apr 2016 19:06:28 +0200
+
 umlet (14.1.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version (LP: #1538574)
