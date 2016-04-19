@@ -1,3 +1,9 @@
+dtags (3.0.2-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 18 Apr 2016 21:31:21 +0200
+
 dtags (2.0.7-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
