@@ -4,10 +4,10 @@ Terminal: True
 Description: Your shell needs to be configured to use tab completion
  bash
  # For zsh, place in ~/.zshrc:
- command -v dtags > /dev/null 2>&1 && . <(dtags shell zsh)
+ command -v dtags-activate > /dev/null 2>&1 && eval "`dtags-activate zsh`"
  .
  # For bash, place in ~/.bashrc:
- command -v dtags > /dev/null 2>&1 && . <(dtags shell bash)
+ command -v dtags-activate > /dev/null 2>&1 && eval "`dtags-activate bash`"
  .
  # For fish, place in ~/.config/fish/config.fish:
- command -v dtags > /dev/null 2>&1; and dtags shell fish | source
+ command -v dtags-activate > /dev/null 2>&1; and dtags-activate fish | source
