@@ -1,3 +1,31 @@
+fotoxx (16.05.1-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + Portuguese language updated.
+    + Bugfix: crash if Trim/Rotate initiated from the image popup menu.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 20 Apr 2016 19:07:26 +0200
+
+fotoxx (16.05-1~getdeb1) trusty; urgency=medium
+
+  * New upstream version
+    + A new image location map was implemented using OpenStreetMap. This has 
+      superior functionality, but depends on having a fast and reliable
+      internet connection. The old method (using large local map files) can
+      still be used and may be preferable for custom maps.
+    + New: Selective Rescale: scale image down, leaving selected areas
+    unchanged.
+      This can be used to increase the relative size of the area of interest.
+    + Gallery top panel has more information about current album or search
+    view.
+    + Font and map marker sizes are adjustable for monitor size and DPI.
+    + Bugfix: no warning was given when a gallery thumbnail was opened and
+    the previous file had unsaved modifications which were silently
+    discarded.
+    + Bugfix: minor memory leak in Manage Albums.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 19 Apr 2016 22:03:24 +0200
+
 fotoxx (16.04.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
