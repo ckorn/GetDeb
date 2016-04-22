@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
-               wx2.8-headers,
-               libwxgtk2.8-dev,
+               wx3.0-headers,
+               libwxgtk3.0-dev,
                libcairo2-dev,
                libglib2.0-dev,
                libpoppler-glib-dev
