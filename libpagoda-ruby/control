@@ -5,7 +5,7 @@ Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                ruby,
                gem2deb (>= 0.2.6~)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://www.pagodabox.com
 XS-Ruby-Versions: all
 
