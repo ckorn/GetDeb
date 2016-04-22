@@ -3,13 +3,13 @@ Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.3
+Standards-Version: 3.9.6
 Homepage: http://drjava.org
 
 Package: drjava
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-7-jdk | sun-java7-jdk,
+         openjdk-8-jdk | openjdk-7-jdk | sun-java7-jdk,
          fontconfig
 Description: Lightweight programming environment for Java
  DrJava is a lightweight programming environment for Java
