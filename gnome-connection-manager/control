@@ -3,8 +3,8 @@ Section: gnome
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
-               python-support
-Standards-Version: 3.9.3
+               dh-python
+Standards-Version: 3.9.6
 Homepage: http://kuthulu.com/gcm/
 
 Package: gnome-connection-manager
