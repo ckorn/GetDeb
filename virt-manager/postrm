@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-if [ "$1" = purge ]; then
-  rm -rf /usr/share/virt-manager
-fi
-
-#DEBHELPER#

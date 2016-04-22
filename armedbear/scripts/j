@@ -1,3 +1,0 @@
-#!/bin/sh
-cd $HOME
-java -jar /usr/share/j/j.jar

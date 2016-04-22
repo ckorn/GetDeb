@@ -1,9 +1,0 @@
-virtinst/fix-path-to-hvmloader.patch
-virtinst/Fix-patch-to-pygrub.patch
-virtinst/9004_ubuntu_fix_tree_support.patch
-virtinst/9005_ubuntu_releases.patch
-virtinst/9006_fix_path_to_qemu-dm.patch
-more_helpful_error_message.patch
-use_ubuntu_package_names.patch
-add_qemu_binaries.patch
-ubuntu-dark-toolbars.patch

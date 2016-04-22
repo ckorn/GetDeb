@@ -1,8 +1,0 @@
-lib plugins					usr/share/idea-ic
-bin/idea.sh					usr/share/idea-ic/bin
-bin/idea.vmoptions				usr/share/idea-ic/bin
-bin/idea.properties				usr/share/idea-ic/bin
-bin/log.xml					usr/share/idea-ic/bin
-debian/scripts/idea-ic				usr/bin
-debian/idea-ic.xpm				usr/share/pixmaps
-debian/idea-ic.desktop				usr/share/applications

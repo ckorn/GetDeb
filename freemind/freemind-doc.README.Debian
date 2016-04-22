@@ -1,7 +1,0 @@
-freemind for Debian
--------------------
-
-freemind.mm is the FreeMind help file, itself in FreeMind format.
-To read it, start FreeMind and call the menu point 'Help -> Documentation'.
-
--- Eric Lavarde <deb@zorglub.s.bawue.de>, Sun, 05 Dec 2004 21:14:14 +0100

@@ -1,3 +1,0 @@
-version=3
-https://github.com/Ippytraxx/gnome-twitch/tags \
-    (?:.*/)?archive/v([\d\.]+)-autotools\.tar\.gz

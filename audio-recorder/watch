@@ -1,3 +1,0 @@
-version=3
-https://launchpad.net/audio-recorder/+download \
-    (?:.*/)?audio-recorder-([\d\.]+)\.tar\.gz

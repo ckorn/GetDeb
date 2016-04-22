@@ -1,2 +1,0 @@
-# false positive. blhc --all does not find anything wrong.
-ogmrip: hardening-no-fortify-functions usr/lib/i386-linux-gnu/ogmrip/container-plugins/libogmrip-mp4.so

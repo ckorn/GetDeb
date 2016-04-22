@@ -1,9 +1,0 @@
-#!/usr/bin/make -f
-# -*- makefile -*-
-%:
-	dh $@
-
-override_dh_install:
-	dh_install
-	# wrong size
-	rm -r debian/$(shell dh_listpackages)/usr/share/icons/hicolor/24x24

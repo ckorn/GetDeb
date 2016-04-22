@@ -1,6 +1,0 @@
-?package(kchmviewer): \
-    needs="X11" \
-    section="Applications/Viewers" \
-    title="kchmviewer" \
-    icon="/usr/share/pixmaps/kchmviewer.xpm" \
-    command="/usr/bin/kchmviewer"

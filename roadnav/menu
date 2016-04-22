@@ -1,2 +1,0 @@
-?package(roadnav):needs="X11" section="Apps/Tools"\
-  title="Roadnav" command="/usr/bin/roadnav"

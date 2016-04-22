@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=iFreeBudget
-GenericName=Personal Finance Manager
-Comment=Personal Finance Manager
-Exec=ifreebudget %U
-Icon=ifreebudget
-Terminal=false
-Type=Application
-Categories=Application;Office;

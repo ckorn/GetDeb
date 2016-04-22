@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=IntelliJ IDEA
-Exec=/usr/bin/idea-ic
-Icon=idea-ic
-Terminal=false
-Type=Application
-Categories=Application;Development;

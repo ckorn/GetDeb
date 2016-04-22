@@ -1,8 +1,0 @@
-When reporting issues regarding virt-manager please run the program using the
---debug --no-fork command line options and provide the output.
-
-Often the problem isn't related to virt-manager at all. Please also check the
-libvirt and VM logfiles and try to reproduce with virsh or virt-install.
-
-http://wiki.debian.org/libvirt/Debugging has more information on howto provide
-debugging information for the virt-* tools.

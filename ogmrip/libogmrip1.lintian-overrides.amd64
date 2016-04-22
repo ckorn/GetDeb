@@ -1,2 +1,0 @@
-# false positive. blhc --all does not find anything wrong.
-libogmrip1: hardening-no-fortify-functions usr/lib/x86_64-linux-gnu/libogmrip-gtk.so.1.0.0

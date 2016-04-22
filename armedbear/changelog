@@ -1,5 +1,0 @@
-armedbear (0.23.0-1~getdeb1) lucid; urgency=low
-
-  * Initial release (LP: #486914)
-
- -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 May 2010 19:56:51 +0200

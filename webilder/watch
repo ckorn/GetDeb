@@ -1,3 +1,0 @@
-version=3
-http://www.webilder.org/download.html \
-    (?:.*/)?webilder_([\d\.]+)(?:-.*)\.deb
