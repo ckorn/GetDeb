@@ -1,3 +1,9 @@
+anomos (0.9.5-1~getdeb3~xenial) xenial; urgency=medium
+
+  * Remove python-support
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 20 Apr 2016 22:02:30 +0200
+
 anomos (0.9.5-1~getdeb2) lucid; urgency=low
 
   * Fix debian/watch file. Just look for the uptodate
