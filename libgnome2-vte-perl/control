@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                perl,
                libvte-dev
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://search.cpan.org/dist/Gnome2-Vte/
 
 Package: libgnome2-vte-perl
