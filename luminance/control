@@ -23,7 +23,7 @@ Build-Depends: debhelper (>= 9),
                qttools5-dev,
                qttools5-dev-tools,
                libboost-program-options-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://qtpfsgui.sourceforge.net/
 
 Package: luminance
