@@ -1,0 +1,200 @@
+Description: Add the Debian planets to the example feed lists.
+Origin: Debian
+Forwarded: not-needed
+Reviewed-By: sidicas2@gmail.com
+Last-Update: 2013-07-16
+
+--- a/opml/feedlist_en.opml
++++ b/opml/feedlist_en.opml
+@@ -13,6 +13,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="debian-community.org English language planet" htmlUrl="http://debian-community.org/planets/en/" xmlUrl="http://debian-community.org/planets/en/index.rss" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_bg.opml
++++ b/opml/feedlist_bg.opml
+@@ -19,6 +19,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_ca.opml
++++ b/opml/feedlist_ca.opml
+@@ -24,6 +24,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_de.opml
++++ b/opml/feedlist_de.opml
+@@ -26,6 +26,9 @@
+ 				<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 			</outline>
+ 			<outline text="Open Source">		<!-- translate this title for localized feed list -->
++				<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++				<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++				<outline text="German Debian community planet" htmlUrl="http://debian-community.org/planets/de/" xmlUrl="http://debian-community.org/planets/de/index.rss" />
+ 				<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 				<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 			</outline>
+--- a/opml/feedlist_es.opml
++++ b/opml/feedlist_es.opml
+@@ -21,6 +21,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planeta Debian en espa&#xF1;ol" htmlUrl="http://planeta.debian.net/" xmlUrl="http://planeta.debian.net/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_eu.opml
++++ b/opml/feedlist_eu.opml
+@@ -24,6 +24,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Software librea">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_fr.opml
++++ b/opml/feedlist_fr.opml
+@@ -24,6 +24,10 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Debian-FR" htmlUrl="http://planet-fr.debian.net/" xmlUrl="http://planet-fr.debian.net/rss20.xml" />
++			<outline text="Planète des utilisateurs Debian" htmlUrl="http://planet-fr.debian.net/users/" xmlUrl="http://planet-fr.debian.net/users/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_gl.opml
++++ b/opml/feedlist_gl.opml
+@@ -19,6 +19,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_he.opml
++++ b/opml/feedlist_he.opml
+@@ -35,6 +35,8 @@
+ 				<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 			</outline>
+ 			<outline text="קוד פתוח">		<!-- translate this for localized feed list -->
++				<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++				<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 				<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 				<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 			</outline>	
+--- a/opml/feedlist_hu.opml
++++ b/opml/feedlist_hu.opml
+@@ -13,6 +13,8 @@
+ 			<outline text="HWSW" htmlUrl="http://hwsw.hu/" xmlUrl="http://www.hwsw.hu/xml/latest_news_rss.xml" />
+ 		</outline>
+ 		<outline text="Nyílt forrás">		<!-- translate this for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />
+ 			<outline text="HUP" htmlUrl="http://hup.hu/" xmlUrl="http://feeds.feedburner.com/HUP" />
+--- a/opml/feedlist_it.opml
++++ b/opml/feedlist_it.opml
+@@ -25,6 +25,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_nl.opml
++++ b/opml/feedlist_nl.opml
+@@ -13,6 +13,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_pl.opml
++++ b/opml/feedlist_pl.opml
+@@ -20,6 +20,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_pt.opml
++++ b/opml/feedlist_pt.opml
+@@ -31,6 +31,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planeta DebianPT.org" htmlUrl="http://planet.debianpt.org/" xmlUrl="http://planet.debianpt.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_pt_BR.opml
++++ b/opml/feedlist_pt_BR.opml
+@@ -18,6 +18,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planeta Debian Brasil" htmlUrl="http://www.debianbrasil.org/planeta/" xmlUrl="http://www.debianbrasil.org/planeta/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+--- a/opml/feedlist_sk.opml
++++ b/opml/feedlist_sk.opml
+@@ -15,6 +15,8 @@
+ 					<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 				</outline>
+ 				<outline text="Open Source">		<!-- translate this title for localized feed list -->
++					<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++					<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 					<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 					<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 				</outline>
+--- a/opml/feedlist_sv.opml
++++ b/opml/feedlist_sv.opml
+@@ -22,6 +22,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
++			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
++			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>

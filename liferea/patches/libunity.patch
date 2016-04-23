@@ -1,0 +1,214 @@
+Description: Enable Unity support
+Origin: Ubuntu
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/732848
+Forwarded: no
+Author: Jean-Philippe Orsini <jeanfi@gmail.com>
+Reviewed-By: Ken VanDine <ken.vandine@canonical.com>
+Last-Update: 2014-02-13
+
+Index: liferea-1.10.19/configure.ac
+===================================================================
+--- liferea-1.10.19.orig/configure.ac	2016-04-22 21:33:37.968450800 +0200
++++ liferea-1.10.19/configure.ac	2016-04-22 21:33:37.964450702 +0200
+@@ -24,6 +24,7 @@
+ 
+ AC_ARG_ENABLE(libnotify, AS_HELP_STRING([--disable-libnotify],[compile without libnotify support]),,enable_libnotify=yes)
+ AC_ARG_ENABLE(libindicate, AS_HELP_STRING([--disable-libindicate],[compile without libindicate support]),,enable_libindicate=yes)
++AC_ARG_ENABLE(libunity, AS_HELP_STRING([--disable-libunity],[compile without libunity support]),,enable_libunity=yes)
+ 
+ AC_CHECK_FUNCS([strsep])
+ 
+@@ -72,6 +73,24 @@
+ 
+ AM_CONDITIONAL(WITH_LIBINDICATE, test "x$enable_libindicate" = "xyes")
+ 
++dnl *********
++dnl libunity
++dnl *********
++
++if test "x$enable_libunity" = "xyes"; then
++   PKG_CHECK_MODULES([LIBUNITY], unity >= 3.4.2,enable_libunity=yes,enable_libunity=no)
++   AC_SUBST(LIBUNITY_CFLAGS)
++   AC_SUBST(LIBUNITY_LIBS)
++else
++   enable_libunity=no
++fi
++
++if test "x$enable_libunity" = "xyes"; then
++  AC_DEFINE(HAVE_LIBUNITY, 1, [Define if libunity support is enabled])
++fi
++
++AM_CONDITIONAL(WITH_LIBUNITY, test "x$enable_libunity" = "xyes")
++
+ ################################################################################
+ # Mandatory library dependencies
+ 
+@@ -151,6 +170,7 @@
+ echo
+ echo "Use libnotify................... : $enable_libnotify"
+ echo "Use libindicate................. : $enable_libindicate"
++echo "Use libunity.................... : $enable_libunity"
+ echo
+ eval eval echo Liferea will be installed in $bindir.
+ echo
+Index: liferea-1.10.19/src/Makefile.am
+===================================================================
+--- liferea-1.10.19.orig/src/Makefile.am	2016-04-22 21:33:37.968450800 +0200
++++ liferea-1.10.19/src/Makefile.am	2016-04-22 21:33:37.968450800 +0200
+@@ -89,6 +89,12 @@
+ 
+ endif
+ 
++if WITH_LIBUNITY
++
++liferea_LDADD += $(LIBUNITY_LIBS)
++
++endif
++
+ -include $(INTROSPECTION_MAKEFILE)
+ INTROSPECTION_GIRS = Liferea-3.0.gir
+ 
+Index: liferea-1.10.19/src/ui/ui_unity.h
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ liferea-1.10.19/src/ui/ui_unity.h	2016-04-22 21:33:37.968450800 +0200
+@@ -0,0 +1,29 @@
++/*
++ * Copyright (C) 2011 Jean-Philippe Orsini <jeanfi@gmail.com>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU Library General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor Boston, MA 02110-1301,  USA
++ */
++
++#ifndef _UI_UNITY_H
++#define _UI_UNITY_H
++
++#ifdef HAVE_CONFIG_H
++	#include <config.h>
++#endif
++
++void ui_unity_update ();
++void ui_unity_destroy ();
++
++#endif  /* _UI_UNITY_H */
+Index: liferea-1.10.19/src/ui/ui_tray.c
+===================================================================
+--- liferea-1.10.19.orig/src/ui/ui_tray.c	2016-04-22 21:33:37.968450800 +0200
++++ liferea-1.10.19/src/ui/ui_tray.c	2016-04-22 21:33:37.968450800 +0200
+@@ -197,6 +197,7 @@
+ 	gchar	*msg, *tmp;
+ 
+ 	ui_indicator_update ();
++	ui_unity_update();
+ 
+ 	if (!trayIcon_priv)
+ 		return;
+Index: liferea-1.10.19/src/ui/ui_unity.c
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ liferea-1.10.19/src/ui/ui_unity.c	2016-04-22 21:33:37.968450800 +0200
+@@ -0,0 +1,62 @@
++/*
++ * Copyright (C) 2011 Jean-Philippe Orsini <jeanfi@gmail.com>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU Library General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor Boston, MA 02110-1301,  USA
++ */
++
++#include "ui_unity.h"
++
++#ifdef HAVE_LIBUNITY
++
++#include <feedlist.h>
++
++#include <unity.h>
++
++static UnityLauncherEntry *entry;
++
++void ui_unity_update (void)
++{
++	int count;
++
++	if (!entry)
++		entry = unity_launcher_entry_get_for_desktop_file
++			("liferea.desktop");
++
++	if (entry) {
++		count = feedlist_get_unread_item_count ();
++
++		if (count) {
++			unity_launcher_entry_set_count (entry, count);
++			unity_launcher_entry_set_count_visible (entry, TRUE);
++		} else {
++			unity_launcher_entry_set_count_visible (entry, FALSE);
++		}
++	}
++}
++
++void ui_unity_destroy (void)
++{
++	if (entry) {
++		unity_launcher_entry_set_count_visible (entry, FALSE);
++		g_main_context_iteration(NULL, FALSE);
++	}
++}
++
++#else
++
++void ui_unity_update (void) {}
++void ui_unity_destroy (void) {}
++
++#endif  /* HAVE_LIBUNITY */
+Index: liferea-1.10.19/src/ui/liferea_shell.c
+===================================================================
+--- liferea-1.10.19.orig/src/ui/liferea_shell.c	2016-04-22 21:33:37.968450800 +0200
++++ liferea-1.10.19/src/ui/liferea_shell.c	2016-04-22 21:33:37.968450800 +0200
+@@ -1410,6 +1410,7 @@
+ 	feed_list_view_select (NULL);	// FIXME: Move to feed list handling
+ 
+ 	liferea_shell_save_position ();
++	ui_unity_destroy ();
+ 	ui_tray_enable (FALSE);
+ 	g_object_unref (shell->priv->tabs);
+ 	g_object_unref (shell->priv->feedlist);
+Index: liferea-1.10.19/src/ui/Makefile.am
+===================================================================
+--- liferea-1.10.19.orig/src/ui/Makefile.am	2016-04-22 21:33:37.968450800 +0200
++++ liferea-1.10.19/src/ui/Makefile.am	2016-04-22 21:33:37.968450800 +0200
+@@ -8,7 +8,7 @@
+ 
+ noinst_LIBRARIES = libliui.a
+ 
+-libliui_a_CFLAGS = $(PACKAGE_CFLAGS) $(LIBINDICATE_CFLAGS)
++libliui_a_CFLAGS = $(PACKAGE_CFLAGS) $(LIBINDICATE_CFLAGS) $(LIBUNITY_CFLAGS)
+ libliui_a_SOURCES = \
+ 	auth_dialog.c auth_dialog.h \
+ 	browser_tabs.c browser_tabs.h \
+@@ -36,4 +36,5 @@
+ 	ui_folder.c ui_folder.h \
+ 	ui_indicator.c ui_indicator.h \
+ 	ui_tray.c ui_tray.h \
++	ui_unity.c ui_unity.h \
+ 	ui_update.c ui_update.h 

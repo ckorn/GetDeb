@@ -1,0 +1,8 @@
+version=3
+# Upstream has two branches, 1.10 and 1.11. The 1.11 branch isn't considered
+# stable yet, so track 1.10 only
+#opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/liferea-$1\.tar\.gz/ \
+#  https://github.com/lwindolf/liferea/releases .*/v?(\d\S*)\.tar\.gz
+
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/liferea-$1\.tar\.gz/ \
+  https://github.com/lwindolf/liferea/releases .*/v?(1\.10\..+)\.tar\.gz

@@ -1,0 +1,31 @@
+Description: www-browser by Franz Pletz <fpletz@franz-pletz.org>
+ Add Debian's x-www-browser as external browser option. (Closes: 415314)
+Last-Update: 2013-03-16
+Reviewed-by: Dmitry Smirnov <onlyjob@member.fsf.org>
+
+--- a/src/browser.c
++++ b/src/browser.c
+@@ -72,6 +72,12 @@
+ 		NULL, NULL,
+ 		NULL, NULL
+ 	},
++	{
++		"x-www-browser", "x-www-browser", "x-www-browser \"%s\"",
++		NULL, NULL,
++		NULL, NULL,
++		NULL, NULL
++	},
+ 	{	NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }
+ };
+ 
+--- a/net.sf.liferea.gschema.xml.in
++++ b/net.sf.liferea.gschema.xml.in
+@@ -13,7 +13,7 @@
+       <description>Selects which key to use to pagedown or go to the next unread item. Set to 0 to use space, 1 to use ctrl-space, or 2 to use alt-space.</description>
+     </key>
+     <key name="browser" type="s">
+-      <default>'mozilla %s'</default>
++      <default>'x-www-browser %s'</default>
+       <summary>Selects the browser command to use when browser_module is set to manual</summary>
+       <description>Selects the browser command to use when browser_module is set to manual.</description>
+     </key>

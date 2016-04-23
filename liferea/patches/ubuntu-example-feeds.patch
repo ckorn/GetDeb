@@ -1,0 +1,270 @@
+Description: Let's put some Ubuntu English and localized feeds in the default feedlist.
+Origin: Ubuntu
+Author: Emilio Pozuelo Monfort <pochu@ubuntu.com>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/51604
+Forwarded: not-needed
+Reviewed-By: bojo42 <bojo42@gmail.com>
+Reviewed-By: Mattia Rizzolo <mapreri@ubuntu.com>
+Last-Update: 2016-01-17
+
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_bg.opml liferea-1.10.17/opml/feedlist_bg.opml
+--- liferea-1.10.17.orig/opml/feedlist_bg.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_bg.opml	2016-01-17 16:44:26.233126222 +0100
+@@ -19,8 +19,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_ca.opml liferea-1.10.17/opml/feedlist_ca.opml
+--- liferea-1.10.17.orig/opml/feedlist_ca.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_ca.opml	2016-01-17 16:44:26.233126222 +0100
+@@ -24,8 +24,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="Planeta Ubuntu.cat" htmlUrl="http://planet.ubuntu.cat/" xmlUrl="http://planet.ubuntu.cat/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_de.opml liferea-1.10.17/opml/feedlist_de.opml
+--- liferea-1.10.17.orig/opml/feedlist_de.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_de.opml	2016-01-17 16:44:26.233126222 +0100
+@@ -26,9 +26,9 @@
+ 				<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 			</outline>
+ 			<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-				<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-				<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-				<outline text="German Debian community planet" htmlUrl="http://debian-community.org/planets/de/" xmlUrl="http://debian-community.org/planets/de/index.rss" />
++				<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++				<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++				<outline text="Ubuntuusers Ikhaya" htmlUrl="http://ikhaya.ubuntuusers.de/" xmlUrl="http://ikhaya.ubuntuusers.de/feeds/full/20/" />
+ 				<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 				<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 			</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_en.opml liferea-1.10.17/opml/feedlist_en.opml
+--- liferea-1.10.17.orig/opml/feedlist_en.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_en.opml	2016-01-17 16:44:26.233126222 +0100
+@@ -13,14 +13,14 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-			<outline text="debian-community.org English language planet" htmlUrl="http://debian-community.org/planets/en/" xmlUrl="http://debian-community.org/planets/en/index.rss" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+ 		<outline text="Podcasts">		<!-- translate this title for localized feed list -->
+-			<outline text="EscapePod" htmlUrl="http://escapepod.org" xmlUrl="http://escapepod.org/podcast.xml"/>
++            <outline text="EscapePod" htmlUrl="http://escapepod.org" xmlUrl="http://escapepod.org/podcast.xml"/>
++            <outline text="Ubuntu-uk Podcast" htmlUrl="http://podcast.ubuntu-uk.org/" xmlUrl="http://podcast.ubuntu-uk.org/feed/"/>
+ 		</outline>
+ 		<outline text="Music Blogs">		<!-- translate this title for localized feed list -->
+ 			<outline text="Free Music Archive" htmlUrl="http://freemusicarchive.org/" xmlUrl="http://freemusicarchive.org/recent.atom"/>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_es.opml liferea-1.10.17/opml/feedlist_es.opml
+--- liferea-1.10.17.orig/opml/feedlist_es.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_es.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -21,9 +21,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-			<outline text="Planeta Debian en espa&#xF1;ol" htmlUrl="http://planeta.debian.net/" xmlUrl="http://planeta.debian.net/rss20.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="PlanetUbuntu.Es" htmlUrl="http://planetubuntu.es/" xmlUrl="http://feeds.feedburner.com/PlanetUbuntuEs" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_eu.opml liferea-1.10.17/opml/feedlist_eu.opml
+--- liferea-1.10.17.orig/opml/feedlist_eu.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_eu.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -24,8 +24,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Software librea">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_fr.opml liferea-1.10.17/opml/feedlist_fr.opml
+--- liferea-1.10.17.orig/opml/feedlist_fr.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_fr.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -24,9 +24,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-			<outline text="Planet Debian-FR" htmlUrl="http://planet-fr.debian.net/" xmlUrl="http://planet-fr.debian.net/rss20.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="Planet Ubuntu-fr" htmlUrl="http://planet.ubuntu-fr.org/" xmlUrl="http://planet.ubuntu-fr.org/feed/rss2" />
+ 			<outline text="Planète des utilisateurs Debian" htmlUrl="http://planet-fr.debian.net/users/" xmlUrl="http://planet-fr.debian.net/users/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_gl.opml liferea-1.10.17/opml/feedlist_gl.opml
+--- liferea-1.10.17.orig/opml/feedlist_gl.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_gl.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -19,9 +19,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+ 		<outline text="Podcasts &amp; Music">		<!-- translate this title for localized feed list -->
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_he.opml liferea-1.10.17/opml/feedlist_he.opml
+--- liferea-1.10.17.orig/opml/feedlist_he.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_he.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -35,8 +35,8 @@
+ 				<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 			</outline>
+ 			<outline text="קוד פתוח">		<!-- translate this for localized feed list -->
+-				<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-				<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++				<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++				<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 				<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 				<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 			</outline>	
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_hu.opml liferea-1.10.17/opml/feedlist_hu.opml
+--- liferea-1.10.17.orig/opml/feedlist_hu.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_hu.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -13,8 +13,8 @@
+ 			<outline text="HWSW" htmlUrl="http://hwsw.hu/" xmlUrl="http://www.hwsw.hu/xml/latest_news_rss.xml" />
+ 		</outline>
+ 		<outline text="Nyílt forrás">		<!-- translate this for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />
+ 			<outline text="HUP" htmlUrl="http://hup.hu/" xmlUrl="http://feeds.feedburner.com/HUP" />
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_it.opml liferea-1.10.17/opml/feedlist_it.opml
+--- liferea-1.10.17.orig/opml/feedlist_it.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_it.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -25,8 +25,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="Planet ubuntu-it" htmlUrl="http://planet.ubuntu-it.org/" xmlUrl="http://planet.ubuntu-it.org/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_nl.opml liferea-1.10.17/opml/feedlist_nl.opml
+--- liferea-1.10.17.orig/opml/feedlist_nl.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_nl.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -13,8 +13,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="Planet Ubuntu NL" htmlUrl="http://planet.ubuntu-nl.org/" xmlUrl="http://planet.ubuntu-nl.org/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_pl.opml liferea-1.10.17/opml/feedlist_pl.opml
+--- liferea-1.10.17.orig/opml/feedlist_pl.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_pl.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -20,8 +20,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="Planet Ubuntu-pl" htmlUrl="http://planet.ubuntu-pl.org/" xmlUrl="http://planet.ubuntu-pl.org/rss20.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_pt_BR.opml liferea-1.10.17/opml/feedlist_pt_BR.opml
+--- liferea-1.10.17.orig/opml/feedlist_pt_BR.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_pt_BR.opml	2016-01-17 16:44:26.241126343 +0100
+@@ -18,9 +18,9 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-			<outline text="Planeta Debian Brasil" htmlUrl="http://www.debianbrasil.org/planeta/" xmlUrl="http://www.debianbrasil.org/planeta/rss20.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
++			<outline text="Planeta Ubuntu Brasil" htmlUrl="http://planeta.ubuntu-br.org/" xmlUrl="http://planeta.ubuntu-br.org/atom.xml" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_pt.opml liferea-1.10.17/opml/feedlist_pt.opml
+--- liferea-1.10.17.orig/opml/feedlist_pt.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_pt.opml	2016-01-17 16:44:26.237126283 +0100
+@@ -31,9 +31,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
+-			<outline text="Planeta DebianPT.org" htmlUrl="http://planet.debianpt.org/" xmlUrl="http://planet.debianpt.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_sk.opml liferea-1.10.17/opml/feedlist_sk.opml
+--- liferea-1.10.17.orig/opml/feedlist_sk.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_sk.opml	2016-01-17 16:44:26.241126343 +0100
+@@ -15,8 +15,8 @@
+ 					<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 				</outline>
+ 				<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-					<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-					<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++					<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++					<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 					<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 					<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 				</outline>
+diff -pruN -x '*~' liferea-1.10.17.orig/opml/feedlist_sv.opml liferea-1.10.17/opml/feedlist_sv.opml
+--- liferea-1.10.17.orig/opml/feedlist_sv.opml	2016-01-17 16:43:27.000000000 +0100
++++ liferea-1.10.17/opml/feedlist_sv.opml	2016-01-17 16:44:26.241126343 +0100
+@@ -22,8 +22,8 @@
+ 			<outline text="Science" htmlUrl="http://www.sciencenews.org" xmlUrl="https://www.sciencenews.org/feeds/headlines.rss"/>
+ 		</outline>
+ 		<outline text="Open Source">		<!-- translate this title for localized feed list -->
+-			<outline text="Planet Debian" htmlUrl="http://planet.debian.org/" xmlUrl="http://planet.debian.org/rss20.xml" />
+-			<outline text="Debian Administration" htmlUrl="http://www.debian-administration.org/" xmlUrl="http://www.debian-administration.org/atom.xml" />
++			<outline text="Planet Ubuntu" htmlUrl="http://planet.ubuntu.com/" xmlUrl="http://planet.ubuntu.com/rss20.xml" />
++			<outline text="The Ubuntu Fridge" htmlUrl="http://fridge.ubuntu.com/" xmlUrl="http://fridge.ubuntu.com/node/feed" />
+ 			<outline text="Liferea Blog" htmlUrl="http://lzone.de/liferea/blog/" xmlUrl="http://feeds.feedburner.com/LifereaBlog" />
+ 			<outline text="Planet GNOME" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml" />	
+ 		</outline>
