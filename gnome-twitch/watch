@@ -1,0 +1,3 @@
+version=3
+
+https://github.com/Ippytraxx/gnome-twitch/tags .*/v?((?:\d\S)*\d)\.tar\.gz
