@@ -1,3 +1,9 @@
+dtags (3.1.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 24 Apr 2016 05:59:10 +0200
+
 dtags (3.0.2-1~getdeb2) trusty; urgency=medium
 
   * Update the notifier text to match the readme.
