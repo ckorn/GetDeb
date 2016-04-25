@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 9),
                libgstreamer-plugins-good1.0-dev,
                libgstreamer-plugins-bad1.0-dev,
                libmtp-dev
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://sayonara-player.com
 
 Package: sayonara
