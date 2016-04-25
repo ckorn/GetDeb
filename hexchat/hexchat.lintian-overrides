@@ -1,0 +1,6 @@
+# intentional typo as example for autoreplace function
+hexchat: spelling-error-in-binary usr/bin/hexchat teh the
+# upstream will not correct misspelled variable names
+hexchat: spelling-error-in-binary usr/bin/hexchat hilight highlight
+# fixing this spelling error would break scripting/theming
+hexchat: spelling-error-in-binary usr/bin/hexchat Conection Connection

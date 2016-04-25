@@ -1,0 +1,216 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hexchat
+Source: http://hexchat.github.io/
+
+Files: *
+Copyright: 1998-2010 Peter Zelezny
+           2009-2013 Berke Viktor
+License: GPL-2+ with OpenSSL exception
+
+Files: debian/*
+Copyright: 2014 Jesse Rhodes <drubo@drubo.net>
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+Files: plugins/doat/*
+Copyright: None
+License: WTFPL-2
+
+Files: plugins/fishlim/*
+Copyright: 2010 Samuel Lidén Borell <samuel@kodafritt.se>
+License: Expat
+
+Files: plugins/python/*
+Copyright: 2002-2003  Gustavo Niemeyer <niemeyer@conectiva.com>
+License: GPL-2+
+
+Files: plugins/checksum/*
+Copyright: 2010-2012 Berke Viktor
+License: Expat
+
+Files: plugins/sysinfo/*
+Copyright: 2003, 2004, 2005 Michael Shoup
+	   2005, 2006, 2007 Tony Vroon
+License: GPL-2+
+
+Files: plugins/perl/*
+Copyright: 1998-2002 Peter Zelezny
+License: GPL-2+
+
+Files: po/*
+Copyright: Public Domain
+License: public-domain
+
+Files: ltmain.sh
+Copyright: Free Software Foundation
+License: GPL-2+
+
+Files: src/dirent/dirent-win32.h
+Copyright: 2006-2012 Toni Ronkko
+License: Expat
+
+Files: src/common/dbus/*
+Copyright: 2006 Claessens Xavier
+License: GPL-2+
+
+Files: src/fe-gtk/sexy-iso*
+Copyright: 2005 Nathan Fredrickson
+	   2004 Christian Persch
+	   2004 Crispin Flowerday
+License: LGPL-2.1+
+
+Files: src/fe-gtk/sexy-spell-entry.*
+Copyright: 2004-2006 Christian Hammond
+	   2002 Evan Martin
+License: LGPL-2.1+
+
+Files: src/htm/*
+Copyright: 2012 Patrick Griffs
+	   2012 Berke Viktor
+License: GPL-2+
+
+Files: plugins/mpcinfo/*
+Copyright: None
+License: GPL-2+
+
+Files: plugins/winamp/*
+Copyright: Leo <leo.nard@free.fr>
+	   Silverex <SilvereX@karklas.mif.vu.lt>
+	   Derek Buitenhuis <daemon404@gmail.com>
+	   Berke Viktor <berkeviktor@aol.com>
+License: GPL-1.0
+
+Files: data/man/hexchat.1.in
+Copyright: Davide Puricelli <evo@debian.org>
+License: GPL-2+
+
+License: GPL-2+ with OpenSSL exception
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
+ .
+ In addition, as a special exception, the copyright holders give permission
+ to link the code of portions of this program with the OpenSSL library.
+ You must obey the GNU General Public License in all respects for all of
+ the code used other than OpenSSL. If you modify file(s) with this
+ exception, you may extend this exception to your version of the file(s),
+ but you are not obligated to do so. If you do not wish to do so, delete
+ this exception statement from your version. If you delete this exception
+ statement from all source files in the program, then also delete it here.
+
+License: WTFPL-2
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
+ .
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+ .
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
+ .
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+ .
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+
+License: Expat
+ .
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: public-domain
+ This file is placed in the public domain.
+
+License: GPL-1.0
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 
+ 02110-1301, USA.
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
+ 02110-1301  USA
+

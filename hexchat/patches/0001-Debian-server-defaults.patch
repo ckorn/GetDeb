@@ -1,0 +1,46 @@
+From 9b1e871ba2dc7a4dd70f7a2c22d08e32da52659a Mon Sep 17 00:00:00 2001
+From: Jesse Rhodes <drubo@drubo.net>
+Date: Wed, 23 Mar 2016 11:48:39 -0600
+Subject: Debian server defaults
+
+ Changed default network to OFTC,
+ suggest to join #debian on OFTC and Freenode
+---
+ src/common/servlist.c | 2 +-
+ src/fe-gtk/joind.c    | 8 +++++++-
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/src/common/servlist.c b/src/common/servlist.c
+index 897f0d0..2e37bfa 100644
+--- a/src/common/servlist.c
++++ b/src/common/servlist.c
+@@ -957,7 +957,7 @@ servlist_load_defaults (void)
+ {
+ 	int i = 0, j = 0;
+ 	ircnet *net = NULL;
+-	guint def_hash = g_str_hash ("freenode");
++	guint def_hash = g_str_hash ("OFTC");
+ 
+ 	while (1)
+ 	{
+diff --git a/src/fe-gtk/joind.c b/src/fe-gtk/joind.c
+index 2fdbeb3..318682b 100644
+--- a/src/fe-gtk/joind.c
++++ b/src/fe-gtk/joind.c
+@@ -246,9 +246,15 @@ joind_show_dialog (server *serv)
+ 							G_CALLBACK (joind_ok_cb), serv);
+ 							
+ 	if (serv->network)
++		if (g_ascii_strcasecmp(((ircnet*)serv->network)->name, "OFTC") == 0)
++		{
++			gtk_entry_set_text (GTK_ENTRY (entry1), "#debian");
++			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(radiobutton2), TRUE);
++		}
+ 		if (g_ascii_strcasecmp(((ircnet*)serv->network)->name, "freenode") == 0)
+ 		{
+-			gtk_entry_set_text (GTK_ENTRY (entry1), "#hexchat");
++			gtk_entry_set_text (GTK_ENTRY (entry1), "#debian");
++			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(radiobutton2), TRUE);
+ 		}
+ 
+ 	gtk_widget_grab_focus (okbutton1);

@@ -1,0 +1,41 @@
+Description: Ubuntu server and channel defaults
+ Revised addition of irc.ubuntu.com with #ubuntu
+ suggestion
+Author: Jesse Rhodes <drubo@drubo.net>
+
+
+--- hexchat-2.12.0.orig/src/common/servlist.c
++++ hexchat-2.12.0/src/common/servlist.c
+@@ -165,6 +165,9 @@ static const struct defaultserver def[]
+ 	/* irc. points to chat. but many users and urls still reference it */
+ 	{0,				"irc.freenode.net"},
+ 
++	{"Ubuntu Servers (freenode)", 0, 0, 0, LOGIN_SASL, 0, TRUE},
++	{0,				"chat.freenode.net"},
++
+ 	{"Furnet", 0, 0, 0, 0, 0, TRUE},
+ 	{0,			"irc.furnet.org"},
+ 
+@@ -957,7 +960,7 @@ servlist_load_defaults (void)
+ {
+ 	int i = 0, j = 0;
+ 	ircnet *net = NULL;
+-	guint def_hash = g_str_hash ("freenode");
++	guint def_hash = g_str_hash ("Ubuntu Servers (freenode)");
+ 
+ 	while (1)
+ 	{
+--- hexchat-2.12.0.orig/src/fe-gtk/joind.c
++++ hexchat-2.12.0/src/fe-gtk/joind.c
+@@ -246,9 +246,9 @@ joind_show_dialog (server *serv)
+ 							G_CALLBACK (joind_ok_cb), serv);
+ 							
+ 	if (serv->network)
+-		if (g_ascii_strcasecmp(((ircnet*)serv->network)->name, "freenode") == 0)
++		if (g_ascii_strcasecmp(((ircnet*)serv->network)->name, "Ubuntu Servers (freenode)") == 0)
+ 		{
+-			gtk_entry_set_text (GTK_ENTRY (entry1), "#hexchat");
++			gtk_entry_set_text (GTK_ENTRY (entry1), "#ubuntu");
+ 		}
+ 
+ 	gtk_widget_grab_focus (okbutton1);

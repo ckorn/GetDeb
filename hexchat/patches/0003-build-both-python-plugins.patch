@@ -1,0 +1,113 @@
+Description: Enable building both python plugins
+ This was made specifically for the Debian package
+ and they will be split into separate conflicting packages
+ as such this is not intended for normal use and will not
+ work properly or handle failures gracefully.
+ .
+Author: Patrick Griffis <tingping@tingping.se>
+
+---
+Origin: upstream
+Reviewed-By: Jesse Rhodes <drubo@drubo.net>
+
+--- hexchat-2.12.0.orig/configure.ac
++++ hexchat-2.12.0/configure.ac
+@@ -264,38 +264,33 @@ AS_IF([test "x$python" != xno], [
+ 	AC_MSG_CHECKING(for plugin interface used by Python)
+ 	AS_IF([test "$plugin" = yes], [
+ 		AC_MSG_RESULT([yes])
+-		AS_CASE([$python],
+-			dnl set python2 default here
+-			[python2], [
+-				PYTHON_VERSION=2
+-				AX_PYTHON_DEVEL([>= '2.7'])
+-			],
+-			dnl set python3 default here
+-			[python3], [
+-				PYTHON_VERSION=3
+-				AX_PYTHON_DEVEL([>= '3.3'])
+-			],
+-			dnl add broken versions here
+-			[python2.5|python2.6|python3.1|python3.2], [
+-				AC_MSG_WARN(Unsupported Python version ${python}!)
+-			],
+-			dnl user supplied version
+-			[python*], [
+-				PYTHON_VERSION="${python#python}"
+-				AX_PYTHON_DEVEL()
+-			],[
+-				AC_MSG_WARN(Unsupported Python ${python}!)
+-			]
+-		)
+-		AC_MSG_CHECKING(Python version)
+-
+-		AS_IF([test "$ac_python_version" != ""], [
+-			AC_MSG_RESULT($ac_python_version)
+-			python="python-${ac_python_version}"
+-		], [
+-			AC_MSG_RESULT(Not found)
+-			python=no
+-		])
++
++		AC_MSG_NOTICE([This is a patched build for Debian packages that builds both Python 2 and 3, not intended for direct use])
++
++		PYTHON_VERSION=2
++		AX_PYTHON_DEVEL([>= '2.7'])
++		PYTHON2_LIBS=${PYTHON_LIBS}
++		PYTHON2_CPPFLAGS=${PYTHON_CPPFLAGS}
++		AC_SUBST([PYTHON2_LIBS])
++		AC_SUBST([PYTHON2_CPPFLAGS])
++
++		dnl Remove cache
++		unset ac_cv_path_PYTHON
++		unset PYTHON
++		unset PYTHON_CPPFLAGS
++		unset PYTHON_LIBS
++		unset PYTHON_SITE_PKG
++		unset PYTHON_EXTRA_LIBS
++		unset PYTHON_EXTRA_LDFLAGS
++
++		PYTHON_VERSION=3
++		AX_PYTHON_DEVEL([>= '3.3'])
++		PYTHON3_LIBS=${PYTHON_LIBS}
++		PYTHON3_CPPFLAGS=${PYTHON_CPPFLAGS}
++		AC_SUBST([PYTHON3_LIBS])
++		AC_SUBST([PYTHON3_CPPFLAGS])
++
++		python="python-2.7/${ac_python_version}"
+ 	], [
+ 		AC_MSG_RESULT([plugins are disabled, use the --enable-plugin option for Python])
+ 		python=no
+@@ -667,8 +662,6 @@ AC_SUBST(COMMON_LIBS)
+ AC_SUBST(COMMON_CFLAGS)
+ AC_SUBST(PERL_CFLAGS)
+ AC_SUBST(PERL_LDFLAGS)
+-AC_SUBST(PYTHON_CPPFLAGS)
+-AC_SUBST(PYTHON_LIBS)
+ AC_SUBST(DBUS_CFLAGS)
+ AC_SUBST(DBUS_LIBS)
+ AC_SUBST(OPENSSL_LIBS)
+--- hexchat-2.12.0.orig/plugins/python/Makefile.am
++++ hexchat-2.12.0/plugins/python/Makefile.am
+@@ -1,9 +1,15 @@
+ libdir = $(hexchatlibdir)
+ 
+-lib_LTLIBRARIES = python.la
+-python_la_SOURCES = python.c
+-python_la_LDFLAGS = $(PLUGIN_LDFLAGS) -module
+-python_la_LIBADD = $(PYTHON_LIBS) $(GLIB_LIBS)
+-python_la_CPPFLAGS = $(PYTHON_CPPFLAGS)
+-python_la_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)/src/common
++lib_LTLIBRARIES = python2.la
++python2_la_SOURCES = python.c
++python2_la_LDFLAGS = $(PLUGIN_LDFLAGS) -module
++python2_la_LIBADD = $(PYTHON2_LIBS) $(GLIB_LIBS)
++python2_la_CPPFLAGS = $(PYTHON2_CPPFLAGS)
++python2_la_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)/src/common
+ 
++lib_LTLIBRARIES += python3.la
++python3_la_SOURCES = python.c
++python3_la_LDFLAGS = $(PLUGIN_LDFLAGS) -module
++python3_la_LIBADD = $(PYTHON3_LIBS) $(GLIB_LIBS)
++python3_la_CPPFLAGS = $(PYTHON3_CPPFLAGS)
++python3_la_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)/src/common

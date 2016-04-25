@@ -1,0 +1,5 @@
+usr/lib/*/hexchat/plugins/checksum.so
+usr/lib/*/hexchat/plugins/fishlim.so
+usr/lib/*/hexchat/plugins/doat.so
+usr/lib/*/hexchat/plugins/sysinfo.so
+usr/lib/*/pkgconfig/hexchat-plugin.pc
