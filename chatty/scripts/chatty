@@ -1,3 +1,5 @@
 #!/bin/sh
+# crashes on Java 9
+JAVA_BIN=$(update-alternatives --list java | grep java-8)
 cd /usr/share/chatty
-java -jar chatty.jar "$@"
+$JAVA_BIN -jar chatty.jar "$@"

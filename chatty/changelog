@@ -1,3 +1,100 @@
+chatty (0.8.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Improvements
+    ============
+    - Added some account info to User Info Dialog (click on "More..")
+    - Added auto-unhost feature (to unhost when your stream goes live,
+    disabled by default)
+    - Added new Twitch Player URL in context menu
+    - Added feature to automatically add Addressbook categories based on
+    Subscriber
+      notifications (experimental)
+    - Added feature to automatically copy messages into clipboard
+    - Admin Dialog: Added error message for trying to set invalid stream
+    status
+    - Added context menu entries to directly host channel
+    - Made URL detection a bit more lenient
+    - Updated help
+
+    System
+    ======
+    - Added single-instance mode, with the ability to join channels in the
+    already running instance
+    - Added in-app announcements (Help - Announcements), for more reliable
+      communication of relevant news about Chatty (if new announcement is
+      available a window will pop up on start and a notification will be
+      shown in the main menu bar)
+    - Moved debug logs into separate directory
+    - Added /proc command to start native processes out of Chatty
+    - Made restoring window position more lenient for partly off-screen
+    positions
+
+    Connection
+    ==========
+    - Bouncer: Some changes allowing you to connect to a Bouncer
+    - Whispers: Moved to main chat (AWS)
+    - Whispers: Hidden userlist for Whisper tabs by default
+    - Whispers: Added auto-responses for ignored/non-whitelisted users
+    (disabled by default)
+    - Increased max reconnection attempts to 40
+    - Added `force_verify=true` parameter to Authorize URL (makes Twitch
+    always ask if you want to Authorize, makes sure you are logged in to
+    the right account)
+    - Added some support for selecting the correct chat server
+
+    Emotes
+    ======
+    - Emote Dialog: Improved shown info a bit
+    - Added /emoteonly and /emoteonlyoff commands (in case they get enabled
+    again)
+    - Added "emotesets" parameter to /refresh command
+    - Changed twitchemotes.com API URL (which is the source of emoteset
+    information)
+    - ShortenDisplayOfExcessivelyLongEmoteCodesLookingOutTheirWindow
+
+    Settings
+    ========
+    - Added more chat font size choices to GUI
+    - Added input font setting to GUI
+    - Added setting to prevent highlights from specific users (e.g. your own
+    bots)
+    - Added setting to toggle closing of Emote Dialog when double-clicking on
+    Emote
+    - Added setting to remember Status History table sorting order
+    - Added setting to toggle Usercolor correction
+    - Added setting to display more verbose uptime in titlebar (enabled by
+    default)
+    - Added setting to toggle check for restoring off-screen window position
+    - Added setting to prepend arbitrary text to the window title
+    - Changed default for showing animated emotes to off
+    - Changed default for Min. Userlist Width to 0
+    - Changed default for Whisper Display Mode to per user
+    - Changed defaults for server/port (actively changed when updating to
+    this version, if setting values are on the previous default)
+    - Changed default for Highlight Mod Command to !highlight, ignore case
+    for both the channel and command setting
+    - Made setting names case-insensitive (for use with setting commands)
+    - Changed the process of saving settings in an attempt to make it more
+    reliable
+    - Added menu entry to save settings manually
+
+    Bugfixes
+    ========
+    - Fixed Admin Dialog sizing causing display issues
+    - Fixed spam protection message being displayed on the wrong channel
+    - Fixed new Twitch Emotes code being one character short
+    - Fixed autojoin not working sometimes
+    - Fixed framerate of GIFs, which may break some GIFs that worked before,
+    but prevents high CPU usage (displaying animated GIFs in Java is hard)
+    - Check if Java supports opening URLs on the current platform and run
+    native command if necessary
+    - Fixed sounds not being closed when finished playing
+    - Fixed tabs not changing correctly on System Look&Feel
+    - Fixed error on host notification due to moving Whispers to AWS
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 26 Apr 2016 22:35:26 +0200
+
 chatty (0.8.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

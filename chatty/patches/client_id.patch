@@ -1,9 +1,9 @@
 # set client ID. Generated own ID from twitch
-diff --git a/src/chatty/Chatty.java b/src/chatty/Chatty.java
-index 618985c..bb54ccf 100644
---- a/src/chatty/Chatty.java
-+++ b/src/chatty/Chatty.java
-@@ -37,7 +37,7 @@ public class Chatty {
+Index: chatty-0.8.2/src/chatty/Chatty.java
+===================================================================
+--- chatty-0.8.2.orig/src/chatty/Chatty.java	2016-04-26 22:44:54.170419083 +0200
++++ chatty-0.8.2/src/chatty/Chatty.java	2016-04-26 22:45:14.438836575 +0200
+@@ -42,7 +42,7 @@
       * If you compile this program yourself, you should create your own client
       * id on http://www.twitch.tv/kraken/oauth2/clients/new
       */
@@ -12,6 +12,3 @@ index 618985c..bb54ccf 100644
      
      /**
       * The redirect URI for getting a token.
--- 
-2.5.0
-

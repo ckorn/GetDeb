@@ -5,16 +5,18 @@ Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                ant,
                ant-optional,
-               openjdk-7-jdk
+               openjdk-8-jdk
 Build-Conflicts: openjdk-6-jre-headless,
-                 openjdk-6-jre-lib
-Standards-Version: 3.9.5
-Homepage: http://getchatty.sourceforge.net
+                 openjdk-6-jre-lib,
+                 openjdk-7-jre-headless,
+                 openjdk-7-jre-lib
+Standards-Version: 3.9.7
+Homepage: http://chatty.github.io/
 
 Package: chatty
 Architecture: all
 Depends: ${misc:Depends},
-         openjdk-7-jre | java2-runtime | java-runtime
+         openjdk-8-jre
 Description: Twitch Chat Client for Desktop
  Twitch chat client for everyone who wants to try
  something new and different from the webchat,
