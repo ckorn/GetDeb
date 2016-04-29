@@ -8,8 +8,10 @@ Build-Depends: debhelper (>= 9),
                 libphonon-dev,
                 libdispatch-dev,
                 libxcb-screensaver0-dev,
-                libavahi-compat-libdnssd-dev
-Standards-Version: 3.9.5
+                libavahi-compat-libdnssd-dev,
+                libphonon-dev,
+                libx11-dev
+Standards-Version: 3.9.7
 Homepage: http://beebeep.sourceforge.net/
 
 Package: beebeep
