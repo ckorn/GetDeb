@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+# Needed for some unit tests to pass
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+
+%:
+	dh $@  --with autoreconf
+
+override_dh_installchangelogs:
+	# Install upstream NEWS file as changelog
+	dh_installchangelogs -k NEWS
