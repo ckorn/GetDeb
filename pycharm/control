@@ -2,8 +2,26 @@ Source: pycharm
 Section: editors
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9),
+               libasound2,
+               libxext6 [amd64],
+               libopenjfx-jni [amd64],
+               libx11-6 [amd64],
+               libxrender1 [amd64],
+               libxtst6 [amd64],
+               libxi6 [amd64],
+               libgtk2.0-0 [amd64],
+               libatk1.0-0 [amd64],
+               libpangoft2-1.0-0 [amd64],
+               libpangocairo-1.0-0 [amd64],
+               libgdk-pixbuf2.0-0 [amd64],
+               libcairo2 [amd64],
+               libpango-1.0-0 [amd64],
+               libfreetype6 [amd64],
+               libfontconfig1 [amd64],
+               libgl1-mesa-glx [amd64],
+               libxxf86vm1 [amd64]
+Standards-Version: 3.9.7
 Homepage: http://www.jetbrains.com/pycharm/
 
 Package: pycharm

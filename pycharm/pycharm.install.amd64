@@ -1,4 +1,5 @@
 bin				usr/lib/pycharm
+jre				usr/lib/pycharm
 lib/libpty/linux/x86_64/*.so	usr/lib/pycharm/bin
 debian/scripts/pycharm		usr/bin
 debian/pycharm.png		usr/share/pixmaps
