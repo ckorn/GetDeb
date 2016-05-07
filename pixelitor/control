@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9),
                maven,
                openjdk-8-jdk,
                openjfx
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://pixelitor.sourceforge.net/
 
 Package: pixelitor
