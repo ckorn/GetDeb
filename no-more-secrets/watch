@@ -1,0 +1,3 @@
+version=3
+https://github.com/bartobri/no-more-secrets/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz
