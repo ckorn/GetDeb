@@ -1,197 +1,259 @@
 # The Debug causes compile errors. Remove it.
-Index: qstopmotion-2.0.2/src/frontends/qtfrontend/qtfrontend.cpp
+Index: qstopmotion-2.2.0/src/frontends/qtfrontend/qtfrontend.cpp
 ===================================================================
---- qstopmotion-2.0.2.orig/src/frontends/qtfrontend/qtfrontend.cpp	2015-09-23 19:32:56.332747447 +0200
-+++ qstopmotion-2.0.2/src/frontends/qtfrontend/qtfrontend.cpp	2015-09-23 19:32:56.332747447 +0200
-@@ -39,7 +39,6 @@
- 
- QtFrontend::QtFrontend(int &argc, char **argv)
- {
--    qDebug("QtFrontend::Constructor --> Start");
- 
-     domainFacade         = NULL;
-     viewFacade           = NULL;
-@@ -62,13 +61,11 @@
- #endif
- 
- 
--    qDebug("QtFrontend::Constructor --> End");
- }
- 
+--- qstopmotion-2.2.0.orig/src/frontends/qtfrontend/qtfrontend.cpp	2016-05-09 13:12:25.710852046 +0200
++++ qstopmotion-2.2.0/src/frontends/qtfrontend/qtfrontend.cpp	2016-05-09 13:16:19.260266623 +0200
+@@ -73,8 +73,6 @@
  
  QtFrontend::~QtFrontend()
  {
--    qDebug("QtFrontend::Destructor --> Start");
- 
+-    qDebug() << "QtFrontend::Destructor --> Start";
+-
      // Save the size and position of the application
      QSize appSize = mw->size();
-@@ -124,7 +121,6 @@
+     QPoint appPos = mw->pos();
+@@ -104,17 +102,11 @@
+ 
+     delete stApp;
+     stApp = NULL;
+-
+-    qDebug() << "QtFrontend::Destructor --> End";
+ }
+ 
+ 
+ bool QtFrontend::checkApplicationDirectory(char *binDirName)
+ {
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Start";
+-
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Call command:" << binDirName;
+-
+     bool hasCorrectPermissions = true;
+     QDir homeDir = QDir::home();
+     QString userDirName;
+@@ -128,8 +120,6 @@
+             showCritical(tr("Create directory"),
                  tr("You do not have the necessary permissions to run qStopMotion.\n"
                  "You need permission to create the .qstopmotion directory in your home directory."));
- 
--            qDebug("QtFrontend::checkApplicationDirectory --> End (Error)");
+-
+-            qDebug() << "QtFrontend::checkApplicationDirectory --> End (Error)";
              return 1;
          }
      }
-@@ -143,7 +139,6 @@
+@@ -147,8 +137,6 @@
+             showCritical(tr("Check Permissions"),
                  tr("You do not have the necessary permissions to run qStopMotion.\n"
                  "You need permission to read, write and execute on the .qstopmotion directory."));
- 
--            qDebug("QtFrontend::checkApplicationDirectory --> End (Error)");
+-
+-            qDebug() << "QtFrontend::checkApplicationDirectory --> End (Error)";
              return 1;
          }
      }
-@@ -343,27 +338,22 @@
+@@ -168,7 +156,6 @@
+     if (pathLength == -1)
+     {
+         QString command = Util::checkCommand(binDirName);
+-        qDebug() << "QtFrontend::checkApplicationDirectory --> Check command:" << command;
+         absoluteAppName = Util::convertPathFromOsSpecific(QString(command));
+         pathLength = absoluteAppName.lastIndexOf("/bin/");
+     }
+@@ -197,9 +184,6 @@
+         pathLength = absoluteAppName.lastIndexOf("/");
+         appBinDirName.append(absoluteAppName.left(pathLength + 1));
+     }
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Direcory:" << appApplicationDirName;
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Binary Direcory:" << appBinDirName;
+-
+ #if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
+     // Windows version
+ 
+@@ -253,34 +237,24 @@
+ 
+ #endif
+ 
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Manual Direcory:" << appManualDirName;
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Translations Direcory:" << appTranslationsDirName;
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Graphics Direcory:" << appGraphicsDirName;
+-
+-
+     otherDirName.clear();
+     otherDirName.append(appGraphicsDirName);
+     otherDirName.append(PreferencesTool::iconsDirectory);
+     otherDirName.append(QLatin1String("/"));
+     appIconsDirName.append(otherDirName);
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Icon Direcory:" << appIconsDirName;
+ 
+     otherDirName.clear();
+     otherDirName.append(appGraphicsDirName);
+     otherDirName.append(PreferencesTool::picturesDirectory);
+     otherDirName.append(QLatin1String("/"));
+     appPicturesDirName.append(otherDirName);
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> Application Pictures Direcory:" << appPicturesDirName;
+ 
+-    qDebug() << "QtFrontend::checkApplicationDirectory --> End";
+     return 0;
+ }
+ 
+ 
+ void QtFrontend::init()
+ {
+-    qDebug() << "QtFrontend::init --> Start";
+-
+     QString iconFile(getGraphicsDirName());
+     iconFile.append(QLatin1String("qstopmotion_splash_screen.png"));
+     QSplashScreen *splash = new QSplashScreen;
+@@ -347,28 +321,21 @@
+     delete splash;
  
      // this->testMainWidget();
- 
--    qDebug("QtFrontend::init --> End");
+-
+-    qDebug() << "QtFrontend::init --> End";
  }
  
  
  bool QtFrontend::handleArguments(int argc, char **argv)
  {
--    qDebug("QtFrontend::handleArguments --> Start");
- 
+-    qDebug() << "QtFrontend::handleArguments --> Start";
+-
      if (argc < 2) {
          // No arguments
--        qDebug("QtFrontend::handleArguments --> End (false)");
+-        qDebug() << "QtFrontend::handleArguments --> End (false)";
          return false;
      }
  
      if (QFileInfo(argv[1]).isReadable()) {
          mw->openProject(argv[1]);
--        qDebug("QtFrontend::handleArguments --> End (true)");
+-        qDebug() << "QtFrontend::handleArguments --> End (true)";
          return true;
      }
  
--    qDebug("QtFrontend::handleArguments --> End (false)");
+-    qDebug() << "QtFrontend::handleArguments --> End (false)";
      return false;
  }
  
-@@ -618,7 +608,6 @@
+@@ -623,8 +590,6 @@
  
  void QtFrontend::initializePreferences()
  {
--    qDebug("QtFrontend::initializePreferences --> Start");
- 
+-    qDebug() << "QtFrontend::initializePreferences --> Start";
+-
      QDir homeDir = QDir::home();
      QString preferencesFile = homeDir.absolutePath();
-@@ -633,20 +622,14 @@
+     preferencesFile.append(QLatin1String("/"));
+@@ -638,20 +603,14 @@
          // File doesn't exist or is corrupt
          setDefaultPreferences();
      }
 -
--    qDebug("QtFrontend::initializePreferences --> End");
+-    qDebug() << "QtFrontend::initializePreferences --> End";
  }
  
  
  void QtFrontend::setDefaultPreferences()
  {
--    qDebug("QtFrontend::setDefaultPreferences --> Start");
+-    qDebug() << "QtFrontend::setDefaultPreferences --> Start";
 -
      preferencesTool->setVersion(PreferencesTool::preferencesVersion);
      preferencesTool->setBasicPreferenceDefaults();
      // preferencesTool->setEncoderDefaults();
 -
--    qDebug("QtFrontend::setDefaultPreferences --> End");
+-    qDebug() << "QtFrontend::setDefaultPreferences --> End";
  }
  
  
-@@ -731,11 +714,8 @@
+@@ -736,11 +695,8 @@
  {
      bool ret;
  
--    qDebug("QtFrontend::startGrabber --> Start");
+-    qDebug() << "QtFrontend::startGrabber --> Start";
 -
      ret = mw->startGrabber();
  
--    qDebug("QtFrontend::startGrabber --> End");
+-    qDebug() << "QtFrontend::startGrabber --> End";
      return ret;
  }
  
-@@ -744,22 +724,15 @@
+@@ -749,22 +705,15 @@
  {
      bool ret;
  
--    qDebug("QtFrontend::on --> Start");
+-    qDebug() << "QtFrontend::on --> Start";
 -
      ret = mw->isGrabberInited();
  
--    qDebug("QtFrontend::on --> End");
+-    qDebug() << "QtFrontend::on --> End";
      return ret;
  }
  
  
  void QtFrontend::stopGrabber()
  {
--    qDebug("QtFrontend::stopGrabber --> Start");
+-    qDebug() << "QtFrontend::stopGrabber --> Start";
 -
      mw->stopGrabber();
 -
--    qDebug("QtFrontend::stopGrabber --> End");
+-    qDebug() << "QtFrontend::stopGrabber --> End";
  }
  
  
-@@ -889,57 +862,47 @@
+@@ -894,57 +843,41 @@
  
  bool QtFrontend::isRecoveryMode()
  {
--    qDebug("QtFrontend::isRecoveryMode --> Start");
- 
+-    qDebug() << "QtFrontend::isRecoveryMode --> Start";
+-
      if (QFile::exists(getTempDirName()) == false) {
--        qDebug("QtFrontend::isRecoveryMode --> End (False)");
+-        qDebug() << "QtFrontend::isRecoveryMode --> End (False)";
          return false;
      }
  
      // Everything is intact and we have to run in recovery mode
--    qDebug("QtFrontend::isRecoveryMode --> End (True)");
+-    qDebug() << "QtFrontend::isRecoveryMode --> End (True)";
      return true;
  }
  
  
  bool QtFrontend::recoverProject()
  {
--    qDebug("QtFrontend::recoverProject --> Start");
- 
+-    qDebug() << "QtFrontend::recoverProject --> Start";
+-
      int ret = askQuestion(tr("Recovery"),
                    tr("Something caused qStopmotion to exit abnormally\n"
                    "last time it was runned. Do you want to recover?"));
      // The user wants to recover
      if (ret != 0) {
--        qDebug("QtFrontend::recoverProject --> End (False)");
+-        qDebug() << "QtFrontend::recoverProject --> End (False)";
          return false;
      }
  
      mw->setWindowTitle(tr("qStopMotion - Recovered Project"));
      bool recovered = getProject()->recoverProject();
  
--    qDebug("QtFrontend::recoverProject --> End");
+-    qDebug() << "QtFrontend::recoverProject --> End";
      return recovered;
  }
  
  
  void QtFrontend::startDialog()
  {
--    qDebug("QtFrontend::startDialog --> Start");
- 
+-    qDebug() << "QtFrontend::startDialog --> Start";
+-
      mw->startDialog();
- 
--    qDebug("QtFrontend::startDialog --> End");
+-
+-    qDebug() << "QtFrontend::startDialog --> End";
  }
  
  
  void QtFrontend::setToolBarState(int newState)
  {
--    qDebug("MainWindowGUI::setToolBarState --> Start");
- 
+-    qDebug() << "MainWindowGUI::setToolBarState --> Start";
+-
      mw->setToolBarState(newState);
- 
--    qDebug("MainWindowGUI::setToolBarState --> End");
+-
+-    qDebug() << "MainWindowGUI::setToolBarState --> End";
  }
  
  
-@@ -1071,55 +1034,45 @@
+@@ -1076,55 +1009,45 @@
  
  void QtFrontend::test(QWidget *parentWidget, int level)
  {

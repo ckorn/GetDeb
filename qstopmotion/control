@@ -4,13 +4,13 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                cmake,
-               libqt4-dev,
-               libgstreamer0.10-dev,
-               libgstreamer-plugins-base0.10-dev,
+               qtbase5-dev,
                libgphoto2-dev,
+               libgstreamer-plugins-base0.10-dev,
+               libgstreamer0.10-dev,
                linux-libc-dev,
                libv4l-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: http://www.qstopmotion.org/
 
 Package: qstopmotion

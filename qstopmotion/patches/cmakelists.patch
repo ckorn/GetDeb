@@ -1,9 +1,9 @@
 # do not access the debian directory with cmake.
-Index: qstopmotion-2.0.2/CMakeLists.txt
+Index: qstopmotion-2.2.0/CMakeLists.txt
 ===================================================================
---- qstopmotion-2.0.2.orig/CMakeLists.txt	2015-09-15 19:46:36.000000000 +0200
-+++ qstopmotion-2.0.2/CMakeLists.txt	2015-09-23 19:23:40.108945000 +0200
-@@ -333,21 +333,6 @@
+--- qstopmotion-2.2.0.orig/CMakeLists.txt	2016-05-09 13:09:46.202655998 +0200
++++ qstopmotion-2.2.0/CMakeLists.txt	2016-05-09 13:11:07.236848872 +0200
+@@ -373,21 +373,6 @@
      linux/qstopmotion.1.gz      # Linux man page compressed
  )
  
@@ -25,18 +25,18 @@ Index: qstopmotion-2.0.2/CMakeLists.txt
  ###############################################################################
  # GStreamer support
  #
-@@ -586,8 +571,6 @@
+@@ -638,8 +623,6 @@
      file(COPY ${ICON_FILES} DESTINATION "share/qstopmotion/")
      file(COPY ${GENERAL_FILES} DESTINATION "share/qstopmotion/")
      file(COPY ${UNIX_FILES} DESTINATION "share/qstopmotion/")
 -    file(COPY ${DEB_FILES} DESTINATION "share/qstopmotion/deb/")
 -    file(COPY ${RPM_FILES} DESTINATION "share/qstopmotion/rpm/")
+ ENDIF(UNIX AND NOT APPLE)
  
- ENDIF(WIN32)
- 
-@@ -707,52 +690,6 @@
+ ###############################################################################
+@@ -741,52 +724,6 @@
      )
- ENDIF(UNIX)
+ ENDIF(UNIX AND NOT APPLE)
  
 -# installation on DEB systems
 -IF(CPACK_BINARY_DEB)
@@ -86,8 +86,8 @@ Index: qstopmotion-2.0.2/CMakeLists.txt
 -
  # installation on Windows systems
  IF(WIN32)
-     # installation of ffmpeg
-@@ -965,171 +902,6 @@
+     IF(CMAKE_CL_64)
+@@ -1101,177 +1038,6 @@
  # SET(CPACK_NSIS_MUI_FINISHPAGE_RUN "qstopmotion.exe"
  
  ###############################################################################
@@ -233,9 +233,13 @@ Index: qstopmotion-2.0.2/CMakeLists.txt
 -# CPACK_RPM_PACKAGE_DESCRIPTION = CPACK_PACKAGE_DESCRIPTION_FILE
 -# CPACK_RPM_COMPRESSION_TYPE
 -# requireses must be in a aphabetic order
+-# Qt5: qt5-qtbase - Core, Concurrent, DBus, Network, Sql, Test, Xml
+-# Qt5: qt5-qtbase-gui - Gui, OpenGL, PrintSupport, Widgets, XcbQpa
+-# Qt5: qt5-qtimageformats - Qt5 image format plugins
+-# Qt5: qt5-qtmultimedia - Multimedia, MultimediaQuick, MultimediaWidgets
 -SET(
 -    CPACK_RPM_PACKAGE_REQUIRES
--    "glibc >= 2.12, ffmpeg >= 0.8.9, gstreamer >= 0.10.29, qt >= 4.6.2, libv4l >= 0.6.3, libgphoto2 >= 2.4.7"
+-    "glibc >= 2.12, gstreamer >= 0.10.29, libgphoto2 >= 2.4.7, libv4l >= 0.6.3, qt5-qtbase >= 5.2.0, qt5-qtbase-gui >= 5.2.0, qt5-qtimageformats >= 5.2.0"
 -)
 -MESSAGE("CPACK_RPM_PACKAGE_REQUIRES: ${CPACK_RPM_PACKAGE_REQUIRES}")
 -# CPACK_RPM_PACKAGE_SUGGESTS
@@ -253,6 +257,8 @@ Index: qstopmotion-2.0.2/CMakeLists.txt
 -    CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION
 -    "/usr/share/applications"
 -    "/usr/share/pixmaps"
+-    "/usr/share/man"
+-    "/usr/share/man/man1"
 -)
 -
 -###############################################################################
