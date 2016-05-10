@@ -1,3 +1,18 @@
+filezilla (3.17.0.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    ! MSW: Quoted the path to the uninstaller when executed from the
+    installer to prevent an attacker from tricking the installer into running
+    some other program instead
+    - SFTP: Fixed resuming SFTP transfers
+    - MSW: Loading the system default locale no longer fails on systems that
+    have any English locale installed, yet do not have the US-English locale
+    installed
+    - Fixed crash if update dialog is opened at the very same moment
+    FileZilla is being closed.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 09 May 2016 12:43:43 +0200
+
 filezilla (3.17.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version (LP: #1577142)
