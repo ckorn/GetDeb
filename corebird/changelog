@@ -1,3 +1,9 @@
+corebird (1.2.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 10 May 2016 19:57:38 +0200
+
 corebird (1.2-1~getdeb1) wily; urgency=medium
 
   * New upstream version
