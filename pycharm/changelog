@@ -1,3 +1,9 @@
+pycharm (2016.1.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 11 May 2016 16:54:14 +0200
+
 pycharm (2016.1.2-1~getdeb4~xenial) xenial; urgency=medium
 
   * Add jre for xenial. Crashes with openjdk-9-jre
