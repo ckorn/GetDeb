@@ -13,8 +13,3 @@ export DH_RUBY_IGNORE_TESTS=all
 
 %:
 	dh $@ --buildsystem=ruby --with ruby
-
-override_dh_auto_install:
-	dh_auto_install
-
-	rm debian/ruby-gli/usr/bin/test_all_rubies.sh debian/ruby-gli/usr/bin/report_on_rake_results
