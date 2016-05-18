@@ -1,3 +1,9 @@
+qrcode (5.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 18 May 2016 15:10:07 +0200
+
 qrcode (5.2.2-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
