@@ -1,3 +1,9 @@
+no-more-secrets (0.2.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 19 May 2016 17:27:32 +0200
+
 no-more-secrets (0.1.0-1~getdeb1) xenial; urgency=medium
 
   * Initial release
