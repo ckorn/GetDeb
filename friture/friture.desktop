@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Friture
+Exec=/usr/bin/friture
+Icon=friture
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;

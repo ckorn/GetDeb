@@ -1,0 +1,14 @@
+# workaround for: AttributeError: module 'OpenGL.GL' has no attribute 'GL_READ_WRITE'
+# http://bugs.python.org/issue26245
+Index: friture-0.19.0.8/friture/plotting/glCanvasWidget.py
+===================================================================
+--- friture-0.19.0.8.orig/friture/plotting/glCanvasWidget.py	2016-02-07 20:59:39.000000000 +0100
++++ friture-0.19.0.8/friture/plotting/glCanvasWidget.py	2016-05-20 01:19:27.049315256 +0200
+@@ -4,6 +4,7 @@
+ import numpy as np
+ 
+ try:
++    from OpenGL import GLU
+     from OpenGL import GL
+ except ImportError:
+     app = QtWidgets.QApplication(sys.argv)
