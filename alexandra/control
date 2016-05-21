@@ -1,0 +1,35 @@
+Source: alexandra
+Section: misc
+Priority: optional
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               qtbase5-dev,
+               qt5-default,
+               qttools5-dev-tools,
+               qttranslations5-l10n,
+               libmediainfo-dev
+Standards-Version: 3.9.7
+Homepage: http://alexandra-qt.sourceforge.net/
+
+Package: alexandra
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: small, fast, but powerful video library, written in C++ with Qt5
+ Alexandra Video Library — a simple and comfortable program for organization
+ and management of the your video library. You can completely customize your
+ movies in a list or a grid, add detailed information, tags, posters, view
+ technical information about the file and use advanced search.
+ .
+ Features:
+  - Lot of fields with information about the film.
+  - Automatically retrieving data from the internet.
+  - Fast filtration in the view and powerful advanced search.
+  - Fully customizable user interface.
+  - Selection of your favourite player.
+  - Hard drive scanner.
+  - Random film selection.
+  - Views statistics.
+  - MediaInfo built-in.
+ .
+ View, manage, collect. Alexandra Video Library.
