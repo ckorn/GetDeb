@@ -1,3 +1,29 @@
+filezilla (3.18.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    3.18.0 (2016-05-27)
+
+    - Small fixes to local file search
+    - Fixed a regression introduced in 3.18.0-rc1 when formatting hostnames
+    for display
+
+    3.18.0-rc1 (2016-05-20)
+
+    + The search functionality can now also be used to search local file
+    + Reduced CPU consumption of adding files to the list of search results
+    + Opening the remote context menu while holding shift allows copying URLs
+    to clipboard that include the password
+    + Added an option to the configuration file through which initiating
+    drag&drop can be disallowed
+    + Reduced memory footprint of some data structures
+    + Building FileZilla now depends on libfilezilla >= 0.5.2
+    (https://lib.filezilla-project.org/).
+    - The remote file list context menu no longer shows inapplicable entries
+    while files are being added to queue
+    - Fix date validation in filter and search conditions
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 27 May 2016 18:14:27 +0200
+
 filezilla (3.17.0.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
