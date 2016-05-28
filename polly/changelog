@@ -1,0 +1,5 @@
+polly (0.93.12-1~getdeb1) xenial; urgency=low
+
+  * Initial release (LP: #1586329)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 27 May 2016 19:04:45 +0200

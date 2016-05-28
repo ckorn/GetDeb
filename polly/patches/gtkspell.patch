@@ -1,0 +1,96 @@
+# remove gtkspell.
+# not maintained any longer.
+# has been removed from repository
+Index: polly-0.93.12/src/polly/gui/header/entry.py
+===================================================================
+--- polly-0.93.12.orig/src/polly/gui/header/entry.py	2016-05-27 19:00:34.540975000 +0200
++++ polly-0.93.12/src/polly/gui/header/entry.py	2016-05-27 19:56:34.342268719 +0200
+@@ -34,7 +34,6 @@
+ 
+ from gtk import gdk as Gdk
+ 
+-from gtkspell import Spell as GtkSpell
+ 
+ 
+ from polly import ENCODING, dispatch
+@@ -357,23 +356,7 @@
+ 
+ 
+     def _check_callback(self):
+-        if self.spell is not None:
+-            self.spell.detach()
+-
+-        if self.check:
+-            try:
+-                self.spell = GtkSpell(self.textview, None)
+-            except GError:
+-                self.spell = None
+-        else:
+-            self.spell = None
+-
+-        # NOTE: The following line fixes a bug where
+-        # the GtkSpell underlining is not refreshed.
+-
+-        self.textview.queue_draw()
+-
+-        self.check_checkbutton.set_active(self.check)
++	pass
+ 
+ 
+     def _override_callback(self):
+@@ -476,10 +459,7 @@
+ 
+ 
+     def _on_textbuffer_mark_set(self, textbuffer, location, mark):
+-        # NOTE: The following line fixes a bug where
+-        # the GtkSpell underlining is not refreshed.
+-
+-        self.textview.queue_draw()
++	pass
+ 
+ 
+     def _on_textbuffer_changed(self, textbuffer):
+@@ -489,11 +469,6 @@
+ 
+         self._update_alert()
+ 
+-        # NOTE: The following line fixes a bug where
+-        # the GtkSpell underlining is not refreshed.
+-
+-        self.textview.queue_draw()
+-
+         if self.inserted:
+             self.inserted = False
+         else:
+@@ -744,8 +719,6 @@
+         self.textbuffer.connect(u'paste-done', self._on_textbuffer_paste_done)
+         self.textbuffer.get_tag_table().add(self.texttag)
+ 
+-        self.spell = None
+-
+         self.scrolledwindow = Gtk.ScrolledWindow(None, None)
+         self.scrolledwindow.set_policy(Gtk.POLICY_AUTOMATIC, Gtk.POLICY_AUTOMATIC)
+         self.scrolledwindow.set_shadow_type(Gtk.SHADOW_IN)
+@@ -761,10 +734,6 @@
+         self.unshorten_button.box.set_tooltip_text(u'Undo last shortening')
+         self.unshorten_button.hide()
+ 
+-        self.check_checkbutton = Gtk.CheckButton(u'Check entry for spelling mistakes', False)
+-        self.check_checkbutton.connect(u'toggled', self._on_check_checkbutton_toggled)
+-        self.check_checkbutton.show()
+-
+         self.override_radiobuttons = []
+ 
+         self.override_radiobuttons.append(Gtk.RadioButton(None,
+Index: polly-0.93.12/src/polly/gui/shell/setting.py
+===================================================================
+--- polly-0.93.12.orig/src/polly/gui/shell/setting.py	2016-05-27 19:00:34.540975000 +0200
++++ polly-0.93.12/src/polly/gui/shell/setting.py	2016-05-28 02:34:16.765721108 +0200
+@@ -127,7 +127,6 @@
+ 
+         composing_box = Gtk.VBox(False, 2 * DEFAULT_BORDER)
+         composing_box.set_border_width(2 * DEFAULT_BORDER)
+-        composing_box.pack_start(main_panel.entry_controller.check_checkbutton, True, False, 0)
+         composing_box.pack_start(composing_override_box, True, False, 0)
+         composing_box.show()
+ 

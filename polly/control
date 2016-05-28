@@ -1,0 +1,39 @@
+Source: polly
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all (>= 2.6.6-3),
+               python-gtk2,
+               python-gconf,
+               python-socks,
+               python-notify,
+               python-numpy,
+               python-gdbm,
+               python-httplib2,
+               python-pycurl
+X-Python-Version: >= 2.7
+Standards-Version: 3.9.7
+Homepage: https://launchpad.net/polly
+
+Package: polly
+Architecture: all
+Depends: python-gtk2,
+         python-dbus,
+         python-xdg,
+         python-notify,
+         python-oauth2client,
+         python-gconf,
+         python-socks,
+         python-httplib2,
+         python-pycurl,
+         python-numpy,
+         hicolor-icon-theme,
+         python-gdbm,
+         ${python:Depends},
+         ${misc:Depends}
+Description: Twitter client for multiple columns of multiple accounts
+ Polly is a Twitter client designed for managing multiple
+ columns of multiple accounts, purposefully keeping them
+ separated instead of merged.
