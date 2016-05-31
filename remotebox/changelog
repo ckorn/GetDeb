@@ -1,3 +1,9 @@
+remotebox (2.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 31 May 2016 18:40:33 +0200
+
 remotebox (2.0-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
