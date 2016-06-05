@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+PKD  = $(abspath $(dir $(MAKEFILE_LIST)))
+PKG  = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SSource)
+VER  = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SVersion | cut -d- -f1)
+ifeq ($(DEB_BUILD_ARCH),amd64)
+ARCHDIR=x86_64-linux
+else
+ARCHDIR=i386-linux
+endif
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf sqlite
+	rm -f bibfilex *.o *.or *.ppu
+
+override_dh_auto_build:
+	# somehow fpc tries to put the binaries in the same directory
+	# which fails because the directory is not writable.
+	# so copy the code to the local directory.
+	cp -a /usr/lib/lazarus/1.6/components/sqlite .
+	/usr/bin/fpc -MObjFPC -Scghi -Cg -O3 -g -gl -l -vewnhibq -Fu./sqlite/ -Fu/usr/lib/lazarus/1.6/components/sqlite/lib/${ARCHDIR}/gtk2 \
+	 -Fu/usr/lib/lazarus/1.6/components/ideintf/units/${ARCHDIR}/gtk2 -Fu/usr/lib/lazarus/1.6/components/lazcontrols/lib/${ARCHDIR}/gtk2 \
+	 -Fu/usr/lib/lazarus/1.6/lcl/units/${ARCHDIR}/gtk2 -Fu/usr/lib/lazarus/1.6/lcl/units/${ARCHDIR} -Fu/usr/lib/lazarus/1.6/components/lazutils/lib/${ARCHDIR} \
+	 -Fu/usr/lib/lazarus/1.6/packager/units/${ARCHDIR} -Fu./ -dLCL -dLCLgtk2 bibfilex.lpr
+
+## http://wiki.debian.org/onlyjob/get-orig-source
+.PHONY: get-orig-source
+get-orig-source: $(PKG)_$(VER).orig.tar.xz $(info I: $(PKG)_$(VER))
+	@
+
+$(PKG)_$(VER).orig.tar.xz:
+	@echo "# Downloading..."
+	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
+	$(if $(wildcard $(PKG)-$(VER)),$(error $(PKG)-$(VER) exist, aborting..))
+	@echo "# Extracting..."
+	mkdir $(PKG)-$(VER) \
+	&& tar -xf $(PKG)_$(VER).orig.tar.* --directory $(PKG)-$(VER) --strip-components 1 \
+	|| $(RM) -r $(PKG)-$(VER)
+	@echo "# Cleaning-up..."
+	cd $(PKG)-$(VER) \
+	&& $(RM) -r -v \
+	    *.o \
+	    *.or \
+	    *.ppu
+	@echo "# Packing..."
+	find -L "$(PKG)-$(VER)" -xdev -type f -print | LC_ALL=C sort \
+	| XZ_OPT="-6v" tar -caf "$(PKG)_$(VER).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
+	&& $(RM) -r "$(PKG)-$(VER)"

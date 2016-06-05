@@ -1,0 +1,3 @@
+version=3
+https://sites.google.com/site/bibfilex/download \
+    (?:.*/)?Bibfilex_([\d\.]+)-sourcecode\.zip(?:.*)

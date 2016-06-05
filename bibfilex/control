@@ -1,0 +1,22 @@
+Source: bibfilex
+Section: misc
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               libsqlite3-dev,
+               lazarus,
+               lcl-units-1.6,
+               fp-units-db
+Standards-Version: 3.9.7
+Homepage: https://sites.google.com/site/bibfilex/
+
+Package: bibfilex
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Free bibliographic manager
+ Bibfilex is a free bibliographic manager for GNU/Linux, Windows and OS X.
+ It's useful to create and to manage archives of bibliographical items
+ (books, articles, etc.) with possible attachments of any kind according
+ to Biblatex structure and rules, even if it can be used also with a
+ wordprocessor like Writer or Word.

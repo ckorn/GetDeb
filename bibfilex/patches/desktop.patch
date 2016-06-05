@@ -1,0 +1,14 @@
+# set binary location
+Index: bibfilex-1.2.7/Bibfilex.desktop
+===================================================================
+--- bibfilex-1.2.7.orig/Bibfilex.desktop	2016-06-01 18:33:24.000000000 +0200
++++ bibfilex-1.2.7/Bibfilex.desktop	2016-06-04 23:32:09.558109160 +0200
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Name=Bibfilex
+ Comment=A free software to manage bibliography in Biblatex format.
+-Exec=env LIBOVERLAY_SCROLLBAR=0 /opt/bibfilex/bibfilex
++Exec=env LIBOVERLAY_SCROLLBAR=0 /usr/bin/bibfilex
+ Terminal=false
+ Type=Application
+ Icon=bibfilex

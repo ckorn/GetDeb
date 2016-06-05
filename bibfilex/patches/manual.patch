@@ -1,0 +1,16 @@
+# set install path of the manual
+Index: bibfilex-1.2.7/unit1.pas
+===================================================================
+--- bibfilex-1.2.7.orig/unit1.pas	2016-06-04 10:21:08.000000000 +0200
++++ bibfilex-1.2.7/unit1.pas	2016-06-04 23:39:43.157997232 +0200
+@@ -2718,8 +2718,8 @@
+ begin
+   // Show manual
+   {$ifdef Linux}
+-  if FileExistsUTF8('/opt/bibfilex/bibfilex-manual.pdf') = True then
+-    OpenDocument('/opt/bibfilex/bibfilex-manual.pdf')
++  if FileExistsUTF8('/usr/share/bibfilex/bibfilex-manual.pdf') = True then
++    OpenDocument('/usr/share/bibfilex/bibfilex-manual.pdf')
+   else
+   begin
+     MessageDlg('The user manual is not installed;' + LineEnding +
