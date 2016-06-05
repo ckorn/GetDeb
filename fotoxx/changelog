@@ -1,3 +1,34 @@
+fotoxx (16.06-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    + Many popup tips were added to dialogs to improve ease of use. 
+    + Edit Metadata and Edit Geotags were integrated for better ease of use.
+    + Edit Any Metadata: easier to edit items not included in the pick-list.
+    + Adjust HSL: improved output quality, more precise user control of
+    output.
+    + Image Search: finding images with no data (e.g. no tags) was
+    simplified.
+    + Image Search: search for images from specific locations was simplified.
+    + Several functions were made easier to process multiple image files in
+    gallery 
+      view mode: View and Edit Metadata, Rename, Copy/Move, Delete/Trash,
+      Upright.
+    + New in image and thumbnail popup menus: jump to image map location.
+    + Paint/Clone: undo memory for oldest edits is recovered as needed for
+    new edits.
+    + Unbend: made easier to use by including icons in the dialog box.
+    + Cartoon: small improvement in algorithm, small speedup. 
+    + Bugfix: Favorites > Previous Image: crash if initiated from Gallery
+    View.
+    + Bugfix: Map search range was increasingly inaccurate for higher
+    latitudes.
+    + Bugfix: Custom favorites menu can lose icons if an entry is deleted.
+    + Bugfix: Slide Show: custom image settings (zoom target, transition
+    type)
+      were sometimes lost if underlying album was edited or rearranged.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 01 Jun 2016 19:21:33 +0200
+
 fotoxx (16.05.1-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
