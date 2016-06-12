@@ -1,0 +1,20 @@
+Source: rssguard
+Section: news
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               cmake,
+               qtbase5-dev,
+               qttools5-dev-tools,
+               qt5-qmake,
+               qt5-default
+Standards-Version: 3.9.7
+Homepage: https://bitbucket.org/skunkos/rssguard
+
+Package: rssguard
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Simple, light and easy-to-use RSS/ATOM feed aggregator
+ RSS Guard is simple, light and easy-to-use RSS/ATOM feed aggregator
+ developed using Qt framework which supports online feed synchronization.
