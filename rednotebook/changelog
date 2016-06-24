@@ -1,3 +1,14 @@
+rednotebook (1.13-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * When selecting a journal directory, show all journal directories by
+    default (thanks Paul Jackson).
+    * Allow ampersands in e-mail addresses (lp:1570476, thanks pdofak).
+    * python-gtkspell has been renamed to python-gtkspellcheck. Update docs
+    and debian/control accordingly.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 17 Jun 2016 23:18:09 +0200
+
 rednotebook (1.12-1~getdeb1) trusty; urgency=medium
 
   * New upstream version
