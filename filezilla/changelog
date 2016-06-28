@@ -1,3 +1,24 @@
+filezilla (3.19.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    3.19.0 (2016-06-27)
+
+    + Building FileZilla now depends on libfilezilla >= 0.5.3
+    (https://lib.filezilla-project.org/).
+    - Fixed context menu in search dialog if not connected to server
+    - OS X, *nix: Fix displayed text in file list status bar if selecting a
+    single item in the file list out of multiple already selected items
+
+    3.19.0-rc1 (2016-06-20)
+
+    + In the Site Manager a background colour for sites can now be selected
+    + Open tabs can be re-arranged using drag&drop
+    - Fixed copying URLs of multiple selected files to clipboard
+    - Setting remote file timestamps did not take timezone offsets configured
+    through the Site Manager into account
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Jun 2016 19:33:42 +0200
+
 filezilla (3.18.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
