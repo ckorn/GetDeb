@@ -1,0 +1,24 @@
+Source: zbarlight
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python3-setuptools (>= 0.6b3),
+               python3-all-dev (>= 2.6.6-3),
+               python3-pil,
+               libzbar-dev
+Standards-Version: 3.9.7
+Homepage: https://github.com/Polyconseil/zbarlight/
+
+Package: python-zbarlight
+Architecture: any
+Depends: ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends},
+         python3-pil,
+         python3-pkg-resources
+Description: Simple zbar wrapper
+ zbarlight is a simple wrapper for the zbar library.
+ For now, it only allows to read QR codes but contributions,
+ suggestions and pull requests are welcome.

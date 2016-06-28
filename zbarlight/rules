@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	dh_auto_install
+	mv debian/python-zbarlight/usr/lib/python3.5 debian/python-zbarlight/usr/lib/python3
+	rm -r debian/python-zbarlight/usr/lib/python3/dist-packages/zbarlight/__pycache__
