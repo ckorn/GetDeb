@@ -1,9 +1,9 @@
 # disable version check. updates come via package management
-Index: chatty-0.8.2/src/chatty/Chatty.java
+Index: chatty-0.8.3/src/chatty/Chatty.java
 ===================================================================
---- chatty-0.8.2.orig/src/chatty/Chatty.java	2016-04-26 22:46:41.680640379 +0200
-+++ chatty-0.8.2/src/chatty/Chatty.java	2016-04-26 22:50:03.208841787 +0200
-@@ -58,7 +58,7 @@
+--- chatty-0.8.3.orig/src/chatty/Chatty.java	2016-06-28 16:18:49.738880187 +0200
++++ chatty-0.8.3/src/chatty/Chatty.java	2016-06-28 16:18:49.734880064 +0200
+@@ -60,7 +60,7 @@
       * Enable Version Checker (if you compile and distribute this yourself, you
       * may want to disable this)
       */
@@ -12,11 +12,11 @@ Index: chatty-0.8.2/src/chatty/Chatty.java
      
      /**
       * The regular URL of the textfile where the most recent version is stored.
-Index: chatty-0.8.2/src/chatty/TwitchClient.java
+Index: chatty-0.8.3/src/chatty/TwitchClient.java
 ===================================================================
---- chatty-0.8.2.orig/src/chatty/TwitchClient.java	2016-04-26 22:47:26.953580371 +0200
-+++ chatty-0.8.2/src/chatty/TwitchClient.java	2016-04-26 22:51:15.054348837 +0200
-@@ -298,7 +298,7 @@
+--- chatty-0.8.3.orig/src/chatty/TwitchClient.java	2016-06-28 16:18:49.738880187 +0200
++++ chatty-0.8.3/src/chatty/TwitchClient.java	2016-06-28 16:18:49.734880064 +0200
+@@ -299,7 +299,7 @@
          checkForVersionChange();
          // Check version, if enabled in this build
          if (Chatty.VERSION_CHECK_ENABLED) {
@@ -25,7 +25,7 @@ Index: chatty-0.8.2/src/chatty/TwitchClient.java
          }
          
          // Connect or open connect dialog
-@@ -368,44 +368,7 @@
+@@ -369,44 +369,7 @@
       * Checks for a new version if the last check was long enough ago.
       */
      private void checkNewVersion() {
@@ -70,10 +70,10 @@ Index: chatty-0.8.2/src/chatty/TwitchClient.java
      }
      
      /**
-Index: chatty-0.8.2/src/chatty/Version.java
+Index: chatty-0.8.3/src/chatty/Version.java
 ===================================================================
---- chatty-0.8.2.orig/src/chatty/Version.java	2016-04-26 22:47:26.953580371 +0200
-+++ chatty-0.8.2/src/chatty/Version.java	2016-04-26 22:51:48.071042729 +0200
+--- chatty-0.8.3.orig/src/chatty/Version.java	2016-06-28 16:18:49.738880187 +0200
++++ chatty-0.8.3/src/chatty/Version.java	2016-06-28 16:18:49.734880064 +0200
 @@ -32,8 +32,8 @@
      }
      
