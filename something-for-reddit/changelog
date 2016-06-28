@@ -1,0 +1,15 @@
+something-for-reddit (0.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 28 Jun 2016 22:24:09 +0200
+
+reddit-is-gtk (0.1.0-1~getdeb1) xenial; urgency=low
+
+  [ Tobias Graven ]
+  * Initial Debian version
+
+  [ Christoph Korn ]
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 28 Jun 2016 22:23:41 +0200

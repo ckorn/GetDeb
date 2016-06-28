@@ -1,0 +1,3 @@
+version=3
+https://github.com/samdroid-apps/something-for-reddit/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz

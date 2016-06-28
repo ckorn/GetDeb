@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with autoreconf
+
+override_dh_autoreconf:
+	touch AUTHORS
+	mkdir -p m4
+	intltoolize
+	dh_autoreconf
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p debian/something-for-reddit/usr/lib/python3/
+	mv debian/something-for-reddit/usr/lib/python3.5/site-packages debian/something-for-reddit/usr/lib/python3/dist-packages
+	rmdir debian/something-for-reddit/usr/lib/python3.5
+	rm -rf debian/something-for-reddit/usr/lib/python3/dist-packages/redditisgtk/__pycache__
