@@ -1,8 +1,8 @@
 # do not search Qt includes locally.
-Index: clipgrab-3.4.2/video_youtube.cpp
+Index: clipgrab-3.6.1/video_youtube.cpp
 ===================================================================
---- clipgrab-3.4.2.orig/video_youtube.cpp	2014-03-13 09:18:17.000000000 +0100
-+++ clipgrab-3.4.2/video_youtube.cpp	2014-03-23 15:29:11.063755773 +0100
+--- clipgrab-3.6.1.orig/video_youtube.cpp	2016-06-27 18:21:49.888315299 +0200
++++ clipgrab-3.6.1/video_youtube.cpp	2016-06-27 18:21:49.888315299 +0200
 @@ -22,7 +22,7 @@
  
  
@@ -12,18 +12,19 @@ Index: clipgrab-3.4.2/video_youtube.cpp
  
  video_youtube::video_youtube()
  {
-Index: clipgrab-3.4.2/video_youtube.h
+Index: clipgrab-3.6.1/video_youtube.h
 ===================================================================
---- clipgrab-3.4.2.orig/video_youtube.h	2014-03-13 09:18:17.000000000 +0100
-+++ clipgrab-3.4.2/video_youtube.h	2014-03-23 15:29:05.903755926 +0100
-@@ -25,11 +25,11 @@
+--- clipgrab-3.6.1.orig/video_youtube.h	2016-06-27 18:21:49.888315299 +0200
++++ clipgrab-3.6.1/video_youtube.h	2016-06-27 18:22:29.297186750 +0200
+@@ -25,12 +25,12 @@
  #define video_YOUTUBE_H
  
  #include "video.h"
 -#include "QtWebKit"
 +#include <QtWebKit>
  #include <QtGui>
- #include "ui_youtube_password.h"
+ #include "QDomDocument"
+ #include "ui_login_dialog.h"
  
 -#include "QFile"
 +#include <QFile>

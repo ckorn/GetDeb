@@ -4,10 +4,9 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                libqt4-dev,
-               libqt4-webkit,
                libqtwebkit-dev,
                qt4-qmake
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: http://clipgrab.org/
 
 Package: clipgrab
