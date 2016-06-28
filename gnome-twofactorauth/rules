@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+%:
+	dh $@ --with autoreconf,python3
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf po/Makefile.in.in m4
+
+override_dh_autoreconf:
+	touch NEWS README AUTHORS ChangeLog
+	mkdir -p m4
+	intltoolize -f
+	dh_autoreconf
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p debian/gnome-twofactorauth/usr/lib/python3
+	mv debian/gnome-twofactorauth/usr/lib/python3.5/site-packages debian/gnome-twofactorauth/usr/lib/python3/dist-packages
+	rmdir debian/gnome-twofactorauth/usr/lib/python3.5
+	rm -r debian/gnome-twofactorauth/usr/lib/python3/dist-packages/TwoFactorAuth/__pycache__
+	rm -r debian/gnome-twofactorauth/usr/lib/python3/dist-packages/TwoFactorAuth/models/__pycache__
+	rm -r debian/gnome-twofactorauth/usr/lib/python3/dist-packages/TwoFactorAuth/widgets/__pycache__
+	rm -r debian/gnome-twofactorauth/usr/share/icons/hicolor/16x16
+	rm -r debian/gnome-twofactorauth/usr/share/icons/hicolor/22x22
+	rm -r debian/gnome-twofactorauth/usr/share/icons/hicolor/32x32
+	rm -r debian/gnome-twofactorauth/usr/share/icons/hicolor/48x48

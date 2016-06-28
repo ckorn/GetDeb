@@ -1,0 +1,27 @@
+Source: gnome-twofactorauth
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               dh-autoreconf,
+               intltool,
+               itstool,
+               libglib2.0-dev,
+               libgirepository1.0-dev,
+               libgtk-3-dev,
+               libxml2-utils,
+               python3-dev
+Standards-Version: 3.9.7
+Homepage: https://github.com/bil-elmoussaoui/Gnome-TwoFactorAuth
+
+Package: gnome-twofactorauth
+Architecture: all
+Depends: python3,
+         python3-gi,
+         gir1.2-gtk-3.0,
+         python-zbarlight,
+         gir1.2-gnomekeyring-1.0,
+         python3-yaml,
+         ${misc:Depends}
+Description: Two-Factor Authentication code generator
+ Two-Factor Authentication code generator for GNOME 

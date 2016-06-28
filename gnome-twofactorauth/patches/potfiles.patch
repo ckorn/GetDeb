@@ -1,0 +1,18 @@
+# If some of these files are left out on purpose then please add them to
+# POTFILES.skip instead of POTFILES.in. 
+Index: gnome-twofactorauth-0.1.0/po/POTFILES.skip
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ gnome-twofactorauth-0.1.0/po/POTFILES.skip	2016-06-27 20:37:35.774628339 +0200
+@@ -0,0 +1,11 @@
++TwoFactorAuth/application.py
++TwoFactorAuth/widgets/account_row.py
++TwoFactorAuth/widgets/add_account.py
++TwoFactorAuth/widgets/applications_list.py
++TwoFactorAuth/widgets/change_password.py
++TwoFactorAuth/widgets/headerbar.py
++TwoFactorAuth/widgets/login_window.py
++TwoFactorAuth/widgets/no_account_window.py
++TwoFactorAuth/widgets/settings.py
++data/about.ui
++data/shortcuts.ui

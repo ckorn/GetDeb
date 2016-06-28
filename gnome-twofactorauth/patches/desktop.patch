@@ -1,0 +1,14 @@
+# add main category
+Index: gnome-twofactorauth-0.1.0/data/gnome-twofactorauth.desktop.in
+===================================================================
+--- gnome-twofactorauth-0.1.0.orig/data/gnome-twofactorauth.desktop.in	2016-06-22 15:55:34.000000000 +0200
++++ gnome-twofactorauth-0.1.0/data/gnome-twofactorauth.desktop.in	2016-06-28 00:43:15.971973190 +0200
+@@ -5,7 +5,7 @@
+ Type=Application
+ Exec=gnome-twofactorauth
+ Terminal=false
+-Categories=GNOME;GTK;
++Categories=Utility;GNOME;GTK;
+ Keywords=Gnome;GTK;Verification;
+ Icon=gnome-twofactorauth
+ StartupNotify=true
