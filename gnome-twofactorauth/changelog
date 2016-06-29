@@ -1,3 +1,9 @@
+gnome-twofactorauth (0.1.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 29 Jun 2016 02:09:36 +0200
+
 gnome-twofactorauth (0.1.0-1~getdeb1) xenial; urgency=medium
 
   * Initial release
