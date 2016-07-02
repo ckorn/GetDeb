@@ -1,3 +1,24 @@
+fotoxx (16.07-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    + Libraw is used in place of Dcraw. Dcraw is no longer required for
+    Fotoxx.
+    + Search Images: there is more flexibility to search for metadata
+    matching 
+      one or more values, one or more substrings, or a range of numeric
+      values.
+    + The denoise method "flatten" was made faster and more effective.
+    + New: Select Area Copy: select a hairy or ragged edge with fine control.
+    + New: Select Area Find Gap: find the gap in a hand-drawn area outline.
+    + Manage Albums: copy and paste from any gallery into an Album gallery
+    using 
+      parallel Fotoxx sessions (makes album construction and editing easier).
+      
+    + New user option: set the main window background color.
+    + Bugfix: crash when saving a select area at image bottom edge to a file.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Jul 2016 19:07:50 +0200
+
 fotoxx (16.06.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
