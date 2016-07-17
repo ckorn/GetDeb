@@ -1,3 +1,11 @@
+fotoxx (16.07.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    + Open Street Map is no longer available as a map source. The source was 
+      changed to OSM Mapnik, which is works OK as of this date.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 15 Jul 2016 21:20:46 +0200
+
 fotoxx (16.07-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
