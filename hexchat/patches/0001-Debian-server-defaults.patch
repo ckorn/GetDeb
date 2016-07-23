@@ -10,11 +10,11 @@ Subject: Debian server defaults
  src/fe-gtk/joind.c    | 8 +++++++-
  2 files changed, 8 insertions(+), 2 deletions(-)
 
-diff --git a/src/common/servlist.c b/src/common/servlist.c
-index 897f0d0..2e37bfa 100644
---- a/src/common/servlist.c
-+++ b/src/common/servlist.c
-@@ -957,7 +957,7 @@ servlist_load_defaults (void)
+Index: hexchat-2.12.1/src/common/servlist.c
+===================================================================
+--- hexchat-2.12.1.orig/src/common/servlist.c	2016-07-23 23:10:07.080352414 +0200
++++ hexchat-2.12.1/src/common/servlist.c	2016-07-23 23:10:07.076352331 +0200
+@@ -927,7 +927,7 @@
  {
  	int i = 0, j = 0;
  	ircnet *net = NULL;
@@ -23,11 +23,11 @@ index 897f0d0..2e37bfa 100644
  
  	while (1)
  	{
-diff --git a/src/fe-gtk/joind.c b/src/fe-gtk/joind.c
-index 2fdbeb3..318682b 100644
---- a/src/fe-gtk/joind.c
-+++ b/src/fe-gtk/joind.c
-@@ -246,9 +246,15 @@ joind_show_dialog (server *serv)
+Index: hexchat-2.12.1/src/fe-gtk/joind.c
+===================================================================
+--- hexchat-2.12.1.orig/src/fe-gtk/joind.c	2016-07-23 23:10:07.080352414 +0200
++++ hexchat-2.12.1/src/fe-gtk/joind.c	2016-07-23 23:10:07.076352331 +0200
+@@ -246,9 +246,15 @@
  							G_CALLBACK (joind_ok_cb), serv);
  							
  	if (serv->network)
