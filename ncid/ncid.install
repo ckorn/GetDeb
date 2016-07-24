@@ -30,10 +30,11 @@ usr/sbin/sip2ncid
 usr/share/man/man1/cidalias.1
 usr/share/man/man1/cidcall.1
 usr/share/man/man1/cidupdate.1
+usr/share/man/man1/hangup-message.1
+usr/share/man/man1/hangup-skel.1
 usr/share/man/man1/ncid-alert.1
 usr/share/man/man1/ncid-wakeup.1
 usr/share/man/man1/ncid2ncid.1
-usr/share/man/man1/ncidrotate.1
 usr/share/man/man1/wct.1
 usr/share/man/man1/wc2ncid.1
 usr/share/man/man1/yac2ncid.1
@@ -61,7 +62,5 @@ usr/share/ncid/sys/ncidrotate
 usr/share/ncid/modules/ncid-alert
 usr/share/ncid/modules/ncid-notify
 usr/share/ncid/modules/ncid-wakeup
-usr/share/ncid/recordings/CannotBeCompleted.rmd
-usr/share/ncid/recordings/NumberDisconnected.rmd
-usr/share/ncid/recordings/CallingDeposit.rmd
-usr/share/ncid/recordings/NotInService.rmd
+usr/share/ncid/extensions
+usr/share/ncid/recordings

@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                libpcap0.8-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: http://ncid.sourceforge.net/
 
 Package: ncid
