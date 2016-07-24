@@ -1,0 +1,25 @@
+Source: gradio
+Section: x11
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               cmake,
+               valac (>= 0.16),
+               libglib2.0-dev (>= 2.29.0),
+               libgtk-3-dev (>= 3.18),
+               libgstreamer1.0-dev,
+               libjson-glib-dev,
+               libgio2.0-cil-dev,
+               libgee-0.8-dev,
+               libsoup2.4-dev,
+               libxml2-utils
+Standards-Version: 3.9.7
+Homepage: https://github.com/haecker-felix/gradio
+
+Package: gradio
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Internet Radio
+ GTK3 app for finding and listening to
+ internet radio stations.

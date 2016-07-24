@@ -1,0 +1,3 @@
+version=3
+https://github.com/haecker-felix/gradio/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz
