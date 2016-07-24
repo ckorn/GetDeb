@@ -1,9 +1,9 @@
 Always use wx-config to get the correct paths.
 Hardcoding paths is completely useless.
-Index: freefilesync-7.9/Makefile
+Index: freefilesync-8.3/Makefile
 ===================================================================
---- freefilesync-7.9.orig/Makefile	2016-02-13 19:05:49.977509884 +0100
-+++ freefilesync-7.9/Makefile	2016-02-13 19:07:49.675952822 +0100
+--- freefilesync-8.3.orig/Makefile	2016-07-24 01:40:46.768137656 +0200
++++ freefilesync-8.3/Makefile	2016-07-24 01:47:05.332364784 +0200
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
@@ -29,6 +29,7 @@ Index: freefilesync-7.9/Makefile
 -CPP_LIST+=../../wx+/image_tools.cpp
 -CPP_LIST+=../../wx+/graph.cpp
 -CPP_LIST+=../../wx+/tooltip.cpp
+-CPP_LIST+=../../wx+/http.cpp
 -CPP_LIST+=../../wx+/image_resources.cpp
 -CPP_LIST+=../../wx+/popup_dlg.cpp
 -CPP_LIST+=../../wx+/popup_dlg_generated.cpp
@@ -45,6 +46,7 @@ Index: freefilesync-7.9/Makefile
 +CPP_LIST+=wx+/image_tools.cpp
 +CPP_LIST+=wx+/graph.cpp
 +CPP_LIST+=wx+/tooltip.cpp
++CPP_LIST+=wx+/http.cpp
 +CPP_LIST+=wx+/image_resources.cpp
 +CPP_LIST+=wx+/popup_dlg.cpp
 +CPP_LIST+=wx+/popup_dlg_generated.cpp
@@ -86,24 +88,22 @@ Index: freefilesync-7.9/Makefile
 -	../Build/gong.wav \
 -	../Build/harp.wav \
 -	../Build/Resources.zip \
--	../Build/styles.gtk_rc \
 +	cp -R Build/Languages/ \
 +	Build/Help/ \
 +	Build/ding.wav \
 +	Build/gong.wav \
 +	Build/harp.wav \
 +	Build/Resources.zip \
-+	Build/styles.gtk_rc \
  	$(APPSHAREDIR)
  
  	mkdir -p $(DOCSHAREDIR)
 -	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
 +	cp Build/Changelog.txt $(DOCSHAREDIR)/changelog
  	gzip $(DOCSHAREDIR)/changelog
-Index: freefilesync-7.9/RealTimeSync/Makefile
+Index: freefilesync-8.3/RealTimeSync/Makefile
 ===================================================================
---- freefilesync-7.9.orig/RealTimeSync/Makefile	2016-02-13 19:05:49.977509884 +0100
-+++ freefilesync-7.9/RealTimeSync/Makefile	2016-02-13 19:05:49.973509803 +0100
+--- freefilesync-8.3.orig/RealTimeSync/Makefile	2016-07-24 01:40:46.768137656 +0200
++++ freefilesync-8.3/RealTimeSync/Makefile	2016-07-24 01:40:46.764137567 +0200
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
