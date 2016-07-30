@@ -1,3 +1,30 @@
+gradio (4.0.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 30 Jul 2016 09:25:44 +0200
+
+gradio (4.0.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    ## New Features:
+    - Seperate volume control
+    - Connection information (Bitrate, channel-mode, etc..)
+    - New sort options for the "Discover" view
+
+    ## Improvements:
+    - Completely redesigned "Discover" view
+    - Many visual changes / improvements
+    - Safe the window size / position and restore 
+    - Safe grid/list view
+
+    ## Bug fixes
+    - Crash when loading too much stations logos
+    - Crash on Linux Mint
+    - Crash on KDE 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 29 Jul 2016 06:58:57 +0200
+
 gradio (3.0.2-1~getdeb1) xenial; urgency=medium
 
   * Initial release

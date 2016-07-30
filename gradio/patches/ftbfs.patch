@@ -1,9 +1,9 @@
 # fix: error: format not a string literal and no format arguments [-Werror=format-security]
-Index: gradio-3.0.2/src/Util.vala
+Index: gradio-4.0.0/src/Util.vala
 ===================================================================
---- gradio-3.0.2.orig/src/Util.vala	2016-06-30 10:23:50.000000000 +0200
-+++ gradio-3.0.2/src/Util.vala	2016-07-24 21:22:21.779851189 +0200
-@@ -81,7 +81,7 @@
+--- gradio-4.0.0.orig/src/Util.vala	2016-07-29 06:59:40.154932847 +0200
++++ gradio-4.0.0/src/Util.vala	2016-07-29 06:59:40.150932713 +0200
+@@ -80,7 +80,7 @@
  	}
  
  	public static void show_info_dialog(string text, Gtk.Window parent){
