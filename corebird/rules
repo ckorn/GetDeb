@@ -6,6 +6,4 @@ override_dh_autoreconf:
 	mkdir -p m4
 	touch ChangeLog
 	touch config.rpath
-	intltoolize --copy && aclocal
-	AUTOPOINT="intltoolize --force --automake --copy" dh_autoreconf
-
+	dh_autoreconf
