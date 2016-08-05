@@ -1,3 +1,4 @@
 version=3
-opts=dversionmangle=s/\+dfsg\d*$//,pgpsigurlmangle=s/$/.sig/ \
-http://youtube-dl.org/downloads/(\d.*)/youtube-dl-(:?.*)\.tar\.gz
+opts=pgpsigurlmangle=s/$/.sig/ \
+https://github.com/rg3/youtube-dl/releases \
+    (?:.*/)?youtube-dl-([\d\.]+)\.tar\.gz
