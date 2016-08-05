@@ -1,3 +1,44 @@
+fotoxx (16.08-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Albums: 
+       + Remove multiple images by clicking thumbnails.
+       + Drag thumbnails from a file manager or gallery to an album and
+       position.
+    Slide Show: 
+       + The last image remains displayed until Escape is pressed.
+       + Transition preferences: fix large dialog that can overflow a small
+       screen.
+    Select Hairy:
+       + Show the tones currently being selected or deselected.
+       + Select and deselect thresholds were adjusted for finer selectivity. 
+    Select Area: 
+       + Area edit: edge blending appearance was made smoother. 
+       + Area copy and paste: smoother edges via variable pixel transparency.
+    Gallery:
+       + Use two parallel sessions to drag and drop thumbnails across
+       galleries.
+    Metadata:
+       + Report by location, new option: sequence by date-group and location.
+       + Timeline report: create a table of image counts by year and month.
+         Click on a year/month to produce the corresponding thumbnail
+         gallery.
+    Color Mode:
+       + Sepia coloring was improved.
+       + A new slider was added to adjust effect from zero to 100%.
+    User Options:
+       + Add an option to set the gallery background color.
+    Main:
+       + The Favorites popup menu is initialized with defaults, if empty.
+       + The mouse selection circle remains visible over transparent image
+       areas.
+    Bugfix:
+       + Images by date-range and location: too many images were being
+       selected.
+       + Paste Area: brightness and edge blend adjustments reset each-other.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Aug 2016 21:57:40 +0200
+
 fotoxx (16.07.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
