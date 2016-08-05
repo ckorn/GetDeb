@@ -1,3 +1,14 @@
+filezilla (3.20.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Fixed rename file exists action on downloads
+    - Fixed possible crash if disabling log abbreviation
+    - Official binaries now link against a patched version of GnuTLS so that
+    a better error message can be printed on broken servers that send
+    malformed certificate chains 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 Aug 2016 21:56:21 +0200
+
 filezilla (3.20.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
