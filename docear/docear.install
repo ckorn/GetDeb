@@ -1,0 +1,10 @@
+core			usr/share/docear
+doc			usr/share/docear
+plugins			usr/share/docear
+resources		usr/share/docear
+scripts			usr/share/docear
+docear.png		usr/share/docear
+docear.sh		usr/share/docear
+*.jar			usr/share/docear
+*.xargs			usr/share/docear
+*.txt			usr/share/docear

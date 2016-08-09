@@ -1,0 +1,16 @@
+Source: docear
+Section: science
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.7
+Homepage: http://www.docear.org/
+
+Package: docear
+Architecture: all
+Depends: openjdk-8-jre,
+         ${misc:Depends}
+Description: Academic Literature Suite
+ Docear is a unique solution to academic literature management,
+ i.e. it helps you organizing, creating, and discovering
+ academic literature.

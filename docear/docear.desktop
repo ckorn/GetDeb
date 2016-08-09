@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Docear
+Exec=docear
+Icon=/usr/share/docear/docear.png
+Terminal=false
+Type=Application
+Categories=Science;
+Keywords=science;
