@@ -1,8 +1,8 @@
 # The Debug causes compile errors. Remove it.
-Index: qstopmotion-2.2.0/src/frontends/qtfrontend/qtfrontend.cpp
+Index: qstopmotion-2.3.1/src/frontends/qtfrontend/qtfrontend.cpp
 ===================================================================
---- qstopmotion-2.2.0.orig/src/frontends/qtfrontend/qtfrontend.cpp	2016-05-09 13:12:25.710852046 +0200
-+++ qstopmotion-2.2.0/src/frontends/qtfrontend/qtfrontend.cpp	2016-05-09 13:16:19.260266623 +0200
+--- qstopmotion-2.3.1.orig/src/frontends/qtfrontend/qtfrontend.cpp	2016-08-09 17:45:32.498100882 +0200
++++ qstopmotion-2.3.1/src/frontends/qtfrontend/qtfrontend.cpp	2016-08-09 17:45:32.498100882 +0200
 @@ -73,8 +73,6 @@
  
  QtFrontend::~QtFrontend()
@@ -195,7 +195,7 @@ Index: qstopmotion-2.2.0/src/frontends/qtfrontend/qtfrontend.cpp
  }
  
  
-@@ -894,57 +843,41 @@
+@@ -881,57 +830,41 @@
  
  bool QtFrontend::isRecoveryMode()
  {
@@ -253,7 +253,7 @@ Index: qstopmotion-2.2.0/src/frontends/qtfrontend/qtfrontend.cpp
  }
  
  
-@@ -1076,55 +1009,45 @@
+@@ -1075,55 +1008,45 @@
  
  void QtFrontend::test(QWidget *parentWidget, int level)
  {

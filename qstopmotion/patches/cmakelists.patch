@@ -1,9 +1,9 @@
 # do not access the debian directory with cmake.
-Index: qstopmotion-2.2.0/CMakeLists.txt
+Index: qstopmotion-2.3.1/CMakeLists.txt
 ===================================================================
---- qstopmotion-2.2.0.orig/CMakeLists.txt	2016-05-09 13:09:46.202655998 +0200
-+++ qstopmotion-2.2.0/CMakeLists.txt	2016-05-09 13:11:07.236848872 +0200
-@@ -373,21 +373,6 @@
+--- qstopmotion-2.3.1.orig/CMakeLists.txt	2016-08-09 17:44:29.968990025 +0200
++++ qstopmotion-2.3.1/CMakeLists.txt	2016-08-09 17:45:16.021812742 +0200
+@@ -364,21 +364,6 @@
      linux/qstopmotion.1.gz      # Linux man page compressed
  )
  
@@ -23,9 +23,9 @@ Index: qstopmotion-2.2.0/CMakeLists.txt
 -)
 -
  ###############################################################################
- # GStreamer support
+ # gPhoto2 support
  #
-@@ -638,8 +623,6 @@
+@@ -595,8 +580,6 @@
      file(COPY ${ICON_FILES} DESTINATION "share/qstopmotion/")
      file(COPY ${GENERAL_FILES} DESTINATION "share/qstopmotion/")
      file(COPY ${UNIX_FILES} DESTINATION "share/qstopmotion/")
@@ -34,7 +34,7 @@ Index: qstopmotion-2.2.0/CMakeLists.txt
  ENDIF(UNIX AND NOT APPLE)
  
  ###############################################################################
-@@ -741,52 +724,6 @@
+@@ -698,52 +681,6 @@
      )
  ENDIF(UNIX AND NOT APPLE)
  
@@ -87,7 +87,7 @@ Index: qstopmotion-2.2.0/CMakeLists.txt
  # installation on Windows systems
  IF(WIN32)
      IF(CMAKE_CL_64)
-@@ -1101,177 +1038,6 @@
+@@ -1058,172 +995,6 @@
  # SET(CPACK_NSIS_MUI_FINISHPAGE_RUN "qstopmotion.exe"
  
  ###############################################################################
@@ -116,34 +116,28 @@ Index: qstopmotion-2.2.0/CMakeLists.txt
 -    # Set the dependencies based on the distro version
 -    # thus only one package is build you must list here *any* depending libraries,
 -    # even if they are only used in one module
--    IF ("${LSB_DISTRIB}" MATCHES "Ubuntu12.04")
--        SET(
--            CPACK_DEBIAN_PACKAGE_DEPENDS
--            "libc6 (>=2.11), ffmpeg (>=0.8.9), gstreamer0.10-plugins-base (>=0.10.36), libqtcore4 (>=4.8.1), libqtgui4 (>=4.8.1), libqt4-xml (>=4.8.1), libv4l-0 (>=0.8.6), libgphoto2-2 (>=2.4.11), libgphoto2-port0 (>=2.4.11)"
--        )
--    ENDIF ("${LSB_DISTRIB}" MATCHES "Ubuntu12.04")
 -    IF ("${LSB_DISTRIB}" MATCHES "Ubuntu14.04")
 -        SET(
 -            CPACK_DEBIAN_PACKAGE_DEPENDS
--            "libc6 (>=2.11), libavbin0 (>=7-1), gstreamer0.10-plugins-base (>=0.10.36), libqtcore4 (>=4.8.1), libqtgui4 (>=4.8.1), libqt4-xml (>=4.8.1), libv4l-0 (>=0.8.6), libgphoto2-6 (>=2.5.3)"
+-            "libc6 (>=2.11), libavbin0 (>=7-1), libqt5core5 (>=5.2.1) | libqt5core5a (>=5.2.1), libqt5gui5 (>=5.2.1), libqt5widgets5 (>=5.2.1), libqt5xml5 (>=5.2.1), libv4l-0 (>=1.0.0), libgphoto2-6 (>=2.5.3), qt5-image-formats-plugins (>=5.2.1)"
 -        )
 -    ENDIF ("${LSB_DISTRIB}" MATCHES "Ubuntu14.04")
--    IF ("${LSB_DISTRIB}" MATCHES "Debian6.*")
+-    IF ("${LSB_DISTRIB}" MATCHES "Ubuntu16.04")
 -        SET(
 -            CPACK_DEBIAN_PACKAGE_DEPENDS
--            "libc6 (>=2.11), ffmpeg (>=0.8.9), gstreamer0.10-plugins-base (>=0.10.36), libqtcore4 (>=4.8.2), libqtgui4 (>=4.8.2), libqt4-xml (>=4.8.2), libv4l-0 (>=0.8.8), libgphoto2-2 (>=2.4.14), libgphoto2-port0 (>=2.4.14)"
+-            "libc6 (>=2.11), ffmpeg (>=2.8.6), libqt5core5 (>=5.3.2) | libqt5core5a (>=5.3.2), libqt5gui5 (>=5.3.2), libqt5widgets5 (>=5.3.2), libqt5xml5 (>=5.3.2), libv4l-0 (>=1.0.0), libgphoto2-6 (>=2.5.3), qt5-image-formats-plugins (>=5.3.2)"
 -        )
--    ENDIF ("${LSB_DISTRIB}" MATCHES "Debian6.*")
+-    ENDIF ("${LSB_DISTRIB}" MATCHES "Ubuntu16.04")
 -    IF ("${LSB_DISTRIB}" MATCHES "Debian7.*")
 -        SET(
 -            CPACK_DEBIAN_PACKAGE_DEPENDS
--            "libc6 (>=2.11), ffmpeg (>=0.8.9), gstreamer0.10-plugins-base (>=0.10.36), libqtcore4 (>=4.8.2), libqtgui4 (>=4.8.2), libqt4-xml (>=4.8.2), libv4l-0 (>=0.8.8), libgphoto2-2 (>=2.4.14), libgphoto2-port0 (>=2.4.14)"
+-            "libc6 (>=2.11), ffmpeg (>=0.8.9), libqtcore4 (>=4.8.2), libqtgui4 (>=4.8.2), libqt4-xml (>=4.8.2), libv4l-0 (>=0.8.8), libgphoto2-2 (>=2.4.14), libgphoto2-port0 (>=2.4.14)"
 -        )
 -    ENDIF ("${LSB_DISTRIB}" MATCHES "Debian7.*")
 -    IF ("${LSB_DISTRIB}" MATCHES "Debian8.*")
 -        SET(
 -            CPACK_DEBIAN_PACKAGE_DEPENDS
--            "libc6 (>=2.11), libav-tools (>=6:11.3), gstreamer0.10-plugins-base (>=0.10.36), libqtcore4 (>=4.8.2), libqtgui4 (>=4.8.2), libqt4-xml (>=4.8.2), libv4l-0 (>=0.8.8), libgphoto2-6 (>=2.5.3)"
+-            "libc6 (>=2.11), libav-tools (>=6:11.3), libqt5core5 (>=5.3.2) | libqt5core5a (>=5.3.2), libqt5gui5 (>=5.3.2), libqt5widgets5 (>=5.3.2), libqt5xml5 (>=5.3.2), libv4l-0 (>=1.0.0), libgphoto2-6 (>=2.5.3), qt5-image-formats-plugins (>=5.3.2)"
 -        )
 -    ENDIF ("${LSB_DISTRIB}" MATCHES "Debian8.*")
 -    IF (NOT CPACK_DEBIAN_PACKAGE_DEPENDS)
@@ -239,7 +233,7 @@ Index: qstopmotion-2.2.0/CMakeLists.txt
 -# Qt5: qt5-qtmultimedia - Multimedia, MultimediaQuick, MultimediaWidgets
 -SET(
 -    CPACK_RPM_PACKAGE_REQUIRES
--    "glibc >= 2.12, gstreamer >= 0.10.29, libgphoto2 >= 2.4.7, libv4l >= 0.6.3, qt5-qtbase >= 5.2.0, qt5-qtbase-gui >= 5.2.0, qt5-qtimageformats >= 5.2.0"
+-    "glibc >= 2.12, libgphoto2 >= 2.4.7, libv4l >= 0.6.3, qt5-qtbase >= 5.2.0, qt5-qtbase-gui >= 5.2.0, qt5-qtimageformats >= 5.2.0"
 -)
 -MESSAGE("CPACK_RPM_PACKAGE_REQUIRES: ${CPACK_RPM_PACKAGE_REQUIRES}")
 -# CPACK_RPM_PACKAGE_SUGGESTS
@@ -255,6 +249,7 @@ Index: qstopmotion-2.2.0/CMakeLists.txt
 -# Prevent conflicts with the filesystem package
 -SET(
 -    CPACK_RPM_EXCLUDE_FROM_AUTO_FILELIST_ADDITION
+-    "/usr/bin"
 -    "/usr/share/applications"
 -    "/usr/share/pixmaps"
 -    "/usr/share/man"

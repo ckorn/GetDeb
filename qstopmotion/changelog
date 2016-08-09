@@ -1,3 +1,9 @@
+qstopmotion (2.3.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 09 Aug 2016 17:41:18 +0200
+
 qstopmotion (2.2.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
