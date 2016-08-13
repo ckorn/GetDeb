@@ -1,3 +1,20 @@
+freefilesync (8.4-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Mark temporary copies created by %local_path% read-only
+    Fixed crash when accessing Bitvise SFTP Servers
+    Support nanosecond-precision file time copying (Linux)
+    Start maximized instead of in full screen mode (OS X)
+    Fixed crash while setting privileges during shutdown
+    Fixed crash when failing to clean up log files
+    Fixed EOPNOTSUPP error when copying file to gvfs Samba share (Linux)
+    Fixed default external applications command line (Linux)
+    Thread-safe translation change even during app shutdown
+    Don't consider port and password when comparing SFTP paths
+    Updated translation files
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 12 Aug 2016 22:17:23 +0200
+
 freefilesync (8.3-1~getdeb1) xenial; urgency=medium
 
   * New upstream version (LP: #1591784)
