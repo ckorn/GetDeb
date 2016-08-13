@@ -1,0 +1,4 @@
+usr/bin
+usr/lib
+debian/opentoonz.png		usr/share/pixmaps
+debian/opentoonz.desktop	usr/share/applications

@@ -1,0 +1,58 @@
+Source: opentoonz
+Section: graphics
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               cmake,
+               libboost-dev,
+               qt5-default,
+               qtbase5-dev,
+               libqt5svg5-dev,
+               libqt5opengl5-dev,
+               qtscript5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               qtmultimedia5-dev,
+               liblz4-dev,
+               libusb-1.0-0-dev,
+               liblzo2-dev,
+               libjpeg-turbo8-dev,
+               libglew-dev,
+               freeglut3-dev,
+               libsdl2-dev,
+               libfreetype6-dev,
+               liblas-dev,
+               liblas-c-dev,
+               libsuperlu-dev
+Standards-Version: 3.9.7
+Homepage: https://opentoonz.github.io/e/index.html
+
+Package: opentoonz
+Architecture: any
+Depends: ${shlibs:Depends},
+         opentoonz-data (= ${source:Version}),
+         ${misc:Depends}
+Description: Open-source full-featured 2D animation creation software
+ This is software for producing a 2D animation.
+ .
+ It is based on the software "Toonz", which was
+ developed by Digital Video S.p.A. in Italy,
+ customized by Studio Ghibli, and has been used for
+ creating its works for many years.
+ Dwango launches this OpenToonz project,
+ in cooperation with Digital Video and Studio Ghibli.
+
+Package: opentoonz-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Open-source full-featured 2D animation creation software (data package)
+ This is software for producing a 2D animation.
+ .
+ It is based on the software "Toonz", which was
+ developed by Digital Video S.p.A. in Italy,
+ customized by Studio Ghibli, and has been used for
+ creating its works for many years.
+ Dwango launches this OpenToonz project,
+ in cooperation with Digital Video and Studio Ghibli.
+ .
+ (This package contains the data files).

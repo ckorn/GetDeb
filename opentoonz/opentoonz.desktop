@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=OpenToonz
+Exec=opentoonz
+Icon=opentoonz
+Terminal=false
+Type=Application
+Categories=Application;Graphics;Viewer;
+Keywords=toonz;2d;graphics

@@ -1,0 +1,3 @@
+version=3
+https://github.com/opentoonz/opentoonz/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz

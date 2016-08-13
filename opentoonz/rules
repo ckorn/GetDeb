@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf opentoonz-build
+	dh_auto_clean -Dthirdparty/tiff-4.0.3
+	dh_auto_clean
+
+override_dh_auto_build:
+	cd thirdparty/tiff-4.0.3 && \
+	    CFLAGS="-fPIC" ./configure --disable-jbig && $(MAKE)
+
+	cmake -Htoonz/sources \
+	      -Bopentoonz-build \
+	      -DCMAKE_BUILD_TYPE:STRING=Release \
+	      -DCMAKE_INSTALL_PREFIX:PATH=/usr
+
+	cd opentoonz-build && $(MAKE)
+
+override_dh_auto_install:
+	dh_auto_install -Dopentoonz-build
+	find debian -type f -iname Thumbs.db -delete

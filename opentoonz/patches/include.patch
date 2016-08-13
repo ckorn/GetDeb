@@ -1,0 +1,101 @@
+# change include condition analog to tiio_mov_proxy.h
+Index: opentoonz-1.1.1/toonz/sources/image/mov/tiio_movM.h
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/mov/tiio_movM.h	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/mov/tiio_movM.h	2016-08-11 17:38:43.084299720 +0200
+@@ -3,7 +3,7 @@
+ #ifndef TIIO_MOV_H
+ #define TIIO_MOV_H
+ 
+-#ifdef __LP64__
++#if defined(x64) || defined(__LP64__) || defined(LINUX)
+ #include "tiio_mov_proxy.h"
+ #else
+ 
+Index: opentoonz-1.1.1/toonz/sources/image/mov/tiio_mov.h
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/mov/tiio_mov.h	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/mov/tiio_mov.h	2016-08-11 17:40:42.938783891 +0200
+@@ -3,7 +3,7 @@
+ #ifndef TIIO_MOV_H
+ #define TIIO_MOV_H
+ 
+-#ifdef x64
++#if defined(x64) || defined(__LP64__) || defined(LINUX)
+ #include "tiio_mov_proxy.h"
+ #else
+ 
+Index: opentoonz-1.1.1/toonz/sources/image/mov/tiio_movM.cpp
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/mov/tiio_movM.cpp	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/mov/tiio_movM.cpp	2016-08-11 19:06:45.722415707 +0200
+@@ -1,6 +1,6 @@
+ 
+ 
+-#ifndef __LP64__
++#if !(defined(x64) || defined(__LP64__) || defined(LINUX))
+ 
+ #include <iostream>
+ 
+Index: opentoonz-1.1.1/toonz/sources/image/mov/tiio_movW.cpp
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/mov/tiio_movW.cpp	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/mov/tiio_movW.cpp	2016-08-11 19:09:08.493344454 +0200
+@@ -1,6 +1,6 @@
+ 
+ 
+-#ifndef x64
++#if !(defined(x64) || defined(__LP64__) || defined(LINUX))
+ 
+ #include "texception.h"
+ #include "tsound.h"
+Index: opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gp.h
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/3gp/tiio_3gp.h	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gp.h	2016-08-11 20:22:14.008383768 +0200
+@@ -3,7 +3,7 @@
+ #ifndef TIIO_3GP_H
+ #define TIIO_3_H
+ 
+-#ifdef x64
++#if defined(x64) || defined(__LP64__) || defined(LINUX)
+ #include "tiio_3gp_proxy.h"
+ #else
+ 
+Index: opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gpM.cpp
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/3gp/tiio_3gpM.cpp	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gpM.cpp	2016-08-11 20:22:27.688666978 +0200
+@@ -1,6 +1,6 @@
+ 
+ 
+-#ifndef __LP64__
++#if !(defined(x64) || defined(__LP64__) || defined(LINUX))
+ 
+ #include <math.h>
+ 
+Index: opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gpM.h
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/3gp/tiio_3gpM.h	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gpM.h	2016-08-11 20:22:38.124883039 +0200
+@@ -3,7 +3,7 @@
+ #ifndef TIIO_3GP_H
+ #define TIIO_3GP_H
+ 
+-#ifdef __LP64__
++#if defined(x64) || defined(__LP64__) || defined(LINUX)
+ #include "tiio_3gp_proxy.h"
+ #else
+ 
+Index: opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gpW.cpp
+===================================================================
+--- opentoonz-1.1.1.orig/toonz/sources/image/3gp/tiio_3gpW.cpp	2016-08-08 08:44:05.000000000 +0200
++++ opentoonz-1.1.1/toonz/sources/image/3gp/tiio_3gpW.cpp	2016-08-11 20:22:53.845208511 +0200
+@@ -1,6 +1,6 @@
+ 
+ 
+-#ifndef x64
++#if !(defined(x64) || defined(__LP64__) || defined(LINUX))
+ 
+ #include <cstdint>
+ 
