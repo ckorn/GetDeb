@@ -16,8 +16,9 @@ Build-Depends: debhelper (>= 9),
                libqt4-dev,
                libcurl4-openssl-dev,
                libavahi-compat-libdnssd-dev,
-               libssl-dev
-Standards-Version: 3.9.5
+               libssl-dev,
+               libgtest-dev
+Standards-Version: 3.9.7
 Homepage: http://synergy-project.org/
 
 Package: synergy

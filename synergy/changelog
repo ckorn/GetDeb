@@ -1,3 +1,44 @@
+synergy (1.8.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Bug #3044 - Unable to drag-select in MS Office
+    Bug #4768 - Copy paste causes 'server is dead' error on switching
+    Bug #4792 - Server logging crashes when switching with clipboard data
+    Bug #2975 - Middle click does not close Chrome tab on Mac client
+    Bug #5087 - Linux client fails to start due to invalid cursor size
+    Bug #5471 - Serial key textbox on activation screen overflows on Mac
+    Bug #4836 - Stop button resets to Start when settings dialog canceled
+    Enhancement #5277 - Auto restart service when synwinhk.dll fails on
+    Windows
+    Enhancement #4913 - Future-proof GUI login by using newer auth URL
+    Enhancement #4922 - Add --enable-crypto argument to help text
+    Enhancement #5299 - High resolution App icon on Mac
+    Enhancement #4894 - Improve grammar in connection notification dialog
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Aug 2016 17:44:57 +0200
+
+synergy (1.8.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    v1.8.1-stable
+    =============
+    Bug #5461 - GUI crash during activation on Mac
+
+    v1.8.0-beta
+    =============
+    Enhancement #4696 - Include 'ns' plugin in installers (instead of wizard
+    download)
+    Enhancement #4715 - Activation dialog which also accepts a serial key
+    Enhancement #5020 - Recommend using serial key when online activation
+    fails
+    Enhancement #4893 - Show detailed version info on GUI about screen
+    Enhancement #4327 - GUI setting to disable drag and drop feature
+    Enhancement #4793 - Additional logging to output OpenSSL version
+    Enhancement #4932 - Notify activation system when wizard finishes
+    Enhancement #4716 - Allow software to be time limited with serial key
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 14 Jul 2016 23:52:26 +0200
+
 synergy (1.7.6-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

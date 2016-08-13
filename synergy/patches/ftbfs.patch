@@ -1,7 +1,7 @@
-Index: synergy-1.7.5/src/lib/arch/unix/ArchNetworkBSD.cpp
+Index: synergy-1.8.2/src/lib/arch/unix/ArchNetworkBSD.cpp
 ===================================================================
---- synergy-1.7.5.orig/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-01-09 00:53:39.000000000 +0100
-+++ synergy-1.7.5/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-01-09 00:54:28.641267511 +0100
+--- synergy-1.8.2.orig/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-08-11 17:46:27.041905317 +0200
++++ synergy-1.8.2/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-08-11 17:46:27.037905236 +0200
 @@ -332,7 +332,7 @@
  		do {
  			ignore = read(unblockPipe[0], dummy, sizeof(dummy));
@@ -19,10 +19,10 @@ Index: synergy-1.7.5/src/lib/arch/unix/ArchNetworkBSD.cpp
  	}
  }
  
-Index: synergy-1.7.5/src/lib/synergy/ArgsBase.cpp
+Index: synergy-1.8.2/src/lib/synergy/ArgsBase.cpp
 ===================================================================
---- synergy-1.7.5.orig/src/lib/synergy/ArgsBase.cpp	2015-11-19 20:51:14.000000000 +0100
-+++ synergy-1.7.5/src/lib/synergy/ArgsBase.cpp	2016-01-09 01:23:18.155836747 +0100
+--- synergy-1.8.2.orig/src/lib/synergy/ArgsBase.cpp	2016-08-11 17:46:27.041905317 +0200
++++ synergy-1.8.2/src/lib/synergy/ArgsBase.cpp	2016-08-11 17:46:27.037905236 +0200
 @@ -21,15 +21,9 @@
  ArgsBase::ArgsBase() :
  #if SYSAPI_WIN32
@@ -54,10 +54,10 @@ Index: synergy-1.7.5/src/lib/synergy/ArgsBase.cpp
  m_shouldExit(false),
  m_synergyAddress(),
  m_enableCrypto(false),
-Index: synergy-1.7.5/src/lib/platform/XWindowsEventQueueBuffer.cpp
+Index: synergy-1.8.2/src/lib/platform/XWindowsEventQueueBuffer.cpp
 ===================================================================
---- synergy-1.7.5.orig/src/lib/platform/XWindowsEventQueueBuffer.cpp	2015-11-19 20:51:14.000000000 +0100
-+++ synergy-1.7.5/src/lib/platform/XWindowsEventQueueBuffer.cpp	2016-01-09 01:34:01.613098346 +0100
+--- synergy-1.8.2.orig/src/lib/platform/XWindowsEventQueueBuffer.cpp	2016-08-11 17:46:27.041905317 +0200
++++ synergy-1.8.2/src/lib/platform/XWindowsEventQueueBuffer.cpp	2016-08-11 17:46:27.037905236 +0200
 @@ -54,10 +54,10 @@
  
  XWindowsEventQueueBuffer::XWindowsEventQueueBuffer(
@@ -71,11 +71,11 @@ Index: synergy-1.7.5/src/lib/platform/XWindowsEventQueueBuffer.cpp
  {
  	assert(m_display != NULL);
  	assert(m_window  != None);
-Index: synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp
+Index: synergy-1.8.2/src/lib/platform/XWindowsScreen.cpp
 ===================================================================
---- synergy-1.7.5.orig/src/lib/platform/XWindowsScreen.cpp	2015-11-19 20:51:14.000000000 +0100
-+++ synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp	2016-01-09 01:53:15.672778595 +0100
-@@ -96,6 +96,7 @@
+--- synergy-1.8.2.orig/src/lib/platform/XWindowsScreen.cpp	2016-08-11 17:46:27.041905317 +0200
++++ synergy-1.8.2/src/lib/platform/XWindowsScreen.cpp	2016-08-11 17:46:27.037905236 +0200
+@@ -97,6 +97,7 @@
  		bool disableXInitThreads,
  		int mouseScrollDelta,
  		IEventQueue* events) :
@@ -83,7 +83,7 @@ Index: synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp
  	m_isPrimary(isPrimary),
  	m_mouseScrollDelta(mouseScrollDelta),
  	m_display(NULL),
-@@ -120,8 +121,7 @@
+@@ -121,8 +122,7 @@
  	m_xkb(false),
  	m_xi2detected(false),
  	m_xrandr(false),
@@ -93,7 +93,7 @@ Index: synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp
  {
  	assert(s_screen == NULL);
  
-@@ -1272,7 +1272,6 @@
+@@ -1273,7 +1273,6 @@
  				cookie->extension == xi_opcode) {
  			if (cookie->evtype == XI_RawMotion) {
  				// Get current pointer's position
@@ -101,11 +101,11 @@ Index: synergy-1.7.5/src/lib/platform/XWindowsScreen.cpp
  				XMotionEvent xmotion;
  				xmotion.type = MotionNotify;
  				xmotion.send_event = False; // Raw motion
-Index: synergy-1.7.5/src/lib/plugin/ns/SecureSocket.cpp
+Index: synergy-1.8.2/src/lib/plugin/ns/SecureSocket.cpp
 ===================================================================
---- synergy-1.7.5.orig/src/lib/plugin/ns/SecureSocket.cpp	2015-11-19 20:51:14.000000000 +0100
-+++ synergy-1.7.5/src/lib/plugin/ns/SecureSocket.cpp	2016-01-09 02:00:58.590245070 +0100
-@@ -529,7 +529,7 @@
+--- synergy-1.8.2.orig/src/lib/plugin/ns/SecureSocket.cpp	2016-08-11 17:46:27.041905317 +0200
++++ synergy-1.8.2/src/lib/plugin/ns/SecureSocket.cpp	2016-08-11 17:46:27.037905236 +0200
+@@ -545,7 +545,7 @@
  SecureSocket::verifyCertFingerprint()
  {
  	// calculate received certificate fingerprint
