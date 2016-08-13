@@ -1,3 +1,12 @@
+fotoxx (16.08.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    + Translation updates for Portuguese and Italian.
+    + Bugfix: Crash in Edit Bookmarks if list is empty and blanks are
+    selected.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 11 Aug 2016 23:24:43 +0200
+
 fotoxx (16.08-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
