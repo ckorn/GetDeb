@@ -1,0 +1,5 @@
+ansiweather (1.08-1~getdeb1) xenial; urgency=medium
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 12 Aug 2016 21:47:28 +0200

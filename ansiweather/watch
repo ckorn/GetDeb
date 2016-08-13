@@ -1,0 +1,3 @@
+version=3
+https://github.com/fcambus/ansiweather/tags \
+    (?:.*/)?([\d\.]+)\.tar\.gz
