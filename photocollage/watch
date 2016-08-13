@@ -1,0 +1,3 @@
+version=3
+https://github.com/adrienverge/PhotoCollage/tags \
+    (?:.*/)?v([\d\.]+)\.tar\.gz

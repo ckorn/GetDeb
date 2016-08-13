@@ -1,0 +1,25 @@
+Source: photocollage
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: graphics
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all (>= 2.6.6-3)
+Standards-Version: 3.9.7
+Homepage: https://github.com/adrienverge/PhotoCollage
+
+Package: photocollage
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-cairo,
+         python-gi-cairo,                                                
+         python-wxgtk3.0,
+         gir1.2-gtk-3.0                    
+Description: Graphical tool to make photo collage posters
+ PhotoCollage allows you to create photo collage posters.
+ It assembles the input photographs it is given to generate
+ a big poster. Photos are automatically arranged to fill
+ the whole poster, then you can change the final layout,
+ dimensions, border or swap photos in the generated grid.
+ Eventually the final poster image can be saved in any size.
