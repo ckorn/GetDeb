@@ -1,0 +1,3 @@
+version=3
+https://github.com/gnumdk/lollypop/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz

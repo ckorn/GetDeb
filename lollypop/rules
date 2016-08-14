@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with autoreconf,python3
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf m4
+
+override_dh_autoreconf:
+	dh_autoreconf
+	mkdir -p m4
+	intltoolize --force --copy --automake
