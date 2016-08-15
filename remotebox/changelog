@@ -1,3 +1,26 @@
+remotebox (2.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - RemoteBox now requires VirtualBox 5.1.x
+    - Added support for adding an NVMe Controller to the guest
+    - Added the ability to set the number of SAS ports
+    - Added support for setting the hot-pluggable flag on harddisk and
+    optical devices attached to SATA or USB storage controllers
+    - Added support for specifying whether a disk controller should be
+    bootable or not
+    - Updated the number of possible SAS ports from 8 to 255 for an attached
+    medium
+    - Updated FreeBSD guest OS Icons
+    - Fixed a bug when assigning a different SAS port to a medium. RemoteBox
+    was not creating the SAS port first causing a port out of range error.
+    - Fixed a bug when selecting storage attached to the USB controller.
+    RemoteBox incorrectly showed the IDE controller attributes.
+    - Set default guest OS types for new guests to Windows 10 64bit, Fedora
+    64bit, FreeBSD 64bit and DOS for their respective OS families
+    - Various GUI tweaks
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 15 Aug 2016 14:50:08 +0200
+
 remotebox (2.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
