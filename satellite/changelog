@@ -1,3 +1,9 @@
+satellite (0.4.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 22 Aug 2016 15:56:21 +0200
+
 satellite (0.4.0-1~getdeb1) wily; urgency=medium
 
   * Initial release
