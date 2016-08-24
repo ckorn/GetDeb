@@ -1,11 +1,11 @@
 usr/lib/libADM_core6.so
 usr/lib/libADM_coreAudio6.so
-usr/lib/libADM6avformat.so.56
+usr/lib/libADM6avformat.so.57
 usr/lib/libADM_coreImage6.so
 usr/lib/libADM_coreUI6.so
-usr/lib/libADM6avutil.so.54
-usr/lib/libADM6swscale.so.3
-usr/lib/libADM6avcodec.so.56
+usr/lib/libADM6avutil.so.55
+usr/lib/libADM6swscale.so.4
+usr/lib/libADM6avcodec.so.57
 usr/lib/libADM_coreVDPAU6.so
 usr/lib/libADM_coreLibVA6.so
 usr/lib/libADM_coreSocket6.so
@@ -21,7 +21,7 @@ usr/lib/libADM_coreUtils6.so
 usr/lib/libADM_coreImageLoader6.so
 usr/lib/libADM_coreVideoCodec6.so
 usr/lib/libADM_coreJobs.so
-usr/lib/libADM6postproc.so.53
+usr/lib/libADM6postproc.so.54
 usr/lib/libADM_coreAudioDevice6.so
 usr/lib/libADM_coreSqlLight3.so
 usr/lib/libADM_coreScript.so

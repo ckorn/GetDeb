@@ -1,13 +1,13 @@
-Index: avidemux2.6-2.6.12/bootStrap.bash
+Index: avidemux2.6-2.6.13/bootStrap.bash
 ===================================================================
---- avidemux2.6-2.6.12.orig/bootStrap.bash	2016-03-05 21:16:51.005983373 +0100
-+++ avidemux2.6-2.6.12/bootStrap.bash	2016-03-05 21:16:50.997983210 +0100
-@@ -183,7 +183,7 @@
+--- avidemux2.6-2.6.13.orig/bootStrap.bash	2016-08-22 20:14:17.162324843 +0200
++++ avidemux2.6-2.6.13/bootStrap.bash	2016-08-22 20:14:53.707094319 +0200
+@@ -195,7 +195,7 @@
  
  export TOP=$PWD
  export POSTFIX=""
 -export FAKEROOT_DIR=$PWD/install
 +export FAKEROOT_DIR=$PWD/debian/tmp
+ export PARAL="$O_PARAL"
  echo "Top dir : $TOP"
  echo "Fake installation directory=$FAKEROOT_DIR"
- if [ "x$debug" = "x1" ] ; then echo   

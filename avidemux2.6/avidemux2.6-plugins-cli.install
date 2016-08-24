@@ -5,3 +5,4 @@ usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_mpdelogoCli.so
 usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_HueCli.so
 usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_CropCli.so
 usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_swscaleResize_cli.so
+usr/lib/ADM_plugins6/videoFilters/cli/libADM_vf_logoCli.so
