@@ -1,0 +1,5 @@
+src/optional/python-bindings/tests/*.pyc
+src/optional/python-bindings/tests/runTests.py.log
+src/optional/python-bindings/tests/runTests.py.trs
+src/optional/python-bindings/tests/test-suite.log
+src/test-core/unittest_support.pyc

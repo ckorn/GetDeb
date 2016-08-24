@@ -1,0 +1,3 @@
+## False-positive due to long line:
+source-is-missing src/report/jqplot/plugins/jqplot.dateAxisRenderer.js
+source-contains-prebuilt-javascript-object src/report/jqplot/plugins/jqplot.dateAxisRenderer.js
