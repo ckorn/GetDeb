@@ -1,3 +1,9 @@
+dtags (3.2.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 24 Aug 2016 16:57:07 +0200
+
 dtags (3.1.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
