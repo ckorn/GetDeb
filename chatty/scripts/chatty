@@ -1,5 +1,12 @@
 #!/bin/sh
 # crashes on Java 9
-JAVA_BIN=$(update-alternatives --list java | grep java-8)
-cd /usr/share/chatty
-$JAVA_BIN -jar chatty.jar "$@"
+JAVA_BIN=$(update-alternatives --list java | grep java-8 | head -n1)
+if [ ! -z $JAVA_BIN ];
+then
+	cd /usr/share/chatty
+	$JAVA_BIN -jar chatty.jar "$@"
+else
+        echo "java-8 not installed, can't start chatty"
+        exit
+fi
+
