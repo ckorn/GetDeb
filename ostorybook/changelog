@@ -1,3 +1,9 @@
+ostorybook (4.10.04-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 01 Sep 2016 19:42:13 +0200
+
 ostorybook (4.10.03-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
