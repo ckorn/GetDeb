@@ -1,0 +1,20 @@
+Index: ariamaestosa-1.4.12/SConstruct
+===================================================================
+--- ariamaestosa-1.4.12.orig/SConstruct	2016-09-07 18:32:08.948300254 +0200
++++ ariamaestosa-1.4.12/SConstruct	2016-09-07 18:32:08.944300182 +0200
+@@ -395,11 +395,11 @@
+         env.Append(CPPPATH = ['/usr/include'])
+         
+         if compiler_arch == '32bit':
+-            env.Append(LINKFLAGS = ['-Wl,--rpath,/usr/local/lib/'])
+-            env.Append(LIBPATH = ['usr/local/lib/','usr/lib/', '/opt/gnome/lib'])
++            env.Append(LINKFLAGS = ['-Wl,--rpath,/usr/lib/'])
++            env.Append(LIBPATH = ['usr/lib/', '/opt/gnome/lib'])
+         elif compiler_arch == '64bit':
+-            env.Append(LINKFLAGS = ['-Wl,--rpath,/usr/local/lib64/'])
+-            env.Append(LIBPATH = ['usr/local/lib64/','usr/lib64/'])
++            env.Append(LINKFLAGS = ['-Wl,--rpath,/usr/lib/'])
++            env.Append(LIBPATH = ['usr/lib/'])
+             env.Append(CCFLAGS=['-D__X86_64__'])
+             
+         if renderer == 'opengl':

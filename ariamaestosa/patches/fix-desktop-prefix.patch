@@ -1,0 +1,10 @@
+--- ariamaestosa-1.4.5.orig/Freedesktop/Aria.desktop
++++ ariamaestosa-1.4.5/Freedesktop/Aria.desktop
+@@ -9,6 +9,6 @@ Exec=Aria %f
+ Comment[en_US]=Aria Maestosa music editor
+ Name=AriaMaestosa
+ Comment=Aria Maestosa music editor
+-Icon=/usr/local/share/Aria/aria64.png
++Icon=/usr/share/Aria/aria64.png
+ MimeType=application/x-ariamaestosa
+ Categories=AudioVideo;Audio

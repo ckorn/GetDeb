@@ -1,0 +1,19 @@
+--- ariamaestosa-1.4.6.orig/Src/Midi/Players/Jack/JackMidiManager.cpp
++++ ariamaestosa-1.4.6/Src/Midi/Players/Jack/JackMidiManager.cpp
+@@ -11,12 +11,13 @@
+ #include <jack/jack.h>
+ #include <jack/midiport.h>
+ #include <wx/wx.h>
+-#include <jdksmidi/multitrack.h>
+-#include <jdksmidi/sequencer.h>
+ #include "Midi/CommonMidiUtils.h"
+ #include "Midi/Sequence.h"
+ #include "Midi/Players/PlatformMidiManager.h"
+-
++#include "jdksmidi/world.h"
++#include "jdksmidi/track.h"
++#include "jdksmidi/multitrack.h"
++#include "jdksmidi/sequencer.h"
+ 
+ struct ScopedLocker
+ {

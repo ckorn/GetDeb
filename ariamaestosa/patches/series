@@ -1,0 +1,7 @@
+adjust-prefix.patch
+fix-desktop-prefix.patch
+fix-jackmidi-build.patch
+fix-scons-debian.patch
+fix-for-old-wxgtk.patch
+privacy_breach.patch
+desktop.patch

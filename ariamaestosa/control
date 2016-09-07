@@ -1,0 +1,26 @@
+Source: ariamaestosa
+Section: sound
+Priority: extra
+Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               python,
+               scons,
+               libasound2-dev,
+               libjack-dev,
+               libglib2.0-dev,
+               libwxgtk3.0-dev,
+               libwxgtk-webview3.0-dev,
+               fluidsynth
+Homepage: http://ariamaestosa.sourceforge.net/
+Standards-Version: 3.9.7
+
+Package: ariamaestosa
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         fluidsynth
+Description: midi tracker/editor
+ Aria Maestosa is an open-source (GPL) midi tracker/editor.
+ It lets you compose, edit and play midi files with a few
+ clicks in a user-friendly interface offering keyboard,
+ guitar, drum and controller views.

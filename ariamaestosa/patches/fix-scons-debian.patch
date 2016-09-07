@@ -1,0 +1,12 @@
+--- ariamaestosa-1.4.9b.orig/SConstruct
++++ ariamaestosa-1.4.9b/SConstruct
+@@ -73,6 +73,9 @@ class RecursiveGlob:
+         if 'scons' in self.directory:
+             # ignore scons stuff
+             self.pop_dir()
++        if 'debian' in self.directory or '.pc' in self.directory:
++            # ignore debian stuff
++            self.pop_dir()
+             
+     def __getitem__(self, index):
+         while 1:

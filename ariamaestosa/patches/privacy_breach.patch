@@ -1,0 +1,30 @@
+#E: ariamaestosa: privacy-breach-donation usr/share/Aria/Documentation/index.html (http://images.sourceforge.net/images/project-support.jpg)                                                                                           
+#E: ariamaestosa: privacy-breach-logo usr/share/Aria/Documentation/menu.js (http://sflogo.sourceforge.net/sflogo.php?group_id=186987&type=12)  
+Index: ariamaestosa-1.4.12/Resources/Documentation/index.html
+===================================================================
+--- ariamaestosa-1.4.12.orig/Resources/Documentation/index.html	2016-04-30 00:48:15.000000000 +0200
++++ ariamaestosa-1.4.12/Resources/Documentation/index.html	2016-09-07 20:06:41.325590639 +0200
+@@ -150,11 +150,6 @@
+     <a href="http://theautoz.com/blog/aria-maestosa/" style="font-weight:normal">Georgian translation</a> of this page
+ </p>
+ 
+-<p>
+-  <a href="http://sourceforge.net/donate/index.php?group_id=186987" style="display: inline-block; vertical-align: middle;"><img src="http://images.sourceforge.net/images/project-support.jpg" width="88" height="32" border="0" alt="Support This Project" /></a>
+-  &nbsp;&nbsp;Donations are a simple way to say thanks ( or to help motivate me to code new features of your liking :) )
+-  <br/>
+-</p>
+ 
+ <ul>
+     <li><i>Aria Maestosa was greatly inspired by <a href="http://www.ergonis.com/products/easybeat/">Easy Beat</a>,
+Index: ariamaestosa-1.4.12/Resources/Documentation/menu.js
+===================================================================
+--- ariamaestosa-1.4.12.orig/Resources/Documentation/menu.js	2016-04-30 00:48:15.000000000 +0200
++++ ariamaestosa-1.4.12/Resources/Documentation/menu.js	2016-09-07 20:05:58.896491664 +0200
+@@ -6,7 +6,6 @@
+ }
+ 
+ document.write('<a href="http://sourceforge.net/projects/ariamaestosa" style="position: absolute; left: 5px; top: 5px;">')
+-document.write('<img src="http://sflogo.sourceforge.net/sflogo.php?group_id=186987&type=12" width="120" height="30" border="0" alt="Get Aria Maestosa at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>');
+ document.write('<br/><center><img src="aria120.png" style="margin-bottom: 25px; margin-right: 25px;"/><img src="logo.png" style="margin-bottom: 25px;"/></center>');
+ 
+ var selected_tab = returnDocument();

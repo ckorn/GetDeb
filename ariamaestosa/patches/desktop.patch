@@ -1,0 +1,13 @@
+Index: ariamaestosa-1.4.12/Freedesktop/Aria.desktop
+===================================================================
+--- ariamaestosa-1.4.12.orig/Freedesktop/Aria.desktop	2016-09-07 18:32:19.412487256 +0200
++++ ariamaestosa-1.4.12/Freedesktop/Aria.desktop	2016-09-07 20:09:59.650530331 +0200
+@@ -1,8 +1,4 @@
+-#!/usr/bin/env xdg-open
+-
+ [Desktop Entry]
+-Encoding=UTF-8
+-Version=1.4.1
+ Type=Application
+ Terminal=false
+ Exec=Aria %f

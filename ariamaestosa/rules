@@ -1,0 +1,41 @@
+#!/usr/bin/make -f
+LANGS=cs de es fi fr it ja ko nb nl pt_BR ru zh_CN
+%:
+	dh $@
+
+override_dh_auto_build:
+	python scons/scons.py config=release jack=1 CC="gcc" CXX="g++" LD="g++" WXCONFIG="/usr/bin/wx-config"
+
+override_dh_auto_install:
+	# broken
+# 	python scons/scons.py install platform=linux prefix=/usr
+
+	install -d $(CURDIR)/debian/ariamaestosa/usr/bin
+	install -d $(CURDIR)/debian/ariamaestosa/usr/share/Aria
+	install -d $(CURDIR)/debian/ariamaestosa/usr/share/locale
+
+	# install executable
+	install -m 775 $(CURDIR)/Aria $(CURDIR)/debian/ariamaestosa/usr/bin
+
+	# install data files
+	cp -r $(CURDIR)/Resources/* $(CURDIR)/debian/ariamaestosa/usr/share/Aria
+
+	# install .mo files
+	@for i in $(LANGS); do \
+		mkdir -p $(CURDIR)/debian/ariamaestosa/usr/share/locale/$$i/LC_MESSAGES; \
+		cp $(CURDIR)/international/$$i/aria_maestosa.mo $(CURDIR)/debian/ariamaestosa/usr/share/locale/$$i/LC_MESSAGES; \
+	done
+
+	# install freedesktop stuff
+	install -d $(CURDIR)/debian/ariamaestosa/usr/share/applications
+	install -d $(CURDIR)/debian/ariamaestosa/usr/share/icons/hicolor/64x64/mimetypes
+	install -d $(CURDIR)/debian/ariamaestosa/usr/share/mime/packages
+
+	install -m 644 $(CURDIR)/Freedesktop/Aria.desktop                   $(CURDIR)/debian/ariamaestosa/usr/share/applications/
+	install -m 644 $(CURDIR)/Freedesktop/aria_doc.png                   $(CURDIR)/debian/ariamaestosa/usr/share/icons/hicolor/64x64/mimetypes/application-x-ariamaestosa.png
+	install -m 644 $(CURDIR)/Freedesktop/application-x-ariamaestosa.xml $(CURDIR)/debian/ariamaestosa/usr/share/mime/packages/
+
+override_dh_auto_clean:
+	find $(CURDIR) -name "*.o" -delete
+	find $(CURDIR) -name "*.pyc" -delete
+	rm -f $(CURDIR)/Aria $(CURDIR)/.sconsign.dblite
