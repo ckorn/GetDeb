@@ -1,3 +1,75 @@
+fotoxx (16.09-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Image Index:
+     + Fotoxx startup is much faster when there are few new image files to
+     index. 
+       Huge galleries also show much faster. The image index file is
+       converted to 
+       a new format. The old file is kept for safety, and can be deleted
+       later. 
+     + Indexing can be completely bypassed if Fotoxx is started from a file
+     manager 
+       (e.g. Nautilus) to open a selected file, which displays instantly.
+       Image
+       edits work normally. Search and map functions are disabled because
+       they 
+       require the image index. The index can be updated on demand or the
+       next 
+       time Fotoxx starts normally. Set options using Tools > User Options.
+    Gallery View:
+       Galleries with images from multiple directories (from a search
+       function, 
+       recent images query, timeline report, etc.) now include the lowest
+       level
+       directory name in addition to the file name, photo date and thumbnail
+       image.
+    User Options: view last file version only:
+       This option now affect both image file view and gallery view. If set,
+       only
+       the latest version of each image file is shown, also in gallery pages.
+       Albums and results from search functions are not affected.
+    Maps:
+       A user can optionally use the Mapbox map source by acquiring an access
+       key.
+       These are free for moderate map usage (50,000 tiles per month). See
+       the
+       User Guide for a description of the differences and how to obtain a
+       key.
+    Batch Convert:
+       Inserting plugin text in the output file names was simplified. Photo
+       dates
+       (from EXIF metadata) can be inserted into the output file names.
+    Main:
+       The user data in /home/<user>/.fotoxx can now be located wherever
+       wanted.
+       This also enables multiple image collections, managed separately.
+    Search:
+       The report by location and date-group and the timeline report were
+       made 
+       more elegant with non-scrolling table headers. Click on a table
+       position 
+       to get a corresponding thumbnail gallery of images.
+    Gallery sort by photo date:
+       Multiple edit versions of the same photo were unsorted because they
+       all 
+       share the same photo date. Resolved by using file mod date as tie
+       breaker.
+    Bugfix:
+     + User Options: If a font was selected that had no monospace
+     implementation, 
+       some report formats looked horrible. A generic monospace font is now
+       used.
+     + Gallery sort by photo date was incorrect after editing photo dates.
+       (self-corrected after displaying some other gallery and coming back).
+     + When saving a modified image as a new file or version, some obscure
+     ITPC 
+       metadata was not being copied to the new file.
+     + Trim/Rotate: the [+90] and [-90] buttons failed when pressed multiple
+     times.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 14 Sep 2016 20:10:20 +0200
+
 fotoxx (16.08.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version

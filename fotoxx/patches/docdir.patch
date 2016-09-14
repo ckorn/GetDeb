@@ -1,14 +1,14 @@
 We put the documentation in an own directory.
-Index: fotoxx-16.08/zfuncs.cc
+Index: fotoxx-16.09/zfuncs.cc
 ===================================================================
---- fotoxx-16.08.orig/zfuncs.cc	2016-08-05 21:58:37.724151012 +0200
-+++ fotoxx-16.08/zfuncs.cc	2016-08-05 21:58:37.720150921 +0200
-@@ -4359,7 +4359,7 @@
+--- fotoxx-16.09.orig/zfuncs.cc	2016-09-14 20:14:12.998983142 +0200
++++ fotoxx-16.09/zfuncs.cc	2016-09-14 20:15:11.084226470 +0200
+@@ -4339,7 +4339,7 @@
     strncatv(zdatadir,199,zprefix,"/share/",zappname,"/data",null);               //  /prefix/share/appname/data
     strncatv(zicondir,199,zprefix,"/share/",zappname,"/icons",null);              //  /prefix/share/appname/icons
     strncatv(zlocalesdir,199,zprefix,"/share/",zappname,"/locales",null);         //  /prefix/share/appname/locales
 -   strncatv(zdocdir,199,zprefix,"/share/doc/",zappname,null);                    //  /prefix/share/doc/appname
 +   strncatv(zdocdir,199,zprefix,"/share/doc/",zappname,"/extras/",null);                    //  /prefix/share/doc/appname
-    
-    err = stat(zuserdir,&statb);                                                  //  does app home exist already?
-    if (err) {
+ 
+    #ifdef DOCDIR
+       strncpy0(zdocdir,DOCDIR,199);                                              //  flexible DOCDIR location (SUSE)    6.5
