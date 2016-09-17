@@ -1,3 +1,23 @@
+freefilesync (8.5-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Support multiple SSH connections per SFTP folder traversal: N times speed
+    up
+    Support multiple SFTP channels per SSH connection: additional N times
+    speed up
+    Fixed installer crashes by using correct DEP-compatibility
+    Fixed notification area icon being generated too often
+    Thread-safe SFTP deinitialization on shutdown
+    Thread-safe mini-dump creation during shutdown
+    Fixed case-insensitive migration of new csidl macro names
+    Reduced SFTP access serialization overhead
+    Buffer SFTP sessions independently from usage context
+    Detect and discard timed-out SSH sessions
+    Pre-empt SFTP session disconnect via dedicated SFTP cleanup thread
+    Run SFTP tasks directly on worker threads without helper thread overhead
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Sep 2016 11:16:45 +0200
+
 freefilesync (8.4-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
