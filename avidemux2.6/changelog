@@ -1,3 +1,33 @@
+avidemux2.6 (1:2.6.14-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * A lot more is now translatable (D. Amm)
+    * Hungarian translation (rezso)
+    * German translation update (euma)
+    * French translation update
+    * PT/BR translation partially fixed
+    * Dannish translation update (scootergrisen)
+
+    Platforms:
+    * Qtx : Automatically check if a new version is available once a day
+    * WIN32 : Reverted to MXE cross compiler, XP now works again
+    * OSX : Fixed the packager, it should work every time now (no more borked
+    dmg)
+
+    Application:
+    * Decoding : Deal with corrupted stream in a nicer way (H264/TS)
+    * Decoding : Enable lagarith
+    * Decoding : Support for flac through libavcodec
+    * VDPAU : Try harder to release resources at exit
+    * Demuxer : Image loader improved and cleaned up, more jpeg formats are
+    supported
+    * Editor : Try to deal better with corrupted audio in copy mode
+    * TS : Add support for new EAC3 identifier such as the ones used by
+    numericable / DVB-T
+    * Encoder : Fix most of the libavcodec based encoders
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 17 Sep 2016 23:43:04 +0200
+
 avidemux2.6 (1:2.6.13-1~getdeb2) xenial; urgency=medium
 
   * Fix postinst

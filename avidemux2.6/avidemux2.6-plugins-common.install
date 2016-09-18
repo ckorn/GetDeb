@@ -57,3 +57,4 @@ usr/lib/ADM_plugins6/videoFilters/libADM_vf_gauss.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_mean.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_ivtcDupeRemover.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_hflip.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_ascii.so
