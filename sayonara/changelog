@@ -1,3 +1,9 @@
+sayonara (0.9.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 20 Sep 2016 19:57:03 +0200
+
 sayonara (0.9.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
