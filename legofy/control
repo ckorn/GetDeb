@@ -1,0 +1,23 @@
+Source: legofy
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: graphics
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-setuptools (>= 0.6b3),
+               python-all (>= 2.6.6-3),
+               python-click,
+               python-pil,
+               python-nose    
+Standards-Version: 3.9.7
+Homepage: https://github.com/JuanPotato/Legofy
+
+Package: legofy
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends}
+Provides: ${python:Provides}
+Description: Make images look as if they are made out of 1x1 LEGO blocks
+ Legofy is a Python program that takes a static image
+ or gif and makes it so that it looks as if it was
+ built out of LEGO.

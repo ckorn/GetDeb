@@ -1,0 +1,13 @@
+# add missing images for tests
+Index: legofy-1.0.0+git160921/MANIFEST.in
+===================================================================
+--- legofy-1.0.0+git160921.orig/MANIFEST.in	2016-01-13 00:59:10.000000000 +0100
++++ legofy-1.0.0+git160921/MANIFEST.in	2016-09-21 22:02:32.778776080 +0200
+@@ -1,3 +1,7 @@
+ recursive-include legofy/assets/bricks *.png
++recursive-include legofy/assets *.png
++recursive-include legofy/assets *.ico
++recursive-include legofy/assets *.jpg
++recursive-include legofy/assets *.gif
+ include legofy/images2gif_py2.py
+ include legofy/images2gif_py3.py
