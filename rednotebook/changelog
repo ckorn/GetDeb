@@ -1,3 +1,11 @@
+rednotebook (1.14-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Use new pygtkspellcheck API (lp:1592727).
+    * Fix conversion from old single "Tags" category to new tags format.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 26 Sep 2016 19:39:20 +0200
+
 rednotebook (1.13-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
