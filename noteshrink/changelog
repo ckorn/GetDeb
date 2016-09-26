@@ -1,0 +1,5 @@
+noteshrink (0.1-1~getdeb1) xenial; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 26 Sep 2016 22:12:17 +0200

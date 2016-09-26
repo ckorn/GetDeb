@@ -1,0 +1,19 @@
+Source: noteshrink
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: graphics
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-setuptools (>= 0.6b3),
+               python-all (>= 2.6.6-3)
+Standards-Version: 3.9.7
+Homepage: https://github.com/mzucker/noteshrink
+
+Package: noteshrink
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends}
+Recommends: imagemagick
+Description: Shrink handwritten notes
+ Convert scans of handwritten notes to beautiful, compact PDF.
+

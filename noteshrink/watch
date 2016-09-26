@@ -1,0 +1,3 @@
+version=3
+https://github.com/mzucker/noteshrink/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz
