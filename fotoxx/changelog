@@ -1,3 +1,18 @@
+fotoxx (16.10-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+     + Compensate GTK API changes in Ubuntu 16.10.
+     + Keys F1 (= help) and Escape (= cancel) were made consistent in all
+     dialogs.
+     + The Select Hairy function and user interface were improved somewhat. 
+     + The image search function saves its output to the album
+     "search_results"
+       (preserve search results when subsequent actions replace the gallery).
+     + Batch Add/Remove Tags: the user interface was extended to make it
+     easier to choose from existing tags or create new tags as needed.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Oct 2016 14:05:04 +0200
+
 fotoxx (16.09-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
