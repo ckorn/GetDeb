@@ -1,0 +1,14 @@
+# make rssguard compatible with qt5.5
+Index: rssguard-3.3.5/src/main.cpp
+===================================================================
+--- rssguard-3.3.5.orig/src/main.cpp	2016-09-13 13:45:20.000000000 +0200
++++ rssguard-3.3.5/src/main.cpp	2016-10-02 00:19:00.373853645 +0200
+@@ -78,7 +78,7 @@
+   application.setFeedReader(new FeedReader(&application));
+ 
+   QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+-  QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
++  //QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+ 
+   // Register needed metatypes.
+   qRegisterMetaType<QList<Message> >("QList<Message>");

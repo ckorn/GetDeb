@@ -1,3 +1,3 @@
 version=3
-https://bitbucket.org/skunkos/rssguard/downloads \
-    (?:.*/)?([\d\.]+)\.tar\.bz2
+https://github.com/martinrotter/rssguard/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz
