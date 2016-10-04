@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+DISTRO := $(shell lsb_release -si | tr '[:upper:]' '[:lower:]')
+
+%:
+	dh $@ --with python2 --buildsystem=python_distutils
+
+override_dh_auto_configure:
+	./setup.py configure --qemu-user=libvirt-qemu \
+		--preferred-distros=$(DISTRO)
+
+override_dh_python2:
+	dh_python2 -O--buildsystem=python_distutils
+	dh_python2 -p virtinst usr/share/virt-manager
+
+override_dh_auto_install:
+	python setup.py --no-update-icon-cache --no-compile-schemas install --force --root=debian/tmp --no-compile -O0
+	dh_install debian/10_virt-manager.gschema.override \
+		   /usr/share/glib-2.0/schemas/
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f data/gschemas.compiled
+

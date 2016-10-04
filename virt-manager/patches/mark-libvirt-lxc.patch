@@ -1,0 +1,31 @@
+Description: Clearly mark the LXC connections as being libvirt-lxc, to
+ avoid confusion due to differing features and configurations.
+Author: Serge Hallyn <serge.hallyn@ubuntu.com>
+Updated: 2015-08-22
+
+Index: virt-manager-1.4.0/virtManager/connect.py
+===================================================================
+--- virt-manager-1.4.0.orig/virtManager/connect.py	2016-10-03 23:37:21.997922867 +0200
++++ virt-manager-1.4.0/virtManager/connect.py	2016-10-03 23:38:15.195000468 +0200
+@@ -167,7 +167,7 @@
+         _add_hv_row(HV_QEMU, "qemu", "QEMU/KVM")
+         _add_hv_row(HV_QEMU_SESSION, "qemu", "QEMU/KVM " + _("user session"))
+         _add_hv_row(HV_XEN, "xen", "Xen")
+-        _add_hv_row(HV_LXC, "lxc", "LXC (" + _("Linux Containers") + ")")
++        _add_hv_row(HV_LXC, "lxc", "Libvirt-LXC (" + _("Linux Containers") + ")")
+         _add_hv_row(HV_BHYVE, "bhyve", "Bhyve")
+         combo.set_model(model)
+         uiutil.init_combo_text_column(combo, 1)
+Index: virt-manager-1.4.0/virtManager/connection.py
+===================================================================
+--- virt-manager-1.4.0.orig/virtManager/connection.py	2016-10-03 23:37:21.997922867 +0200
++++ virt-manager-1.4.0/virtManager/connection.py	2016-10-03 23:37:21.993922785 +0200
+@@ -395,7 +395,7 @@
+             "esx"       : "ESX",
+             "gsx"       : "GSX",
+             "libxl"     : "libxl",
+-            "lxc"       : "LXC",
++            "lxc"       : "Libvirt-LXC",
+             "openvz"    : "OpenVZ",
+             "phyp"      : "phyp",
+             "qemu"      : "QEMU/KVM",

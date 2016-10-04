@@ -1,0 +1,34 @@
+Description: Prefer QEMU as the default URI, even if it's not installed.
+Author: Marc Deslauriers <marc.deslauriers@canonical.com>
+Forwarded: no, Ubuntu-specific preference
+
+Index: virt-manager-1.2.1/virtManager/connect.py
+===================================================================
+--- virt-manager-1.2.1.orig/virtManager/connect.py	2015-12-08 13:25:00.910228019 -0500
++++ virt-manager-1.2.1/virtManager/connect.py	2015-12-08 13:47:40.967838385 -0500
+@@ -107,11 +107,6 @@
+ 
+     @staticmethod
+     def default_uri():
+-        if os.path.exists('/var/lib/xen'):
+-            if (os.path.exists('/dev/xen/evtchn') or
+-                os.path.exists("/proc/xen")):
+-                return 'xen:///'
+-
+         if (os.path.exists("/usr/bin/qemu") or
+             os.path.exists("/usr/bin/qemu-kvm") or
+             os.path.exists("/usr/bin/kvm") or
+@@ -121,9 +116,10 @@
+             glob.glob("/usr/bin/qemu-system-*")):
+             return "qemu:///system"
+ 
+-        if (os.path.exists("/usr/lib/libvirt/libvirt_lxc") or
+-            os.path.exists("/usr/lib64/libvirt/libvirt_lxc")):
+-            return "lxc:///"
++        if os.path.exists('/var/lib/xen'):
++            if (os.path.exists('/dev/xen/evtchn') or
++                os.path.exists("/proc/xen")):
++                return 'xen:///'
+         return None
+ 
+     def cancel(self, ignore1=None, ignore2=None):

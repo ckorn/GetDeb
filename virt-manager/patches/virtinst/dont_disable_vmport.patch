@@ -1,0 +1,22 @@
+Description: Don't disable vmport even if we're using spice, as this
+ prevents having a seamless mouse when using Ubuntu as a guest.
+Origin: reverts https://github.com/virt-manager/virt-manager/commit/ddfca74e54a7638844b72baf3d30502dcf59b251
+Forwarded: No
+
+Index: virt-manager-1.4.0/virtinst/guest.py
+===================================================================
+--- virt-manager-1.4.0.orig/virtinst/guest.py	2016-10-03 23:39:03.295976322 +0200
++++ virt-manager-1.4.0/virtinst/guest.py	2016-10-03 23:39:03.295976322 +0200
+@@ -838,12 +838,6 @@
+             else:
+                 self.features.pae = self.capsinfo.guest.supports_pae()
+ 
+-        if (self.features.vmport == "default" and
+-            self.os.is_x86() and
+-            self.has_spice() and
+-            self.conn.check_support(self.conn.SUPPORT_CONN_VMPORT)):
+-            self.features.vmport = False
+-
+         if (self._os_object.is_windows() and
+             self._hv_supported() and
+             self.conn.check_support(self.conn.SUPPORT_CONN_HYPERV_VAPIC)):
