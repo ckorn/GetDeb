@@ -1,3 +1,21 @@
+corebird (1.3.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Support longer tweets in a few more places
+    - Properly escape ampersand characters in user mentions to fix
+    GtkLabel warnings about wrong escape characters in tooltips
+    - Fix tweet length calculations for whitespace-only tweets
+    - Check for duplicated entries in media arrays. This is apparently a
+    problem on Twitter's side but led to crashes in Corebird (see #627)
+    - Use the correct nsfw status of a tweet, i.e. the one that can
+    actually show images.
+    - Fix a crash when sending a tweet with multiple images attached
+    - Fix tweet length calculation of quote tweets. This previously led to
+    tweets getting rejected by the server even though Corebird claimed
+    they were fine. See #628
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Oct 2016 22:42:19 +0200
+
 corebird (1.3.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
