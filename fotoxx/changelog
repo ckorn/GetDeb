@@ -1,3 +1,11 @@
+fotoxx (16.10.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+     + Bugfix: memory management bug resulting in possible crash.
+     + Translation updates: French, Portuguese, Spanish, Catalan, Italian.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 08 Oct 2016 22:10:29 +0200
+
 fotoxx (16.10-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
