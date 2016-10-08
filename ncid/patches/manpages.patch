@@ -1,168 +1,9 @@
 A manpage has a wrong section.
 Hyphens were used as minus signs.
-Index: ncid-1.4/man/ncid2ncid.1-in
+Index: ncid-1.5/man/ncidd.8-in
 ===================================================================
---- ncid-1.4.orig/man/ncid2ncid.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid2ncid.1-in	2016-07-24 17:57:43.873984301 +0200
-@@ -1,5 +1,5 @@
- .\" %W% %G%
--.TH NCID2NCID 8
-+.TH NCID2NCID 1
- .SH NAME
- .B ncid2ncid
- - Connect multiple NCID servers to a single NCID server
-@@ -10,18 +10,18 @@
- .I Options:
- .PP
- .nf
--[-C <filename>      | --config <filename>]
--[-D                 | --debug]
--[-f <[host][:port]> | --fromhost <[host][:port>]
--[-h                 | --help]
--[-L <filename>      | --logfile <filename>]
--[-t <[host][:port]> | --tohost <[host][:port>]
--[-P <filename>      | --pidfile <filename>]
--[-u                 | --usage]
--[-V                 | --version]
--[-v <1-9>           | --verbose <1-9>]
--[-W <1/0>           | --warn <1/0>]
--[--osx-launchd]
-+[\-C <filename>      | \-\-config <filename>]
-+[\-D                 | \-\-debug]
-+[\-f <[host][:port]> | \-\-fromhost <[host][:port>]
-+[\-h                 | \-\-help]
-+[\-L <filename>      | \-\-logfile <filename>]
-+[\-t <[host][:port]> | \-\-tohost <[host][:port>]
-+[\-P <filename>      | \-\-pidfile <filename>]
-+[\-u                 | \-\-usage]
-+[\-V                 | \-\-version]
-+[\-v <1-9>           | \-\-verbose <1-9>]
-+[\-W <1/0>           | \-\-warn <1/0>]
-+[\-\-osx-launchd]
- .fi
- .SH DESCRIPTION
- This gateway obtains the current Caller ID or message from  one or more
-@@ -48,16 +48,16 @@
- The configuration file for \fIncid2ncid\fR is /etc/ncid/ncid2ncid.conf.
- .SH "OPTIONS"
- .TP
--.B -C <filename> | --config <filename>
-+.B \-C <filename> | \-\-config <filename>
- Configuration file.
- .br
- Default: /etc/ncid/ncid2ncid.conf
- .TP
--.B -D | --debug
-+.B \-D | \-\-debug
- Debug mode, \fIncid2ncid\fR stays attached to the terminal and displays
- all messages that go into the log file.
- .TP
--.B -f <fromhost[:fromport]>
-+.B \-f <fromhost[:fromport]>
- Specifies the first sending NCID server.
- It sends the Caller ID and messages to another NCID server.
- Port may be specified by suffixing the hostname with :<port>.
-@@ -65,34 +65,34 @@
- .br
- Default: :3333
- .TP
--.B -h | --help
-+.B \-h | \-\-help
- Prints this help
- .TP
--.B -L <filename> | --logfile=<filename>
-+.B \-L <filename> | \-\-logfile=<filename>
- Specifies the logfile name to use.  The logfile must exist before it is used.
- .br
- Default: /var/log/ncid2ncid.log
- .TP
--.B -t <[host][:port]> | --ncid=<[host][:port]>
-+.B \-t <[host][:port]> | \-\-ncid=<[host][:port]>
- Specifies the receiving NCID server.  It receives Caller ID and messages
- from another NCID server.  Port may be specified by suffixing the
- hostname with :<port>.  Input can be <host> or <:port> or <host:port>
- .br
- Default: localhost:3333
- .TP
--.B -P <filename> | --pidfile=<filename>
-+.B \-P <filename> | \-\-pidfile=<filename>
- Specifies the pidfile name to write.
- Set to \fI/var/run/ncidd.pid\fR in a rc or init script when used as a service.
- The program will still run if it does not have permission to write a pidfile.
- There is no default.  If pidfile is not set, no pid file will be used.
- Prints this help
- .TP
--.B -V | --version
-+.B \-V | \-\-version
- Displays the version
- .TP
--.B -v <1-9> | --verbose <1-9>
-+.B \-v <1\-9> | \-\-verbose <1\-9>
- Verbose mode. Send information into the logfile and display information
--for the -D  option.  Set a higher number for more information.
-+for the \-D  option.  Set a higher number for more information.
- LEVEL2 will give a warning every time it fails to connect with a NCID server.
- LEVEL8 will print the logfiles from every server, and
- LEVEL9 will add the socket of the received logfile.
-@@ -106,26 +106,26 @@
- .br
- Default: warn = 0
- .TP
--.B --osx-launchd
-+.B \-\-osx\-launchd
- This option is only for OSX when using launchd to control ncidd.  It
- prevents \fBncidd\fR from entering daemon mode.  It is like debug
- mode, but nothing is printed to the screen.
- .SH EXAMPLES
- Forward Caller ID information or message from localhost:3334 to localhost:3333
- .RS 0
--    ncid2ncid --fromhost localhost:3334
-+    ncid2ncid \-\-fromhost localhost:3334
- .RE
- .PP
- Forward Caller ID information or message from localhost:3334 to localhost:3333
- in debug mode using verbose level 1.
- .RS 0
--    ncid2ncid -D -f localhost:3334
-+    ncid2ncid \-D \-f localhost:3334
- .RE
- .PP
- Forward Caller ID information or message from localhost:3334 to localhost:3333
- in debug mode and display all logfiles.
- .RS 0
--    ncid2ncid -Dv8 -f localhost:3334
-+    ncid2ncid \-Dv8 \-f localhost:3334
- .RE
- .SH FILES
- /etc/ncid/ncid2ncid.conf
-@@ -137,15 +137,15 @@
- .SH DIAGNOSTICS
- .nf
-     Return Code    Meaning
--    -----------    -------
-+    \-\-\-\-\-\-\-\-\-\-\-    \-\-\-\-\-\-\-
-          0         Successful
--      -100         Usage
--      -101         Invalid port number
--      -104         Configuration file error
--      -107         Invalid number
--      -108         Missing sending host 1
--      -110         PID file already exists
--        -?         System error
-+      \-100         Usage
-+      \-101         Invalid port number
-+      \-104         Configuration file error
-+      \-107         Invalid number
-+      \-108         Missing sending host 1
-+      \-110         PID file already exists
-+        \-?         System error
- .fi
- .SH SEE ALSO
- ncid2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5, ncidd.blacklist
-Index: ncid-1.4/man/ncidd.8-in
-===================================================================
---- ncid-1.4.orig/man/ncidd.8-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncidd.8-in	2016-07-24 18:21:47.898158718 +0200
+--- ncid-1.5.orig/man/ncidd.8-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncidd.8-in	2016-10-06 19:37:11.182420274 +0200
 @@ -10,37 +10,37 @@
  .I Options:
  .PP
@@ -502,10 +343,10 @@ Index: ncid-1.4/man/ncidd.8-in
  .fi
  .SH SEE ALSO
  sip2ncid.8,
-Index: ncid-1.4/man/sip2ncid.8-in
+Index: ncid-1.5/man/sip2ncid.8-in
 ===================================================================
---- ncid-1.4.orig/man/sip2ncid.8-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/sip2ncid.8-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/sip2ncid.8-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/sip2ncid.8-in	2016-10-06 19:37:11.182420274 +0200
 @@ -10,24 +10,24 @@
  .I Options:
  .PP
@@ -696,10 +537,10 @@ Index: ncid-1.4/man/sip2ncid.8-in
  .fi
  .SH SEE ALSO
  sip2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5
-Index: ncid-1.4/man/yac2ncid.1-in
+Index: ncid-1.5/man/yac2ncid.1-in
 ===================================================================
---- ncid-1.4.orig/man/yac2ncid.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/yac2ncid.1-in	2016-07-24 18:24:41.110162933 +0200
+--- ncid-1.5.orig/man/yac2ncid.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/yac2ncid.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -5,10 +5,10 @@
  - YAC server to NCID server gateway
  .SH SYNOPSIS
@@ -732,23 +573,23 @@ Index: ncid-1.4/man/yac2ncid.1-in
  Display version.
  .PD
  .SH REQUIRED PROGRAMS
-Index: ncid-1.4/man/ncid2ncid.conf.5
+Index: ncid-1.5/man/ncid2ncid.conf.5
 ===================================================================
---- ncid-1.4.orig/man/ncid2ncid.conf.5	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid2ncid.conf.5	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid2ncid.conf.5	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid2ncid.conf.5	2016-10-06 19:37:11.182420274 +0200
 @@ -10,7 +10,7 @@
  The \fIncid2ncid.conf\fR file is used to set options.
- Options are set on a command line.
+ Options can also be set on a command line.
  A line is broken up into words.
 -A word is either a string of non-blank characters, everything
 +A word is either a string of non\-blank characters, everything
  between double quotes, or an equal sign.
  .PP
  The \fIncid2ncid.conf\fR file understands 3 types of lines:
-Index: ncid-1.4/man/ncid-alert.1-in
+Index: ncid-1.5/man/ncid-alert.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-alert.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-alert.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-alert.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-alert.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -6,11 +6,11 @@
  .SH SYNOPSIS
  .B
@@ -772,10 +613,10 @@ Index: ncid-1.4/man/ncid-alert.1-in
  .RE
  .SH CONFIGURATION
  The
-Index: ncid-1.4/man/ncid-notify.1-in
+Index: ncid-1.5/man/ncid-notify.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-notify.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-notify.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-notify.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-notify.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-notify
  - send a NCID notification to your Android or iOS device
@@ -785,10 +626,10 @@ Index: ncid-1.4/man/ncid-notify.1-in
  .B ncid-notify
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid-wakeup.1-in
+Index: ncid-1.5/man/ncid-wakeup.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-wakeup.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-wakeup.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-wakeup.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-wakeup.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -1,9 +1,9 @@
 -.\" %W% %G%
  .TH NCID-WAKEUP 1
@@ -810,10 +651,10 @@ Index: ncid-1.4/man/ncid-wakeup.1-in
  .SH FILES
  /etc/ncid/ncid.conf
  .br
-Index: ncid-1.4/man/ncid-initmodem.1-in
+Index: ncid-1.5/man/ncid-initmodem.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-initmodem.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-initmodem.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-initmodem.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-initmodem.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-initmodem
  - use ncidd to reinitialize modem to Caller ID mode
@@ -823,10 +664,10 @@ Index: ncid-1.4/man/ncid-initmodem.1-in
  .B ncid-initmodem
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid-kpopup.1-in
+Index: ncid-1.5/man/ncid-kpopup.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-kpopup.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-kpopup.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-kpopup.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-kpopup.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-kpopup
  - popup Caller ID using KDE
@@ -836,10 +677,10 @@ Index: ncid-1.4/man/ncid-kpopup.1-in
  .B ncid-kpopup
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid-mythtv.1-in
+Index: ncid-1.5/man/ncid-mythtv.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-mythtv.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-mythtv.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-mythtv.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-mythtv.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-mythtv
  - display Caller ID on MythTV using mythtvosd
@@ -849,10 +690,10 @@ Index: ncid-1.4/man/ncid-mythtv.1-in
  .B ncid-mythtv
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid-page.1-in
+Index: ncid-1.5/man/ncid-page.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-page.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-page.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-page.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-page.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -1,9 +1,9 @@
 -.\" %W% %G%
  .TH NCID-PAGE 1
@@ -887,10 +728,10 @@ Index: ncid-1.4/man/ncid-page.1-in
  .RE
  .PP
  .SH FILES
-Index: ncid-1.4/man/ncid-samba.1-in
+Index: ncid-1.5/man/ncid-samba.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-samba.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-samba.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-samba.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-samba.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-samba
  - send Caller ID to samba to create a popup
@@ -900,10 +741,10 @@ Index: ncid-1.4/man/ncid-samba.1-in
  .B ncid-samba
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid-skel.1-in
+Index: ncid-1.5/man/ncid-skel.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-skel.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-skel.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-skel.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-skel.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -2,8 +2,9 @@
  .TH NCID-SKEL 1
  .SH NAME
@@ -924,10 +765,10 @@ Index: ncid-1.4/man/ncid-skel.1-in
  .SH FILES
  /etc/ncid/conf.d/ncid-skel.conf
  .br
-Index: ncid-1.4/man/ncid-speak.1-in
+Index: ncid-1.5/man/ncid-speak.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-speak.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-speak.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-speak.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-speak.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-speak
  - send Caller ID to a text-to-speech program
@@ -937,10 +778,10 @@ Index: ncid-1.4/man/ncid-speak.1-in
  .B ncid-speak
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid-yac.1-in
+Index: ncid-1.5/man/ncid-yac.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-yac.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-yac.1-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-yac.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-yac.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -4,7 +4,7 @@
  .B ncid-yac
  - send Caller ID to YAC listeners
@@ -950,10 +791,10 @@ Index: ncid-1.4/man/ncid-yac.1-in
  .B ncid-yac
  .SH DESCRIPTION
  The
-Index: ncid-1.4/man/ncid.1-in
+Index: ncid-1.5/man/ncid.1-in
 ===================================================================
---- ncid-1.4.orig/man/ncid.1-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid.1-in	2016-07-24 18:26:23.796484667 +0200
+--- ncid-1.5.orig/man/ncid.1-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid.1-in	2016-10-06 19:37:11.182420274 +0200
 @@ -2,7 +2,7 @@
  .TH NCID 1
  .SH NAME
@@ -1116,7 +957,7 @@ Index: ncid-1.4/man/ncid.1-in
 +.B \-\-version | \-V
  Display version and quit.
  .PD
- .SS "Arguments"
+ .SH "ARGUMENTS"
 @@ -242,19 +242,19 @@
  .SH EXAMPLES
  .nf
@@ -1142,10 +983,10 @@ Index: ncid-1.4/man/ncid.1-in
  
  # run ncid on a TiVo using out2osd, server on remote host
  tivocid 192.168.0.1
-Index: ncid-1.4/man/ncid-modules.7-in
+Index: ncid-1.5/man/ncid-modules.7-in
 ===================================================================
---- ncid-1.4.orig/man/ncid-modules.7-in	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/man/ncid-modules.7-in	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/man/ncid-modules.7-in	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/man/ncid-modules.7-in	2016-10-06 19:37:11.186420353 +0200
 @@ -12,7 +12,7 @@
  .PP
  Modules are normally called by the client using the command line:
@@ -1155,10 +996,10 @@ Index: ncid-1.4/man/ncid-modules.7-in
  .RE
  .PP
  The client can only call one module at a time, but multiple clients
-Index: ncid-1.4/tools/wct.pl
+Index: ncid-1.5/tools/wct.pl
 ===================================================================
---- ncid-1.4.orig/tools/wct.pl	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/tools/wct.pl	2016-07-24 17:57:43.873984301 +0200
+--- ncid-1.5.orig/tools/wct.pl	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/tools/wct.pl	2016-10-06 19:37:11.186420353 +0200
 @@ -1122,7 +1122,7 @@
  
  It automatically sets the beginning line number for the WC device which
@@ -1177,10 +1018,10 @@ Index: ncid-1.4/tools/wct.pl
  wct with the --discover command line option.
  
  =item Z
-Index: ncid-1.4/gateway/wc2ncid.pl
+Index: ncid-1.5/gateway/wc2ncid.pl
 ===================================================================
---- ncid-1.4.orig/gateway/wc2ncid.pl	2016-07-24 17:57:43.877984384 +0200
-+++ ncid-1.4/gateway/wc2ncid.pl	2016-07-24 17:57:43.877984384 +0200
+--- ncid-1.5.orig/gateway/wc2ncid.pl	2016-10-06 19:37:11.186420353 +0200
++++ ncid-1.5/gateway/wc2ncid.pl	2016-10-06 19:37:11.186420353 +0200
 @@ -1132,7 +1132,7 @@
  
  It automatically sets the beginning line number for the WC device which
@@ -1190,3 +1031,161 @@ Index: ncid-1.4/gateway/wc2ncid.pl
  device, for example; device 1 (WC01 WC02) device 2 (WC03 WC04 WC05 WC06).
  
  NOTE: All devices are automatically configured to send call information
+Index: ncid-1.5/man/ncid2ncid.1-in
+===================================================================
+--- ncid-1.5.orig/man/ncid2ncid.1-in	2016-08-21 01:29:54.000000000 +0200
++++ ncid-1.5/man/ncid2ncid.1-in	2016-10-06 19:40:06.642440000 +0200
+@@ -10,18 +10,18 @@
+ .I Options:
+ .PP
+ .nf
+-[-C <filename>      | --config <filename>]
+-[-D                 | --debug]
+-[-f <[host][:port]> | --fromhost <[host][:port>]
+-[-h                 | --help]
+-[-L <filename>      | --logfile <filename>]
+-[-t <[host][:port]> | --tohost <[host][:port>]
+-[-P <filename>      | --pidfile <filename>]
+-[-u                 | --usage]
+-[-V                 | --version]
+-[-v <1-9>           | --verbose <1-9>]
+-[-W <1/0>           | --warn <1/0>]
+-[--osx-launchd]
++[\-C <filename>      | \-\-config <filename>]
++[\-D                 | \-\-debug]
++[\-f <[host][:port]> | \-\-fromhost <[host][:port>]
++[\-h                 | \-\-help]
++[\-L <filename>      | \-\-logfile <filename>]
++[\-t <[host][:port]> | \-\-tohost <[host][:port>]
++[\-P <filename>      | \-\-pidfile <filename>]
++[\-u                 | \-\-usage]
++[\-V                 | \-\-version]
++[\-v <1\-9>           | \-\-verbose <1\-9>]
++[\-W <1/0>           | \-\-warn <1/0>]
++[\-\-osx\-launchd]
+ .fi
+ .SH DESCRIPTION
+ This gateway obtains the current Caller ID or message from  one or more
+@@ -48,16 +48,16 @@
+ The configuration file for \fIncid2ncid\fR is /etc/ncid/ncid2ncid.conf.
+ .SH "OPTIONS"
+ .TP
+-.B -C <filename> | --config <filename>
++.B \-C <filename> | \-\-config <filename>
+ Configuration file.
+ .br
+ Default: /etc/ncid/ncid2ncid.conf
+ .TP
+-.B -D | --debug
++.B \-D | \-\-debug
+ Debug mode, \fIncid2ncid\fR stays attached to the terminal and displays
+ all messages that go into the log file.
+ .TP
+-.B -f <fromhost[:fromport]>
++.B \-f <fromhost[:fromport]>
+ Specifies the first sending NCID server.
+ It sends the Caller ID and messages to another NCID server.
+ Port may be specified by suffixing the hostname with :<port>.
+@@ -65,34 +65,34 @@
+ .br
+ Default: :3333
+ .TP
+-.B -h | --help
++.B \-h | \-\-help
+ Prints this help
+ .TP
+-.B -L <filename> | --logfile=<filename>
++.B \-L <filename> | \-\-logfile=<filename>
+ Specifies the logfile name to use.  The logfile must exist before it is used.
+ .br
+ Default: /var/log/ncid2ncid.log
+ .TP
+-.B -t <[host][:port]> | --ncid=<[host][:port]>
++.B \-t <[host][:port]> | \-\-ncid=<[host][:port]>
+ Specifies the receiving NCID server.  It receives Caller ID and messages
+ from another NCID server.  Port may be specified by suffixing the
+ hostname with :<port>.  Input can be <host> or <:port> or <host:port>
+ .br
+ Default: localhost:3333
+ .TP
+-.B -P <filename> | --pidfile=<filename>
++.B \-P <filename> | \-\-pidfile=<filename>
+ Specifies the pidfile name to write.
+ Set to \fI/var/run/ncidd.pid\fR in an rc or init script when used as a service.
+ The program will still run if it does not have permission to write a pidfile.
+ There is no default.  If pidfile is not set, no pid file will be used.
+ Prints this help
+ .TP
+-.B -V | --version
++.B \-V | \-\-version
+ Displays the version
+ .TP
+-.B -v <1-9> | --verbose <1-9>
++.B \-v <1\-9> | \-\-verbose <1\-9>
+ Verbose mode. Send information into the logfile and display information
+-for the -D  option.  Set a higher number for more information.
++for the \-D  option.  Set a higher number for more information.
+ LEVEL2 will give a warning every time it fails to connect with an NCID server.
+ LEVEL8 will print the logfiles from every server, and
+ LEVEL9 will add the socket of the received logfile.
+@@ -101,31 +101,31 @@
+ .br
+ Default: verbose = 1
+ .TP
+-.B -W <0/1> | --warn <0/1>
++.B \-W <0/1> | \-\-warn <0/1>
+ Send server disconnected or server reconnected messages to clients.
+ .br
+ Default: warn = 0
+ .TP
+-.B --osx-launchd
++.B \-\-osx\-launchd
+ This option is only for OSX when using launchd to control \fBncidd\fR.  It
+ prevents \fBncidd\fR from entering daemon mode.  It is like debug
+ mode, but nothing is printed to the screen.
+ .SH EXAMPLES
+ Forward Caller ID information or messages from localhost:3334 to localhost:3333
+ .RS 0
+-    ncid2ncid --fromhost localhost:3334
++    ncid2ncid \-\-fromhost localhost:3334
+ .RE
+ .PP
+ Forward Caller ID information or messages from localhost:3334 to localhost:3333
+ in debug mode using verbose level 1.
+ .RS 0
+-    ncid2ncid -D -f localhost:3334
++    ncid2ncid \-D \-f localhost:3334
+ .RE
+ .PP
+ Forward Caller ID information or messages from localhost:3334 to localhost:3333
+ in debug mode and display all logfiles.
+ .RS 0
+-    ncid2ncid -Dv8 -f localhost:3334
++    ncid2ncid \-Dv8 \-f localhost:3334
+ .RE
+ .SH FILES
+ /etc/ncid/ncid2ncid.conf
+@@ -137,15 +137,15 @@
+ .SH DIAGNOSTICS
+ .nf
+     Return Code    Meaning
+-    -----------    -------
++    \-\-\-\-\-\-\-\-\-\-\-    \-\-\-\-\-\-\-
+          0         Successful
+-      -100         Usage
+-      -101         Invalid port number
+-      -104         Configuration file error
+-      -107         Invalid number
+-      -108         Missing sending host 1
+-      -110         PID file already exists
+-        -?         System error
++      \-100         Usage
++      \-101         Invalid port number
++      \-104         Configuration file error
++      \-107         Invalid number
++      \-108         Missing sending host 1
++      \-110         PID file already exists
++        \-?         System error
+ .fi
+ .SH SEE ALSO
+ ncid2ncid.conf.5 ncidd.8, ncidd.conf.5

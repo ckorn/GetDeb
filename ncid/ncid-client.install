@@ -7,6 +7,7 @@ etc/ncid/conf.d/ncid-skel.conf
 etc/ncid/conf.d/ncid-page.conf
 etc/ncid/conf.d/ncid-notify.conf
 etc/ncid/conf.d/ncid-yac.conf
+etc/ncid/conf.d/ncid-mysql.conf
 usr/bin/ncid
 usr/share/man/man1/ncid.1
 usr/share/man/man1/ncid-initmodem.1
