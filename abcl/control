@@ -3,7 +3,7 @@ Section: java
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: http://common-lisp.net/project/armedbear
 
 Package: abcl
