@@ -1,3 +1,9 @@
+virt-manager (1:1.4.0-1~getdeb2) xenial; urgency=medium
+
+  * Remove broken Italian translation (LP: #1631852)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 10 Oct 2016 22:27:09 +0200
+
 virt-manager (1:1.4.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
