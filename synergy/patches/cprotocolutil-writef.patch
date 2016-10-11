@@ -11,10 +11,10 @@ Forwarded: no
 Last-Update: 2013-06-07
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: synergy-1.8.2/src/lib/synergy/ProtocolUtil.cpp
+Index: synergy-1.8.4/src/lib/synergy/ProtocolUtil.cpp
 ===================================================================
---- synergy-1.8.2.orig/src/lib/synergy/ProtocolUtil.cpp	2016-08-11 17:46:09.929557822 +0200
-+++ synergy-1.8.2/src/lib/synergy/ProtocolUtil.cpp	2016-08-11 17:46:09.925557741 +0200
+--- synergy-1.8.4.orig/src/lib/synergy/ProtocolUtil.cpp	2016-10-11 17:59:47.332798287 +0200
++++ synergy-1.8.4/src/lib/synergy/ProtocolUtil.cpp	2016-10-11 17:59:47.328798208 +0200
 @@ -338,7 +338,7 @@
  }
  
@@ -22,12 +22,12 @@ Index: synergy-1.8.2/src/lib/synergy/ProtocolUtil.cpp
 -ProtocolUtil::writef(void* buffer, const char* fmt, va_list args)
 +ProtocolUtil::writef(UInt8* buffer, const char* fmt, va_list args)
  {
- 	UInt8* dst = reinterpret_cast<UInt8*>(buffer);
+ 	UInt8* dst = static_cast<UInt8*>(buffer);
  
-Index: synergy-1.8.2/src/lib/synergy/ProtocolUtil.h
+Index: synergy-1.8.4/src/lib/synergy/ProtocolUtil.h
 ===================================================================
---- synergy-1.8.2.orig/src/lib/synergy/ProtocolUtil.h	2016-08-11 17:46:09.929557822 +0200
-+++ synergy-1.8.2/src/lib/synergy/ProtocolUtil.h	2016-08-11 17:46:09.929557822 +0200
+--- synergy-1.8.4.orig/src/lib/synergy/ProtocolUtil.h	2016-10-11 17:59:47.332798287 +0200
++++ synergy-1.8.4/src/lib/synergy/ProtocolUtil.h	2016-10-11 17:59:47.332798287 +0200
 @@ -79,7 +79,7 @@
  							const char* fmt, va_list);
  
