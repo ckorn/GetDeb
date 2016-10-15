@@ -1,3 +1,10 @@
+fotoxx (16.10.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    + Bugfix: occaisional crash when saving to new file name or new version.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 14 Oct 2016 18:56:57 +0200
+
 fotoxx (16.10.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
