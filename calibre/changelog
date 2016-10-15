@@ -1,3 +1,32 @@
+calibre (2.70.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+     new features:
+     - title: "Edit Book: Add a tool to download external resources
+     (images/stylesheets/etc.) that are not included in the book."
+     tickets: [1620058]
+     - title: "Make custom columns available in the Alter Tag Browser->Manage
+     categories sub menu"
+
+     bug fixes:
+     - title: "Conversion: Fix incorrect resolution of references to
+     resources in HTML files that exist in a folder level above the OPF file.
+     This could lead to styles being incorrectly processed in such HTML
+     files."
+     - title: "Get Books: Update the amazon store plugins for website
+     changes"
+     - title: "Update ozon.ru metadata download plugin to fix searching for
+     books by ISBN"
+     - title: "Edit Book: Fix a regression in the previous release that broke
+     the preferences dialog for changing color schemes."
+     tickets: [1629294]
+     - title: "Edit Book: Better error message when user tries to open a
+     Check Book item that refers to a file that has been deleted since the
+     last time Check Book was run."
+     tickets: [1632897]
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 14 Oct 2016 19:01:34 +0200
+
 calibre (2.69.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
