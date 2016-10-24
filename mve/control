@@ -2,15 +2,15 @@ Source: mve
 Section: graphics
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 10),
                libgtest-dev,
                libqt4-dev,
                libqt4-opengl-dev,
-               libpng12-dev,
+               libpng-dev,
                libjpeg8-dev,
                libtiff5-dev,
                libreadline6-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.8
 Homepage: http://www.gris.tu-darmstadt.de/projects/multiview-environment/
 
 Package: mve
