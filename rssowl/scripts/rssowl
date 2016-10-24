@@ -1,3 +1,0 @@
-#!/bin/sh -e
-cd /usr/lib/rssowl
-LD_LIBRARY_PATH=$(pwd)/xulrunner UBUNTU_MENUPROXY=0 ./RSSOwl -vmargs -DdisableUpdate=true

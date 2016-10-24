@@ -1,6 +1,0 @@
-debian/liferea.xpm usr/share/liferea/pixmaps
-debian/tmp/usr/bin/*
-debian/tmp/usr/lib/*
-debian/tmp/usr/share/applications/*
-debian/tmp/usr/share/glib-2.0/
-debian/tmp/usr/share/man/*

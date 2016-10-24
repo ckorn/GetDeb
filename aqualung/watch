@@ -1,3 +1,0 @@
-version=3
-https://github.com/jeremyevans/aqualung/releases \
-    (?:.*/)?([\d\.]+)\.tar\.gz

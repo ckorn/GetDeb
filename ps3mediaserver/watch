@@ -1,3 +1,0 @@
-version=3
-https://github.com/ps3mediaserver/ps3mediaserver/releases \
-    (?:.*/)?release-([\d\.]+)\.tar\.gz
