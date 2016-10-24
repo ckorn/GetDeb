@@ -1,3 +1,9 @@
+xnviewmp (0.83-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * Rebuild for yakkety
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 16 Oct 2016 22:40:42 +0200
+
 xnviewmp (0.83-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
