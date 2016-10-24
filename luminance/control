@@ -2,7 +2,7 @@ Source: luminance
 Section: graphics
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 10),
                cmake,
                qtbase5-dev,
                libtiff5-dev,
@@ -12,18 +12,17 @@ Build-Depends: debhelper (>= 9),
                libfftw3-dev,
                libqt5webkit5-dev,
                libraw-dev,
-               libpng12-dev,
+               libpng-dev,
                libboost-dev,
                libcfitsio3-dev,
                libccfits-dev,
                qt5-default,
-               qtquick1-5-dev,
                qtscript5-dev,
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools,
                libboost-program-options-dev
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: http://qtpfsgui.sourceforge.net/
 
 Package: luminance

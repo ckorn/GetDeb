@@ -1,3 +1,9 @@
+luminance (2.4.0-1~getdeb6~yakkety) yakkety; urgency=medium
+
+  * Rebuild for yakkety
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 16 Oct 2016 22:05:24 +0200
+
 luminance (2.4.0-1~getdeb5~xenial) xenial; urgency=medium
 
   * Rebuild for xenial
