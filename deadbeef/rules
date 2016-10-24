@@ -2,7 +2,12 @@
 %:
 	dh $@
 
+override_dh_autoreconf:
+	touch config.rpath
+	dh_autoreconf
+
 override_dh_auto_configure:
+	touch config.rpath
 	sh autogen.sh
 	dh_auto_configure -- --prefix=/usr --enable-ffmpeg --enable-gtk2 --disable-gtk3
 
