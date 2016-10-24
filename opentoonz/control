@@ -2,7 +2,7 @@ Source: opentoonz
 Section: graphics
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>=9),
+Build-Depends: debhelper (>=10),
                cmake,
                libboost-dev,
                qt5-default,
@@ -24,7 +24,7 @@ Build-Depends: debhelper (>=9),
                liblas-dev,
                liblas-c-dev,
                libsuperlu-dev
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: https://opentoonz.github.io/e/index.html
 
 Package: opentoonz
