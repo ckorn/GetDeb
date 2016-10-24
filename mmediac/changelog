@@ -1,3 +1,9 @@
+mmediac (1.7.2-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * Rebuild for yakkety
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 16 Oct 2016 22:08:46 +0200
+
 mmediac (1.7.2-1~getdeb1) lucid; urgency=low
 
   * Initial release
