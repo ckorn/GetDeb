@@ -2,7 +2,7 @@ Source: libqtav
 Section: video
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 10),
                qt5-qmake,
                libqt5opengl5-dev,
                qtdeclarative5-dev,
@@ -21,7 +21,7 @@ Build-Depends: debhelper (>= 9),
                libva-dev,
                libegl1-mesa-dev,
                libuchardet-dev
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: http://qtav.org
 
 Package: libqtav-sdk
