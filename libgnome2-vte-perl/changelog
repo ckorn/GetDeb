@@ -1,3 +1,9 @@
+libgnome2-vte-perl (0.11-1~getdeb5~yakkety) yakkety; urgency=medium
+
+  * Rebuild for yakkety
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Oct 2016 17:26:48 +0200
+
 libgnome2-vte-perl (0.11-1~getdeb4~xenial) xenial; urgency=medium
 
   * Rebuild for xenial
