@@ -2,13 +2,13 @@ Source: zbarlight
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Section: python
 Priority: optional
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 10),
                dh-python,
                python3-setuptools (>= 0.6b3),
                python3-all-dev (>= 2.6.6-3),
                python3-pil,
                libzbar-dev
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: https://github.com/Polyconseil/zbarlight/
 
 Package: python-zbarlight
