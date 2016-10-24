@@ -1,7 +1,7 @@
 Source: calibre
 Section: text
 Priority: extra
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 10),
                dh-buildinfo,
                python2.7-dev,
                python-setuptools,
@@ -42,7 +42,7 @@ Build-Depends: debhelper (>= 9),
                libchm-dev
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Uploaders: Martin Pitt <mpitt@debian.org>
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: http://calibre-ebook.com
 
 Package: calibre
