@@ -1,0 +1,14 @@
+# cc1plus: error: unrecognized command line option '-Wno-unused-local-typedef' [-Werror]
+Index: synergy-1.8.5/CMakeLists.txt
+===================================================================
+--- synergy-1.8.5.orig/CMakeLists.txt	2016-11-06 16:52:41.670867534 +0100
++++ synergy-1.8.5/CMakeLists.txt	2016-11-06 16:53:00.914923740 +0100
+@@ -77,7 +77,7 @@
+ 
+ 	# warnings as errors:
+ 	# we have a problem with people checking in code with warnings.
+-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wno-unused-local-typedef")
++	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+ 
+ 	if (NOT APPLE)
+ 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
