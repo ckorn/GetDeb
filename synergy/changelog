@@ -1,3 +1,13 @@
+synergy (1.8.5-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Bug #5680 - Server crashes when disconnecting SSL clients
+    Bug #5626 - Build fails using Xcode 8 and macOS SDK 10.12
+    Feature #5657 - Trial version support
+    Feature #5707 - User upgrade statistics
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Nov 2016 04:31:53 +0100
+
 synergy (1.8.4-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
