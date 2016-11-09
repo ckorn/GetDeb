@@ -1,3 +1,9 @@
+bibfilex (1.2.8-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Nov 2016 03:09:43 +0100
+
 bibfilex (1.2.7-1~getdeb1) xenial; urgency=medium
 
   * Initial release
