@@ -1,0 +1,3 @@
+version=3
+https://github.com/pragha-music-player/pragha/releases \
+    (?:.*/)?pragha-([\d\.]+)\.tar\.bz2
