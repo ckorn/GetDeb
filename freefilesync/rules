@@ -102,7 +102,7 @@ get-orig-source:
 	cd freefilesync-$(DEB_UPSTREAM_VERSION) && \
 	    mv wx+ zen FreeFileSync/Source && \
 	    mv FreeFileSync/Build FreeFileSync/Source && \
-	    rm LICENSE && \
+	    rm License.txt && \
 	    mv FreeFileSync/Source/* . && \
 	    rmdir FreeFileSync/Source && \
 	    rmdir FreeFileSync

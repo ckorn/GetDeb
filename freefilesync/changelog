@@ -1,3 +1,22 @@
+freefilesync (8.6-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Added SFTP support for OS X
+    Support SFTP authentication via public/private key
+    Remember configuration history scroll position
+    SFTP folder picker supports browsing hidden folders
+    Fixed failure to copy files with corrupted ADS
+    Signed application installer (OS X)
+    Increase config history default size to 100 items
+    Auto-close FreeFileSync processes before uninstallation
+    Simplified SFTP configuration syntax
+    Fixed update check sending incomplete keep-alive header
+    Detailed error reporting after failed web access
+    Suggest folder path macro substitutions also at inner positions
+    Transfer folder creation times (OS X)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Nov 2016 03:53:54 +0100
+
 freefilesync (8.5-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
