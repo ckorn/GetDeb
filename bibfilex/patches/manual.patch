@@ -1,16 +1,15 @@
 # set install path of the manual
-Index: bibfilex-1.2.7/unit1.pas
+Index: bibfilex-1.2.8/unit1.pas
 ===================================================================
---- bibfilex-1.2.7.orig/unit1.pas	2016-06-04 10:21:08.000000000 +0200
-+++ bibfilex-1.2.7/unit1.pas	2016-06-04 23:39:43.157997232 +0200
-@@ -2718,8 +2718,8 @@
+--- bibfilex-1.2.8.orig/unit1.pas	2016-11-06 03:13:01.318896763 +0100
++++ bibfilex-1.2.8/unit1.pas	2016-11-06 03:14:02.768180392 +0100
+@@ -2749,8 +2749,7 @@
+ procedure TfmMain.miShowManualClick(Sender: TObject);
  begin
    // Show manual
-   {$ifdef Linux}
--  if FileExistsUTF8('/opt/bibfilex/bibfilex-manual.pdf') = True then
--    OpenDocument('/opt/bibfilex/bibfilex-manual.pdf')
-+  if FileExistsUTF8('/usr/share/bibfilex/bibfilex-manual.pdf') = True then
-+    OpenDocument('/usr/share/bibfilex/bibfilex-manual.pdf')
-   else
+-  if OpenDocument(ExtractFileDir(Application.ExeName) + DirectorySeparator +
+-    'bibfilex-manual.pdf') = False then
++  if OpenDocument('/usr/share/bibfilex/bibfilex-manual.pdf') = False then
    begin
-     MessageDlg('The user manual is not installed;' + LineEnding +
+     MessageDlg('The user manual is not installed; ' +
+       'download it from Bibfilex website, ' +
