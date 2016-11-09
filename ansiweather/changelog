@@ -1,3 +1,17 @@
+ansiweather (1.09-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Allow toggling display of wind, humidity, and pressure data (Thanks
+      John Kaczmarek)
+    - The -h option does not show help anymore, as everything is available in
+      the manpage
+    - Remove extraneous whitespace before daylight data
+    - Rename 'daylight' variable to 'show_daylight' for consistency with the
+      newly introduced options (user configuration files must be updated)
+    - Various documentation and manpage updates and reformatting
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Nov 2016 03:08:39 +0100
+
 ansiweather (1.08-1~getdeb1) xenial; urgency=medium
 
   * Initial release
