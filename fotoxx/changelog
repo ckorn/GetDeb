@@ -1,3 +1,21 @@
+fotoxx (16.11-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * New upstream version
+     + New: Upload selected image files to the Flickr photo web service.
+     + New: Unwarp Close-up: Reverse the distortion of a close-up face photo
+       or selfie (balloon face, big nose). 
+     + Location names may now encompass multiple [nearby] geocoordinates.
+       When editing a photo geotag, select a map marker or add a new one.
+       The image selection range of a map marker scales with the map scale.
+     + Albums can be auto-updated when image files are edited to new
+     versions.
+     + Text config files for two Metadata reports were replaced with proper
+     GUIs.
+     + Add Text and Add Lines/Arrows: style information (font, size, color
+     ...) can be saved to a file and re-used, to avoid many inputs.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Nov 2016 03:46:34 +0100
+
 fotoxx (16.10.3-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * Rebuild for yakkety
