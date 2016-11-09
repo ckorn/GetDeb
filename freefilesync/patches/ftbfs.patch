@@ -1,27 +1,27 @@
 # make_unique is a new feature
-Index: freefilesync-7.9/Makefile
+Index: freefilesync-8.6/Makefile
 ===================================================================
---- freefilesync-7.9.orig/Makefile	2016-02-13 18:14:19.052406244 +0100
-+++ freefilesync-7.9/Makefile	2016-02-13 18:14:19.048406151 +0100
+--- freefilesync-8.6.orig/Makefile	2016-11-06 04:15:59.893614021 +0100
++++ freefilesync-8.6/Makefile	2016-11-06 04:21:06.007968642 +0100
 @@ -5,7 +5,7 @@
  APPSHAREDIR = $(SHAREDIR)/$(APPNAME)
  DOCSHAREDIR = $(SHAREDIR)/doc/$(APPNAME)
  
--CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
-+CXXFLAGS  = -std=c++14 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+-CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -Wall \
++CXXFLAGS  = -std=c++14 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -include "zen/i18n.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
-Index: freefilesync-7.9/RealTimeSync/Makefile
+Index: freefilesync-8.6/RealTimeSync/Makefile
 ===================================================================
---- freefilesync-7.9.orig/RealTimeSync/Makefile	2016-02-13 18:13:40.775511655 +0100
-+++ freefilesync-7.9/RealTimeSync/Makefile	2016-02-13 18:14:45.053008065 +0100
+--- freefilesync-8.6.orig/RealTimeSync/Makefile	2016-11-06 04:15:59.893614021 +0100
++++ freefilesync-8.6/RealTimeSync/Makefile	2016-11-06 04:21:09.276036570 +0100
 @@ -2,7 +2,7 @@
  prefix = /usr
  BINDIR = $(DESTDIR)$(prefix)/bin
  
--CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
-+CXXFLAGS  = -std=c++14 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -include "zen/warn_static.h" -Wall \
+-CXXFLAGS  = -std=c++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -Wall \
++CXXFLAGS  = -std=c++14 -std=gnu++14 -pipe -DWXINTL_NO_GETTEXT_MACRO -I. -I.. -include "zen/i18n.h" -Wall \
  -O3 -DNDEBUG `wx-config --cxxflags --debug=no` -DZEN_LINUX -pthread
  
  LINKFLAGS = -s `wx-config --libs std, aui --debug=no` -lboost_thread -lboost_chrono -lboost_system -lz -pthread
