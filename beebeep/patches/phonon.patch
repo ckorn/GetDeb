@@ -1,13 +1,13 @@
 # fix include path
-Index: beebeep-3.0.6/src/gui/AudioManager.h
+Index: beebeep-3.0.8/src/gui/AudioManager.h
 ===================================================================
---- beebeep-3.0.6.orig/src/gui/AudioManager.h	2016-03-21 20:32:34.000000000 +0100
-+++ beebeep-3.0.6/src/gui/AudioManager.h	2016-04-28 22:30:00.151470174 +0200
+--- beebeep-3.0.8.orig/src/gui/AudioManager.h	2016-11-10 18:58:19.584825070 +0100
++++ beebeep-3.0.8/src/gui/AudioManager.h	2016-11-10 18:58:34.997377328 +0100
 @@ -26,7 +26,7 @@
  
  #include "Config.h"
  #ifdef BEEBEEP_USE_PHONON4
--  #include <Phonon/MediaObject>
+-  #include <phonon/MediaObject>
 +  #include <KDE/Phonon/MediaObject>
  #endif
  
