@@ -1,3 +1,9 @@
+c++-gtk-utils (2.2.14-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 09 Nov 2016 22:07:33 +0100
+
 c++-gtk-utils (2.2.13-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
