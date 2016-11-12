@@ -1,0 +1,40 @@
+Source: gitsome
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               dh-python,
+               python3-setuptools (>= 0.6b3),
+               python3-all (>= 3.4),
+               python3-all-dev (>= 3.4),
+               python3-mock,
+               python3-requests,
+               python3-uritemplate,
+               python3-prompt-toolkit,
+               python3-ply
+Standards-Version: 3.9.8
+X-Python-Version: >= 3.4
+Homepage: https://github.com/donnemartin/gitsome
+
+Package: gitsome
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python3,
+         python3-mock,
+         python3-requests,
+         python3-uritemplate,
+         python3-prompt-toolkit,
+         python3-click,
+         python3-ply,
+         python3-docopt,
+         python3-arrow,
+         python3-tz,
+         python3-feedparser,
+         git
+Description: Supercharged Git/Shell Autocompleter with GitHub
+ gitsome aims to supercharge your standard git/shell interface
+ by focusing on:
+ .
+ * Improving ease-of-use
+ * Increasing productivity

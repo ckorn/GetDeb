@@ -1,0 +1,5 @@
+gitsome (0.6.0-1~getdeb1) yakkety; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 29 Jun 2016 02:19:41 +0200
