@@ -1,0 +1,22 @@
+Source: pianobooster
+Section: sound
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               cmake,
+               libqt4-dev,
+               libqt4-opengl-dev,
+               libasound2-dev,
+               libfluidsynth-dev
+Standards-Version: 3.9.7
+Homepage: http://pianobooster.sourceforge.net/
+
+Package: pianobooster
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Boost your Piano playing skills
+ Free (Open Source) program that plays Standard Midi Files and allows you to
+ change the speed of playback and transpose the music etc.
+ There is a scrolling musical stave that shows the notes for just one part
+ from all the parts in the complete musical arrangement. 
