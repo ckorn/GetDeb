@@ -1,0 +1,39 @@
+Source: shotcut
+Section: video
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 10),
+               pkg-config,
+               qtbase5-dev,
+               libmlt++-dev,
+               libmlt-dev,
+               qtdeclarative5-dev,
+               libqt5opengl5-dev,
+               qtmultimedia5-dev,
+               libqt5websockets5-dev,
+               libqt5webkit5-dev,
+               libqt5x11extras5-dev,
+               qml-module-qtquick-privatewidgets,
+               qtdeclarative5-private-dev,
+               qml-module-qtquick-controls,
+               qml-module-qtquick-dialogs,
+               qml-module-qtquick-extras,
+               qml-module-qtquick-layouts
+Standards-Version: 3.9.8
+Homepage: https://www.shotcut.org/
+
+Package: shotcut
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         qml-module-qtquick-privatewidgets,
+         qml-module-qtquick-controls,
+         qml-module-qtquick-dialogs,
+         qml-module-qtquick-extras,
+         qml-module-qtquick-layouts
+Description: Free, open source, cross-platform video editor
+ Shotcut is a free, open source, cross-platform video editor for Windows,
+ Mac and Linux. Major features include support for a wide range of formats.
+ No import required meaning native timeline editing.
+ Blackmagic Design support for input and preview monitoring.
+ And resolution support to 4k.
