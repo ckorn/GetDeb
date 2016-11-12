@@ -1,0 +1,4 @@
+*.sh			usr/share/git-radar
+*.bash			usr/share/git-radar
+git-radar		usr/share/git-radar
+test			usr/share/git-radar

@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_make:
+
+override_dh_auto_install:
+
+override_dh_install:
+	dh_install
+	chmod -x debian/git-radar/usr/share/git-radar/*.sh
+	chmod +x debian/git-radar/usr/share/git-radar/fetch.sh
+	chmod +x debian/git-radar/usr/share/git-radar/test-stash.sh
