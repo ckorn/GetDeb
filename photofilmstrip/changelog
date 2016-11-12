@@ -1,0 +1,11 @@
+photofilmstrip (3.0.0-1~getdeb1) yakkety; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 12 Nov 2016 00:24:54 +0100
+
+photofilmstrip (2.1.0-1~getdeb1) xenial; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 12 Jun 2016 00:06:10 +0200

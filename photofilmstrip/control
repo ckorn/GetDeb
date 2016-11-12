@@ -1,0 +1,21 @@
+Source: photofilmstrip
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               dh-python,
+               python-all (>= 2.6.6-3)
+Standards-Version: 3.9.8
+Homepage: http://www.photofilmstrip.org
+
+Package: photofilmstrip
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-gst-1.0,
+         python-wxgtk3.0,
+         python-pil
+Description: Creates movies out of your pictures.
+ PhotoFilmStrip creates movies out of your pictures in just 3 steps.
+ First select your photos, customize the motion path and render the video.
+ There are several output possibilities for VCD, SVCD, DVD up to FULL-HD.
