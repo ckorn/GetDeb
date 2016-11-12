@@ -1,0 +1,3 @@
+version=3
+https://github.com/michaeldfallen/git-radar/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz
