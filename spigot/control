@@ -1,0 +1,24 @@
+Source: spigot
+Section: science
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               autotools-dev
+Standards-Version: 3.9.7
+Homepage: http://www.chiark.greenend.org.uk/~sgtatham/spigot/
+
+Package: spigot
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Command-line exact real calculator
+ A normal calculating program, given a mathematical expression to evaluate,
+ will want to know in advance how many digits of output are needed
+ (if it even has that option), and if the expression includes more than
+ one successive operation, then rounding errors will build up so that the
+ last few digits are potentially wrong, or perhaps more in some cases
+ (e.g. if significance loss occurs).
+ .
+ spigot, by contrast, does not output any digit of the answer until it's sure
+ that the digit is right, and it will keep generating digits until you
+ tell it to stop.

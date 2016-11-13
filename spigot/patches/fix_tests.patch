@@ -1,0 +1,14 @@
+# run spigot from the current dir
+# it is not actually installed.
+Index: spigot-20161109.8910d67/test.sh
+===================================================================
+--- spigot-20161109.8910d67.orig/test.sh	2016-11-09 03:40:01.000000000 +0100
++++ spigot-20161109.8910d67/test.sh	2016-11-13 14:40:28.882492367 +0100
+@@ -1,6 +1,6 @@
+ #!/bin/bash 
+ 
+-SPIGOT=spigot
++SPIGOT=./spigot
+ PREFIX=()
+ 
+ nargs=0
