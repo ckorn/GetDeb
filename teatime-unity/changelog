@@ -1,0 +1,74 @@
+teatime-unity (16.07+git201608252357-1~getdeb1) yakkety; urgency=medium
+
+  * Upload to GetDeb
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 14 Nov 2016 21:45:05 +0100
+
+teatime-unity (16.07+git201608252357~ubuntu16.10.1) yakkety; urgency=low
+
+  * Auto build.
+
+ -- Pavel Rojtberg <pavel.r@gmx.de>  Fri, 26 Aug 2016 00:11:40 +0000
+
+teatime-unity (16.07-1) xenial; urgency=low
+
+  * allow to run as as snap package
+  * fix GIR versioning warnings
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Thu, 21 Jul 2016 00:55:25 +0200
+
+teatime-unity (14.11-1) trusty; urgency=low
+
+  * port to python3
+  * update ui to gtk 3.10
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Mon, 01 Dec 2014 14:13:52 +0100
+
+teatime-unity (12.06-1) precise; urgency=low
+
+  * comply with app submission guidelines:
+    - move to /opt/
+    - change source package name
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Thu, 21 Jun 2012 11:57:38 +0200
+
+teatime (12.04-1) precise; urgency=low
+
+  * allow setting timers > 1h
+  * add about menu
+  * bug fixes
+  * translation updates
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Sat, 28 Apr 2012 11:43:36 +0200
+
+teatime (11.10-2) oneiric; urgency=low
+
+  * allow setting timers > 1h
+  * bug fixes
+  * translation updates
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Sat, 15 Oct 2011 22:20:34 +0200
+
+teatime (11.10-1) oneiric; urgency=low
+
+  * add workarounds for oneiric
+  * translation updates
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Sat, 15 Oct 2011 22:20:34 +0200
+
+teatime (11.06-1) natty; urgency=low
+
+  * play sound when timer is finished
+  * increase window size
+  * increase delay between reminders
+  * bug fixes
+  * translation updates
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Wed, 22 Jun 2011 12:55:29 +0200
+
+teatime (11.05-1) natty; urgency=low
+
+  * Initial release
+
+ -- Pavel Rojtberg <pavel@rojtberg.net>  Thu, 12 May 2011 01:58:03 +0200
+
