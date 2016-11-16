@@ -1,3 +1,11 @@
+fotoxx (16.11.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Bugfix: If no image files have location data (city and country), adding a
+    location for the first time may cause Fotoxx to crash.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 16 Nov 2016 17:47:33 +0100
+
 fotoxx (16.11-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
