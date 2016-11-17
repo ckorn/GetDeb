@@ -1,9 +1,11 @@
 Description: Add Class-Path to manifest file.
 Author: Gabriele Giacone <1o5g4r8o@gmail.com>
 
---- a/build.xml
-+++ b/build.xml
-@@ -447,6 +447,7 @@
+Index: sweethome3d-5.3/build.xml
+===================================================================
+--- sweethome3d-5.3.orig/build.xml	2016-11-17 18:34:13.933741358 +0100
++++ sweethome3d-5.3/build.xml	2016-11-17 18:34:13.933741358 +0100
+@@ -459,6 +459,7 @@
      <jar destfile="install/SweetHome3D-${version}.jar">
        <manifest>
          <attribute name="Main-Class" value="com.eteks.sweethome3d.SweetHome3DBootstrap"/>

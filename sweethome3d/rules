@@ -52,5 +52,5 @@ get-orig-source:
 	cd $(TMPDIR); tar $(foreach pattern,$(EXCLUDES),--exclude $(pattern)) \
 		--exclude src/com/eteks/sweethome3d/io/resources/contributions \
 		--exclude JPEGImagesToVideo.java \
-		-Jcf ../../sweethome3d_$(VERSION)+dfsg.orig.tar.xz *-src
+		-Jcf ../sweethome3d_$(VERSION).orig.tar.xz *-src
 	rm -rf $(TMPDIR)

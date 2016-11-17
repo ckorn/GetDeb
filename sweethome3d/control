@@ -12,7 +12,7 @@ Build-Depends-Indep: icedtea-netx-common,
                      libsunflow-java (>= 0.07.2.svn396+dfsg-11),
                      libbatik-java,
                      default-jdk
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://www.sweethome3d.com/
 
 Package: sweethome3d

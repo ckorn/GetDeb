@@ -1,3 +1,40 @@
+sweethome3d (5.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Ensured that the selected items are visible in the plan after using
+    Zoom in or Zoom out tools.
+    * Changed how textures on borders of room floors are displayed so they
+    never look distorted.
+    * Displayed walls with half transparent pattern while drawing them or
+    while placing doors and windows, when a background image is used.
+    * Initialized the scale and origin of background images imported at new
+    levels with the values of the background image available at the closest
+    level.
+    * Improved the mouse management of the virtual visitor in plan at small
+    scales.
+    * Added a Home.xml entry validated by the DTD SweetHome3D.dtd to SH3D
+    files, and added file association for future SH3X files.
+    * Added HomeObject super class to let developers manage their own
+    properties on home objects.
+    * Copied texture image files at OBJ format export instead of generating
+    new ones.
+    * Fixed the area computation of rooms drawn with a hole in their middle.
+    * Fixed blocking errors that happened for textured floors in the plan
+    with Java 7/8 under Ubuntu.
+    * Fixed the color of menu items under Ubuntu and better drag and drop
+    support under Linux using Java 8.
+    * Upgraded Java 3D version to 1.6.0 fcs / JOGL 2.3.2 for Windows and
+    Linux versions, and for the Mac OS X version run with Java 7/8.
+    * Displayed Java 3D version in About dialog box.
+    * Added Sweet Home 3D icon in installation folder under Linux.
+    * Replaced JRE 8u74 by JRE 8u51 in Sweet Home 3D installers bundled with
+    Java under Windows.
+    * Replaced JRE 6u45 by JRE 8u112 in Sweet Home 3D installers bundled with
+    Java under Linux.
+    * Other minor bugs fixes and enhancements.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 17 Nov 2016 18:24:43 +0100
+
 sweethome3d (5.2-1~getdeb1) wily; urgency=medium
 
   * New upstream version

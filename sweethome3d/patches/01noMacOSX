@@ -2,10 +2,10 @@ Description: Removing jarfiles which contain MacOSX-related classes, build
 fails looking for missing classes. This patch fixes it.
 Author: Gabriele Giacone <1o5g4r8o@gmail.com>
 
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/tools/OperatingSystem.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/tools/OperatingSystem.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2016-03-03 21:36:10.989670062 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2016-03-03 21:36:10.985669980 +0100
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2016-11-17 18:34:03.409492474 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/tools/OperatingSystem.java	2016-11-17 18:34:03.405492377 +0100
 @@ -33,7 +33,6 @@
  import java.util.TimerTask;
  import java.util.UUID;
@@ -40,11 +40,11 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/tools/OperatingSystem.java
    }
 + */
  }
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/SweetHome3D.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/SweetHome3D.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/SweetHome3D.java	2016-03-03 21:36:10.989670062 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/SweetHome3D.java	2016-03-03 21:36:10.989670062 +0100
-@@ -468,10 +468,12 @@
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/SweetHome3D.java	2016-11-17 18:34:03.409492474 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/SweetHome3D.java	2016-11-17 18:34:03.409492474 +0100
+@@ -481,10 +481,12 @@
        // Too bad we can't retrieve homes to recover
        ex.printStackTrace();
      }
@@ -57,7 +57,7 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/SweetHome3D.java
  
      // Run everything else in Event Dispatch Thread
      EventQueue.invokeLater(new Runnable() {
-@@ -546,8 +548,7 @@
+@@ -590,8 +592,7 @@
                  && home.getName() == null
                  && !home.isRecovered()) {
                if (OperatingSystem.isMacOSXLionOrSuperior()
@@ -67,10 +67,10 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/SweetHome3D.java
                  // Delay home disposal to avoid Java 3D fatal error
                  new Timer(3000, new ActionListener() {
                      public void actionPerformed(ActionEvent ev) {
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/HomeFramePane.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/HomeFramePane.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/HomeFramePane.java	2016-03-03 21:36:10.989670062 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/HomeFramePane.java	2016-03-03 21:36:10.989670062 +0100
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/HomeFramePane.java	2016-11-17 18:34:03.409492474 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/HomeFramePane.java	2016-11-17 18:34:03.409492474 +0100
 @@ -122,9 +122,11 @@
        // Call setIconImage available in previous versions
        homeFrame.setIconImage(frameImages.get(0));

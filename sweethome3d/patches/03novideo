@@ -1,10 +1,10 @@
 Description: This patch disables video creation feature.
 Author: Gabriele Giacone <1o5g4r8o@gmail.com>
 
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java	2016-03-03 21:36:16.089775761 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java	2016-03-03 21:36:16.081775596 +0100
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java	2016-11-17 18:34:08.005601599 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java	2016-11-17 18:34:08.001601504 +0100
 @@ -209,8 +209,10 @@
    /**
     * Returns a new view able to compute a 3D video of a home. 
@@ -16,10 +16,10 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/ViewFactory.java
  
    /**
     * Returns a new view that displays Sweet Home 3D help.
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/VideoController.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/viewcontroller/VideoController.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/viewcontroller/VideoController.java	2016-03-03 21:36:16.089775761 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/VideoController.java	2016-03-03 21:36:16.081775596 +0100
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/viewcontroller/VideoController.java	2016-11-17 18:34:08.005601599 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/viewcontroller/VideoController.java	2016-11-17 18:34:08.001601504 +0100
 @@ -98,9 +98,11 @@
     */
    public DialogView getView() {
@@ -32,10 +32,10 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/VideoController.
      return this.videoView;
    }
  
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/swing/SwingViewFactory.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/swing/SwingViewFactory.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/swing/SwingViewFactory.java	2016-03-03 21:36:16.089775761 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/swing/SwingViewFactory.java	2016-03-03 21:36:16.085775679 +0100
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/swing/SwingViewFactory.java	2016-11-17 18:34:08.005601599 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/swing/SwingViewFactory.java	2016-11-17 18:34:08.001601504 +0100
 @@ -60,7 +60,6 @@
  import com.eteks.sweethome3d.viewcontroller.ThreadedTaskController;
  import com.eteks.sweethome3d.viewcontroller.ThreadedTaskView;
@@ -58,10 +58,10 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/swing/SwingViewFactory.java
    
    /**
     * Returns a new view that displays Sweet Home 3D help.
-Index: sweethome3d-5.2/build.xml
+Index: sweethome3d-5.3/build.xml
 ===================================================================
---- sweethome3d-5.2.orig/build.xml	2016-03-03 21:36:16.089775761 +0100
-+++ sweethome3d-5.2/build.xml	2016-03-03 21:36:16.085775679 +0100
+--- sweethome3d-5.3.orig/build.xml	2016-11-17 18:34:08.005601599 +0100
++++ sweethome3d-5.3/build.xml	2016-11-17 18:34:08.001601504 +0100
 @@ -56,6 +56,8 @@
          <pathelement location="libtest/jnlp.jar"/>
        </classpath>
@@ -71,11 +71,11 @@ Index: sweethome3d-5.2/build.xml
      </javac>
      
      <!-- Copy resources excepted furniture, textures and help files -->
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/swing/package.properties
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/swing/package.properties
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/swing/package.properties	2016-03-03 21:36:16.089775761 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/swing/package.properties	2016-03-03 21:36:16.085775679 +0100
-@@ -1153,8 +1153,8 @@
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/swing/package.properties	2016-11-17 18:34:08.005601599 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/swing/package.properties	2016-11-17 18:34:08.001601504 +0100
+@@ -1154,8 +1154,8 @@
  HomePane.CREATE_PHOTOS_AT_POINTS_OF_VIEW.ShortDescription=Create photos at stored points of view
  HomePane.CREATE_PHOTOS_AT_POINTS_OF_VIEW.MnemonicKey=C
  
@@ -86,10 +86,10 @@ Index: sweethome3d-5.2/src/com/eteks/sweethome3d/swing/package.properties
  HomePane.CREATE_VIDEO.MnemonicKey=O
  # Note to translators: do not copy the following key in localized file
  HomePane.CREATE_VIDEO.SmallIcon=resources/icons/tango/camera-video.png
-Index: sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/HomeController.java
+Index: sweethome3d-5.3/src/com/eteks/sweethome3d/viewcontroller/HomeController.java
 ===================================================================
---- sweethome3d-5.2.orig/src/com/eteks/sweethome3d/viewcontroller/HomeController.java	2016-03-03 21:36:16.089775761 +0100
-+++ sweethome3d-5.2/src/com/eteks/sweethome3d/viewcontroller/HomeController.java	2016-03-03 21:36:16.085775679 +0100
+--- sweethome3d-5.3.orig/src/com/eteks/sweethome3d/viewcontroller/HomeController.java	2016-11-17 18:34:08.005601599 +0100
++++ sweethome3d-5.3/src/com/eteks/sweethome3d/viewcontroller/HomeController.java	2016-11-17 18:34:08.001601504 +0100
 @@ -328,7 +328,7 @@
      homeView.setEnabled(HomeView.ActionType.VIEW_FROM_OBSERVER, true);
      homeView.setEnabled(HomeView.ActionType.MODIFY_3D_ATTRIBUTES, true);
