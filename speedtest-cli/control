@@ -5,7 +5,7 @@ Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                python-setuptools (>= 0.6b3),
                python-all (>= 2.6.6-3), 
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: https://github.com/sivel/speedtest-cli
 
 Package: python-speedtest-cli
