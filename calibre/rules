@@ -110,4 +110,4 @@ get-orig-source:
 	cd $$D; tar c * | xz -9 > ../../../calibre_$$V.orig.tar.xz; \
 	cd ../..; rm -r debian/orig; \
 	find -mindepth 1 -maxdepth 1 ! -name '.bzr*' ! -name debian | xargs rm -rf; \
-	[ ! -e setup.py ] || tar xf ../calibre_$$V.orig.tar.xz --strip-components 1
+	[ ! -e setup.py ] || tar xf calibre_$$V.orig.tar.xz --strip-components 1
