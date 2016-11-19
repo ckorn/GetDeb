@@ -5,7 +5,7 @@ configure-stamp:
 	dh_testdir
 	dh_autotools-dev_updateconfig
 	mkdir -p build/avidemux/ADM_libraries
-	cp avidemux_core/ffmpeg_package/ffmpeg-3.0.2.tar.bz2 build/avidemux/ADM_libraries
+	cp avidemux_core/ffmpeg_package/ffmpeg-3.0.3.tar.bz2 build/avidemux/ADM_libraries
 	#cp avidemux/ADM_libraries/ffmpeg-0.9.tar.bz2 build/avidemux/ADM_libraries
 	#cp avidemux/ADM_libraries/libswscale_r32049.tar.gz build/avidemux/ADM_libraries
 
@@ -45,7 +45,7 @@ clean:
 	dh_testroot
 	rm -f build-stamp configure-stamp man/avidemux2.6.1 avidemux/qt4/common
 
-	rm -rf build plugins/build buildCli buildCore buildGtk buildPluginsCLI buildPluginsCommon buildPluginsGtk buildPluginsQt4 buildQt4 buildPluginsSettings
+	rm -rf build plugins/build buildCli buildCore buildGtk buildPluginsCLI buildPluginsCommon buildPluginsGtk buildPluginsQt4 buildQt4 buildPluginsSettings buildQt5 buildPluginsQt5
 	rm -rf CMakeFiles
 	rm -rf avidemux/ADM_libraries/ffmpeg
 	dh_autotools-dev_restoreconfig

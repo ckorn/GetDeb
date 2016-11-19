@@ -1,3 +1,26 @@
+avidemux2.6 (1:2.6.15-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Hw Accel : Fixed nvEnc and added simple nvEnc-HEVC (windows/linux)
+    * Hw Accel : Added support for HEVC/VC1 with libVA (linux)
+    * Hw Accel : Experimental Dxva2 video decoder + Dxva2/D3D display engine
+    (windows)
+    * Demux : Mpeg TS, fix non multiple of 16 file management (euma)
+    * Audio/win32 : Fixed CPU consumption when playing audio
+    * Editor : Fixed copy /paste /delete /undo (euma)
+    * Editor : A *lot* of seeking bugs fixed (euma)
+    * Editor : A *lot* of marker management bugs fixed (euma)
+    * Audio : Added FDK-AAC as encoder
+    * x26* : Added a "None" preset
+    * x265 : Fixed 2 pass encoding on windows
+    * i18n : Qt4 vs Qt5 language fix (D. Amm)
+    * i18n : German translation updated (euma)
+    * UI : Added reload default settings (euma)
+    * UI : Allow minimizing to tray while encoding (euma)
+    * OSX : Update to Sierra
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Nov 2016 12:49:06 +0100
+
 avidemux2.6 (1:2.6.14-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
