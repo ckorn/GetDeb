@@ -9,3 +9,9 @@ usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_asharpQT5.so
 usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_swscaleResizeQT5.so
 usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_HueQT5.so
 usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_logoQT5.so
+usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_glResize.so
+usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_glBenchmark.so
+usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_sampleGlVertex.so
+usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_shaderLoaderGl.so
+usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_sampleGlFrag2.so
+usr/lib/ADM_plugins6/videoFilters/qt5/libADM_vf_rotateGlFrag2.so

@@ -1,12 +1,12 @@
 ### We want the output seen in the log. Not written to a file.
-Index: avidemux2.6-2.6.13/bootStrap.bash
+Index: avidemux2.6-2.6.15/bootStrap.bash
 ===================================================================
---- avidemux2.6-2.6.13.orig/bootStrap.bash	2016-08-22 20:15:09.599428773 +0200
-+++ avidemux2.6-2.6.13/bootStrap.bash	2016-08-22 20:15:58.924466202 +0200
-@@ -50,7 +50,7 @@
+--- avidemux2.6-2.6.15.orig/bootStrap.bash	2016-11-19 12:51:26.161643482 +0100
++++ avidemux2.6-2.6.15/bootStrap.bash	2016-11-19 12:51:53.698089359 +0100
+@@ -54,7 +54,7 @@
          fi
          cd $BUILDDIR 
-         cmake $PKG $FAKEROOT $QT_FLAVOR -DCMAKE_EDIT_COMMAND=vim -DCMAKE_INSTALL_PREFIX=/usr $EXTRA $ASAN $DEBUG -G "$BUILDER" $SOURCEDIR || fail cmakeZ
+         cmake $COMPILER $PKG $FAKEROOT $QT_FLAVOR -DCMAKE_EDIT_COMMAND=vim $INSTALL_PREFIX $EXTRA $ASAN $DEBUG -G "$BUILDER" $SOURCEDIR || fail cmakeZ
 -        make  $PARAL >& /tmp/log$BUILDDIR || fail "make, result in /tmp/log$BUILDDIR"
 +        make  $PARAL || fail "make"
  	if  [ "x$PKG" != "x" ] ; then
