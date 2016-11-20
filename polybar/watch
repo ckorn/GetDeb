@@ -1,0 +1,3 @@
+version=3
+https://github.com/jaagr/polybar/releases \
+    (?:.*/)?([\d\.]+)\.tar\.gz

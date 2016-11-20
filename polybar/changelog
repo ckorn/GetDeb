@@ -1,0 +1,5 @@
+polybar (2.3.0-1~getdeb1) xenial; urgency=medium
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Nov 2016 21:02:32 +0100
