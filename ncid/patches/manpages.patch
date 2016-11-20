@@ -1,9 +1,9 @@
 A manpage has a wrong section.
 Hyphens were used as minus signs.
-Index: ncid-1.5/man/ncidd.8-in
+Index: ncid-1.6/man/ncidd.8-in
 ===================================================================
---- ncid-1.5.orig/man/ncidd.8-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncidd.8-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncidd.8-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncidd.8-in	2016-11-19 19:53:15.517598932 +0100
 @@ -10,37 +10,37 @@
  .I Options:
  .PP
@@ -343,10 +343,10 @@ Index: ncid-1.5/man/ncidd.8-in
  .fi
  .SH SEE ALSO
  sip2ncid.8,
-Index: ncid-1.5/man/sip2ncid.8-in
+Index: ncid-1.6/man/sip2ncid.8-in
 ===================================================================
---- ncid-1.5.orig/man/sip2ncid.8-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/sip2ncid.8-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/sip2ncid.8-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/sip2ncid.8-in	2016-11-19 19:53:15.517598932 +0100
 @@ -10,24 +10,24 @@
  .I Options:
  .PP
@@ -537,10 +537,10 @@ Index: ncid-1.5/man/sip2ncid.8-in
  .fi
  .SH SEE ALSO
  sip2ncid.conf.5 ncidd.8, ncidd.conf.5 ncidd.alias.5
-Index: ncid-1.5/man/yac2ncid.1-in
+Index: ncid-1.6/man/yac2ncid.1-in
 ===================================================================
---- ncid-1.5.orig/man/yac2ncid.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/yac2ncid.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/yac2ncid.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/yac2ncid.1-in	2016-11-19 19:53:15.517598932 +0100
 @@ -5,10 +5,10 @@
  - YAC server to NCID server gateway
  .SH SYNOPSIS
@@ -573,10 +573,10 @@ Index: ncid-1.5/man/yac2ncid.1-in
  Display version.
  .PD
  .SH REQUIRED PROGRAMS
-Index: ncid-1.5/man/ncid2ncid.conf.5
+Index: ncid-1.6/man/ncid2ncid.conf.5
 ===================================================================
---- ncid-1.5.orig/man/ncid2ncid.conf.5	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid2ncid.conf.5	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid2ncid.conf.5	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid2ncid.conf.5	2016-11-19 19:53:15.517598932 +0100
 @@ -10,7 +10,7 @@
  The \fIncid2ncid.conf\fR file is used to set options.
  Options can also be set on a command line.
@@ -586,10 +586,10 @@ Index: ncid-1.5/man/ncid2ncid.conf.5
  between double quotes, or an equal sign.
  .PP
  The \fIncid2ncid.conf\fR file understands 3 types of lines:
-Index: ncid-1.5/man/ncid-alert.1-in
+Index: ncid-1.6/man/ncid-alert.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-alert.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-alert.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-alert.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-alert.1-in	2016-11-19 19:53:15.517598932 +0100
 @@ -6,11 +6,11 @@
  .SH SYNOPSIS
  .B
@@ -613,10 +613,10 @@ Index: ncid-1.5/man/ncid-alert.1-in
  .RE
  .SH CONFIGURATION
  The
-Index: ncid-1.5/man/ncid-notify.1-in
+Index: ncid-1.6/man/ncid-notify.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-notify.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-notify.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-notify.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-notify.1-in	2016-11-19 19:53:15.517598932 +0100
 @@ -4,7 +4,7 @@
  .B ncid-notify
  - send a NCID notification to your Android or iOS device
@@ -626,10 +626,10 @@ Index: ncid-1.5/man/ncid-notify.1-in
  .B ncid-notify
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid-wakeup.1-in
+Index: ncid-1.6/man/ncid-wakeup.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-wakeup.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-wakeup.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-wakeup.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-wakeup.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -1,9 +1,9 @@
 -.\" %W% %G%
  .TH NCID-WAKEUP 1
@@ -651,10 +651,10 @@ Index: ncid-1.5/man/ncid-wakeup.1-in
  .SH FILES
  /etc/ncid/ncid.conf
  .br
-Index: ncid-1.5/man/ncid-initmodem.1-in
+Index: ncid-1.6/man/ncid-initmodem.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-initmodem.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-initmodem.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-initmodem.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-initmodem.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -4,7 +4,7 @@
  .B ncid-initmodem
  - use ncidd to reinitialize modem to Caller ID mode
@@ -664,10 +664,10 @@ Index: ncid-1.5/man/ncid-initmodem.1-in
  .B ncid-initmodem
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid-kpopup.1-in
+Index: ncid-1.6/man/ncid-kpopup.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-kpopup.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-kpopup.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-kpopup.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-kpopup.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -4,7 +4,7 @@
  .B ncid-kpopup
  - popup Caller ID using KDE
@@ -677,10 +677,10 @@ Index: ncid-1.5/man/ncid-kpopup.1-in
  .B ncid-kpopup
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid-mythtv.1-in
+Index: ncid-1.6/man/ncid-mythtv.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-mythtv.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-mythtv.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-mythtv.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-mythtv.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -4,7 +4,7 @@
  .B ncid-mythtv
  - display Caller ID on MythTV using mythtvosd
@@ -690,10 +690,10 @@ Index: ncid-1.5/man/ncid-mythtv.1-in
  .B ncid-mythtv
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid-page.1-in
+Index: ncid-1.6/man/ncid-page.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-page.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-page.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-page.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-page.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -1,9 +1,9 @@
 -.\" %W% %G%
  .TH NCID-PAGE 1
@@ -728,10 +728,10 @@ Index: ncid-1.5/man/ncid-page.1-in
  .RE
  .PP
  .SH FILES
-Index: ncid-1.5/man/ncid-samba.1-in
+Index: ncid-1.6/man/ncid-samba.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-samba.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-samba.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-samba.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-samba.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -4,7 +4,7 @@
  .B ncid-samba
  - send Caller ID to samba to create a popup
@@ -741,10 +741,10 @@ Index: ncid-1.5/man/ncid-samba.1-in
  .B ncid-samba
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid-skel.1-in
+Index: ncid-1.6/man/ncid-skel.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-skel.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-skel.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-skel.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-skel.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -2,8 +2,9 @@
  .TH NCID-SKEL 1
  .SH NAME
@@ -765,10 +765,10 @@ Index: ncid-1.5/man/ncid-skel.1-in
  .SH FILES
  /etc/ncid/conf.d/ncid-skel.conf
  .br
-Index: ncid-1.5/man/ncid-speak.1-in
+Index: ncid-1.6/man/ncid-speak.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-speak.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-speak.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-speak.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-speak.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -4,7 +4,7 @@
  .B ncid-speak
  - send Caller ID to a text-to-speech program
@@ -778,10 +778,10 @@ Index: ncid-1.5/man/ncid-speak.1-in
  .B ncid-speak
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid-yac.1-in
+Index: ncid-1.6/man/ncid-yac.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-yac.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-yac.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid-yac.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-yac.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -4,7 +4,7 @@
  .B ncid-yac
  - send Caller ID to YAC listeners
@@ -791,10 +791,10 @@ Index: ncid-1.5/man/ncid-yac.1-in
  .B ncid-yac
  .SH DESCRIPTION
  The
-Index: ncid-1.5/man/ncid.1-in
+Index: ncid-1.6/man/ncid.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid.1-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid.1-in	2016-10-06 19:37:11.182420274 +0200
+--- ncid-1.6.orig/man/ncid.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid.1-in	2016-11-19 19:53:15.521599016 +0100
 @@ -2,7 +2,7 @@
  .TH NCID 1
  .SH NAME
@@ -983,10 +983,10 @@ Index: ncid-1.5/man/ncid.1-in
  
  # run ncid on a TiVo using out2osd, server on remote host
  tivocid 192.168.0.1
-Index: ncid-1.5/man/ncid-modules.7-in
+Index: ncid-1.6/man/ncid-modules.7-in
 ===================================================================
---- ncid-1.5.orig/man/ncid-modules.7-in	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/man/ncid-modules.7-in	2016-10-06 19:37:11.186420353 +0200
+--- ncid-1.6.orig/man/ncid-modules.7-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid-modules.7-in	2016-11-19 19:53:15.521599016 +0100
 @@ -12,7 +12,7 @@
  .PP
  Modules are normally called by the client using the command line:
@@ -996,10 +996,10 @@ Index: ncid-1.5/man/ncid-modules.7-in
  .RE
  .PP
  The client can only call one module at a time, but multiple clients
-Index: ncid-1.5/tools/wct.pl
+Index: ncid-1.6/tools/wct.pl
 ===================================================================
---- ncid-1.5.orig/tools/wct.pl	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/tools/wct.pl	2016-10-06 19:37:11.186420353 +0200
+--- ncid-1.6.orig/tools/wct.pl	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/tools/wct.pl	2016-11-19 19:53:15.521599016 +0100
 @@ -1122,7 +1122,7 @@
  
  It automatically sets the beginning line number for the WC device which
@@ -1018,11 +1018,11 @@ Index: ncid-1.5/tools/wct.pl
  wct with the --discover command line option.
  
  =item Z
-Index: ncid-1.5/gateway/wc2ncid.pl
+Index: ncid-1.6/gateway/wc2ncid.pl
 ===================================================================
---- ncid-1.5.orig/gateway/wc2ncid.pl	2016-10-06 19:37:11.186420353 +0200
-+++ ncid-1.5/gateway/wc2ncid.pl	2016-10-06 19:37:11.186420353 +0200
-@@ -1132,7 +1132,7 @@
+--- ncid-1.6.orig/gateway/wc2ncid.pl	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/gateway/wc2ncid.pl	2016-11-19 19:53:15.521599016 +0100
+@@ -1144,7 +1144,7 @@
  
  It automatically sets the beginning line number for the WC device which
  is used as a line label prefixed with "WC".  Each device gets a beginning
@@ -1031,10 +1031,10 @@ Index: ncid-1.5/gateway/wc2ncid.pl
  device, for example; device 1 (WC01 WC02) device 2 (WC03 WC04 WC05 WC06).
  
  NOTE: All devices are automatically configured to send call information
-Index: ncid-1.5/man/ncid2ncid.1-in
+Index: ncid-1.6/man/ncid2ncid.1-in
 ===================================================================
---- ncid-1.5.orig/man/ncid2ncid.1-in	2016-08-21 01:29:54.000000000 +0200
-+++ ncid-1.5/man/ncid2ncid.1-in	2016-10-06 19:40:06.642440000 +0200
+--- ncid-1.6.orig/man/ncid2ncid.1-in	2016-11-19 19:53:15.525599101 +0100
++++ ncid-1.6/man/ncid2ncid.1-in	2016-11-19 19:53:15.525599101 +0100
 @@ -10,18 +10,18 @@
  .I Options:
  .PP
