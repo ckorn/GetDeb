@@ -1,3 +1,9 @@
+ncid (1.6-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 19 Nov 2016 19:53:04 +0100
+
 ncid (1.5-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
