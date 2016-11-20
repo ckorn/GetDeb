@@ -1,0 +1,34 @@
+Source: polybar
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               cmake,
+               libxcb-icccm4-dev,
+               libxcb-image0-dev,
+               libxcb-randr0-dev,
+               libx11-dev,
+               libxcb1-dev,
+               libxcb-util-dev,
+               libx11-xcb-dev,
+               linux-libc-dev,
+               libboost-dev,
+               x11proto-core-dev,
+               libxcb-ewmh-dev,
+               libxft-dev,
+               libasound2-dev,
+               libiw-dev,
+               libmpdclient-dev,
+               xcb-proto,
+               python-xcbgen
+Standards-Version: 3.9.7
+Homepage: https://github.com/jaagr/polybar
+
+Package: polybar
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Fast and easy-to-use tool for creating status bars
+ Polybar aims to help users build beautiful and highly customizable status
+ bars for their desktop environment, without the need of having a black belt
+ in shell scripting.
