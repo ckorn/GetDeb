@@ -1,0 +1,32 @@
+Source: hexitor
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               libncurses5-dev
+Standards-Version: 3.9.7
+Homepage: https://github.com/briansteffens/hexitor
+
+Package: hexitor
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Terminal hex editor
+ Movement
+ .
+  * Use the arrow keys or hjkl to move the cursor around the editor.
+  * Page up and page down work as expected.
+  * Type :123 and hit enter to move to the 123rd byte in the file.
+ .
+ Editing bytes
+ .
+ The keys 0-9 and a-f will overwrite the current nibble (half-byte).
+ .
+ Saving changes
+  *Type :w and hit enter to save the file.
+  *Type :w <some_other_file> and hit enter to save changes to a different
+ file.
+ .
+ Quitting
+ .
+ Type :q and hit enter to quit.

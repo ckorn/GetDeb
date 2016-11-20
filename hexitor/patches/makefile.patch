@@ -1,0 +1,11 @@
+# don't fail if the file does not exist
+Index: hexitor-0.0.0+git161119/Makefile
+===================================================================
+--- hexitor-0.0.0+git161119.orig/Makefile	2016-11-19 02:15:53.000000000 +0100
++++ hexitor-0.0.0+git161119/Makefile	2016-11-19 20:54:37.401227500 +0100
+@@ -11,4 +11,4 @@
+ 	rm ${DESTDIR}/usr/bin/hexitor
+ 
+ clean:
+-	rm a.out
++	rm -f a.out
