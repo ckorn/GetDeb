@@ -28,7 +28,7 @@ $(PKG)_$(VER).orig.tar.xz: $(info I: $(PKG)_$(VER))
 	git clone --recursive $(UURL) $(PKG)-$(VER) \
 	|| $(RM) -r $(PKG)-$(VER)
 	cd $(PKG)-$(VER) \
-	&& git checkout v$(VER) \
+	&& git checkout $(VER) \
 	&& [ -s ChangeLog ] || ( echo "# Generating ChangeLog..." \
 	   ; git log --pretty="format:%ad  %aN  <%aE>%n%n%x09* %s%n" --date=short > ChangeLog \
 	   ; touch -d "$$(git log -1 --format='%ci')" ChangeLog) \
