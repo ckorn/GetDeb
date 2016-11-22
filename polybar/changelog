@@ -1,3 +1,9 @@
+polybar (2.3.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 22 Nov 2016 18:05:28 +0100
+
 polybar (2.3.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
