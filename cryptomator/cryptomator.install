@@ -1,0 +1,5 @@
+antbuild/*.jar			usr/share/java/cryptomator
+libs/*.jar			usr/share/java/cryptomator
+debian/cryptomator.png		usr/share/java/cryptomator
+debian/cryptomator.desktop	usr/share/applications
+debian/scripts/cryptomator	usr/bin
