@@ -1,0 +1,3 @@
+version=3
+https://github.com/cryptomator/cryptomator/releases \
+    (?:.*/)?([\d\.]+)/antkit.tar.gz

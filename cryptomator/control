@@ -1,0 +1,28 @@
+Source: cryptomator
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Sebastian Stenzel <sebastian.stenzel@gmail.com>
+Section: utils
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               openjdk-8-jdk-headless (>= 8u45-b14),
+               openjfx (>= 8u40-b25),
+               ant (>= 1.9.0)
+Standards-Version: 3.9.7
+Homepage: https://cryptomator.org
+
+Package: cryptomator
+Architecture: all
+Depends: ${misc:Depends},
+         gvfs-bin,
+         gvfs-backends,
+         gvfs-fuse,
+         xdg-utils,
+         openjdk-8-jre (>= 8u45-b14),
+         openjfx (>= 8u40-b25)
+Conflicts: cryptomator
+Description: Multi-platform client-side encryption of your cloud files.
+ Cryptomator provides free client-side AES encryption for your cloud files.
+ Create encrypted vaults, which get mounted as virtual volumes. Whatever
+ you save on one of these volumes will end up encrypted inside your vault.
+ .
+ This package does not contain a bundled JVM, instead it depends on OpenJDK.
