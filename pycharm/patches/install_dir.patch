@@ -1,15 +1,19 @@
 # set the install directory directly
 # looking it up does not work. probably because of the symlinks.
-Index: pycharm-2016.1.2/bin/pycharm.sh
+Index: pycharm-2016.3/bin/pycharm.sh
 ===================================================================
---- pycharm-2016.1.2.orig/bin/pycharm.sh	2016-04-08 19:03:54.000000000 +0200
-+++ pycharm-2016.1.2/bin/pycharm.sh	2016-05-01 22:43:44.625941841 +0200
-@@ -50,8 +50,11 @@
+--- pycharm-2016.3.orig/bin/pycharm.sh	2016-11-24 18:11:38.846761863 +0100
++++ pycharm-2016.3/bin/pycharm.sh	2016-11-24 18:13:01.968168547 +0100
+@@ -50,12 +50,11 @@
    done
  fi
  
--IDE_HOME=`dirname "$SCRIPT_LOCATION"`/..
 -IDE_BIN_HOME=`dirname "$SCRIPT_LOCATION"`
+-if [ "$IDE_BIN_HOME" = "." ]; then
+-  IDE_HOME=".."
+-else
+-  IDE_HOME=`dirname "$IDE_BIN_HOME"`
+-fi
 +IDE_HOME=/usr/share/pycharm
 +IDE_BIN_HOME=/usr/share/pycharm/bin
 +
@@ -18,7 +22,7 @@ Index: pycharm-2016.1.2/bin/pycharm.sh
  
  # ---------------------------------------------------------------------
  # Locate a JDK installation directory which will be used to run the IDE.
-@@ -71,49 +74,14 @@
+@@ -75,49 +74,14 @@
  elif [ -n "$JAVA_HOME" -a -x "$JAVA_HOME/bin/java" ]; then
    JDK="$JAVA_HOME"
  else
