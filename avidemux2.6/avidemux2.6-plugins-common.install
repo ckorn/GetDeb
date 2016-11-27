@@ -58,6 +58,7 @@ usr/lib/ADM_plugins6/videoFilters/libADM_vf_mean.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_ivtcDupeRemover.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_hflip.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_ascii.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_ssa.so
 usr/lib/ADM_plugins6/shaderDemo/1/lightning.shader
 usr/lib/ADM_plugins6/shaderDemo/1/zigzag.shader
 usr/lib/ADM_plugins6/shaderDemo/1/bump.shader
