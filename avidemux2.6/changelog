@@ -1,3 +1,10 @@
+avidemux2.6 (1:2.6.15-1~getdeb2) xenial; urgency=medium
+
+  * Add dependencies for subtitle support (LP: #1644883,
+    #1641406)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 26 Nov 2016 19:48:47 +0100
+
 avidemux2.6 (1:2.6.15-1~getdeb1) xenial; urgency=medium
 
   * New upstream version

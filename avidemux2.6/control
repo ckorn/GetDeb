@@ -44,7 +44,13 @@ Build-Depends: debhelper (>= 9),
                libfontconfig1-dev,
                libva-dev,
                libx265-dev,
-               libc6-dev
+               libc6-dev,
+               libfribidi-dev,
+               libogg-dev,
+               libopus-dev,
+               libtwolame-dev,
+               libzip-dev,
+               qtscript5-dev
 Homepage: http://avidemux.org
 Standards-Version: 3.9.7
 
