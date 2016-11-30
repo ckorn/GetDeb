@@ -1,0 +1,12 @@
+# encoding is deprecated
+Index: qdvdauthor-2.3.1/qdvdauthor.desktop
+===================================================================
+--- qdvdauthor-2.3.1.orig/qdvdauthor.desktop	2013-04-05 12:36:01.000000000 +0200
++++ qdvdauthor-2.3.1/qdvdauthor.desktop	2016-11-30 19:24:17.024330112 +0100
+@@ -5,6 +5,5 @@
+ Exec=/usr/bin/qdvdauthor
+ Terminal=false
+ Type=Application
+-Encoding=UTF-8
+ X-Desktop-File-Install-Version=0.3
+ Categories=Application;AudioVideo;X-Red-Hat-Base;

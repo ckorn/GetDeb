@@ -1,0 +1,27 @@
+Source: qdvdauthor
+Section: video
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               cmake,
+               qtbase5-dev,
+               libvlc-dev,
+               libxine2-dev,
+               libx11-dev,
+               x11proto-core-dev,
+               libxext-dev,
+               kdelibs5-dev,
+               libxtst-dev,
+               libxinerama-dev,
+               qtdeclarative5-dev,
+               qtdeclarative5-private-dev,
+               qtdeclarative5-dev-tools
+Standards-Version: 3.9.7
+Homepage: https://qdvd.sourceforge.io/
+
+Package: qdvdauthor
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: qdvdauthor written in Qt5
+ qdvd is a GUI frontend for dvdauthor written in qt5
