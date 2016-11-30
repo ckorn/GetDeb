@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_clean:
+	dh_clean
+	rm -f meteo_qt/translations/*.qm
