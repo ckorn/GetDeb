@@ -1,3 +1,9 @@
+lollypop (0.9.222-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 30 Nov 2016 18:11:09 +0100
+
 lollypop (0.9.221-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
