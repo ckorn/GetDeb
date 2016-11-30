@@ -1,0 +1,14 @@
+# error: format not a string literal and no format arguments [-Werror=format-security]
+Index: qdvdauthor-2.3.1/qdvdauthor/qplayer/engines/kxinewidget.cpp
+===================================================================
+--- qdvdauthor-2.3.1.orig/qdvdauthor/qplayer/engines/kxinewidget.cpp	2015-10-18 16:57:54.000000000 +0200
++++ qdvdauthor-2.3.1/qdvdauthor/qplayer/engines/kxinewidget.cpp	2016-11-30 19:16:25.437860637 +0100
+@@ -3910,7 +3910,7 @@
+ #ifdef USE_QT_ONLY
+ 	QString qsWarninging = QString ("Warning: ") + qsWarning + "\n";
+ 	//printf ((const char *)qsWarninging);		//ooo
+-	printf (qsWarninging.toLatin1().data());	//xxx
++	printf ("%s", qsWarninging.toLatin1().data());	//xxx
+ #else
+ 	kdWarning() << "KXineWidget: " << (const char *)qsWarning.ascii() << "\n";
+ #endif
