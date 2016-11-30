@@ -1,0 +1,1 @@
+extend-diff-ignore = ^meteo_qt/translations/.*\.ts$

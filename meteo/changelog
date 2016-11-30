@@ -1,0 +1,5 @@
+meteo (0.9.4+git161129-1~getdeb1) xenial; urgency=medium
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 26 Nov 2016 21:39:25 +0100
