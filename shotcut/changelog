@@ -1,3 +1,9 @@
+shotcut (16.12-1~getdeb1) yakkety; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 04 Dec 2016 01:52:26 +0100
+
 shotcut (16.11-1~getdeb1) yakkety; urgency=low
 
   * Initial release
