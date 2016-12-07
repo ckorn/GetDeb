@@ -7,6 +7,10 @@ export PYBUILD_NAME=friture
 %:
 	dh $@ --with python3 --buildsystem=pybuild
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f friture/extension/*.c
+
 .PHONY: get-orig-source
 ## http://wiki.debian.org/onlyjob/get-orig-source
 get-orig-source: $(PKG)_$(VER).orig.tar.xz $(info I: $(PKG)_$(VER))
