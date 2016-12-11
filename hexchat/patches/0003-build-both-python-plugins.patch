@@ -10,11 +10,11 @@ Author: Patrick Griffis <tingping@tingping.se>
 Origin: upstream
 Reviewed-By: Jesse Rhodes <drubo@drubo.net>
 
-Index: hexchat-2.12.1/configure.ac
+Index: hexchat-2.12.4/configure.ac
 ===================================================================
---- hexchat-2.12.1.orig/configure.ac	2016-07-23 23:10:11.736448878 +0200
-+++ hexchat-2.12.1/configure.ac	2016-07-23 23:10:11.736448878 +0200
-@@ -303,38 +303,33 @@
+--- hexchat-2.12.4.orig/configure.ac	2016-12-10 23:16:35.911695802 +0100
++++ hexchat-2.12.4/configure.ac	2016-12-10 23:16:35.907695719 +0100
+@@ -302,38 +302,33 @@
  	AC_MSG_CHECKING(for plugin interface used by Python)
  	AS_IF([test "$plugin" = yes], [
  		AC_MSG_RESULT([yes])
@@ -80,7 +80,7 @@ Index: hexchat-2.12.1/configure.ac
  	], [
  		AC_MSG_RESULT([plugins are disabled, use the --enable-plugin option for Python])
  		python=no
-@@ -707,8 +702,6 @@
+@@ -695,8 +690,6 @@
  AC_SUBST(COMMON_CFLAGS)
  AC_SUBST(PERL_CFLAGS)
  AC_SUBST(PERL_LDFLAGS)
@@ -89,10 +89,10 @@ Index: hexchat-2.12.1/configure.ac
  AC_SUBST(DBUS_CFLAGS)
  AC_SUBST(DBUS_LIBS)
  AC_SUBST(OPENSSL_LIBS)
-Index: hexchat-2.12.1/plugins/python/Makefile.am
+Index: hexchat-2.12.4/plugins/python/Makefile.am
 ===================================================================
---- hexchat-2.12.1.orig/plugins/python/Makefile.am	2016-07-23 23:10:11.736448878 +0200
-+++ hexchat-2.12.1/plugins/python/Makefile.am	2016-07-23 23:10:11.736448878 +0200
+--- hexchat-2.12.4.orig/plugins/python/Makefile.am	2016-12-10 23:16:35.911695802 +0100
++++ hexchat-2.12.4/plugins/python/Makefile.am	2016-12-10 23:16:35.907695719 +0100
 @@ -1,9 +1,15 @@
  libdir = $(hexchatlibdir)
  
@@ -100,18 +100,18 @@ Index: hexchat-2.12.1/plugins/python/Makefile.am
 -python_la_SOURCES = python.c
 -python_la_LDFLAGS = $(PLUGIN_LDFLAGS) -module
 -python_la_LIBADD = $(PYTHON_LIBS) $(GLIB_LIBS)
--python_la_CPPFLAGS = $(PYTHON_CPPFLAGS)
--python_la_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)/src/common
+-python_la_CPPFLAGS = -I$(top_srcdir)/src/common $(PYTHON_CPPFLAGS)
+-python_la_CFLAGS = $(GLIB_CFLAGS)
 +lib_LTLIBRARIES = python2.la
 +python2_la_SOURCES = python.c
 +python2_la_LDFLAGS = $(PLUGIN_LDFLAGS) -module
 +python2_la_LIBADD = $(PYTHON2_LIBS) $(GLIB_LIBS)
-+python2_la_CPPFLAGS = $(PYTHON2_CPPFLAGS)
-+python2_la_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)/src/common
++python2_la_CPPFLAGS = -I$(top_srcdir)/src/common $(PYTHON2_CPPFLAGS)
++python2_la_CFLAGS = $(GLIB_CFLAGS)
  
 +lib_LTLIBRARIES += python3.la
 +python3_la_SOURCES = python.c
 +python3_la_LDFLAGS = $(PLUGIN_LDFLAGS) -module
 +python3_la_LIBADD = $(PYTHON3_LIBS) $(GLIB_LIBS)
-+python3_la_CPPFLAGS = $(PYTHON3_CPPFLAGS)
-+python3_la_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir)/src/common
++python3_la_CPPFLAGS = -I$(top_srcdir)/src/common $(PYTHON3_CPPFLAGS)
++python3_la_CFLAGS = $(GLIB_CFLAGS)

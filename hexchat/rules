@@ -7,9 +7,6 @@
 %:
 	dh $@  --with autoreconf
 
-override_dh_auto_configure:
-	dh_auto_configure -- --disable-silent-rules
-
 override_dh_auto_clean:
 	rm -f po/*.gmo
 	rm -f src/common/dbus/org.hexchat.service.service
@@ -25,3 +22,9 @@ override_dh_auto_clean:
 	rm -f ltmain.sh
 	rm -f m4/libtool.m4
 	rm -f m4/glib-gettext.m4
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-silent-rules
+
+override_dh_install:
+	dh_install --list-missing

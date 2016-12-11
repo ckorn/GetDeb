@@ -1,3 +1,9 @@
+hexchat (2.12.4-1~getdeb4) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 10 Dec 2016 21:51:53 +0100
+
 hexchat (2.12.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
