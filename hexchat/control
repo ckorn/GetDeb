@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
 Build-Depends: debhelper (>= 9.0.0),
                dh-autoreconf,
+               autoconf-archive,
                intltool,
                libcanberra-dev,
                libdbus-glib-1-dev,

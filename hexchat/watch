@@ -1,2 +1,2 @@
 version=3
-opts=pgpsigurlmangle=s/$/.asc/ https://dl.hexchat.net/hexchat/hexchat-(.*)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+https://dl.hexchat.net/hexchat/hexchat-(.*)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

@@ -4,10 +4,10 @@ Description: Ubuntu server and channel defaults
 Author: Jesse Rhodes <drubo@drubo.net>
 
 
-Index: hexchat-2.12.1/src/common/servlist.c
+Index: hexchat-2.12.4/src/common/servlist.c
 ===================================================================
---- hexchat-2.12.1.orig/src/common/servlist.c	2016-07-23 23:21:37.922730324 +0200
-+++ hexchat-2.12.1/src/common/servlist.c	2016-07-23 23:21:37.918730240 +0200
+--- hexchat-2.12.4.orig/src/common/servlist.c	2016-12-10 23:16:33.683650216 +0100
++++ hexchat-2.12.4/src/common/servlist.c	2016-12-10 23:16:33.679650135 +0100
 @@ -165,6 +165,9 @@
  	/* irc. points to chat. but many users and urls still reference it */
  	{0,				"irc.freenode.net"},
@@ -18,7 +18,7 @@ Index: hexchat-2.12.1/src/common/servlist.c
  	{"Furnet", 0, 0, 0, 0, 0, TRUE},
  	{0,			"irc.furnet.org"},
  
-@@ -927,7 +930,7 @@
+@@ -928,7 +931,7 @@
  {
  	int i = 0, j = 0;
  	ircnet *net = NULL;
@@ -27,10 +27,10 @@ Index: hexchat-2.12.1/src/common/servlist.c
  
  	while (1)
  	{
-Index: hexchat-2.12.1/src/fe-gtk/joind.c
+Index: hexchat-2.12.4/src/fe-gtk/joind.c
 ===================================================================
---- hexchat-2.12.1.orig/src/fe-gtk/joind.c	2016-07-23 23:21:37.922730324 +0200
-+++ hexchat-2.12.1/src/fe-gtk/joind.c	2016-07-23 23:21:37.918730240 +0200
+--- hexchat-2.12.4.orig/src/fe-gtk/joind.c	2016-12-10 23:16:33.683650216 +0100
++++ hexchat-2.12.4/src/fe-gtk/joind.c	2016-12-10 23:16:33.679650135 +0100
 @@ -246,9 +246,9 @@
  							G_CALLBACK (joind_ok_cb), serv);
  							
