@@ -1,3 +1,15 @@
+synergy (1.8.6-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Bug #5592 - Some keys don't work for macOS Sierra clients
+    Bug #5186 - Cursor stuck on client when using multi-DPI server
+    Bug #5722 - Malformed serial key in registry will crash GUI on startup
+    Bug #5752 - Tab order is incorrect on Settings dialog
+    Enhancement #5699 - Unified installers on macOS
+    Feature #4836 - macOS Sierra build
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 12 Dec 2016 20:25:16 +0100
+
 synergy (1.8.5-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
