@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+%:
+	dh $@ -Dsrc
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf src/deps/lpeg-0.10.2 src/deps/LuaJIT-2.1.0-beta1
+	find lib -type f -name "*.bc" -delete
+	find bundles -type f -name "*.bc" -delete
+
+# build and install is one step
+override_dh_auto_build:
+
+override_dh_auto_install:
+	dh_auto_install -- PREFIX=/usr
