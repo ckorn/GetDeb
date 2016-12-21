@@ -1,0 +1,5 @@
+howl (0.4.1-1~getdeb1) xenial; urgency=medium
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 20 Dec 2016 18:56:14 +0100

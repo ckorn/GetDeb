@@ -1,0 +1,20 @@
+Source: howl
+Section: editors
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>=9),
+               libglib2.0-dev,
+               libgtk-3-dev,
+               liblua5.3-dev
+Standards-Version: 3.9.7
+Homepage: http://howl.io/
+
+Package: howl
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: General purpose, light-weight customizable editor
+ Howl is a general purpose editor that aims to be both lightweight
+ and fully customizable. It's built on top of the very fast
+ LuaJIT) runtime, uses Gtk for its interface, and can be extended
+ in either Lua or Moonscript.
