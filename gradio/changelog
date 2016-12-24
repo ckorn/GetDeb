@@ -1,3 +1,9 @@
+gradio (5.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 24 Dec 2016 16:47:12 +0100
+
 gradio (4.0.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
