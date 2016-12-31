@@ -1,13 +1,13 @@
-Index: avidemux2.6-2.6.15/bootStrap.bash
+Index: avidemux2.6-2.6.16/bootStrap.bash
 ===================================================================
---- avidemux2.6-2.6.15.orig/bootStrap.bash	2016-11-19 12:51:02.649261180 +0100
-+++ avidemux2.6-2.6.15/bootStrap.bash	2016-11-19 12:51:02.645261114 +0100
-@@ -238,7 +238,7 @@
+--- avidemux2.6-2.6.16.orig/bootStrap.bash	2016-12-31 17:19:13.603335108 +0100
++++ avidemux2.6-2.6.16/bootStrap.bash	2016-12-31 17:19:13.599335138 +0100
+@@ -252,7 +252,7 @@
  
  export TOP=$PWD
  export POSTFIX=""
 -export FAKEROOT_DIR=$PWD/install
 +export FAKEROOT_DIR=$PWD/debian/tmp
  export PARAL="$O_PARAL"
- echo "Top dir : $TOP"
- echo "Fake installation directory=$FAKEROOT_DIR"
+ if [ "x$external_libass" = "x1" ]; then
+     export EXTRA_CMAKE_DEFS="-DUSE_EXTERNAL_LIBASS=true $EXTRA_CMAKE_DEFS"
