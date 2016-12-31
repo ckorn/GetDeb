@@ -1,3 +1,21 @@
+avidemux2.6 (1:2.6.16-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Build : Avidemux can be built with visual c++ 2015 (losing some ASM)
+    * OsX : Initialize fontconfig so that subtitling works
+    * Core : Update ffmpeg to 3.0.5
+    * i18n : Updated fr and ru translations (jean Elchinger/totalcaesar659)
+    * Build : Improved build scripts (euma)
+    * x265 : Enforce complicancy with most devices
+    * vaapi : Add resizer
+    * UI : Redone UI, revamped contrast filter
+    * Qt : Dont use too much CPU on playback when there is no audio track
+    * Qt : Reenabled nvenc + Fixed keyframe detection
+    * Qt : Fixed a crash when encoding starts very slowly (x265)
+    * Build : Allow use of system libass, liba52,libmad (euma)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 31 Dec 2016 17:18:32 +0100
+
 avidemux2.6 (1:2.6.15-1~getdeb2) xenial; urgency=medium
 
   * Add dependencies for subtitle support (LP: #1644883,
