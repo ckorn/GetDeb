@@ -1,3 +1,52 @@
+fotoxx (17.01-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * New upstream version
+     + Show the entire image directory hierarchy with [+] and [-] buttons to
+     expand or contract subdirectories at each level. Click any entry for a
+     gallery view.
+     + Blend Image: Paint with the mouse to blend pixels within the mouse
+     circle.
+     + Replace Album File: Make it easier to update albums whenever member
+     images are added or updated. Replace a given old image with a given new
+       image, in selected (or all) albums, or add the new image after the
+     old.
+     + Maps: An option was added to show markers only for images in the
+     current 
+       gallery (e.g. search results or album). The default is to show all
+       images.
+     + Color Mode: A new option was added to "rotate" the colors (RGB ->
+     BRG), and
+       each function operates on prior results instead of the original image.
+     + Three new slide show transitions: turn-cube, windmill, pixelize.
+     + Adjust HSL: both source and target colors can be selected with mouse
+     clicks.
+     + Slide Show - button to use current gallery (no album selection).
+    Efficiency Improvements:
+     + Image indexing is 1.9x faster for 5400 rpm disk (slight speedup for
+     SSD).
+     + Thumbnail caching is more efficient, gallery scrolling a little
+     smoother.
+    User Interface Improvements:
+     + Edit Metadata: added [prev] button to recall previous geotag data.
+     + Batch Rename Tags: A GUI replaced the text file for old/new tag names.
+     + Brightness/Color Gradient: Set direction of gradient with a mouse
+     drag.
+     + Favorites menu: Alignment of icons or text to unseen grid was made
+     easier.
+     + Bookmarks Edit and GoTo dialogs now scroll to allow larger entry
+     counts.
+     + Slide Show: transitions dialog is scrollable for use with small
+     monitors.
+    Bug Fixes:
+     + Report by location and date-groups: If only a country is selected, the
+     
+       output gallery did not include all locations within that country.
+     + Metadata report: Failed if no prior reported items list was found.
+     + Sort gallery by file or photo date: Avoid sorting subdirectories
+       (leave them at the top of the list and in alphabetic order)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 01 Jan 2017 13:49:35 +0100
+
 fotoxx (16.11.1-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * New upstream version
