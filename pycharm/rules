@@ -3,7 +3,7 @@
 	dh $@
 
 override_dh_install:
-	dh_install
+	dh_install --list-missing
 
 	mkdir -p debian/pycharm/usr/lib/
 
