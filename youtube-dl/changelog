@@ -1,3 +1,9 @@
+youtube-dl (1:2017.01.02-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 02 Jan 2017 19:14:08 +0100
+
 youtube-dl (1:2016.12.31-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
