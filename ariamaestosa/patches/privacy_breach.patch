@@ -1,12 +1,12 @@
 #E: ariamaestosa: privacy-breach-donation usr/share/Aria/Documentation/index.html (http://images.sourceforge.net/images/project-support.jpg)                                                                                           
 #E: ariamaestosa: privacy-breach-logo usr/share/Aria/Documentation/menu.js (http://sflogo.sourceforge.net/sflogo.php?group_id=186987&type=12)  
-Index: ariamaestosa-1.4.12/Resources/Documentation/index.html
+Index: ariamaestosa-1.4.13/Resources/Documentation/index.html
 ===================================================================
---- ariamaestosa-1.4.12.orig/Resources/Documentation/index.html	2016-04-30 00:48:15.000000000 +0200
-+++ ariamaestosa-1.4.12/Resources/Documentation/index.html	2016-09-07 20:06:41.325590639 +0200
-@@ -150,11 +150,6 @@
-     <a href="http://theautoz.com/blog/aria-maestosa/" style="font-weight:normal">Georgian translation</a> of this page
- </p>
+--- ariamaestosa-1.4.13.orig/Resources/Documentation/index.html	2017-01-02 22:38:08.920498977 +0100
++++ ariamaestosa-1.4.13/Resources/Documentation/index.html	2017-01-02 22:38:08.912499120 +0100
+@@ -170,11 +170,6 @@
+     <a href="http://dreamicus.com/blog/aria-maestosa-about.html" style="font-weight:normal">Slovenian translation</a> of this page
+ </div>
  
 -<p>
 -  <a href="http://sourceforge.net/donate/index.php?group_id=186987" style="display: inline-block; vertical-align: middle;"><img src="http://images.sourceforge.net/images/project-support.jpg" width="88" height="32" border="0" alt="Support This Project" /></a>
@@ -16,10 +16,10 @@ Index: ariamaestosa-1.4.12/Resources/Documentation/index.html
  
  <ul>
      <li><i>Aria Maestosa was greatly inspired by <a href="http://www.ergonis.com/products/easybeat/">Easy Beat</a>,
-Index: ariamaestosa-1.4.12/Resources/Documentation/menu.js
+Index: ariamaestosa-1.4.13/Resources/Documentation/menu.js
 ===================================================================
---- ariamaestosa-1.4.12.orig/Resources/Documentation/menu.js	2016-04-30 00:48:15.000000000 +0200
-+++ ariamaestosa-1.4.12/Resources/Documentation/menu.js	2016-09-07 20:05:58.896491664 +0200
+--- ariamaestosa-1.4.13.orig/Resources/Documentation/menu.js	2017-01-02 22:38:08.920498977 +0100
++++ ariamaestosa-1.4.13/Resources/Documentation/menu.js	2017-01-02 22:38:08.912499120 +0100
 @@ -6,7 +6,6 @@
  }
  
