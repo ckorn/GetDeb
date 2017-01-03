@@ -1,6 +1,7 @@
-diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/Dialogs/TrackPropertiesDialog.cpp AriaSrc-1.4.10/Src/Dialogs/TrackPropertiesDialog.cpp
---- AriaSrc-1.4.10.orig/Src/Dialogs/TrackPropertiesDialog.cpp	2014-10-28 18:03:14.000000000 +0000
-+++ AriaSrc-1.4.10/Src/Dialogs/TrackPropertiesDialog.cpp	2014-10-28 18:15:38.238822175 +0000
+Index: ariamaestosa-1.4.13/Src/Dialogs/TrackPropertiesDialog.cpp
+===================================================================
+--- ariamaestosa-1.4.13.orig/Src/Dialogs/TrackPropertiesDialog.cpp	2017-01-02 22:38:04.152585017 +0100
++++ ariamaestosa-1.4.13/Src/Dialogs/TrackPropertiesDialog.cpp	2017-01-02 22:38:04.140585233 +0100
 @@ -37,6 +37,9 @@
  #include <wx/stattext.h>
  #include <iostream>
@@ -37,9 +38,10 @@ diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/Dialogs/TrackPropertiesDi
      
      EVT_COMMAND_SCROLL_THUMBTRACK(300, TrackPropertiesDialog::volumeSlideChanging)
      EVT_COMMAND_SCROLL_THUMBRELEASE(300, TrackPropertiesDialog::volumeSlideChanging)
-diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/Editors/ControllerEditor.cpp AriaSrc-1.4.10/Src/Editors/ControllerEditor.cpp
---- AriaSrc-1.4.10.orig/Src/Editors/ControllerEditor.cpp	2014-10-28 18:03:14.000000000 +0000
-+++ AriaSrc-1.4.10/Src/Editors/ControllerEditor.cpp	2014-10-28 18:15:38.238822175 +0000
+Index: ariamaestosa-1.4.13/Src/Editors/ControllerEditor.cpp
+===================================================================
+--- ariamaestosa-1.4.13.orig/Src/Editors/ControllerEditor.cpp	2017-01-02 22:38:04.152585017 +0100
++++ ariamaestosa-1.4.13/Src/Editors/ControllerEditor.cpp	2017-01-02 22:38:04.144585162 +0100
 @@ -99,7 +99,7 @@
          {
              //I18N: as in "soundbank"
@@ -49,9 +51,10 @@ diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/Editors/ControllerEditor.
          }
          
          m_units = new wxChoice(panel, wxID_ANY);
-diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/GUI/MainFrame.cpp AriaSrc-1.4.10/Src/GUI/MainFrame.cpp
---- AriaSrc-1.4.10.orig/Src/GUI/MainFrame.cpp	2014-10-28 18:03:14.000000000 +0000
-+++ AriaSrc-1.4.10/Src/GUI/MainFrame.cpp	2014-10-28 18:15:38.238822175 +0000
+Index: ariamaestosa-1.4.13/Src/GUI/MainFrame.cpp
+===================================================================
+--- ariamaestosa-1.4.13.orig/Src/GUI/MainFrame.cpp	2017-01-02 22:38:04.152585017 +0100
++++ ariamaestosa-1.4.13/Src/GUI/MainFrame.cpp	2017-01-02 22:38:04.144585162 +0100
 @@ -236,7 +236,11 @@
  
  void CustomToolBar::AddCheckTool(const int id, wxString label, wxBitmap& bmp, bool checked)
@@ -64,7 +67,7 @@ diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/GUI/MainFrame.cpp AriaSrc
      btn->SetValue(checked);
      toolbarSizer->Add(btn, 0, wxALIGN_CENTER | wxALIGN_CENTER_VERTICAL | wxALL, 5);
      labels.push_back(label);
-@@ -786,7 +790,7 @@
+@@ -787,7 +791,7 @@
      if (!loop_enabled)
      {
          m_toolbar->realize();
@@ -73,7 +76,7 @@ diff -U 3 -H -w -E -d -r -N -- AriaSrc-1.4.10.orig/Src/GUI/MainFrame.cpp AriaSrc
          m_toolbar->HideById(LOOP_END_MEASURE);
      }
  
-@@ -1090,12 +1094,12 @@
+@@ -1091,12 +1095,12 @@
      m_loop_end_measure->Enable(pressed);
      if (not pressed)
      {
