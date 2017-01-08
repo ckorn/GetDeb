@@ -1,9 +1,9 @@
 ### We want the output seen in the log. Not written to a file.
-Index: avidemux2.6-2.6.16/bootStrap.bash
+Index: avidemux2.6-2.6.18/bootStrap.bash
 ===================================================================
---- avidemux2.6-2.6.16.orig/bootStrap.bash	2016-12-31 17:19:26.791235673 +0100
-+++ avidemux2.6-2.6.16/bootStrap.bash	2016-12-31 17:20:21.678777487 +0100
-@@ -65,7 +65,7 @@
+--- avidemux2.6-2.6.18.orig/bootStrap.bash	2017-01-07 12:49:32.053032080 +0100
++++ avidemux2.6-2.6.18/bootStrap.bash	2017-01-07 12:49:32.049032188 +0100
+@@ -66,7 +66,7 @@
          fi
          cd $BUILDDIR 
          cmake $COMPILER $PKG $FAKEROOT $QT_FLAVOR -DCMAKE_EDIT_COMMAND=vim $INSTALL_PREFIX $EXTRA $BUILD_QUIRKS $ASAN $DEBUG -G "$BUILDER" $SOURCEDIR || fail cmakeZ

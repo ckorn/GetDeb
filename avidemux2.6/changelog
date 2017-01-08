@@ -1,3 +1,13 @@
+avidemux2.6 (1:2.6.18-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Preview : Fix auto resize when video has ~ same dimension as screen*
+    * Preview : Fix multiple preview breaking navigation
+    * Preview : Fix slider and tooltips (euma)
+    * Mp4/Mp4v2: Allow E-AC3 (fiftyplus/euma)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 07 Jan 2017 12:46:13 +0100
+
 avidemux2.6 (1:2.6.16-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
