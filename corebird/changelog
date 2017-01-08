@@ -1,3 +1,27 @@
+corebird (1.4-1~getdeb1) yakkety; urgency=medium
+
+  * New upstream version
+    - Images in quoted tweets now look more like they actually belong to
+    the quoted tweet instead of the quoting tweet.
+    - Allow deleting tweets from the tweet info page and not just from
+    timelines.
+    - Fix the user completion not showing all possible results
+    - Focus the already opened window for an account if the account gets
+    selected in the accounts popover
+    - Avoid window resizing when typing in the Direct Message text box
+    - Add 'q' accelerator to tweet rows for quoting
+    - Add spellchecking. This add a dependency to gspell
+    - Increase gtk+ dependency to 3.18 to get rid of some workarounds.
+    - Increase avatar size in profiles and slightly overlap them over the
+    banner. Also, always show the full banner.
+    - Fix completion popup positioning under Wayland
+    - Add experimental meson build files
+    - Fix some videos not playing correctly
+    - Add a minimal video progress indicator to the video dialog
+    - Fix the retweet/favorite count updating in the tweet info page
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 07 Jan 2017 12:50:13 +0100
+
 corebird (1.3.3-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
