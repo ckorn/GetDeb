@@ -1,0 +1,14 @@
+#The following files contain translations and are currently not in use. Please
+#consider adding these to the POTFILES.in file, located in the po/ directory.
+#
+#data/Unicode.ui
+#
+#If some of these files are left out on purpose then please add them to
+#POTFILES.skip instead of POTFILES.in.
+Index: lollypop-0.9.224/po/POTFILES.skip
+===================================================================
+--- lollypop-0.9.224.orig/po/POTFILES.skip	2017-01-07 12:53:55.000000000 +0100
++++ lollypop-0.9.224/po/POTFILES.skip	2017-01-08 10:19:25.796396009 +0100
+@@ -1 +1,2 @@
+ sub/data/AboutDialog.ui
++data/Unicode.ui
