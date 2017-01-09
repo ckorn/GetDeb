@@ -1,3 +1,11 @@
+corebird (1.4.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Lower the required gspell version to 1.0
+    - Work around a binding problem in the gtk+ 3.18 vapi of vala 0.30
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 08 Jan 2017 11:06:23 +0100
+
 corebird (1.4-1~getdeb1) yakkety; urgency=medium
 
   * New upstream version

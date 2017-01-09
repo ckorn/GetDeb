@@ -9,5 +9,5 @@ override_dh_autoreconf:
 	dh_autoreconf
 
 override_dh_auto_configure:
-	# widgets/CompletionTextView.vala:103.5-103.40: error: The name `set_enable_language_menu' does not exist in the context of `Gspell.TextView'
+	# libgspell-1-dev not available in xenial
 	dh_auto_configure -- --disable-spellcheck
