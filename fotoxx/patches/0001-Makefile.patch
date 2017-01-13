@@ -7,11 +7,11 @@ Subject: [PATCH] Makefile
  fotoxx-9.0/Makefile |    7 +++----
  1 files changed, 3 insertions(+), 4 deletions(-)
 
-Index: fotoxx-17.01/Makefile
+Index: fotoxx-17.01.1/Makefile
 ===================================================================
---- fotoxx-17.01.orig/Makefile	2017-01-01 13:50:14.971529504 +0100
-+++ fotoxx-17.01/Makefile	2017-01-01 13:50:14.971529504 +0100
-@@ -14,7 +14,7 @@
+--- fotoxx-17.01.1.orig/Makefile	2017-01-12 18:04:03.045952949 +0100
++++ fotoxx-17.01.1/Makefile	2017-01-12 18:04:03.037953016 +0100
+@@ -13,7 +13,7 @@
  DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
  LOCALESDIR = $(SHAREDIR)/locales

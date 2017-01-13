@@ -1,3 +1,13 @@
+fotoxx (17.01.1-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * New upstream version
+     + Rare crash at startup after new image files are found and indexed.
+       This is self-repairing at the next startup.
+     + Crash if the de-noise dialog is quit with the measure-noise dialog
+     open.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 12 Jan 2017 18:03:35 +0100
+
 fotoxx (17.01-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * New upstream version
