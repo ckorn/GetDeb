@@ -1,0 +1,14 @@
+# https://github.com/jaagr/polybar/issues/322#issuecomment-272375175
+Index: polybar-2.5.1/src/components/config.cpp
+===================================================================
+--- polybar-2.5.1.orig/src/components/config.cpp	2017-01-12 17:55:55.000000000 +0100
++++ polybar-2.5.1/src/components/config.cpp	2017-01-13 08:19:20.283594866 +0100
+@@ -247,7 +247,7 @@
+ 
+ template <>
+ unsigned long long config::convert(string&& value) const {
+-  unsigned long v{std::strtoull(value.c_str(), nullptr, 10)};
++  unsigned long long v{std::strtoull(value.c_str(), nullptr, 10)};
+   return v < ULLONG_MAX ? v : 0ULL;
+ }
+ 
