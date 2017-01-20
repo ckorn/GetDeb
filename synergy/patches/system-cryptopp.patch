@@ -6,10 +6,10 @@ Forwarded: no
 Last-Update: 2013-06-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: synergy-1.7.5/CMakeLists.txt
+Index: synergy-1.8.7/CMakeLists.txt
 ===================================================================
---- synergy-1.7.5.orig/CMakeLists.txt	2016-01-09 00:47:07.072513076 +0100
-+++ synergy-1.7.5/CMakeLists.txt	2016-01-09 00:47:07.068512991 +0100
+--- synergy-1.8.7.orig/CMakeLists.txt	2017-01-19 18:01:47.803556127 +0100
++++ synergy-1.8.7/CMakeLists.txt	2017-01-19 18:01:47.795556219 +0100
 @@ -91,6 +91,7 @@
  	include(CheckIncludeFileCXX)
  	include(CheckSymbolExists)
@@ -18,7 +18,7 @@ Index: synergy-1.7.5/CMakeLists.txt
  
  	check_include_file_cxx(istream HAVE_ISTREAM)
  	check_include_file_cxx(ostream HAVE_OSTREAM)
-@@ -231,6 +232,8 @@
+@@ -234,6 +235,8 @@
  		check_library_exists("Xi" XISelectEvents "" HAVE_Xi)
  		check_library_exists("Xrandr" XRRQueryExtension "" HAVE_Xrandr)
  
@@ -27,7 +27,7 @@ Index: synergy-1.7.5/CMakeLists.txt
  		if (HAVE_ICE)
  
  			# Assume we have SM if we have ICE.
-@@ -274,6 +277,10 @@
+@@ -277,6 +280,10 @@
  			list(APPEND libs Xi)
  		endif()
  

@@ -1,3 +1,10 @@
+synergy (1.8.7-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Bug #5784 - Edition changes when reopening GUI
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 19 Jan 2017 18:01:05 +0100
+
 synergy (1.8.6-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
