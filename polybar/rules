@@ -4,7 +4,7 @@ PKG = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SSource)
 VER = $(shell dpkg-parsechangelog -l$(PKD)/changelog -SVersion | cut -d- -f1)
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_clean:
 	find . -iname "*.pyc" -delete
@@ -13,7 +13,7 @@ override_dh_clean:
 
 override_dh_auto_configure:
 	mkdir -p lib/xpp/include/xpp/proto/
-	dh_auto_configure
+	dh_auto_configure -- -DENABLE_I3=1
 
 override_dh_install:
 	dh_install --list-missing

@@ -21,7 +21,8 @@ Build-Depends: debhelper (>=9),
                libmpdclient-dev,
                xcb-proto,
                python-xcbgen,
-               libxcb-xkb-dev
+               libxcb-xkb-dev,
+               i3-wm
 Standards-Version: 3.9.7
 Homepage: https://github.com/jaagr/polybar
 
