@@ -34,7 +34,7 @@ endif
 	debian/make-icons.sh XnView/xnview_2.png
 
 override_dh_install:
-	dh_install
+	dh_install --list-missing
 	rm -f  debian/xnviewmp-data/usr/share/xnviewmp/license.txt
 	rm -f  debian/xnviewmp-data/usr/share/xnviewmp/WhatsNew.txt
 	rm -f  debian/xnviewmp-data/usr/share/xnviewmp/UI/style_sheet_win.qss
@@ -50,7 +50,7 @@ override_dh_installchangelogs:
 	dh_installchangelogs XnView/WhatsNew.txt
 
 override_dh_shlibdeps:
-	dh_shlibdeps -l$(CURDIR)/debian/xnviewmp/usr/lib/xnviewmp/lib -Xlibqjpeg.so
+	dh_shlibdeps -l$(CURDIR)/debian/xnviewmp/usr/lib/xnviewmp/lib -Xlibqjpeg.so --dpkg-shlibdeps-params=--ignore-missing-info
 
 override_dh_makeshlibs:
 	# no true shared libraries

@@ -1,3 +1,9 @@
+xnviewmp (0.84-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 21 Jan 2017 16:27:58 +0100
+
 xnviewmp (0.83-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
