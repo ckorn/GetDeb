@@ -1,14 +1,14 @@
 # does not work with namespace. no idea why.
-Index: ruby-gli-2.14.0/gli.gemspec
+Index: ruby-gli-2.15.0/gli.gemspec
 ===================================================================
---- ruby-gli-2.14.0.orig/gli.gemspec	2016-05-16 23:00:15.000000000 +0200
-+++ ruby-gli-2.14.0/gli.gemspec	2016-05-17 00:26:00.334158667 +0200
+--- ruby-gli-2.15.0.orig/gli.gemspec	2017-01-22 14:00:44.453918762 +0100
++++ ruby-gli-2.15.0/gli.gemspec	2017-01-22 14:01:07.845705966 +0100
 @@ -3,7 +3,7 @@
  
- spec = Gem::Specification.new do |s| 
+ spec = Gem::Specification.new do |s|
    s.name = 'gli'
 -  s.version = GLI::VERSION
 +  s.version = VERSION
+   s.licenses = ['Apache-2.0']
    s.author = 'David Copeland'
    s.email = 'davidcopeland@naildrivin5.com'
-   s.homepage = 'http://davetron5000.github.com/gli'

@@ -13,3 +13,6 @@ export DH_RUBY_IGNORE_TESTS=all
 
 %:
 	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_install:
+	dh_install --list-missing
