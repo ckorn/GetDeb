@@ -1,3 +1,9 @@
+zbarlight (1.1.0-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 24 Jan 2017 19:03:40 +0100
+
 zbarlight (1.0.2-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * Rebuild for yakkety
