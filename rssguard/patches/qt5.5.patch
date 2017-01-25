@@ -1,9 +1,9 @@
 # make rssguard compatible with qt5.5
-Index: rssguard-3.3.5/src/main.cpp
+Index: rssguard-3.3.7/src/main.cpp
 ===================================================================
---- rssguard-3.3.5.orig/src/main.cpp	2016-09-13 13:45:20.000000000 +0200
-+++ rssguard-3.3.5/src/main.cpp	2016-10-02 00:19:00.373853645 +0200
-@@ -78,7 +78,7 @@
+--- rssguard-3.3.7.orig/src/main.cpp	2017-01-24 18:06:54.224041671 +0100
++++ rssguard-3.3.7/src/main.cpp	2017-01-24 18:06:54.220041730 +0100
+@@ -82,7 +82,7 @@
    application.setFeedReader(new FeedReader(&application));
  
    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
