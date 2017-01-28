@@ -2,11 +2,11 @@ Description: Use python-config instead of sysconfig.get_python_inc(), as the lat
 Author: Martin Pitt <mpitt@debian.org>
 Bug-Ubuntu: https://launchpad.net/bugs/1094246
 
-Index: calibre-2.69.0/setup/build.py
+Index: calibre-2.78.0/setup/build.py
 ===================================================================
---- calibre-2.69.0.orig/setup/build.py	2016-09-30 04:45:59.000000000 +0200
-+++ calibre-2.69.0/setup/build.py	2016-10-09 22:15:47.119001823 +0200
-@@ -149,7 +149,11 @@
+--- calibre-2.78.0.orig/setup/build.py	2017-01-27 18:06:32.866205039 +0100
++++ calibre-2.78.0/setup/build.py	2017-01-27 18:06:32.866205039 +0100
+@@ -153,7 +153,11 @@
      if isbsd:
          cflags.append('-pthread')
          ldflags.append('-shared')
