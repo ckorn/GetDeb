@@ -1,3 +1,14 @@
+corebird (1.4.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+  - Fix a crash when going back from a tweet with media to another
+    tweet with media
+  - Fix compilation with --disable-video
+  - Decrease log level of UserStream output to debug when no internet
+    connection is present
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 28 Jan 2017 16:15:15 +0100
+
 corebird (1.4.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
