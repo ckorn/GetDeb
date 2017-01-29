@@ -18,7 +18,7 @@ override_dh_auto_build:
 
 override_dh_install:
 	dh_install
-	mv debian/cryptomator/usr/share/java/cryptomator/Cryptomator-1.2.3.jar debian/cryptomator/usr/share/java/cryptomator/Cryptomator.jar
+	mv debian/cryptomator/usr/share/java/cryptomator/Cryptomator-1.2.4.jar debian/cryptomator/usr/share/java/cryptomator/Cryptomator.jar
 
 override_dh_usrlocal:
 	# no-op
