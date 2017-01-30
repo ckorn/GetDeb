@@ -13,10 +13,7 @@ override_dh_clean:
 
 override_dh_auto_configure:
 	mkdir -p lib/xpp/include/xpp/proto/
-	dh_auto_configure -- -DENABLE_I3=1
-
-override_dh_install:
-	dh_install --list-missing
+	dh_auto_configure -- -G "Unix Makefiles" -DENABLE_I3=1 -DCMAKE_INSTALL_PREFIX:PATH=/usr
 
 ## http://wiki.debian.org/onlyjob/get-orig-source
 .PHONY: get-orig-source

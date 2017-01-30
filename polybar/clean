@@ -2,3 +2,4 @@ examples/config
 include/config.hpp
 doc/config
 include/settings.hpp
+Makefile

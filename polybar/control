@@ -2,7 +2,7 @@ Source: polybar
 Section: utils
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
-Build-Depends: debhelper (>=9),
+Build-Depends: debhelper (>=10),
                cmake,
                libxcb-icccm4-dev,
                libxcb-image0-dev,
@@ -22,8 +22,10 @@ Build-Depends: debhelper (>=9),
                xcb-proto,
                python-xcbgen,
                libxcb-xkb-dev,
-               i3-wm
-Standards-Version: 3.9.7
+               i3-wm,
+               libcairo2-dev,
+               libxcb-xrm-dev
+Standards-Version: 3.9.8
 Homepage: https://github.com/jaagr/polybar
 
 Package: polybar
