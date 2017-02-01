@@ -1,3 +1,19 @@
+sweethome3d (5.4-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+     * Set the minimum value of visitor's field of view to 2°.
+     * Fixed wrongly displayed rectangular textures when rotated.
+     * Fixed a bug that prevented to close the Untitled window after opening
+       a file under Mac OS X.
+     * Fixed a bug that applied the resolution scale factor too many times
+       on user interface.
+     * Fixed a bug that prevented to move the points of a polyline.
+     * Replaced JRE 8u112 by JRE 8u121 in Sweet Home 3D installers bundled
+       with Java under Linux.
+     * Other minor bugs fixes and enhancements.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 31 Jan 2017 18:23:54 +0100
+
 sweethome3d (5.3-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
