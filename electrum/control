@@ -1,0 +1,22 @@
+Source: electrum
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: net
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-setuptools (>= 0.6b3),
+               python-all (>= 2.6.6-3)
+Standards-Version: 3.9.7
+Homepage: https://electrum.org
+
+Package: electrum
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-qt4
+Description: Lightweight Bitcoin Wallet
+ Securing Bitcoin payments since 2011,
+ Electrum is one of the most popular Bitcoin wallets.
+ .
+ Electrum is fast, secure and easy to use.
+ It suits the needs of a wide spectrum of users.
