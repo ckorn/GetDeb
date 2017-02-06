@@ -1,3 +1,15 @@
+opentoonz (1.1.2+git170204-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * Publish nightly build (LP: #1661765)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 04 Feb 2017 15:37:07 +0100
+
+opentoonz (1.1.2+git170204-1~getdeb2~yakkety) yakkety; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 04 Feb 2017 15:36:54 +0100
+
 opentoonz (1.1.2-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * New upstream version
