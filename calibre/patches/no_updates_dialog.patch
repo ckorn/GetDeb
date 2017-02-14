@@ -1,9 +1,9 @@
 # Description: Disable update check by default.
-Index: calibre-2.70.0/src/calibre/gui2/main.py
+Index: calibre-2.79.0/src/calibre/gui2/main.py
 ===================================================================
---- calibre-2.70.0.orig/src/calibre/gui2/main.py	2016-10-14 19:23:14.442791959 +0200
-+++ calibre-2.70.0/src/calibre/gui2/main.py	2016-10-14 19:23:14.438791831 +0200
-@@ -40,8 +40,8 @@
+--- calibre-2.79.0.orig/src/calibre/gui2/main.py	2017-02-11 17:10:15.292641702 +0100
++++ calibre-2.79.0/src/calibre/gui2/main.py	2017-02-11 17:10:15.292641702 +0100
+@@ -48,8 +48,8 @@
                        help=_('Start minimized to system tray.'))
      parser.add_option('-v', '--verbose', default=0, action='count',
                        help=_('Ignored, do not use. Present only for legacy reasons'))
