@@ -1,3 +1,9 @@
+spigot (20170214.b09e30b-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 14 Feb 2017 13:33:59 +0100
+
 spigot (20170212.34afe73-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
