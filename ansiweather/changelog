@@ -1,3 +1,12 @@
+ansiweather (1.10-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Add a '-v' option to show version number
+    - Exit with error code when an unknown option is invoked
+    - Make wind direction customizable
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 17 Feb 2017 14:20:34 +0100
+
 ansiweather (1.09-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
