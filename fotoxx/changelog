@@ -1,3 +1,11 @@
+fotoxx (17.01.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+     + Read TIFF file with alpha channel: alpha was being ignored.
+     + Panorama: crash if images have too little overlap.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 28 Feb 2017 18:45:34 +0100
+
 fotoxx (17.01.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
