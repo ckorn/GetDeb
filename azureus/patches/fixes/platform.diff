@@ -13,10 +13,10 @@ Signed-off-by: Adrian Perez <adrianperez.deb@gmail.com>
  .../platform/PlatformManagerPluginDelegate.java    |   15 ++++++++++++---
  4 files changed, 26 insertions(+), 7 deletions(-)
 
-Index: azureus-5.7.3.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
+Index: azureus-5.7.5.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java
 ===================================================================
---- azureus-5.7.3.0.orig/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2016-08-11 01:28:50.056616569 +0200
-+++ azureus-5.7.3.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2016-08-11 01:28:50.052616487 +0200
+--- azureus-5.7.5.0.orig/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2017-03-01 19:14:39.954055601 +0100
++++ azureus-5.7.5.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl.java	2017-03-01 19:14:39.954055601 +0100
 @@ -27,8 +27,10 @@
  import org.gudy.azureus2.platform.PlatformManager;
  import org.gudy.azureus2.platform.PlatformManagerFactory;
@@ -46,28 +46,10 @@ Index: azureus-5.7.3.0/com/aelitis/azureus/core/update/impl/AzureusRestarterImpl
  
  			/*
  			 * Some results:
-Index: azureus-5.7.3.0/org/gudy/azureus2/platform/PlatformManagerFactory.java
+Index: azureus-5.7.5.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
 ===================================================================
---- azureus-5.7.3.0.orig/org/gudy/azureus2/platform/PlatformManagerFactory.java	2016-08-11 01:28:50.056616569 +0200
-+++ azureus-5.7.3.0/org/gudy/azureus2/platform/PlatformManagerFactory.java	2016-08-11 01:28:50.052616487 +0200
-@@ -55,11 +55,11 @@
- 						if ( getPlatformType() == PlatformManager.PT_WINDOWS ){
- 							
- 							platform_manager = org.gudy.azureus2.platform.win32.PlatformManagerImpl.getSingleton();
--							
-+/* --- Adrian Perez: Don't use MacOS-X's PlatformManagerImpl
- 						}else if( getPlatformType() == PlatformManager.PT_MACOSX ){
- 							
- 		                    platform_manager = org.gudy.azureus2.platform.macosx.PlatformManagerImpl.getSingleton();
--		                    
-+*/
- 						}else if( getPlatformType() == PlatformManager.PT_UNIX ){
- 							
- 							platform_manager = org.gudy.azureus2.platform.unix.PlatformManagerImpl.getSingleton();
-Index: azureus-5.7.3.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java
-===================================================================
---- azureus-5.7.3.0.orig/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2016-08-11 01:28:50.056616569 +0200
-+++ azureus-5.7.3.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2016-08-11 01:28:50.052616487 +0200
+--- azureus-5.7.5.0.orig/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2017-03-01 19:14:39.954055601 +0100
++++ azureus-5.7.5.0/org/gudy/azureus2/platform/PlatformManagerPluginDelegate.java	2017-03-01 19:14:39.954055601 +0100
 @@ -21,6 +21,10 @@
  
  import org.gudy.azureus2.platform.unix.PlatformManagerUnixPlugin;
