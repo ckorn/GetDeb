@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with autoreconf --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-autoupdatecheck --with-dbus
+
+override_dh_auto_install:
+	# Create .xpm from .png and install it
+	mkdir -p $(CURDIR)/debian/filezilla/usr/share/pixmaps
+	convert $(CURDIR)/src/interface/resources/32x32/filezilla.png \
+                $(CURDIR)/debian/filezilla/usr/share/pixmaps/filezilla.xpm
+	dh_auto_install
+
+override_dh_installchangelogs:
+	# Install upstream NEWS file as changelog
+	dh_installchangelogs -k NEWS
+
+override_dh_link:
+	# Remove doc from filezilla binary package,
+	# a symlink to filezilla-common is created by dh_link
+	rm -rf debian/filezilla/usr/share/doc/
+	dh_link

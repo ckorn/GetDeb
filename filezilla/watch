@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/3_0_0/3.0.0/;s/-(.*)$/~$1/" \
+http://sf.net/filezilla/FileZilla_([\d\.]+)_src.tar.bz2

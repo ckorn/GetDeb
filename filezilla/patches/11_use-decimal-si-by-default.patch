@@ -1,0 +1,15 @@
+Author: Adrien Cunin <adri2000@ubuntu.com>
+Description: by default, display file sizes using decimal base and SI units instead of just bytes; complies with Ubuntu UnitsPolicy.
+Index: filezilla/src/interface/Options.cpp
+===================================================================
+--- filezilla.orig/src/interface/Options.cpp
++++ filezilla/src/interface/Options.cpp
+@@ -104,7 +104,7 @@
+ 	{ "Logging file", string, _T(""), normal },
+ 	{ "Logging filesize limit", number, _T("10"), normal },
+ 	{ "Logging show detailed logs", number, _T("0"), internal },
+-	{ "Size format", number, _T("0"), normal },
++	{ "Size format", number, _T("3"), normal },
+ 	{ "Size thousands separator", number, _T("1"), normal },
+ 	{ "Size decimal places", number, _T("1"), normal },
+ 	{ "TCP Keepalive Interval", number, _T("15"), normal },
