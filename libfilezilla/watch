@@ -1,0 +1,2 @@
+version=3
+http://download.filezilla-project.org/libfilezilla/libfilezilla-([\d\.]+)\.tar\.bz2

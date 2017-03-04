@@ -1,0 +1,52 @@
+libfilezilla (0.9.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 02 Mar 2017 21:53:36 +0100
+
+libfilezilla (0.9.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 02 Mar 2017 21:48:38 +0100
+
+libfilezilla (0.9.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Adrien Cunin <adri2000@ubuntu.com>  Tue, 17 Jan 2017 16:13:46 +0100
+
+libfilezilla (0.7.0-1) unstable; urgency=medium
+
+  * Team Upload
+  * New upstream release
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 27 Sep 2016 10:56:33 +0200
+
+libfilezilla (0.6.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Adrien Cunin <adri2000@ubuntu.com>  Thu, 28 Jul 2016 11:44:04 +0200
+
+libfilezilla (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Use dh_makeshlibs -V so that packages built against libfilezilla get a
+    correct versioned dependency
+  * Fixed libfilezilla0 description: it does not include the static library
+
+ -- Adrien Cunin <adri2000@ubuntu.com>  Tue, 26 Jul 2016 15:16:05 +0200
+
+libfilezilla (0.5.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated Standards-Version to 3.9.8, no change needed
+
+ -- Adrien Cunin <adri2000@ubuntu.com>  Wed, 06 Jul 2016 16:07:41 +0200
+
+libfilezilla (0.4.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #815763)
+
+ -- Adrien Cunin <adri2000@ubuntu.com>  Wed, 17 Feb 2016 16:04:03 +0100
