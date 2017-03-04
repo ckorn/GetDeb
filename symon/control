@@ -4,11 +4,11 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                libnewlib-dev,
-               libbind4-dev,
+               libbind-dev,
                linux-libc-dev,
                librrd-dev,
                pmake
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: http://www.xs4all.nl/~wpd/symon/
 
 Package: symon
