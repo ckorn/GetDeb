@@ -1,7 +1,7 @@
-Index: synergy-1.8.4/src/lib/arch/unix/ArchNetworkBSD.cpp
+Index: synergy-1.8.8/src/lib/arch/unix/ArchNetworkBSD.cpp
 ===================================================================
---- synergy-1.8.4.orig/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-10-11 18:01:29.602713134 +0200
-+++ synergy-1.8.4/src/lib/arch/unix/ArchNetworkBSD.cpp	2016-10-11 18:01:29.602713134 +0200
+--- synergy-1.8.8.orig/src/lib/arch/unix/ArchNetworkBSD.cpp	2017-03-03 19:21:14.841179019 +0100
++++ synergy-1.8.8/src/lib/arch/unix/ArchNetworkBSD.cpp	2017-03-03 19:21:14.829179331 +0100
 @@ -332,7 +332,7 @@
  		do {
  			ignore = read(unblockPipe[0], dummy, sizeof(dummy));
@@ -19,10 +19,10 @@ Index: synergy-1.8.4/src/lib/arch/unix/ArchNetworkBSD.cpp
  	}
  }
  
-Index: synergy-1.8.4/src/lib/synergy/ArgsBase.cpp
+Index: synergy-1.8.8/src/lib/synergy/ArgsBase.cpp
 ===================================================================
---- synergy-1.8.4.orig/src/lib/synergy/ArgsBase.cpp	2016-10-11 18:01:29.602713134 +0200
-+++ synergy-1.8.4/src/lib/synergy/ArgsBase.cpp	2016-10-11 18:01:29.602713134 +0200
+--- synergy-1.8.8.orig/src/lib/synergy/ArgsBase.cpp	2017-03-03 19:21:14.841179019 +0100
++++ synergy-1.8.8/src/lib/synergy/ArgsBase.cpp	2017-03-03 19:21:14.833179227 +0100
 @@ -21,15 +21,9 @@
  ArgsBase::ArgsBase() :
  #if SYSAPI_WIN32
@@ -54,10 +54,10 @@ Index: synergy-1.8.4/src/lib/synergy/ArgsBase.cpp
  m_shouldExit(false),
  m_synergyAddress(),
  m_enableCrypto(false),
-Index: synergy-1.8.4/src/lib/platform/XWindowsEventQueueBuffer.cpp
+Index: synergy-1.8.8/src/lib/platform/XWindowsEventQueueBuffer.cpp
 ===================================================================
---- synergy-1.8.4.orig/src/lib/platform/XWindowsEventQueueBuffer.cpp	2016-10-11 18:01:29.602713134 +0200
-+++ synergy-1.8.4/src/lib/platform/XWindowsEventQueueBuffer.cpp	2016-10-11 18:01:29.602713134 +0200
+--- synergy-1.8.8.orig/src/lib/platform/XWindowsEventQueueBuffer.cpp	2017-03-03 19:21:14.841179019 +0100
++++ synergy-1.8.8/src/lib/platform/XWindowsEventQueueBuffer.cpp	2017-03-03 19:21:14.833179227 +0100
 @@ -54,10 +54,10 @@
  
  XWindowsEventQueueBuffer::XWindowsEventQueueBuffer(
@@ -71,10 +71,10 @@ Index: synergy-1.8.4/src/lib/platform/XWindowsEventQueueBuffer.cpp
  {
  	assert(m_display != NULL);
  	assert(m_window  != None);
-Index: synergy-1.8.4/src/lib/platform/XWindowsScreen.cpp
+Index: synergy-1.8.8/src/lib/platform/XWindowsScreen.cpp
 ===================================================================
---- synergy-1.8.4.orig/src/lib/platform/XWindowsScreen.cpp	2016-10-11 18:01:29.602713134 +0200
-+++ synergy-1.8.4/src/lib/platform/XWindowsScreen.cpp	2016-10-11 18:01:29.602713134 +0200
+--- synergy-1.8.8.orig/src/lib/platform/XWindowsScreen.cpp	2017-03-03 19:21:14.841179019 +0100
++++ synergy-1.8.8/src/lib/platform/XWindowsScreen.cpp	2017-03-03 19:21:14.833179227 +0100
 @@ -97,6 +97,7 @@
  		bool disableXInitThreads,
  		int mouseScrollDelta,
@@ -93,7 +93,7 @@ Index: synergy-1.8.4/src/lib/platform/XWindowsScreen.cpp
  {
  	assert(s_screen == NULL);
  
-@@ -1273,7 +1273,6 @@
+@@ -1254,7 +1254,6 @@
  				cookie->extension == xi_opcode) {
  			if (cookie->evtype == XI_RawMotion) {
  				// Get current pointer's position
@@ -101,10 +101,10 @@ Index: synergy-1.8.4/src/lib/platform/XWindowsScreen.cpp
  				XMotionEvent xmotion;
  				xmotion.type = MotionNotify;
  				xmotion.send_event = False; // Raw motion
-Index: synergy-1.8.4/src/lib/net/SecureSocket.cpp
+Index: synergy-1.8.8/src/lib/net/SecureSocket.cpp
 ===================================================================
---- synergy-1.8.4.orig/src/lib/net/SecureSocket.cpp	2016-10-11 11:14:27.000000000 +0200
-+++ synergy-1.8.4/src/lib/net/SecureSocket.cpp	2016-10-11 18:02:27.231730690 +0200
+--- synergy-1.8.8.orig/src/lib/net/SecureSocket.cpp	2017-03-03 19:21:14.841179019 +0100
++++ synergy-1.8.8/src/lib/net/SecureSocket.cpp	2017-03-03 19:21:14.833179227 +0100
 @@ -670,7 +670,7 @@
  SecureSocket::verifyCertFingerprint()
  {

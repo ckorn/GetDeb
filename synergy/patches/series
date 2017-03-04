@@ -1,4 +1,3 @@
-fix_cxxflags.patch
 system-cryptopp.patch
 cprotocolutil-writef.patch
 link-with-pthread.patch
