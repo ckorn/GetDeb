@@ -3,11 +3,11 @@ Description: Don't disable vmport even if we're using spice, as this
 Origin: reverts https://github.com/virt-manager/virt-manager/commit/ddfca74e54a7638844b72baf3d30502dcf59b251
 Forwarded: No
 
-Index: virt-manager-1.4.0/virtinst/guest.py
+Index: virt-manager-1.4.1/virtinst/guest.py
 ===================================================================
---- virt-manager-1.4.0.orig/virtinst/guest.py	2016-10-03 23:39:03.295976322 +0200
-+++ virt-manager-1.4.0/virtinst/guest.py	2016-10-03 23:39:03.295976322 +0200
-@@ -838,12 +838,6 @@
+--- virt-manager-1.4.1.orig/virtinst/guest.py	2017-03-09 18:11:22.184898076 +0100
++++ virt-manager-1.4.1/virtinst/guest.py	2017-03-09 18:11:22.180898114 +0100
+@@ -874,12 +874,6 @@
              else:
                  self.features.pae = self.capsinfo.guest.supports_pae()
  
