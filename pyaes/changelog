@@ -1,0 +1,5 @@
+pyaes (1.6.0-1~getdeb1) xenial; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 09 Mar 2017 22:09:41 +0100
