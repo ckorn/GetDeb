@@ -1,3 +1,9 @@
+clipgrab (3.6.4-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 08 Mar 2017 18:08:41 +0100
+
 clipgrab (3.6.3-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
