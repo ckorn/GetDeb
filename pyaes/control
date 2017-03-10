@@ -1,0 +1,19 @@
+Source: pyaes
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all (>= 2.6.6-3)
+Standards-Version: 3.9.7
+Homepage: https://github.com/ricmoo/pyaes
+
+Package: python-pyaes
+Architecture: all
+Depends: ${misc:Depends},
+         ${python:Depends}
+Description: Pure-Python Implementation of the AES block-cipher and commo
+ A pure-Python implementation of the AES (FIPS-197)
+ block-cipher algorithm and common modes of operation (CBC, CFB, CTR, ECB,
+ OFB) with no dependencies beyond standard Python libraries. See README.md
+ for API reference and details.

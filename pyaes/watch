@@ -1,0 +1,3 @@
+version=3
+https://github.com/ricmoo/pyaes/releases \
+    (?:.*/)?v([\d\.]+)\.tar\.gz
