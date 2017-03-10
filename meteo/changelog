@@ -1,3 +1,13 @@
+meteo (0.9.5-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Feature of cities translation
+    Add open window action in tray menu (for Unity)
+    Improvepments finding weather data
+    Fixes some issues with crashes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 09 Mar 2017 18:02:39 +0100
+
 meteo (0.9.4+git161129-1~getdeb1) xenial; urgency=medium
 
   * Initial release
