@@ -13,11 +13,11 @@ where used but that is gone.
 Signed-off-by: Stefan Bader <stefan.bader@canonical.com>
 Updated: 2014-02-17
 
-Index: virt-manager-1.4.0/virtinst/guest.py
+Index: virt-manager-1.4.1/virtinst/guest.py
 ===================================================================
---- virt-manager-1.4.0.orig/virtinst/guest.py	2016-10-03 23:32:03.211426753 +0200
-+++ virt-manager-1.4.0/virtinst/guest.py	2016-10-03 23:32:03.207426669 +0200
-@@ -758,10 +758,7 @@
+--- virt-manager-1.4.1.orig/virtinst/guest.py	2017-03-09 18:11:08.673023724 +0100
++++ virt-manager-1.4.1/virtinst/guest.py	2017-03-09 18:11:08.673023724 +0100
+@@ -794,10 +794,7 @@
              return
  
          if self.os.is_hvm() and self.type == "xen":

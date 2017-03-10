@@ -3,11 +3,11 @@ Description: use qxl by default for Ubuntu VMs, it seems to work better
 Author: Marc Deslauriers <marc.deslauriers@canonical.com>
 Updated: 2016-01-28
 
-Index: virt-manager-1.4.0/virtinst/osdict.py
+Index: virt-manager-1.4.1/virtinst/osdict.py
 ===================================================================
---- virt-manager-1.4.0.orig/virtinst/osdict.py	2016-10-03 23:38:59.203893252 +0200
-+++ virt-manager-1.4.0/virtinst/osdict.py	2016-10-03 23:38:59.199893170 +0200
-@@ -506,21 +506,6 @@
+--- virt-manager-1.4.1.orig/virtinst/osdict.py	2017-03-09 18:11:19.348924418 +0100
++++ virt-manager-1.4.1/virtinst/osdict.py	2017-03-09 18:11:19.344924455 +0100
+@@ -513,21 +513,6 @@
          if guest.os.is_pseries():
              return "vga"
  

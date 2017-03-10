@@ -13,10 +13,10 @@ Author: Marc Deslauriers <marc.deslauriers@canonical.com>
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/1291370
 Updated: 2016-01-28
 
-Index: virt-manager-1.4.0/virtManager/console.py
+Index: virt-manager-1.4.1/virtManager/console.py
 ===================================================================
---- virt-manager-1.4.0.orig/virtManager/console.py	2016-10-03 23:32:12.459617527 +0200
-+++ virt-manager-1.4.0/virtManager/console.py	2016-10-03 23:32:12.451617362 +0200
+--- virt-manager-1.4.1.orig/virtManager/console.py	2017-03-09 18:11:13.356980125 +0100
++++ virt-manager-1.4.1/virtManager/console.py	2017-03-09 18:11:13.352980162 +0100
 @@ -20,6 +20,7 @@
  #
  
@@ -35,7 +35,7 @@ Index: virt-manager-1.4.0/virtManager/console.py
      def is_visible(self):
          if self.topwin:
              return self.topwin.get_visible()
-@@ -782,7 +786,7 @@
+@@ -783,7 +787,7 @@
              self._enable_modifiers()
          elif self._someone_has_focus():
              self._disable_modifiers()
