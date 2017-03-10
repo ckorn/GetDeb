@@ -1,3 +1,26 @@
+electrum (2.8.0-1~getdeb2) xenial; urgency=medium
+
+  * New upstream version
+    * Wallet file encryption using ECIES: A keypair is derived from the
+    wallet password. Once the wallet is decrypted, only the public key
+    is retained in memory, in order to save the encrypted file.
+    * The daemon requires wallets to be explicitly loaded before
+    commands can use them. Wallets can be loaded using: 'electrum
+    daemon load_wallet [-w path]'. This command will require a
+    password if the wallet is encrypted.
+    * Invoices and contacts are stored in the wallet file and are no
+    longer shared between wallets. Previously created invoices and
+    contacts files may be imported from the menu.
+    * Fees improvements:
+    - Dynamic fees are enabled by default.
+    - Child Pays For Parent (CPFP) dialog in the GUI.
+    - RBF is automatically proposed for low fee transactions.
+    * Support for Segregated Witness (testnet only).
+    * Support for Digital Bitbox hardware wallet.
+    * The GUI shows a blue icon when connected using a proxy.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 09 Mar 2017 18:46:07 +0100
+
 electrum (2.7.18-1~getdeb1) xenial; urgency=low
 
   * source package automatically created by stdeb 0.8.5

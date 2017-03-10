@@ -1,0 +1,14 @@
+# pysocks creates the dependency python-pysocks. it is just python-socks
+Index: electrum-2.8.0/setup.py
+===================================================================
+--- electrum-2.8.0.orig/setup.py	2017-03-09 18:34:52.000000000 +0100
++++ electrum-2.8.0/setup.py	2017-03-09 21:39:14.582093060 +0100
+@@ -44,7 +44,7 @@
+         'protobuf',
+         'dnspython',
+         'jsonrpclib',
+-        'PySocks>=1.6.6',
++        'Socks>=1.6.6',
+     ],
+     packages=[
+         'electrum',
