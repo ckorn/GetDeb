@@ -6,3 +6,13 @@ export PYBUILD_NAME=electrum
 %:
 	dh $@ --with python2 --buildsystem=pybuild
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf lib/locale
+	rm -rf Electrum.egg-info
+
+override_dh_auto_build:
+	dh_auto_build
+	pyrcc4 icons.qrc -o gui/qt/icons_rc.py
+	protoc --proto_path=lib/ --python_out=lib/ lib/paymentrequest.proto
+	./contrib/make_locale

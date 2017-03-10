@@ -5,7 +5,14 @@ Priority: optional
 Build-Depends: debhelper (>= 9),
                dh-python,
                python-setuptools (>= 0.6b3),
-               python-all (>= 2.6.6-3)
+               python-all (>= 2.6.6-3),
+               python-requests,
+               python-socks,
+               python-pyaes,
+               pyqt4-dev-tools,
+               protobuf-compiler,
+               python-pycurl,
+               gettext
 Standards-Version: 3.9.7
 Homepage: https://electrum.org
 
