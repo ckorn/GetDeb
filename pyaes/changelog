@@ -1,3 +1,9 @@
+pyaes (1.6.0-1~getdeb2) xenial; urgency=medium
+
+  * Fix debian/watch
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 10 Mar 2017 23:21:16 +0100
+
 pyaes (1.6.0-1~getdeb1) xenial; urgency=low
 
   * source package automatically created by stdeb 0.8.5
