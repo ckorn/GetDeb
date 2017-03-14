@@ -1,3 +1,37 @@
+filezilla (3.25.0-1~getdeb1) yakkety; urgency=medium
+
+  * New upstream version
+    2017-03-13 - FileZilla Client 3.25.0 released
+    New features:
+      OS X: The minimum required OS X version is now 10.9
+
+    Bugfixes and minor changes:
+      OS X: Disable App Nap during transfers and other operations
+      OS X: Downloaded updates are now stored in the Downloads directory
+      OS X: Fix initial toolbar state on startup if it was hidden when
+      FileZilla was last closed
+      Fix reconnect delay logic which broke in 3.25.0-beta1
+      Fix piecewise creation of remote paths using FTP which broke in
+      3.25.0-beta1
+
+    2017-03-04 - FileZilla Client 3.25.0-rc1 released
+    Bugfixes and minor changes:
+
+      Fix encryption selection for FTP in the Site Manager which broke in
+      3.25.0-beta1
+      Small changes to error message texts
+
+    2017-02-24 - FileZilla Client 3.25.0-beta1 released
+    New features:
+      Major refactoring of the FileZilla internals.
+
+    Bugfixes and minor changes:
+
+      Scale width of fields in the status line control on high-DPI displays
+      Fix duplicate mnemonic in "Files currently being edited" dialog.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 13 Mar 2017 18:25:35 +0100
+
 filezilla (3.24.1-1~getdeb1) yakkety; urgency=medium
 
   * New upstream version

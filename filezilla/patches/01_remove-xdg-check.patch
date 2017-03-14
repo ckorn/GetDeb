@@ -1,10 +1,10 @@
 Author: Adrien Cunin <adri2000@ubuntu.com>
 Description: make configure only warn if xdg-open is not present.
-Index: filezilla-3.24.1/configure.ac
+Index: filezilla-3.25.0/configure.ac
 ===================================================================
---- filezilla-3.24.1.orig/configure.ac	2017-03-02 18:47:48.088589454 +0100
-+++ filezilla-3.24.1/configure.ac	2017-03-02 18:47:48.088589454 +0100
-@@ -608,7 +608,7 @@
+--- filezilla-3.25.0.orig/configure.ac	2017-03-13 18:28:03.919222631 +0100
++++ filezilla-3.25.0/configure.ac	2017-03-13 18:28:03.911222783 +0100
+@@ -614,7 +614,7 @@
    if echo "`$WX_CONFIG_WITH_ARGS --basename`" | grep -i gtk > /dev/null 2>&1; then
      AC_PATH_PROG(xdgopen, xdg-open)
      if test -z "$xdgopen"; then
