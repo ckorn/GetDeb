@@ -1,3 +1,9 @@
+rssguard (3.4.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 13 Mar 2017 18:04:48 +0100
+
 rssguard (3.3.7-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
