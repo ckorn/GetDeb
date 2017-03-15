@@ -3,6 +3,7 @@ Section: x11
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>=9),
+               dh-autoreconf,
                cmake,
                valac (>= 0.16),
                libglib2.0-dev (>= 2.29.0),
@@ -12,7 +13,8 @@ Build-Depends: debhelper (>=9),
                libgio2.0-cil-dev,
                libgee-0.8-dev,
                libsoup2.4-dev,
-               libxml2-utils
+               libxml2-utils,
+               libgstreamer-plugins-base1.0-dev
 Standards-Version: 3.9.7
 Homepage: https://github.com/haecker-felix/gradio
 
