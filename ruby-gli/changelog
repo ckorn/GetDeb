@@ -1,3 +1,9 @@
+ruby-gli (2.16.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 21 Mar 2017 18:25:20 +0100
+
 ruby-gli (2.15.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
