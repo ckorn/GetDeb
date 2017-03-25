@@ -1,3 +1,9 @@
+pycharm (2017.1-1~getdeb2) xenial; urgency=medium
+
+  * Fix build for amd64
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 25 Mar 2017 13:11:57 +0100
+
 pycharm (2017.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
