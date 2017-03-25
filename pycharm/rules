@@ -14,6 +14,7 @@ ifeq ($(DEB_BUILD_ARCH),amd64)
 	cp ./helpers/pydev/pydevd_attach_to_process/attach_linux_amd64.so \
 	   debian/pycharm/usr/lib/pycharm/
 	rm -f debian/pycharm/usr/lib/pycharm/jre/jre/lib/amd64/libavplugin.so
+	rm -f debian/pycharm/usr/lib/pycharm/jre/lib/amd64/libavplugin.so
 else
 	rm debian/pycharm/usr/lib/pycharm/bin/fsnotifier64
 	rm -f debian/pycharm-data/usr/share/pycharm/helpers/pydev/pydevd_attach_to_process/attach_linux_amd64.so
