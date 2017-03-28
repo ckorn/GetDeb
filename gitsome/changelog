@@ -1,3 +1,9 @@
+gitsome (0.7.0-1~getdeb1) yakkety; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 27 Mar 2017 17:50:26 +0200
+
 gitsome (0.6.0-1~getdeb1) yakkety; urgency=low
 
   * source package automatically created by stdeb 0.8.5
