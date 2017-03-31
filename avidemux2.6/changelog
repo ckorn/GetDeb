@@ -1,3 +1,26 @@
+avidemux2.6 (1:2.6.19-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Filter : All filters with preview have better navigation dialogs
+    * Filter : Delogo filter UI redone
+    * Filter : Fixed changeFps/resampleFps seeking
+    * TS/Demux : HEVC support improved
+    * Flv/Demux : Support large files (rcdrone)
+    * Audio : Allow EAC3 as external audio track
+    * UI : General usability cleanup (euma)
+    * UI : Allow using the last read folder as default save folder (euma)
+    * UI : 2 pass encoding dialog cleanup (euma)
+    * UI : Dynamically enable/disable menu (euma)
+    * UI : Customizable keyboard shortcut (euma)
+    * UI : Allow reverting page up/down (euma)
+    * Codec : Better support for 10bits
+    * i18n : Russian translation updated (TotalCaesar659)
+    * i18n : Greek translation updated (nikoss)
+    * i18n : General cleanup (euma)
+    * Updated ffmpeg libs to 3.0.7
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 30 Mar 2017 17:44:27 +0200
+
 avidemux2.6 (1:2.6.18-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
