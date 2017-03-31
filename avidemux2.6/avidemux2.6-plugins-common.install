@@ -22,14 +22,12 @@ usr/lib/ADM_plugins6/videoEncoders/libADM_ve_huff.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_black.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_fadeTo.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_fadeToBlack.so
-usr/lib/ADM_plugins6/videoFilters/libADM_vf_blackenBorders.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_removePlane.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_median.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_largeMedian.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_lavDeint.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_swapUV.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_kernelDeint.so
-usr/lib/ADM_plugins6/videoFilters/libADM_vf_msharpen.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_vdpauFilterDeint.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_vdpauFilter.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_colorYuv.so

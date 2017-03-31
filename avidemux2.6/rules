@@ -5,7 +5,7 @@ configure-stamp:
 	dh_testdir
 	dh_autotools-dev_updateconfig
 	mkdir -p build/avidemux/ADM_libraries
-	cp avidemux_core/ffmpeg_package/ffmpeg-3.0.5.tar.bz2 build/avidemux/ADM_libraries
+	cp avidemux_core/ffmpeg_package/ffmpeg-*.tar.bz2 build/avidemux/ADM_libraries
 	#cp avidemux/ADM_libraries/ffmpeg-0.9.tar.bz2 build/avidemux/ADM_libraries
 	#cp avidemux/ADM_libraries/libswscale_r32049.tar.gz build/avidemux/ADM_libraries
 
@@ -60,7 +60,7 @@ install: build
 	#cd build && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 
 	chmod +x bootStrap.bash
-	./bootStrap.bash --with-core --with-cli --with-qt4 --with-plugins
+	./bootStrap.bash --with-core --with-cli --with-plugins
 
 	rm -rf debian/tmp/usr/bin/i18n
 	rm -rf debian/tmp/usr/include

@@ -6,11 +6,11 @@ Author: http://avidemux.org/admForum/viewtopic.php?id=6739
  avidemux/prefs.in                              |    2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Index: avidemux2.6-2.6.14/avidemux_core/ADM_coreUtils/src/prefs2.conf
+Index: avidemux2.6-2.6.19/avidemux_core/ADM_coreUtils/src/prefs2.conf
 ===================================================================
---- avidemux2.6-2.6.14.orig/avidemux_core/ADM_coreUtils/src/prefs2.conf	2016-09-17 23:46:42.443134409 +0200
-+++ avidemux2.6-2.6.14/avidemux_core/ADM_coreUtils/src/prefs2.conf	2016-09-17 23:46:42.439134326 +0200
-@@ -64,7 +64,7 @@
+--- avidemux2.6-2.6.19.orig/avidemux_core/ADM_coreUtils/src/prefs2.conf	2017-03-30 17:52:12.838442785 +0200
++++ avidemux2.6-2.6.19/avidemux_core/ADM_coreUtils/src/prefs2.conf	2017-03-30 17:52:12.834442837 +0200
+@@ -77,7 +77,7 @@
  #
  audio_device{
  string:audiodevice,			ALSA
@@ -19,11 +19,11 @@ Index: avidemux2.6-2.6.14/avidemux_core/ADM_coreUtils/src/prefs2.conf
  }
  uint32_t:videodevice,			0,	0,	10
  #
-Index: avidemux2.6-2.6.14/avidemux_core/ADM_coreUtils/src/prefs2_pref.h
+Index: avidemux2.6-2.6.19/avidemux_core/ADM_coreUtils/src/prefs2_pref.h
 ===================================================================
---- avidemux2.6-2.6.14.orig/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2016-09-17 23:46:42.443134409 +0200
-+++ avidemux2.6-2.6.14/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2016-09-17 23:47:13.779776391 +0200
-@@ -46,7 +46,7 @@
+--- avidemux2.6-2.6.19.orig/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2017-03-30 17:52:12.838442785 +0200
++++ avidemux2.6-2.6.19/avidemux_core/ADM_coreUtils/src/prefs2_pref.h	2017-03-30 17:52:12.834442837 +0200
+@@ -56,7 +56,7 @@
  { LASTPROJECTS_FILE4,"lastprojects.file4"                             ,ADM_param_stdstring  	,"",	0,	0},
  { MESSAGE_LEVEL,"message_level"                                       ,ADM_param_uint32_t	,"2",	0,	2},
  { AUDIO_DEVICE_AUDIODEVICE,"audio_device.audiodevice"                 ,ADM_param_stdstring  	,"ALSA",	0,	0},
