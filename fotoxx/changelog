@@ -1,3 +1,68 @@
+fotoxx (17.04.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+     + Crash in thumbnail gallery of RAW files if thumbnail size is large.
+     + Sharpen Image: error message if [apply] and no method was chosen.
+     + Retouch Combo: [reset] omitted reset of "amplify" slider.
+     + Popup menus: offset from mouse position to make menu cancel easier. 
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 11 Apr 2017 20:18:57 +0200
+
+fotoxx (17.04-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Technical:
+     + Source code revisions for GTK API changes (Ubuntu 17.04, Fedora 25).
+     + Implementation of AppImage, a distro-agnostic packaging format.
+     + Smoother gallery scrolling via thread to pre-fetch thumbnail images.
+    Functionality:
+     + Image Montage: join selected images together into a compact table
+     format.
+       Images included in the table can be clicked to show a full-size image.
+     + Paint Image: modified to make it easier to use with a Wacom tablet. 
+     + Paint Image: use any image as a custom color palette - click to select
+     color.
+     + Edited images get an automatic tag, allowing "edited" as a search
+     criteria.
+     + Alien Colors effect: repaint an image or area with random strange
+     colors.
+     + Stack/Paint: Transient forground objects can be removed automatically,
+     and a
+       moving subject can be shown in multiple positions against the
+       background.
+     + Twist effect: twist or swirl an image around a mouse-selected central
+     point.
+     + Script Files: most of the special effects functions are now
+     scriptable.
+     + Denoise - measure noise: the noise is more completely characterized.
+     + The desktop wallpaper functions were removed because they stopped
+     working.
+    User Interface:
+     + Paint Image and Clone Image were split into separate functions.
+     + Trim/Rotate: margin sides can be dragged in addition to the corners.
+     + Rename, Copy/Move, Delete/Trash: options were added to keep these
+     dialogs 
+       open or not (keep open is easier/faster if processing multiple files).
+     + Albums can now be sorted like any other gallery, but cannot be edited
+     when
+       in an out-of-sequence condition. To edit, re-open the album. 
+     + User Settings: an album name can be specified as the startup gallery.
+    Bug Fixes:
+     + Startup with file parameter: now works for absolute or relative file
+     name.
+     + Correctly handle file and directory names containing '$' characters.
+     + Voodoo functions can now be assigned to shortcut keys like any other.
+     + Disallow re-sorting of a metadata report, which loses the link between
+     
+       images and their metadata. Sort the gallery before generating the
+       report.
+     + Copy to Desktop or Clipboard: an edited but unsaved file copies
+     correctly.
+     + Trim/Rotate: stop sporadic motion of zoomed image when margins are
+     dragged.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 03 Apr 2017 17:39:16 +0200
+
 fotoxx (17.01.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version

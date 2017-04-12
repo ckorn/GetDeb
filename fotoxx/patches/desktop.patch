@@ -1,0 +1,14 @@
+# fix icon path
+Index: fotoxx-17.04.1/fotoxx.desktop
+===================================================================
+--- fotoxx-17.04.1.orig/fotoxx.desktop	2017-04-11 13:03:44.000000000 +0200
++++ fotoxx-17.04.1/fotoxx.desktop	2017-04-11 20:21:58.135212348 +0200
+@@ -8,7 +8,7 @@
+ Terminal=false
+ MimeType=image/bmp;image/gif;image/tiff;image/jpeg;image/png;
+ Exec=fotoxx %f
+-Icon=/usr/share/icons/fotoxx.png
++Icon=/usr/share/fotoxx/icons/fotoxx.png
+ 
+ Actions=Last;Recent;Blank;
+ 
