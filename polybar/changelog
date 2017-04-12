@@ -1,3 +1,9 @@
+polybar (3.0.5-1~getdeb1) yakkety; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 04 Apr 2017 17:43:05 +0200
+
 polybar (3.0.4-1~getdeb1) yakkety; urgency=medium
 
   * New upstream version
