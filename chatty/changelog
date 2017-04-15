@@ -1,3 +1,70 @@
+chatty (0.8.5.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Fixed Whispering that didn't work due to changed Twitch behaviour
+    - Fixed bug related to Custom Commands which would prevent startup
+    - Minor change to not removing leading/trailing whitespace from entering
+      commands, to allow for some more usages
+    - Updated help
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 14 Apr 2017 10:08:27 +0200
+
+chatty (0.8.5-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    ### New features
+    - Admin Dialog: Added support for setting a Community
+    - Added AutoMod dialog (Extra - AutoMod) to approve/deny messages
+    - User Dialog: Added ban reasons
+    - Added support for Cheer emoticons
+    - Added Follower-Only mode support
+    - Added "/untimeout" command
+    - Added Window Standalone Bundle (no installed Java required)
+
+    ### Other changes
+    - Moved to v5 of the Twitch API
+    - Only show 2x size of GIF emotes if scaling is 160% or higher
+    - Allow "!highlight" command to be executed locally as well
+    - Improved URL parsing a bit
+
+    ### Settings
+    - Added automatic Chat Log splits (daily, weekly, monthly) and channel
+      directories settings
+    - Added setting to disable Chat Log file locking
+    - Changed line spacing setting defaults
+    - Changed Ignore Mode default to "Hide"
+    - Further attempts to improve reliability of saving settings
+    - Added "maxReconnectionAttempts" setting (commands only)
+    - Added setting for placement of the Tabs
+    - Added setting for per-Tab Chat Buffer
+    - Added "/set" command special value "!" to toggle boolean settings
+    - Extended Emote Ignore feature to Cheer Emoticons
+    - Moved "Simple Title" setting to Titlebar options submenu
+    - Reorganized Settings Dialog a bit
+
+    ### Custom Commands
+    - New parser which may require changes to some existing Custom Commands
+    - Added some simple functions for more flexibility (like $if to check if
+    a
+      parameter exists)
+    - Changed format of Custom Menus to support defining commands directly in
+    the
+      menu setting as well as custom submenus
+    - Changed format of User Dialog Buttons to support adding several rows of
+      buttons, as well as moving/removing the Mod/Unmod button
+    - Added "Test" button to some settings to check format of commands and
+    show a
+      limited preview of Custom Menus
+    - Added replacements for stream info (title, game, viewers, ..)
+
+    ### Bugfixes
+    - Fixed "/refresh bttvemotes" command when not on a channel
+    - Further improved GIF rendering
+    - Fixed rare error in Webserver
+    - Fixed some Settings Dialog bugs
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 12 Apr 2017 18:46:11 +0200
+
 chatty (0.8.4.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
