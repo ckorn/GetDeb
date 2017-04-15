@@ -1,10 +1,10 @@
 # set the install directory directly
 # looking it up does not work. probably because of the symlinks.
-Index: pycharm-2016.3/bin/pycharm.sh
+Index: pycharm-2017.1.1/bin/pycharm.sh
 ===================================================================
---- pycharm-2016.3.orig/bin/pycharm.sh	2016-11-24 18:11:38.846761863 +0100
-+++ pycharm-2016.3/bin/pycharm.sh	2016-11-24 18:13:01.968168547 +0100
-@@ -50,12 +50,11 @@
+--- pycharm-2017.1.1.orig/bin/pycharm.sh	2017-04-13 18:24:13.470288197 +0200
++++ pycharm-2017.1.1/bin/pycharm.sh	2017-04-13 18:27:10.116315179 +0200
+@@ -59,12 +59,11 @@
    done
  fi
  
@@ -22,26 +22,27 @@ Index: pycharm-2016.3/bin/pycharm.sh
  
  # ---------------------------------------------------------------------
  # Locate a JDK installation directory which will be used to run the IDE.
-@@ -75,49 +74,14 @@
- elif [ -n "$JAVA_HOME" -a -x "$JAVA_HOME/bin/java" ]; then
-   JDK="$JAVA_HOME"
- else
--  JAVA_BIN_PATH=`which java`
--  if [ -n "$JAVA_BIN_PATH" ]; then
--    if [ "$OS_TYPE" = "FreeBSD" -o "$OS_TYPE" = "MidnightBSD" ]; then
--      JAVA_LOCATION=`JAVAVM_DRYRUN=yes java | "$GREP" '^JAVA_HOME' | "$CUT" -c11-`
--      if [ -x "$JAVA_LOCATION/bin/java" ]; then
--        JDK="$JAVA_LOCATION"
--      fi
--    elif [ "$OS_TYPE" = "SunOS" ]; then
--      JAVA_LOCATION="/usr/jdk/latest"
--      if [ -x "$JAVA_LOCATION/bin/java" ]; then
--        JDK="$JAVA_LOCATION"
--      fi
--    elif [ "$OS_TYPE" = "Darwin" ]; then
--      JAVA_LOCATION=`/usr/libexec/java_home`
--      if [ -x "$JAVA_LOCATION/bin/java" ]; then
--        JDK="$JAVA_LOCATION"
+@@ -98,43 +97,7 @@
+   if isJDK $JAVA_HOME; then
+     JDK="$JAVA_HOME"
+   else
+-    JAVA_BIN_PATH=`which java`
+-    if [ -n "$JAVA_BIN_PATH" ]; then
+-      if [ "$OS_TYPE" = "FreeBSD" -o "$OS_TYPE" = "MidnightBSD" ]; then
+-        JAVA_LOCATION=`JAVAVM_DRYRUN=yes java | "$GREP" '^JAVA_HOME' | "$CUT" -c11-`
+-        if [ -x "$JAVA_LOCATION/bin/java" ]; then
+-          JDK="$JAVA_LOCATION"
+-        fi
+-      elif [ "$OS_TYPE" = "SunOS" ]; then
+-        JAVA_LOCATION="/usr/jdk/latest"
+-        if [ -x "$JAVA_LOCATION/bin/java" ]; then
+-          JDK="$JAVA_LOCATION"
+-        fi
+-      elif [ "$OS_TYPE" = "Darwin" ]; then
+-        JAVA_LOCATION=`/usr/libexec/java_home`
+-        if [ -x "$JAVA_LOCATION/bin/java" ]; then
+-          JDK="$JAVA_LOCATION"
+-        fi
 -      fi
 -    fi
 -
@@ -62,11 +63,11 @@ Index: pycharm-2016.3/bin/pycharm.sh
 -        JDK="$JAVA_LOCATION"
 -      fi
 -    fi
--  fi
-+  JDK=`update-alternatives --list java | grep java-8 | sed 's,jre/bin/java,,'`
++    JDK=`update-alternatives --list java | grep java-8 | sed 's,jre/bin/java,,'`
+   fi
  fi
  
- JAVA_BIN="$JDK/bin/java"
+@@ -142,6 +105,7 @@
  if [ ! -x "$JAVA_BIN" ]; then
    JAVA_BIN="$JDK/jre/bin/java"
  fi
