@@ -1,3 +1,9 @@
+speedtest-cli (1.0.4-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 13 Apr 2017 18:13:05 +0200
+
 speedtest-cli (1.0.3-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
