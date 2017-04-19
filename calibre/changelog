@@ -1,3 +1,9 @@
+calibre (2.82.0-1~getdeb3~zesty) zesty; urgency=medium
+
+  * Rebuild for zesty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 17 Apr 2017 12:27:23 +0200
+
 calibre (2.82.0-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * New upstream version
