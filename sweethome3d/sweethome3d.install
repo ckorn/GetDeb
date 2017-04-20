@@ -1,9 +1,0 @@
-install/sweethome3d.jar			usr/share/sweethome3d
-debian/sweethome3d.sh			usr/share/sweethome3d
-debian/sweethome3d.desktop		usr/share/applications
-
-debian/icons/16/sweethome3d.png		usr/share/icons/hicolor/16x16/apps
-debian/icons/22/sweethome3d.png		usr/share/icons/hicolor/22x22/apps
-debian/icons/48/sweethome3d.png		usr/share/icons/hicolor/48x48/apps
-debian/icons/128/sweethome3d.png	usr/share/icons/hicolor/128x128/apps
-debian/icons/sweethome3d.xpm		usr/share/pixmaps

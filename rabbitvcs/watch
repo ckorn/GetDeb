@@ -1,3 +1,0 @@
-version=3
-https://github.com/rabbitvcs/rabbitvcs/releases \
-    (?:.*/)?v([\d\.]+)\.tar\.gz
