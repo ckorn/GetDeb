@@ -1,3 +1,9 @@
+opentoonz (1.1.2+git170204-1~getdeb4~zesty) zesty; urgency=medium
+
+  * Rebuild for zesty
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 17 Apr 2017 16:39:34 +0200
+
 opentoonz (1.1.2+git170204-1~getdeb2~yakkety) yakkety; urgency=medium
 
   * Publish nightly build (LP: #1661765)
