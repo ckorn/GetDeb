@@ -24,5 +24,5 @@ $(PKG)_$(VER).orig.tar.xz:
 	&& find . -depth -type f -iname '*.bat' -exec $(RM) {} \; -printf 'removed %p\n'
 	@echo "# Packing..."
 	find -L "$(PKG)-$(VER)" -xdev -type f -print | sort \
-	| XZ_OPT="-6v" tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
-	&& $(RM) -r "$(PKG)-$(VER)"
+	| XZ_OPT="-6v" tar -caf "$(PKG)_$(VER).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
+	&& $(RM) -r "$(PKG)-$(VER)" && $(RM) $(PKG)_$(VER).orig.tar.gz
