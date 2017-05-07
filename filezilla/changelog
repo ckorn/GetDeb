@@ -1,3 +1,25 @@
+filezilla (3.25.2-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+    2017-04-30 - FileZilla Client 3.25.2 released
+    Bugfixes and minor changes:
+
+    * SFTP components have been updated and are now based on PuTTY 0.69
+    * Fixed potential stall during the final listing operation when finishing
+    a queue which contained uploads
+
+    2017-04-23 - FileZilla Client 3.25.2-rc1 released
+    Bugfixes and minor changes:
+
+    * Fix crash if filters.xml has become corrupted
+    * Fix FTP proxy support
+    * Fix sending of FTP keep-alive commands
+    * MSW: Windows Vista is no longer supported
+    * MSW: File and directory icons now also appear on systems that have no
+    Windows directory
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 May 2017 00:23:30 +0200
+
 filezilla (3.25.1-1~getdeb1) yakkety; urgency=medium
 
   * New upstream version
