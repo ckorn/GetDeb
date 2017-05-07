@@ -1,3 +1,14 @@
+fotoxx (17.04.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    Bug Fixes:
+     + Workaround for GTK draw event loop in Paint Image palette color
+     selection.
+     + Retouch Combo: always update distribution graph for dialog widget
+     changes.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 May 2017 00:32:03 +0200
+
 fotoxx (17.04.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
