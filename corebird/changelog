@@ -1,3 +1,25 @@
+corebird (1.5-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+      - Media attached to tweets can be downloaded using Right Click
+        and selecting "save as"
+      - Profiles use the profile background color set in the Twitter
+        settings if no banner is set
+      - The tweet compose window now features a "favorite image" view that
+        allows users to save often sent images and quickly add them to tweets
+      - The media dialog now shows Previous/Next buttons to quickly switch
+        between multiple media attachments of a tweet>
+      - The Vine support has been removed since the project is discontinued
+      - Allow text selection in Direct Messages
+      - New --account parameter allows opening the window for the given
+        account only
+      - Support tweets with up to 50 replied-to users.
+      - Add back verified icons next to user avatars
+      - Redesigned account creation UI
+      - Tons of bug fixes
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 May 2017 00:35:31 +0200
+
 corebird (1.4.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
