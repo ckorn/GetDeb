@@ -1,3 +1,31 @@
+remotebox (2.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Implemented a connection profile manager and changed the connection
+    dialog.
+      Passwords can optionally be saved, however if you're highly concerned
+      about
+      security, the password can still be manually entered at connection
+      time.
+    - Improved remote file choosers by remembering their last location
+    throughout a
+      RemoteBox session.
+    - Added preference option to sort the guest list alphabetically or leave
+    it in
+      natural order.
+    - Default RDP option now uses the FreeRDP new syntax unless previously
+      configured
+    - Added OS icon for Windows 2016
+    - Fixed regression when setting setting the auto start delay time for a
+    guest,
+      it would get reset to 0
+    - When renaming the current snapshot, the new name would not be shown in
+    the
+      guest list until refreshed. This has now been fixed.
+    - Various minor GUI tweaks
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 06 May 2017 00:49:35 +0200
+
 remotebox (2.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
