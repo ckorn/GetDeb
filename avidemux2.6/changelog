@@ -1,3 +1,14 @@
+avidemux2.6 (1:2.6.20-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    * Audio : AAC in mpegTS fix
+    * Audio : external AAC import fix
+    * MKV : try to better guess original timestamp
+    * i18n : Russian and German translation update (TotalCaesar659 / euma
+    * UI : Filter UI fix
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 05 May 2017 23:43:35 +0200
+
 avidemux2.6 (1:2.6.19-1~getdeb2~zesty) zesty; urgency=medium
 
   * Rebuild for zesty
