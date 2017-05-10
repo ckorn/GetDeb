@@ -1,0 +1,3 @@
+usr/lib/screentranslator/ScreenTranslator		usr/bin/screentranslator
+usr/share/screentranslator/STIconBlue.png		usr/share/pixmaps/ScreenTranslator.png
+usr/share/screentranslator/translators			usr/lib/screentranslator/translators

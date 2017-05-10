@@ -1,0 +1,14 @@
+# fix executable path
+Index: screentranslator-2.0.0/distr/deb/usr/share/applications/ScreenTranslator.desktop
+===================================================================
+--- screentranslator-2.0.0.orig/distr/deb/usr/share/applications/ScreenTranslator.desktop	2015-11-06 20:58:16.000000000 +0100
++++ screentranslator-2.0.0/distr/deb/usr/share/applications/ScreenTranslator.desktop	2017-05-09 18:05:01.826080659 +0200
+@@ -2,7 +2,7 @@
+ Version=1
+ Name=Screen Translator
+ Comment=Screen capture, OCR and translation tool.
+-Exec=/opt/ScreenTranslator/ScreenTranslator
++Exec=/usr/bin/screentranslator
+ Icon=ScreenTranslator.png
+ Terminal=false
+ Type=Application
