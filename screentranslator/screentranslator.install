@@ -1,0 +1,4 @@
+images/STIconBlue.png	usr/share/screentranslator
+distr/deb/usr/share/applications/ScreenTranslator.desktop	usr/share/applications
+translators		usr/share/screentranslator
+ScreenTranslator	usr/lib/screentranslator
