@@ -3,23 +3,23 @@ Description: do not build unrar extension as we strip unrar from the tarball
 Forwarded: not-needed
 Last-Update: 2013-04-04
 
-Index: calibre-2.79.0/src/calibre/ebooks/metadata/archive.py
+Index: calibre-2.85.0/src/calibre/ebooks/metadata/archive.py
 ===================================================================
---- calibre-2.79.0.orig/src/calibre/ebooks/metadata/archive.py	2017-02-11 17:10:30.436314116 +0100
-+++ calibre-2.79.0/src/calibre/ebooks/metadata/archive.py	2017-02-11 17:10:30.436314116 +0100
+--- calibre-2.85.0.orig/src/calibre/ebooks/metadata/archive.py	2017-05-12 19:28:48.018671247 +0200
++++ calibre-2.85.0/src/calibre/ebooks/metadata/archive.py	2017-05-12 19:29:27.990031542 +0200
 @@ -44,7 +44,7 @@
-     description = _('Extract common e-book formats from archives '
-         '(zip/rar) files. Also try to autodetect if they are actually '
-         'cbz/cbr files.')
+     description = _('Extract common e-book formats from archive files '
+         '(ZIP/RAR). Also try to autodetect if they are actually '
+         'CBZ/CBR files.')
 -    file_types = set(['zip', 'rar'])
 +    file_types = set(['zip'])
      supported_platforms = ['windows', 'osx', 'linux']
      on_import = True
  
-Index: calibre-2.79.0/setup/extensions.json
+Index: calibre-2.85.0/setup/extensions.json
 ===================================================================
---- calibre-2.79.0.orig/setup/extensions.json	2017-02-11 17:10:30.436314116 +0100
-+++ calibre-2.79.0/setup/extensions.json	2017-02-11 17:11:22.247206313 +0100
+--- calibre-2.85.0.orig/setup/extensions.json	2017-05-12 19:28:48.018671247 +0200
++++ calibre-2.85.0/setup/extensions.json	2017-05-12 19:28:48.018671247 +0200
 @@ -211,16 +211,5 @@
          "sources": "calibre/devices/mtp/unix/devices.c calibre/devices/mtp/unix/libmtp.c",
          "headers": "calibre/devices/mtp/unix/devices.h calibre/devices/mtp/unix/upstream/music-players.h calibre/devices/mtp/unix/upstream/device-flags.h",
