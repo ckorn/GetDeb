@@ -1,3 +1,9 @@
+libzenxml (2.4-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 06 Dec 2016 18:10:41 +0100
+
 libzenxml (2.3-1~getdeb1) trusty; urgency=medium
 
   * New upstream version

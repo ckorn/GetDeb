@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 Homepage: http://zenxml.sourceforge.net/
 
 Package: libzenxml2.0-dev
