@@ -1,3 +1,15 @@
+freefilesync (9.1-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 24 May 2017 16:59:45 +0200
+
+freefilesync (9.0-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 20 Apr 2017 18:52:03 +0200
+
 freefilesync (8.6-1~getdeb1) xenial; urgency=medium
 
   * New upstream version

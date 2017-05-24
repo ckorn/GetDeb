@@ -1,0 +1,25 @@
+# missing includes. why didn't upstream notice them?
+Index: freefilesync-9.1/fs/abstract.h
+===================================================================
+--- freefilesync-9.1.orig/fs/abstract.h	2017-05-24 00:07:08.000000000 +0200
++++ freefilesync-9.1/fs/abstract.h	2017-05-24 17:32:19.456340355 +0200
+@@ -13,6 +13,7 @@
+ #include <zen/optional.h>
+ #include <zen/serialize.h> //InputStream/OutputStream support buffered stream concept
+ #include "../lib/icon_holder.h"
++#include "zen/warn_static.h"
+ 
+ 
+ namespace zen
+Index: freefilesync-9.1/ui/main_dlg.cpp
+===================================================================
+--- freefilesync-9.1.orig/ui/main_dlg.cpp	2017-05-24 17:22:41.821236032 +0200
++++ freefilesync-9.1/ui/main_dlg.cpp	2017-05-24 17:40:59.852602005 +0200
+@@ -42,6 +42,7 @@
+ #include "../lib/help_provider.h"
+ #include "../lib/lock_holder.h"
+ #include "../lib/localization.h"
++#include "version_check_impl.h"
+ 
+ 
+ using namespace zen;

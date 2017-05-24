@@ -48,49 +48,51 @@ override_dh_auto_install:
 	mkdir -p $(IMGDIR)/16x16/mimetypes
 
 	# FreeFileSync
-	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/apps/freefilesync.png
-	convert lib/FreeFileSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-ffs.png
+	convert debian/FreeFileSync.ico[0] $(IMGDIR)/256x256/apps/freefilesync.png
+	convert debian/FreeFileSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-ffs.png
 	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
 	# See LP : 807013
 	#convert lib/FreeFileSync.ico[1] $(IMGDIR)/128x128/apps/freefilesync.png
 	#convert lib/FreeFileSync.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-ffs.png
-	convert lib/FreeFileSync.ico[2] $(IMGDIR)/48x48/apps/freefilesync.png
-	convert lib/FreeFileSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-ffs.png
-	convert lib/FreeFileSync.ico[3] $(IMGDIR)/32x32/apps/freefilesync.png
-	convert lib/FreeFileSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-ffs.png
-	convert lib/FreeFileSync.ico[4] $(IMGDIR)/16x16/apps/freefilesync.png
-	convert lib/FreeFileSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-ffs.png
+	convert debian/FreeFileSync.ico[2] $(IMGDIR)/48x48/apps/freefilesync.png
+	convert debian/FreeFileSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-ffs.png
+	convert debian/FreeFileSync.ico[3] $(IMGDIR)/32x32/apps/freefilesync.png
+	convert debian/FreeFileSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-ffs.png
+	convert debian/FreeFileSync.ico[4] $(IMGDIR)/16x16/apps/freefilesync.png
+	convert debian/FreeFileSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-ffs.png
 	
 	# RealTimeSync
-	convert RealTimeSync/RealTimeSync.ico[0] $(IMGDIR)/256x256/apps/realtimesync.png
-	convert RealTimeSync/RealTimeSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-real.png
+	convert debian/RealTimeSync.ico[0] $(IMGDIR)/256x256/apps/realtimesync.png
+	convert debian/RealTimeSync.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-real.png
 	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
 	# See LP : 807013
 	#convert RealtimeSync/RealtimeSync.ico[1] $(IMGDIR)/128x128/apps/realtimesync.png
 	#convert RealtimeSync/RealtimeSync.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-real.png
-	convert RealTimeSync/RealTimeSync.ico[2] $(IMGDIR)/48x48/apps/realtimesync.png
-	convert RealTimeSync/RealTimeSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-real.png
-	convert RealTimeSync/RealTimeSync.ico[3] $(IMGDIR)/32x32/apps/realtimesync.png
-	convert RealTimeSync/RealTimeSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-real.png
-	convert RealTimeSync/RealTimeSync.ico[4] $(IMGDIR)/16x16/apps/realtimesync.png
-	convert RealTimeSync/RealTimeSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
+	convert debian/RealTimeSync.ico[2] $(IMGDIR)/48x48/apps/realtimesync.png
+	convert debian/RealTimeSync.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-real.png
+	convert debian/RealTimeSync.ico[3] $(IMGDIR)/32x32/apps/realtimesync.png
+	convert debian/RealTimeSync.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-real.png
+	convert debian/RealTimeSync.ico[4] $(IMGDIR)/16x16/apps/realtimesync.png
+	convert debian/RealTimeSync.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-real.png
     
 	# FreeFileSync Batch
-	convert lib/Batch.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-batch.png
+	convert debian/Batch.ico[0] $(IMGDIR)/256x256/mimetypes/application-x-freefilesync-batch.png
 	# Do not generate 128x128 image on platform > Lucid, as 'convert' is not able to handle it
 	# See LP : 807013
 	#convert lib/Batch.ico[1] $(IMGDIR)/128x128/mimetypes/application-x-freefilesync-batch.png
-	convert lib/Batch.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-batch.png
-	convert lib/Batch.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-batch.png
-	convert lib/Batch.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-batch.png	
+	convert debian/Batch.ico[2] $(IMGDIR)/48x48/mimetypes/application-x-freefilesync-batch.png
+	convert debian/Batch.ico[3] $(IMGDIR)/32x32/mimetypes/application-x-freefilesync-batch.png
+	convert debian/Batch.ico[4] $(IMGDIR)/16x16/mimetypes/application-x-freefilesync-batch.png	
 
 	# Build desktop files
 	mkdir -p $(DESTRESDIR)/usr/share/applications
 	intltool-merge debian/po/freefilesync -d -u -c debian/po/.intltool-merge-cache debian/freefilesync.desktop.in $(DESTRESDIR)/usr/share/applications/freefilesync.desktop
 	intltool-merge debian/po/freefilesync -d -u -c debian/po/.intltool-merge-cache debian/realtimesync.desktop.in $(DESTRESDIR)/usr/share/applications/realtimesync.desktop
 
+	find debian/freefilesync/usr/share/FreeFileSync -type f -execdir chmod -x {} \;
+
 override_dh_installchangelogs:
-	dh_installchangelogs Build/Changelog.txt
+	dh_installchangelogs Changelog.txt
 
 get-orig-source:
 	# Uscan can grab upstream source zip
@@ -99,6 +101,7 @@ get-orig-source:
 	# Repacked source should have a top-level directory ending in .orig
 	# as a reminder to other developers
 	unzip FreeFileSync_$(DEB_UPSTREAM_VERSION)_Source.zip -d freefilesync-$(DEB_UPSTREAM_VERSION)
+	rm *.orig.tar.gz
 	cd freefilesync-$(DEB_UPSTREAM_VERSION) && \
 	    mv wx+ zen FreeFileSync/Source && \
 	    mv FreeFileSync/Build FreeFileSync/Source && \
@@ -107,7 +110,6 @@ get-orig-source:
 	    rmdir FreeFileSync/Source && \
 	    rmdir FreeFileSync
 	rm FreeFileSync_$(DEB_UPSTREAM_VERSION)_Source.zip
-	GZIP=--best tar -cz --owner root --group root --mode a+rX \
-			-f freefilesync_$(DEB_UPSTREAM_VERSION).orig.tar.gz \
-			freefilesync-$(DEB_UPSTREAM_VERSION)
-	rm -r freefilesync-$(DEB_UPSTREAM_VERSION) 
+	find -L "freefilesync-$(DEB_UPSTREAM_VERSION)" -xdev -type f -print | LC_ALL=C sort \
+	| XZ_OPT="-6v" tar -caf "freefilesync_$(DEB_UPSTREAM_VERSION).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
+	&& $(RM) -r "freefilesync-$(DEB_UPSTREAM_VERSION)"

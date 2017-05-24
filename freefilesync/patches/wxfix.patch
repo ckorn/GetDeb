@@ -1,10 +1,10 @@
 # http://www.freefilesync.org/forum/viewtopic.php?t=2585
 # http://www.freefilesync.org/forum/viewtopic.php?t=3891
-Index: freefilesync-8.6/ui/main_dlg.cpp
+Index: freefilesync-9.0/ui/main_dlg.cpp
 ===================================================================
---- freefilesync-8.6.orig/ui/main_dlg.cpp	2016-10-21 23:47:54.000000000 +0200
-+++ freefilesync-8.6/ui/main_dlg.cpp	2016-11-06 15:21:42.497335442 +0100
-@@ -1043,7 +1043,7 @@
+--- freefilesync-9.0.orig/ui/main_dlg.cpp	2017-04-21 19:57:33.132953493 +0200
++++ freefilesync-9.0/ui/main_dlg.cpp	2017-04-21 19:57:33.124953600 +0200
+@@ -956,7 +956,7 @@
          history.resize(globalSettings.gui.cfgFileHistMax);
  
      globalSettings.gui.cfgFileHistory = history;
