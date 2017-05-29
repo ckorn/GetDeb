@@ -1,3 +1,11 @@
+electrum (2.8.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * Blockchain checkpoints can be added and configured from the GUI.
+    * Fix crash on reading older wallet formats.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 29 May 2017 16:00:50 +0200
+
 electrum (2.8.2-1~getdeb2) xenial; urgency=medium
 
   * New upstream version
