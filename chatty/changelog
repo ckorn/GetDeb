@@ -1,3 +1,32 @@
+chatty (0.8.6-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    ### General
+    - Added new Notification system
+    - Added support for new sub messages
+    - Added button to sort some setting lists alphabetically
+    - Changed Emote Context Menu entry "Twitch Profile" to "Twitch Stream"
+    - Some other Settings Dialog and GUI improvements
+    - Made Addressbook mod commands channel setting case-insensitive
+    - Some debug output improvements
+    - Updated help
+
+    ### Custom Commands
+    - Added custom replacements
+    - Added $ifeq function
+    - Added feature to add channel-specific Custom Commands
+    - Made identifiers case-insensitive
+    - Allow absolute positioning of Custom Menu Items
+
+    ### Bugfixes
+    - Fixed word wrapping issues (hopefully)
+    - Fixed selection in chat window moving around
+    - Added workaround for error occuring in Java 1.8.0_131 (the actual cause
+    of the
+      error is still unclear, but hopefully this works well enough)
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 28 May 2017 18:13:13 +0200
+
 chatty (0.8.5.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
