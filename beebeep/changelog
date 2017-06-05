@@ -1,3 +1,9 @@
+beebeep (4.0.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Wed, 31 May 2017 19:34:02 +0200
+
 beebeep (3.0.9-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
