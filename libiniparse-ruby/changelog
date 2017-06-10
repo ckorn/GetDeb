@@ -1,3 +1,9 @@
+libiniparse-ruby (1.4.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 05 Jun 2017 20:56:49 +0200
+
 libiniparse-ruby (1.4.2-1~getdeb3~xenial) xenial; urgency=medium
 
   * Rebuild for xenial
