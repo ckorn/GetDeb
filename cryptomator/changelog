@@ -1,3 +1,9 @@
+cryptomator (1.2.5-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 24 Jun 2017 16:26:15 +0200
+
 cryptomator (1.2.4-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
