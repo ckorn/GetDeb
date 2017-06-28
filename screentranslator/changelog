@@ -1,3 +1,9 @@
+screentranslator (2.0.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 26 Jun 2017 18:06:51 +0200
+
 screentranslator (2.0.0-1~getdeb1) xenial; urgency=medium
 
   * Initial release
