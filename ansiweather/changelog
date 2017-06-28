@@ -1,3 +1,11 @@
+ansiweather (1.11-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Unicode symbols display is now off by default
+    - Shorten default greeting text: "Current weather" => "Weather"
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 24 Jun 2017 16:23:42 +0200
+
 ansiweather (1.10-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
