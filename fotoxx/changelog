@@ -1,3 +1,19 @@
+fotoxx (17.04.3-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    Bug Fixes:
+     + Manage Albums, Choose Album: [cancel] left all album menus disabled.
+     + Slide Show, zoom image function: fix memory leak.
+     + Select Area, Find Gap: crash if gap search killed before complete.
+     + EXIF data update: poss. crash if input keyword data is null.
+     + Color Profile: liblcms2 can produce RGB values < 0. Replaced these
+     with 0.
+     + File index process sometimes omitted a few files. This was
+     self-repairing.
+     + Metadata Report: leafpad fails to display report file - replaced it.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 01 Jul 2017 15:43:22 +0200
+
 fotoxx (17.04.2-1~getdeb2~zesty) zesty; urgency=medium
 
   * New upstream version
