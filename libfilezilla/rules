@@ -11,3 +11,6 @@ export LC_ALL=C.UTF-8
 override_dh_installchangelogs:
 	# Install upstream NEWS file as changelog
 	dh_installchangelogs -k NEWS
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V

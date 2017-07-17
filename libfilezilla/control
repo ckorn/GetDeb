@@ -1,9 +1,7 @@
 Source: libfilezilla
 Priority: optional
 Maintainer: GetDeb Package Ninjas <package.ninjas@getdeb.net>
-Build-Depends: debhelper (>= 9),
-               dh-autoreconf,
-               libcppunit-dev
+Build-Depends: debhelper (>= 9), dh-autoreconf, libcppunit-dev
 Standards-Version: 3.9.7
 Section: libs
 Homepage: https://lib.filezilla-project.org/
@@ -11,8 +9,7 @@ Homepage: https://lib.filezilla-project.org/
 Package: libfilezilla-dev
 Section: libdevel
 Architecture: any
-Depends: libfilezilla0 (= ${binary:Version}),
-         ${misc:Depends}
+Depends: libfilezilla0 (= ${binary:Version}), ${misc:Depends}
 Description: build high-performing platform-independent programs (development)
  Free, open source C++ library, offering some basic functionality to build
  high-performing, platform-independent programs. Some of the highlights include:
@@ -28,8 +25,7 @@ Description: build high-performing platform-independent programs (development)
 
 Package: libfilezilla0
 Architecture: any
-Depends: ${shlibs:Depends},
-         ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: build high-performing platform-independent programs (runtime lib)
  Free, open source C++ library, offering some basic functionality to build
  high-performing, platform-independent programs. Some of the highlights include:
@@ -41,4 +37,4 @@ Description: build high-performing platform-independent programs (runtime lib)
     which simplifies dealing with timestamps originating from different sources
   - Simple process handling for spawning child processes with redirected I/O
  .
- This package contains the shared and static library.
+ This package contains the shared library.
