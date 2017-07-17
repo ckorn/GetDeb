@@ -1,14 +1,14 @@
 # make rssguard compatible with qt5.5
-Index: rssguard-3.3.7/src/main.cpp
+Index: rssguard-3.4.1/src/main.cpp
 ===================================================================
---- rssguard-3.3.7.orig/src/main.cpp	2017-01-24 18:06:54.224041671 +0100
-+++ rssguard-3.3.7/src/main.cpp	2017-01-24 18:06:54.220041730 +0100
-@@ -82,7 +82,7 @@
+--- rssguard-3.4.1.orig/src/main.cpp	2017-07-15 16:19:49.914437448 +0200
++++ rssguard-3.4.1/src/main.cpp	2017-07-15 16:20:39.733686740 +0200
+@@ -83,7 +83,7 @@
    application.setFeedReader(new FeedReader(&application));
  
    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 -  QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 +  //QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
- 
-   // Register needed metatypes.
-   qRegisterMetaType<QList<Message> >("QList<Message>");
+ #ifdef Q_OS_MAC
+   QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+   disableWindowTabbing();
