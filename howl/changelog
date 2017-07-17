@@ -1,3 +1,9 @@
+howl (0.5.1-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 06 Jul 2017 14:10:56 +0200
+
 howl (0.5-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
