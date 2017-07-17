@@ -1,3 +1,9 @@
+libfilezilla (0.9.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 28 May 2017 18:17:07 +0200
+
 libfilezilla (0.9.1-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
