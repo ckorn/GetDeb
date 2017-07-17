@@ -1,10 +1,10 @@
 # http://www.freefilesync.org/forum/viewtopic.php?t=2585
 # http://www.freefilesync.org/forum/viewtopic.php?t=3891
-Index: freefilesync-9.0/ui/main_dlg.cpp
+Index: freefilesync-9.2/ui/main_dlg.cpp
 ===================================================================
---- freefilesync-9.0.orig/ui/main_dlg.cpp	2017-04-21 19:57:33.132953493 +0200
-+++ freefilesync-9.0/ui/main_dlg.cpp	2017-04-21 19:57:33.124953600 +0200
-@@ -956,7 +956,7 @@
+--- freefilesync-9.2.orig/ui/main_dlg.cpp	2017-07-04 15:12:43.618272924 +0200
++++ freefilesync-9.2/ui/main_dlg.cpp	2017-07-04 15:12:43.614272957 +0200
+@@ -984,7 +984,7 @@
          history.resize(globalSettings.gui.cfgFileHistMax);
  
      globalSettings.gui.cfgFileHistory = history;
@@ -12,4 +12,4 @@ Index: freefilesync-9.0/ui/main_dlg.cpp
 +    //globalSettings.gui.cfgFileHistFirstItemPos = m_listBoxHistory->GetTopItem();
      //--------------------------------------------------------------------------------
      globalSettings.gui.lastUsedConfigFiles.clear();
-     for (const Zstring& cfgFilePath : activeConfigFiles)
+     for (const Zstring& cfgFilePath : activeConfigFiles_)
