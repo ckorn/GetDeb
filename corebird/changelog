@@ -1,3 +1,10 @@
+corebird (1.5.1-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+    - Stability improvements
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sat, 15 Jul 2017 16:21:44 +0200
+
 corebird (1.5-1~getdeb1) zesty; urgency=medium
 
   * New upstream version
