@@ -1,19 +1,17 @@
 # set the install directory directly
 # looking it up does not work. probably because of the symlinks.
-Index: pycharm-2017.1.1/bin/pycharm.sh
+Index: pycharm-2017.2/bin/pycharm.sh
 ===================================================================
---- pycharm-2017.1.1.orig/bin/pycharm.sh	2017-04-13 18:24:13.470288197 +0200
-+++ pycharm-2017.1.1/bin/pycharm.sh	2017-04-13 18:27:10.116315179 +0200
-@@ -59,12 +59,11 @@
+--- pycharm-2017.2.orig/bin/pycharm.sh	2017-07-27 17:48:37.676712032 +0200
++++ pycharm-2017.2/bin/pycharm.sh	2017-07-27 17:51:57.518696833 +0200
+@@ -50,10 +50,11 @@
    done
  fi
  
--IDE_BIN_HOME=`dirname "$SCRIPT_LOCATION"`
--if [ "$IDE_BIN_HOME" = "." ]; then
--  IDE_HOME=".."
--else
--  IDE_HOME=`dirname "$IDE_BIN_HOME"`
--fi
+-cd "`dirname "$SCRIPT_LOCATION"`"
+-IDE_BIN_HOME=`pwd`
+-IDE_HOME=`dirname "$IDE_BIN_HOME"`
+-cd "$OLDPWD"
 +IDE_HOME=/usr/share/pycharm
 +IDE_BIN_HOME=/usr/share/pycharm/bin
 +
@@ -22,56 +20,58 @@ Index: pycharm-2017.1.1/bin/pycharm.sh
  
  # ---------------------------------------------------------------------
  # Locate a JDK installation directory which will be used to run the IDE.
-@@ -98,43 +97,7 @@
-   if isJDK $JAVA_HOME; then
-     JDK="$JAVA_HOME"
-   else
--    JAVA_BIN_PATH=`which java`
--    if [ -n "$JAVA_BIN_PATH" ]; then
--      if [ "$OS_TYPE" = "FreeBSD" -o "$OS_TYPE" = "MidnightBSD" ]; then
--        JAVA_LOCATION=`JAVAVM_DRYRUN=yes java | "$GREP" '^JAVA_HOME' | "$CUT" -c11-`
--        if [ -x "$JAVA_LOCATION/bin/java" ]; then
--          JDK="$JAVA_LOCATION"
--        fi
--      elif [ "$OS_TYPE" = "SunOS" ]; then
--        JAVA_LOCATION="/usr/jdk/latest"
--        if [ -x "$JAVA_LOCATION/bin/java" ]; then
--          JDK="$JAVA_LOCATION"
--        fi
--      elif [ "$OS_TYPE" = "Darwin" ]; then
--        JAVA_LOCATION=`/usr/libexec/java_home`
--        if [ -x "$JAVA_LOCATION/bin/java" ]; then
--          JDK="$JAVA_LOCATION"
--        fi
--      fi
--    fi
+@@ -91,52 +92,14 @@
+   JDK="$JAVA_HOME"
+ fi
+ 
+-if [ -z "$JDK" ]; then
+-  JDK_PATH=`which java`
 -
--    if [ -z "$JDK" -a -x "$READLINK" -a -x "$XARGS" -a -x "$DIRNAME" ]; then
--      JAVA_LOCATION=`"$READLINK" -f "$JAVA_BIN_PATH"`
--      case "$JAVA_LOCATION" in
--        */jre/bin/java)
--          JAVA_LOCATION=`echo "$JAVA_LOCATION" | "$XARGS" "$DIRNAME" | "$XARGS" "$DIRNAME" | "$XARGS" "$DIRNAME"`
--          if [ ! -d "$JAVA_LOCATION/bin" ]; then
--            JAVA_LOCATION="$JAVA_LOCATION/jre"
--          fi
--          ;;
--        *)
--          JAVA_LOCATION=`echo "$JAVA_LOCATION" | "$XARGS" "$DIRNAME" | "$XARGS" "$DIRNAME"`
--          ;;
--      esac
+-  if [ -n "$JDK_PATH" ]; then
+-    if [ "$OS_TYPE" = "FreeBSD" -o "$OS_TYPE" = "MidnightBSD" ]; then
+-      JAVA_LOCATION=`JAVAVM_DRYRUN=yes java | "$GREP" '^JAVA_HOME' | "$CUT" -c11-`
+-      if [ -x "$JAVA_LOCATION/bin/java" ]; then
+-        JDK="$JAVA_LOCATION"
+-      fi
+-    elif [ "$OS_TYPE" = "SunOS" ]; then
+-      JAVA_LOCATION="/usr/jdk/latest"
+-      if [ -x "$JAVA_LOCATION/bin/java" ]; then
+-        JDK="$JAVA_LOCATION"
+-      fi
+-    elif [ "$OS_TYPE" = "Darwin" ]; then
+-      JAVA_LOCATION=`/usr/libexec/java_home`
 -      if [ -x "$JAVA_LOCATION/bin/java" ]; then
 -        JDK="$JAVA_LOCATION"
 -      fi
 -    fi
-+    JDK=`update-alternatives --list java | grep java-8 | sed 's,jre/bin/java,,'`
-   fi
- fi
+-  fi
+-
+-  if [ -z "$JDK" -a -x "$READLINK" -a -x "$XARGS" -a -x "$DIRNAME" ]; then
+-    JAVA_LOCATION=`"$READLINK" -f "$JDK_PATH"`
+-    case "$JAVA_LOCATION" in
+-      */jre/bin/java)
+-        JAVA_LOCATION=`echo "$JAVA_LOCATION" | "$XARGS" "$DIRNAME" | "$XARGS" "$DIRNAME" | "$XARGS" "$DIRNAME"`
+-        if [ ! -d "$JAVA_LOCATION/bin" ]; then
+-          JAVA_LOCATION="$JAVA_LOCATION/jre"
+-        fi
+-        ;;
+-      *)
+-        JAVA_LOCATION=`echo "$JAVA_LOCATION" | "$XARGS" "$DIRNAME" | "$XARGS" "$DIRNAME"`
+-        ;;
+-    esac
+-    if [ -x "$JAVA_LOCATION/bin/java" ]; then
+-      JDK="$JAVA_LOCATION"
+-    fi
+-  fi
+-fi
++JDK=`update-alternatives --list java | grep java-8 | sed 's,jre/bin/java,,'`
  
-@@ -142,6 +105,7 @@
- if [ ! -x "$JAVA_BIN" ]; then
-   JAVA_BIN="$JDK/jre/bin/java"
+ JAVA_BIN="$JDK/bin/java"
+ if [ -z "$JDK" -o ! -x "$JAVA_BIN" ]; then
+   message "No JDK found. Please validate either PYCHARM_JDK, JDK_HOME or JAVA_HOME environment variable points to valid JDK installation."
+   exit 1
  fi
 +echo "JAVA_BIN: " $JAVA_BIN
  
- if [ -z "$JDK" ] || [ ! -x "$JAVA_BIN" ]; then
-   message "No JDK found. Please validate either PYCHARM_JDK, JDK_HOME or JAVA_HOME environment variable points to valid JDK installation."
+ VERSION_LOG=`"$MKTEMP" -t java.version.log.XXXXXX`
+ JAVA_TOOL_OPTIONS= "$JAVA_BIN" -version 2> "$VERSION_LOG"
