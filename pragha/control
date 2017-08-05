@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 10),
                autotools-dev,
+               exo-utils,
                libmad0-dev,
                libcdio-cdda-dev,
                libcdio-dev,
