@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Christoph Korn <christoph.korn@getdeb.net>
 Build-Depends: debhelper (>= 9),
                autotools-dev,
+               exo-utils,
                libmad0-dev,
                libcdio-cdda-dev,
                libcdio-dev,
@@ -43,7 +44,7 @@ Build-Depends: debhelper (>= 9),
                libglyr-dev,
                libtotem-plparser-dev,
                libclastfm0-dev,
-               rygel-2.4-dev
+               rygel-2.6-dev
 Standards-Version: 3.9.6
 Homepage: https://github.com/pragha-music-player/pragha
 
