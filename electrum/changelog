@@ -1,3 +1,11 @@
+electrum (2.9.2-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    * force headers download if headers file is corrupted
+    * add websocket to windows builds
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 03 Aug 2017 17:58:51 +0200
+
 electrum (2.9.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
