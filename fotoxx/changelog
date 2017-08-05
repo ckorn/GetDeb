@@ -1,3 +1,61 @@
+fotoxx (17.08-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    Technical Changes:
+     + Thumbnails were enlarged to 512 pixels for faster galleries when using
+     large
+       thumbnails. To implement, delete your thumbnails directory and
+       re-index. 
+     + Use of shell "cp filename" was replaced with a copyfile() function,
+     which
+       makes batch functions fail-safe against special characters in file
+       names.
+     + New widget types were implemented to make some dialogs smaller,
+     covering less
+       of the image being viewed. Number values can be indexed up or down
+       using the 
+       mouse wheel, keyboard up/down arrow keys, or the [+] [-] keys. The
+       shift key 
+       can be held down to increase the step size and speed by 10x. 
+    Functional Changes:
+     + Video files display as both images (initial frame) and gallery
+     thumbnails. 
+       Click to play. Also editable metadata, albums, search, and slide show
+       play.
+     + Maps: save and recall user-named map locations (map position and
+     scale).
+     + Panorama: the flatten function was made variable and reversible.
+     + Retouch Combo: the curve edit user interface was improved.
+     + Galleries remember and restore their last scroll position with each
+     view.
+     + Select Hairy: improved algorithm, faster and better user interface. 
+     + Select Area > Find Gap: fatter lines are drawn for better visibility.
+     + Custom Kernel: added functionality. Ten more pre-installed filters.
+     + Paint Image: added an HSL color chooser as an additional color method.
+     + Slide Show: 2 new transition types. 5 others made faster on slow
+     computers.
+     + Color Profile: EXIF "ICCProfileName" is updated and embedded profile
+     deleted.
+     + Export Image Files: added metadata relevant for photo web services.
+     + Search Images: match 'all' or 'any' logic was implemented for
+     location.
+     + Gallery List View expanded: show small thumbnails + most relevant
+     metadata.
+    Bug Fixes:
+     + Slide Show: workaround for GDK pixbuf scaling bug.
+     + Flickr Upload stopped working and was removed. Flickr and other photo
+     web 
+       services can do this directly. The User Guide describes a simple
+       procedure.
+     + A startup album name (if any) was getting replaced with blanks.
+     + Retouch Combo: failed if directory for saved settings is missing
+     (create it).
+     + Index Image Files: failed if recent files file is missing (create it).
+     + Possible crash if Trim/Rotate [level] button is used (EXIF tilt
+     angle).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 01 Aug 2017 18:45:48 +0200
+
 fotoxx (17.04.3-1~getdeb2~zesty) zesty; urgency=medium
 
   * New upstream version
