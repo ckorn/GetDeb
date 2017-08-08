@@ -1,3 +1,19 @@
+fotoxx (17.08.2-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    Bugfix: crash if invalid thumbnail parameter is inherited from a prior
+    release.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 07 Aug 2017 18:16:40 +0200
+
+fotoxx (17.08.1-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    Bugfix: crash in new 'list view' function with never-indexed image
+    directory.
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Sun, 06 Aug 2017 14:34:30 +0200
+
 fotoxx (17.08-1~getdeb2~zesty) zesty; urgency=medium
 
   * New upstream version
