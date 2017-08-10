@@ -2,11 +2,11 @@ Description: make the error message more helpful on Ubuntu
 Forwarded: no
 Updated: 2014-02-17
 
-Index: virt-manager-1.4.1/virtManager/engine.py
+Index: virt-manager-1.4.2/virtManager/engine.py
 ===================================================================
---- virt-manager-1.4.1.orig/virtManager/engine.py	2017-03-09 18:11:10.653005288 +0100
-+++ virt-manager-1.4.1/virtManager/engine.py	2017-03-09 18:11:10.653005288 +0100
-@@ -671,7 +671,10 @@
+--- virt-manager-1.4.2.orig/virtManager/engine.py	2017-08-09 17:51:36.445256584 +0200
++++ virt-manager-1.4.2/virtManager/engine.py	2017-08-09 17:51:36.441256641 +0200
+@@ -666,7 +666,10 @@
                            "regular user. Try running as root.")
                  show_errmsg = False
              elif re.search(r"libvirt-sock", tb):

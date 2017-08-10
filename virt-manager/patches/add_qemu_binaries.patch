@@ -3,11 +3,11 @@ Description: add the actual binary names from the qemu packages so default
 Author: Marc Deslauriers <marc.deslauriers@canonical.com>
 Updated: 2015-08-22
 
-Index: virt-manager-1.2.1/virtManager/connect.py
+Index: virt-manager-1.4.2/virtManager/connect.py
 ===================================================================
---- virt-manager-1.2.1.orig/virtManager/connect.py	2015-08-22 09:26:25.800728242 -0400
-+++ virt-manager-1.2.1/virtManager/connect.py	2015-08-22 09:27:04.789080689 -0400
-@@ -115,6 +115,8 @@
+--- virt-manager-1.4.2.orig/virtManager/connect.py	2017-08-09 17:51:42.377171919 +0200
++++ virt-manager-1.4.2/virtManager/connect.py	2017-08-09 17:51:42.373171976 +0200
+@@ -117,6 +117,8 @@
          if (os.path.exists("/usr/bin/qemu") or
              os.path.exists("/usr/bin/qemu-kvm") or
              os.path.exists("/usr/bin/kvm") or
