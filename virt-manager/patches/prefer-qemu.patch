@@ -2,11 +2,11 @@ Description: Prefer QEMU as the default URI, even if it's not installed.
 Author: Marc Deslauriers <marc.deslauriers@canonical.com>
 Forwarded: no, Ubuntu-specific preference
 
-Index: virt-manager-1.2.1/virtManager/connect.py
+Index: virt-manager-1.4.2/virtManager/connect.py
 ===================================================================
---- virt-manager-1.2.1.orig/virtManager/connect.py	2015-12-08 13:25:00.910228019 -0500
-+++ virt-manager-1.2.1/virtManager/connect.py	2015-12-08 13:47:40.967838385 -0500
-@@ -107,11 +107,6 @@
+--- virt-manager-1.4.2.orig/virtManager/connect.py	2017-08-09 17:53:25.011704718 +0200
++++ virt-manager-1.4.2/virtManager/connect.py	2017-08-09 17:53:25.007704776 +0200
+@@ -109,11 +109,6 @@
  
      @staticmethod
      def default_uri():
@@ -18,7 +18,7 @@ Index: virt-manager-1.2.1/virtManager/connect.py
          if (os.path.exists("/usr/bin/qemu") or
              os.path.exists("/usr/bin/qemu-kvm") or
              os.path.exists("/usr/bin/kvm") or
-@@ -121,9 +116,10 @@
+@@ -123,9 +118,10 @@
              glob.glob("/usr/bin/qemu-system-*")):
              return "qemu:///system"
  

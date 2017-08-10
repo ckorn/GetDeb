@@ -6,6 +6,5 @@ use_ubuntu_package_names.patch
 leave-mnemonics-alone-on-focus-change.patch
 mark-libvirt-lxc.patch
 add_qemu_binaries.patch
-virtinst/use_qxl_for_ubuntu.patch
 prefer-qemu.patch
 virtinst/dont_disable_vmport.patch

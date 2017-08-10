@@ -7,11 +7,11 @@ Closes: #685749
  virtinst/guest.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-Index: virt-manager-1.4.1/virtinst/guest.py
+Index: virt-manager-1.4.2/virtinst/guest.py
 ===================================================================
---- virt-manager-1.4.1.orig/virtinst/guest.py	2017-03-09 18:11:06.757041571 +0100
-+++ virt-manager-1.4.1/virtinst/guest.py	2017-03-09 18:11:06.753041609 +0100
-@@ -363,7 +363,7 @@
+--- virt-manager-1.4.2.orig/virtinst/guest.py	2017-08-09 17:51:29.061361945 +0200
++++ virt-manager-1.4.2/virtinst/guest.py	2017-08-09 17:51:29.057362002 +0200
+@@ -365,7 +365,7 @@
          if (not install and
              self.os.is_xenpv() and
              not self.os.kernel):

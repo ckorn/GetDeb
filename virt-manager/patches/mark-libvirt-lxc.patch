@@ -3,24 +3,24 @@ Description: Clearly mark the LXC connections as being libvirt-lxc, to
 Author: Serge Hallyn <serge.hallyn@ubuntu.com>
 Updated: 2015-08-22
 
-Index: virt-manager-1.4.1/virtManager/connect.py
+Index: virt-manager-1.4.2/virtManager/connect.py
 ===================================================================
---- virt-manager-1.4.1.orig/virtManager/connect.py	2017-03-09 18:11:15.192963048 +0100
-+++ virt-manager-1.4.1/virtManager/connect.py	2017-03-09 18:11:15.188963085 +0100
-@@ -167,7 +167,7 @@
+--- virt-manager-1.4.2.orig/virtManager/connect.py	2017-08-09 17:51:40.293201665 +0200
++++ virt-manager-1.4.2/virtManager/connect.py	2017-08-09 17:51:40.293201665 +0200
+@@ -169,7 +169,7 @@
          _add_hv_row(HV_QEMU, "qemu", "QEMU/KVM")
          _add_hv_row(HV_QEMU_SESSION, "qemu", "QEMU/KVM " + _("user session"))
          _add_hv_row(HV_XEN, "xen", "Xen")
 -        _add_hv_row(HV_LXC, "lxc", "LXC (" + _("Linux Containers") + ")")
 +        _add_hv_row(HV_LXC, "lxc", "Libvirt-LXC (" + _("Linux Containers") + ")")
          _add_hv_row(HV_BHYVE, "bhyve", "Bhyve")
+         _add_hv_row(HV_VZ, "vz", "Virtuozzo")
          combo.set_model(model)
-         uiutil.init_combo_text_column(combo, 1)
-Index: virt-manager-1.4.1/virtManager/connection.py
+Index: virt-manager-1.4.2/virtManager/connection.py
 ===================================================================
---- virt-manager-1.4.1.orig/virtManager/connection.py	2017-03-09 18:11:15.192963048 +0100
-+++ virt-manager-1.4.1/virtManager/connection.py	2017-03-09 18:11:15.188963085 +0100
-@@ -399,7 +399,7 @@
+--- virt-manager-1.4.2.orig/virtManager/connection.py	2017-08-09 17:51:40.293201665 +0200
++++ virt-manager-1.4.2/virtManager/connection.py	2017-08-09 17:51:40.293201665 +0200
+@@ -423,7 +423,7 @@
              "esx"       : "ESX",
              "gsx"       : "GSX",
              "libxl"     : "libxl",
