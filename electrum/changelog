@@ -1,3 +1,12 @@
+electrum (2.9.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+      * fix configuration file issue #2719
+      * fix ledger signing of non-RBF transactions
+      * disable 'spend confirmed only' option by default
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 10 Aug 2017 18:46:01 +0200
+
 electrum (2.9.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
