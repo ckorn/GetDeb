@@ -1,3 +1,23 @@
+avidemux2.6 (1:2.7.0-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    - Editing:Fixed frame computation bug that led to bad cutting (euma)
+    - i18n:Korean translation (sheppaul)
+    - win32:Put log files into the local folder (achim71)
+    - Jobs:Fix name of the executable search
+    - UI:Steplessly zoom paused video when the window is resized (euma)
+    - UI:Added Ctrl+Shift+C shortcut to copy the current PTS to clipboard
+    (euma)
+    - Filter:eq2: UI improvements (euma)
+    - Decoding:Fix VP9 decoding
+    - Filter:Using rubber bands for crop too (me+euma)
+    - Build:Redone packaging on macOS
+    - Decoding:HEVC decoding via DXVA2 blacklisted on win32, active on win64
+    - New Filter:ADM ivtc
+    - Audio:Distinguish between AC3 and EAC3 when importing
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 15 Aug 2017 18:14:11 +0200
+
 avidemux2.6 (1:2.6.20-1~getdeb2~zesty) zesty; urgency=medium
 
   * New upstream version

@@ -50,7 +50,7 @@ Build-Depends: debhelper (>= 9),
                libzip-dev,
                qtscript5-dev
 Homepage: http://avidemux.org
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 
 Package: avidemux2.6-jobs
 Architecture: i386 amd64 powerpc
