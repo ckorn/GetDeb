@@ -8,7 +8,6 @@ usr/lib/ADM_plugins6/audioDevices
 usr/lib/ADM_plugins6/audioEncoders
 usr/lib/ADM_plugins6/muxers
 usr/lib/ADM_plugins6/autoScripts
-usr/lib/ADM_plugins6/videoDecoders
 usr/lib/ADM_plugins6/scriptEngines/libADM_script_tinyPy.so
 usr/lib/ADM_plugins6/demuxers
 usr/lib/ADM_plugins6/pluginSettings
@@ -59,6 +58,7 @@ usr/lib/ADM_plugins6/videoFilters/libADM_vf_ascii.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_ssa.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_vaapiFilter.so
 usr/lib/ADM_plugins6/videoFilters/libADM_vf_avsfilter.so
+usr/lib/ADM_plugins6/videoFilters/libADM_vf_admIvtc.so
 usr/lib/ADM_plugins6/shaderDemo/1/lightning.shader
 usr/lib/ADM_plugins6/shaderDemo/1/zigzag.shader
 usr/lib/ADM_plugins6/shaderDemo/1/bump.shader
