@@ -1,3 +1,15 @@
+corebird (1.6-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+      - Dependencies: GTK+ 3.20 is now required, and librest is no longer
+        a dependency
+      - Facelift for the tweet info page
+      - Lots of stability fixes
+      - The compose window now starts uploading images as soon as they
+        are selected
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 29 Aug 2017 18:41:06 +0200
+
 corebird (1.5.1-1~getdeb1) zesty; urgency=medium
 
   * New upstream version
