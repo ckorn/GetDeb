@@ -1,3 +1,13 @@
+meteo (0.9.6-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+    - Dailight duration
+    - Show UV / Ozone only if available
+    - Add option for Beaufort wind speed unit
+    - Show the T° and hPa trend
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Tue, 29 Aug 2017 18:46:49 +0200
+
 meteo (0.9.5-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
