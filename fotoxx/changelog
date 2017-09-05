@@ -1,3 +1,13 @@
+fotoxx (17.08.3-1~getdeb2~zesty) zesty; urgency=medium
+
+  * New upstream version
+    Bugfix: user settings for video file types were not being saved.
+    Bugfix: add missing popup diagnostic for libraw (RAW file) errors.
+    Bugfix: check for hugin, not hugin-executor (recent change? distro
+    diversity?).
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 01 Sep 2017 19:09:32 +0200
+
 fotoxx (17.08.2-1~getdeb2~zesty) zesty; urgency=medium
 
   * New upstream version
