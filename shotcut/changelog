@@ -1,3 +1,9 @@
+shotcut (17.09-1~getdeb1) zesty; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 04 Sep 2017 18:28:44 +0200
+
 shotcut (17.08-1~getdeb1) zesty; urgency=medium
 
   * New upstream version
