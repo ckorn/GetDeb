@@ -1,3 +1,9 @@
+mynotex (1.4.1.0-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 31 Aug 2017 18:56:22 +0200
+
 mynotex (1.4.0.0-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
