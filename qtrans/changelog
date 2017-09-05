@@ -1,0 +1,5 @@
+qtrans (0.3.2.6-1~getdeb1) xenial; urgency=medium
+
+  * Initial release
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Thu, 31 Aug 2017 18:01:57 +0200

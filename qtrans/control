@@ -1,0 +1,28 @@
+Source: qtrans
+Section: utils
+Priority: optional
+Maintainer: Christoph Korn <christoph.korn@getdeb.net>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               extra-cmake-modules,
+               qtbase5-dev,
+               kdelibs5-dev,
+               zlib1g-dev,
+               libqt5webkit5-dev,
+               libkf5coreaddons-dev,
+               libkf5i18n-dev,
+               libkf5xmlgui-dev,
+               libkf5textwidgets-dev,
+               libkf5configwidgets-dev,
+               libkf5windowsystem-dev,
+               libkf5config-dev
+Standards-Version: 3.9.7
+Homepage: https://sourceforge.net/projects/qtrans0/
+
+Package: qtrans
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: word translator for Qt5/KF5
+ qtrans is a word translator for Qt5/KF5.
+ It uses Babylon dictionaries.
