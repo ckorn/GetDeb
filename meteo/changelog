@@ -1,3 +1,9 @@
+meteo (0.9.7-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Mon, 11 Sep 2017 20:10:40 +0200
+
 meteo (0.9.6-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
