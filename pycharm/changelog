@@ -1,3 +1,9 @@
+pycharm (2017.2.3-1~getdeb1) xenial; urgency=medium
+
+  * New upstream version
+
+ -- Christoph Korn <christoph.korn@getdeb.net>  Fri, 08 Sep 2017 17:57:04 +0200
+
 pycharm (2017.2.2-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
