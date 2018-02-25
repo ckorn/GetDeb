@@ -1,14 +1,12 @@
 # change config directory to $HOME/.config/chatty
-Index: chatty-0.8.3/src/chatty/Chatty.java
-===================================================================
---- chatty-0.8.3.orig/src/chatty/Chatty.java	2016-06-28 16:18:42.550653108 +0200
-+++ chatty-0.8.3/src/chatty/Chatty.java	2016-06-28 16:18:42.546652977 +0200
-@@ -188,12 +188,11 @@
+--- a/src/chatty/Chatty.java
++++ b/src/chatty/Chatty.java
+@@ -196,12 +196,11 @@
       * @return
       */
      public static String getUserDataDirectory() {
--        if (useCurrentDirectory) {
--            return System.getProperty("user.dir") + File.separator;
+-        if (settingsDir != null) {
+-            return settingsDir + File.separator;
 -        }
          String dir = System.getProperty("user.home")
 -                + File.separator 

@@ -1,8 +1,6 @@
 # make an own build.xml because the sources do not contain all build files
-Index: chatty-0.8.4.1/build.xml
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ chatty-0.8.4.1/build.xml	2016-11-06 03:42:21.739621525 +0100
+--- /dev/null
++++ b/build.xml
 @@ -0,0 +1,29 @@
 +<project name="chatty" default="jar">
 + <target name="clean">

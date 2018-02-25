@@ -1,3 +1,10 @@
+chatty (0.9-0ddebs1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version
+
+ -- Nicolas HOUDELOT <nicolas@demosdebs.org>  Sun, 25 Feb 2018 16:26:40 +0100
+
 chatty (0.8.7-1~getdeb1) xenial; urgency=medium
 
   * New upstream version
